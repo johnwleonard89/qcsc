@@ -2,7 +2,7 @@
 title: "The Complete Guide to Epoxy Flooring in Cincinnati: Transform Your Space with Confidence"
 description: "Everything Cincinnati homeowners need to know about epoxy flooring - from benefits and costs to choosing the right contractor for your project."
 author: "Jon Landwehr"
-featured_image: "/images/blog/epoxy-guide-cincinnati.jpg"
+featured_image: "/assets/images/services/epoxy-flooring/pexels-photo-2570704-2570704-scaled.webp"
 publish_date: 2025-07-08
 tags: ["epoxy flooring", "Cincinnati", "garage floors", "home improvement"]
 category: "Epoxy Flooring Tips"

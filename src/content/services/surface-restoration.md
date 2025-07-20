@@ -2,12 +2,12 @@
 title: "Surface Restoration"
 description: "Comprehensive surface restoration services to repair, refinish, and protect damaged concrete and coated surfaces back to like-new condition."
 short_description: "Restore damaged or worn surfaces to like-new condition with our comprehensive repair and refinishing services."
-featured_image: "/images/services/surface-restoration.jpg"
+featured_image: "/assets/images/services/surface-restoration/IMG_2677.webp"
 icon: "🔧"
 gallery:
-  - "/images/gallery/restoration-1.jpg"
-  - "/images/gallery/restoration-2.jpg"
-  - "/images/gallery/restoration-3.jpg"
+  - "/assets/images/gallery/Image-1.webp"
+  - "/assets/images/gallery/IMG_2677.webp"
+  - "/assets/images/business/Gemini_Generated_Image_bc4gl7bc4gl7bc4g-2.webp"
 features:
   - "Crack repair and leveling"
   - "Coating removal and prep"

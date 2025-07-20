@@ -2,12 +2,12 @@
 title: "Epoxy Flooring"
 description: "Transform your concrete floors with our premium epoxy flooring solutions. Durable, beautiful, and long-lasting protection for residential and commercial spaces."
 short_description: "Premium epoxy floor coatings that provide exceptional durability and stunning aesthetics for garages, basements, and commercial spaces."
-featured_image: "/images/services/epoxy-flooring.jpg"
+featured_image: "/assets/images/services/epoxy-flooring/pexels-photo-2570704-2570704-scaled.webp"
 icon: "🏠"
 gallery:
-  - "/images/gallery/epoxy-1.jpg"
-  - "/images/gallery/epoxy-2.jpg"
-  - "/images/gallery/epoxy-3.jpg"
+  - "/assets/images/gallery/IMG_2665.webp"
+  - "/assets/images/gallery/IMG_2678.webp"
+  - "/assets/images/gallery/IMG_2679.webp"
 features:
   - "Chemical and stain resistant"
   - "Easy to clean and maintain"

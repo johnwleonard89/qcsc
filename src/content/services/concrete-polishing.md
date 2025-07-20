@@ -2,12 +2,12 @@
 title: "Concrete Polishing"
 description: "Professional concrete polishing services that transform dull concrete into beautiful, high-gloss surfaces perfect for commercial and residential applications."
 short_description: "Transform ordinary concrete into stunning polished surfaces with our professional grinding and polishing services."
-featured_image: "/images/services/concrete-polishing.jpg"
+featured_image: "/assets/images/services/concrete-polishing/istockphoto-1447908470-612x612-1.webp"
 icon: "✨"
 gallery:
-  - "/images/gallery/polishing-1.jpg"
-  - "/images/gallery/polishing-2.jpg"
-  - "/images/gallery/polishing-3.jpg"
+  - "/assets/images/gallery/IMG_1662.webp"
+  - "/assets/images/gallery/IMG_2680.webp"
+  - "/assets/images/gallery/IMG_2680-1.webp"
 features:
   - "High-gloss mirror finish"
   - "Dust-free environment"

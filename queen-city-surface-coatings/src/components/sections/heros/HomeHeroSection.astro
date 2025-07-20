@@ -1,0 +1,84 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Container, Button } from '@components/odyssey-theme';
+import settings from '../../../config/settings.js';
+import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+---
+
+<Container>
+	<section class="hero-section__section">
+		<div class="hero-section__text">
+				<h1>Transform Your Floor</h1>
+				<h2 class="hero-subtitle">Premium Floor Coatings</h2>
+				<p>
+					Founded in 2025, Queen City Surface Coatings LLC brings professional expertise and military precision to every project. 
+					As a veteran-owned business operated by John Leonard, a U.S. Marine Corps veteran based in Milford, Ohio, 
+					we serve the entire Cincinnati tri-state area with pride, dedication, and unwavering commitment to excellence.
+				</p>
+				<div class="hero-btns__container">
+					<Button href="/company/contact" customIcon
+						>Get Free Estimate
+            <Fragment slot="icon">
+              <Icon name="ic:baseline-chevron-right"/>
+            </Fragment>
+            </Button
+					>
+					<Button href="/services" unelevated>Our Services</Button>
+				</div>
+        {settings.enableThemeSwitcher && <ThemeSwitcher client:only/>}
+		</div>
+		<div class="hero-section__image">
+				<picture>
+					<img
+						src="/assets/images/home/epoxy-hero.jpg"
+						alt="Queen City Surface Coatings - Professional Epoxy Flooring"
+						id="home-hero-image"
+					/>
+				</picture>
+		</div>
+	</section>
+</Container>
+
+<style>
+	.hero-section__section {
+		margin: var(--section-margin) auto;
+		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-section__text {
+		justify-self: center;
+		max-width: 30rem;
+	}
+	.hero-subtitle {
+		color: var(--theme-primary);
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
+	.hero-btns__container {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.hero-btns__container {
+		margin-right: 1rem;
+	}
+	.hero-section__image {
+		display: flex;
+	}
+	.hero-section__image img {
+		width: 100%;
+		height: 100%;
+		max-height: 80vh;
+		object-fit: cover;
+		border-radius: var(--theme-shape-radius);
+	}
+	@media (max-width: 768px) {
+		.hero-section__section {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

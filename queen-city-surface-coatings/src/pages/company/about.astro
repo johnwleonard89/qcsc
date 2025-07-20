@@ -1,0 +1,259 @@
+---
+import { Container, TextSection, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+
+const seo = {
+	title: 'About Queen City Surface Coatings | Veteran-Owned Excellence',
+	description: 'Learn about Queen City Surface Coatings LLC, founded by veteran John Leonard. Professional surface coating expertise serving Cincinnati tri-state area.',
+};
+---
+
+<Layout {seo}>
+	<TextAndImageHero>
+		<div slot="text-container">
+			<h1>About Queen City Surface Coatings</h1>
+			<h2>Veteran-Owned Excellence in Surface Coatings</h2>
+			<p>
+				Founded in 2025 by John Leonard, who brings over a decade of corporate sales and marketing experience to the surface coating industry. 
+				This business expertise ensures every Queen City Surface Coatings project is managed professionally with clear communication, 
+				competitive pricing, and exceptional results.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/about/about-hero.jpg"
+				alt="About Queen City Surface Coatings"
+				loading="lazy"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<!-- Company Story -->
+	<Container>
+		<TextSection>
+			<p>
+				Based in Milford, Ohio, we serve the Cincinnati tri-state area with premium epoxy flooring, concrete polishing, 
+				and surface restoration solutions. Our customer-focused approach and attention to detail delivers lasting results 
+				that exceed expectations.
+			</p>
+		</TextSection>
+	</Container>
+
+	<!-- Team Section -->
+	<Container>
+		<TextSection>
+			<h2>The Team</h2>
+			<h3>Our Experts</h3>
+			
+			<div class="team-member">
+				<div class="team-image">
+					<img src="/assets/images/team/john-leonard.jpg" alt="John Leonard - Owner" />
+				</div>
+				<div class="team-info">
+					<h3>John Leonard</h3>
+					<p class="team-title">Owner & Founder</p>
+					<p>
+						John is a U.S. Marine Corps veteran who founded Queen City Surface Coatings with a mission to bring military-grade precision 
+						and excellence to the surface coating industry. With over a decade of corporate sales and marketing experience, 
+						John ensures every project is managed with professionalism and attention to detail.
+					</p>
+					<p>
+						His commitment to quality and customer satisfaction, combined with his military background, ensures that every 
+						Queen City Surface Coatings project meets the highest standards of excellence.
+					</p>
+					<div class="team-badges">
+						<span class="badge">U.S. Marine Corps Veteran</span>
+						<span class="badge">10+ Years Experience</span>
+					</div>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Values Section -->
+	<Container>
+		<TextSection>
+			<h2>Our Values</h2>
+			<p>What drives us every day</p>
+			
+			<div class="values-grid">
+				<div class="value-item">
+					<div class="value-icon">🎖️</div>
+					<h3>Excellence</h3>
+					<p>We bring military precision to every project, ensuring the highest quality results that exceed expectations.</p>
+				</div>
+				<div class="value-item">
+					<div class="value-icon">🤝</div>
+					<h3>Integrity</h3>
+					<p>Honest communication, fair pricing, and standing behind our work with comprehensive warranties.</p>
+				</div>
+				<div class="value-item">
+					<div class="value-icon">⚡</div>
+					<h3>Service</h3>
+					<p>Our commitment to serving our community with the same dedication we served our country.</p>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Why Choose Us Section -->
+	<Container>
+		<TextSection>
+			<h2>Why Choose Queen City Surface Coatings?</h2>
+			<p>The difference that sets us apart</p>
+			
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<h3>Licensed, Bonded & Insured</h3>
+					<p>Full protection and peace of mind for every project with proper licensing and comprehensive insurance coverage.</p>
+				</div>
+				<div class="benefit-card">
+					<h3>Veteran-Owned Business</h3>
+					<p>Military precision and commitment to excellence in every aspect of our service delivery.</p>
+				</div>
+				<div class="benefit-card">
+					<h3>Local Cincinnati Expertise</h3>
+					<p>Understanding of local conditions, climate challenges, and building requirements specific to our region.</p>
+				</div>
+				<div class="benefit-card">
+					<h3>Premium Materials</h3>
+					<p>We use only the highest quality coatings and materials to ensure long-lasting, beautiful results.</p>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- CTA Section -->
+	<CtaCardSection background="var(--theme-primary)" color="var(--theme-on-primary)">
+		<h2>Ready to Transform Your Space?</h2>
+		<p>Contact us today for a free consultation and see the Queen City difference.</p>
+		<div class="cta-buttons">
+			<a href="/company/contact" class="btn btn-light">Get Your Free Estimate</a>
+		</div>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	.team-member {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 3rem;
+		align-items: start;
+		margin-top: 3rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		padding: 2rem;
+	}
+	
+	.team-image img {
+		width: 100%;
+		height: auto;
+		border-radius: var(--theme-shape-radius);
+	}
+	
+	.team-title {
+		color: var(--theme-primary);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	
+	.team-badges {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+	
+	.badge {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.5rem 1rem;
+		border-radius: 2rem;
+		font-size: 0.875rem;
+		font-weight: 500;
+	}
+	
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+	
+	.value-item {
+		text-align: center;
+	}
+	
+	.value-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+	
+	.value-item h3 {
+		margin-bottom: 1rem;
+		color: var(--theme-on-bg);
+	}
+	
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+	
+	.benefit-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+	}
+	
+	.benefit-card h3 {
+		margin-bottom: 1rem;
+		color: var(--theme-on-surface-1);
+	}
+	
+	.benefit-card p {
+		color: var(--theme-on-surface-1);
+		opacity: 0.8;
+	}
+	
+	.cta-buttons {
+		display: flex;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: var(--theme-transition);
+		display: inline-block;
+	}
+	
+	.btn-light {
+		background: white;
+		color: var(--theme-primary);
+	}
+	
+	.btn-light:hover {
+		background: var(--theme-surface-1);
+	}
+	
+	@media (max-width: 768px) {
+		.team-member {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+		
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

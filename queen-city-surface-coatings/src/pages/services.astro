@@ -1,0 +1,245 @@
+---
+import { Container, FeatureCard, TextSection, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
+---
+
+<Layout>
+	<TextAndImageHero reversed>
+		<div slot="text-container">
+			<h1>Our Professional Services</h1>
+			<p>
+				Professional surface coating solutions for residential and commercial applications. 
+				From residential garages to commercial warehouses, we deliver premium solutions 
+				that stand the test of time.
+			</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/services/services-hero.jpg"
+				alt="Queen City Surface Coatings Professional Services"
+				loading="lazy"
+			/>
+		</picture>
+	</TextAndImageHero>
+
+	<!-- Services Grid -->
+	<Container>
+		<section class="feature-card__section">
+			<div class="feature-card__grid">
+				<FeatureCard href="/services/epoxy-flooring" title="Epoxy Flooring" imgSrc="/assets/images/services/epoxy-flooring">
+					Premium epoxy floor coatings that provide exceptional durability and stunning aesthetics for garages, basements, and commercial spaces.
+				</FeatureCard>
+				<FeatureCard href="/services/concrete-polishing" title="Concrete Polishing" imgSrc="/assets/images/services/concrete-polishing">
+					Transform ordinary concrete into stunning polished surfaces with our professional grinding and polishing services.
+				</FeatureCard>
+				<FeatureCard href="/services/surface-restoration" title="Surface Restoration" imgSrc="/assets/images/services/surface-restoration">
+					Restore damaged or worn surfaces to like-new condition with our comprehensive repair and refinishing services.
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Section -->
+	<Container>
+		<TextSection>
+			<h2>Our Professional Process</h2>
+			<p>Quality results through proven methodology</p>
+			
+			<div class="process-grid">
+				<div class="process-item">
+					<div class="process-number">1</div>
+					<h3>Consultation</h3>
+					<p>Free on-site assessment and project planning</p>
+				</div>
+				<div class="process-item">
+					<div class="process-number">2</div>
+					<h3>Preparation</h3>
+					<p>Thorough surface cleaning and preparation</p>
+				</div>
+				<div class="process-item">
+					<div class="process-number">3</div>
+					<h3>Application</h3>
+					<p>Professional installation with quality materials</p>
+				</div>
+				<div class="process-item">
+					<div class="process-number">4</div>
+					<h3>Quality Check</h3>
+					<p>Thorough inspection and quality assurance</p>
+				</div>
+				<div class="process-item">
+					<div class="process-number">5</div>
+					<h3>Completion</h3>
+					<p>Final walkthrough and care instructions</p>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Why Choose Our Services Section -->
+	<Container>
+		<TextSection>
+			<h2>Why Choose Our Services?</h2>
+			<p>The benefits that set us apart</p>
+			
+			<div class="benefits-grid">
+				<div class="benefit-item">
+					<div class="benefit-icon">✓</div>
+					<h3>Licensed & Insured</h3>
+					<p>Full protection and peace of mind for every project</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">⭐</div>
+					<h3>Premium Quality</h3>
+					<p>Only the finest materials and expert craftsmanship</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">⏱️</div>
+					<h3>Fast Turnaround</h3>
+					<p>Most projects completed in 1-3 days</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">🎖️</div>
+					<h3>Veteran-Owned</h3>
+					<p>Military precision and commitment to excellence</p>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- CTA Section -->
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Ready to Get Started?</h2>
+		<p>Contact us today for a free consultation and estimate for your surface coating project.</p>
+		<div class="cta-buttons">
+			<a href="/company/contact" class="btn btn-primary">Get Free Estimate</a>
+			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+		</div>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--theme-grid-gap);
+	}
+	
+	.process-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+	
+	.process-item {
+		text-align: center;
+	}
+	
+	.process-number {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.25rem;
+		font-weight: bold;
+		margin: 0 auto 1rem;
+	}
+	
+	.process-item h3 {
+		margin-bottom: 0.5rem;
+		color: var(--theme-on-bg);
+	}
+	
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+	
+	.benefit-item {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		text-align: center;
+	}
+	
+	.benefit-icon {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+	
+	.benefit-item h3 {
+		margin-bottom: 1rem;
+		color: var(--theme-on-surface-1);
+	}
+	
+	.benefit-item p {
+		color: var(--theme-on-surface-1);
+		opacity: 0.8;
+	}
+	
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 2rem;
+	}
+	
+	.btn {
+		padding: 0.75rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: var(--theme-transition);
+		display: inline-block;
+	}
+	
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+	
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+	}
+	
+	.btn-outline {
+		border: 2px solid var(--theme-primary);
+		color: var(--theme-primary);
+		background: transparent;
+	}
+	
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+	
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.process-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

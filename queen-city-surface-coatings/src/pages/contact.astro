@@ -1,0 +1,199 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactForm from '../components/ui/ContactForm.astro';
+---
+
+<PageLayout 
+  title="Contact Queen City Surface Coatings | Get Your Free Estimate"
+  description="Contact Queen City Surface Coatings for professional epoxy flooring services. Serving Cincinnati tri-state area. Call (513) 296-5525 for free estimate."
+  showHero={true}
+  heroTitle="Contact Us"
+  heroSubtitle="Ready to transform your space? Let's discuss your project."
+>
+  <!-- Contact Information Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <a href="tel:+15132965525" class="text-blue-600 hover:text-blue-800 text-lg font-medium">
+                  (513) 296-5525
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Call for immediate assistance</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <a href="mailto:john@queencitysurfacecoatings.com" class="text-blue-600 hover:text-blue-800 text-lg font-medium">
+                  john@queencitysurfacecoatings.com
+                </a>
+                <p class="text-gray-600 text-sm mt-1">Email us your project details</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Service Area</h3>
+                <p class="text-gray-700 text-lg">Serving the Tri-State Areas</p>
+                <p class="text-gray-600 text-sm mt-1">Based in Milford, Ohio</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
+                <div class="text-gray-700">
+                  <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                  <p>Saturday: 9:00 AM - 4:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
+                <p class="text-gray-600 text-sm mt-1">Emergency services available</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Logo -->
+          <div class="mt-8">
+            <img src="/images/logo.png" alt="Queen City Surface Coatings" class="h-20 w-auto" />
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <ContactForm 
+            title="Request Your Free Estimate"
+            subtitle="Tell us about your project and we'll provide a detailed quote within 24 hours."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
+        <p class="text-xl text-gray-600">Proudly serving the greater Cincinnati tri-state area</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Cincinnati</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Milford</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">West Chester</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Mason</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Loveland</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Blue Ash</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Springdale</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Fairfield</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Hamilton</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Middletown</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">Lebanon</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow">
+          <p class="font-medium text-gray-900">& More</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <p class="text-gray-600">
+          Don't see your city listed? Give us a call! We travel throughout the Cincinnati tri-state area.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">What to Expect</h2>
+        <p class="text-xl text-gray-600">Our simple, professional process</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-blue-600">1</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Initial Contact</h3>
+          <p class="text-gray-600">Call, email, or submit our form to get started</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-blue-600">2</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Free Consultation</h3>
+          <p class="text-gray-600">We'll visit your site and assess your project needs</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-blue-600">3</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Detailed Quote</h3>
+          <p class="text-gray-600">Receive a comprehensive proposal within 24 hours</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-blue-600">4</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Professional Installation</h3>
+          <p class="text-gray-600">Expert installation with attention to detail</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

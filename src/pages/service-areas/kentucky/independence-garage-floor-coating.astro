@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Independence',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Kenton',
+	population: '28,884',
+	specialty: 'Suburban Family Solutions',
+	landmarks: [
+		'Kenton County Government Center',
+		'Independence Station',
+		'Summit View Elementary',
+		'Northeastern High School',
+		'Independence Park',
+		'Banklick Creek',
+		'I-275 Corridor'
+	],
+	description: 'Queen City Surface Coatings serves Independence, Kentucky, a thriving suburban community known for excellent schools and family-friendly neighborhoods. Our garage floor coating services help Independence families create organized, functional spaces that support their active lifestyles.',
+	serviceRadius: 'All Independence neighborhoods and Kenton County',
+	zipCodes: ['41051'],
+	keyServices: [
+		'Suburban Family Solutions',
+		'Garage Floor Coating',
+		'School District Family Services',
+		'Basement Floor Coating',
+		'Active Family Coatings',
+		'Neighborhood Solutions'
+	],
+	localProjects: [
+		{
+			title: 'Independence School Family',
+			description: 'Comprehensive garage transformation for an Independence family with school-age children, featuring durable coating and organization systems.',
+			service: 'School Family Garage'
+		},
+		{
+			title: 'Independence Station Area',
+			description: 'Basement floor coating creating additional family space for a home in the Independence Station development.',
+			service: 'Suburban Basement Coating'
+		},
+		{
+			title: 'Kenton County Family',
+			description: 'Multi-purpose garage coating designed for busy Independence family with sports equipment and outdoor gear.',
+			service: 'Active Family Solution'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Independence Family',
+			location: 'Independence, KY',
+			quote: 'Perfect for our busy family! The garage floor coating handles everything from sports equipment to school projects. Great service for Independence families.',
+			service: 'School Family Garage'
+		},
+		{
+			name: 'Suburban Homeowner',
+			location: 'Independence Station',
+			quote: 'Excellent suburban service that understood our family\'s needs. Our basement transformation has given us the extra space we needed.',
+			service: 'Suburban Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Independence school districts?',
+			answer: 'Yes, we provide garage floor coating services throughout Independence, including all school district areas, and understand the needs of families with school-age children.'
+		},
+		{
+			question: 'How do your coatings handle active Independence families?',
+			answer: 'Our coatings are perfect for Independence\'s active suburban families, designed to handle sports equipment, bikes, and heavy family use while maintaining easy cleanup and organization.'
+		},
+		{
+			question: 'Can you work around school and sports schedules?',
+			answer: 'Absolutely! We understand Independence families\' busy schedules with school and sports activities and can coordinate projects to minimize disruption to your family\'s routine.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'independence-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Reading',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '10,385',
+	specialty: 'Historic Community Garage Solutions',
+	landmarks: [
+		'Reading Community Center',
+		'Reading Railroad Heritage Trail',
+		'Millcreek Township Park',
+		'Reading High School',
+		'Historic Reading Business District',
+		'Memorial Park',
+		'I-75 Access'
+	],
+	description: 'Queen City Surface Coatings serves Reading, Ohio, a historic railroad community with strong neighborhood pride and family values. Our garage floor coating services help Reading residents enhance their homes while preserving the community\'s historic character.',
+	serviceRadius: 'All Reading neighborhoods and Hamilton County',
+	zipCodes: ['45215'],
+	keyServices: [
+		'Historic Community Garage Solutions',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Residential Epoxy Flooring',
+		'Small Business Floor Coating',
+		'Driveway Coating'
+	],
+	localProjects: [
+		{
+			title: 'Historic Reading Home Garage',
+			description: 'Thoughtful garage floor coating for a historic Reading home, balancing modern functionality with community character.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Railroad Heritage Area Home',
+			description: 'Basement floor coating creating additional family space for a home near the historic railroad trail.',
+			service: 'Basement Coating'
+		},
+		{
+			title: 'Reading Business District Shop',
+			description: 'Commercial floor coating for a local Reading business, supporting the community\'s economic vitality.',
+			service: 'Small Business Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Tom and Nancy Wilson',
+			location: 'Reading, OH',
+			quote: 'Great service that respected our home\'s character while giving us a beautiful, functional garage floor. Perfect for our Reading neighborhood.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Local Business Owner',
+			location: 'Reading Business District',
+			quote: 'Professional floor coating that has improved our shop\'s appearance and supports our commitment to the Reading community.',
+			service: 'Commercial Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Reading neighborhoods?',
+			answer: 'Yes, we provide garage floor coating services throughout Reading, including the historic business district, railroad heritage area, and all residential neighborhoods.'
+		},
+		{
+			question: 'How do your coatings work with Reading\'s older homes?',
+			answer: 'We understand Reading\'s historic housing stock and provide coating solutions that enhance functionality while respecting the character of older homes and neighborhoods.'
+		},
+		{
+			question: 'Do you support Reading\'s local businesses?',
+			answer: 'Absolutely! We provide commercial concrete coating services for Reading\'s local businesses and are committed to supporting the community\'s economic vitality.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'reading-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

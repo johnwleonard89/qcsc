@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Union',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Boone',
+	population: '6,174',
+	specialty: 'Growing Community Solutions',
+	landmarks: [
+		'Ryle High School',
+		'Union Elementary School',
+		'Ryle Stadium',
+		'Big Bone Creek',
+		'Union Baptist Church',
+		'Historic Union',
+		'Kentucky Speedway (nearby)'
+	],
+	description: 'Queen City Surface Coatings serves Union, Kentucky, a rapidly growing community in Boone County known for excellent schools and family neighborhoods. Our concrete coating services help Union families enhance their homes as the community continues to flourish.',
+	serviceRadius: 'All Union neighborhoods and Boone County',
+	zipCodes: ['41091'],
+	keyServices: [
+		'Growing Community Solutions',
+		'School District Family Services',
+		'Garage Floor Coating',
+		'New Construction Coatings',
+		'Basement Floor Coating',
+		'Family-Focused Solutions'
+	],
+	localProjects: [
+		{
+			title: 'Ryle High School Family',
+			description: 'Garage transformation for a Union family with teenage athletes, featuring durable coating and sports equipment organization.',
+			service: 'School Athletics Coating'
+		},
+		{
+			title: 'New Union Construction',
+			description: 'Premium garage floor coating for a newly built home in Union\'s growing residential developments.',
+			service: 'New Construction Coating'
+		},
+		{
+			title: 'Union Community Family',
+			description: 'Basement floor coating creating additional family space for a growing Union household.',
+			service: 'Growing Family Solution'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Union Sports Family',
+			location: 'Union, KY',
+			quote: 'Perfect for our athletic kids! The garage floor coating handles all their sports equipment and looks great in our new Union home.',
+			service: 'School Athletics Coating'
+		},
+		{
+			name: 'New Homeowner',
+			location: 'Union Development',
+			quote: 'Excellent service for our new construction home. The garage floor coating was the perfect finishing touch for our Union property.',
+			service: 'New Construction Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Union\'s new residential developments?',
+			answer: 'Yes, we specialize in serving Union\'s growing residential areas, including new construction homes and established neighborhoods throughout Boone County.'
+		},
+		{
+			question: 'How do you support Union\'s school district families?',
+			answer: 'We understand Union families\' commitment to education and athletics, providing garage and basement solutions that support active families with school-age children.'
+		},
+		{
+			question: 'Can you work around Union\'s community and school events?',
+			answer: 'Absolutely! We coordinate projects around Union\'s school calendar, sports seasons, and community events to minimize disruption to your family\'s activities.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'union-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

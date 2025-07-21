@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Montgomery',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '10,251',
+	specialty: 'Luxury Residential Coatings',
+	landmarks: [
+		'Sycamore Creek Park',
+		'Montgomery Inn',
+		'Montgomery Elementary School',
+		'Historic Montgomery',
+		'Indian Hill Country Club',
+		'Little Miami River',
+		'Montgomery Road Corridor'
+	],
+	description: 'Queen City Surface Coatings serves Montgomery, Ohio, an exclusive residential community known for luxury homes and pristine neighborhoods. Our concrete coating services provide the premium quality and attention to detail that Montgomery residents expect.',
+	serviceRadius: 'All Montgomery neighborhoods and Hamilton County',
+	zipCodes: ['45242', '45249'],
+	keyServices: [
+		'Luxury Residential Coatings',
+		'Premium Garage Floor Coating',
+		'Executive Basement Coating',
+		'Decorative Epoxy Systems',
+		'Custom Metallic Coatings',
+		'High-End Driveway Coating'
+	],
+	localProjects: [
+		{
+			title: 'Montgomery Estate Garage',
+			description: 'Luxury garage transformation featuring custom metallic epoxy coating with bespoke design elements for a Montgomery estate.',
+			service: 'Luxury Garage Coating'
+		},
+		{
+			title: 'Sycamore Creek Executive Home',
+			description: 'Premium basement floor coating creating sophisticated entertainment space for a Montgomery executive residence.',
+			service: 'Executive Basement Coating'
+		},
+		{
+			title: 'Historic Montgomery Restoration',
+			description: 'Sensitive garage floor coating for a historic Montgomery home, preserving character while adding modern luxury.',
+			service: 'Historic Luxury Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Dr. William and Elizabeth Chen',
+			location: 'Montgomery, OH',
+			quote: 'Exceptional craftsmanship and attention to detail. Our garage floor is now a work of art that perfectly complements our Montgomery home.',
+			service: 'Luxury Garage Coating'
+		},
+		{
+			name: 'Montgomery Executive',
+			location: 'Sycamore Creek Area',
+			quote: 'Premium service that understands Montgomery standards. Our basement transformation has created the perfect executive entertainment space.',
+			service: 'Executive Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you specialize in Montgomery\'s luxury homes?',
+			answer: 'Yes, we specialize in premium concrete coatings for Montgomery\'s exclusive properties, offering custom metallic systems, decorative options, and luxury finishes that enhance property value.'
+		},
+		{
+			question: 'How do you ensure results match Montgomery quality expectations?',
+			answer: 'We maintain the highest quality standards using premium materials and meticulous craftsmanship to deliver results that meet Montgomery\'s reputation for luxury and excellence.'
+		},
+		{
+			question: 'Do you work on historic Montgomery properties?',
+			answer: 'Absolutely! We have experience with Montgomery\'s historic homes, providing coatings that respect architectural heritage while delivering modern luxury and performance.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'montgomery-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

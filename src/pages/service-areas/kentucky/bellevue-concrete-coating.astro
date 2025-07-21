@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Bellevue',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Campbell',
+	population: '5,955',
+	specialty: 'Riverfront Community Solutions',
+	landmarks: [
+		'Bellevue Beach Park',
+		'Ohio River Waterfront',
+		'Bellevue High School',
+		'Fairfield Avenue Business District',
+		'Bellevue Cemetery',
+		'Riverfront Commons',
+		'Taylor Daughters Bridge (nearby)'
+	],
+	description: 'Queen City Surface Coatings serves Bellevue, Kentucky, a charming riverfront community with small-town character and stunning Ohio River views. Our concrete coating services help Bellevue residents enhance their homes while addressing the unique challenges of riverfront living.',
+	serviceRadius: 'All Bellevue neighborhoods and Campbell County',
+	zipCodes: ['41073'],
+	keyServices: [
+		'Riverfront Property Coatings',
+		'Small Town Solutions',
+		'Garage Floor Coating',
+		'Moisture-Resistant Coatings',
+		'Basement Waterproofing',
+		'Community-Focused Service'
+	],
+	localProjects: [
+		{
+			title: 'Bellevue Beach Area Home',
+			description: 'Moisture-resistant garage floor coating for a home near Bellevue Beach, designed to handle riverfront humidity.',
+			service: 'Riverfront Garage Coating'
+		},
+		{
+			title: 'Fairfield Avenue Residence',
+			description: 'Basement floor coating for a historic Bellevue home, creating dry, functional space despite river proximity.',
+			service: 'Riverfront Basement Coating'
+		},
+		{
+			title: 'Bellevue Community Family',
+			description: 'Personalized garage transformation for a long-time Bellevue family active in community events.',
+			service: 'Community Family Solution'
+		}
+	],
+	testimonials: [
+		{
+			name: 'River View Homeowner',
+			location: 'Bellevue, KY',
+			quote: 'Perfect solution for our riverfront property! The coating handles the humidity beautifully and looks amazing with our Ohio River views.',
+			service: 'Riverfront Garage Coating'
+		},
+		{
+			name: 'Community Volunteer',
+			location: 'Fairfield Avenue',
+			quote: 'Great local service that understands Bellevue\'s unique needs. They treated our project with the personal attention our small community deserves.',
+			service: 'Community Family Solution'
+		}
+	],
+	faqs: [
+		{
+			question: 'How do your coatings handle Bellevue\'s riverfront moisture?',
+			answer: 'Our coatings include specialized moisture barriers and vapor-resistant systems perfect for Bellevue\'s Ohio River environment, preventing humidity and water damage issues.'
+		},
+		{
+			question: 'Do you provide personalized service for Bellevue\'s small community?',
+			answer: 'Absolutely! We pride ourselves on personal attention and community-focused service that matches Bellevue\'s small-town values and neighborly atmosphere.'
+		},
+		{
+			question: 'Can you work around Bellevue community events?',
+			answer: 'Yes, we understand Bellevue\'s active community calendar and can schedule projects around local events, festivals, and activities at Bellevue Beach Park.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'bellevue-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

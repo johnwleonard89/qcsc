@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Kettering',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '55,870',
+	specialty: 'Residential Garage Coatings',
+	landmarks: [
+		'Kettering Health Network',
+		'Delco Park',
+		'Town & Country Shopping Center',
+		'Lincoln Park Civic Commons',
+		'Fraze Pavilion',
+		'Kettering Recreation Complex',
+		'Hills & Dales Park'
+	],
+	description: 'Queen City Surface Coatings serves Kettering, Ohio, a premier suburb known for excellent schools and family-friendly neighborhoods. Our garage floor coating services help Kettering homeowners enhance their properties with professional-grade coatings that complement their well-maintained homes.',
+	serviceRadius: 'All Kettering neighborhoods and Montgomery County',
+	zipCodes: ['45409', '45419', '45429', '45439', '45440'],
+	keyServices: [
+		'Garage Floor Coating',
+		'Residential Epoxy Flooring',
+		'Basement Floor Coating',
+		'Driveway Coating',
+		'Decorative Concrete',
+		'Polyaspartic Coating'
+	],
+	localProjects: [
+		{
+			title: 'Kettering Luxury Home Garage',
+			description: 'Premium garage floor coating for a Kettering executive home, featuring metallic epoxy with showroom-quality finish.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Delco Park Area Family',
+			description: 'Basement transformation creating additional family space for a home near Delco Park recreation facilities.',
+			service: 'Basement Coating'
+		},
+		{
+			title: 'Hills & Dales Neighborhood',
+			description: 'Driveway and garage coating for a historic Hills & Dales home, enhancing curb appeal and property value.',
+			service: 'Decorative Concrete'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Jennifer and David Lee',
+			location: 'Kettering, OH',
+			quote: 'Exceptional quality and service! Our garage floor looks incredible and has become a showcase space. Perfect for our luxury home.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Dr. Amanda Foster',
+			location: 'Lincoln Park Area',
+			quote: 'Professional service that exceeded expectations. The basement coating has created beautiful additional living space for our family.',
+			service: 'Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Kettering neighborhoods?',
+			answer: 'Yes, we provide concrete coating services throughout Kettering, including Hills & Dales, Lincoln Park area, Delco Park vicinity, and all premium residential neighborhoods.'
+		},
+		{
+			question: 'What coating options complement Kettering\'s upscale homes?',
+			answer: 'For Kettering\'s luxury homes, we offer premium epoxy systems including metallic finishes, decorative options, and custom colors that enhance property value and aesthetic appeal.'
+		},
+		{
+			question: 'How do you ensure quality matches Kettering standards?',
+			answer: 'We maintain the highest quality standards befitting Kettering\'s reputation, using premium materials and meticulous installation processes to deliver results that match your home\'s excellence.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'kettering-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

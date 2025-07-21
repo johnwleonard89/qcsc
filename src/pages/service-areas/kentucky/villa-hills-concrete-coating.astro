@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Villa Hills',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Kenton',
+	population: '7,489',
+	specialty: 'Upscale Residential Coatings',
+	landmarks: [
+		'Buttermilk Pike',
+		'Villa Hills Country Club',
+		'Mary Queen of Heaven Church',
+		'Villa Hills City Building',
+		'Covington Catholic High School (nearby)',
+		'Scenic Hillside Views',
+		'Historic Villa Hills'
+	],
+	description: 'Queen City Surface Coatings serves Villa Hills, Kentucky, an upscale residential community known for beautiful hillside homes and country club lifestyle. Our concrete coating services provide the premium quality and attention to detail that Villa Hills residents expect.',
+	serviceRadius: 'All Villa Hills neighborhoods and Kenton County',
+	zipCodes: ['41017'],
+	keyServices: [
+		'Upscale Residential Coatings',
+		'Premium Garage Floor Coating',
+		'Luxury Home Solutions',
+		'Country Club Quality Coatings',
+		'Executive Basement Coating',
+		'High-End Custom Finishes'
+	],
+	localProjects: [
+		{
+			title: 'Villa Hills Estate Garage',
+			description: 'Luxury garage transformation featuring premium metallic epoxy coating for an upscale Villa Hills residence.',
+			service: 'Estate Garage Coating'
+		},
+		{
+			title: 'Country Club Executive Home',
+			description: 'Premium basement floor coating creating sophisticated entertainment space for a Villa Hills country club member.',
+			service: 'Executive Entertainment Coating'
+		},
+		{
+			title: 'Buttermilk Pike Luxury Home',
+			description: 'Custom garage floor coating with high-end finishes for a prestigious Villa Hills hillside property.',
+			service: 'Luxury Custom Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Villa Hills Executive',
+			location: 'Villa Hills, KY',
+			quote: 'Exceptional luxury service! Our garage floor is now a showpiece that perfectly complements our Villa Hills home and country club lifestyle.',
+			service: 'Estate Garage Coating'
+		},
+		{
+			name: 'Country Club Member',
+			location: 'Buttermilk Pike',
+			quote: 'Premium craftsmanship that meets Villa Hills standards. Our basement entertainment area has become the perfect space for hosting.',
+			service: 'Executive Entertainment Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you specialize in Villa Hills luxury properties?',
+			answer: 'Yes, we specialize in premium concrete coatings for Villa Hills\' upscale homes, offering luxury finishes, custom designs, and executive-quality results that enhance property value.'
+		},
+		{
+			question: 'How do you ensure results match Villa Hills quality expectations?',
+			answer: 'We maintain the highest quality standards using premium materials and meticulous craftsmanship to deliver results that meet Villa Hills\' reputation for luxury and excellence.'
+		},
+		{
+			question: 'Do you serve Villa Hills Country Club area?',
+			answer: 'Absolutely! We provide premium concrete coating services throughout Villa Hills, including the country club area and all prestigious residential neighborhoods.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'villa-hills-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

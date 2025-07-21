@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Edgewood',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Kenton',
+	population: '8,575',
+	specialty: 'Quality Community Solutions',
+	landmarks: [
+		'Edgewood City Building',
+		'Dudley Road',
+		'Edgewood Fire Department',
+		'St. Pius X Church',
+		'Scott High School (nearby)',
+		'Thomas More University (nearby)',
+		'Turkey Foot Road'
+	],
+	description: 'Queen City Surface Coatings serves Edgewood, Kentucky, a well-established residential community known for quality neighborhoods and community pride. Our garage floor coating services help Edgewood residents maintain and enhance their homes with professional-grade solutions.',
+	serviceRadius: 'All Edgewood neighborhoods and Kenton County',
+	zipCodes: ['41017'],
+	keyServices: [
+		'Quality Community Solutions',
+		'Garage Floor Coating',
+		'Established Home Coatings',
+		'Basement Floor Coating',
+		'Neighborhood Pride Solutions',
+		'Residential Excellence'
+	],
+	localProjects: [
+		{
+			title: 'Edgewood Family Garage',
+			description: 'Quality garage floor coating for an established Edgewood home, enhancing property value and functionality.',
+			service: 'Quality Home Coating'
+		},
+		{
+			title: 'Dudley Road Residence',
+			description: 'Basement transformation for an Edgewood family, creating additional living space with moisture-resistant coating.',
+			service: 'Edgewood Basement Coating'
+		},
+		{
+			title: 'Community Pride Project',
+			description: 'Garage floor upgrade for a long-time Edgewood resident committed to maintaining neighborhood standards.',
+			service: 'Neighborhood Pride Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Edgewood Homeowner',
+			location: 'Edgewood, KY',
+			quote: 'Excellent quality that matches Edgewood standards! Our garage floor coating has enhanced our home and reflects our community pride.',
+			service: 'Quality Home Coating'
+		},
+		{
+			name: 'Long-time Resident',
+			location: 'Turkey Foot Road',
+			quote: 'Professional service that understands our established community. The basement coating has given us beautiful additional space.',
+			service: 'Edgewood Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Edgewood neighborhoods?',
+			answer: 'Yes, we provide concrete coating services throughout Edgewood, including Dudley Road, Turkey Foot Road, and all established residential neighborhoods in Kenton County.'
+		},
+		{
+			question: 'How do you ensure quality matches Edgewood standards?',
+			answer: 'We understand Edgewood\'s commitment to quality and community pride, using premium materials and meticulous installation to deliver results that enhance property values.'
+		},
+		{
+			question: 'Do you work respectfully in Edgewood\'s established neighborhoods?',
+			answer: 'Absolutely! We respect Edgewood\'s established community character and work considerately with neighbors while maintaining the peaceful residential environment.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'edgewood-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

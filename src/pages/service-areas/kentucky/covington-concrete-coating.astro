@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Covington',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Kenton',
+	population: '40,181',
+	specialty: 'Historic Urban Coatings',
+	landmarks: [
+		'MainStrasse Village',
+		'Roebling Suspension Bridge',
+		'Cathedral Basilica of the Assumption',
+		'Northern Kentucky Convention Center',
+		'Covington Landing',
+		'IRS Building',
+		'Historic Licking Riverside'
+	],
+	description: 'Queen City Surface Coatings proudly serves Covington, Kentucky, a historic riverfront city with stunning architecture and vibrant downtown. Our concrete coating services help preserve Covington\'s historic character while providing modern durability for homes and businesses.',
+	serviceRadius: 'All Covington neighborhoods and Kenton County',
+	zipCodes: ['41011', '41012', '41014', '41015', '41016', '41017', '41018', '41019'],
+	keyServices: [
+		'Historic Building Coatings',
+		'Urban Garage Solutions',
+		'Commercial Floor Coating',
+		'Riverfront Property Coating',
+		'Basement Moisture Solutions',
+		'Downtown Business Flooring'
+	],
+	localProjects: [
+		{
+			title: 'MainStrasse Village Business',
+			description: 'Historic-sensitive commercial floor coating for a MainStrasse Village business, preserving character while enhancing functionality.',
+			service: 'Historic Commercial Coating'
+		},
+		{
+			title: 'Riverside District Home',
+			description: 'Moisture-resistant basement coating for a Covington riverfront property, addressing unique environmental challenges.',
+			service: 'Riverfront Basement Coating'
+		},
+		{
+			title: 'Historic Covington Garage',
+			description: 'Thoughtful garage floor coating for a historic Covington home, balancing preservation with modern needs.',
+			service: 'Historic Garage Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Historic District Resident',
+			location: 'Covington, KY',
+			quote: 'Perfect balance of respecting our historic home while providing modern durability. Excellent understanding of Covington\'s unique character.',
+			service: 'Historic Garage Coating'
+		},
+		{
+			name: 'Downtown Business Owner',
+			location: 'MainStrasse Village',
+			quote: 'Outstanding commercial service that enhanced our historic space while meeting modern business needs. Highly recommend for Covington businesses.',
+			service: 'Historic Commercial Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work on Covington\'s historic properties?',
+			answer: 'Yes, we specialize in historic property coatings for Covington\'s buildings, understanding preservation requirements and providing solutions that respect architectural heritage while delivering modern performance.'
+		},
+		{
+			question: 'How do your coatings handle Covington\'s riverfront environment?',
+			answer: 'Our coatings include moisture barriers and vapor-resistant systems perfect for Covington\'s Ohio River environment, addressing humidity and moisture challenges unique to riverfront properties.'
+		},
+		{
+			question: 'Do you serve Covington\'s downtown business district?',
+			answer: 'Absolutely! We provide commercial concrete coating services throughout Covington\'s downtown, MainStrasse Village, and all business districts requiring professional flooring solutions.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'covington-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Springdale',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '11,223',
+	specialty: 'Commercial & Residential Coatings',
+	landmarks: [
+		'Tri-County Mall',
+		'Heritage Hill Park',
+		'Springdale Community Center',
+		'Princeton High School',
+		'Cameron Park',
+		'Crescentville Historic District',
+		'I-275 Business Corridor'
+	],
+	description: 'Queen City Surface Coatings serves Springdale, Ohio, a strategic location at the heart of the Tri-County area. Our concrete coating services support Springdale\'s mix of residential neighborhoods and commercial businesses with professional-grade flooring solutions.',
+	serviceRadius: 'All Springdale areas and Tri-County region',
+	zipCodes: ['45246'],
+	keyServices: [
+		'Commercial Concrete Coating',
+		'Retail Floor Coating',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Business Park Flooring',
+		'Residential Epoxy'
+	],
+	localProjects: [
+		{
+			title: 'Tri-County Area Business',
+			description: 'Commercial epoxy flooring for a Springdale retail business, designed for high foot traffic and easy maintenance.',
+			service: 'Commercial Epoxy'
+		},
+		{
+			title: 'Heritage Hill Family Garage',
+			description: 'Residential garage transformation featuring durable coating with decorative elements for a Springdale family.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Business Corridor Warehouse',
+			description: 'Industrial-grade floor coating for a Springdale I-275 corridor warehouse facility.',
+			service: 'Warehouse Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Dave and Susan Miller',
+			location: 'Springdale, OH',
+			quote: 'Excellent garage floor coating service! The results look professional and the process was smooth from start to finish.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Tri-County Business Owner',
+			location: 'Springdale Commercial District',
+			quote: 'Outstanding commercial flooring that has improved our customer experience and made maintenance much easier.',
+			service: 'Commercial Epoxy'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Springdale\'s commercial district?',
+			answer: 'Yes, we provide commercial concrete coating services throughout Springdale, including the Tri-County Mall area, I-275 business corridor, and all retail and warehouse facilities.'
+		},
+		{
+			question: 'How do your coatings handle high-traffic commercial areas?',
+			answer: 'Our commercial epoxy systems are designed for Springdale\'s busy retail and business environments, offering excellent durability, stain resistance, and easy maintenance for high-traffic areas.'
+		},
+		{
+			question: 'Do you work in the Tri-County area?',
+			answer: 'Absolutely! Springdale\'s central location makes us perfectly positioned to serve the entire Tri-County region with both residential and commercial concrete coating services.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'springdale-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

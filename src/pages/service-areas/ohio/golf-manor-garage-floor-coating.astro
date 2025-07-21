@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Golf Manor',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '3,608',
+	specialty: 'Boutique Residential Services',
+	landmarks: [
+		'Golf Manor Elementary School',
+		'Reading Road Corridor',
+		'Losantiville Country Club (nearby)',
+		'Pleasant Ridge (adjacent)',
+		'Duck Creek',
+		'Golf Manor Park',
+		'Woodford Road'
+	],
+	description: 'Queen City Surface Coatings serves Golf Manor, Ohio, a small, charming residential community with tree-lined streets and well-maintained homes. Our garage floor coating services provide personalized attention and quality results for this intimate neighborhood.',
+	serviceRadius: 'All Golf Manor neighborhoods and Hamilton County',
+	zipCodes: ['45237'],
+	keyServices: [
+		'Boutique Residential Services',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Personal Consultation',
+		'Custom Solutions',
+		'Neighborhood Specialists'
+	],
+	localProjects: [
+		{
+			title: 'Golf Manor Classic Home',
+			description: 'Thoughtful garage floor coating for a classic Golf Manor home, preserving neighborhood character while adding modern functionality.',
+			service: 'Classic Home Coating'
+		},
+		{
+			title: 'Reading Road Area Residence',
+			description: 'Custom basement floor coating creating additional living space for a small Golf Manor family home.',
+			service: 'Custom Basement Coating'
+		},
+		{
+			title: 'Golf Manor Family Project',
+			description: 'Personalized garage transformation designed specifically for a Golf Manor family\'s unique needs and style.',
+			service: 'Personalized Garage Solution'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Margaret and Robert Chen',
+			location: 'Golf Manor, OH',
+			quote: 'Exceptional personal service! They took time to understand our home and neighborhood. The results are perfect for our Golf Manor lifestyle.',
+			service: 'Classic Home Coating'
+		},
+		{
+			name: 'Local Resident',
+			location: 'Golf Manor',
+			quote: 'Wonderful attention to detail and respect for our small community. They made our garage beautiful while fitting perfectly with our neighborhood.',
+			service: 'Personalized Solution'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you provide personalized service for Golf Manor\'s small community?',
+			answer: 'Absolutely! We specialize in personalized, boutique service that matches Golf Manor\'s intimate community feel, taking time to understand each family\'s unique needs and preferences.'
+		},
+		{
+			question: 'How do you work respectfully in Golf Manor\'s close neighborhoods?',
+			answer: 'We understand Golf Manor\'s tight-knit community and work respectfully with neighbors, maintaining the peaceful atmosphere while delivering quality results.'
+		},
+		{
+			question: 'What makes your service special for Golf Manor residents?',
+			answer: 'We provide the personal attention and custom solutions that Golf Manor residents appreciate, treating each project as unique and important to the community\'s character.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'golf-manor-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

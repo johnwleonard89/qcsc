@@ -1,0 +1,98 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Cincinnati',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '309,317',
+	specialty: 'Commercial & Residential Coatings',
+	landmarks: [
+		'Downtown Cincinnati',
+		'Cincinnati Museum Center',
+		'Fountain Square',
+		'Great American Ball Park',
+		'Paul Brown Stadium',
+		'Cincinnati Zoo',
+		'University of Cincinnati',
+		'Over-the-Rhine Historic District'
+	],
+	description: 'Queen City Surface Coatings proudly serves Cincinnati, the Queen City, with premium concrete coating services. As a fellow "Queen City" business, we understand the pride and excellence that Cincinnati represents. Our veteran-owned company brings military precision to every residential and commercial concrete coating project throughout the Cincinnati metropolitan area.',
+	serviceRadius: 'All Cincinnati neighborhoods and suburbs',
+	zipCodes: ['45201', '45202', '45203', '45204', '45205', '45206', '45207', '45208', '45209', '45211', '45212', '45213', '45214', '45215', '45216', '45217', '45219', '45220', '45221', '45223', '45224', '45225', '45226', '45227', '45229', '45230', '45231', '45232', '45233', '45237', '45238', '45239', '45240', '45241', '45242', '45243', '45244', '45245', '45246', '45247', '45248', '45249', '45250', '45251', '45252', '45254', '45255', '45258', '45262', '45263', '45264', '45267', '45268', '45269', '45270', '45271', '45274', '45275', '45277', '45280', '45296', '45298', '45299'],
+	keyServices: [
+		'Commercial Epoxy Flooring',
+		'Garage Floor Coating',
+		'Polyaspartic Coating',
+		'Metallic Epoxy Flooring',
+		'Basement Floor Coating',
+		'Industrial Concrete Coating'
+	],
+	localProjects: [
+		{
+			title: 'Downtown Office Building Lobby',
+			description: 'Transformed a 2,000 sq ft corporate lobby with stunning metallic epoxy flooring that reflects Cincinnati\'s skyline aesthetic.',
+			service: 'Metallic Epoxy'
+		},
+		{
+			title: 'Hyde Park Residential Garage',
+			description: 'Complete garage makeover in historic Hyde Park featuring durable epoxy coating with decorative flakes.',
+			service: 'Garage Floor Epoxy'
+		},
+		{
+			title: 'Over-the-Rhine Brewery Floor',
+			description: 'Industrial-grade polyaspartic coating for a craft brewery, handling heavy foot traffic and chemical resistance.',
+			service: 'Commercial Polyaspartic'
+		},
+		{
+			title: 'Clifton University Area Basement',
+			description: 'Moisture-resistant basement floor coating near UC campus, creating functional student housing space.',
+			service: 'Basement Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Mike Thompson',
+			location: 'Hyde Park, Cincinnati',
+			quote: 'Outstanding work on our garage floor. The team was professional, punctual, and the results exceeded our expectations. Highly recommend for any Cincinnati homeowner.',
+			service: 'Garage Floor Epoxy'
+		},
+		{
+			name: 'Sarah Martinez',
+			location: 'Downtown Cincinnati',
+			quote: 'Queen City Surface Coatings transformed our commercial space beautifully. Their attention to detail and quality craftsmanship is evident in every square foot.',
+			service: 'Commercial Epoxy'
+		},
+		{
+			name: 'David Rodriguez',
+			location: 'Over-the-Rhine, Cincinnati',
+			quote: 'As a fellow veteran, I appreciated their military precision and commitment to excellence. Our warehouse floor looks incredible and performs even better.',
+			service: 'Industrial Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Cincinnati neighborhoods?',
+			answer: 'Yes, we provide concrete coating services throughout all Cincinnati neighborhoods including Downtown, Over-the-Rhine, Hyde Park, Clifton, Mount Lookout, Oakley, and all surrounding areas within Hamilton County.'
+		},
+		{
+			question: 'What\'s the typical project timeline for Cincinnati jobs?',
+			answer: 'Most residential garage floors in Cincinnati can be completed in 1-2 days, while commercial projects vary based on size. We work efficiently to minimize disruption to your Cincinnati business or home.'
+		},
+		{
+			question: 'Do you offer free estimates in Cincinnati?',
+			answer: 'Absolutely! We provide free, no-obligation estimates for all concrete coating projects throughout Cincinnati and Hamilton County. Contact us to schedule your consultation.'
+		},
+		{
+			question: 'What makes your coatings suitable for Cincinnati weather?',
+			answer: 'Our coatings are specifically chosen to withstand Cincinnati\'s variable climate, including freeze-thaw cycles, humidity, and temperature fluctuations. All systems are UV-stable and weather-resistant.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'cincinnati-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

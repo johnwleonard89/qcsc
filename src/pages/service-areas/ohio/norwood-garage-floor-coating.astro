@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Norwood',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '19,207',
+	specialty: 'Urban Residential Solutions',
+	landmarks: [
+		'U.S. Playing Card Company',
+		'Norwood High School',
+		'Floral Avenue',
+		'Norwood Recreation Center',
+		'Victory Parkway',
+		'Xavier University (nearby)',
+		'Montgomery Road Shopping'
+	],
+	description: 'Queen City Surface Coatings serves Norwood, Ohio, an established urban community with rich industrial heritage and strong neighborhood character. Our garage floor coating services help Norwood residents maximize their home\'s functionality and value.',
+	serviceRadius: 'All Norwood neighborhoods and Hamilton County',
+	zipCodes: ['45212'],
+	keyServices: [
+		'Urban Garage Solutions',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Small Space Optimization',
+		'Residential Epoxy Flooring',
+		'Compact Home Solutions'
+	],
+	localProjects: [
+		{
+			title: 'Norwood Family Garage',
+			description: 'Space-maximizing garage floor coating for a Norwood home, creating organized storage in a compact urban setting.',
+			service: 'Urban Garage Solution'
+		},
+		{
+			title: 'Victory Parkway Area Home',
+			description: 'Basement floor coating creating additional living space for a growing Norwood family.',
+			service: 'Basement Coating'
+		},
+		{
+			title: 'Floral Avenue Residence',
+			description: 'Durable garage floor coating designed for urban living and daily city life demands.',
+			service: 'Garage Floor Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Maria and Carlos Rodriguez',
+			location: 'Norwood, OH',
+			quote: 'Great transformation! Our small garage is now organized and functional. Perfect solution for urban living in Norwood.',
+			service: 'Urban Garage Solution'
+		},
+		{
+			name: 'Sarah Johnson',
+			location: 'Victory Parkway',
+			quote: 'Professional service that understood our space limitations. The basement coating has given us the extra room we needed.',
+			service: 'Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work with Norwood\'s compact urban homes?',
+			answer: 'Yes, we specialize in maximizing space efficiency for Norwood\'s urban properties, providing coating solutions that optimize storage and functionality in compact garage and basement spaces.'
+		},
+		{
+			question: 'How do your coatings handle urban environment challenges?',
+			answer: 'Our coatings are designed for urban living demands, including city moisture, temperature variations, and the need for easy maintenance in busy Norwood neighborhoods.'
+		},
+		{
+			question: 'Can you work in Norwood\'s densely populated neighborhoods?',
+			answer: 'Absolutely! We\'re experienced with urban installation challenges and can work efficiently in Norwood\'s close-proximity neighborhoods while respecting neighbors and property access.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'norwood-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

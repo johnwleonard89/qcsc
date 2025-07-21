@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Florence',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Boone',
+	population: '32,721',
+	specialty: 'Retail & Residential Coatings',
+	landmarks: [
+		'Florence Mall',
+		'Boone County High School',
+		'Florence Government Center',
+		'Turfway Park Racing',
+		'Burlington Pike',
+		'Pride Park',
+		'I-71/I-75 Junction'
+	],
+	description: 'Queen City Surface Coatings serves Florence, Kentucky, a bustling retail and residential hub at the junction of major interstates. Our concrete coating services support Florence\'s commercial growth and help residents enhance their homes with professional-grade flooring solutions.',
+	serviceRadius: 'All Florence neighborhoods and Boone County',
+	zipCodes: ['41022', '41042'],
+	keyServices: [
+		'Retail Facility Coatings',
+		'Residential Concrete Coating',
+		'Commercial Floor Coating',
+		'Garage Floor Coating',
+		'Shopping Center Flooring',
+		'Interstate Corridor Solutions'
+	],
+	localProjects: [
+		{
+			title: 'Florence Mall Area Business',
+			description: 'High-traffic commercial floor coating for a Florence retail facility, designed for heavy foot traffic and easy maintenance.',
+			service: 'Retail Commercial Coating'
+		},
+		{
+			title: 'Boone County Family Garage',
+			description: 'Residential garage transformation for a Florence family, featuring durable coating with decorative elements.',
+			service: 'Family Garage Coating'
+		},
+		{
+			title: 'Interstate Business Park',
+			description: 'Industrial floor coating for a Florence business park facility near the I-71/I-75 junction.',
+			service: 'Business Park Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Florence Retail Manager',
+			location: 'Florence Mall Area',
+			quote: 'Excellent commercial flooring that has improved our customer experience and made maintenance much easier. Perfect for high-traffic retail.',
+			service: 'Retail Commercial Coating'
+		},
+		{
+			name: 'Boone County Resident',
+			location: 'Florence, KY',
+			quote: 'Outstanding residential service! Our garage floor looks amazing and handles our busy family lifestyle perfectly.',
+			service: 'Family Garage Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Florence\'s retail and commercial district?',
+			answer: 'Yes, we provide commercial concrete coating services throughout Florence, including the mall area, business parks, and all retail facilities requiring professional flooring solutions.'
+		},
+		{
+			question: 'How do your coatings handle Florence\'s high-traffic environments?',
+			answer: 'Our commercial coatings are designed for Florence\'s busy retail and business environments, offering excellent durability, stain resistance, and easy maintenance for high-traffic areas.'
+		},
+		{
+			question: 'Do you work in Florence\'s interstate business corridor?',
+			answer: 'Absolutely! We serve businesses throughout Florence\'s I-71/I-75 corridor, providing industrial and commercial concrete coating solutions for logistics and business facilities.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'florence-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

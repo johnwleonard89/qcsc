@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Loveland',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '13,307',
+	specialty: 'Epoxy Flooring Systems',
+	landmarks: [
+		'Loveland Bike Trail',
+		'Nisbet Park',
+		'Loveland Castle',
+		'Little Miami River',
+		'Historic Downtown Loveland',
+		'Loveland Bike Trail Café',
+		'Paxton Ramsey Park'
+	],
+	description: 'Queen City Surface Coatings is proud to serve Loveland, Ohio, known for its scenic bike trails and charming historic downtown. Our expert epoxy flooring services transform Loveland homes and businesses with durable, beautiful concrete coatings that match the community\'s commitment to quality and outdoor lifestyle.',
+	serviceRadius: 'All Loveland neighborhoods and surrounding areas',
+	zipCodes: ['45140', '45111'],
+	keyServices: [
+		'Garage Floor Epoxy',
+		'Basement Floor Coating',
+		'Residential Epoxy Flooring',
+		'Driveway Coating',
+		'Polyaspartic Coating',
+		'Commercial Floor Coating'
+	],
+	localProjects: [
+		{
+			title: 'Bike Trail Enthusiast Garage',
+			description: 'Custom garage floor coating for an avid cyclist, featuring easy-clean epoxy perfect for bike maintenance and storage.',
+			service: 'Garage Floor Epoxy'
+		},
+		{
+			title: 'Historic Downtown Retail Space',
+			description: 'Commercial epoxy flooring for a charming boutique in downtown Loveland, combining durability with aesthetic appeal.',
+			service: 'Commercial Epoxy'
+		},
+		{
+			title: 'Riverside Home Basement',
+			description: 'Moisture-resistant basement coating for a home near the Little Miami River, preventing humidity issues.',
+			service: 'Basement Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Jennifer and Mark Stevens',
+			location: 'Loveland, OH',
+			quote: 'Perfect for our active lifestyle! The garage floor coating holds up great to our bikes, sports equipment, and Ohio weather. Professional service from start to finish.',
+			service: 'Garage Floor Epoxy'
+		},
+		{
+			name: 'Patricia Williams',
+			location: 'Downtown Loveland',
+			quote: 'Transformed our retail space beautifully. Customers constantly compliment the floors, and maintenance is so much easier now.',
+			service: 'Commercial Epoxy'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all areas of Loveland?',
+			answer: 'Yes, we provide concrete coating services throughout Loveland, including downtown, residential neighborhoods, and areas near the bike trail and Little Miami River.'
+		},
+		{
+			question: 'How do your coatings handle Loveland\'s moisture from the river?',
+			answer: 'Our epoxy and polyaspartic coatings provide excellent moisture resistance, making them ideal for Loveland properties near the Little Miami River. We include moisture vapor barriers when needed.'
+		},
+		{
+			question: 'Can you work around Loveland\'s bike trail events?',
+			answer: 'Absolutely! We understand Loveland\'s active community calendar and can schedule projects to accommodate local events and bike trail activities.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'loveland-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

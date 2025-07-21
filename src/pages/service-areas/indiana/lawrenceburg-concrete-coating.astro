@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Lawrenceburg',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Dearborn',
+	population: '5,042',
+	specialty: 'Historic Riverfront Coatings',
+	landmarks: [
+		'Hollywood Casino Lawrenceburg',
+		'Perfect North Slopes',
+		'Oxbow Inc.',
+		'Lawrenceburg Speedway',
+		'Ohio River Waterfront',
+		'Historic Downtown Lawrenceburg',
+		'Dearborn County Courthouse'
+	],
+	description: 'Queen City Surface Coatings proudly serves Lawrenceburg, Indiana, a historic Ohio River city known for entertainment, outdoor recreation, and gaming. Our concrete coating services help Lawrenceburg residents and businesses enhance their properties while embracing the city\'s riverfront heritage.',
+	serviceRadius: 'All Lawrenceburg areas and Dearborn County',
+	zipCodes: ['47025'],
+	keyServices: [
+		'Historic Riverfront Coatings',
+		'Entertainment Industry Flooring',
+		'Garage Floor Coating',
+		'Commercial Casino Support',
+		'Riverfront Property Solutions',
+		'Recreation Industry Coatings'
+	],
+	localProjects: [
+		{
+			title: 'Casino Employee Garage',
+			description: 'Professional garage floor coating for a Hollywood Casino Lawrenceburg employee, designed for shift worker lifestyle.',
+			service: 'Entertainment Worker Coating'
+		},
+		{
+			title: 'Perfect North Slopes Family',
+			description: 'Outdoor recreation garage coating for a family active in skiing and seasonal sports at Perfect North Slopes.',
+			service: 'Recreation Family Coating'
+		},
+		{
+			title: 'Historic Riverfront Home',
+			description: 'Moisture-resistant basement coating for a historic Lawrenceburg home near the Ohio River waterfront.',
+			service: 'Historic Riverfront Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Casino Professional',
+			location: 'Lawrenceburg, IN',
+			quote: 'Perfect for our entertainment industry schedule! The garage floor coating looks professional and handles our unique work lifestyle.',
+			service: 'Entertainment Worker Coating'
+		},
+		{
+			name: 'Outdoor Recreation Family',
+			location: 'Perfect North Area',
+			quote: 'Great for our active lifestyle! The coating handles all our skiing and outdoor equipment while looking amazing.',
+			service: 'Recreation Family Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work with Lawrenceburg\'s entertainment industry?',
+			answer: 'Yes, we provide concrete coating services for Hollywood Casino Lawrenceburg employees and entertainment industry workers, understanding unique schedules and professional needs.'
+		},
+		{
+			question: 'How do your coatings handle Lawrenceburg\'s riverfront environment?',
+			answer: 'Our coatings include moisture barriers perfect for Lawrenceburg\'s Ohio River location, addressing humidity and environmental challenges unique to riverfront properties.'
+		},
+		{
+			question: 'Do you serve Lawrenceburg\'s recreation community?',
+			answer: 'Absolutely! We provide garage and basement solutions for families active at Perfect North Slopes and other Lawrenceburg recreational facilities.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'lawrenceburg-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

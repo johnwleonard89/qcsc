@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Newport',
+	state: 'Kentucky',
+	stateAbbr: 'KY',
+	county: 'Campbell',
+	population: '14,150',
+	specialty: 'Riverfront Concrete Services',
+	landmarks: [
+		'Newport on the Levee',
+		'Newport Aquarium',
+		'Purple People Bridge',
+		'Riverboat Row',
+		'Newport Historic District',
+		'Gangster Tour Sites',
+		'Ohio River Waterfront'
+	],
+	description: 'Queen City Surface Coatings proudly serves Newport, Kentucky, the vibrant riverfront city directly across from Cincinnati. Our concrete coating services help Newport residents and businesses enhance their properties while embracing the historic charm and modern amenities of this Ohio River community.',
+	serviceRadius: 'All Newport neighborhoods and riverfront areas',
+	zipCodes: ['41071', '41072', '41073', '41076'],
+	keyServices: [
+		'Riverfront Concrete Coating',
+		'Historic Building Floor Restoration',
+		'Garage Floor Coating',
+		'Commercial Epoxy Flooring',
+		'Basement Waterproofing',
+		'Industrial Coating'
+	],
+	localProjects: [
+		{
+			title: 'Newport on the Levee Restaurant',
+			description: 'Commercial epoxy flooring for a riverfront restaurant, designed to handle high foot traffic and frequent cleaning.',
+			service: 'Commercial Epoxy'
+		},
+		{
+			title: 'Historic District Home Garage',
+			description: 'Garage floor coating for a restored historic home, blending modern durability with classic aesthetics.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Riverfront Condo Basement',
+			description: 'Moisture-resistant basement coating for a riverfront property, addressing humidity challenges near the Ohio River.',
+			service: 'Basement Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Tom and Maria Rodriguez',
+			location: 'Newport Historic District',
+			quote: 'Perfect for our historic home renovation. The team understood the unique challenges of older properties and delivered exceptional results.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'James Mitchell',
+			location: 'Newport Riverfront',
+			quote: 'Living by the river brings moisture challenges, but their basement coating has kept our lower level dry and functional for two years now.',
+			service: 'Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work on historic properties in Newport?',
+			answer: 'Yes, we have extensive experience working with Newport\'s historic properties, understanding preservation requirements and adapting our services accordingly.'
+		},
+		{
+			question: 'How do your coatings handle Newport\'s riverfront moisture?',
+			answer: 'Our coatings are specifically chosen for Newport\'s humid riverfront environment, including moisture barriers and vapor-resistant systems perfect for Ohio River properties.'
+		},
+		{
+			question: 'Do you serve Newport\'s entertainment district?',
+			answer: 'Absolutely! We provide commercial concrete coating services for restaurants, retail, and entertainment venues throughout Newport on the Levee and the historic district.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'newport-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Middletown',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Butler',
+	population: '50,987',
+	specialty: 'Commercial & Industrial Epoxy',
+	landmarks: [
+		'Sorg Opera House',
+		'Miami University Middletown',
+		'Smith Park',
+		'Middletown Historical Society',
+		'Manchester Inn',
+		'Great Miami River',
+		'Gardner Park'
+	],
+	description: 'Queen City Surface Coatings serves Middletown, Ohio, a historic manufacturing city with rich industrial heritage. Our epoxy flooring services support Middletown\'s businesses and residents with professional-grade coatings designed for both commercial and residential applications.',
+	serviceRadius: 'All Middletown areas and Butler County',
+	zipCodes: ['45042', '45044', '45005'],
+	keyServices: [
+		'Commercial Epoxy Flooring',
+		'Industrial Floor Coating',
+		'Garage Floor Coating',
+		'Manufacturing Floor Coating',
+		'Basement Floor Coating',
+		'Polyaspartic Coating'
+	],
+	localProjects: [
+		{
+			title: 'Manufacturing Facility Upgrade',
+			description: 'Industrial epoxy flooring for a Middletown manufacturing plant, designed for heavy machinery and chemical resistance.',
+			service: 'Industrial Epoxy'
+		},
+		{
+			title: 'Historic District Business',
+			description: 'Commercial epoxy flooring for a downtown Middletown business, combining durability with aesthetic appeal.',
+			service: 'Commercial Epoxy'
+		},
+		{
+			title: 'Miami University Area Home',
+			description: 'Garage floor coating for a family near Miami University Middletown, creating functional storage space.',
+			service: 'Garage Floor Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert Thompson',
+			location: 'Middletown, OH',
+			quote: 'Excellent industrial coating service. The team understood our manufacturing needs and delivered a floor that handles our production demands perfectly.',
+			service: 'Industrial Epoxy'
+		},
+		{
+			name: 'Sarah and Mike Davis',
+			location: 'Smith Park Area',
+			quote: 'Professional garage floor coating that transformed our space. Great for our tools and equipment, and it looks fantastic too.',
+			service: 'Garage Floor Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you handle industrial projects in Middletown?',
+			answer: 'Yes, we specialize in industrial epoxy coatings for Middletown\'s manufacturing facilities, providing heavy-duty systems designed for industrial equipment and chemical exposure.'
+		},
+		{
+			question: 'How do your coatings perform in manufacturing environments?',
+			answer: 'Our industrial epoxy systems are engineered for Middletown\'s manufacturing demands, offering chemical resistance, abrasion resistance, and long-term durability under heavy use.'
+		},
+		{
+			question: 'Do you serve Miami University Middletown area?',
+			answer: 'Absolutely! We provide residential and commercial concrete coating services throughout Middletown, including areas near Miami University Middletown campus.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'middletown-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

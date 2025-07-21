@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Lebanon',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Warren',
+	population: '20,841',
+	specialty: 'Historic & Modern Concrete Solutions',
+	landmarks: [
+		'Warren County Historical Society',
+		'Glendower Historic Mansion',
+		'Lebanon Raceway',
+		'Pioneer Park',
+		'Lebanon Country Club',
+		'Golden Lamb Historic Inn',
+		'Countryside YMCA'
+	],
+	description: 'Queen City Surface Coatings serves Lebanon, Ohio, Warren County\'s historic seat known for the famous Golden Lamb Inn and rich heritage. Our concrete coating services blend respect for Lebanon\'s historic character with modern durability and performance.',
+	serviceRadius: 'All Lebanon neighborhoods and Warren County areas',
+	zipCodes: ['45036'],
+	keyServices: [
+		'Historic Property Concrete Coating',
+		'Garage Floor Coating',
+		'Commercial Floor Coating',
+		'Basement Floor Coating',
+		'Equestrian Facility Coating',
+		'Polyaspartic Coating'
+	],
+	localProjects: [
+		{
+			title: 'Historic District Home Garage',
+			description: 'Sensitive garage floor coating for a historic Lebanon home, preserving character while adding modern functionality.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Lebanon Raceway Area Property',
+			description: 'Durable concrete coating for a property near Lebanon Raceway, designed for automotive enthusiast storage needs.',
+			service: 'Specialty Coating'
+		},
+		{
+			title: 'Pioneer Park Vicinity Home',
+			description: 'Basement transformation creating additional family space for a home near Lebanon\'s recreational facilities.',
+			service: 'Basement Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert and Linda Hayes',
+			location: 'Historic Lebanon',
+			quote: 'Perfect balance of respecting our home\'s historic character while providing modern durability. Excellent craftsmanship and attention to detail.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Mary Elizabeth Thompson',
+			location: 'Warren County',
+			quote: 'Professional service that understood our property\'s unique needs. The basement coating has created beautiful additional living space.',
+			service: 'Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work on historic properties in Lebanon?',
+			answer: 'Yes, we have extensive experience with Lebanon\'s historic properties, understanding preservation requirements and providing coatings that respect historic character while delivering modern performance.'
+		},
+		{
+			question: 'Do you serve the Lebanon Raceway area?',
+			answer: 'Absolutely! We provide concrete coating services throughout Lebanon, including the raceway area, and specialize in automotive enthusiast garage solutions.'
+		},
+		{
+			question: 'What coating options work best for Warren County properties?',
+			answer: 'For Warren County\'s diverse properties, from historic homes to modern residences, we offer customized coating solutions that match each property\'s specific needs and aesthetic requirements.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'lebanon-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

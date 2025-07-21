@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Mason',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Warren',
+	population: '34,792',
+	specialty: 'Garage Floor Coatings',
+	landmarks: [
+		'Kings Island Amusement Park',
+		'Western & Southern Open Tennis Tournament',
+		'Lindner Family Tennis Center',
+		'Heritage Oak Park',
+		'Deerfield Township',
+		'The Beach Waterpark',
+		'Atrium Medical Center'
+	],
+	description: 'Queen City Surface Coatings serves Mason, Ohio, home to Kings Island and world-class tennis facilities. Our garage floor coating services help Mason homeowners protect and beautify their garages with professional-grade coatings that withstand the demands of suburban family life.',
+	serviceRadius: 'All Mason neighborhoods and Deerfield Township',
+	zipCodes: ['45040', '45249'],
+	keyServices: [
+		'Garage Floor Coating',
+		'Residential Epoxy Flooring',
+		'Basement Floor Coating',
+		'Driveway Sealing',
+		'Polyaspartic Coating',
+		'Decorative Concrete'
+	],
+	localProjects: [
+		{
+			title: 'Mason Luxury Home Garage',
+			description: 'Three-car garage transformation featuring premium epoxy coating with metallic accents for a showroom-quality finish.',
+			service: 'Garage Floor Epoxy'
+		},
+		{
+			title: 'Kings Island Employee Garage',
+			description: 'Durable garage floor coating designed to handle work boots and equipment storage for a theme park employee.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Tennis Family Basement',
+			description: 'Basement floor coating for a tennis family, creating additional recreational space near Lindner Tennis Center.',
+			service: 'Basement Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert and Lisa Chen',
+			location: 'Mason, OH',
+			quote: 'Incredible transformation! Our garage went from drab concrete to showroom quality. Perfect for our cars and all the kids\' sports equipment.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Michael Johnson',
+			location: 'Deerfield Township',
+			quote: 'Professional service from a veteran-owned business. The coating has held up perfectly through two Ohio winters and looks brand new.',
+			service: 'Garage Epoxy'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve both Mason and Deerfield Township?',
+			answer: 'Yes, we provide concrete coating services throughout Mason, Deerfield Township, and all surrounding Warren County areas near Kings Island.'
+		},
+		{
+			question: 'How long does a typical Mason garage floor take?',
+			answer: 'Most residential garage floors in Mason can be completed in 1-2 days, depending on size and coating system chosen. We work efficiently to minimize disruption to your family schedule.'
+		},
+		{
+			question: 'Do your coatings work well for families with active lifestyles?',
+			answer: 'Absolutely! Our coatings are perfect for Mason families with sports equipment, bikes, and seasonal gear. They\'re easy to clean and highly durable for active households.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'mason-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

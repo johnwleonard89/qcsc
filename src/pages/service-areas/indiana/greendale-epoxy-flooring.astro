@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Greendale',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Dearborn',
+	population: '4,520',
+	specialty: 'Historic Planned Community',
+	landmarks: [
+		'Historic Greendale Town',
+		'New Deal Historic District',
+		'Greendale High School',
+		'Francis Park',
+		'Greendale Community Center',
+		'Main Street Historic Area',
+		'Art Deco Architecture'
+	],
+	description: 'Queen City Surface Coatings serves Greendale, Indiana, a unique New Deal-era planned community with distinctive Art Deco architecture and rich history. Our epoxy flooring services help preserve Greendale\'s historic character while providing modern functionality for residents.',
+	serviceRadius: 'All Greendale historic community and Dearborn County',
+	zipCodes: ['47025'],
+	keyServices: [
+		'Historic Planned Community Solutions',
+		'New Deal Era Property Coatings',
+		'Art Deco Home Solutions',
+		'Historic District Garage Coatings',
+		'Preservation-Sensitive Services',
+		'Community Heritage Coatings'
+	],
+	localProjects: [
+		{
+			title: 'Historic Greendale Home',
+			description: 'Heritage-sensitive garage floor coating for an original New Deal era home, preserving historic character with modern functionality.',
+			service: 'Historic Preservation Coating'
+		},
+		{
+			title: 'Art Deco District Residence',
+			description: 'Period-appropriate basement coating for a Greendale home in the Art Deco historic district.',
+			service: 'Art Deco Home Coating'
+		},
+		{
+			title: 'Main Street Area Family',
+			description: 'Community-focused garage transformation for a Greendale family active in historic preservation efforts.',
+			service: 'Heritage Community Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Historic Greendale Resident',
+			location: 'Greendale, IN',
+			quote: 'Perfect understanding of our historic community! The garage floor coating respects our home\'s New Deal heritage while providing modern durability.',
+			service: 'Historic Preservation Coating'
+		},
+		{
+			name: 'Art Deco District Family',
+			location: 'Main Street Area',
+			quote: 'Excellent preservation-sensitive service that enhanced our historic home while maintaining its authentic character.',
+			service: 'Art Deco Home Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you work on Greendale\'s historic New Deal properties?',
+			answer: 'Yes, we specialize in preservation-sensitive coatings for Greendale\'s unique New Deal era homes, understanding the importance of maintaining historic character and architectural integrity.'
+		},
+		{
+			question: 'How do you respect Greendale\'s Art Deco architecture?',
+			answer: 'We understand Greendale\'s distinctive Art Deco heritage and provide coatings that complement the community\'s historic design elements while delivering modern performance.'
+		},
+		{
+			question: 'Do you support Greendale\'s historic preservation efforts?',
+			answer: 'Absolutely! We\'re committed to supporting Greendale\'s historic preservation community and work closely with residents to maintain the town\'s unique planned community character.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'greendale-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

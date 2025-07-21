@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Bright',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Dearborn',
+	population: '5,405',
+	specialty: 'Residential Community Solutions',
+	landmarks: [
+		'Bright Elementary School',
+		'South Dearborn Middle School',
+		'Bright Community Park',
+		'Ohio River Access',
+		'Historic Bright',
+		'State Road 1',
+		'Rural Countryside'
+	],
+	description: 'Queen City Surface Coatings serves Bright, Indiana, a growing residential community in Dearborn County known for excellent schools and family-friendly neighborhoods. Our concrete coating services help Bright families enhance their homes and support their active lifestyles.',
+	serviceRadius: 'All Bright neighborhoods and Dearborn County',
+	zipCodes: ['47025'],
+	keyServices: [
+		'Residential Community Solutions',
+		'School District Family Services',
+		'Growing Community Coatings',
+		'Family-Focused Garage Solutions',
+		'Suburban Lifestyle Coatings',
+		'Educational Community Support'
+	],
+	localProjects: [
+		{
+			title: 'Bright School Family',
+			description: 'Family garage transformation for a household with children at Bright Elementary and South Dearborn schools.',
+			service: 'School Family Coating'
+		},
+		{
+			title: 'Growing Bright Community',
+			description: 'Basement floor coating for a new Bright resident, creating additional family space in the growing community.',
+			service: 'Growing Community Coating'
+		},
+		{
+			title: 'State Road 1 Family',
+			description: 'Active family garage coating designed for sports equipment and outdoor recreation gear storage.',
+			service: 'Active Family Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Bright School Family',
+			location: 'Bright, IN',
+			quote: 'Perfect for our growing family! The garage floor coating handles all our kids\' activities and looks great in our Bright home.',
+			service: 'School Family Coating'
+		},
+		{
+			name: 'New Bright Resident',
+			location: 'Bright Community',
+			quote: 'Excellent welcoming service for newcomers to Bright. Our basement transformation has given us the family space we needed.',
+			service: 'Growing Community Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Bright\'s school district families?',
+			answer: 'Yes, we provide garage and basement coating services for families throughout Bright, understanding the needs of households with school-age children and active lifestyles.'
+		},
+		{
+			question: 'How do you support Bright\'s growing community?',
+			answer: 'We welcome new Bright residents and provide quality concrete coating services that help families settle into their new community and enhance their homes.'
+		},
+		{
+			question: 'Can you work around Bright\'s school and community events?',
+			answer: 'Absolutely! We coordinate projects around Bright\'s school calendar and community activities to minimize disruption to your family\'s routine and involvement.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'bright-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Springfield',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Clark',
+	population: '58,662',
+	specialty: 'Industrial Concrete Coating',
+	landmarks: [
+		'Wittenberg University',
+		'Springfield Museum of Art',
+		'Buck Creek State Park',
+		'Hartman Rock Garden',
+		'National Trail Parks',
+		'Snyder Park',
+		'Heritage Center Museum'
+	],
+	description: 'Queen City Surface Coatings serves Springfield, Ohio, a historic manufacturing city with strong industrial roots. Our concrete coating services help Springfield businesses and residents enhance their properties with professional-grade coatings designed for both industrial and residential applications.',
+	serviceRadius: 'All Springfield neighborhoods and Clark County areas',
+	zipCodes: ['45501', '45502', '45503', '45504', '45505', '45506'],
+	keyServices: [
+		'Industrial Concrete Coating',
+		'Garage Floor Coating',
+		'Commercial Epoxy Flooring',
+		'Warehouse Floor Coating',
+		'Basement Floor Coating',
+		'Polyaspartic Coating'
+	],
+	localProjects: [
+		{
+			title: 'Manufacturing Facility Floor',
+			description: 'Heavy-duty industrial coating for a Springfield manufacturing plant, designed for forklift traffic and chemical resistance.',
+			service: 'Industrial Coating'
+		},
+		{
+			title: 'Wittenberg Area Family Garage',
+			description: 'Residential garage floor coating for a family near Wittenberg University, featuring easy maintenance and durability.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Downtown Commercial Space',
+			description: 'Commercial epoxy flooring for a Springfield retail space, combining aesthetics with heavy foot traffic durability.',
+			service: 'Commercial Epoxy'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Tom and Janet Miller',
+			location: 'Springfield, OH',
+			quote: 'Excellent work on our garage floor. The team understood our needs and delivered a coating that looks great and handles our tools and equipment perfectly.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Springfield Manufacturing Inc.',
+			location: 'Clark County',
+			quote: 'Professional industrial coating service that minimized downtime and delivered exactly what we needed for our production floor.',
+			service: 'Industrial Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you handle industrial projects in Springfield?',
+			answer: 'Yes, we specialize in industrial concrete coatings for Springfield\'s manufacturing and warehouse facilities, including heavy-duty systems for forklift traffic and chemical exposure.'
+		},
+		{
+			question: 'How long do industrial coatings last in Springfield facilities?',
+			answer: 'Our industrial coatings are designed for 10-15 years of heavy use in Springfield manufacturing environments, with proper maintenance extending their lifespan even further.'
+		},
+		{
+			question: 'Can you work around production schedules?',
+			answer: 'Absolutely! We understand Springfield\'s industrial needs and can schedule coating projects during shutdowns, weekends, or maintenance windows to minimize production disruption.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'springfield-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

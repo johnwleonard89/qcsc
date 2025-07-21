@@ -1,0 +1,82 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+
+const city = {
+	name: 'Huber Heights',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '43,439',
+	specialty: 'Family-Focused Garage Solutions',
+	landmarks: [
+		'Carriage Hill MetroPark',
+		'Thomas A. Cloud Park',
+		'Huber Heights City Schools',
+		'Rose Music Center',
+		'Taylorsville MetroPark',
+		'Miami Valley Hospital',
+		'Huber Heights Athletic Complex'
+	],
+	description: 'Queen City Surface Coatings serves Huber Heights, Ohio, a family-oriented community known for excellent schools and recreational facilities. Our garage floor coating services help Huber Heights families create organized, functional spaces that handle active family lifestyles.',
+	serviceRadius: 'All Huber Heights neighborhoods and Montgomery County',
+	zipCodes: ['45424', '45414', '45426', '45431'],
+	keyServices: [
+		'Family Garage Solutions',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Residential Epoxy Flooring',
+		'Sports Equipment Storage Solutions',
+		'Polyaspartic Coating'
+	],
+	localProjects: [
+		{
+			title: 'Athletic Family Garage',
+			description: 'Comprehensive garage transformation for a Huber Heights family with multiple sports activities, featuring durable coating and organization systems.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			title: 'Carriage Hill Area Home',
+			description: 'Basement floor coating creating additional family space for a home near Carriage Hill MetroPark recreation areas.',
+			service: 'Basement Coating'
+		},
+		{
+			title: 'School District Family',
+			description: 'Multi-purpose garage coating designed for busy family with school-age children and extensive sports equipment storage needs.',
+			service: 'Family Garage Solution'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Todd and Michelle Roberts',
+			location: 'Huber Heights, OH',
+			quote: 'Perfect solution for our busy family! The garage floor coating handles everything from soccer cleats to camping gear. Great investment for active families.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Coach Brian Miller',
+			location: 'Thomas A. Cloud Park Area',
+			quote: 'Outstanding service! Our basement coating has created the perfect space for storing and organizing all our kids\' sports equipment.',
+			service: 'Basement Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Huber Heights school districts?',
+			answer: 'Yes, we provide garage floor coating services throughout Huber Heights, including all school district areas, Carriage Hill vicinity, and Rose Music Center area.'
+		},
+		{
+			question: 'How do your coatings handle sports equipment and active families?',
+			answer: 'Our coatings are perfect for Huber Heights\' active families, designed to handle sports equipment, bikes, and heavy family use while maintaining easy cleanup and durability.'
+		},
+		{
+			question: 'Can you work around youth sports schedules?',
+			answer: 'Absolutely! We understand Huber Heights families\' busy sports schedules and can coordinate projects around games, practices, and school events to minimize disruption.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'huber-heights-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

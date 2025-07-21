@@ -1018,7 +1018,10 @@ const testimonials = [
 		const lightboxClose = document.getElementById('lightboxClose');
 		
 		// Project data for lightbox
-		const projects = {projects.map(p => `${p.id}: ${JSON.stringify(p)}`).join(',\n\t\t\t')};
+		const projectsData = {};
+		projects.forEach(p => {
+			projectsData[p.id] = p;
+		});
 
 		// Filter functionality
 		filterButtons.forEach(button => {
@@ -1050,7 +1053,7 @@ const testimonials = [
 			btn.addEventListener('click', (e) => {
 				e.stopPropagation();
 				const projectId = parseInt(btn.dataset.projectId);
-				const project = projects[projectId];
+				const project = projectsData[projectId];
 				
 				if (project) {
 					// Populate lightbox
@@ -1130,7 +1133,7 @@ const testimonials = [
 		}
 		
 		function showProject(projectId) {
-			const project = projects[projectId];
+			const project = projectsData[projectId];
 			if (project) {
 				// Add transition animation
 				const lightboxContent = document.querySelector('.lightbox-content');

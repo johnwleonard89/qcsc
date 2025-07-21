@@ -21,7 +21,13 @@ const { seo } = Astro.props as Props;
 		<span slot="logo">
 			<Logo />
 		</span>
-		<Button slot="action-item" href="/theme/get-started">Get Started</Button>
+		<div slot="action-item" class="header-actions">
+			<a href="tel:+15132965525" class="header-phone">
+				<span class="phone-icon">📞</span>
+				(513) 296-5525
+			</a>
+			<Button href="/company/contact">Free Estimate</Button>
+		</div>
 	</Header>
 	<div id="page">
 		<slot />
@@ -38,3 +44,56 @@ const { seo } = Astro.props as Props;
 		<Logo slot="logo" />
 	</Footer>
 </Layout>
+
+<style>
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.header-phone {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+		padding: 0.5rem 1rem;
+		border-radius: var(--theme-button-border-radius);
+		transition: all var(--theme-transition);
+		white-space: nowrap;
+	}
+
+	.header-phone:hover {
+		background: var(--theme-surface-1);
+		text-decoration: none;
+	}
+
+	.phone-icon {
+		font-size: 1.2rem;
+	}
+
+	@media (max-width: 768px) {
+		.header-actions {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+		
+		.header-phone {
+			font-size: 0.9rem;
+			padding: 0.25rem 0.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-phone span:not(.phone-icon) {
+			display: none;
+		}
+		
+		.header-phone::after {
+			content: "Call";
+			margin-left: 0.25rem;
+		}
+	}
+</style>

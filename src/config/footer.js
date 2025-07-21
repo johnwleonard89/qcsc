@@ -72,7 +72,7 @@ export const footerLists = [
         slug: '/theme/theme-setup',
       },
       {
-        title: 'Customizing Odyssey',
+        title: 'Customizing Theme',
         slug: '/theme/customizing-odyssey',
       }
 		],

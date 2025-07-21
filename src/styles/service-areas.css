@@ -142,7 +142,7 @@ h4 {
 
 .section-intro {
   font-size: 1.1rem;
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 2rem;
   max-width: 800px;
 }
@@ -218,7 +218,7 @@ h4 {
 }
 
 .service-card p, .market-segment p, .tech-item p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1rem;
 }
 
@@ -233,7 +233,7 @@ h4 {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
 }
 
 .service-card li::before, .market-segment li::before, .tech-item li::before, .characteristic li::before {
@@ -310,7 +310,7 @@ h4 {
 }
 
 .content-column p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1.5rem;
 }
 
@@ -329,7 +329,7 @@ h4 {
 }
 
 .project-highlight p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1rem;
 }
 
@@ -358,7 +358,7 @@ h4 {
 }
 
 .characteristic p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1rem;
 }
 
@@ -382,7 +382,7 @@ h4 {
 }
 
 .community-section p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1rem;
 }
 
@@ -420,7 +420,7 @@ h4 {
 }
 
 .step-content p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
 }
 
 /* Testimonials */
@@ -450,7 +450,7 @@ h4 {
 }
 
 .testimonial-content p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   font-style: italic;
   margin-bottom: 1rem;
   padding-top: 1rem;
@@ -485,7 +485,7 @@ h4 {
 }
 
 .contact-info p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 2rem;
 }
 
@@ -495,7 +495,7 @@ h4 {
 
 .contact-item {
   margin-bottom: 0.75rem;
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
 }
 
 .contact-item strong {
@@ -524,7 +524,7 @@ h4 {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
 }
 
 .service-promise li::before {
@@ -664,7 +664,7 @@ h4 {
 }
 
 .advantage-column p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1.5rem;
 }
 
@@ -682,7 +682,7 @@ h4 {
 }
 
 .areas-column p {
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
   margin-bottom: 1rem;
 }
 
@@ -695,7 +695,7 @@ h4 {
   position: relative;
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #4b4f58;
+  color: var(--theme-on-surface-1);
 }
 
 .areas-column li::before {

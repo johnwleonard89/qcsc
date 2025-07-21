@@ -13,28 +13,29 @@ import Layout from '../../layouts/Page.astro';
 import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'Landing Page #1 | Queen City Surface Coatings',
-	description: 'Landing Page #1 | Queen City Surface Coatings',
+	title: 'Professional Epoxy Flooring Solutions | Queen City Surface Coatings',
+	description: 'Transform your concrete surfaces with premium epoxy flooring and concrete coatings. Serving Cincinnati, Dayton, Louisville, and surrounding areas. Free estimates available.',
 };
 ---
 
 <AnnouncementBar
-	text="Read Our Latest Blog Post"
-	href="/blog/posts/remote-work-mental-health/"
+	text="Free Consultation Available - Call Today!"
+	href="/contact"
 	slot="announcement-bar"
 />
 <Layout {seo}>
 	<TextAndImageHero reversed>
 		<div slot="text-container">
-			<h1>Don't Reinvent the Wheel</h1>
-			<p>Use Queen City Surface Coatings to transform your concrete surfaces.</p>
+			<h1>Transform Your Concrete Surfaces</h1>
+			<p>Professional epoxy flooring, concrete polishing, and surface restoration services for residential and commercial properties throughout the Cincinnati, Dayton, and Louisville areas.</p>
 		</div>
 		<div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>Get Started <Fragment slot="icon">
+			<Button href="/contact" customIcon
+				>Get Free Quote <Fragment slot="icon">
 					<Icon name="ic:baseline-chevron-right" />
 				</Fragment></Button
 			>
+			<Button href="/services" outlined>View Services</Button>
 		</div>
 		<picture slot="image-container">
 			<img
@@ -46,69 +47,49 @@ const seo = {
 	</TextAndImageHero>
 
 	<CustomerQuoteSection
-		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
-		customerName="Happy Customer"
+		quoteText="Queen City Surface Coatings did an amazing job on our garage floor. The metallic epoxy finish looks incredible and has held up perfectly after two years. Professional, on-time, and exceeded our expectations!"
+		customerName="Sarah M., West Chester, OH"
 	/>
 
 	<ThreeColumnTextSection>
 		<div slot="column-1-body">
-			<h2>Why?</h2>
+			<h2>Epoxy Flooring</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Durable, chemical-resistant epoxy coatings perfect for garages, basements, commercial spaces, and industrial facilities. Available in solid colors, decorative flakes, and stunning metallic finishes.
 			</p>
 		</div>
-		<Button slot="column-1-cta">Learn More</Button>
+		<Button slot="column-1-cta" href="/services/epoxy-flooring">Learn More</Button>
 		<div slot="column-2-body">
-			<h2>How?</h2>
+			<h2>Concrete Polishing</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Transform old, worn concrete into a beautiful, high-gloss surface. Our concrete polishing process creates a durable, low-maintenance floor that's perfect for commercial and residential applications.
 			</p>
 		</div>
-		<Button slot="column-2-cta" outlined>Learn More</Button>
+		<Button slot="column-2-cta" outlined href="/services/concrete-polishing">Learn More</Button>
 		<div slot="column-3-body">
-			<h2>What?</h2>
+			<h2>Surface Restoration</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Repair and restore damaged concrete surfaces to like-new condition. We handle cracks, stains, uneven surfaces, and other concrete issues before applying protective coatings.
 			</p>
 		</div>
-		<Button slot="column-3-cta">Learn More</Button>
+		<Button slot="column-3-cta" href="/services/surface-restoration">Learn More</Button>
 	</ThreeColumnTextSection>
 
-	<YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded
-	/>
 
 	<StickyTextImageSection>
 		<div slot="text-container">
-			<h2>Features</h2>
-			<h3>SEO</h3>
+			<h2>Why Choose Queen City Surface Coatings?</h2>
+			<h3>Local Expertise</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Family-owned business serving Cincinnati, Dayton, Louisville, and surrounding areas for over 10 years. We understand local climate conditions and building requirements to deliver lasting results.
 			</p>
-			<h3>Responsive</h3>
+			<h3>Premium Materials</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We use only the highest-quality epoxy systems and concrete coatings from trusted manufacturers. All our work comes with comprehensive warranties for your peace of mind.
 			</p>
-			<h3>Themeable</h3>
+			<h3>Professional Installation</h3>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Our certified technicians follow strict installation procedures to ensure proper surface preparation, application, and curing. The result is a beautiful, long-lasting floor that exceeds expectations.
 			</p>
 		</div>
 		<picture slot="image-container">
@@ -124,13 +105,12 @@ const seo = {
 		background="var(--theme-surface-2)"
 		color="var(--theme-on-surface-2)"
 	>
-		<h2>Start Your Website Today</h2>
+		<h2>Ready to Transform Your Concrete?</h2>
 		<p>
-			It only takes a couple clicks to have a new, modern website for your
-			business or startup.
+			Get a free consultation and estimate for your concrete coating project. We'll help you choose the perfect solution for your needs and budget.
 		</p>
-		<Button href="/theme/get-started" customIcon
-			>Get Started <Fragment slot="icon">
+		<Button href="/contact" customIcon
+			>Get Free Quote <Fragment slot="icon">
 				<Icon name="ic:baseline-chevron-right" />
 			</Fragment></Button
 		>

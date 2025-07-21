@@ -1,80 +1,95 @@
 export const footerSocials = [
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
-    icon: "mdi:twitter",
+    name: 'Facebook',
+    url: 'https://www.facebook.com/QueenCitySurfaceCoatings',
+    icon: "mdi:facebook",
   },
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
-    icon: "mdi:youtube",
+    name: 'Instagram',
+    url: 'https://www.instagram.com/queencitysurfacecoatings',
+    icon: "mdi:instagram",
   },
   {
-    name: 'Github',
-    url: 'https://github.com/jaydanurwin',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://astro.build/chat',
-    icon: "ic:baseline-discord",
+    name: 'Google Business',
+    url: 'https://www.google.com/maps/place/Queen+City+Surface+Coatings',
+    icon: "mdi:google",
   },
 ]
 
 export const footerLists = [
 	{
-		title: 'Landing Pages',
+		title: 'Services',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: 'Epoxy Flooring',
+				slug: '/services/epoxy-flooring',
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Concrete Polishing',
+				slug: '/services/concrete-polishing',
 			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
+			{
+				title: 'Surface Restoration',
+				slug: '/services/surface-restoration',
+			},
+			{
+				title: 'Garage Floor Epoxy',
+				slug: '/services/garage-floor-epoxy',
+			},
+			{
+				title: 'Commercial Concrete',
+				slug: '/services/commercial-concrete-coating',
+			},
+		],
+	},
+	{
+		title: 'Service Areas',
+		items: [
+			{
+				title: 'Cincinnati, OH',
+				slug: '/service-areas/ohio/cincinnati-concrete-coating',
+			},
+			{
+				title: 'Dayton, OH',
+				slug: '/service-areas/ohio/dayton-concrete-contractors',
+			},
+			{
+				title: 'Covington, KY',
+				slug: '/service-areas/kentucky/covington-concrete-coating',
+			},
+			{
+				title: 'Louisville Area',
+				slug: '/service-areas',
+			},
+			{
+				title: 'View All Areas',
+				slug: '/service-areas',
+			},
 		],
 	},
 	{
 		title: 'Company',
 		items: [
 			{
-				title: 'About',
-				slug: '/company/about',
+				title: 'About Us',
+				slug: '/about',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
+				title: 'Portfolio',
+				slug: '/portfolio',
 			},
 			{
 				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
+				slug: '/contact',
 			},
 			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
+				title: 'Request Quote',
+				slug: '/contact',
 			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Theme',
-        slug: '/theme/customizing-odyssey',
-      }
+			{
+				title: 'Resources',
+				slug: '/resources',
+			},
 		],
 	},
 ];

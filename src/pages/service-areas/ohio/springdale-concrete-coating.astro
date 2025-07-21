@@ -1,82 +1,171 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-
-const city = {
-	name: 'Springdale',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Hamilton',
-	population: '11,223',
-	specialty: 'Commercial & Residential Coatings',
-	landmarks: [
-		'Tri-County Mall',
-		'Heritage Hill Park',
-		'Springdale Community Center',
-		'Princeton High School',
-		'Cameron Park',
-		'Crescentville Historic District',
-		'I-275 Business Corridor'
-	],
-	description: 'Queen City Surface Coatings serves Springdale, Ohio, a strategic location at the heart of the Tri-County area. Our concrete coating services support Springdale\'s mix of residential neighborhoods and commercial businesses with professional-grade flooring solutions.',
-	serviceRadius: 'All Springdale areas and Tri-County region',
-	zipCodes: ['45246'],
-	keyServices: [
-		'Commercial Concrete Coating',
-		'Retail Floor Coating',
-		'Garage Floor Coating',
-		'Basement Floor Coating',
-		'Business Park Flooring',
-		'Residential Epoxy'
-	],
-	localProjects: [
-		{
-			title: 'Tri-County Area Business',
-			description: 'Commercial epoxy flooring for a Springdale retail business, designed for high foot traffic and easy maintenance.',
-			service: 'Commercial Epoxy'
-		},
-		{
-			title: 'Heritage Hill Family Garage',
-			description: 'Residential garage transformation featuring durable coating with decorative elements for a Springdale family.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			title: 'Business Corridor Warehouse',
-			description: 'Industrial-grade floor coating for a Springdale I-275 corridor warehouse facility.',
-			service: 'Warehouse Coating'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Dave and Susan Miller',
-			location: 'Springdale, OH',
-			quote: 'Excellent garage floor coating service! The results look professional and the process was smooth from start to finish.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			name: 'Tri-County Business Owner',
-			location: 'Springdale Commercial District',
-			quote: 'Outstanding commercial flooring that has improved our customer experience and made maintenance much easier.',
-			service: 'Commercial Epoxy'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you serve Springdale\'s commercial district?',
-			answer: 'Yes, we provide commercial concrete coating services throughout Springdale, including the Tri-County Mall area, I-275 business corridor, and all retail and warehouse facilities.'
-		},
-		{
-			question: 'How do your coatings handle high-traffic commercial areas?',
-			answer: 'Our commercial epoxy systems are designed for Springdale\'s busy retail and business environments, offering excellent durability, stain resistance, and easy maintenance for high-traffic areas.'
-		},
-		{
-			question: 'Do you work in the Tri-County area?',
-			answer: 'Absolutely! Springdale\'s central location makes us perfectly positioned to serve the entire Tri-County region with both residential and commercial concrete coating services.'
-		}
-	]
-};
-
-const primaryService = 'Concrete Coating';
-const slug = 'springdale-concrete-coating';
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Springdale Concrete Coating | Hamilton County Industrial Solutions"
+      description="Professional concrete coating services in Springdale, OH. Expert industrial and commercial flooring solutions for Hamilton County manufacturing and business facilities."
+      keywords="Springdale concrete coating, Springdale Ohio epoxy flooring, Hamilton County industrial coating, Springdale manufacturing flooring, commercial concrete coating"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Springdale Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Springdale's industrial and commercial facilities. 
+              Hamilton County's premier choice for heavy-duty manufacturing and business flooring solutions.
+            </p>
+            <div class="hero-features">
+              <span>✓ Industrial Specialists</span>
+              <span>✓ Manufacturing Experience</span>
+              <span>✓ Hamilton County Leaders</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-overview">
+        <div class="container">
+          <h2>Expert Concrete Coating Services in Springdale, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings brings specialized expertise to Springdale, Hamilton County's 
+            industrial powerhouse. From the Tri-County Mall area to the extensive manufacturing corridors, 
+            we understand the demanding requirements of Springdale's diverse commercial and industrial facilities.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏭</div>
+              <h3>Heavy Industrial Manufacturing</h3>
+              <p>Advanced concrete coating systems for Springdale's manufacturing facilities, providing chemical resistance and durability for demanding industrial operations.</p>
+              <ul>
+                <li>Chemical-resistant industrial coatings</li>
+                <li>Heavy machinery load capacity</li>
+                <li>Anti-slip safety surfaces</li>
+                <li>Fast-cure minimal downtime systems</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Commercial & Retail Facilities</h3>
+              <p>Professional concrete coatings for Springdale's business districts, retail centers, and commercial developments throughout Hamilton County.</p>
+              <ul>
+                <li>Retail space aesthetic enhancement</li>
+                <li>Office building professional systems</li>
+                <li>Warehouse and distribution centers</li>
+                <li>Multi-tenant facility solutions</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Logistics & Distribution Centers</h3>
+              <p>Specialized coatings for Springdale's strategic location advantages, serving the logistics and distribution facilities that connect regional commerce.</p>
+              <ul>
+                <li>High-traffic distribution flooring</li>
+                <li>Loading dock durability systems</li>
+                <li>Inventory management area coatings</li>
+                <li>24/7 operation-friendly installations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>Springdale Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our manufacturing facility demanded the highest performance industrial coating. 
+                  Queen City delivered a system that handles our chemical processes, heavy equipment, 
+                  and constant traffic while maintaining perfect appearance. Exceptional industrial expertise."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Frank R.</strong> - Manufacturing Plant Manager
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our distribution center operates 24/7, so scheduling floor work was challenging. 
+                  The team coordinated perfectly with our operations, delivered quickly, and the 
+                  results have held up beautifully under constant forklift traffic."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Jennifer M.</strong> - Distribution Center Operations
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Concrete Coating for Springdale Facilities</h2>
+              <p>
+                Ready to enhance your Springdale industrial or commercial facility with professional concrete coating? 
+                Contact Queen City Surface Coatings for your expert consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Springdale, OH and Hamilton County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+  </body>
+</html>

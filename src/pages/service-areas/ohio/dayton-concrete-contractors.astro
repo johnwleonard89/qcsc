@@ -1,0 +1,546 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Dayton Concrete Contractors | Professional Floor Coating Services"
+      description="Expert concrete contractors in Dayton, OH. Professional epoxy flooring, concrete coating, and surface restoration. Serving Montgomery County with 15+ years experience."
+      keywords="Dayton concrete contractors, Dayton Ohio concrete coating, Montgomery County epoxy flooring, Dayton garage floor coating, concrete contractors near me"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Professional Concrete Contractors in Dayton, Ohio</h1>
+            <p class="hero-subtitle">
+              Trusted concrete coating specialists serving Montgomery County. Expert epoxy flooring, 
+              surface restoration, and commercial solutions for the Gem City and surrounding areas.
+            </p>
+            <div class="hero-features">
+              <span>✓ Montgomery County Experts</span>
+              <span>✓ Commercial & Residential</span>
+              <span>✓ 15+ Years Experience</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Leading Concrete Contractors Serving Dayton and Montgomery County</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings extends our expertise to Dayton, Ohio's vibrant metropolitan area. 
+            As experienced concrete contractors, we understand the unique challenges that Montgomery County's 
+            diverse industrial landscape, residential communities, and commercial districts present for concrete surfaces.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏭</div>
+              <h3>Industrial & Manufacturing</h3>
+              <p>Heavy-duty concrete solutions for Dayton's aerospace, automotive, and manufacturing facilities throughout the Miami Valley region.</p>
+              <ul>
+                <li>Chemical-resistant industrial coatings</li>
+                <li>High-traffic warehouse flooring</li>
+                <li>Anti-slip safety surfaces</li>
+                <li>Load-bearing capacity optimization</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Commercial Properties</h3>
+              <p>Professional concrete coating services for Dayton's downtown business district, retail centers, and commercial developments.</p>
+              <ul>
+                <li>Retail store flooring systems</li>
+                <li>Office building concrete restoration</li>
+                <li>Healthcare facility compliance coatings</li>
+                <li>Restaurant and food service flooring</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Residential Solutions</h3>
+              <p>Custom concrete coatings for Dayton homeowners, from historic districts to modern suburban developments.</p>
+              <ul>
+                <li>Garage floor epoxy systems</li>
+                <li>Basement waterproofing coatings</li>
+                <li>Decorative concrete enhancements</li>
+                <li>Patio and outdoor surface protection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Our Concrete Contracting Team for Dayton Projects?</h2>
+              
+              <h3>Miami Valley Regional Knowledge</h3>
+              <p>
+                Serving the Greater Dayton area from our base near Cincinnati, we bring deep understanding 
+                of Montgomery County's climate challenges, soil conditions, and building requirements. 
+                Our team regularly works throughout the Miami Valley, from downtown Dayton to Kettering, 
+                Centerville, and the Wright-Patterson Air Force Base area.
+              </p>
+              
+              <h3>Industrial Heritage Understanding</h3>
+              <p>
+                Dayton's rich manufacturing heritage demands concrete solutions that can handle everything 
+                from aerospace precision requirements to automotive production demands. We've developed 
+                specialized approaches for the area's diverse industrial needs, from legacy facilities 
+                to cutting-edge research and development centers.
+              </p>
+              
+              <h3>Climate-Adapted Solutions</h3>
+              <p>
+                Montgomery County's continental climate, with hot summers and cold winters, requires 
+                concrete coatings that can expand and contract without failing. Our formulations are 
+                specifically selected for Ohio's Midwest conditions, ensuring long-term performance 
+                through all seasonal variations.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Dayton Area Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Wright-Patterson Area Manufacturing Facility</h4>
+                <p>
+                  <strong>Challenge:</strong> 50,000 sq ft manufacturing floor requiring aerospace-grade 
+                  surface standards with chemical resistance and precision flatness tolerances.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Multi-layer epoxy system with quartz aggregate broadcasting 
+                  and specialized topcoat meeting military specification requirements for surface 
+                  durability and chemical compatibility.
+                </p>
+                <p>
+                  <strong>Result:</strong> "Exceeded all performance specifications and completed ahead 
+                  of schedule. The floor quality supports our precision manufacturing operations perfectly." 
+                  - Production Manager, Aerospace Contractor
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Downtown Dayton Restaurant Chain</h4>
+                <p>
+                  <strong>Challenge:</strong> High-traffic restaurant location in the Oregon Historic District 
+                  requiring food-safe flooring that could handle heavy foot traffic and frequent cleaning.
+                </p>
+                <p>
+                  <strong>Solution:</strong> FDA-compliant epoxy system with antimicrobial additives, 
+                  slip-resistant texture, and seamless installation for easy maintenance and health 
+                  department compliance.
+                </p>
+                <p>
+                  <strong>Result:</strong> Complete health department approval with enhanced safety 
+                  features and dramatically reduced maintenance requirements for daily operations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Expertise -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Concrete Solutions for Montgomery County</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Industrial-Grade Epoxy Systems</h3>
+              <p>
+                Designed for Dayton's manufacturing environment, our industrial epoxy systems provide 
+                the durability and chemical resistance needed for aerospace, automotive, and precision 
+                manufacturing applications.
+              </p>
+              <ul>
+                <li>Chemical resistance to solvents and acids</li>
+                <li>Heavy equipment load capacity</li>
+                <li>Precision surface flatness tolerances</li>
+                <li>Electrostatic dissipative options</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Commercial Performance Coatings</h3>
+              <p>
+                Perfect for Dayton's diverse commercial sector, from downtown offices to suburban 
+                retail centers, providing professional appearance with long-term durability.
+              </p>
+              <ul>
+                <li>High-traffic abrasion resistance</li>
+                <li>Stain resistance for retail environments</li>
+                <li>Easy maintenance for commercial cleaning</li>
+                <li>Professional aesthetic options</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Decorative Concrete Systems</h3>
+              <p>
+                Transform utilitarian concrete into attractive architectural features with our 
+                comprehensive decorative options designed to complement Dayton's architectural diversity.
+              </p>
+              <ul>
+                <li>Metallic epoxy with custom effects</li>
+                <li>Color-matched systems for branding</li>
+                <li>Textured surfaces for safety and aesthetics</li>
+                <li>Seamless integration with existing architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our Proven Concrete Contracting Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Site Assessment & Planning</h3>
+                <p>
+                  Comprehensive evaluation of your Dayton property's concrete conditions, 
+                  environmental factors, and specific use requirements to design the optimal solution.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Surface Preparation Excellence</h3>
+                <p>
+                  Professional-grade surface preparation using diamond grinding, shot blasting, 
+                  or chemical etching as appropriate for Montgomery County's diverse concrete conditions.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Expert Application</h3>
+                <p>
+                  Installation by certified technicians using proven techniques developed through 
+                  years of experience in Ohio's challenging climate conditions.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Quality Assurance</h3>
+                <p>
+                  Thorough inspection and testing to ensure every Dayton installation meets our 
+                  high standards for adhesion, durability, and performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Market Focus -->
+      <section class="market-focus">
+        <div class="container">
+          <h2>Specialized Services for Dayton's Diverse Economy</h2>
+          
+          <div class="market-sections">
+            <div class="market-section">
+              <h3>Aerospace & Defense</h3>
+              <p>
+                With Wright-Patterson Air Force Base and numerous aerospace contractors, Dayton 
+                demands the highest quality concrete solutions that meet stringent specifications.
+              </p>
+              <ul>
+                <li>Military specification compliance</li>
+                <li>Security clearance capable teams</li>
+                <li>Precision surface requirements</li>
+                <li>Chemical compatibility testing</li>
+                <li>Rapid deployment capabilities</li>
+              </ul>
+            </div>
+            
+            <div class="market-section">
+              <h3>Healthcare & Research</h3>
+              <p>
+                From Miami Valley Hospital to Wright State University research facilities, 
+                healthcare and research environments require specialized flooring solutions.
+              </p>
+              <ul>
+                <li>Infection control surfaces</li>
+                <li>Chemical resistance for laboratories</li>
+                <li>Static control for sensitive equipment</li>
+                <li>Easy decontamination capabilities</li>
+                <li>Compliance with healthcare regulations</li>
+              </ul>
+            </div>
+            
+            <div class="market-section">
+              <h3>Automotive & Manufacturing</h3>
+              <p>
+                Dayton's automotive heritage continues with modern manufacturing facilities 
+                requiring durable, high-performance concrete coating solutions.
+              </p>
+              <ul>
+                <li>Heavy machinery load capacity</li>
+                <li>Oil and chemical spill resistance</li>
+                <li>Fast-cure options for minimal downtime</li>
+                <li>Safety markings and line striping</li>
+                <li>Maintenance scheduling coordination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Success Stories -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Dayton Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Working with Queen City Surface Coatings on our Dayton manufacturing facility 
+                  was outstanding. They understood our aerospace requirements and delivered a floor 
+                  system that exceeds military specifications. Professional service throughout."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Michael R.</strong> - Manufacturing Operations Manager
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our downtown Dayton restaurant needed flooring that could handle busy service 
+                  periods and constant cleaning. Two years later, the epoxy coating still looks 
+                  new and maintains perfect health department compliance."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Sarah L.</strong> - Restaurant Owner, Oregon District
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Living in Oakwood, we needed garage flooring that matched our home's quality. 
+                  The team delivered beautiful results and the coating has held up perfectly 
+                  through Ohio's weather extremes."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>James K.</strong> - Oakwood Homeowner
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="service-areas">
+        <div class="container">
+          <h2>Complete Montgomery County Coverage</h2>
+          
+          <div class="areas-content">
+            <div class="areas-column">
+              <h3>Primary Service Areas</h3>
+              <p>
+                Our concrete contracting services extend throughout the Greater Dayton area 
+                and Montgomery County communities:
+              </p>
+              <ul>
+                <li>Downtown Dayton and Central Business District</li>
+                <li>Kettering and South Dayton suburbs</li>
+                <li>Centerville and Washington Township</li>
+                <li>Oakwood and historic districts</li>
+                <li>Huber Heights and northern communities</li>
+                <li>Wright-Patterson AFB area</li>
+                <li>University of Dayton vicinity</li>
+                <li>Oregon Historic District</li>
+              </ul>
+            </div>
+            
+            <div class="areas-column">
+              <h3>Specialized Expertise Areas</h3>
+              <p>
+                Our Dayton-specific services include:
+              </p>
+              <ul>
+                <li><strong>Industrial Facilities:</strong> Aerospace and manufacturing flooring</li>
+                <li><strong>Commercial Properties:</strong> Retail and office building solutions</li>
+                <li><strong>Healthcare Facilities:</strong> Hospital and clinic compliance coatings</li>
+                <li><strong>Educational Institutions:</strong> University and school flooring systems</li>
+                <li><strong>Historic Properties:</strong> Preservation-appropriate solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Ready to Start Your Dayton Concrete Project?</h2>
+              <p>
+                Contact Queen City Surface Coatings today for professional concrete contracting 
+                services throughout Montgomery County and the Greater Dayton area.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Dayton, OH and all of Montgomery County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Dayton Service Commitment</h3>
+                <ul>
+                  <li>Free estimates with detailed project analysis</li>
+                  <li>Industrial and commercial specification compliance</li>
+                  <li>Licensed and insured in Ohio</li>
+                  <li>Lifetime warranty on workmanship</li>
+                  <li>Montgomery County's most experienced team</li>
+                  <li>Flexible scheduling for industrial operations</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete contractors in Dayton, OH. Expert epoxy flooring, concrete coating, and surface restoration services for Montgomery County industrial, commercial, and residential properties.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dayton",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.7589",
+        "longitude": "-84.1916"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/dayton-concrete-contractors",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Dayton, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Montgomery County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Concrete Contracting Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Concrete Coating",
+              "description": "Heavy-duty concrete coatings for Dayton's aerospace and manufacturing facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Concrete Solutions",
+              "description": "Professional concrete coatings for Dayton commercial and retail properties"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Concrete Coating",
+              "description": "Custom concrete solutions for Dayton area homes and garages"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "89",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

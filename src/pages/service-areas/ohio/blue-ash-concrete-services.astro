@@ -1,0 +1,170 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Blue Ash Concrete Services | Hamilton County Commercial Solutions"
+      description="Complete concrete services in Blue Ash, OH. Professional epoxy flooring, surface restoration, and concrete solutions for Hamilton County businesses and residents."
+      keywords="Blue Ash concrete services, Blue Ash Ohio concrete coating, Hamilton County concrete solutions, Blue Ash business flooring, commercial concrete services"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Blue Ash Concrete Services</h1>
+            <p class="hero-subtitle">
+              Comprehensive concrete solutions for Blue Ash's thriving business community. 
+              Hamilton County's complete concrete service provider for commercial and residential needs.
+            </p>
+            <div class="hero-features">
+              <span>✓ Business District Experts</span>
+              <span>✓ Complete Solutions</span>
+              <span>✓ Hamilton County Leaders</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-overview">
+        <div class="container">
+          <h2>Complete Concrete Services for Blue Ash, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings provides comprehensive concrete services to Blue Ash's dynamic business 
+            community and residential neighborhoods. From the corporate headquarters along Reed Hartman Highway 
+            to family homes throughout Hamilton County, we deliver complete concrete solutions.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏢</div>
+              <h3>Corporate & Office Solutions</h3>
+              <p>Professional concrete services for Blue Ash's corporate corridor, providing sophisticated systems for headquarters and office environments.</p>
+              <ul>
+                <li>Corporate facility flooring systems</li>
+                <li>Executive office concrete restoration</li>
+                <li>Professional parking structure coatings</li>
+                <li>Reception and lobby area enhancements</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Retail & Commercial Centers</h3>
+              <p>Specialized concrete solutions for Blue Ash's shopping centers, restaurants, and commercial developments throughout Hamilton County.</p>
+              <ul>
+                <li>Shopping center maintenance and restoration</li>
+                <li>Restaurant and hospitality facility coatings</li>
+                <li>Healthcare facility compliance surfaces</li>
+                <li>Multi-tenant coordination services</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Residential Community Services</h3>
+              <p>Complete concrete solutions for Blue Ash's established residential neighborhoods and growing family communities.</p>
+              <ul>
+                <li>Neighborhood garage floor transformations</li>
+                <li>Basement and utility area improvements</li>
+                <li>Driveway and sidewalk restoration</li>
+                <li>Property value enhancement services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>Blue Ash Client Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our Blue Ash headquarters needed professional concrete solutions that matched our 
+                  corporate standards. The results enhanced our facility's appearance and functionality. 
+                  Perfect execution from planning through completion."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Patricia K.</strong> - Corporate Facilities Manager
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Living in Blue Ash, we wanted our garage to match our neighborhood's quality standards. 
+                  The concrete coating transformation exceeded our expectations and has become a real 
+                  asset to our property."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Mike & Sarah T.</strong> - Blue Ash Residents
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Complete Concrete Services for Blue Ash Properties</h2>
+              <p>
+                Ready to enhance your Blue Ash property with professional concrete services? 
+                Contact Hamilton County's complete concrete solution provider today.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Blue Ash, OH and Hamilton County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+  </body>
+</html>

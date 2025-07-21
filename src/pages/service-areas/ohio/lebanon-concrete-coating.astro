@@ -1,82 +1,546 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-
-const city = {
-	name: 'Lebanon',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Warren',
-	population: '20,841',
-	specialty: 'Historic & Modern Concrete Solutions',
-	landmarks: [
-		'Warren County Historical Society',
-		'Glendower Historic Mansion',
-		'Lebanon Raceway',
-		'Pioneer Park',
-		'Lebanon Country Club',
-		'Golden Lamb Historic Inn',
-		'Countryside YMCA'
-	],
-	description: 'Queen City Surface Coatings serves Lebanon, Ohio, Warren County\'s historic seat known for the famous Golden Lamb Inn and rich heritage. Our concrete coating services blend respect for Lebanon\'s historic character with modern durability and performance.',
-	serviceRadius: 'All Lebanon neighborhoods and Warren County areas',
-	zipCodes: ['45036'],
-	keyServices: [
-		'Historic Property Concrete Coating',
-		'Garage Floor Coating',
-		'Commercial Floor Coating',
-		'Basement Floor Coating',
-		'Equestrian Facility Coating',
-		'Polyaspartic Coating'
-	],
-	localProjects: [
-		{
-			title: 'Historic District Home Garage',
-			description: 'Sensitive garage floor coating for a historic Lebanon home, preserving character while adding modern functionality.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			title: 'Lebanon Raceway Area Property',
-			description: 'Durable concrete coating for a property near Lebanon Raceway, designed for automotive enthusiast storage needs.',
-			service: 'Specialty Coating'
-		},
-		{
-			title: 'Pioneer Park Vicinity Home',
-			description: 'Basement transformation creating additional family space for a home near Lebanon\'s recreational facilities.',
-			service: 'Basement Coating'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Robert and Linda Hayes',
-			location: 'Historic Lebanon',
-			quote: 'Perfect balance of respecting our home\'s historic character while providing modern durability. Excellent craftsmanship and attention to detail.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			name: 'Mary Elizabeth Thompson',
-			location: 'Warren County',
-			quote: 'Professional service that understood our property\'s unique needs. The basement coating has created beautiful additional living space.',
-			service: 'Basement Coating'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you work on historic properties in Lebanon?',
-			answer: 'Yes, we have extensive experience with Lebanon\'s historic properties, understanding preservation requirements and providing coatings that respect historic character while delivering modern performance.'
-		},
-		{
-			question: 'Do you serve the Lebanon Raceway area?',
-			answer: 'Absolutely! We provide concrete coating services throughout Lebanon, including the raceway area, and specialize in automotive enthusiast garage solutions.'
-		},
-		{
-			question: 'What coating options work best for Warren County properties?',
-			answer: 'For Warren County\'s diverse properties, from historic homes to modern residences, we offer customized coating solutions that match each property\'s specific needs and aesthetic requirements.'
-		}
-	]
-};
-
-const primaryService = 'Concrete Coating';
-const slug = 'lebanon-concrete-coating';
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Lebanon Concrete Coating | Warren County Floor Specialists"
+      description="Professional concrete coating services in Lebanon, OH. Expert epoxy flooring and surface solutions for residential and commercial properties in Warren County."
+      keywords="Lebanon concrete coating, Lebanon Ohio epoxy flooring, Warren County concrete coating, Lebanon garage floor coating, concrete coating near me"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Lebanon Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Lebanon, Ohio and Warren County. 
+              Transform your floors with premium epoxy systems designed for Ohio's climate.
+            </p>
+            <div class="hero-features">
+              <span>✓ Warren County Experts</span>
+              <span>✓ Historic District Approved</span>
+              <span>✓ Free Consultations</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Premier Concrete Coating Services in Lebanon, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves Lebanon and Warren County with specialized 
+            concrete coating solutions. From the historic downtown district to modern residential 
+            developments, we understand the unique character and requirements of this charming 
+            southwestern Ohio community.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏛️</div>
+              <h3>Historic District Services</h3>
+              <p>Specialized concrete coatings that respect Lebanon's historic character while providing modern durability and protection.</p>
+              <ul>
+                <li>Heritage-sensitive color matching</li>
+                <li>Preservation-compliant installation methods</li>
+                <li>Minimal disruption to historic structures</li>
+                <li>Custom solutions for period buildings</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Residential Communities</h3>
+              <p>Custom concrete coating solutions for Lebanon's diverse neighborhoods, from established homes to new construction developments.</p>
+              <ul>
+                <li>Garage floor epoxy systems</li>
+                <li>Basement moisture control coatings</li>
+                <li>Decorative concrete enhancement</li>
+                <li>Patio and outdoor surface protection</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Commercial & Agricultural</h3>
+              <p>Durable concrete solutions for Lebanon's business district, agricultural facilities, and light industrial applications.</p>
+              <ul>
+                <li>Retail and office flooring systems</li>
+                <li>Agricultural facility coatings</li>
+                <li>Food processing compliance surfaces</li>
+                <li>Warehouse and storage solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Lebanon Concrete Coating?</h2>
+              
+              <h3>Warren County Regional Knowledge</h3>
+              <p>
+                Serving Lebanon from our nearby Cincinnati area base, we bring extensive knowledge 
+                of Warren County's unique characteristics. From the historic downtown core to the 
+                growing residential areas around Kings Island, we understand the local building 
+                patterns, soil conditions, and architectural styles that influence concrete coating decisions.
+              </p>
+              
+              <h3>Small Town Values, Big City Expertise</h3>
+              <p>
+                Lebanon's charm lies in its small-town character combined with proximity to Cincinnati. 
+                We match this by delivering personalized, community-focused service backed by 
+                professional expertise and advanced materials. Our team takes pride in building 
+                lasting relationships with Lebanon homeowners and businesses.
+              </p>
+              
+              <h3>Climate-Adapted Solutions</h3>
+              <p>
+                Warren County's continental climate brings hot summers, cold winters, and significant 
+                temperature swings. Our concrete coatings are specifically formulated to handle 
+                these Ohio weather patterns, ensuring long-term performance and minimal maintenance 
+                for Lebanon property owners.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Lebanon Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Historic Downtown Lebanon Business</h4>
+                <p>
+                  <strong>Challenge:</strong> 1890s commercial building in Lebanon's historic district 
+                  requiring modern flooring while maintaining period-appropriate appearance and 
+                  meeting preservation guidelines.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Custom epoxy system with earth-tone coloring and subtle 
+                  texture to complement the building's brick and hardwood elements, installed using 
+                  low-impact methods to preserve historic integrity.
+                </p>
+                <p>
+                  <strong>Result:</strong> "Perfect balance of historical authenticity and modern 
+                  functionality. The floors beautifully complement our restored storefront while 
+                  providing the durability our business needs." - Maria S., Downtown Business Owner
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Lebanon Residential Development</h4>
+                <p>
+                  <strong>Challenge:</strong> New construction development near Countryside YMCA requiring 
+                  garage floor coatings for 15 homes with varying architectural styles and homeowner preferences.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Coordinated installation program with multiple decorative 
+                  options, allowing homeowners to customize their garage floors while maintaining 
+                  neighborhood aesthetic harmony.
+                </p>
+                <p>
+                  <strong>Result:</strong> Complete homeowner satisfaction with varied yet cohesive 
+                  results that enhanced property values throughout the development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Solutions -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Concrete Coating Systems for Warren County</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Residential Epoxy Systems</h3>
+              <p>
+                Designed for Lebanon homeowners, our residential systems combine durability 
+                with aesthetic appeal, perfect for garage floors, basements, and utility areas.
+              </p>
+              <ul>
+                <li>Decorative color and texture options</li>
+                <li>Easy maintenance for busy families</li>
+                <li>Moisture resistance for basement applications</li>
+                <li>Slip-resistant safety features</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Commercial Performance Coatings</h3>
+              <p>
+                Heavy-duty systems for Lebanon's business community, providing professional 
+                appearance with the durability needed for commercial environments.
+              </p>
+              <ul>
+                <li>High-traffic abrasion resistance</li>
+                <li>Chemical resistance for various applications</li>
+                <li>Easy cleaning and maintenance</li>
+                <li>Professional aesthetic options</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Specialty Agricultural Coatings</h3>
+              <p>
+                Specialized solutions for Warren County's agricultural operations, providing 
+                durability and safety for farm and food processing environments.
+              </p>
+              <ul>
+                <li>Food-grade compliance systems</li>
+                <li>Chemical resistance for cleaning agents</li>
+                <li>Anti-microbial additives</li>
+                <li>Easy washdown capabilities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our Lebanon Concrete Coating Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Property Assessment</h3>
+                <p>
+                  Comprehensive evaluation of your Lebanon property's concrete conditions, 
+                  taking into account local architectural styles and Warren County climate factors.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Custom Solution Design</h3>
+                <p>
+                  Tailored concrete coating system selection based on your specific needs, 
+                  aesthetic preferences, and Lebanon's community character.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Professional Installation</h3>
+                <p>
+                  Expert application using proven techniques and high-quality materials, 
+                  with careful attention to Lebanon's historic and residential environments.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Quality Assurance</h3>
+                <p>
+                  Thorough inspection and customer walkthrough to ensure every Lebanon 
+                  installation meets our quality standards and your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving Lebanon's Diverse Community Needs</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Historic Downtown District</h3>
+              <p>
+                Lebanon's charming historic downtown requires sensitive approaches that preserve 
+                architectural character while providing modern functionality.
+              </p>
+              <ul>
+                <li>Preservation-compliant materials and methods</li>
+                <li>Period-appropriate color and texture matching</li>
+                <li>Minimal impact installation techniques</li>
+                <li>Coordination with historic preservation requirements</li>
+                <li>Custom solutions for unique architectural features</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Established Neighborhoods</h3>
+              <p>
+                From Golden Gate to Country Club areas, Lebanon's residential neighborhoods 
+                each have unique characteristics that influence concrete coating decisions.
+              </p>
+              <ul>
+                <li>Neighborhood-appropriate aesthetic choices</li>
+                <li>Property value enhancement considerations</li>
+                <li>Family-friendly safety features</li>
+                <li>Low-maintenance solutions for busy lifestyles</li>
+                <li>Coordination with HOA requirements where applicable</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Agricultural & Light Industrial</h3>
+              <p>
+                Warren County's agricultural heritage continues today with modern farming 
+                operations and food processing facilities requiring specialized coatings.
+              </p>
+              <ul>
+                <li>USDA compliant food-grade surfaces</li>
+                <li>Chemical resistance for agricultural products</li>
+                <li>Easy cleaning and sanitization capabilities</li>
+                <li>Durable solutions for heavy equipment use</li>
+                <li>Temperature resistance for processing environments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Lebanon Customer Experiences</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our garage was an embarrassment before Queen City transformed it with beautiful 
+                  epoxy flooring. The team was professional, respectful of our neighborhood, 
+                  and the results exceeded our expectations. Two years later, still looks perfect!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Robert & Linda M.</strong> - Golden Gate Neighborhood
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Running a business in historic downtown Lebanon, I needed flooring that 
+                  would respect our building's character. They delivered exactly what we needed - 
+                  beautiful, durable, and perfectly suited to our space."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Jennifer K.</strong> - Downtown Lebanon Business
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our agricultural facility needed specialized coating that could handle 
+                  daily washdowns and meet food safety requirements. Excellent results 
+                  and the system has performed flawlessly for over three years."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>David L.</strong> - Warren County Agricultural Operation
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="service-areas">
+        <div class="container">
+          <h2>Complete Warren County Service Coverage</h2>
+          
+          <div class="areas-content">
+            <div class="areas-column">
+              <h3>Lebanon Area Communities</h3>
+              <p>
+                We provide comprehensive concrete coating services throughout Lebanon 
+                and surrounding Warren County areas:
+              </p>
+              <ul>
+                <li>Downtown Lebanon Historic District</li>
+                <li>Golden Gate and Country Club neighborhoods</li>
+                <li>Turtlecreek Township areas</li>
+                <li>Lebanon-Mason area developments</li>
+                <li>Kings Island corridor communities</li>
+                <li>Rural Warren County properties</li>
+                <li>Agricultural and farm facilities</li>
+              </ul>
+            </div>
+            
+            <div class="areas-column">
+              <h3>Specialized Services</h3>
+              <p>
+                Our Lebanon-area expertise includes:
+              </p>
+              <ul>
+                <li><strong>Historic Preservation:</strong> Downtown district appropriate solutions</li>
+                <li><strong>Residential Communities:</strong> Neighborhood-sensitive approaches</li>
+                <li><strong>Agricultural Facilities:</strong> Farm and food processing coatings</li>
+                <li><strong>Commercial Properties:</strong> Business district professional solutions</li>
+                <li><strong>New Construction:</strong> Development coordination services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your Lebanon Property with Professional Concrete Coating</h2>
+              <p>
+                Ready to enhance your Lebanon property with durable, attractive concrete coating? 
+                Contact Queen City Surface Coatings for your free consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Lebanon, OH and Warren County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Lebanon Service Commitment</h3>
+                <ul>
+                  <li>Free estimates with personalized consultation</li>
+                  <li>Historic district preservation compliance</li>
+                  <li>Licensed and insured in Ohio</li>
+                  <li>Lifetime warranty on workmanship</li>
+                  <li>Warren County's trusted concrete coating specialists</li>
+                  <li>Flexible scheduling for residential and commercial needs</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services in Lebanon, OH. Expert epoxy flooring and surface solutions for residential, commercial, and agricultural properties in Warren County.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lebanon",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.4353",
+        "longitude": "-84.2030"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/lebanon-concrete-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Lebanon, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warren County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic District Concrete Coating",
+              "description": "Preservation-compliant concrete coatings for Lebanon's historic downtown district"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Epoxy Flooring",
+              "description": "Custom garage and basement floor coatings for Lebanon area homes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Agricultural Facility Coatings",
+              "description": "Specialized concrete coatings for Warren County agricultural operations"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "67",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

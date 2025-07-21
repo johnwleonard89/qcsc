@@ -1,0 +1,170 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Sharonville Floor Coating | Hamilton County Professional Solutions"
+      description="Professional floor coating services in Sharonville, OH. Expert epoxy and concrete solutions for Hamilton County industrial, commercial, and residential properties."
+      keywords="Sharonville floor coating, Sharonville Ohio epoxy flooring, Hamilton County floor coating, Sharonville concrete coating, commercial floor coating"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Sharonville Floor Coating</h1>
+            <p class="hero-subtitle">
+              Professional floor coating services for Sharonville's diverse industrial and commercial facilities. 
+              Hamilton County's trusted partner for comprehensive flooring solutions.
+            </p>
+            <div class="hero-features">
+              <span>✓ Industrial Experience</span>
+              <span>✓ Commercial Specialists</span>
+              <span>✓ Hamilton County Experts</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-overview">
+        <div class="container">
+          <h2>Expert Floor Coating Services in Sharonville, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings delivers comprehensive floor coating solutions to Sharonville's thriving 
+            industrial and commercial community. From manufacturing facilities along I-75 to the growing business 
+            parks, we understand the demanding requirements of Hamilton County's diverse industrial landscape.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏭</div>
+              <h3>Industrial Manufacturing Coatings</h3>
+              <p>Heavy-duty floor coating systems for Sharonville's manufacturing facilities, providing exceptional durability for demanding industrial operations.</p>
+              <ul>
+                <li>Chemical-resistant manufacturing coatings</li>
+                <li>Heavy equipment load-bearing systems</li>
+                <li>Safety-compliant anti-slip surfaces</li>
+                <li>24/7 operation coordination</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Business Park & Office Solutions</h3>
+              <p>Professional floor coatings for Sharonville's expanding business parks and corporate facilities throughout Hamilton County.</p>
+              <ul>
+                <li>Corporate office professional systems</li>
+                <li>Business park common area coatings</li>
+                <li>Conference and presentation facility floors</li>
+                <li>Multi-tenant coordination services</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Warehouse & Distribution Centers</h3>
+              <p>Specialized coatings for Sharonville's strategic logistics facilities, serving the distribution networks that connect regional commerce.</p>
+              <ul>
+                <li>High-traffic warehouse flooring</li>
+                <li>Loading dock and staging area systems</li>
+                <li>Inventory management zone coatings</li>
+                <li>Cold storage specialty applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <div class="container">
+          <h2>Sharonville Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our Sharonville manufacturing facility required industrial-grade floor coatings that could 
+                  handle our demanding production environment. The results have exceeded all performance 
+                  expectations while maintaining excellent appearance."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Jim R.</strong> - Manufacturing Operations Manager
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "The business park coordination was exceptional. Our multi-tenant facility received 
+                  consistent, professional results throughout while accommodating each business's 
+                  unique operational requirements."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Karen M.</strong> - Property Management
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Floor Coating for Sharonville Facilities</h2>
+              <p>
+                Transform your Sharonville facility with professional floor coating solutions. 
+                Contact Hamilton County's industrial and commercial flooring experts today.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Sharonville, OH and Hamilton County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+  </body>
+</html>

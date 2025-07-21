@@ -1,0 +1,507 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="West Chester Epoxy Flooring | Butler County Premium Concrete Coatings"
+      description="Professional epoxy flooring and concrete coating services in West Chester, OH. Expert solutions for Butler County's premier community with custom garage floors, commercial spaces, and residential applications."
+      keywords="West Chester epoxy flooring, Butler County concrete coating, West Chester Ohio garage floor coating, concrete coating near me, West Chester flooring contractors"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>West Chester Epoxy Flooring Specialists</h1>
+            <p class="hero-subtitle">
+              Professional epoxy flooring and concrete coating services for West Chester, Ohio. 
+              Transforming Butler County properties with premium coating solutions designed for success.
+            </p>
+            <div class="hero-features">
+              <span>✓ Butler County Leaders</span>
+              <span>✓ Premium Community Focus</span>
+              <span>✓ Lifetime Warranties</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Premier Epoxy Flooring Services in West Chester, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves West Chester, Butler County's crown jewel community, 
+            with specialized concrete coating solutions. From the upscale residential neighborhoods to 
+            thriving business districts, we understand West Chester's commitment to excellence and deliver 
+            coating solutions that match this community's high standards.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏘️</div>
+              <h3>Upscale Residential Communities</h3>
+              <p>Premium concrete coatings designed for West Chester's distinguished neighborhoods and luxury home developments.</p>
+              <ul>
+                <li>Custom garage floor epoxy systems</li>
+                <li>Decorative concrete enhancement for luxury homes</li>
+                <li>Basement and recreation room flooring</li>
+                <li>Outdoor patio and pool deck coatings</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Business District Excellence</h3>
+              <p>Professional concrete solutions for West Chester's thriving commercial corridor and business developments.</p>
+              <ul>
+                <li>Corporate office and headquarters facilities</li>
+                <li>Retail centers and shopping destinations</li>
+                <li>Professional services and healthcare facilities</li>
+                <li>Restaurant and hospitality venues</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Industrial & Distribution</h3>
+              <p>Heavy-duty concrete coatings for West Chester's growing industrial and logistics sector.</p>
+              <ul>
+                <li>Distribution center and warehouse floors</li>
+                <li>Manufacturing facility coatings</li>
+                <li>Automotive service and dealership applications</li>
+                <li>Technology and research facility surfaces</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for West Chester Epoxy Flooring?</h2>
+              
+              <h3>Butler County's Premier Community</h3>
+              <p>
+                West Chester represents Butler County's success story - a master-planned community that 
+                has grown into one of Ohio's most desirable places to live and work. Our epoxy flooring 
+                solutions reflect this community's commitment to quality, incorporating premium materials 
+                and expert craftsmanship that enhance property values and complement West Chester's 
+                distinguished character.
+              </p>
+              
+              <h3>Understanding Community Standards</h3>
+              <p>
+                West Chester residents and businesses expect excellence, and we deliver accordingly. Our 
+                team understands the architectural styles, neighborhood covenants, and aesthetic preferences 
+                that define this community. From the luxury developments around Union Centre to the 
+                professional districts near I-75, we tailor our approach to meet West Chester's high standards.
+              </p>
+              
+              <h3>Advanced Technology & Innovation</h3>
+              <p>
+                West Chester's progressive character demands cutting-edge solutions. We utilize the latest 
+                epoxy technology, including low-VOC formulations, rapid-cure systems, and advanced decorative 
+                techniques that align with this community's commitment to innovation and environmental responsibility.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured West Chester Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Union Centre Corporate Headquarters</h4>
+                <p>
+                  <strong>Challenge:</strong> 50,000 sq ft corporate facility requiring sophisticated flooring 
+                  that would impress clients while withstanding heavy daily use from 300+ employees and 
+                  frequent corporate events.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Multi-zone epoxy system with decorative elements in reception areas, 
+                  high-performance coatings in work zones, and specialized slip-resistant surfaces in high-traffic 
+                  corridors, all coordinated with the building's modern architectural design.
+                </p>
+                <p>
+                  <strong>Result:</strong> "The flooring perfectly captures our corporate brand while providing 
+                  the durability our operations demand. Visitors consistently comment on the professional 
+                  appearance." - Corporate Facilities Director
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Luxury West Chester Estate</h4>
+                <p>
+                  <strong>Challenge:</strong> Custom-built estate with 5-car garage requiring epoxy flooring 
+                  that would complement the home's luxury finishes while accommodating a collection of 
+                  high-end vehicles and recreational equipment.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Premium metallic epoxy system with custom color matching to 
+                  interior design elements, integrated drainage considerations for vehicle maintenance, 
+                  and climate-controlled curing for optimal finish quality.
+                </p>
+                <p>
+                  <strong>Result:</strong> Garage flooring that serves as a showroom for the homeowner's 
+                  collection while maintaining practical functionality for daily use.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Excellence -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Epoxy Systems for West Chester Properties</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Luxury Residential Systems</h3>
+              <p>
+                Premium epoxy solutions designed specifically for West Chester's upscale residential 
+                market, combining aesthetic sophistication with practical performance.
+              </p>
+              <ul>
+                <li>Metallic and decorative epoxy options</li>
+                <li>Custom color matching and design coordination</li>
+                <li>UV-stable formulations for long-term beauty</li>
+                <li>Enhanced durability for high-value applications</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Corporate Performance Coatings</h3>
+              <p>
+                Professional-grade systems engineered for West Chester's business community, 
+                providing executive-level aesthetics with commercial-grade durability.
+              </p>
+              <ul>
+                <li>Low-odor, fast-cure formulations</li>
+                <li>Slip-resistant safety compliance</li>
+                <li>Easy maintenance for professional environments</li>
+                <li>Brand-coordinated color and design options</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Industrial & Distribution Coatings</h3>
+              <p>
+                Heavy-duty epoxy systems for West Chester's industrial sector, engineered 
+                for maximum durability and operational efficiency.
+              </p>
+              <ul>
+                <li>Chemical resistance for industrial applications</li>
+                <li>Forklift and heavy equipment rated surfaces</li>
+                <li>Electrostatic dissipative (ESD) options</li>
+                <li>Temperature cycling resistance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving West Chester's Distinctive Neighborhoods</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Union Centre Business District</h3>
+              <p>
+                The heart of West Chester's commercial success, requiring professional concrete solutions 
+                that match the district's sophisticated business environment.
+              </p>
+              <ul>
+                <li>Corporate headquarters and office buildings</li>
+                <li>Retail and entertainment venues</li>
+                <li>Professional services and healthcare facilities</li>
+                <li>Hotel and hospitality applications</li>
+                <li>Conference and event facilities</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Luxury Residential Developments</h3>
+              <p>
+                West Chester's premium neighborhoods demand concrete coatings that enhance property 
+                values while meeting homeowners' high expectations for quality and aesthetics.
+              </p>
+              <ul>
+                <li>Custom garage floor design and installation</li>
+                <li>Basement and recreation room upgrades</li>
+                <li>Pool house and outdoor entertainment areas</li>
+                <li>Workshop and hobby space enhancements</li>
+                <li>Home gym and exercise room flooring</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Industrial & Technology Parks</h3>
+              <p>
+                West Chester's growing industrial sector requires specialized coatings that support 
+                advanced manufacturing and distribution operations.
+              </p>
+              <ul>
+                <li>Clean room and controlled environment surfaces</li>
+                <li>Logistics and distribution center floors</li>
+                <li>Manufacturing and assembly areas</li>
+                <li>Research and development facilities</li>
+                <li>Automotive and aerospace applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our West Chester Epoxy Installation Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Comprehensive Consultation</h3>
+                <p>
+                  Detailed assessment of your West Chester property with personalized recommendations 
+                  based on your specific needs, aesthetic preferences, and community standards.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Custom Design Development</h3>
+                <p>
+                  Collaborative design process incorporating your vision with our expertise, ensuring 
+                  the final result enhances your property and complements West Chester's character.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Expert Installation</h3>
+                <p>
+                  Professional application using premium materials and proven techniques, with careful 
+                  attention to West Chester's quality standards and neighborhood considerations.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Quality Assurance & Follow-up</h3>
+                <p>
+                  Thorough inspection and customer satisfaction confirmation, ensuring your West Chester 
+                  installation meets our quality standards and your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>West Chester Customer Experiences</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our corporate facility needed flooring that would impress clients and stakeholders. 
+                  Queen City delivered a stunning result that perfectly represents our brand while 
+                  providing the durability our operations require. Outstanding craftsmanship."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Michael R.</strong> - Union Centre Executive
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "The garage in our West Chester home is now a showpiece. The metallic epoxy creates 
+                  an amazing depth and richness that complements our interior design. Professional 
+                  installation with attention to every detail."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Sarah & Tom K.</strong> - West Chester Homeowners
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our distribution facility required specialized coatings that could handle heavy 
+                  equipment while maintaining a professional appearance for client visits. The results 
+                  exceeded expectations and have performed flawlessly."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Operations Manager</strong> - Industrial Facility
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your West Chester Property with Premium Epoxy Flooring</h2>
+              <p>
+                Ready to enhance your West Chester property with professional epoxy flooring? 
+                Contact Queen City Surface Coatings for your personalized consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> West Chester, OH and Butler County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our West Chester Service Commitment</h3>
+                <ul>
+                  <li>Free consultations with personalized design recommendations</li>
+                  <li>Premium materials and expert craftsmanship</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Comprehensive warranty coverage</li>
+                  <li>Butler County's trusted epoxy flooring specialists</li>
+                  <li>Flexible scheduling for residential and commercial needs</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional epoxy flooring and concrete coating services in West Chester, OH. Expert solutions for Butler County's premier community with custom garage floors, commercial spaces, and residential applications.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "West Chester",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.3292",
+        "longitude": "-84.4169"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/west-chester-epoxy-flooring",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "West Chester, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Butler County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "West Chester Epoxy Flooring Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Luxury Residential Epoxy",
+              "description": "Premium garage floor and residential epoxy systems for West Chester luxury homes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Epoxy Flooring",
+              "description": "Professional epoxy solutions for West Chester business district facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Concrete Coatings",
+              "description": "Heavy-duty epoxy systems for West Chester industrial and distribution facilities"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "89",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

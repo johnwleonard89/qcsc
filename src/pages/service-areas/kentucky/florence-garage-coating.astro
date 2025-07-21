@@ -1,0 +1,545 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Florence Garage Coating | Boone County Residential Solutions"
+      description="Professional garage coating services in Florence, KY. Expert epoxy flooring for Northern Kentucky homes, transforming garages with durable, attractive solutions."
+      keywords="Florence garage coating, Florence Kentucky epoxy garage, Boone County garage flooring, Northern Kentucky garage coating, Florence residential epoxy"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Florence Garage Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Transform your Florence garage with professional epoxy coating systems. 
+              Northern Kentucky's premier garage flooring experts serving Boone County homes.
+            </p>
+            <div class="hero-features">
+              <span>✓ Boone County Experts</span>
+              <span>✓ Residential Specialists</span>
+              <span>✓ Lifetime Warranty</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Professional Garage Coating Services in Florence, Kentucky</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings brings expert garage coating solutions to Florence and Boone County. 
+            From established neighborhoods near Florence Mall to new developments around the airport corridor, 
+            we transform ordinary garages into beautiful, functional spaces that Northern Kentucky families love.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏠</div>
+              <h3>Residential Garage Transformations</h3>
+              <p>Complete garage makeovers for Florence homeowners, creating beautiful, durable spaces that enhance property value and functionality.</p>
+              <ul>
+                <li>Decorative color flake systems</li>
+                <li>Metallic epoxy designer finishes</li>
+                <li>Slip-resistant safety surfaces</li>
+                <li>Custom color combinations</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Multi-Car Garage Solutions</h3>
+              <p>Specialized systems for Florence's larger homes with 2, 3, and 4-car garages, providing seamless coverage and professional results.</p>
+              <ul>
+                <li>Large-area seamless installation</li>
+                <li>Zone-based color coordination</li>
+                <li>Traffic pattern optimization</li>
+                <li>Storage area enhancement</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Garage Floor Repair & Restoration</h3>
+              <p>Complete concrete repair and restoration services for Florence garages, addressing cracks, stains, and damage before coating application.</p>
+              <ul>
+                <li>Crack repair and stabilization</li>
+                <li>Oil stain removal and treatment</li>
+                <li>Surface leveling and grinding</li>
+                <li>Moisture mitigation solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Florence Garage Coating?</h2>
+              
+              <h3>Northern Kentucky Regional Knowledge</h3>
+              <p>
+                Serving Florence from our Cincinnati area base, we understand Boone County's unique characteristics. 
+                From the clay soil conditions common throughout Northern Kentucky to the humidity challenges 
+                of the Ohio River valley, our garage coating systems are specifically designed to handle 
+                the environmental conditions that Florence homeowners face year-round.
+              </p>
+              
+              <h3>Florence Community Understanding</h3>
+              <p>
+                Florence combines suburban family living with proximity to Cincinnati, creating unique needs 
+                for garage spaces. Whether it's storage for recreational equipment, workspace for hobbies, 
+                or simply a beautiful entrance to your home, we understand how Florence families use their 
+                garages and design coating solutions accordingly.
+              </p>
+              
+              <h3>Climate-Optimized Solutions</h3>
+              <p>
+                Boone County's continental climate with hot, humid summers and cold winters demands garage 
+                coatings that can handle significant temperature swings and moisture variations. Our epoxy 
+                systems are formulated to maintain their beauty and performance through Kentucky's challenging 
+                seasonal changes.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Florence Garage Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Florence Mall Area Family Home</h4>
+                <p>
+                  <strong>Challenge:</strong> 3-car garage in established Florence neighborhood with severe 
+                  oil staining, surface spalling, and outdated appearance that detracted from the home's 
+                  beautiful exterior and well-maintained landscaping.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Complete surface restoration with oil stain treatment, crack 
+                  repair, and decorative flake epoxy system in earth tones that complemented the home's 
+                  brick exterior and created a welcoming entrance from the garage.
+                </p>
+                <p>
+                  <strong>Result:</strong> "Absolutely transformed our garage! It went from embarrassing 
+                  to beautiful. The coating has held up perfectly through two Kentucky winters and the 
+                  colors still look vibrant." - The Johnson Family, Florence
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Airport Corridor New Construction</h4>
+                <p>
+                  <strong>Challenge:</strong> New home construction in growing Florence development requiring 
+                  garage flooring that would complement modern architectural design while providing long-term 
+                  durability for active family lifestyle.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Metallic epoxy system with contemporary silver and charcoal 
+                  tones, creating stunning visual depth and modern appeal that matched the home's 
+                  contemporary design elements.
+                </p>
+                <p>
+                  <strong>Result:</strong> Perfect integration with the home's modern aesthetic, creating 
+                  a garage space that serves as both functional storage and attractive extension of living areas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Excellence -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Garage Coating Systems for Boone County</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Decorative Flake Systems</h3>
+              <p>
+                Our most popular Florence garage solution, combining durability with attractive 
+                appearance through colored vinyl flakes in countless combinations.
+              </p>
+              <ul>
+                <li>Unlimited color combination options</li>
+                <li>Slip-resistant textured surface</li>
+                <li>Hides minor surface imperfections</li>
+                <li>Easy maintenance and cleaning</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Metallic Epoxy Systems</h3>
+              <p>
+                Premium garage coating option providing stunning visual effects and modern appeal 
+                perfect for Florence's contemporary homes and design-conscious homeowners.
+              </p>
+              <ul>
+                <li>Three-dimensional visual depth</li>
+                <li>Unique patterns in every installation</li>
+                <li>High-gloss professional finish</li>
+                <li>Superior chemical and stain resistance</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Solid Color Professional Systems</h3>
+              <p>
+                Clean, classic garage coating solutions perfect for Florence homeowners who 
+                prefer subtle elegance and easy maintenance over decorative effects.
+              </p>
+              <ul>
+                <li>Professional uniform appearance</li>
+                <li>Custom color matching available</li>
+                <li>Easy to clean and maintain</li>
+                <li>Excellent chemical resistance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our Florence Garage Coating Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Florence Home Assessment</h3>
+                <p>
+                  Comprehensive evaluation of your garage's condition, considering Boone County 
+                  environmental factors and your family's specific needs and preferences.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Surface Preparation Excellence</h3>
+                <p>
+                  Professional surface preparation including cleaning, repair, and profiling 
+                  to ensure optimal adhesion and long-term performance.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Expert Application</h3>
+                <p>
+                  Skilled installation by certified technicians using premium materials and 
+                  proven techniques developed for Northern Kentucky conditions.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Quality Assurance</h3>
+                <p>
+                  Thorough inspection and customer walkthrough ensuring every Florence garage 
+                  coating meets our quality standards and exceeds your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving Florence's Diverse Neighborhoods</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Established Florence Neighborhoods</h3>
+              <p>
+                From areas near Florence Mall to established residential districts, mature 
+                neighborhoods often need garage restoration and enhancement services.
+              </p>
+              <ul>
+                <li>Oil stain removal and treatment</li>
+                <li>Crack repair and surface restoration</li>
+                <li>Property value enhancement</li>
+                <li>Neighborhood aesthetic coordination</li>
+                <li>HOA-appropriate color selections</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>New Development Areas</h3>
+              <p>
+                Florence's growing residential developments around the airport corridor and 
+                new construction areas provide opportunities for premium garage enhancements.
+              </p>
+              <ul>
+                <li>New construction garage enhancement</li>
+                <li>Builder coordination services</li>
+                <li>Contemporary design integration</li>
+                <li>Multi-home project coordination</li>
+                <li>Development aesthetic consistency</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Airport Corridor Properties</h3>
+              <p>
+                Florence's proximity to CVG Airport creates unique opportunities for both 
+                residential and commercial garage coating applications.
+              </p>
+              <ul>
+                <li>Commercial hangar and storage coatings</li>
+                <li>Residential aviation enthusiast garages</li>
+                <li>Heavy-duty systems for equipment storage</li>
+                <li>Noise-reducing surface treatments</li>
+                <li>Specialized automotive and aviation applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Success Stories -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Florence Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our Florence garage was a disaster - oil stains, cracks, and just ugly concrete. 
+                  Queen City transformed it completely! The decorative flakes look amazing and cleanup 
+                  is so easy now. Best home improvement we've made in years."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Mike & Susan T.</strong> - Florence Homeowners
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "We chose the metallic epoxy for our new Florence home and wow! The depth and 
+                  shimmer effect is incredible. Every visitor comments on how beautiful our garage 
+                  looks. Professional installation and excellent results."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Jennifer R.</strong> - Airport Corridor Resident
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "As a car enthusiast, I needed a garage floor that could handle automotive work 
+                  but still look great. The chemical resistance has been perfect for oil changes 
+                  and the surface is easy to keep clean. Highly recommend!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Robert K.</strong> - Florence Car Enthusiast
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="service-areas">
+        <div class="container">
+          <h2>Complete Boone County Coverage</h2>
+          
+          <div class="areas-content">
+            <div class="areas-column">
+              <h3>Florence Area Communities</h3>
+              <p>
+                We provide comprehensive garage coating services throughout Florence 
+                and surrounding Northern Kentucky areas:
+              </p>
+              <ul>
+                <li>Florence Mall and surrounding neighborhoods</li>
+                <li>Airport corridor residential developments</li>
+                <li>Downtown Florence historic areas</li>
+                <li>Suburban family neighborhoods</li>
+                <li>New construction developments</li>
+                <li>Rural Boone County properties</li>
+              </ul>
+            </div>
+            
+            <div class="areas-column">
+              <h3>Specialized Florence Services</h3>
+              <p>
+                Our Florence garage coating expertise includes:
+              </p>
+              <ul>
+                <li><strong>Family Garages:</strong> Multi-car and storage-focused solutions</li>
+                <li><strong>Hobby Workshops:</strong> Durable surfaces for automotive and craft work</li>
+                <li><strong>New Construction:</strong> Builder and developer coordination</li>
+                <li><strong>Restoration Projects:</strong> Complete garage rehabilitation</li>
+                <li><strong>Investment Properties:</strong> Rental and flip property enhancement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your Florence Garage Today</h2>
+              <p>
+                Ready to turn your Florence garage into a beautiful, functional space you'll be proud of? 
+                Contact Queen City Surface Coatings for your free estimate and design consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Florence, KY and Boone County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Florence Service Commitment</h3>
+                <ul>
+                  <li>Free estimates with design consultation</li>
+                  <li>Northern Kentucky's garage coating specialists</li>
+                  <li>Licensed and insured in Kentucky</li>
+                  <li>Lifetime warranty against delamination</li>
+                  <li>Boone County's most experienced garage coating team</li>
+                  <li>Flexible scheduling for busy families</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional garage coating services in Florence, KY. Expert epoxy flooring solutions for Northern Kentucky homes, transforming garages with durable, attractive coatings.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Florence",
+        "addressRegion": "KY",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.9989",
+        "longitude": "-84.6266"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/kentucky/florence-garage-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Florence, KY"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Boone County, KY"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Garage Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Decorative Garage Floor Coating",
+              "description": "Beautiful decorative flake and metallic epoxy systems for Florence area garages"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Garage Floor Restoration",
+              "description": "Complete garage floor repair and restoration services for Florence homes"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Multi-Car Garage Solutions",
+              "description": "Comprehensive coating systems for large garages and automotive enthusiasts"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "112",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

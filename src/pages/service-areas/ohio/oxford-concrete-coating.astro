@@ -1,0 +1,493 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Oxford Concrete Coating | Butler County University Town Solutions"
+      description="Professional concrete coating services in Oxford, OH. Expert epoxy flooring for Miami University area properties, residential homes, and commercial spaces."
+      keywords="Oxford concrete coating, Oxford Ohio epoxy flooring, Miami University area flooring, Butler County concrete coating, Oxford garage floor coating"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Oxford Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Oxford, Ohio's university community. 
+              Serving Miami University area properties with durable, attractive flooring solutions.
+            </p>
+            <div class="hero-features">
+              <span>✓ University Town Experts</span>
+              <span>✓ Student Housing Specialists</span>
+              <span>✓ Butler County Leaders</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Expert Concrete Coating Services in Oxford, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings brings specialized expertise to Oxford, Butler County's vibrant 
+            university town. From Miami University campus facilities to historic residential properties 
+            and modern student housing, we understand the unique needs of this academic community.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🎓</div>
+              <h3>University & Student Housing</h3>
+              <p>Durable concrete solutions for Miami University facilities, student housing, and rental properties that handle high-traffic academic environments.</p>
+              <ul>
+                <li>High-traffic dormitory and common areas</li>
+                <li>Student rental property durability</li>
+                <li>Easy maintenance for property managers</li>
+                <li>Safety compliance for educational facilities</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Historic Residential Properties</h3>
+              <p>Preservation-sensitive concrete coatings for Oxford's historic homes and established neighborhoods, respecting architectural heritage.</p>
+              <ul>
+                <li>Historic district appropriate solutions</li>
+                <li>Period home garage and basement coatings</li>
+                <li>Moisture management for older foundations</li>
+                <li>Custom color matching for heritage properties</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Commercial & Hospitality</h3>
+              <p>Professional concrete coatings for Oxford's business district, restaurants, and hospitality venues serving the university community.</p>
+              <ul>
+                <li>Restaurant and food service compliance</li>
+                <li>Retail space aesthetic enhancement</li>
+                <li>Hotel and lodging facility durability</li>
+                <li>Conference and event venue solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Oxford Concrete Coating?</h2>
+              
+              <h3>University Town Understanding</h3>
+              <p>
+                Oxford's unique character as a college town creates specific flooring challenges - from 
+                high-traffic student areas to seasonal occupancy patterns. We've developed specialized 
+                approaches for university facilities, student housing, and the businesses that serve 
+                this academic community, ensuring durability through intense use periods and easy 
+                maintenance during quieter times.
+              </p>
+              
+              <h3>Historic Preservation Expertise</h3>
+              <p>
+                Many of Oxford's most beautiful properties date back over a century, requiring concrete 
+                coating solutions that respect historic architecture while providing modern performance. 
+                Our team understands preservation requirements and delivers solutions that enhance rather 
+                than compromise the character of these important community assets.
+              </p>
+              
+              <h3>Seasonal Demand Management</h3>
+              <p>
+                University towns experience unique seasonal patterns, with intense activity during 
+                academic years and quieter summer periods. We schedule our Oxford concrete coating 
+                projects to minimize disruption during busy academic periods while taking advantage 
+                of optimal installation conditions during breaks and summer months.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Oxford Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Miami University Area Student Housing</h4>
+                <p>
+                  <strong>Challenge:</strong> 24-unit student housing complex requiring durable, easy-to-maintain 
+                  flooring systems that could handle the intensive use and occasional abuse typical 
+                  of college rental properties while maintaining attractive appearance.
+                </p>
+                <p>
+                  <strong>Solution:</strong> High-build epoxy system with enhanced abrasion resistance 
+                  and stain protection, featuring neutral colors that hide minor wear and impact-resistant 
+                  formulation for furniture moving and student activities.
+                </p>
+                <p>
+                  <strong>Result:</strong> "Exceptional durability through four academic years of student 
+                  occupancy. Easy maintenance has significantly reduced our property management costs." 
+                  - Property Manager, Oxford Student Housing
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Historic Oxford Home Restoration</h4>
+                <p>
+                  <strong>Challenge:</strong> 1920s colonial home in Oxford's historic district requiring 
+                  basement and garage concrete restoration that would complement the home's architectural 
+                  period while providing modern moisture control and durability.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Custom-tinted epoxy system with period-appropriate earth tones, 
+                  moisture barrier technology for basement application, and subtle texture finish that 
+                  echoed the home's original architectural details.
+                </p>
+                <p>
+                  <strong>Result:</strong> Perfect integration with the home's historic character while 
+                  solving long-standing moisture and durability issues in the basement and garage areas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Solutions -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Specialized Concrete Coating Systems for Butler County</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>High-Traffic Educational Systems</h3>
+              <p>
+                Engineered for the demanding environment of university facilities and student housing, 
+                providing exceptional durability under intensive use conditions.
+              </p>
+              <ul>
+                <li>Impact resistance for furniture and equipment</li>
+                <li>Stain resistance for food and beverage spills</li>
+                <li>Easy maintenance for facility management</li>
+                <li>Safety compliance for educational environments</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Historic Property Compatible Coatings</h3>
+              <p>
+                Specialized systems designed to work with older concrete and building systems 
+                while providing modern performance and moisture management.
+              </p>
+              <ul>
+                <li>Moisture vapor management for old foundations</li>
+                <li>Flexible formulations for building movement</li>
+                <li>Period-appropriate color and texture options</li>
+                <li>Minimal impact installation methods</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Commercial Hospitality Coatings</h3>
+              <p>
+                Professional systems for Oxford's restaurants, hotels, and businesses serving 
+                the university community with aesthetic appeal and functional performance.
+              </p>
+              <ul>
+                <li>Food service compliance and hygiene</li>
+                <li>Slip resistance for customer safety</li>
+                <li>Decorative options for brand enhancement</li>
+                <li>Easy cleaning for hospitality environments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving Oxford's Unique Community Needs</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Miami University Campus Area</h3>
+              <p>
+                From academic buildings to student life facilities, university environments 
+                require specialized concrete solutions that balance durability with aesthetics.
+              </p>
+              <ul>
+                <li>Educational facility compliance and safety</li>
+                <li>High-traffic corridor and commons durability</li>
+                <li>Laboratory and research facility requirements</li>
+                <li>Athletic and recreational facility performance</li>
+                <li>Student housing maintenance optimization</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Historic Residential Districts</h3>
+              <p>
+                Oxford's beautiful historic homes require sensitive approaches that preserve 
+                architectural integrity while providing modern concrete performance.
+              </p>
+              <ul>
+                <li>Historic preservation guideline compliance</li>
+                <li>Period-appropriate material selection</li>
+                <li>Moisture management for older foundations</li>
+                <li>Minimal disruption installation methods</li>
+                <li>Custom solutions for unique architectural features</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>University Business District</h3>
+              <p>
+                Oxford's commercial area serves both the university community and local residents, 
+                requiring versatile concrete solutions for diverse business needs.
+              </p>
+              <ul>
+                <li>Restaurant and food service requirements</li>
+                <li>Retail space aesthetic enhancement</li>
+                <li>Professional office environment solutions</li>
+                <li>Hospitality and lodging facility durability</li>
+                <li>Seasonal business operation considerations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Oxford Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Managing student rental properties in Oxford requires flooring that can handle anything. 
+                  Queen City's epoxy systems have been incredible - durable enough for student use but 
+                  attractive enough to help with leasing. Excellent return on investment."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Carol M.</strong> - Property Management Company
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our historic Oxford home needed basement work that would respect the house's character. 
+                  The team delivered beautiful results that look like they've always been there while 
+                  solving our moisture problems completely."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Professor David K.</strong> - Historic District Homeowner
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Running a restaurant near campus means dealing with high traffic and constant spills. 
+                  The epoxy coating has been perfect - easy to clean, safe for staff, and still looks 
+                  professional after two busy academic years."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Maria S.</strong> - Restaurant Owner
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Areas -->
+      <section class="service-areas">
+        <div class="container">
+          <h2>Complete Oxford Area Coverage</h2>
+          
+          <div class="areas-content">
+            <div class="areas-column">
+              <h3>Oxford Communities Served</h3>
+              <p>
+                We provide comprehensive concrete coating services throughout Oxford 
+                and surrounding Butler County areas:
+              </p>
+              <ul>
+                <li>Miami University campus and surrounding areas</li>
+                <li>Historic residential districts</li>
+                <li>Student housing complexes and rental properties</li>
+                <li>Downtown Oxford business district</li>
+                <li>Suburban residential developments</li>
+                <li>Educational and institutional facilities</li>
+              </ul>
+            </div>
+            
+            <div class="areas-column">
+              <h3>Specialized Oxford Services</h3>
+              <p>
+                Our Oxford expertise includes:
+              </p>
+              <ul>
+                <li><strong>University Facilities:</strong> Educational building specialized systems</li>
+                <li><strong>Student Housing:</strong> High-durability rental property solutions</li>
+                <li><strong>Historic Properties:</strong> Preservation-compliant concrete coatings</li>
+                <li><strong>Commercial Businesses:</strong> University community business solutions</li>
+                <li><strong>Residential Homes:</strong> Family and faculty housing concrete enhancement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your Oxford Property with Expert Concrete Coating</h2>
+              <p>
+                Ready to enhance your Oxford property with professional concrete coating? 
+                Contact Queen City Surface Coatings for your free consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Oxford, OH and Butler County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Oxford Service Commitment</h3>
+                <ul>
+                  <li>Free estimates with university scheduling considerations</li>
+                  <li>Historic preservation compliance expertise</li>
+                  <li>Licensed and insured in Ohio</li>
+                  <li>Comprehensive warranty coverage</li>
+                  <li>Butler County's university town specialists</li>
+                  <li>Flexible scheduling around academic calendars</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services in Oxford, OH. Expert solutions for Miami University area properties, student housing, and historic residential and commercial spaces.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oxford",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.5070",
+        "longitude": "-84.7452"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/oxford-concrete-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Oxford, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Butler County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "University Facility Concrete Coating",
+              "description": "Specialized concrete coatings for Miami University area educational and student housing facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic Property Concrete Restoration",
+              "description": "Preservation-compliant concrete coatings for Oxford's historic residential properties"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Concrete Solutions",
+              "description": "Professional concrete coatings for Oxford's university community businesses"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "73",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

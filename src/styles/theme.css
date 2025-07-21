@@ -30,10 +30,17 @@
 
 	--theme-blog-post-header-width: 1200px;
 
+	/* Theme Shadows & Transparency */
+	--theme-shadow-light: rgba(0, 0, 0, 0.1);
+	--theme-shadow-medium: rgba(0, 0, 0, 0.15);
+	--theme-shadow-dark: rgba(0, 0, 0, 0.3);
+	--theme-border-light: rgba(0, 0, 0, 0.05);
+	--theme-overlay: rgba(0, 0, 0, 0.5);
+
 	/* Theme Fonts */
-	--theme-font-family-serif: 'Montserrat', Georgia, Cambria, 'Times New Roman',
+	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
 		Times, serif;
-	--theme-font-family-sans: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont,
+	--theme-font-family-sans: 'Lato', 'Open Sans', -apple-system, BlinkMacSystemFont,
 		sans-serif;
 }
 

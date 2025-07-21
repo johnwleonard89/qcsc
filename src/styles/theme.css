@@ -1,7 +1,7 @@
 :root {
 	/* Theme Colors - Queen City Surface Coatings */
-	--theme-primary: #2563eb; /* Professional blue */
-	--theme-primary-hover: #1d4ed8; /* Darker blue on hover */
+	--theme-primary: #FFC03D; /* Queen City Gold */
+	--theme-primary-hover: #f8b526; /* Darker gold on hover */
 	--theme-on-primary: #fff;
 
 	--theme-bg: #fff;
@@ -10,8 +10,8 @@
 	--theme-surface-1: #f8fafc; /* Light gray background */
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #e2e8f0; /* Slightly darker gray */
-	--theme-on-surface-2: #000;
+	--theme-surface-2: #212D45; /* Queen City Dark Blue */
+	--theme-on-surface-2: #fff;
 
 	/* Theme Shapes */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
@@ -31,17 +31,17 @@
 	--theme-blog-post-header-width: 1200px;
 
 	/* Theme Fonts */
-	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
+	--theme-font-family-serif: 'Montserrat', Georgia, Cambria, 'Times New Roman',
 		Times, serif;
-	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
+	--theme-font-family-sans: 'Open Sans', 'Lato', -apple-system, BlinkMacSystemFont,
 		sans-serif;
 }
 
 [data-theme='default'] {
 	color-scheme: light;
 	/* Theme Colors - Queen City Surface Coatings */
-	--theme-primary: #2563eb; /* Professional blue */
-	--theme-primary-hover: #1d4ed8; /* Darker blue on hover */
+	--theme-primary: #FFC03D; /* Queen City Gold */
+	--theme-primary-hover: #f8b526; /* Darker gold on hover */
 	--theme-on-primary: #fff;
 
 	--theme-bg: #fff;
@@ -50,8 +50,8 @@
 	--theme-surface-1: #f8fafc; /* Light gray background */
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #e2e8f0; /* Slightly darker gray */
-	--theme-on-surface-2: #000;
+	--theme-surface-2: #212D45; /* Queen City Dark Blue */
+	--theme-on-surface-2: #fff;
 
 	/* Theme Shape */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
@@ -105,7 +105,7 @@
 	--theme-on-surface-1: #272f27;
 
 	--theme-surface-2: #c3d9c4;
-	--theme-on-surface-2: #000;
+	--theme-on-surface-2: #fff;
 
 	--theme-button-border-radius: 0.5rem;
 }

@@ -2,7 +2,7 @@
 import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
 ---
 
-<form class="quote-form mobile-optimized-form" name="quote-request" method="POST" data-netlify="true">
+<form class="quote-form" name="quote-request" method="POST" data-netlify="true">
 	<input type="hidden" name="form-name" value="quote-request" />
 	
 	<div class="form-header">
@@ -282,5 +282,58 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 		.quote-form {
 			padding: 1.5rem;
 		}
+	}
+</style>
+
+	/* Enhanced styling to match ContactForm */
+	:global(.quote-form .form-input),
+	:global(.quote-form .form-select),  
+	:global(.quote-form .form-textarea) {
+		min-height: 44px;
+		font-size: 16px;
+		border-radius: var(--theme-shape-radius);
+		padding: 0.75rem 1rem;
+		border: 2px solid var(--theme-border-light);
+		background: var(--theme-bg);
+		color: var(--theme-on-bg);
+		transition: var(--theme-transition);
+		font-family: var(--theme-font-family-sans);
+	}
+
+	:global(.quote-form .form-input:focus),
+	:global(.quote-form .form-select:focus),
+	:global(.quote-form .form-textarea:focus) {
+		outline: none;
+		border-color: var(--theme-primary);
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-primary) 20%, transparent);
+	}
+
+	:global(.quote-form button) {
+		width: 100%;
+		min-height: 48px;
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: none;
+		border-radius: var(--theme-button-border-radius);
+		font-size: 1rem;
+		font-weight: 600;
+		font-family: var(--theme-font-family-sans);
+		cursor: pointer;
+		transition: var(--theme-transition);
+		box-shadow: 0 4px 16px var(--theme-shadow-medium);
+	}
+
+	:global(.quote-form button:hover) {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px var(--theme-shadow-dark);
+	}
+
+	:global(.quote-form label) {
+		font-weight: 600;
+		color: var(--theme-on-bg);
+		margin-bottom: 0.5rem;
+		display: block;
+		font-size: 0.875rem;
 	}
 </style>

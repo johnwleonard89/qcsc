@@ -12,16 +12,18 @@ const {
 } = Astro.props;
 ---
 
-<div class="bg-white rounded-lg shadow-lg p-8">
-  <div class="text-center mb-8">
-    <h2 class="text-3xl font-bold text-gray-900 mb-4">{title}</h2>
-    <p class="text-gray-600">{subtitle}</p>
+<div class="contact-form-wrapper">
+  <div class="form-header">
+    <h2 class="form-title">{title}</h2>
+    <p class="form-subtitle">{subtitle}</p>
   </div>
 
-  <form class="space-y-6" action="/contact/submit" method="POST">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+  <form class="contact-form" action="/contact/submit" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contact" />
+    
+    <div class="form-row">
+      <div class="form-field">
+        <label for="name" class="form-label">
           Full Name *
         </label>
         <input
@@ -29,13 +31,13 @@ const {
           id="name"
           name="name"
           required
-          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="form-input"
           placeholder="Enter your name"
         />
       </div>
 
-      <div>
-        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+      <div class="form-field">
+        <label for="phone" class="form-label">
           Phone Number *
         </label>
         <input
@@ -43,14 +45,14 @@ const {
           id="phone"
           name="phone"
           required
-          class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="form-input"
           placeholder="(513) 555-0123"
         />
       </div>
     </div>
 
-    <div>
-      <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+    <div class="form-field">
+      <label for="email" class="form-label">
         Email Address *
       </label>
       <input
@@ -58,26 +60,26 @@ const {
         id="email"
         name="email"
         required
-        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        class="form-input"
         placeholder="your.email@example.com"
       />
     </div>
 
-    <div>
-      <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+    <div class="form-field">
+      <label for="subject" class="form-label">
         Subject
       </label>
       <input
         type="text"
         id="subject"
         name="subject"
-        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        class="form-input"
         placeholder="Project type or inquiry"
       />
     </div>
 
-    <div>
-      <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+    <div class="form-field">
+      <label for="message" class="form-label">
         Message *
       </label>
       <textarea
@@ -85,22 +87,146 @@ const {
         name="message"
         rows="4"
         required
-        class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        class="form-textarea"
         placeholder="Tell us about your project..."
       ></textarea>
     </div>
 
-    <div>
-      <button
-        type="submit"
-        class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition-colors font-semibold text-lg"
-      >
-        {buttonText}
-      </button>
-    </div>
+    <button type="submit" class="form-button">
+      {buttonText}
+    </button>
 
-    <p class="text-sm text-gray-500 text-center">
+    <p class="form-note">
       We respect your privacy. Your information will not be shared with third parties.
     </p>
   </form>
 </div>
+
+<style>
+/* Contact Form Styles - Consistent with QuoteRequestForm */
+.contact-form-wrapper {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  box-shadow: 0 4px 16px var(--theme-shadow-light);
+  max-width: 100%;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-title {
+  color: var(--theme-primary);
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  font-family: var(--theme-font-family-serif);
+}
+
+.form-subtitle {
+  color: var(--theme-on-bg);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--theme-on-bg);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-input,
+.form-textarea {
+  min-height: 44px;
+  font-size: 16px;
+  border-radius: var(--theme-shape-radius);
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--theme-border-light);
+  background: var(--theme-bg);
+  color: var(--theme-on-bg);
+  transition: var(--theme-transition);
+  font-family: var(--theme-font-family-sans);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-primary) 20%, transparent);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: var(--theme-font-family-sans);
+}
+
+.form-button {
+  width: 100%;
+  min-height: 48px;
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  border: none;
+  border-radius: var(--theme-button-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--theme-font-family-sans);
+  cursor: pointer;
+  transition: var(--theme-transition);
+  box-shadow: 0 4px 16px var(--theme-shadow-medium);
+}
+
+.form-button:hover {
+  background: var(--theme-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--theme-shadow-dark);
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--theme-on-bg);
+  opacity: 0.7;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-header {
+    margin-bottom: 1.5rem;
+  }
+}
+</style>

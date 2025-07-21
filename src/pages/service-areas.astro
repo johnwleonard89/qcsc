@@ -1,0 +1,326 @@
+---
+import { Container, TextSection, FeatureCard } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+
+const seo = {
+	title: 'Service Areas | Cincinnati Tri-State Concrete Coating | Queen City Surface Coatings',
+	description: 'Professional concrete coating services throughout Cincinnati tri-state area. Serving Ohio, Kentucky & Indiana within 50-mile radius. Free estimates in all service areas.',
+	keywords: 'Cincinnati service areas, concrete coating Ohio Kentucky Indiana, tri-state flooring contractor, Hamilton County epoxy, Northern Kentucky concrete coating',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Service Areas', url: 'https://queencitysurfacecoatings.com/service-areas/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Service Areas - Queen City Surface Coatings",
+		"description": "Professional concrete coating services throughout the Cincinnati tri-state area",
+		"url": "https://queencitysurfacecoatings.com/service-areas/"
+	}
+};
+
+const serviceAreas = [
+	{
+		city: "Cincinnati",
+		counties: ["Hamilton County"],
+		neighborhoods: ["Downtown", "Over-the-Rhine", "Hyde Park", "Clifton", "Mount Lookout", "Oakley"],
+		description: "Serving all Cincinnati neighborhoods with professional surface coating services."
+	},
+	{
+		city: "Northern Kentucky",
+		counties: ["Campbell County", "Kenton County", "Boone County"],
+		neighborhoods: ["Newport", "Covington", "Florence", "Burlington", "Erlanger"],
+		description: "Professional flooring services across Northern Kentucky communities."
+	},
+	{
+		city: "West Side Communities", 
+		counties: ["Hamilton County"],
+		neighborhoods: ["Westside", "Price Hill", "Cheviot", "Delhi", "Bridgetown"],
+		description: "Quality surface coatings for Cincinnati's west side neighborhoods."
+	},
+	{
+		city: "East Side Communities",
+		counties: ["Hamilton County", "Clermont County"],
+		neighborhoods: ["Anderson", "Forest Park", "Springdale", "Sharonville", "Blue Ash"],
+		description: "Expert epoxy and polishing services for east side Cincinnati."
+	},
+	{
+		city: "Butler County",
+		counties: ["Butler County"], 
+		neighborhoods: ["Hamilton", "Fairfield", "Middletown", "West Chester", "Mason"],
+		description: "Comprehensive surface restoration throughout Butler County."
+	},
+	{
+		city: "Warren County",
+		counties: ["Warren County"],
+		neighborhoods: ["Mason", "Lebanon", "Springboro", "Franklin", "Carlisle"],
+		description: "Professional concrete and epoxy services in Warren County."
+	}
+];
+---
+
+<Layout seo={seo}>
+	<!-- Hero Section -->
+	<Container>
+		<TextSection>
+			<h1>Service Areas</h1>
+			<p class="hero-description">
+				Queen City Surface Coatings proudly serves the Greater Cincinnati tri-state area. 
+				Our veteran-owned business brings professional surface coating services directly to 
+				your location, whether residential or commercial.
+			</p>
+		</TextSection>
+	</Container>
+
+	<!-- Main Service Area -->
+	<Container>
+		<TextSection>
+			<h2>Primary Service Area</h2>
+			<div class="service-radius">
+				<div class="radius-info">
+					<h3>50-Mile Radius from Cincinnati</h3>
+					<p>We provide full-service epoxy flooring, concrete polishing, and surface restoration within a 50-mile radius of Cincinnati, Ohio. This includes:</p>
+					
+					<div class="coverage-grid">
+						<div class="coverage-item">
+							<h4>Ohio Counties</h4>
+							<ul>
+								<li>Hamilton County</li>
+								<li>Butler County</li>
+								<li>Warren County</li>
+								<li>Clermont County</li>
+								<li>Brown County</li>
+							</ul>
+						</div>
+						<div class="coverage-item">
+							<h4>Kentucky Counties</h4>
+							<ul>
+								<li>Campbell County</li>
+								<li>Kenton County</li>
+								<li>Boone County</li>
+								<li>Grant County</li>
+							</ul>
+						</div>
+						<div class="coverage-item">
+							<h4>Indiana Counties</h4>
+							<ul>
+								<li>Dearborn County</li>
+								<li>Ohio County</li>
+								<li>Switzerland County</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Service Areas Grid -->
+	<Container>
+		<section class="service-areas-section">
+			<h2>Communities We Serve</h2>
+			<div class="areas-grid">
+				{serviceAreas.map((area) => (
+					<div class="area-card">
+						<h3>{area.city}</h3>
+						<p class="area-description">{area.description}</p>
+						<div class="area-details">
+							<div class="counties">
+								<strong>Counties:</strong>
+								<span>{area.counties.join(", ")}</span>
+							</div>
+							<div class="neighborhoods">
+								<strong>Key Areas:</strong>
+								<span>{area.neighborhoods.join(", ")}</span>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Extended Service -->
+	<Container>
+		<TextSection>
+			<h2>Extended Service Areas</h2>
+			<p>
+				For larger commercial projects or special circumstances, we may travel beyond our standard 
+				service area. Contact us to discuss your specific location and project requirements.
+			</p>
+			
+			<div class="contact-info">
+				<div class="contact-methods">
+					<div class="contact-item">
+						<h4>Call for Service Area Confirmation</h4>
+						<p><a href="tel:+15132965525">(513) 296-5525</a></p>
+					</div>
+					<div class="contact-item">
+						<h4>Email Your Location</h4>
+						<p><a href="mailto:john@queencitysurfacecoatings.com">john@queencitysurfacecoatings.com</a></p>
+					</div>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Response Time -->
+	<Container>
+		<TextSection>
+			<h2>Response Times by Area</h2>
+			<div class="response-grid">
+				<div class="response-item">
+					<h4>Core Cincinnati Area</h4>
+					<p>Same-day consultation available</p>
+					<span class="response-time">24-48 hour response</span>
+				</div>
+				<div class="response-item">
+					<h4>Tri-State Suburbs</h4>
+					<p>Next business day consultation</p>
+					<span class="response-time">48-72 hour response</span>
+				</div>
+				<div class="response-item">
+					<h4>Extended Areas</h4>
+					<p>Scheduled consultation</p>
+					<span class="response-time">3-5 business day response</span>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+</Layout>
+
+<style>
+	.hero-description {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		color: var(--theme-on-bg);
+	}
+
+	.service-radius {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin: 2rem 0;
+	}
+
+	.coverage-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+		margin-top: 1.5rem;
+	}
+
+	.coverage-item h4 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+	}
+
+	.coverage-item ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.coverage-item li {
+		padding: 0.25rem 0;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.service-areas-section {
+		margin: 3rem 0;
+	}
+
+	.areas-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.area-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 1px solid rgba(0,0,0,0.05);
+	}
+
+	.area-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+	}
+
+	.area-description {
+		margin-bottom: 1.5rem;
+		color: var(--theme-on-surface-1);
+	}
+
+	.area-details {
+		border-top: 1px solid rgba(0,0,0,0.1);
+		padding-top: 1rem;
+	}
+
+	.counties, .neighborhoods {
+		margin-bottom: 0.75rem;
+	}
+
+	.counties strong, .neighborhoods strong {
+		color: var(--theme-on-surface-1);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.contact-methods {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.contact-item {
+		text-align: center;
+		padding: 1.5rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.contact-item h4 {
+		color: var(--theme-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.response-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.response-item {
+		text-align: center;
+		padding: 2rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.response-item h4 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+	}
+
+	.response-time {
+		display: block;
+		font-weight: 600;
+		color: var(--theme-primary);
+		margin-top: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		.coverage-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.areas-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

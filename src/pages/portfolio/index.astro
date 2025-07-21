@@ -1,0 +1,1268 @@
+---
+import { Container, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+
+const seo = {
+	title: 'Portfolio | Our Work | Queen City Surface Coatings Cincinnati',
+	description: 'View our professional concrete coating project gallery. Quality garage floors, commercial coatings, and metallic epoxy across Cincinnati tri-state area.',
+};
+
+// Project data structure - in a real implementation this would come from a CMS or database
+const projects = [
+	{
+		id: 1,
+		title: "Luxury Garage Transformation",
+		location: "Mason, OH",
+		serviceType: "Garage Floor Epoxy",
+		category: ["residential", "garage"],
+		completionDate: "2024-11-15",
+		description: "Complete garage floor transformation with charcoal epoxy base and decorative flakes for a showroom-quality finish.",
+		beforeImage: "/assets/images/portfolio/garage-mason-before.webp",
+		afterImage: "/assets/images/portfolio/garage-mason-after.webp",
+		featured: true
+	},
+	{
+		id: 2,
+		title: "Manufacturing Facility Floor",
+		location: "Cincinnati, OH",
+		serviceType: "Commercial Polyaspartic",
+		category: ["commercial"],
+		completionDate: "2024-10-28",
+		description: "Heavy-duty polyaspartic coating system designed for forklift traffic and chemical resistance in manufacturing environment.",
+		beforeImage: "/assets/images/portfolio/manufacturing-cincy-before.webp",
+		afterImage: "/assets/images/portfolio/manufacturing-cincy-after.webp",
+		featured: true
+	},
+	{
+		id: 3,
+		title: "Stunning Metallic Basement",
+		location: "West Chester, OH",
+		serviceType: "Metallic Epoxy",
+		category: ["residential", "basement", "metallic"],
+		completionDate: "2024-12-02",
+		description: "Artistic metallic epoxy system creating flowing ocean-like patterns that transformed this basement into an entertainment showpiece.",
+		beforeImage: "/assets/images/portfolio/basement-westchester-before.webp",
+		afterImage: "/assets/images/portfolio/basement-westchester-after.webp",
+		featured: true
+	},
+	{
+		id: 4,
+		title: "Restaurant Kitchen Floor",
+		location: "Covington, KY",
+		serviceType: "Commercial Food-Safe Coating",
+		category: ["commercial"],
+		completionDate: "2024-09-22",
+		description: "Food-safe, anti-microbial coating system with slip-resistant texture meeting health department requirements.",
+		beforeImage: "/assets/images/portfolio/restaurant-covington-before.webp",
+		afterImage: "/assets/images/portfolio/restaurant-covington-after.webp",
+		featured: false
+	},
+	{
+		id: 5,
+		title: "Three-Car Garage Makeover",
+		location: "Milford, OH",
+		serviceType: "Garage Floor Epoxy",
+		category: ["residential", "garage"],
+		completionDate: "2024-11-08",
+		description: "Large three-car garage with light gray epoxy base and blue decorative flakes creating a clean, professional appearance.",
+		beforeImage: "/assets/images/portfolio/garage-milford-before.webp",
+		afterImage: "/assets/images/portfolio/garage-milford-after.webp",
+		featured: false
+	},
+	{
+		id: 6,
+		title: "Warehouse Distribution Center",
+		location: "Florence, KY",
+		serviceType: "Industrial Coating System",
+		category: ["commercial"],
+		completionDate: "2024-08-15",
+		description: "High-performance coating system designed for heavy equipment and constant forklift traffic in 50,000 sq ft facility.",
+		beforeImage: "/assets/images/portfolio/warehouse-florence-before.webp",
+		afterImage: "/assets/images/portfolio/warehouse-florence-after.webp",
+		featured: false
+	},
+	{
+		id: 7,
+		title: "Finished Basement Coating",
+		location: "Lebanon, OH",
+		serviceType: "Basement Floor Coating",
+		category: ["residential", "basement"],
+		completionDate: "2024-10-12",
+		description: "Moisture-resistant coating system transforming dark basement into bright, usable living space for growing family.",
+		beforeImage: "/assets/images/portfolio/basement-lebanon-before.webp",
+		afterImage: "/assets/images/portfolio/basement-lebanon-after.webp",
+		featured: false
+	},
+	{
+		id: 8,
+		title: "Showroom Metallic Feature",
+		location: "Cincinnati, OH",
+		serviceType: "Metallic Epoxy",
+		category: ["commercial", "metallic"],
+		completionDate: "2024-09-05",
+		description: "Custom metallic epoxy design creating dramatic visual impact in automotive showroom entrance and display area.",
+		beforeImage: "/assets/images/portfolio/showroom-cincy-before.webp",
+		afterImage: "/assets/images/portfolio/showroom-cincy-after.webp",
+		featured: false
+	}
+];
+
+const testimonials = [
+	{
+		quote: "Queen City Surface Coatings transformed our garage into a showroom-quality space. John's attention to detail and professional approach exceeded our expectations. The floor looks amazing and has held up perfectly through Cincinnati's harsh winter conditions.",
+		author: "Mike & Sarah Thompson",
+		location: "West Chester, OH",
+		project: "Garage Floor Epoxy",
+		image: "/assets/images/testimonials/thompson-garage.webp"
+	},
+	{
+		quote: "Professional, punctual, and perfect results. As a fellow veteran, I appreciated John's military precision and commitment to excellence. Our warehouse floor looks incredible and performs even better.",
+		author: "David Rodriguez",
+		location: "Cincinnati, OH",
+		project: "Commercial Coating",
+		image: "/assets/images/testimonials/rodriguez-warehouse.webp"
+	},
+	{
+		quote: "Outstanding work from start to finish. The team was knowledgeable, clean, and delivered exactly what they promised. Our basement floor transformation is remarkable and has been maintenance-free for months.",
+		author: "Jennifer Chen",
+		location: "Mason, OH",
+		project: "Basement Coating",
+		image: "/assets/images/testimonials/chen-basement.webp"
+	}
+];
+---
+
+<Layout {seo}>
+	<!-- Page Header -->
+	<Container>
+		<section class="page-header">
+			<nav class="breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="/">Home</a></li>
+					<li aria-current="page">Portfolio</li>
+				</ol>
+			</nav>
+			<h1>Our Work Portfolio</h1>
+			<p class="page-subtitle">
+				Quality concrete coating projects across Cincinnati tri-state area, delivered with military precision and attention to detail
+			</p>
+		</section>
+	</Container>
+
+	<!-- Gallery Filter -->
+	<Container>
+		<section class="gallery-filters">
+			<div class="filter-buttons">
+				<button class="filter-btn active" data-filter="all">All Projects</button>
+				<button class="filter-btn" data-filter="residential">Residential</button>
+				<button class="filter-btn" data-filter="commercial">Commercial</button>
+				<button class="filter-btn" data-filter="garage">Garage Floors</button>
+				<button class="filter-btn" data-filter="basement">Basement Coatings</button>
+				<button class="filter-btn" data-filter="metallic">Metallic Epoxy</button>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Portfolio Gallery -->
+	<Container>
+		<section class="portfolio-gallery">
+			<div class="gallery-grid" id="portfolioGrid">
+				{projects.map((project) => (
+					<div class="project-card" data-categories={project.category.join(' ')} data-project-id={project.id}>
+						<div class="project-images">
+							<div class="image-container">
+								<img 
+									src={project.beforeImage} 
+									alt={`Before: ${project.title} in ${project.location}`}
+									loading="lazy"
+									class="project-image before-image"
+								/>
+								<div class="image-label before-label">Before</div>
+							</div>
+							<div class="image-container">
+								<img 
+									src={project.afterImage} 
+									alt={`After: ${project.title} in ${project.location} - ${project.serviceType}`}
+									loading="lazy"
+									class="project-image after-image"
+								/>
+								<div class="image-label after-label">After</div>
+							</div>
+						</div>
+						
+						<div class="project-overlay">
+							<div class="project-info">
+								<h3 class="project-title">{project.title}</h3>
+								<div class="project-meta">
+									<span class="project-location">📍 {project.location}</span>
+									<span class="project-service">🔧 {project.serviceType}</span>
+									<span class="project-date">📅 {new Date(project.completionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</span>
+								</div>
+								<p class="project-description">{project.description}</p>
+								<button class="view-project-btn" data-project-id={project.id}>
+									View Details
+								</button>
+							</div>
+						</div>
+
+						{project.featured && <div class="featured-badge">Featured</div>}
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Lightbox Modal -->
+	<div class="lightbox-modal" id="lightboxModal">
+		<div class="lightbox-content">
+			<button class="lightbox-close" id="lightboxClose">&times;</button>
+			<div class="lightbox-images">
+				<div class="lightbox-image-container">
+					<img id="lightboxBefore" src="" alt="" />
+					<div class="lightbox-label">Before</div>
+				</div>
+				<div class="lightbox-image-container">
+					<img id="lightboxAfter" src="" alt="" />
+					<div class="lightbox-label">After</div>
+				</div>
+			</div>
+			<div class="lightbox-info">
+				<h3 id="lightboxTitle"></h3>
+				<div class="lightbox-meta">
+					<span id="lightboxLocation"></span>
+					<span id="lightboxService"></span>
+					<span id="lightboxDate"></span>
+				</div>
+				<p id="lightboxDescription"></p>
+				<div class="lightbox-cta">
+					<a href="/company/contact" class="btn btn-primary">Get Similar Quote</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Client Testimonials -->
+	<section class="testimonials-section">
+		<Container>
+			<h2>What Our Clients Say</h2>
+			<div class="testimonials-carousel">
+				{testimonials.map((testimonial, index) => (
+					<div class={`testimonial-card ${index === 0 ? 'active' : ''}`}>
+						<div class="testimonial-content">
+							<div class="testimonial-image">
+								<img src={testimonial.image} alt={`${testimonial.project} project for ${testimonial.author}`} loading="lazy" />
+							</div>
+							<div class="testimonial-text">
+								<div class="stars">★★★★★</div>
+								<blockquote>"{testimonial.quote}"</blockquote>
+								<div class="testimonial-author">
+									<strong>{testimonial.author}</strong>
+									<span>{testimonial.location}</span>
+									<span class="project-type">{testimonial.project}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+			<div class="carousel-navigation">
+				<button class="carousel-btn prev" id="prevTestimonial">❮</button>
+				<button class="carousel-btn next" id="nextTestimonial">❯</button>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Call-to-Action Section -->
+	<section class="portfolio-cta-section">
+		<Container>
+			<div class="cta-content">
+				<div class="cta-text">
+					<h2>Ready to Transform Your Space?</h2>
+					<p>
+						Join our growing portfolio of satisfied customers across the Cincinnati tri-state area. 
+						Every project receives the same military precision and attention to detail you see in our work.
+					</p>
+					<div class="cta-benefits">
+						<div class="benefit-item">
+							<span class="benefit-icon">🎖️</span>
+							<span>Military Precision Installation</span>
+						</div>
+						<div class="benefit-item">
+							<span class="benefit-icon">🛡️</span>
+							<span>Licensed, Bonded & Insured</span>
+						</div>
+						<div class="benefit-item">
+							<span class="benefit-icon">📞</span>
+							<span>Free Consultation & Estimate</span>
+						</div>
+						<div class="benefit-item">
+							<span class="benefit-icon">⭐</span>
+							<span>Satisfaction Guaranteed</span>
+						</div>
+					</div>
+					<div class="cta-contact">
+						<a href="tel:+15132965525" class="phone-cta">
+							<span class="phone-icon">📞</span>
+							<div class="phone-content">
+								<strong>(513) 296-5525</strong>
+								<span>Call for immediate service</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<div class="cta-form">
+					<div class="form-header">
+						<h3>Get Your Free Estimate</h3>
+						<p>Start your transformation today</p>
+					</div>
+					<QuoteRequestForm />
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Final CTA -->
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Experience the Queen City Difference</h2>
+		<p>
+			Professional concrete coating services delivered with military precision throughout 
+			the Cincinnati tri-state area. Contact us today for your free consultation.
+		</p>
+		<div class="cta-buttons">
+			<a href="/company/contact" class="btn btn-primary">Schedule Consultation</a>
+			<a href="/services" class="btn btn-outline">View All Services</a>
+		</div>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	/* Page Header */
+	.page-header {
+		text-align: center;
+		padding: 2rem 0 3rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.breadcrumb {
+		margin-bottom: 1.5rem;
+	}
+
+	.breadcrumb ol {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.breadcrumb li:not(:last-child)::after {
+		content: ">";
+		margin-left: 0.5rem;
+		opacity: 0.6;
+	}
+
+	.breadcrumb a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.breadcrumb a:hover {
+		text-decoration: underline;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		color: var(--theme-on-bg);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--theme-on-bg);
+		opacity: 0.8;
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	/* Gallery Filters */
+	.gallery-filters {
+		margin-bottom: 3rem;
+	}
+
+	.filter-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.filter-btn {
+		padding: 0.75rem 1.5rem;
+		background: var(--theme-surface-1);
+		border: 2px solid transparent;
+		border-radius: var(--theme-button-border-radius);
+		color: var(--theme-on-bg);
+		font-weight: 500;
+		cursor: pointer;
+		transition: all var(--theme-transition);
+		min-height: 44px;
+	}
+
+	.filter-btn:hover,
+	.filter-btn.active {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-color: var(--theme-primary);
+	}
+
+	/* Portfolio Gallery */
+	.portfolio-gallery {
+		margin-bottom: 4rem;
+	}
+
+	.gallery-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+	}
+
+	.project-card {
+		position: relative;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		overflow: hidden;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transition: transform var(--theme-transition);
+		cursor: pointer;
+	}
+
+	.project-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.project-card.hidden {
+		display: none;
+	}
+
+	.project-images {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 250px;
+	}
+
+	.image-container {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.project-image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform var(--theme-transition);
+	}
+
+	.project-card:hover .project-image {
+		transform: scale(1.05);
+	}
+
+	.image-label {
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+		background: rgba(0, 0, 0, 0.8);
+		color: white;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+
+	.after-label {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	.project-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+		color: white;
+		padding: 2rem;
+		transform: translateY(60%);
+		transition: transform var(--theme-transition);
+	}
+
+	.project-card:hover .project-overlay {
+		transform: translateY(0);
+	}
+
+	.project-title {
+		color: var(--theme-primary);
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+	}
+
+	.project-meta {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		margin-bottom: 1rem;
+		font-size: 0.9rem;
+		opacity: 0.9;
+	}
+
+	.project-description {
+		margin-bottom: 1rem;
+		line-height: 1.5;
+		font-size: 0.95rem;
+	}
+
+	.view-project-btn {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: none;
+		padding: 0.5rem 1rem;
+		border-radius: var(--theme-button-border-radius);
+		font-weight: 600;
+		cursor: pointer;
+		transition: all var(--theme-transition);
+	}
+
+	.view-project-btn:hover {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	.featured-badge {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.5rem 1rem;
+		border-radius: var(--theme-button-border-radius);
+		font-size: 0.8rem;
+		font-weight: 600;
+		z-index: 2;
+	}
+
+	/* Lightbox Modal */
+	.lightbox-modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.9);
+		z-index: 1000;
+		overflow-y: auto;
+	}
+
+	.lightbox-modal.active {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	.lightbox-content {
+		background: var(--theme-bg);
+		border-radius: var(--theme-shape-radius);
+		max-width: 1200px;
+		width: 100%;
+		max-height: 90vh;
+		overflow-y: auto;
+		position: relative;
+	}
+
+	.lightbox-close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		font-size: 2rem;
+		color: var(--theme-on-bg);
+		cursor: pointer;
+		z-index: 10;
+		width: 44px;
+		height: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+	}
+
+	.lightbox-images {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		height: 400px;
+	}
+
+	.lightbox-image-container {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.lightbox-image-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.lightbox-label {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		background: rgba(0, 0, 0, 0.8);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 4px;
+		font-weight: 600;
+	}
+
+	.lightbox-image-container:last-child .lightbox-label {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	.lightbox-info {
+		padding: 2rem;
+	}
+
+	.lightbox-info h3 {
+		color: var(--theme-primary);
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.lightbox-meta {
+		display: flex;
+		gap: 2rem;
+		margin-bottom: 1rem;
+		font-size: 0.95rem;
+		opacity: 0.8;
+		flex-wrap: wrap;
+	}
+
+	.lightbox-cta {
+		margin-top: 1.5rem;
+	}
+
+	/* Testimonials Section */
+	.testimonials-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 0;
+		margin: 4rem 0;
+		position: relative;
+	}
+
+	.testimonials-section h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.testimonials-carousel {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.testimonial-card {
+		display: none;
+	}
+
+	.testimonial-card.active {
+		display: block;
+	}
+
+	.testimonial-content {
+		display: grid;
+		grid-template-columns: 300px 1fr;
+		gap: 2rem;
+		align-items: center;
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.testimonial-image img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.stars {
+		color: var(--theme-primary);
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.testimonial-text blockquote {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+		font-style: italic;
+	}
+
+	.testimonial-author strong {
+		color: var(--theme-primary);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.testimonial-author span {
+		display: block;
+		opacity: 0.8;
+		font-size: 0.9rem;
+	}
+
+	.project-type {
+		color: var(--theme-primary);
+		font-weight: 500;
+		opacity: 1 !important;
+	}
+
+	.carousel-navigation {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+
+	.carousel-btn {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: none;
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		font-size: 1.2rem;
+		cursor: pointer;
+		transition: all var(--theme-transition);
+	}
+
+	.carousel-btn:hover {
+		background: var(--theme-primary-hover);
+		transform: scale(1.1);
+	}
+
+	/* Portfolio CTA Section */
+	.portfolio-cta-section {
+		margin: 4rem 0;
+	}
+
+	.cta-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: start;
+	}
+
+	.cta-text h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.cta-text p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+	}
+
+	.cta-benefits {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.benefit-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-weight: 500;
+	}
+
+	.benefit-icon {
+		font-size: 1.2rem;
+	}
+
+	.cta-contact {
+		margin-bottom: 2rem;
+	}
+
+	.phone-cta {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1.5rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		text-decoration: none;
+		color: inherit;
+		transition: all var(--theme-transition);
+	}
+
+	.phone-cta:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		transform: translateY(-2px);
+	}
+
+	.phone-icon {
+		font-size: 1.5rem;
+	}
+
+	.phone-content strong {
+		display: block;
+		font-size: 1.25rem;
+		color: var(--theme-primary);
+	}
+
+	.phone-cta:hover .phone-content strong {
+		color: inherit;
+	}
+
+	.phone-content span {
+		font-size: 0.9rem;
+		opacity: 0.8;
+	}
+
+	.cta-form {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.form-header {
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.form-header h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.5rem;
+		font-size: 1.5rem;
+	}
+
+	.form-header p {
+		opacity: 0.8;
+	}
+
+	/* CTA Buttons */
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid transparent;
+		min-height: 44px;
+	}
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		border-color: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 1024px) {
+		.gallery-grid {
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		}
+		
+		.cta-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+		
+		.testimonial-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		
+		.lightbox-images {
+			grid-template-columns: 1fr;
+			height: auto;
+		}
+		
+		.lightbox-image-container {
+			height: 300px;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		
+		.filter-buttons {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0.5rem;
+		}
+		
+		.gallery-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.project-overlay {
+			position: static;
+			transform: none;
+			background: var(--theme-bg);
+			color: var(--theme-on-bg);
+		}
+		
+		.project-title {
+			color: var(--theme-primary);
+		}
+		
+		.cta-benefits {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-text h2 {
+			font-size: 2rem;
+		}
+		
+		.testimonials-section h2 {
+			font-size: 2rem;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.lightbox-meta {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.project-images {
+			grid-template-columns: 1fr;
+			height: 400px;
+		}
+		
+		.filter-buttons {
+			flex-direction: column;
+		}
+		
+		.lightbox-content {
+			margin: 1rem;
+		}
+		
+		.lightbox-info {
+			padding: 1.5rem;
+		}
+		
+		.testimonial-content {
+			padding: 1.5rem;
+		}
+	}
+</style>
+
+<script>
+	// Portfolio filtering functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const filterButtons = document.querySelectorAll('.filter-btn');
+		const projectCards = document.querySelectorAll('.project-card');
+		const lightboxModal = document.getElementById('lightboxModal');
+		const lightboxClose = document.getElementById('lightboxClose');
+		
+		// Project data for lightbox
+		const projects = {projects.map(p => `${p.id}: ${JSON.stringify(p)}`).join(',\n\t\t\t')};
+
+		// Filter functionality
+		filterButtons.forEach(button => {
+			button.addEventListener('click', () => {
+				// Update active button
+				filterButtons.forEach(btn => btn.classList.remove('active'));
+				button.classList.add('active');
+				
+				const filter = button.dataset.filter;
+				
+				// Show/hide projects
+				projectCards.forEach(card => {
+					if (filter === 'all') {
+						card.classList.remove('hidden');
+					} else {
+						const categories = card.dataset.categories;
+						if (categories.includes(filter)) {
+							card.classList.remove('hidden');
+						} else {
+							card.classList.add('hidden');
+						}
+					}
+				});
+			});
+		});
+
+		// Lightbox functionality
+		document.querySelectorAll('.view-project-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				e.stopPropagation();
+				const projectId = parseInt(btn.dataset.projectId);
+				const project = projects[projectId];
+				
+				if (project) {
+					// Populate lightbox
+					document.getElementById('lightboxBefore').src = project.beforeImage;
+					document.getElementById('lightboxAfter').src = project.afterImage;
+					document.getElementById('lightboxTitle').textContent = project.title;
+					document.getElementById('lightboxLocation').textContent = `📍 ${project.location}`;
+					document.getElementById('lightboxService').textContent = `🔧 ${project.serviceType}`;
+					document.getElementById('lightboxDate').textContent = `📅 ${new Date(project.completionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}`;
+					document.getElementById('lightboxDescription').textContent = project.description;
+					
+					// Update alt text
+					document.getElementById('lightboxBefore').alt = `Before: ${project.title} in ${project.location}`;
+					document.getElementById('lightboxAfter').alt = `After: ${project.title} in ${project.location} - ${project.serviceType}`;
+					
+					lightboxModal.classList.add('active');
+					document.body.style.overflow = 'hidden';
+				}
+			});
+		});
+
+		// Close lightbox
+		lightboxClose.addEventListener('click', closeLightbox);
+		lightboxModal.addEventListener('click', (e) => {
+			if (e.target === lightboxModal) {
+				closeLightbox();
+			}
+		});
+
+		function closeLightbox() {
+			lightboxModal.classList.remove('active');
+			document.body.style.overflow = '';
+		}
+
+		// Escape key to close lightbox
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+				closeLightbox();
+			}
+		});
+
+		// Mobile Swipe Functionality for Lightbox
+		let touchStartX = 0;
+		let touchEndX = 0;
+		let currentProjectIndex = 0;
+		const projectIds = Object.keys(projects).map(id => parseInt(id));
+		
+		function handleSwipe() {
+			if (lightboxModal.classList.contains('active')) {
+				const swipeThreshold = 50;
+				const swipeDistance = touchStartX - touchEndX;
+				
+				if (Math.abs(swipeDistance) > swipeThreshold) {
+					if (swipeDistance > 0) {
+						// Swipe left - next project
+						showNextProject();
+					} else {
+						// Swipe right - previous project
+						showPreviousProject();
+					}
+				}
+			}
+		}
+		
+		function showNextProject() {
+			const currentIndex = projectIds.indexOf(currentProjectIndex);
+			const nextIndex = (currentIndex + 1) % projectIds.length;
+			currentProjectIndex = projectIds[nextIndex];
+			showProject(currentProjectIndex);
+		}
+		
+		function showPreviousProject() {
+			const currentIndex = projectIds.indexOf(currentProjectIndex);
+			const prevIndex = currentIndex === 0 ? projectIds.length - 1 : currentIndex - 1;
+			currentProjectIndex = projectIds[prevIndex];
+			showProject(currentProjectIndex);
+		}
+		
+		function showProject(projectId) {
+			const project = projects[projectId];
+			if (project) {
+				// Add transition animation
+				const lightboxContent = document.querySelector('.lightbox-content');
+				lightboxContent.style.transform = 'translateX(10px)';
+				lightboxContent.style.opacity = '0.8';
+				
+				setTimeout(() => {
+					// Update content
+					document.getElementById('lightboxBefore').src = project.beforeImage;
+					document.getElementById('lightboxAfter').src = project.afterImage;
+					document.getElementById('lightboxTitle').textContent = project.title;
+					document.getElementById('lightboxLocation').textContent = `📍 ${project.location}`;
+					document.getElementById('lightboxService').textContent = `🔧 ${project.serviceType}`;
+					document.getElementById('lightboxDate').textContent = `📅 ${new Date(project.completionDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}`;
+					document.getElementById('lightboxDescription').textContent = project.description;
+					
+					// Update alt text
+					document.getElementById('lightboxBefore').alt = `Before: ${project.title} in ${project.location}`;
+					document.getElementById('lightboxAfter').alt = `After: ${project.title} in ${project.location} - ${project.serviceType}`;
+					
+					// Reset animation
+					lightboxContent.style.transform = 'translateX(0)';
+					lightboxContent.style.opacity = '1';
+				}, 150);
+			}
+		}
+		
+		// Touch event listeners for swipe
+		lightboxModal.addEventListener('touchstart', (e) => {
+			touchStartX = e.changedTouches[0].screenX;
+		}, { passive: true });
+		
+		lightboxModal.addEventListener('touchend', (e) => {
+			touchEndX = e.changedTouches[0].screenX;
+			handleSwipe();
+		}, { passive: true });
+		
+		// Keyboard navigation
+		document.addEventListener('keydown', (e) => {
+			if (lightboxModal.classList.contains('active')) {
+				if (e.key === 'ArrowLeft') {
+					e.preventDefault();
+					showPreviousProject();
+				} else if (e.key === 'ArrowRight') {
+					e.preventDefault();
+					showNextProject();
+				}
+			}
+		});
+
+		// Testimonials carousel with swipe support
+		const testimonialCards = document.querySelectorAll('.testimonial-card');
+		const prevBtn = document.getElementById('prevTestimonial');
+		const nextBtn = document.getElementById('nextTestimonial');
+		let currentTestimonial = 0;
+		let testimonialTouchStartX = 0;
+		let testimonialTouchEndX = 0;
+
+		function showTestimonial(index) {
+			testimonialCards.forEach((card, i) => {
+				card.classList.toggle('active', i === index);
+			});
+		}
+
+		function nextTestimonial() {
+			currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+			showTestimonial(currentTestimonial);
+		}
+
+		function prevTestimonial() {
+			currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+			showTestimonial(currentTestimonial);
+		}
+
+		if (nextBtn && prevBtn) {
+			nextBtn.addEventListener('click', nextTestimonial);
+			prevBtn.addEventListener('click', prevTestimonial);
+
+			// Auto-rotate testimonials
+			if (testimonialCards.length > 1) {
+				setInterval(nextTestimonial, 7000);
+			}
+		}
+
+		// Lazy loading for images
+		if ('IntersectionObserver' in window) {
+			const imageObserver = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const img = entry.target;
+						img.src = img.dataset.src || img.src;
+						img.classList.remove('lazy');
+						observer.unobserve(img);
+					}
+				});
+			});
+
+			document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+				imageObserver.observe(img);
+			});
+		}
+	});
+</script>
+
+<!-- Schema.org structured data for ImageGallery -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "ImageGallery",
+	"name": "Queen City Surface Coatings Portfolio",
+	"description": "Professional concrete coating project gallery showcasing garage floors, commercial coatings, and metallic epoxy installations across Cincinnati tri-state area",
+	"url": "https://queencitysurfacecoatings.com/portfolio",
+	"provider": {
+		"@type": "LocalBusiness",
+		"name": "Queen City Surface Coatings LLC",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Milford",
+			"addressRegion": "OH",
+			"addressCountry": "US"
+		},
+		"telephone": "+15132965525"
+	},
+	"image": [
+		{projects.map(p => `{
+			"@type": "ImageObject",
+			"name": "${p.title}",
+			"description": "${p.description}",
+			"url": "https://queencitysurfacecoatings.com${p.afterImage}",
+			"contentLocation": "${p.location}",
+			"dateCreated": "${p.completionDate}"
+		}`).join(',\n\t\t')}
+	]
+}
+</script>

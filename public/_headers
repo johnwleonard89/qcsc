@@ -1,0 +1,72 @@
+# Cache Control Headers for Performance Optimization
+# Queen City Surface Coatings - Static Asset Caching
+
+# Cache static assets for 1 year
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+# Cache images for 1 month with stale-while-revalidate
+*.jpg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  
+*.jpeg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  
+*.png
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  
+*.webp
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+  
+*.svg
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Cache CSS and JS for 1 year
+*.css
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts for 1 year
+*.woff
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+  
+*.ttf
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache with revalidation
+/*.html
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  
+# Root and main pages
+/
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# API endpoints - no cache
+/api/*
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Service worker - no cache (always fresh)
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+# Manifest - cache for 1 day
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'
+
+# Compression
+/*
+  X-Compression: gzip, br

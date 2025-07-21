@@ -1,0 +1,41 @@
+# Netlify redirects and rewrites for performance and SEO
+# Queen City Surface Coatings
+
+# Force HTTPS
+http://queencitysurfacecoatings.com/* https://queencitysurfacecoatings.com/:splat 301!
+http://www.queencitysurfacecoatings.com/* https://queencitysurfacecoatings.com/:splat 301!
+
+# Redirect www to non-www
+https://www.queencitysurfacecoatings.com/* https://queencitysurfacecoatings.com/:splat 301!
+
+# Image optimization redirects for WebP support
+# Serve WebP if browser supports it and WebP version exists
+/assets/images/* /assets/images/:splat 200
+  Accept: image/webp
+
+# Legacy image redirects (if migrating from WordPress)
+/wp-content/uploads/* /assets/images/:splat 301
+/uploads/* /assets/images/:splat 301
+
+# Service redirects for SEO
+/epoxy-flooring /services/garage-floor-epoxy/ 301
+/concrete-polishing /services/polyaspartic-coating/ 301
+/garage-floors /services/garage-floor-epoxy/ 301
+/basement-floors /services/basement-floor-coating/ 301
+/commercial-flooring /services/commercial-concrete-coating/ 301
+
+# Old WordPress URLs (if applicable)
+/about /company/about/ 301
+/contact /company/contact/ 301
+/services /services/ 301
+/gallery /portfolio/ 301
+/testimonials /portfolio/ 301
+
+# API routes
+/api/* /.netlify/functions/:splat 200
+
+# SPA fallback for client-side routing (if needed)
+# /* /index.html 200
+
+# 404 handling
+/* /404.html 404

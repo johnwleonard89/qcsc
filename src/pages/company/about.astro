@@ -1,259 +1,914 @@
 ---
 import { Container, TextSection, CtaCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
-import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'About Queen City Surface Coatings | Veteran-Owned Excellence',
-	description: 'Learn about Queen City Surface Coatings LLC, founded by veteran John Leonard. Professional surface coating expertise serving Cincinnati tri-state area.',
+	title: 'About Queen City Surface Coatings | Veteran-Owned Concrete Coating Specialists Cincinnati',
+	description: 'Meet John Leonard, Marine Corps veteran and founder of Queen City Surface Coatings. Learn about our military precision approach to concrete coating in Cincinnati tri-state area.',
+	keywords: 'Queen City Surface Coatings, John Leonard, veteran-owned business, Cincinnati concrete coating, military precision, Marine Corps veteran, Ohio contractor',
+	type: 'organization',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'About', url: 'https://queencitysurfacecoatings.com/company/about/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "AboutPage",
+		"name": "About Queen City Surface Coatings",
+		"description": "Learn about Queen City Surface Coatings, a veteran-owned concrete coating company serving Cincinnati",
+		"mainEntity": {
+			"@type": "Person",
+			"name": "John Leonard",
+			"jobTitle": "Founder and Owner",
+			"alumniOf": "U.S. Marine Corps",
+			"worksFor": {
+				"@type": "LocalBusiness",
+				"name": "Queen City Surface Coatings LLC"
+			}
+		}
+	}
 };
 ---
 
 <Layout {seo}>
-	<TextAndImageHero>
-		<div slot="text-container">
-			<h1>About Queen City Surface Coatings</h1>
-			<h2>Veteran-Owned Excellence in Surface Coatings</h2>
-			<p>
-				Founded in 2025 by John Leonard, who brings over a decade of corporate sales and marketing experience to the surface coating industry. 
-				This business expertise ensures every Queen City Surface Coatings project is managed professionally with clear communication, 
-				competitive pricing, and exceptional results.
-			</p>
-		</div>
-		<picture slot="image-container">
-			<img
-				src="/assets/images/about/about-hero.jpg"
-				alt="About Queen City Surface Coatings"
-				loading="lazy"
-			/>
-		</picture>
-	</TextAndImageHero>
-
-	<!-- Company Story -->
+	<!-- Page Header -->
 	<Container>
-		<TextSection>
-			<p>
-				Based in Milford, Ohio, we serve the Cincinnati tri-state area with premium epoxy flooring, concrete polishing, 
-				and surface restoration solutions. Our customer-focused approach and attention to detail delivers lasting results 
-				that exceed expectations.
+		<section class="page-header">
+			<nav class="breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="/">Home</a></li>
+					<li aria-current="page">About</li>
+				</ol>
+			</nav>
+			<h1>About Queen City Surface Coatings</h1>
+			<p class="page-subtitle">
+				Military precision meets lifetime quality in every project we undertake
 			</p>
-		</TextSection>
+		</section>
 	</Container>
 
-	<!-- Team Section -->
+	<!-- John Leonard Bio Section -->
 	<Container>
-		<TextSection>
-			<h2>The Team</h2>
-			<h3>Our Experts</h3>
-			
-			<div class="team-member">
-				<div class="team-image">
-					<img src="/assets/images/team/john-leonard.jpg" alt="John Leonard - Owner" />
+		<section class="founder-bio">
+			<div class="bio-content">
+				<div class="bio-image">
+					<img 
+						src="/assets/images/team/john-leonard.jpg" 
+						alt="John Leonard - Founder and U.S. Marine Corps Veteran"
+						loading="lazy"
+					/>
+					<div class="bio-credentials">
+						<span class="credential-badge">🇺🇸 U.S. Marine Corps Veteran</span>
+						<span class="credential-badge">📍 Based in Milford, Ohio</span>
+						<span class="credential-badge">📅 Founded in 2025</span>
+					</div>
 				</div>
-				<div class="team-info">
-					<h3>John Leonard</h3>
-					<p class="team-title">Owner & Founder</p>
-					<p>
-						John is a U.S. Marine Corps veteran who founded Queen City Surface Coatings with a mission to bring military-grade precision 
-						and excellence to the surface coating industry. With over a decade of corporate sales and marketing experience, 
-						John ensures every project is managed with professionalism and attention to detail.
-					</p>
-					<p>
-						His commitment to quality and customer satisfaction, combined with his military background, ensures that every 
-						Queen City Surface Coatings project meets the highest standards of excellence.
-					</p>
-					<div class="team-badges">
-						<span class="badge">U.S. Marine Corps Veteran</span>
-						<span class="badge">10+ Years Experience</span>
+				<div class="bio-text">
+					<h2>Meet John Leonard - Founder & Owner</h2>
+					<div class="military-background">
+						<h3>Military Background</h3>
+						<p>
+							John Leonard proudly served in the <strong>U.S. Marine Corps</strong>, where he developed 
+							the discipline, attention to detail, and commitment to excellence that defines every 
+							Queen City Surface Coatings project today. The Marine Corps values of honor, courage, 
+							and commitment aren't just words to John—they're the foundation of how he runs his business.
+						</p>
+					</div>
+					
+					<div class="business-foundation">
+						<h3>From Service to Surface Coatings</h3>
+						<p>
+							<strong>Founded in 2025</strong> and <strong>based in Milford, Ohio</strong>, Queen City Surface Coatings 
+							was born from John's desire to bring military-grade precision to the concrete coating industry. 
+							After transitioning from military service, John recognized the need for reliable, detail-oriented 
+							contractors who treat every project with the same level of commitment he brought to serving his country.
+						</p>
+					</div>
+
+					<div class="commitment-statement">
+						<h3>Commitment to Excellence and Precision</h3>
+						<p>
+							Every project reflects our unwavering commitment to excellence and precision. Just as there 
+							are no shortcuts in military service, there are no shortcuts in our work. We use premium 
+							materials, proven methods, and meticulous attention to detail to ensure results that exceed 
+							expectations and stand the test of time.
+						</p>
 					</div>
 				</div>
 			</div>
-		</TextSection>
+		</section>
 	</Container>
 
-	<!-- Values Section -->
-	<Container>
-		<TextSection>
-			<h2>Our Values</h2>
-			<p>What drives us every day</p>
-			
-			<div class="values-grid">
-				<div class="value-item">
-					<div class="value-icon">🎖️</div>
-					<h3>Excellence</h3>
-					<p>We bring military precision to every project, ensuring the highest quality results that exceed expectations.</p>
+	<!-- Company Story -->
+	<section class="company-story">
+		<Container>
+			<div class="story-content">
+				<div class="mission-section">
+					<h2>Our Company Story</h2>
+					<div class="mission-statement">
+						<h3>Mission Statement</h3>
+						<blockquote>
+							"To provide the Cincinnati tri-state area with premium concrete coating solutions 
+							delivered with military precision, uncompromising quality, and genuine care for 
+							every customer's vision."
+						</blockquote>
+					</div>
 				</div>
-				<div class="value-item">
-					<div class="value-icon">🤝</div>
-					<h3>Integrity</h3>
-					<p>Honest communication, fair pricing, and standing behind our work with comprehensive warranties.</p>
+
+				<div class="values-section">
+					<h3>Our Core Values</h3>
+					<div class="values-grid">
+						<div class="value-item">
+							<div class="value-icon">🎯</div>
+							<h4>Precision</h4>
+							<p>Military-trained attention to detail ensures flawless execution from surface preparation through final inspection.</p>
+						</div>
+						<div class="value-item">
+							<div class="value-icon">⭐</div>
+							<h4>Quality</h4>
+							<p>We use only premium materials and proven methods to deliver results that exceed industry standards.</p>
+						</div>
+						<div class="value-item">
+							<div class="value-icon">🤝</div>
+							<h4>Service</h4>
+							<p>Every customer receives honest communication, fair pricing, and support that extends beyond project completion.</p>
+						</div>
+					</div>
 				</div>
-				<div class="value-item">
-					<div class="value-icon">⚡</div>
-					<h3>Service</h3>
-					<p>Our commitment to serving our community with the same dedication we served our country.</p>
+
+				<div class="why-coatings">
+					<h3>Why Concrete Coatings Matter</h3>
+					<p>
+						Concrete is an incredible building material, but it's porous and vulnerable to damage from chemicals, 
+						moisture, and wear. Quality surface coatings don't just improve appearance—they provide essential 
+						protection that extends the life of your concrete investment while creating safer, more functional spaces.
+					</p>
+					<p>
+						Whether it's protecting your garage floor from salt damage during Cincinnati winters or creating 
+						a chemical-resistant surface for your business, the right coating system makes a significant 
+						difference in both performance and appearance.
+					</p>
 				</div>
 			</div>
-		</TextSection>
-	</Container>
+		</Container>
+	</section>
 
-	<!-- Why Choose Us Section -->
+	<!-- Service Area -->
 	<Container>
-		<TextSection>
-			<h2>Why Choose Queen City Surface Coatings?</h2>
-			<p>The difference that sets us apart</p>
-			
-			<div class="benefits-grid">
-				<div class="benefit-card">
-					<h3>Licensed, Bonded & Insured</h3>
-					<p>Full protection and peace of mind for every project with proper licensing and comprehensive insurance coverage.</p>
+		<section class="service-area">
+			<h2>Our Service Area</h2>
+			<div class="service-area-content">
+				<div class="service-radius">
+					<div class="radius-header">
+						<h3>50-Mile Radius from Milford, Ohio</h3>
+						<p>
+							Strategically located in Milford, Ohio, we provide comprehensive surface coating 
+							services throughout the Cincinnati tri-state area and beyond.
+						</p>
+					</div>
+					
+					<div class="coverage-details">
+						<div class="state-coverage">
+							<h4>Ohio Coverage</h4>
+							<ul>
+								<li>Hamilton County</li>
+								<li>Butler County</li>
+								<li>Warren County</li>
+								<li>Clermont County</li>
+								<li>Brown County</li>
+								<li>Highland County</li>
+							</ul>
+						</div>
+						<div class="state-coverage">
+							<h4>Kentucky Coverage</h4>
+							<ul>
+								<li>Campbell County</li>
+								<li>Kenton County</li>
+								<li>Boone County</li>
+								<li>Grant County</li>
+								<li>Pendleton County</li>
+							</ul>
+						</div>
+						<div class="state-coverage">
+							<h4>Indiana Coverage</h4>
+							<ul>
+								<li>Dearborn County</li>
+								<li>Ohio County</li>
+								<li>Switzerland County</li>
+								<li>Ripley County</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<div class="benefit-card">
-					<h3>Veteran-Owned Business</h3>
-					<p>Military precision and commitment to excellence in every aspect of our service delivery.</p>
-				</div>
-				<div class="benefit-card">
-					<h3>Local Cincinnati Expertise</h3>
-					<p>Understanding of local conditions, climate challenges, and building requirements specific to our region.</p>
-				</div>
-				<div class="benefit-card">
-					<h3>Premium Materials</h3>
-					<p>We use only the highest quality coatings and materials to ensure long-lasting, beautiful results.</p>
+
+				<div class="communities-served">
+					<h3>Key Communities We Serve</h3>
+					<div class="communities-grid">
+						<div class="community-group">
+							<strong>Cincinnati Metro:</strong>
+							<span>Cincinnati, Milford, Loveland, Mason, West Chester, Fairfield</span>
+						</div>
+						<div class="community-group">
+							<strong>Northern Kentucky:</strong>
+							<span>Covington, Newport, Florence, Burlington, Erlanger, Independence</span>
+						</div>
+						<div class="community-group">
+							<strong>Southeast Indiana:</strong>
+							<span>Lawrenceburg, Aurora, Rising Sun, Batesville</span>
+						</div>
+						<div class="community-group">
+							<strong>Outlying Areas:</strong>
+							<span>Lebanon, Springboro, Franklin, Middletown, Hamilton</span>
+						</div>
+					</div>
 				</div>
 			</div>
-		</TextSection>
+		</section>
 	</Container>
 
-	<!-- CTA Section -->
-	<CtaCardSection background="var(--theme-primary)" color="var(--theme-on-primary)">
-		<h2>Ready to Transform Your Space?</h2>
-		<p>Contact us today for a free consultation and see the Queen City difference.</p>
+	<!-- Certifications & Credentials -->
+	<section class="credentials-section">
+		<Container>
+			<h2>Certifications & Credentials</h2>
+			<div class="credentials-grid">
+				<div class="credential-category">
+					<h3>Business Licensing & Insurance</h3>
+					<div class="credential-items">
+						<div class="credential-item">
+							<div class="cred-icon">📋</div>
+							<div class="cred-content">
+								<h4>Licensed Contractor</h4>
+								<p>Fully licensed to operate in Ohio, Kentucky, and Indiana with all required permits and registrations.</p>
+							</div>
+						</div>
+						<div class="credential-item">
+							<div class="cred-icon">🛡️</div>
+							<div class="cred-content">
+								<h4>Bonded & Insured</h4>
+								<p>Comprehensive liability insurance and bonding protect both our team and your property during every project.</p>
+							</div>
+						</div>
+						<div class="credential-item">
+							<div class="cred-icon">⚖️</div>
+							<div class="cred-content">
+								<h4>Workers' Compensation</h4>
+								<p>Full workers' compensation coverage ensures you're protected from any liability during our work.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="credential-category">
+					<h3>Industry Training & Expertise</h3>
+					<div class="credential-items">
+						<div class="credential-item">
+							<div class="cred-icon">🎓</div>
+							<div class="cred-content">
+								<h4>Advanced Coating Systems Training</h4>
+								<p>Certified in the latest epoxy, polyaspartic, and polyurea application techniques and materials.</p>
+							</div>
+						</div>
+						<div class="credential-item">
+							<div class="cred-icon">🔬</div>
+							<div class="cred-content">
+								<h4>Surface Preparation Specialist</h4>
+								<p>Expert training in concrete assessment, repair, and preparation methods critical for coating success.</p>
+							</div>
+						</div>
+						<div class="credential-item">
+							<div class="cred-icon">🏭</div>
+							<div class="cred-content">
+								<h4>Commercial & Industrial Experience</h4>
+								<p>Specialized knowledge for high-performance applications in demanding commercial environments.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="credential-category">
+					<h3>Veteran Business Certifications</h3>
+					<div class="credential-items">
+						<div class="credential-item">
+							<div class="cred-icon">🏅</div>
+							<div class="cred-content">
+								<h4>Veteran-Owned Small Business</h4>
+								<p>Officially recognized veteran-owned business supporting fellow veterans and military families.</p>
+							</div>
+						</div>
+						<div class="credential-item">
+							<div class="cred-icon">🤝</div>
+							<div class="cred-content">
+								<h4>Community Business Partner</h4>
+								<p>Active member of local business associations and veteran support organizations.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Why Choose Us -->
+	<Container>
+		<section class="why-choose-us">
+			<h2>Why Choose Queen City Surface Coatings</h2>
+			<div class="reasons-grid">
+				<div class="reason-card">
+					<div class="reason-header">
+						<div class="reason-icon">🎖️</div>
+						<h3>Military Precision Approach</h3>
+					</div>
+					<p>
+						Our military background ensures every detail is planned, executed, and inspected with 
+						the precision you'd expect from a Marine. No corners cut, no details overlooked.
+					</p>
+					<ul class="reason-details">
+						<li>Detailed project planning and timeline management</li>
+						<li>Systematic quality control at every phase</li>
+						<li>Clean, organized work areas maintained daily</li>
+						<li>Final inspection and walk-through process</li>
+					</ul>
+				</div>
+
+				<div class="reason-card">
+					<div class="reason-header">
+						<div class="reason-icon">🏆</div>
+						<h3>Quality Materials and Methods</h3>
+					</div>
+					<p>
+						We partner with industry-leading manufacturers and use only proven coating systems 
+						that deliver long-term performance and value.
+					</p>
+					<ul class="reason-details">
+						<li>Premium-grade epoxy and polyaspartic systems</li>
+						<li>Advanced surface preparation equipment</li>
+						<li>Environmental controls for optimal curing</li>
+						<li>Manufacturer-backed material warranties</li>
+					</ul>
+				</div>
+
+				<div class="reason-card">
+					<div class="reason-header">
+						<div class="reason-icon">⭐</div>
+						<h3>Customer Satisfaction Focus</h3>
+					</div>
+					<p>
+						Your satisfaction is our mission objective. We don't consider a job complete until 
+						you're completely satisfied with both the process and the results.
+					</p>
+					<ul class="reason-details">
+						<li>Clear communication throughout the project</li>
+						<li>Honest pricing with no hidden costs</li>
+						<li>Flexible scheduling to minimize disruption</li>
+						<li>Comprehensive warranty and ongoing support</li>
+					</ul>
+				</div>
+
+				<div class="reason-card">
+					<div class="reason-header">
+						<div class="reason-icon">🏠</div>
+						<h3>Local Community Commitment</h3>
+					</div>
+					<p>
+						As local business owners, we're invested in our community's success and building 
+						lasting relationships with our neighbors.
+					</p>
+					<ul class="reason-details">
+						<li>Local family-owned and operated business</li>
+						<li>Supporting veteran and community organizations</li>
+						<li>Environmentally responsible practices</li>
+						<li>Long-term customer relationships and referrals</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Call to Action -->
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Ready to Experience the Difference?</h2>
+		<p>
+			Contact us today to learn how our military precision and commitment to excellence 
+			can transform your concrete surfaces. Every project starts with a free consultation.
+		</p>
 		<div class="cta-buttons">
-			<a href="/company/contact" class="btn btn-light">Get Your Free Estimate</a>
+			<a href="/company/contact" class="btn btn-primary">Get Free Consultation</a>
+			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
 		</div>
 	</CtaCardSection>
 </Layout>
 
 <style>
-	.team-member {
+	/* Page Header */
+	.page-header {
+		text-align: center;
+		padding: 2rem 0 3rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.breadcrumb {
+		margin-bottom: 1.5rem;
+	}
+
+	.breadcrumb ol {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.breadcrumb li:not(:last-child)::after {
+		content: ">";
+		margin-left: 0.5rem;
+		opacity: 0.6;
+	}
+
+	.breadcrumb a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.breadcrumb a:hover {
+		text-decoration: underline;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		color: var(--theme-on-bg);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--theme-on-bg);
+		opacity: 0.8;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	/* Founder Bio */
+	.founder-bio {
+		margin: 4rem 0;
+	}
+
+	.bio-content {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		gap: 3rem;
 		align-items: start;
-		margin-top: 3rem;
-		background: var(--theme-surface-1);
-		border-radius: var(--theme-shape-radius);
-		padding: 2rem;
 	}
-	
-	.team-image img {
+
+	.bio-image {
+		text-align: center;
+	}
+
+	.bio-image img {
 		width: 100%;
-		height: auto;
+		max-width: 300px;
+		height: 350px;
+		object-fit: cover;
 		border-radius: var(--theme-shape-radius);
+		margin-bottom: 1.5rem;
 	}
-	
-	.team-title {
-		color: var(--theme-primary);
-		font-weight: 600;
-		margin-bottom: 1rem;
-	}
-	
-	.team-badges {
+
+	.bio-credentials {
 		display: flex;
+		flex-direction: column;
 		gap: 0.5rem;
-		flex-wrap: wrap;
-		margin-top: 1.5rem;
 	}
-	
-	.badge {
+
+	.credential-badge {
 		background: var(--theme-primary);
 		color: var(--theme-on-primary);
 		padding: 0.5rem 1rem;
-		border-radius: 2rem;
-		font-size: 0.875rem;
-		font-weight: 500;
+		border-radius: var(--theme-button-border-radius);
+		font-size: 0.9rem;
+		font-weight: 600;
 	}
-	
+
+	.bio-text h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.military-background,
+	.business-foundation,
+	.commitment-statement {
+		margin-bottom: 2rem;
+	}
+
+	.bio-text h3 {
+		color: var(--theme-primary);
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.bio-text p {
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	/* Company Story */
+	.company-story {
+		background: var(--theme-surface-1);
+		padding: 4rem 0;
+		margin: 4rem 0;
+	}
+
+	.story-content {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.mission-section h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.mission-statement {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.mission-statement h3 {
+		color: var(--theme-primary);
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.mission-statement blockquote {
+		font-size: 1.25rem;
+		line-height: 1.6;
+		font-style: italic;
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border-left: 4px solid var(--theme-primary);
+	}
+
+	.values-section h3 {
+		color: var(--theme-primary);
+		font-size: 1.75rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
 	.values-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: 2rem;
-		margin-top: 3rem;
+		margin-bottom: 3rem;
 	}
-	
+
 	.value-item {
 		text-align: center;
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
 	}
-	
+
 	.value-icon {
 		font-size: 3rem;
 		margin-bottom: 1rem;
 	}
-	
-	.value-item h3 {
+
+	.value-item h4 {
+		color: var(--theme-primary);
+		font-size: 1.25rem;
 		margin-bottom: 1rem;
-		color: var(--theme-on-bg);
 	}
-	
-	.benefits-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-top: 3rem;
-	}
-	
-	.benefit-card {
-		background: var(--theme-surface-1);
+
+	.why-coatings {
+		background: var(--theme-bg);
 		padding: 2rem;
 		border-radius: var(--theme-shape-radius);
 	}
-	
-	.benefit-card h3 {
+
+	.why-coatings h3 {
+		color: var(--theme-primary);
+		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		color: var(--theme-on-surface-1);
 	}
-	
-	.benefit-card p {
-		color: var(--theme-on-surface-1);
-		opacity: 0.8;
+
+	.why-coatings p {
+		line-height: 1.6;
+		margin-bottom: 1rem;
 	}
-	
+
+	/* Service Area */
+	.service-area {
+		margin: 4rem 0;
+	}
+
+	.service-area h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.service-radius {
+		background: var(--theme-surface-1);
+		padding: 3rem;
+		border-radius: var(--theme-shape-radius);
+		margin-bottom: 3rem;
+	}
+
+	.radius-header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.radius-header h3 {
+		color: var(--theme-primary);
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.coverage-details {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+
+	.state-coverage {
+		background: var(--theme-bg);
+		padding: 1.5rem;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.state-coverage h4 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.state-coverage ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.state-coverage li {
+		padding: 0.25rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.state-coverage li:last-child {
+		border-bottom: none;
+	}
+
+	.communities-served h3 {
+		color: var(--theme-primary);
+		font-size: 1.75rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.communities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.community-group {
+		background: var(--theme-surface-1);
+		padding: 1.5rem;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.community-group strong {
+		color: var(--theme-primary);
+		display: block;
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	/* Credentials */
+	.credentials-section {
+		background: var(--theme-surface-2);
+		color: var(--theme-on-surface-2);
+		padding: 4rem 0;
+		margin: 4rem 0;
+	}
+
+	.credentials-section h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.credentials-grid {
+		display: grid;
+		gap: 3rem;
+	}
+
+	.credential-category h3 {
+		color: var(--theme-primary);
+		font-size: 1.75rem;
+		margin-bottom: 2rem;
+	}
+
+	.credential-items {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.credential-item {
+		display: flex;
+		gap: 1rem;
+		background: rgba(255, 255, 255, 0.1);
+		padding: 1.5rem;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.cred-icon {
+		font-size: 2rem;
+		flex-shrink: 0;
+	}
+
+	.cred-content h4 {
+		color: var(--theme-primary);
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+	}
+
+	.cred-content p {
+		line-height: 1.5;
+		opacity: 0.9;
+	}
+
+	/* Why Choose Us */
+	.why-choose-us {
+		margin: 4rem 0;
+	}
+
+	.why-choose-us h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.reasons-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.reason-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.reason-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.reason-icon {
+		font-size: 2.5rem;
+	}
+
+	.reason-header h3 {
+		color: var(--theme-primary);
+		font-size: 1.25rem;
+		margin: 0;
+	}
+
+	.reason-card p {
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.reason-details {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.reason-details li {
+		padding: 0.5rem 0;
+		position: relative;
+		padding-left: 1.5rem;
+		font-size: 0.9rem;
+	}
+
+	.reason-details li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--theme-primary);
+		font-weight: bold;
+	}
+
+	/* CTA Buttons */
 	.cta-buttons {
 		display: flex;
+		gap: 1rem;
 		justify-content: center;
 		margin-top: 2rem;
+		flex-wrap: wrap;
 	}
-	
+
 	.btn {
-		padding: 0.75rem 2rem;
+		padding: 1rem 2rem;
 		border-radius: var(--theme-button-border-radius);
 		text-decoration: none;
 		font-weight: 600;
-		transition: var(--theme-transition);
+		transition: all var(--theme-transition);
 		display: inline-block;
+		border: 2px solid transparent;
 	}
-	
-	.btn-light {
-		background: white;
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		border-color: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
 		color: var(--theme-primary);
+		border-color: var(--theme-primary);
 	}
-	
-	.btn-light:hover {
-		background: var(--theme-surface-1);
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
 	}
-	
-	@media (max-width: 768px) {
-		.team-member {
+
+	/* Mobile Responsive */
+	@media (max-width: 1024px) {
+		.bio-content {
 			grid-template-columns: 1fr;
-			gap: 2rem;
+			text-align: center;
+		}
+		
+		.coverage-details {
+			grid-template-columns: 1fr;
+		}
+		
+		.communities-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.reasons-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		
+		.bio-text h2 {
+			font-size: 2rem;
+		}
+		
+		.mission-section h2,
+		.service-area h2,
+		.credentials-section h2,
+		.why-choose-us h2 {
+			font-size: 2rem;
 		}
 		
 		.values-grid {
 			grid-template-columns: 1fr;
 		}
 		
-		.benefits-grid {
-			grid-template-columns: 1fr;
+		.credential-item {
+			flex-direction: column;
+			text-align: center;
+		}
+		
+		.reason-header {
+			flex-direction: column;
+			text-align: center;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 </style>

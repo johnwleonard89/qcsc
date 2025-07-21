@@ -1,0 +1,540 @@
+---
+import { Container, TextSection, FeatureCard } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+
+const seo = {
+	title: 'Resources & Guides | Concrete Coating Information | Queen City Surface Coatings',
+	description: 'Expert guides and resources for concrete coating, epoxy flooring, and surface restoration. Learn about preparation, maintenance, and choosing the right system.',
+	keywords: 'concrete coating guides, epoxy flooring resources, surface preparation tips, concrete coating maintenance, flooring buyer guide',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Resources', url: 'https://queencitysurfacecoatings.com/resources/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Resources & Guides - Queen City Surface Coatings",
+		"description": "Expert guides and resources for concrete coating and surface restoration",
+		"url": "https://queencitysurfacecoatings.com/resources/"
+	}
+};
+
+const resourceCategories = [
+	{
+		title: "Surface Coating Guides",
+		description: "Comprehensive guides to help you understand different surface coating options and their benefits.",
+		icon: "📖",
+		resources: [
+			{
+				title: "Epoxy Flooring Buyer's Guide",
+				description: "Everything you need to know before choosing epoxy flooring for your space.",
+				type: "Guide",
+				link: "/resources/epoxy-buyers-guide"
+			},
+			{
+				title: "Concrete Polishing vs. Epoxy: Which is Right for You?",
+				description: "Compare different surface treatment options to make the best choice.",
+				type: "Comparison",
+				link: "/resources/polishing-vs-epoxy"
+			},
+			{
+				title: "Surface Preparation: The Key to Long-Lasting Results",
+				description: "Learn why proper surface preparation is critical for any coating system.",
+				type: "Technical",
+				link: "/resources/surface-preparation"
+			}
+		]
+	},
+	{
+		title: "Maintenance & Care",
+		description: "Keep your investment looking great with proper maintenance and care techniques.",
+		icon: "🧹",
+		resources: [
+			{
+				title: "Epoxy Floor Maintenance Guide",
+				description: "Simple steps to keep your epoxy floors looking like new for years.",
+				type: "Maintenance",
+				link: "/resources/epoxy-maintenance"
+			},
+			{
+				title: "Winter Care for Concrete Surfaces",
+				description: "Protect your floors from salt damage and freeze-thaw cycles.",
+				type: "Seasonal",
+				link: "/resources/winter-care"
+			},
+			{
+				title: "Stain Removal and Touch-Up Tips",
+				description: "Handle common issues and keep your floors in top condition.",
+				type: "Troubleshooting",
+				link: "/resources/stain-removal"
+			}
+		]
+	},
+	{
+		title: "Industry Insights",
+		description: "Stay informed with the latest trends, technologies, and best practices in surface coatings.",
+		icon: "💡",
+		resources: [
+			{
+				title: "Latest Surface Coating Technologies",
+				description: "Discover new innovations in epoxy and polyaspartic systems.",
+				type: "Technology",
+				link: "/resources/latest-technologies"
+			},
+			{
+				title: "Commercial vs. Residential Applications",
+				description: "Understanding the different requirements for various project types.",
+				type: "Applications",
+				link: "/resources/commercial-vs-residential"
+			},
+			{
+				title: "Environmental Benefits of Surface Coatings",
+				description: "How modern coatings contribute to sustainability and health.",
+				type: "Environmental",
+				link: "/resources/environmental-benefits"
+			}
+		]
+	}
+];
+
+const quickLinks = [
+	{
+		title: "Free Estimate Calculator",
+		description: "Get a rough estimate for your project",
+		icon: "🔢",
+		link: "/resources/estimate-calculator"
+	},
+	{
+		title: "Project Timeline Tool",
+		description: "Plan your surface coating project",
+		icon: "📅",
+		link: "/resources/timeline-tool"
+	},
+	{
+		title: "Color & Finish Gallery",
+		description: "Browse available colors and finishes",
+		icon: "🎨",
+		link: "/resources/color-gallery"
+	},
+	{
+		title: "Warranty Information",
+		description: "Understand your coverage and terms",
+		icon: "🛡️",
+		link: "/resources/warranty"
+	}
+];
+---
+
+<Layout seo={seo}>
+	<!-- Hero Section -->
+	<Container>
+		<TextSection>
+			<h1>Resources & Information</h1>
+			<p class="hero-description">
+				Find everything you need to make informed decisions about your surface coating project. 
+				From planning guides to maintenance tips, we're here to help you every step of the way.
+			</p>
+		</TextSection>
+	</Container>
+
+	<!-- Quick Links -->
+	<Container>
+		<section class="quick-links-section">
+			<h2>Quick Access Tools</h2>
+			<div class="quick-links-grid">
+				{quickLinks.map((link) => (
+					<a href={link.link} class="quick-link-card">
+						<div class="link-icon">{link.icon}</div>
+						<h3>{link.title}</h3>
+						<p>{link.description}</p>
+					</a>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Resource Categories -->
+	<Container>
+		<section class="resources-section">
+			<h2>Resource Library</h2>
+			{resourceCategories.map((category) => (
+				<div class="resource-category">
+					<div class="category-header">
+						<div class="category-icon">{category.icon}</div>
+						<div class="category-info">
+							<h3>{category.title}</h3>
+							<p>{category.description}</p>
+						</div>
+					</div>
+					
+					<div class="resources-grid">
+						{category.resources.map((resource) => (
+							<div class="resource-item">
+								<div class="resource-header">
+									<h4>{resource.title}</h4>
+									<span class="resource-type">{resource.type}</span>
+								</div>
+								<p>{resource.description}</p>
+								<a href={resource.link} class="resource-link">Read More →</a>
+							</div>
+						))}
+					</div>
+				</div>
+			))}
+		</section>
+	</Container>
+
+	<!-- Blog Section -->
+	<Container>
+		<section class="blog-section">
+			<div class="blog-header">
+				<h2>Latest Blog Posts</h2>
+				<p>Stay updated with tips, insights, and industry news from our surface coating experts.</p>
+			</div>
+			
+			<div class="blog-preview">
+				<div class="blog-item">
+					<h3><a href="/blog/posts/complete-guide-epoxy-flooring-cincinnati">The Complete Guide to Epoxy Flooring in Cincinnati</a></h3>
+					<p>Everything Cincinnati homeowners need to know about epoxy flooring - from benefits and costs to choosing the right contractor.</p>
+					<div class="blog-meta">
+						<span>January 8, 2025</span>
+						<span>•</span>
+						<span>Jon Landwehr</span>
+					</div>
+				</div>
+				
+				<div class="blog-actions">
+					<a href="/blog" class="btn btn-outline">View All Blog Posts</a>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- FAQ Section -->
+	<Container>
+		<TextSection>
+			<div class="faq-preview">
+				<h2>Frequently Asked Questions</h2>
+				<p>Quick answers to common questions about our services and processes.</p>
+				
+				<div class="faq-items">
+					<details class="faq-item">
+						<summary>How long do surface coatings typically last?</summary>
+						<p>With proper installation and maintenance, our epoxy systems last 15-20 years, while polished concrete can last even longer with periodic resealing.</p>
+					</details>
+					
+					<details class="faq-item">
+						<summary>What's included in a free estimate?</summary>
+						<p>Our free estimates include site evaluation, surface condition assessment, system recommendations, detailed pricing, and timeline projections.</p>
+					</details>
+					
+					<details class="faq-item">
+						<summary>Do you work year-round in Cincinnati?</summary>
+						<p>Yes, we work year-round with temperature and humidity-controlled installations. We may adjust scheduling during extreme weather conditions.</p>
+					</details>
+				</div>
+				
+				<a href="/#faq" class="btn btn-primary">View All FAQs</a>
+			</div>
+		</TextSection>
+	</Container>
+
+	<!-- Contact CTA -->
+	<Container>
+		<TextSection>
+			<div class="contact-cta">
+				<h2>Need Personal Assistance?</h2>
+				<p>
+					Can't find what you're looking for? Our team is ready to answer your questions 
+					and provide personalized guidance for your project.
+				</p>
+				<div class="cta-buttons">
+					<a href="/company/contact" class="btn btn-primary">Contact Us</a>
+					<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+</Layout>
+
+<style>
+	.hero-description {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		color: var(--theme-on-bg);
+	}
+
+	.quick-links-section {
+		margin: 3rem 0;
+	}
+
+	.quick-links-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.quick-link-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		text-decoration: none;
+		color: inherit;
+		transition: transform var(--theme-transition);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		text-align: center;
+	}
+
+	.quick-link-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.link-icon {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.quick-link-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	.resources-section {
+		margin: 3rem 0;
+	}
+
+	.resource-category {
+		margin-bottom: 3rem;
+		padding: 2rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.resource-category:last-child {
+		border-bottom: none;
+	}
+
+	.category-header {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.category-icon {
+		font-size: 2.5rem;
+		flex-shrink: 0;
+	}
+
+	.category-info h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.5rem;
+	}
+
+	.resources-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.resource-item {
+		background: var(--theme-surface-1);
+		padding: 1.5rem;
+		border-radius: var(--theme-shape-radius);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.resource-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 0.75rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.resource-header h4 {
+		margin: 0;
+		color: var(--theme-on-surface-1);
+		flex: 1;
+		min-width: 200px;
+	}
+
+	.resource-type {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.25rem 0.75rem;
+		border-radius: var(--theme-button-border-radius);
+		font-size: 0.75rem;
+		font-weight: 600;
+		flex-shrink: 0;
+	}
+
+	.resource-item p {
+		color: var(--theme-on-surface-1);
+		opacity: 0.8;
+		margin-bottom: 1rem;
+		line-height: 1.5;
+	}
+
+	.resource-link {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+
+	.resource-link:hover {
+		text-decoration: underline;
+	}
+
+	.blog-section {
+		background: var(--theme-surface-1);
+		padding: 3rem 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin: 3rem 0;
+	}
+
+	.blog-header {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.blog-item {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin-bottom: 1.5rem;
+	}
+
+	.blog-item h3 a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.blog-item h3 a:hover {
+		text-decoration: underline;
+	}
+
+	.blog-meta {
+		color: var(--theme-on-bg);
+		opacity: 0.7;
+		font-size: 0.9rem;
+		margin-top: 1rem;
+	}
+
+	.blog-actions {
+		text-align: center;
+	}
+
+	.faq-preview {
+		background: var(--theme-surface-1);
+		padding: 3rem 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin: 3rem 0;
+		text-align: center;
+	}
+
+	.faq-items {
+		margin: 2rem 0;
+		text-align: left;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.faq-item {
+		background: var(--theme-bg);
+		border-radius: var(--theme-shape-radius);
+		padding: 1rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.faq-item summary {
+		font-weight: 600;
+		cursor: pointer;
+		color: var(--theme-on-bg);
+	}
+
+	.faq-item p {
+		margin-top: 0.75rem;
+		color: var(--theme-on-bg);
+		opacity: 0.8;
+		margin-bottom: 0;
+	}
+
+	.contact-cta {
+		text-align: center;
+		background: var(--theme-surface-2);
+		color: var(--theme-on-surface-2);
+		padding: 3rem 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin: 3rem 0;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: 2px solid var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		border-color: var(--theme-primary-hover);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border: 2px solid var(--theme-primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	@media (max-width: 768px) {
+		.category-header {
+			flex-direction: column;
+			text-align: center;
+		}
+		
+		.resources-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.resource-header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.quick-links-grid {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+	}
+</style>

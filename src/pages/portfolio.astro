@@ -1,0 +1,446 @@
+---
+import { Container, TextSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+
+const seo = {
+	title: 'Portfolio | Cincinnati Concrete Coating Projects | Queen City Surface Coatings',
+	description: 'View our professional epoxy flooring, polyaspartic coating, and concrete polishing projects throughout Cincinnati tri-state area. Before and after gallery.',
+	keywords: 'Cincinnati concrete coating portfolio, epoxy flooring gallery, before after photos, concrete coating projects Ohio Kentucky Indiana',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Portfolio', url: 'https://queencitysurfacecoatings.com/portfolio/' }
+	]
+};
+
+const portfolioProjects = [
+	{
+		id: 1,
+		title: "Residential Garage Epoxy - West Chester",
+		category: "Epoxy Flooring",
+		location: "West Chester, OH",
+		size: "450 sq ft",
+		description: "Complete garage transformation with decorative flake epoxy system. Customer wanted a showroom-quality finish that could handle heavy use.",
+		features: ["Decorative color flakes", "Non-slip topcoat", "Chemical resistant", "Custom color match"],
+		beforeImage: "/assets/images/gallery/IMG_2665.webp",
+		afterImage: "/assets/images/gallery/IMG_2678.webp",
+		serviceType: "epoxy"
+	},
+	{
+		id: 2,
+		title: "Commercial Warehouse Polishing - Cincinnati",
+		category: "Concrete Polishing", 
+		location: "Cincinnati, OH",
+		size: "2,400 sq ft",
+		description: "High-traffic warehouse floor polished to a mirror finish. Improved safety and lighting while maintaining durability.",
+		features: ["Mirror finish", "Dust reduction", "Improved lighting reflection", "Low maintenance"],
+		beforeImage: "/assets/images/gallery/IMG_1662.webp",
+		afterImage: "/assets/images/gallery/IMG_2680.webp",
+		serviceType: "polishing"
+	},
+	{
+		id: 3,
+		title: "Basement Floor Restoration - Mason",
+		category: "Surface Restoration",
+		location: "Mason, OH", 
+		size: "800 sq ft",
+		description: "Damaged basement concrete restored and sealed. Addressed water damage and created a beautiful finished space.",
+		features: ["Crack repair", "Moisture sealing", "Stain removal", "Protective coating"],
+		beforeImage: "/assets/images/gallery/IMG_2677.webp",
+		afterImage: "/assets/images/gallery/Image-1.webp",
+		serviceType: "restoration"
+	},
+	{
+		id: 4,
+		title: "Retail Showroom Epoxy - Florence, KY",
+		category: "Epoxy Flooring",
+		location: "Florence, KY",
+		size: "1,200 sq ft", 
+		description: "Automotive dealership showroom with high-gloss epoxy finish. Professional appearance with exceptional durability.",
+		features: ["High-gloss finish", "Logo integration", "Chemical resistant", "Easy maintenance"],
+		beforeImage: "/assets/images/gallery/IMG_2679.webp",
+		afterImage: "/assets/images/gallery/IMG_2680-1.webp",
+		serviceType: "epoxy"
+	}
+];
+
+const serviceCategories = [
+	{ name: "All Projects", filter: "all", count: portfolioProjects.length },
+	{ name: "Epoxy Flooring", filter: "epoxy", count: portfolioProjects.filter(p => p.serviceType === "epoxy").length },
+	{ name: "Concrete Polishing", filter: "polishing", count: portfolioProjects.filter(p => p.serviceType === "polishing").length },
+	{ name: "Surface Restoration", filter: "restoration", count: portfolioProjects.filter(p => p.serviceType === "restoration").length }
+];
+---
+
+<Layout seo={seo}>
+	<!-- Hero Section -->
+	<Container>
+		<TextSection>
+			<h1>Our Work Portfolio</h1>
+			<p class="hero-description">
+				See the quality and craftsmanship that sets Queen City Surface Coatings apart. 
+				Every project showcases our commitment to excellence and attention to detail.
+			</p>
+		</TextSection>
+	</Container>
+
+	<!-- Filter Tabs -->
+	<Container>
+		<div class="filter-section">
+			<h2>Project Categories</h2>
+			<div class="filter-tabs" id="portfolioFilters">
+				{serviceCategories.map((category) => (
+					<button 
+						class={`filter-tab ${category.filter === 'all' ? 'active' : ''}`}
+						data-filter={category.filter}
+					>
+						{category.name} ({category.count})
+					</button>
+				))}
+			</div>
+		</div>
+	</Container>
+
+	<!-- Portfolio Grid -->
+	<Container>
+		<div class="portfolio-grid" id="portfolioGrid">
+			{portfolioProjects.map((project) => (
+				<div class={`portfolio-item`} data-category={project.serviceType}>
+					<div class="project-images">
+						<div class="before-after">
+							<div class="image-container">
+								<img src={project.beforeImage} alt={`${project.location} ${project.category.toLowerCase()} project before coating application`} loading="lazy" />
+								<span class="image-label">Before</span>
+							</div>
+							<div class="image-container">
+								<img src={project.afterImage} alt={`Completed ${project.category.toLowerCase()} project in ${project.location} by Queen City Surface Coatings`} loading="lazy" />
+								<span class="image-label">After</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="project-info">
+						<div class="project-header">
+							<h3>{project.title}</h3>
+							<span class="project-category">{project.category}</span>
+						</div>
+						
+						<div class="project-details">
+							<div class="detail-row">
+								<span class="detail-label">Location:</span>
+								<span>{project.location}</span>
+							</div>
+							<div class="detail-row">
+								<span class="detail-label">Size:</span>
+								<span>{project.size}</span>
+							</div>
+						</div>
+						
+						<p class="project-description">{project.description}</p>
+						
+						<div class="project-features">
+							<h4>Project Features:</h4>
+							<ul>
+								{project.features.map((feature) => (
+									<li>{feature}</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</Container>
+
+	<!-- Call to Action -->
+	<Container>
+		<TextSection>
+			<div class="portfolio-cta">
+				<h2>Ready to Transform Your Space?</h2>
+				<p>
+					Every project in our portfolio started with a free consultation. 
+					Let us show you what's possible for your space.
+				</p>
+				<div class="cta-buttons">
+					<a href="/company/contact" class="btn btn-primary">Get Free Estimate</a>
+					<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+				</div>
+			</div>
+		</TextSection>
+	</Container>
+</Layout>
+
+<style>
+	.hero-description {
+		font-size: 1.25rem;
+		margin-bottom: 2rem;
+		color: var(--theme-on-bg);
+	}
+
+	.filter-section {
+		margin: 3rem 0 2rem 0;
+		text-align: center;
+	}
+
+	.filter-tabs {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.filter-tab {
+		padding: 0.75rem 1.5rem;
+		border: 2px solid var(--theme-primary);
+		background: transparent;
+		color: var(--theme-primary);
+		border-radius: var(--theme-button-border-radius);
+		cursor: pointer;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+	}
+
+	.filter-tab.active,
+	.filter-tab:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	.portfolio-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 3rem;
+		margin: 3rem 0;
+	}
+
+	.portfolio-item {
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		overflow: hidden;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform var(--theme-transition);
+	}
+
+	.portfolio-item:hover {
+		transform: translateY(-5px);
+	}
+
+	.project-images {
+		position: relative;
+	}
+
+	.before-after {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.image-container {
+		position: relative;
+		aspect-ratio: 4/3;
+		overflow: hidden;
+	}
+
+	.image-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.image-label {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.5rem 1rem;
+		border-radius: var(--theme-button-border-radius);
+		font-weight: 600;
+		font-size: 0.875rem;
+	}
+
+	.project-info {
+		padding: 2rem;
+	}
+
+	.project-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.project-header h3 {
+		margin: 0;
+		color: var(--theme-on-surface-1);
+		flex: 1;
+	}
+
+	.project-category {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.25rem 0.75rem;
+		border-radius: var(--theme-button-border-radius);
+		font-size: 0.875rem;
+		font-weight: 600;
+	}
+
+	.project-details {
+		margin-bottom: 1rem;
+		padding: 1rem;
+		background: rgba(0, 0, 0, 0.05);
+		border-radius: 0.5rem;
+	}
+
+	.detail-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+	}
+
+	.detail-row:last-child {
+		margin-bottom: 0;
+	}
+
+	.detail-label {
+		font-weight: 600;
+		color: var(--theme-on-surface-1);
+	}
+
+	.project-description {
+		color: var(--theme-on-surface-1);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.project-features h4 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	.project-features ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.project-features li {
+		padding: 0.25rem 0;
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.project-features li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--theme-primary);
+		font-weight: bold;
+	}
+
+	.portfolio-cta {
+		text-align: center;
+		background: var(--theme-surface-1);
+		padding: 3rem 2rem;
+		border-radius: var(--theme-shape-radius);
+		margin: 3rem 0;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+		display: inline-block;
+	}
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: 2px solid var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		border-color: var(--theme-primary-hover);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border: 2px solid var(--theme-primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	@media (max-width: 768px) {
+		.portfolio-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.filter-tabs {
+			gap: 0.5rem;
+		}
+		
+		.filter-tab {
+			padding: 0.5rem 1rem;
+			font-size: 0.875rem;
+		}
+		
+		.project-header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	/* Hide/show functionality for filters */
+	.portfolio-item.hidden {
+		display: none;
+	}
+</style>
+
+<script>
+	// Portfolio filtering functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const filterTabs = document.querySelectorAll('.filter-tab');
+		const portfolioItems = document.querySelectorAll('.portfolio-item');
+		
+		filterTabs.forEach(tab => {
+			tab.addEventListener('click', function() {
+				const filter = this.dataset.filter;
+				
+				// Update active tab
+				filterTabs.forEach(t => t.classList.remove('active'));
+				this.classList.add('active');
+				
+				// Filter portfolio items
+				portfolioItems.forEach(item => {
+					if (filter === 'all' || item.dataset.category === filter) {
+						item.classList.remove('hidden');
+					} else {
+						item.classList.add('hidden');
+					}
+				});
+			});
+		});
+	});
+</script>

@@ -10,6 +10,86 @@ body {
 	position: relative;
 }
 
+/* Accessibility improvements */
+*:focus {
+	outline: 2px solid var(--theme-primary);
+	outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 6px;
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	padding: 8px;
+	text-decoration: none;
+	z-index: 1000;
+	border-radius: 4px;
+}
+
+.skip-link:focus {
+	top: 6px;
+}
+
+/* High contrast focus states */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 2px solid var(--theme-primary);
+	outline-offset: 2px;
+}
+
+/* Ensure minimum touch target size (44px) */
+button,
+.btn,
+a[role="button"] {
+	min-height: 44px;
+	min-width: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Screen reader only content */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Ensure proper contrast for links */
+a {
+	color: var(--theme-primary);
+}
+
+a:hover,
+a:focus {
+	color: var(--theme-primary-hover);
+	text-decoration: underline;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 pre {
   padding: 1em;
   border-radius: 0.5em;

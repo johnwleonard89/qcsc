@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://queencitysurfacecoatings.com/sitemap.xml
+
+# Disallow development/admin areas
+Disallow: /theme/
+Disallow: /admin/
+Disallow: /_admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Allow important business files
+Allow: /assets/
+Allow: /images/
+Allow: /favicon.ico
+Allow: /favicon.png
+Allow: /social.png
+
+# Crawl delay (optional - can help with server load)
+Crawl-delay: 1
+
+# Block access to sensitive files
+Disallow: /*.env
+Disallow: /*.config
+Disallow: /*.json
+Disallow: /*package-lock.json
+Disallow: /*tsconfig.json
+
+# SEO-friendly directives
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/

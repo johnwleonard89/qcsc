@@ -1,94 +1,103 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
+import Layout from '../layouts/Page.astro';
 import ContactForm from '../components/ui/ContactForm.astro';
 ---
 
-<PageLayout 
-  title="Contact Queen City Surface Coatings | Get Your Free Estimate"
-  description="Contact Queen City Surface Coatings for professional epoxy flooring services. Serving Cincinnati tri-state area. Call (513) 296-5525 for free estimate."
-  showHero={true}
-  heroTitle="Contact Us"
-  heroSubtitle="Ready to transform your space? Let's discuss your project."
+<Layout 
+  seo={{
+    title: "Contact Queen City Surface Coatings | Get Your Free Estimate",
+    description: "Contact Queen City Surface Coatings for professional epoxy flooring services. Serving Cincinnati tri-state area. Call (513) 296-5525 for free estimate."
+  }}
 >
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-headline">Contact Us</h1>
+        <p class="hero-subheadline">Ready to transform your space? Let's discuss your project.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Information Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
         <!-- Contact Info -->
-        <div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+        <div class="contact-info">
+          <h2 class="section-title">Get In Touch</h2>
           
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <div class="bg-blue-100 p-3 rounded-lg">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                 </svg>
               </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
-                <a href="tel:+15132965525" class="text-blue-600 hover:text-blue-800 text-lg font-medium">
+              <div class="contact-details">
+                <h3 class="contact-method-title">Phone</h3>
+                <a href="tel:+15132965525" class="contact-link">
                   (513) 296-5525
                 </a>
-                <p class="text-gray-600 text-sm mt-1">Call for immediate assistance</p>
+                <p class="contact-description">Call for immediate assistance</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="bg-blue-100 p-3 rounded-lg">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
               </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-                <a href="mailto:john@queencitysurfacecoatings.com" class="text-blue-600 hover:text-blue-800 text-lg font-medium">
+              <div class="contact-details">
+                <h3 class="contact-method-title">Email</h3>
+                <a href="mailto:john@queencitysurfacecoatings.com" class="contact-link">
                   john@queencitysurfacecoatings.com
                 </a>
-                <p class="text-gray-600 text-sm mt-1">Email us your project details</p>
+                <p class="contact-description">Email us your project details</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="bg-blue-100 p-3 rounded-lg">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Service Area</h3>
-                <p class="text-gray-700 text-lg">Serving the Tri-State Areas</p>
-                <p class="text-gray-600 text-sm mt-1">Based in Milford, Ohio</p>
+              <div class="contact-details">
+                <h3 class="contact-method-title">Service Area</h3>
+                <p class="contact-text">Serving the Tri-State Areas</p>
+                <p class="contact-description">Based in Milford, Ohio</p>
               </div>
             </div>
 
-            <div class="flex items-start space-x-4">
-              <div class="bg-blue-100 p-3 rounded-lg">
-                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <svg fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
                 </svg>
               </div>
-              <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
-                <div class="text-gray-700">
+              <div class="contact-details">
+                <h3 class="contact-method-title">Business Hours</h3>
+                <div class="contact-hours">
                   <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
                   <p>Saturday: 9:00 AM - 4:00 PM</p>
                   <p>Sunday: Closed</p>
                 </div>
-                <p class="text-gray-600 text-sm mt-1">Emergency services available</p>
+                <p class="contact-description">Emergency services available</p>
               </div>
             </div>
           </div>
 
           <!-- Company Logo -->
-          <div class="mt-8">
-            <img src="/images/logo.png" alt="Queen City Surface Coatings" class="h-20 w-auto" />
+          <div class="company-logo">
+            <img src="/images/logo.png" alt="Queen City Surface Coatings" />
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div>
+        <div class="contact-form-container">
           <ContactForm 
             title="Request Your Free Estimate"
             subtitle="Tell us about your project and we'll provide a detailed quote within 24 hours."
@@ -99,101 +108,309 @@ import ContactForm from '../components/ui/ContactForm.astro';
   </section>
 
   <!-- Service Areas Section -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Areas We Serve</h2>
-        <p class="text-xl text-gray-600">Proudly serving the greater Cincinnati tri-state area</p>
+  <section class="service-areas-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Areas We Serve</h2>
+        <p class="section-subtitle">Proudly serving the greater Cincinnati tri-state area</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Cincinnati</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Milford</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">West Chester</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Mason</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Loveland</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Blue Ash</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Springdale</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Fairfield</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Hamilton</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Middletown</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">Lebanon</p>
-        </div>
-        <div class="bg-white p-4 rounded-lg shadow">
-          <p class="font-medium text-gray-900">& More</p>
-        </div>
+      <div class="areas-grid">
+        <div class="area-card"><p>Cincinnati</p></div>
+        <div class="area-card"><p>Milford</p></div>
+        <div class="area-card"><p>West Chester</p></div>
+        <div class="area-card"><p>Mason</p></div>
+        <div class="area-card"><p>Loveland</p></div>
+        <div class="area-card"><p>Blue Ash</p></div>
+        <div class="area-card"><p>Springdale</p></div>
+        <div class="area-card"><p>Fairfield</p></div>
+        <div class="area-card"><p>Hamilton</p></div>
+        <div class="area-card"><p>Middletown</p></div>
+        <div class="area-card"><p>Lebanon</p></div>
+        <div class="area-card"><p>& More</p></div>
       </div>
 
-      <div class="text-center mt-8">
-        <p class="text-gray-600">
-          Don't see your city listed? Give us a call! We travel throughout the Cincinnati tri-state area.
-        </p>
+      <div class="areas-note">
+        <p>Don't see your city listed? Give us a call! We travel throughout the Cincinnati tri-state area.</p>
       </div>
     </div>
   </section>
 
   <!-- What to Expect Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">What to Expect</h2>
-        <p class="text-xl text-gray-600">Our simple, professional process</p>
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What to Expect</h2>
+        <p class="section-subtitle">Our simple, professional process</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">1</span>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Initial Contact</h3>
-          <p class="text-gray-600">Call, email, or submit our form to get started</p>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number"><span>1</span></div>
+          <h3 class="process-title">Initial Contact</h3>
+          <p class="process-description">Call, email, or submit our form to get started</p>
         </div>
-
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">2</span>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Free Consultation</h3>
-          <p class="text-gray-600">We'll visit your site and assess your project needs</p>
+        <div class="process-step">
+          <div class="process-number"><span>2</span></div>
+          <h3 class="process-title">Free Consultation</h3>
+          <p class="process-description">We'll visit your site and assess your project needs</p>
         </div>
-
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">3</span>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Detailed Quote</h3>
-          <p class="text-gray-600">Receive a comprehensive proposal within 24 hours</p>
+        <div class="process-step">
+          <div class="process-number"><span>3</span></div>
+          <h3 class="process-title">Detailed Quote</h3>
+          <p class="process-description">Receive a comprehensive proposal within 24 hours</p>
         </div>
-
-        <div class="text-center">
-          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-blue-600">4</span>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Professional Installation</h3>
-          <p class="text-gray-600">Expert installation with attention to detail</p>
+        <div class="process-step">
+          <div class="process-number"><span>4</span></div>
+          <h3 class="process-title">Professional Installation</h3>
+          <p class="process-description">Expert installation with attention to detail</p>
         </div>
       </div>
     </div>
   </section>
-</PageLayout>
+</Layout>
+
+<style>
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, #1a2332 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--theme-primary);
+  font-family: var(--theme-font-family-serif);
+  margin-bottom: 1rem;
+}
+
+.hero-subheadline {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  line-height: 1.5;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 4rem 0;
+  background: var(--theme-bg);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--theme-on-bg);
+  font-family: var(--theme-font-family-serif);
+  margin-bottom: 2rem;
+}
+
+/* Contact Methods */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-method {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  background: color-mix(in srgb, var(--theme-primary) 20%, transparent);
+  color: var(--theme-primary);
+  padding: 0.75rem;
+  border-radius: var(--theme-shape-radius);
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contact-method-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--theme-on-bg);
+  margin-bottom: 0.5rem;
+}
+
+.contact-link {
+  color: var(--theme-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: var(--theme-transition);
+}
+
+.contact-link:hover {
+  color: var(--theme-primary-hover);
+}
+
+.contact-description {
+  font-size: 0.875rem;
+  color: var(--theme-on-bg);
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
+.contact-text {
+  color: var(--theme-on-bg);
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-hours {
+  color: var(--theme-on-bg);
+  opacity: 0.9;
+}
+
+.contact-hours p {
+  margin-bottom: 0.25rem;
+}
+
+.company-logo {
+  margin-top: 2rem;
+}
+
+.company-logo img {
+  height: 5rem;
+  width: auto;
+}
+
+/* Service Areas Section */
+.service-areas-section {
+  padding: 4rem 0;
+  background: var(--theme-surface-1);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  color: var(--theme-on-bg);
+  opacity: 0.8;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .areas-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .areas-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.area-card {
+  background: var(--theme-bg);
+  padding: 1rem;
+  border-radius: var(--theme-shape-radius);
+  box-shadow: 0 2px 8px var(--theme-shadow-light);
+}
+
+.area-card p {
+  font-weight: 500;
+  color: var(--theme-on-bg);
+}
+
+.areas-note {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.areas-note p {
+  color: var(--theme-on-bg);
+  opacity: 0.8;
+}
+
+/* Process Section */
+.process-section {
+  padding: 4rem 0;
+  background: var(--theme-bg);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.process-step {
+  text-align: center;
+}
+
+.process-number {
+  width: 4rem;
+  height: 4rem;
+  background: color-mix(in srgb, var(--theme-primary) 20%, transparent);
+  color: var(--theme-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.process-number span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.process-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--theme-on-bg);
+  margin-bottom: 0.5rem;
+}
+
+.process-description {
+  color: var(--theme-on-bg);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+</style>

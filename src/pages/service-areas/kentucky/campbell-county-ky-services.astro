@@ -1,0 +1,364 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Campbell County KY Services | Northern Kentucky Concrete Coating"
+      description="Professional concrete coating services throughout Campbell County, Kentucky. Serving Newport, Fort Thomas, Highland Heights, and all county communities with expert tri-state concrete solutions."
+      keywords="Campbell County Kentucky concrete coating, Newport Fort Thomas concrete coating, Northern Kentucky concrete services, tri-state concrete coating"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Campbell County Kentucky Services</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services throughout Campbell County, Kentucky. 
+              Tri-state expertise serving Newport, Fort Thomas, and all Northern Kentucky communities.
+            </p>
+            <div class="hero-features">
+              <span>Tri-State Coverage</span>
+              <span>Northern Kentucky Specialists</span>
+              <span>Historic District Experience</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Overview -->
+      <section class="county-overview">
+        <div class="container">
+          <h2>Serving Campbell County, Northern Kentucky</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly extends our tri-state expertise to Campbell County, Kentucky, 
+            bringing professional concrete coating services to the historic river cities and growing suburban 
+            communities of Northern Kentucky. From Newport's riverfront districts to Fort Thomas's hillside 
+            neighborhoods, we deliver quality solutions throughout this dynamic county.
+          </p>
+          
+          <div class="county-stats">
+            <div class="stat-item">
+              <h3>93,000+</h3>
+              <p>Campbell County Residents</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Kentucky Communities Served</p>
+            </div>
+            <div class="stat-item">
+              <h3>10+</h3>
+              <p>Years Northern Kentucky Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>200+</h3>
+              <p>Kentucky Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities Served -->
+      <section class="cities-served">
+        <div class="container">
+          <h2>Campbell County Communities We Serve</h2>
+          
+          <div class="cities-grid">
+            <div class="city-category">
+              <h3>Historic River Cities</h3>
+              <div class="city-links">
+                <a href="/service-areas/kentucky/newport-concrete-coating/">Newport</a>
+                <a href="/service-areas/kentucky/bellevue-concrete-coating/">Bellevue</a>
+                <span>Dayton</span>
+                <span>Ludlow</span>
+                <span>Woodlawn</span>
+                <span>Melbourne</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Hillside Communities</h3>
+              <div class="city-links">
+                <a href="/service-areas/kentucky/fort-thomas-garage-floor-coating/">Fort Thomas</a>
+                <a href="/service-areas/kentucky/highland-heights-concrete-coating/">Highland Heights</a>
+                <span>Cold Spring (Campbell County portion)</span>
+                <span>Crestview Hills</span>
+                <span>Wilder</span>
+                <span>Silver Grove</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Township & Rural Areas</h3>
+              <div class="city-links">
+                <span>Southgate</span>
+                <span>California</span>
+                <span>Alexandria</span>
+                <span>Campbell County rural areas</span>
+                <span>Unincorporated communities</span>
+                <span>Agricultural properties</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Market Specializations -->
+      <section class="market-specializations">
+        <div class="container">
+          <h2>Campbell County Market Expertise</h2>
+          
+          <div class="market-grid">
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/historic.svg" alt="Historic Buildings" /></div>
+              <h3>Historic Riverfront Districts</h3>
+              <p>Specialized coatings for Campbell County's historic river communities, preserving character while providing modern functionality.</p>
+              <ul>
+                <li>Newport historic district renovations</li>
+                <li>Riverfront commercial and residential buildings</li>
+                <li>Historic preservation compliance projects</li>
+                <li>Flood-resistant and moisture-adapted systems</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/educational.svg" alt="Educational Facilities" /></div>
+              <h3>Educational Excellence</h3>
+              <p>Professional solutions for Campbell County's educational institutions, including Northern Kentucky University area facilities.</p>
+              <ul>
+                <li>Northern Kentucky University Highland Heights campus</li>
+                <li>Campbell County School District facilities</li>
+                <li>Newport Independent Schools</li>
+                <li>Private and charter educational institutions</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/commercial.svg" alt="Commercial Services" /></div>
+              <h3>Tri-State Business District</h3>
+              <p>Commercial concrete solutions supporting Campbell County's role in the Cincinnati tri-state business community.</p>
+              <ul>
+                <li>Northern Kentucky business centers</li>
+                <li>Professional office and service buildings</li>
+                <li>Healthcare and medical facilities</li>
+                <li>Retail and commercial developments</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/residential.svg" alt="Residential Services" /></div>
+              <h3>Diverse Residential Markets</h3>
+              <p>Custom concrete coatings for Campbell County's varied housing, from historic riverfront to modern hillside developments.</p>
+              <ul>
+                <li>Fort Thomas hillside luxury homes</li>
+                <li>Newport historic residential renovation</li>
+                <li>Highland Heights university area housing</li>
+                <li>Rural and agricultural residential properties</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kentucky Considerations -->
+      <section class="county-characteristics">
+        <div class="container">
+          <h2>Campbell County Service Considerations</h2>
+          
+          <div class="characteristics-grid">
+            <div class="characteristic">
+              <h3>Ohio River Valley Environment</h3>
+              <p>
+                Campbell County's Ohio River location creates unique environmental conditions requiring 
+                specialized moisture management and flood-resistant coating solutions.
+              </p>
+              <ul>
+                <li>River valley humidity and moisture challenges</li>
+                <li>Flood plain considerations for riverfront properties</li>
+                <li>Enhanced drainage requirements</li>
+                <li>Specialized moisture mitigation techniques</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Historic Preservation Requirements</h3>
+              <p>
+                Campbell County's rich history, particularly in Newport and other river communities, 
+                requires specialized approaches for historic district compliance.
+              </p>
+              <ul>
+                <li>Historic district regulations and compliance</li>
+                <li>Preservation-appropriate materials and methods</li>
+                <li>Heritage building structural considerations</li>
+                <li>Community character preservation</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Tri-State Coordination</h3>
+              <p>
+                Campbell County's integration with the Cincinnati tri-state economy requires understanding 
+                of regional business standards and multi-state project coordination.
+              </p>
+              <ul>
+                <li>Kentucky state regulations and licensing</li>
+                <li>Tri-state business community standards</li>
+                <li>Regional project coordination capabilities</li>
+                <li>Interstate commerce considerations</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>University Community Needs</h3>
+              <p>
+                Northern Kentucky University's presence in Highland Heights creates specialized requirements 
+                for educational facilities and student housing applications.
+              </p>
+              <ul>
+                <li>Educational facility durability requirements</li>
+                <li>Student housing and dormitory applications</li>
+                <li>Academic calendar coordination</li>
+                <li>University community aesthetic standards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Concrete Coating Throughout Campbell County, Kentucky</h2>
+              <p>
+                Ready to enhance your Campbell County property with professional concrete coating solutions? 
+                Contact our tri-state service team for expert Kentucky consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Campbell County, Kentucky
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Campbell County Kentucky Commitment</h3>
+                <ul>
+                  <li>Free estimates with tri-state expertise</li>
+                  <li>Kentucky state licensing and compliance</li>
+                  <li>Historic preservation experience</li>
+                  <li>Complete warranty coverage</li>
+                  <li>Northern Kentucky's trusted concrete coating specialists</li>
+                  <li>Educational facility experience</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services throughout Campbell County, Kentucky. Tri-state expertise serving Newport, Fort Thomas, and all Northern Kentucky communities with expert concrete solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Campbell County, KY",
+        "addressCountry": "US"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/kentucky/campbell-county-ky-services",
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Campbell County, KY"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Campbell County Kentucky Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic District Coatings",
+              "description": "Professional concrete coatings for Campbell County's historic riverfront communities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Educational Facility Flooring",
+              "description": "Specialized concrete solutions for Campbell County schools and NKU facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Concrete Solutions",
+              "description": "Custom concrete coatings for Campbell County homes and communities"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "87",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

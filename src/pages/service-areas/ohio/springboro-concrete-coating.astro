@@ -1,0 +1,508 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Springboro Concrete Coating | Warren County Expert Surface Solutions"
+      description="Professional concrete coating services in Springboro, OH. Expert epoxy flooring and surface solutions for Warren County's charming community with residential, commercial, and municipal applications."
+      keywords="Springboro concrete coating, Springboro Ohio epoxy flooring, Warren County concrete coating, Springboro garage floor coating, concrete coating near me"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Springboro Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Springboro, Ohio and Warren County. 
+              Enhancing surfaces with premium epoxy systems for this charming suburban community.
+            </p>
+            <div class="hero-features">
+              <span>Warren County Specialists</span>
+              <span>Family Community Focus</span>
+              <span>Historic Character Preservation</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Expert Concrete Coating Services in Springboro, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves Springboro, Warren County's treasured community 
+            known for its family-friendly atmosphere, excellent schools, and charming character. We provide 
+            concrete coating solutions that complement this community's commitment to quality and enhance 
+            properties while respecting Springboro's unique character.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="/assets/images/service-icons/family.svg" alt="Family Services" width="48" height="48">
+              </div>
+              <h3>Family-Centered Residential</h3>
+              <p>Concrete coatings designed for Springboro's family-oriented neighborhoods, supporting active lifestyles and busy households.</p>
+              <ul>
+                <li>Garage floor systems for growing families</li>
+                <li>Basement playroom and recreation areas</li>
+                <li>Home workshop and craft space solutions</li>
+                <li>Pool deck and outdoor entertainment coatings</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Community & Municipal Facilities</h3>
+              <p>Professional solutions for Springboro's public buildings, schools, and community facilities serving residents.</p>
+              <ul>
+                <li>School and educational facility floors</li>
+                <li>Community center and recreation building surfaces</li>
+                <li>Municipal building and civic facility coatings</li>
+                <li>Library and public service area applications</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Local Business District</h3>
+              <p>Commercial concrete coatings for Springboro's thriving local business community and professional services.</p>
+              <ul>
+                <li>Retail and shopping center surfaces</li>
+                <li>Restaurant and dining establishment floors</li>
+                <li>Healthcare and professional office coatings</li>
+                <li>Automotive service and dealership applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Springboro Concrete Coating?</h2>
+              
+              <h3>Understanding Springboro's Character</h3>
+              <p>
+                Springboro represents the best of suburban Ohio living - a community that values family, 
+                education, and quality of life. Our concrete coating solutions reflect these values, 
+                providing durable, attractive surfaces that enhance homes and support the active lifestyles 
+                of Springboro families while complementing the community's established character.
+              </p>
+              
+              <h3>School District Excellence Support</h3>
+              <p>
+                Springboro's reputation for excellent schools attracts families who value quality and attention 
+                to detail. We mirror this commitment in every project, from residential garage floors that 
+                accommodate sports equipment and school activities to basement study areas that support 
+                academic achievement and family interaction.
+              </p>
+              
+              <h3>Community-Focused Approach</h3>
+              <p>
+                In a close-knit community like Springboro, reputation matters. We take pride in building 
+                lasting relationships with residents and businesses, delivering quality workmanship that 
+                reflects well on both our company and our clients within this caring community environment.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Springboro Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Springboro Community Center Renovation</h4>
+                <p>
+                  <strong>Challenge:</strong> Historic community center requiring floor renovation that would 
+                  serve multiple functions - from youth sports to senior activities - while maintaining 
+                  accessibility and safety for all community members.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Multi-zone epoxy system with varying slip-resistance levels, 
+                  easy-clean surfaces for food service areas, and decorative elements that honor the 
+                  building's heritage while providing modern functionality.
+                </p>
+                <p>
+                  <strong>Result:</strong> "The flooring perfectly serves our diverse community needs while 
+                  creating a welcoming environment that brings people together. Outstanding craftsmanship 
+                  and community sensitivity." - Community Center Director
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Springboro Family Estate</h4>
+                <p>
+                  <strong>Challenge:</strong> Large family home with multi-car garage requiring flooring that 
+                  would accommodate everything from daily vehicles to recreational equipment while maintaining 
+                  an organized, attractive appearance.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Comprehensive garage floor system with designated zones for different 
+                  uses, integrated storage considerations, and color coordination with the home's exterior finishes.
+                </p>
+                <p>
+                  <strong>Result:</strong> Functional space that serves as both practical garage and family 
+                  activity center, significantly enhancing home organization and usability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Solutions -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Specialized Concrete Coating Systems for Springboro</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Family-Friendly Residential Systems</h3>
+              <p>
+                Engineered for Springboro's active families, providing safety, durability, and easy 
+                maintenance to support busy household lifestyles.
+              </p>
+              <ul>
+                <li>Child-safe, non-toxic formulations</li>
+                <li>Easy cleanup for sports equipment and activities</li>
+                <li>Slip-resistant surfaces for safety</li>
+                <li>Stain resistance for family living</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Educational Facility Coatings</h3>
+              <p>
+                Professional systems designed for Springboro's educational environments, providing 
+                durability and safety for student and community use.
+              </p>
+              <ul>
+                <li>High-traffic durability for school corridors</li>
+                <li>Easy cleaning for maintenance staff</li>
+                <li>Slip-resistant safety for all ages</li>
+                <li>Low-odor formulations for occupied buildings</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Community & Commercial Systems</h3>
+              <p>
+                Versatile coatings for Springboro's local businesses and community facilities, 
+                supporting diverse applications with professional results.
+              </p>
+              <ul>
+                <li>Multi-use functionality for community spaces</li>
+                <li>Professional appearance for business districts</li>
+                <li>Chemical resistance for commercial cleaning</li>
+                <li>Rapid installation to minimize disruption</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving All of Springboro's Community Areas</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Established Neighborhoods</h3>
+              <p>
+                Springboro's mature residential areas feature quality homes where families have put down 
+                roots, requiring concrete coatings that enhance and protect these valuable investments.
+              </p>
+              <ul>
+                <li>Garage floor upgrades for multi-vehicle families</li>
+                <li>Basement family rooms and recreation areas</li>
+                <li>Home workshop and hobby space enhancement</li>
+                <li>Pool house and outdoor living applications</li>
+                <li>Home office and study space flooring</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>School & Educational Facilities</h3>
+              <p>
+                Springboro's excellent school system requires durable, safe flooring solutions that 
+                support learning environments and community activities.
+              </p>
+              <ul>
+                <li>Classroom and hallway surface upgrades</li>
+                <li>Gymnasium and athletic facility floors</li>
+                <li>Cafeteria and food service areas</li>
+                <li>Library and media center applications</li>
+                <li>Administrative and office space coatings</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Business & Retail District</h3>
+              <p>
+                Springboro's thriving local business community requires professional concrete solutions 
+                that support commerce while maintaining the community's welcoming character.
+              </p>
+              <ul>
+                <li>Retail store and shopping center floors</li>
+                <li>Restaurant and food service establishment surfaces</li>
+                <li>Professional office and service business coatings</li>
+                <li>Healthcare and medical facility applications</li>
+                <li>Automotive and service industry solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our Springboro Concrete Coating Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Community-Focused Assessment</h3>
+                <p>
+                  Comprehensive evaluation of your Springboro property with understanding of community 
+                  standards, family needs, and local architectural character.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Personalized Design</h3>
+                <p>
+                  Custom coating system development based on your specific requirements, lifestyle 
+                  needs, and Springboro's community values and aesthetic preferences.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Professional Installation</h3>
+                <p>
+                  Expert application with attention to detail, respect for your property, and 
+                  consideration for neighbors in Springboro's close-knit community environment.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Satisfaction Guarantee</h3>
+                <p>
+                  Thorough quality inspection and customer satisfaction confirmation, ensuring your 
+                  Springboro installation meets our high standards and your family's expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Springboro Customer Experiences</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "With three kids in sports, our garage was constantly cluttered with equipment. 
+                  The new epoxy floor makes organization easy and cleanup simple. Perfect solution 
+                  for our active Springboro family."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>The Johnson Family</strong> - Springboro Residents
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our community center needed flooring that could handle everything from basketball 
+                  games to senior citizen activities. The results have been outstanding - durable, 
+                  safe, and beautiful for all our community events."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Facility Manager</strong> - Springboro Community Center
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our restaurant needed attractive, easy-to-clean floors that could handle high 
+                  traffic while maintaining Springboro's welcoming atmosphere. Professional results 
+                  that our customers notice and appreciate."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Restaurant Owner</strong> - Downtown Springboro
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Enhance Your Springboro Property with Professional Concrete Coating</h2>
+              <p>
+                Ready to improve your Springboro property with expert concrete coating solutions? 
+                Contact Queen City Surface Coatings for your personalized consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Springboro, OH and Warren County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Springboro Service Commitment</h3>
+                <ul>
+                  <li>Free consultations with family-focused recommendations</li>
+                  <li>Community-sensitive installation practices</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Comprehensive warranty coverage</li>
+                  <li>Warren County's trusted concrete coating specialists</li>
+                  <li>Flexible scheduling for family and community needs</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services in Springboro, OH. Expert epoxy flooring and surface solutions for Warren County's charming community with residential, commercial, and municipal applications.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Springboro",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.5570",
+        "longitude": "-84.2332"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/springboro-concrete-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Springboro, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warren County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Springboro Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Family Residential Coatings",
+              "description": "Custom garage floor and home concrete coating solutions for Springboro families"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Educational Facility Flooring",
+              "description": "Professional concrete solutions for Springboro schools and community facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Local Business Coatings",
+              "description": "Commercial concrete coating solutions for Springboro's business district"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "64",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

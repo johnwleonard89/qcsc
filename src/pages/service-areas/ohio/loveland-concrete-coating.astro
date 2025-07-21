@@ -1,0 +1,405 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Loveland Concrete Coating | Hamilton & Clermont County Services"
+      description="Professional concrete coating services in Loveland, OH. Expert epoxy flooring and surface solutions for this scenic Little Miami River community spanning Hamilton and Clermont counties."
+      keywords="Loveland concrete coating, Loveland Ohio epoxy flooring, Little Miami River concrete coating, bike trail area flooring, Loveland garage floor coating"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Loveland Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Loveland, Ohio. 
+              Serving this scenic Little Miami River community with premium epoxy systems designed for riverside living.
+            </p>
+            <div class="hero-features">
+              <span>Two-County Expertise</span>
+              <span>Riverside Community Focus</span>
+              <span>Bike Trail Area Specialists</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Premier Concrete Coating Services in Loveland, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves Loveland, the charming community that bridges Hamilton 
+            and Clermont counties along the scenic Little Miami River. From historic downtown districts to 
+            modern riverside developments, we provide concrete coating solutions that complement Loveland's 
+            natural beauty and active lifestyle.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <img src="/assets/images/service-icons/recreation.svg" alt="Recreation & Trail Community" />
+              </div>
+              <h3>Recreation & Trail Community</h3>
+              <p>Specialized coatings for Loveland's active community, supporting the Little Miami Scenic Trail and recreation lifestyle.</p>
+              <ul>
+                <li>Bike trail support facility floors</li>
+                <li>Recreation center and community building surfaces</li>
+                <li>Sports facility and fitness center coatings</li>
+                <li>Outdoor equipment storage solutions</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Historic Downtown District</h3>
+              <p>Heritage-sensitive concrete solutions for Loveland's charming downtown area and historic commercial buildings.</p>
+              <ul>
+                <li>Historic commercial building renovations</li>
+                <li>Antique shop and boutique flooring</li>
+                <li>Restaurant and café surface upgrades</li>
+                <li>Art gallery and cultural venue applications</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Riverside Residential Communities</h3>
+              <p>Custom concrete coatings for Loveland's unique riverside neighborhoods and hillside developments.</p>
+              <ul>
+                <li>Moisture-resistant basement systems</li>
+                <li>Garage floor coatings for active families</li>
+                <li>Pool house and outdoor entertainment areas</li>
+                <li>Workshop and storage space enhancement</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Loveland Concrete Coating?</h2>
+              
+              <h3>Little Miami River Valley Expertise</h3>
+              <p>
+                Loveland's location along the Little Miami River creates unique environmental challenges that 
+                require specialized knowledge. Our team understands river valley moisture conditions, seasonal 
+                flooding considerations, and the specific needs of properties in this beautiful but challenging 
+                riverside environment.
+              </p>
+              
+              <h3>Active Community Understanding</h3>
+              <p>
+                Loveland residents embrace an active lifestyle centered around the renowned Little Miami Scenic Trail. 
+                We understand the needs of cyclists, runners, and outdoor enthusiasts, providing concrete solutions 
+                that support equipment storage, maintenance areas, and recreational facility requirements.
+              </p>
+              
+              <h3>Two-County Service Advantage</h3>
+              <p>
+                Spanning both Hamilton and Clermont counties, Loveland benefits from our comprehensive regional 
+                knowledge. We understand the regulatory requirements, environmental conditions, and community 
+                standards of both counties, ensuring appropriate solutions regardless of your property's location.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Loveland Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Little Miami Scenic Trail Facility</h4>
+                <p>
+                  <strong>Challenge:</strong> Trail support facility requiring durable flooring that could handle 
+                  thousands of cyclists and runners annually while providing maintenance areas for equipment 
+                  and rest facilities for trail users.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Multi-zone epoxy system with high-traffic areas for visitor use, 
+                  specialized coatings for bike maintenance areas, and slip-resistant surfaces for safety, 
+                  all coordinated with trail operations schedules.
+                </p>
+                <p>
+                  <strong>Result:</strong> "Perfect solution for our high-volume trail operations. The flooring 
+                  handles constant traffic while maintaining an attractive appearance that represents Loveland 
+                  well." - Trail Facility Manager
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Historic Downtown Loveland Renovation</h4>
+                <p>
+                  <strong>Challenge:</strong> Historic Main Street building renovation requiring flooring that would 
+                  complement 1800s architecture while providing modern performance for an art gallery and 
+                  community event space.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Heritage-appropriate epoxy system with subtle earth tones and textures 
+                  that enhance the historic character while providing easy maintenance for art exhibitions and 
+                  community gatherings.
+                </p>
+                <p>
+                  <strong>Result:</strong> Beautiful integration of historic charm with modern functionality that 
+                  supports Loveland's thriving arts and culture community.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Solutions -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Concrete Coating Systems for Loveland</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Moisture-Resistant River Systems</h3>
+              <p>
+                Specialized formulations designed for Loveland's riverside environment, providing superior 
+                moisture protection and humidity resistance for long-term performance.
+              </p>
+              <ul>
+                <li>Vapor barrier integration for basement applications</li>
+                <li>High-humidity performance guarantees</li>
+                <li>Mold and mildew resistance</li>
+                <li>Flood-recovery capabilities</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Recreation Facility Coatings</h3>
+              <p>
+                Heavy-duty systems designed for Loveland's active community facilities, providing durability 
+                for high-traffic recreation and sporting applications.
+              </p>
+              <ul>
+                <li>Extreme abrasion resistance for trail facilities</li>
+                <li>Easy cleaning for public use areas</li>
+                <li>Slip-resistant safety surfaces</li>
+                <li>Equipment-friendly formulations</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Historic Preservation Systems</h3>
+              <p>
+                Specialized coatings that complement Loveland's historic character while providing modern 
+                performance and durability for heritage buildings and districts.
+              </p>
+              <ul>
+                <li>Heritage-appropriate color and texture options</li>
+                <li>Preservation-compliant installation methods</li>
+                <li>Low-impact application techniques</li>
+                <li>Period-appropriate finish selections</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Loveland Customer Experiences</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Living near the Little Miami River, we had constant moisture issues in our basement. 
+                  The specialized system has completely solved the problem while creating a beautiful 
+                  space our active family can use for bike storage and fitness equipment."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Mark & Lisa R.</strong> - Riverside Loveland
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our historic downtown gallery needed flooring that would respect the building's character 
+                  while providing a suitable backdrop for art exhibitions. Perfect understanding of our 
+                  needs with outstanding results."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Gallery Owner</strong> - Historic Downtown Loveland
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our trail facility serves thousands of visitors each season. The flooring system has 
+                  handled the constant traffic beautifully while maintaining the professional appearance 
+                  that represents our community well."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Parks Manager</strong> - Little Miami Scenic Trail
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your Loveland Property with Professional Concrete Coating</h2>
+              <p>
+                Ready to enhance your Loveland property with specialized concrete coating solutions? 
+                Contact Queen City Surface Coatings for your comprehensive consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Loveland, OH (Hamilton & Clermont Counties)
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Loveland Service Commitment</h3>
+                <ul>
+                  <li>Free consultations with riverside expertise</li>
+                  <li>Two-county regulatory knowledge</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Environmental performance guarantees</li>
+                  <li>Little Miami River valley specialists</li>
+                  <li>Recreation community understanding</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services in Loveland, OH. Expert epoxy flooring and surface solutions for this scenic Little Miami River community spanning Hamilton and Clermont counties.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Loveland",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.2689",
+        "longitude": "-84.2638"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/loveland-concrete-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Loveland, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Hamilton County, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Clermont County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Loveland Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Recreation Facility Coatings",
+              "description": "Professional concrete coatings for Loveland's Little Miami Scenic Trail and recreation facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic District Preservation",
+              "description": "Heritage-sensitive concrete solutions for Loveland's historic downtown district"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Riverside Residential Systems",
+              "description": "Moisture-resistant concrete coatings for Loveland's riverside residential communities"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "72",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

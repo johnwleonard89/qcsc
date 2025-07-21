@@ -1,0 +1,524 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Butler County Concrete Services | Comprehensive Ohio Coverage"
+      description="Professional concrete coating services throughout Butler County, OH. Serving Hamilton, Fairfield, West Chester, Oxford, and all county communities with expert epoxy and concrete solutions."
+      keywords="Butler County concrete services, Butler County Ohio concrete coating, Hamilton Fairfield West Chester concrete coating, Ohio tri-state concrete services"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Butler County Concrete Services</h1>
+            <p class="hero-subtitle">
+              Comprehensive concrete coating solutions throughout Butler County, Ohio. 
+              From Hamilton's industrial corridors to West Chester's corporate centers, we serve all county communities.
+            </p>
+            <div class="hero-features">
+              <span>Complete County Coverage</span>
+              <span>20+ Years Local Experience</span>
+              <span>Miami University Partner</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Overview -->
+      <section class="county-overview">
+        <div class="container">
+          <h2>Serving All of Butler County, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves the entire Butler County region with professional 
+            concrete coating services. From the historic communities along the Great Miami River to the 
+            thriving business centers and prestigious educational institutions, we understand the diverse 
+            character and requirements of Ohio's dynamic Butler County.
+          </p>
+          
+          <div class="county-stats">
+            <div class="stat-item">
+              <h3>385,000+</h3>
+              <p>County Residents Served</p>
+            </div>
+            <div class="stat-item">
+              <h3>30+</h3>
+              <p>Communities Covered</p>
+            </div>
+            <div class="stat-item">
+              <h3>20+</h3>
+              <p>Years Butler County Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>850+</h3>
+              <p>County Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities Served -->
+      <section class="cities-served">
+        <div class="container">
+          <h2>Butler County Communities We Serve</h2>
+          
+          <div class="cities-grid">
+            <div class="city-category">
+              <h3>Major Cities & Urban Centers</h3>
+              <div class="city-links">
+                <a href="/service-areas/ohio/hamilton-garage-floor-coating/">Hamilton</a>
+                <a href="/service-areas/ohio/fairfield-concrete-coating/">Fairfield</a>
+                <a href="/service-areas/ohio/west-chester-epoxy-flooring/">West Chester</a>
+                <a href="/service-areas/ohio/middletown-epoxy-services/">Middletown</a>
+                <a href="/service-areas/ohio/oxford-concrete-coating/">Oxford</a>
+                <span>Trenton</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Growing Communities</h3>
+              <div class="city-links">
+                <span>Monroe</span>
+                <span>Springdale (Butler County portion)</span>
+                <span>Forest Park (Butler County portion)</span>
+                <span>Sharonville (Butler County portion)</span>
+                <span>Mason (Butler County portion)</span>
+                <span>Lebanon (Butler County portion)</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Historic & Rural Communities</h3>
+              <div class="city-links">
+                <span>Ross</span>
+                <span>St. Clair Township</span>
+                <span>Liberty Township</span>
+                <span>Union Township</span>
+                <span>Hanover Township</span>
+                <span>Reily Township</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Market Specializations -->
+      <section class="market-specializations">
+        <div class="container">
+          <h2>Butler County Market Expertise</h2>
+          
+          <div class="market-grid">
+            <div class="market-segment">
+              <div class="market-icon">
+                <img src="/assets/images/service-icons/industrial.svg" alt="Industrial and Manufacturing" />
+              </div>
+              <h3>Industrial & Manufacturing</h3>
+              <p>Heavy-duty concrete solutions for Butler County's diverse industrial sector, from automotive to aerospace manufacturing.</p>
+              <ul>
+                <li>Steel processing and metal fabrication facilities</li>
+                <li>Automotive parts and assembly operations</li>
+                <li>Paper manufacturing and processing plants</li>
+                <li>Food processing and packaging facilities</li>
+                <li>Chemical manufacturing and distribution</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon">
+                <img src="/assets/images/service-icons/educational.svg" alt="Educational Excellence" />
+              </div>
+              <h3>Educational Excellence</h3>
+              <p>Specialized coatings for Butler County's educational institutions, including Miami University and numerous school districts.</p>
+              <ul>
+                <li>Miami University campus facilities</li>
+                <li>Hamilton City School District buildings</li>
+                <li>Fairfield City School District facilities</li>
+                <li>West Chester-Lakota school buildings</li>
+                <li>Private and charter educational institutions</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon">
+                <img src="/assets/images/service-icons/commercial.svg" alt="Corporate and Professional" />
+              </div>
+              <h3>Corporate & Professional</h3>
+              <p>Premium concrete solutions for Butler County's thriving business community and corporate headquarters.</p>
+              <ul>
+                <li>West Chester corporate campus facilities</li>
+                <li>Professional office buildings and complexes</li>
+                <li>Healthcare systems and medical facilities</li>
+                <li>Financial institutions and banking centers</li>
+                <li>Technology and research facilities</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon">
+                <img src="/assets/images/service-icons/residential.svg" alt="Diverse Residential Markets" />
+              </div>
+              <h3>Diverse Residential Markets</h3>
+              <p>Custom concrete coatings for Butler County's varied residential communities, from urban to suburban to rural.</p>
+              <ul>
+                <li>West Chester luxury home developments</li>
+                <li>Hamilton urban residential renovation</li>
+                <li>Fairfield suburban family neighborhoods</li>
+                <li>Oxford student housing and rental properties</li>
+                <li>Rural and agricultural residential properties</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured County Projects -->
+      <section class="featured-projects">
+        <div class="container">
+          <h2>Signature Butler County Projects</h2>
+          
+          <div class="projects-showcase">
+            <div class="project-highlight">
+              <h4>Miami University Athletic Facilities</h4>
+              <p>
+                <strong>Scope:</strong> Multi-phase renovation of athletic facilities across Miami University's Oxford 
+                campus, covering gymnasiums, training facilities, and support buildings totaling 200,000+ sq ft.
+              </p>
+              <p>
+                <strong>Challenge:</strong> Coordinate installations around academic calendar and athletic seasons 
+                while maintaining facility operations for Division I sports programs and student recreation needs.
+              </p>
+              <p>
+                <strong>Solution:</strong> Phased installation program using rapid-cure, low-odor epoxy systems designed 
+                for high-performance athletics, with specialized traction surfaces for training areas and decorative 
+                elements matching university branding.
+              </p>
+              <p>
+                <strong>Result:</strong> Enhanced athletic performance facilities that serve both competitive sports 
+                and student recreation while meeting NCAA standards and university aesthetic requirements.
+              </p>
+            </div>
+            
+            <div class="project-highlight">
+              <h4>Butler County Manufacturing District</h4>
+              <p>
+                <strong>Scope:</strong> Comprehensive industrial coating program covering twelve manufacturing facilities 
+                throughout Hamilton and Fairfield, totaling over 800,000 sq ft of production floor space.
+              </p>
+              <p>
+                <strong>Challenge:</strong> Diverse industrial requirements from steel processing to food manufacturing, 
+                each requiring different coating specifications, safety standards, and installation protocols.
+              </p>
+              <p>
+                <strong>Solution:</strong> Custom-engineered systems for each facility type, including chemical-resistant 
+                formulations for processing plants, heavy-duty load-bearing systems for steel facilities, and food-safe 
+                compliance coatings for packaging operations.
+              </p>
+              <p>
+                <strong>Result:</strong> Enhanced production efficiency across all facilities with improved safety, 
+                easier maintenance, and full regulatory compliance for each industry sector.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Characteristics -->
+      <section class="county-characteristics">
+        <div class="container">
+          <h2>Butler County Service Considerations</h2>
+          
+          <div class="characteristics-grid">
+            <div class="characteristic">
+              <h3>Great Miami River Valley</h3>
+              <p>
+                The Great Miami River creates unique environmental conditions throughout Butler County, 
+                requiring specialized moisture management and flood-resistant coating solutions.
+              </p>
+              <ul>
+                <li>River valley humidity and moisture challenges</li>
+                <li>Seasonal flooding considerations in low-lying areas</li>
+                <li>Variable soil conditions from river sediments</li>
+                <li>Enhanced drainage requirements for basement applications</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Industrial Heritage & Innovation</h3>
+              <p>
+                Butler County's industrial legacy combined with modern innovation creates diverse coating 
+                requirements from heavy manufacturing to high-tech applications.
+              </p>
+              <ul>
+                <li>Heavy industrial load-bearing requirements</li>
+                <li>Chemical resistance for diverse manufacturing processes</li>
+                <li>Clean room standards for technology applications</li>
+                <li>Historic building preservation in industrial areas</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Educational & Institutional Needs</h3>
+              <p>
+                Major educational institutions and healthcare systems require specialized coatings that 
+                meet institutional standards while serving diverse user populations.
+              </p>
+              <ul>
+                <li>High-traffic durability for educational facilities</li>
+                <li>Low-odor formulations for occupied buildings</li>
+                <li>Slip-resistant surfaces for student safety</li>
+                <li>Easy maintenance for large facility management</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Suburban Growth & Development</h3>
+              <p>
+                Butler County's rapid suburban growth creates ongoing demand for quality residential 
+                and commercial concrete coating solutions.
+              </p>
+              <ul>
+                <li>New construction coordination with builders</li>
+                <li>Luxury residential market preferences</li>
+                <li>Corporate campus and office development</li>
+                <li>Shopping and entertainment venue requirements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Advantages -->
+      <section class="service-advantages">
+        <div class="container">
+          <h2>Why Choose Us for Butler County Projects</h2>
+          
+          <div class="advantages-content">
+            <div class="advantage-column">
+              <h3>Comprehensive County Knowledge</h3>
+              <p>
+                Our team understands Butler County's unique characteristics, from Hamilton's industrial heritage 
+                to West Chester's corporate growth. This county-wide knowledge ensures appropriate solutions for 
+                each area's specific requirements and regulatory environment.
+              </p>
+              
+              <h3>Educational Institution Expertise</h3>
+              <p>
+                Extensive experience with Miami University and local school districts provides deep understanding 
+                of educational facility requirements, including coordination with academic schedules, safety 
+                standards, and institutional maintenance protocols.
+              </p>
+            </div>
+            
+            <div class="advantage-column">
+              <h3>Industrial Sector Specialization</h3>
+              <p>
+                Proven expertise across Butler County's diverse industrial sectors, from traditional manufacturing 
+                to modern technology applications, ensuring appropriate coating solutions for each industry's 
+                unique requirements and regulatory compliance needs.
+              </p>
+              
+              <h3>Regional Coordination Capability</h3>
+              <p>
+                Strategic positioning and resource allocation allows efficient service delivery throughout Butler 
+                County, with optimized logistics for multi-site projects and consistent quality standards across 
+                all county communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Success Stories -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Butler County Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Working across multiple Butler County manufacturing facilities, Queen City Surface Coatings 
+                  demonstrated exceptional expertise in handling diverse industrial requirements. Their understanding 
+                  of our sector's regulatory needs made the entire process efficient and compliant."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Industrial Operations Manager</strong> - Manufacturing Corporation
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our Miami University facilities required coordination with academic schedules and student 
+                  activities. The team's experience with educational institutions ensured minimal disruption 
+                  while delivering outstanding results that enhance our campus environment."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Facilities Director</strong> - Miami University
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "From our West Chester corporate headquarters to our Hamilton distribution center, the 
+                  consistency and quality remained excellent throughout Butler County. True regional expertise 
+                  that understands our market's diverse demands."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Regional Property Manager</strong> - Corporate Real Estate
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Concrete Services Throughout Butler County</h2>
+              <p>
+                Ready to enhance your Butler County property with professional concrete coating solutions? 
+                Contact our county-wide service team for your comprehensive consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> All of Butler County, Ohio
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Butler County Service Commitment</h3>
+                <ul>
+                  <li>Free estimates county-wide with local expertise</li>
+                  <li>Educational and industrial facility specialization</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Complete warranty coverage for all county projects</li>
+                  <li>Butler County's most experienced concrete coating team</li>
+                  <li>Flexible scheduling for diverse project requirements</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services throughout Butler County, OH. Comprehensive coverage from Hamilton to West Chester with expert epoxy and concrete solutions for all county communities.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Butler County, OH",
+        "addressCountry": "US"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/butler-county-concrete-services",
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Butler County, OH"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Butler County Concrete Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Concrete Coating",
+              "description": "Heavy-duty concrete coatings for Butler County manufacturing and industrial facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Educational Facility Flooring",
+              "description": "Professional concrete solutions for Butler County schools and Miami University"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Corporate Concrete Systems",
+              "description": "Premium concrete coatings for Butler County business and corporate facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Concrete Solutions",
+              "description": "Custom concrete coatings for Butler County homes and residential communities"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "312",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

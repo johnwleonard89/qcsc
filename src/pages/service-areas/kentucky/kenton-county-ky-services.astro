@@ -1,0 +1,363 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Kenton County KY Services | Northern Kentucky Concrete Coating"
+      description="Professional concrete coating services throughout Kenton County, Kentucky. Serving Covington, Independence, Erlanger, and all county communities with expert tri-state concrete solutions."
+      keywords="Kenton County Kentucky concrete coating, Covington Independence concrete coating, Northern Kentucky concrete services, CVG airport area flooring"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Kenton County Kentucky Services</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services throughout Kenton County, Kentucky. 
+              Tri-state expertise serving Covington, Independence, and all Northern Kentucky communities.
+            </p>
+            <div class="hero-features">
+              <span>CVG Airport Area Specialists</span>
+              <span>Northern Kentucky Leaders</span>
+              <span>Historic Covington Expertise</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Overview -->
+      <section class="county-overview">
+        <div class="container">
+          <h2>Serving Kenton County, Northern Kentucky</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings brings comprehensive concrete coating services to Kenton County, Kentucky's 
+            most populous county. From Covington's historic riverfront to the CVG Airport corridor's modern development, 
+            we deliver professional solutions throughout this diverse and dynamic Northern Kentucky region.
+          </p>
+          
+          <div class="county-stats">
+            <div class="stat-item">
+              <h3>169,000+</h3>
+              <p>Kenton County Residents</p>
+            </div>
+            <div class="stat-item">
+              <h3>25+</h3>
+              <p>Kentucky Communities Served</p>
+            </div>
+            <div class="stat-item">
+              <h3>12+</h3>
+              <p>Years Northern Kentucky Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>350+</h3>
+              <p>Kentucky Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities Served -->
+      <section class="cities-served">
+        <div class="container">
+          <h2>Kenton County Communities We Serve</h2>
+          
+          <div class="cities-grid">
+            <div class="city-category">
+              <h3>Major Cities & Urban Centers</h3>
+              <div class="city-links">
+                <a href="/service-areas/kentucky/covington-concrete-coating/">Covington</a>
+                <a href="/service-areas/kentucky/independence-garage-floor-coating/">Independence</a>
+                <a href="/service-areas/kentucky/erlanger-epoxy-flooring/">Erlanger</a>
+                <span>Florence (Kenton County portion)</span>
+                <span>Fort Wright</span>
+                <span>Edgewood</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>CVG Airport Corridor</h3>
+              <div class="city-links">
+                <a href="/service-areas/kentucky/hebron-garage-floor-coating/">Hebron</a>
+                <span>Burlington</span>
+                <span>Union</span>
+                <span>Airport business district</span>
+                <span>Logistics and distribution centers</span>
+                <span>Hotel and conference facilities</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Suburban & Rural Communities</h3>
+              <div class="city-links">
+                <a href="/service-areas/kentucky/villa-hills-concrete-coating/">Villa Hills</a>
+                <a href="/service-areas/kentucky/crescent-springs-garage-floor-coating/">Crescent Springs</a>
+                <span>Park Hills</span>
+                <span>Ludlow (Kenton County portion)</span>
+                <span>Kenton County rural areas</span>
+                <span>Unincorporated communities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Market Specializations -->
+      <section class="market-specializations">
+        <div class="container">
+          <h2>Kenton County Market Expertise</h2>
+          
+          <div class="market-grid">
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/airport.svg" alt="Airport Services" /></div>
+              <h3>CVG Airport & Logistics</h3>
+              <p>Specialized coatings for Kenton County's major airport and logistics hub, supporting international commerce and distribution.</p>
+              <ul>
+                <li>Airport support facilities and cargo operations</li>
+                <li>Distribution centers and logistics facilities</li>
+                <li>International shipping and freight operations</li>
+                <li>Hotel and conference centers serving CVG</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/historic.svg" alt="Historic Buildings" /></div>
+              <h3>Historic Covington District</h3>
+              <p>Heritage preservation and historic district concrete solutions for Covington's nationally recognized historic areas.</p>
+              <ul>
+                <li>MainStrasse Village historic district</li>
+                <li>Covington riverfront development</li>
+                <li>Historic commercial and residential buildings</li>
+                <li>Preservation-compliant renovation projects</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/commercial.svg" alt="Commercial Services" /></div>
+              <h3>Corporate & Professional</h3>
+              <p>Commercial concrete solutions for Kenton County's business centers and professional service facilities.</p>
+              <ul>
+                <li>Corporate headquarters and office complexes</li>
+                <li>Professional services and medical facilities</li>
+                <li>Financial institutions and banking centers</li>
+                <li>Technology and research facilities</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/educational.svg" alt="Educational Facilities" /></div>
+              <h3>Educational & Public Services</h3>
+              <p>Professional solutions for Kenton County's educational institutions and public service facilities.</p>
+              <ul>
+                <li>Kenton County School District facilities</li>
+                <li>Covington Independent Schools</li>
+                <li>Gateway Community and Technical College</li>
+                <li>Municipal and public service buildings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kentucky Considerations -->
+      <section class="county-characteristics">
+        <div class="container">
+          <h2>Kenton County Service Considerations</h2>
+          
+          <div class="characteristics-grid">
+            <div class="characteristic">
+              <h3>International Hub Requirements</h3>
+              <p>
+                CVG Airport's international status creates specialized requirements for related facilities, 
+                including customs, cargo operations, and international business standards.
+              </p>
+              <ul>
+                <li>International facility compliance standards</li>
+                <li>Heavy cargo and logistics equipment ratings</li>
+                <li>Security and customs facility requirements</li>
+                <li>Multi-language signage integration capabilities</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Ohio River Valley Environment</h3>
+              <p>
+                Kenton County's Ohio River location, particularly in Covington, requires moisture management 
+                and flood-resistant coating solutions for riverfront properties.
+              </p>
+              <ul>
+                <li>River valley humidity and moisture challenges</li>
+                <li>Flood-resistant systems for riverfront areas</li>
+                <li>Enhanced drainage and moisture mitigation</li>
+                <li>Seasonal weather variation adaptation</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Urban Density Challenges</h3>
+              <p>
+                As Northern Kentucky's most populous county, Kenton County presents unique challenges 
+                for urban construction and renovation projects in densely populated areas.
+              </p>
+              <ul>
+                <li>Urban access and logistics coordination</li>
+                <li>Noise and disruption minimization</li>
+                <li>Multi-story and high-rise considerations</li>
+                <li>Neighborhood-sensitive installation practices</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Historic Preservation Standards</h3>
+              <p>
+                Covington's extensive historic districts require specialized knowledge of preservation 
+                standards and heritage building renovation techniques.
+              </p>
+              <ul>
+                <li>National Register historic district compliance</li>
+                <li>Heritage building structural considerations</li>
+                <li>Preservation-appropriate materials and methods</li>
+                <li>Community character enhancement and protection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Concrete Coating Throughout Kenton County, Kentucky</h2>
+              <p>
+                Ready to enhance your Kenton County property with professional concrete coating solutions? 
+                Contact our tri-state service team for expert Kentucky consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Kenton County, Kentucky
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Kenton County Kentucky Commitment</h3>
+                <ul>
+                  <li>Free estimates with CVG airport area expertise</li>
+                  <li>Kentucky state licensing and compliance</li>
+                  <li>Historic Covington preservation experience</li>
+                  <li>Complete warranty coverage</li>
+                  <li>Northern Kentucky's logistics industry specialists</li>
+                  <li>International facility standards knowledge</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services throughout Kenton County, Kentucky. Tri-state expertise serving Covington, Independence, and all Northern Kentucky communities with expert concrete solutions.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kenton County, KY",
+        "addressCountry": "US"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/kentucky/kenton-county-ky-services",
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Kenton County, KY"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Kenton County Kentucky Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Airport & Logistics Facility Coatings",
+              "description": "Professional concrete coatings for Kenton County's CVG airport and logistics facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic District Preservation",
+              "description": "Specialized concrete solutions for Covington's historic districts and heritage buildings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential & Commercial Solutions",
+              "description": "Custom concrete coatings for Kenton County homes and business facilities"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "125",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

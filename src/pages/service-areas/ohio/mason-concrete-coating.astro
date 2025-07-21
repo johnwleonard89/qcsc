@@ -1,0 +1,507 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Mason Concrete Coating | Warren County Premier Surface Solutions"
+      description="Professional concrete coating services in Mason, OH. Expert epoxy flooring and surface solutions for Warren County's thriving community with custom residential, commercial, and industrial applications."
+      keywords="Mason concrete coating, Mason Ohio epoxy flooring, Warren County concrete coating, Mason garage floor coating, concrete coating near me, Mason OH flooring contractors"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Mason Concrete Coating Specialists</h1>
+            <p class="hero-subtitle">
+              Professional concrete coating services for Mason, Ohio and Warren County. 
+              Transforming surfaces with premium epoxy systems designed for this thriving community.
+            </p>
+            <div class="hero-features">
+              <span>Warren County Experts</span>
+              <span>Premium Community Focus</span>
+              <span>Kings Island Area Specialists</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Quote</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Today</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Overview -->
+      <section class="services-overview">
+        <div class="container">
+          <h2>Premier Concrete Coating Services in Mason, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves Mason, one of Warren County's most dynamic communities. 
+            From the bustling developments near Kings Island to the established neighborhoods and thriving 
+            business districts, we provide concrete coating solutions that match Mason's growth and success.
+          </p>
+          
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon"><img src="/assets/images/service-icons/residential.svg" alt="Residential Services" /></div>
+              <h3>Thriving Residential Communities</h3>
+              <p>Custom concrete coatings for Mason's diverse neighborhoods, from family-friendly developments to luxury estates.</p>
+              <ul>
+                <li>Garage floor epoxy systems for growing families</li>
+                <li>Basement and recreation room enhancements</li>
+                <li>Pool deck and outdoor entertainment areas</li>
+                <li>Workshop and storage space solutions</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Entertainment & Tourism District</h3>
+              <p>Specialized coatings for Mason's entertainment industry, supporting the Kings Island area and tourism sector.</p>
+              <ul>
+                <li>Hotel and hospitality venue flooring</li>
+                <li>Restaurant and entertainment facility surfaces</li>
+                <li>Retail and shopping center applications</li>
+                <li>Event facility and conference center floors</li>
+              </ul>
+            </div>
+            
+            <div class="service-card">
+              <h3>Business & Technology Centers</h3>
+              <p>Professional concrete solutions for Mason's growing business community and technology corridor.</p>
+              <ul>
+                <li>Corporate headquarters and office buildings</li>
+                <li>Technology and research facilities</li>
+                <li>Healthcare and professional services</li>
+                <li>Distribution and logistics centers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Expertise -->
+      <section class="local-expertise">
+        <div class="container">
+          <div class="content-columns">
+            <div class="content-column">
+              <h2>Why Choose Us for Mason Concrete Coating?</h2>
+              
+              <h3>Understanding Mason's Dynamic Growth</h3>
+              <p>
+                Mason represents one of Ohio's great success stories - a community that has grown from farmland 
+                to become a major economic center while maintaining family-friendly character. Our concrete coating 
+                solutions support this growth, from new construction developments to established neighborhoods 
+                undergoing renovation and enhancement.
+              </p>
+              
+              <h3>Kings Island Area Expertise</h3>
+              <p>
+                The Kings Island entertainment district brings unique challenges and opportunities. We understand 
+                the specialized requirements of hospitality venues, the seasonal nature of tourism businesses, 
+                and the need for durable surfaces that can handle heavy foot traffic while maintaining an 
+                attractive appearance year-round.
+              </p>
+              
+              <h3>Warren County Climate Adaptation</h3>
+              <p>
+                Mason's location in Warren County means dealing with Ohio's variable climate - hot summers, 
+                cold winters, and significant temperature swings. Our concrete coatings are specifically 
+                formulated to handle these conditions, ensuring long-term performance and minimal maintenance 
+                for Mason property owners.
+              </p>
+            </div>
+            
+            <div class="content-column">
+              <h3>Featured Mason Projects</h3>
+              
+              <div class="project-highlight">
+                <h4>Mason Technology Campus</h4>
+                <p>
+                  <strong>Challenge:</strong> New 75,000 sq ft technology facility requiring sophisticated flooring 
+                  systems for clean rooms, laboratories, and corporate offices while meeting stringent environmental 
+                  and safety standards.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Multi-zone epoxy system with ESD-safe areas for electronics, chemical-resistant 
+                  laboratory coatings, and decorative elements in public spaces, all coordinated with LEED certification 
+                  requirements.
+                </p>
+                <p>
+                  <strong>Result:</strong> "The flooring systems perfectly support our operations while creating 
+                  an impressive environment for clients and employees. The quality and professionalism exceeded 
+                  our expectations." - Facilities Manager
+                </p>
+              </div>
+              
+              <div class="project-highlight">
+                <h4>Kings Island Area Hotel Resort</h4>
+                <p>
+                  <strong>Challenge:</strong> Major hotel renovation requiring durable, attractive flooring systems 
+                  that could handle thousands of seasonal visitors while maintaining luxury aesthetics and meeting 
+                  hospitality industry standards.
+                </p>
+                <p>
+                  <strong>Solution:</strong> Decorative concrete overlays in public areas, slip-resistant pool deck 
+                  coatings, and specialized traffic-resistant systems in high-use corridors, all scheduled around 
+                  peak tourism seasons.
+                </p>
+                <p>
+                  <strong>Result:</strong> Enhanced guest experience with beautiful, durable surfaces that have 
+                  significantly reduced maintenance costs and improved safety ratings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Solutions -->
+      <section class="technical-section">
+        <div class="container">
+          <h2>Advanced Concrete Coating Systems for Mason Properties</h2>
+          
+          <div class="tech-grid">
+            <div class="tech-item">
+              <h3>Residential Performance Systems</h3>
+              <p>
+                Engineered for Mason's family-oriented community, providing durability and aesthetics 
+                that enhance property values and support active lifestyles.
+              </p>
+              <ul>
+                <li>Family-friendly slip-resistant surfaces</li>
+                <li>Easy-clean formulations for busy households</li>
+                <li>Decorative options to match home aesthetics</li>
+                <li>Climate-resistant durability</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Commercial & Hospitality Coatings</h3>
+              <p>
+                Professional-grade systems designed for Mason's entertainment and business districts, 
+                providing durability and aesthetics for high-traffic environments.
+              </p>
+              <ul>
+                <li>High-traffic abrasion resistance</li>
+                <li>Rapid installation for minimal business disruption</li>
+                <li>Decorative and branding integration options</li>
+                <li>Easy maintenance for commercial operations</li>
+              </ul>
+            </div>
+            
+            <div class="tech-item">
+              <h3>Technology & Clean Room Systems</h3>
+              <p>
+                Specialized coatings for Mason's growing technology sector, providing contamination 
+                control and electrostatic dissipative properties where required.
+              </p>
+              <ul>
+                <li>ESD-safe formulations for electronics</li>
+                <li>Chemical resistance for laboratory applications</li>
+                <li>Seamless surfaces for easy cleaning</li>
+                <li>Low-outgassing formulations for sensitive environments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Focus -->
+      <section class="community-focus">
+        <div class="container">
+          <h2>Serving Mason's Diverse Districts</h2>
+          
+          <div class="community-sections">
+            <div class="community-section">
+              <h3>Kings Island Entertainment District</h3>
+              <p>
+                The heart of Mason's tourism economy, requiring specialized concrete solutions that 
+                support high-volume entertainment and hospitality operations.
+              </p>
+              <ul>
+                <li>Hotel and resort facility flooring</li>
+                <li>Restaurant and dining establishment surfaces</li>
+                <li>Entertainment venue and event space floors</li>
+                <li>Retail and gift shop applications</li>
+                <li>Parking and outdoor area treatments</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Established Neighborhoods</h3>
+              <p>
+                Mason's residential communities represent successful suburban living, requiring concrete 
+                coatings that enhance homes while supporting active family lifestyles.
+              </p>
+              <ul>
+                <li>Garage floor upgrades for family vehicles</li>
+                <li>Basement recreation and entertainment areas</li>
+                <li>Home workshop and hobby space enhancement</li>
+                <li>Pool house and outdoor living applications</li>
+                <li>Home gym and exercise room flooring</li>
+              </ul>
+            </div>
+            
+            <div class="community-section">
+              <h3>Business & Technology Corridor</h3>
+              <p>
+                Mason's growing business sector requires professional concrete solutions that support 
+                corporate operations and technology development.
+              </p>
+              <ul>
+                <li>Corporate office and headquarters facilities</li>
+                <li>Research and development laboratories</li>
+                <li>Manufacturing and assembly operations</li>
+                <li>Distribution and logistics facilities</li>
+                <li>Healthcare and professional services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Excellence -->
+      <section class="process-section">
+        <div class="container">
+          <h2>Our Mason Concrete Coating Process</h2>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Property Evaluation</h3>
+                <p>
+                  Comprehensive assessment of your Mason property, considering local conditions, 
+                  usage requirements, and community standards for optimal solution development.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Customized Design</h3>
+                <p>
+                  Personalized coating system selection based on your specific needs, aesthetic 
+                  preferences, and Mason's community character and requirements.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Professional Installation</h3>
+                <p>
+                  Expert application using proven techniques and premium materials, with careful 
+                  attention to Mason's quality standards and neighborhood considerations.
+                </p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Quality Assurance</h3>
+                <p>
+                  Thorough inspection and customer satisfaction verification, ensuring your Mason 
+                  installation meets our quality standards and your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Mason Customer Experiences</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our hotel needed flooring that could handle the constant traffic of Kings Island 
+                  visitors while maintaining a luxury appearance. The results have been outstanding - 
+                  beautiful, durable, and much easier to maintain than our previous surfaces."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Hotel Manager</strong> - Kings Island Area
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "The garage floor transformation exceeded our expectations. Living in Mason with an 
+                  active family, we needed something that could handle everything from sports equipment 
+                  to DIY projects. Perfect solution with beautiful results."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Jennifer & Mark S.</strong> - Mason Homeowners
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our technology facility required specialized ESD-safe flooring for our clean rooms. 
+                  The expertise and attention to detail ensured we met all requirements while creating 
+                  an impressive facility for our clients and employees."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>David L.</strong> - Technology Company Executive
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Transform Your Mason Property with Professional Concrete Coating</h2>
+              <p>
+                Ready to enhance your Mason property with expert concrete coating solutions? 
+                Contact Queen City Surface Coatings for your personalized consultation and estimate.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> Mason, OH and Warren County
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Mason Service Commitment</h3>
+                <ul>
+                  <li>Free consultations with expert recommendations</li>
+                  <li>Specialized entertainment industry experience</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Comprehensive warranty coverage</li>
+                  <li>Warren County's trusted concrete coating specialists</li>
+                  <li>Flexible scheduling for all property types</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional concrete coating services in Mason, OH. Expert epoxy flooring and surface solutions for Warren County's thriving community with custom residential, commercial, and industrial applications.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mason",
+        "addressRegion": "OH",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "39.3600",
+        "longitude": "-84.3099"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/mason-concrete-coating",
+      "serviceArea": [
+        {
+          "@type": "City",
+          "name": "Mason, OH"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Warren County, OH"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Mason Concrete Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Concrete Coating",
+              "description": "Custom garage floor and home concrete coating solutions for Mason families"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hospitality Venue Flooring",
+              "description": "Professional concrete solutions for Mason's entertainment and tourism industry"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Technology Facility Coatings",
+              "description": "Specialized ESD-safe and clean room concrete coatings for Mason's tech sector"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "76",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,518 @@
+---
+import BaseHead from '../../../components/head/BaseHead.astro';
+import { Header, Footer } from '@components/odyssey-theme';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Logo from '../../../components/Logo.astro';
+import { nav } from '../../../config/nav.js';
+import { footerLists, footerSocials } from '../../../config/footer.js';
+import settings from '../../../config/settings.js';
+import '../../../styles/service-areas.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead 
+      title="Warren County Floor Coating | Comprehensive Ohio Coverage"
+      description="Professional floor coating services throughout Warren County, OH. Serving Lebanon, Mason, Springboro, and all county communities with expert epoxy and concrete solutions."
+      keywords="Warren County floor coating, Warren County Ohio concrete coating, Lebanon Mason Springboro concrete coating, Kings Island area flooring services"
+    />
+  </head>
+  <body>
+    <Header navData={nav}>
+      <Logo slot="logo" />
+    </Header>
+    
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Warren County Floor Coating Services</h1>
+            <p class="hero-subtitle">
+              Comprehensive floor coating solutions throughout Warren County, Ohio. 
+              From Lebanon's historic charm to Mason's entertainment district, we serve all county communities.
+            </p>
+            <div class="hero-features">
+              <span>Complete County Coverage</span>
+              <span>Kings Island Area Specialists</span>
+              <span>Local Community Focus</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+              <a href="tel:513-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Overview -->
+      <section class="county-overview">
+        <div class="container">
+          <h2>Serving All of Warren County, Ohio</h2>
+          <p class="section-intro">
+            Queen City Surface Coatings proudly serves the entire Warren County region with professional 
+            floor coating services. From the historic communities along the Little Miami River to the 
+            thriving entertainment districts and growing suburban developments, we understand the unique 
+            character and diverse needs of Ohio's dynamic Warren County.
+          </p>
+          
+          <div class="county-stats">
+            <div class="stat-item">
+              <h3>235,000+</h3>
+              <p>County Residents Served</p>
+            </div>
+            <div class="stat-item">
+              <h3>20+</h3>
+              <p>Communities Covered</p>
+            </div>
+            <div class="stat-item">
+              <h3>15+</h3>
+              <p>Years Warren County Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>650+</h3>
+              <p>County Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities Served -->
+      <section class="cities-served">
+        <div class="container">
+          <h2>Warren County Communities We Serve</h2>
+          
+          <div class="cities-grid">
+            <div class="city-category">
+              <h3>Major Cities & Growth Centers</h3>
+              <div class="city-links">
+                <a href="/service-areas/ohio/lebanon-concrete-coating/">Lebanon</a>
+                <a href="/service-areas/ohio/mason-concrete-coating/">Mason</a>
+                <a href="/service-areas/ohio/springboro-concrete-coating/">Springboro</a>
+                <span>Franklin</span>
+                <span>Carlisle</span>
+                <span>Waynesville</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Entertainment & Tourism District</h3>
+              <div class="city-links">
+                <span>Kings Island Area</span>
+                <span>Great Wolf Lodge District</span>
+                <span>Entertainment Corridor</span>
+                <span>Hotel & Conference Centers</span>
+                <span>Tourism Business District</span>
+                <span>Visitor Service Areas</span>
+              </div>
+            </div>
+            
+            <div class="city-category">
+              <h3>Historic & Rural Communities</h3>
+              <div class="city-links">
+                <span>Morrow</span>
+                <span>South Lebanon</span>
+                <span>Harveysburg</span>
+                <span>Corwin</span>
+                <span>Oregonia</span>
+                <span>Rural Township Areas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Market Specializations -->
+      <section class="market-specializations">
+        <div class="container">
+          <h2>Warren County Market Expertise</h2>
+          
+          <div class="market-grid">
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/entertainment.svg" alt="Entertainment Industry" /></div>
+              <h3>Entertainment & Tourism Industry</h3>
+              <p>Specialized floor coatings for Warren County's world-class entertainment destinations and supporting tourism infrastructure.</p>
+              <ul>
+                <li>Theme park support facilities and operations</li>
+                <li>Hotel and resort flooring systems</li>
+                <li>Restaurant and food service venues</li>
+                <li>Conference centers and event facilities</li>
+                <li>Retail and gift shop applications</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/historic.svg" alt="Historic Buildings" /></div>
+              <h3>Historic Preservation & Heritage</h3>
+              <p>Specialized coatings for Warren County's historic districts and heritage buildings, preserving character while providing modern performance.</p>
+              <ul>
+                <li>Lebanon historic downtown district</li>
+                <li>Heritage building preservation projects</li>
+                <li>Museum and cultural facility applications</li>
+                <li>Historic residential renovation support</li>
+                <li>Preservation-compliant coating systems</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/educational.svg" alt="Educational Facilities" /></div>
+              <h3>Educational & Community Services</h3>
+              <p>Professional solutions for Warren County's educational institutions and community service facilities serving growing populations.</p>
+              <ul>
+                <li>Lebanon City School District facilities</li>
+                <li>Mason City School District buildings</li>
+                <li>Kings High School and related facilities</li>
+                <li>Community centers and recreation buildings</li>
+                <li>Library and public service facilities</li>
+              </ul>
+            </div>
+            
+            <div class="market-segment">
+              <div class="market-icon"><img src="/assets/images/service-icons/residential.svg" alt="Residential Communities" /></div>
+              <h3>Suburban Growth & Development</h3>
+              <p>Custom floor coatings for Warren County's rapidly expanding residential communities and supporting commercial development.</p>
+              <ul>
+                <li>Mason luxury residential developments</li>
+                <li>Springboro family neighborhood communities</li>
+                <li>Lebanon established residential areas</li>
+                <li>New construction coordination services</li>
+                <li>Suburban commercial and retail centers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured County Projects -->
+      <section class="featured-projects">
+        <div class="container">
+          <h2>Signature Warren County Projects</h2>
+          
+          <div class="projects-showcase">
+            <div class="project-highlight">
+              <h4>Kings Island Entertainment District</h4>
+              <p>
+                <strong>Scope:</strong> Multi-facility flooring program covering hospitality venues, restaurants, and 
+                support facilities throughout the Kings Island entertainment district, totaling 300,000+ sq ft.
+              </p>
+              <p>
+                <strong>Challenge:</strong> Coordinate installations around peak tourism seasons while meeting diverse 
+                requirements from food service compliance to high-traffic hospitality applications, all within 
+                tight seasonal deadlines.
+              </p>
+              <p>
+                <strong>Solution:</strong> Comprehensive project management with specialized systems for each application - 
+                food-safe coatings for restaurants, decorative systems for hotels, and heavy-duty surfaces for 
+                operational areas, all scheduled during off-season periods.
+              </p>
+              <p>
+                <strong>Result:</strong> Enhanced visitor experience infrastructure that supports Ohio's premier 
+                entertainment destination while meeting all hospitality industry standards and seasonal demands.
+              </p>
+            </div>
+            
+            <div class="project-highlight">
+              <h4>Warren County School District Initiative</h4>
+              <p>
+                <strong>Scope:</strong> Comprehensive flooring renovation program across five school districts in 
+                Warren County, covering elementary through high school facilities totaling 500,000+ sq ft.
+              </p>
+              <p>
+                <strong>Challenge:</strong> Coordinate installations across multiple school districts with varying 
+                schedules, budgets, and facility requirements while maintaining educational operations and 
+                meeting state compliance standards.
+              </p>
+              <p>
+                <strong>Solution:</strong> District-by-district phasing with summer installation schedules, standardized 
+                yet customizable coating systems, and coordination with facilities management teams for minimal 
+                disruption to educational activities.
+              </p>
+              <p>
+                <strong>Result:</strong> Enhanced learning environments county-wide with improved safety, easier 
+                maintenance, and updated facilities that support educational excellence in Warren County.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- County Characteristics -->
+      <section class="county-characteristics">
+        <div class="container">
+          <h2>Warren County Service Considerations</h2>
+          
+          <div class="characteristics-grid">
+            <div class="characteristic">
+              <h3>Tourism & Hospitality Demands</h3>
+              <p>
+                Warren County's major tourism industry creates unique flooring requirements that must handle 
+                extreme seasonal variations and maintain hospitality industry standards year-round.
+              </p>
+              <ul>
+                <li>Seasonal high-volume traffic patterns</li>
+                <li>Food service compliance and safety requirements</li>
+                <li>Hospitality industry aesthetic standards</li>
+                <li>Rapid turnaround for tourism season preparation</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Historic Character Preservation</h3>
+              <p>
+                The county's rich history, particularly in Lebanon's historic district, requires specialized 
+                approaches that preserve architectural heritage while providing modern functionality.
+              </p>
+              <ul>
+                <li>Historic district compliance requirements</li>
+                <li>Preservation-appropriate materials and methods</li>
+                <li>Heritage building structural considerations</li>
+                <li>Community character respect and enhancement</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Rapid Suburban Growth</h3>
+              <p>
+                Warren County's continued population and economic growth creates ongoing demand for quality 
+                residential and commercial flooring solutions in expanding communities.
+              </p>
+              <ul>
+                <li>New construction coordination and timing</li>
+                <li>Quality expectations in growing communities</li>
+                <li>Commercial development support needs</li>
+                <li>Infrastructure expansion considerations</li>
+              </ul>
+            </div>
+            
+            <div class="characteristic">
+              <h3>Educational Excellence Support</h3>
+              <p>
+                Warren County's commitment to educational quality requires flooring solutions that enhance 
+                learning environments while meeting institutional maintenance and safety standards.
+              </p>
+              <ul>
+                <li>Academic calendar coordination requirements</li>
+                <li>Student safety and accessibility compliance</li>
+                <li>Easy maintenance for large facilities</li>
+                <li>Durability for high student traffic</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Advantages -->
+      <section class="service-advantages">
+        <div class="container">
+          <h2>Why Choose Us for Warren County Projects</h2>
+          
+          <div class="advantages-content">
+            <div class="advantage-column">
+              <h3>Tourism Industry Expertise</h3>
+              <p>
+                Extensive experience with Warren County's entertainment and hospitality sector provides deep 
+                understanding of tourism industry requirements, seasonal scheduling needs, and hospitality 
+                standards that ensure successful project outcomes.
+              </p>
+              
+              <h3>Historic Preservation Specialization</h3>
+              <p>
+                Proven expertise in heritage building preservation and historic district compliance ensures 
+                appropriate solutions that respect Warren County's historic character while meeting modern 
+                performance and safety requirements.
+              </p>
+            </div>
+            
+            <div class="advantage-column">
+              <h3>Educational Facility Experience</h3>
+              <p>
+                Comprehensive experience with Warren County school districts provides understanding of educational 
+                facility requirements, including coordination with academic schedules, safety standards, and 
+                institutional maintenance protocols.
+              </p>
+              
+              <h3>County-Wide Service Coordination</h3>
+              <p>
+                Strategic positioning and resource management allows efficient service delivery throughout Warren 
+                County, with optimized logistics for seasonal projects and consistent quality standards across 
+                all county communities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Success Stories -->
+      <section class="testimonials">
+        <div class="container">
+          <h2>Warren County Customer Success Stories</h2>
+          
+          <div class="testimonials-grid">
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our hospitality facilities in the Kings Island area required flooring that could handle 
+                  massive seasonal crowds while maintaining luxury standards. The expertise and coordination 
+                  delivered exactly what we needed for successful tourism season operations."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Hospitality Manager</strong> - Kings Island District
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our school district renovation project required careful coordination across multiple buildings 
+                  and tight summer timelines. The team's educational facility experience ensured on-time 
+                  completion with excellent results for our students and staff."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Facilities Director</strong> - Warren County School District
+              </div>
+            </div>
+            
+            <div class="testimonial">
+              <div class="testimonial-content">
+                <p>
+                  "Our historic downtown Lebanon business needed flooring that would respect the building's 
+                  character while providing modern functionality. Perfect understanding of historic preservation 
+                  requirements with outstanding craftsmanship."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <strong>Business Owner</strong> - Lebanon Historic District
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <div class="contact-content">
+            <div class="contact-info">
+              <h2>Professional Floor Coating Throughout Warren County</h2>
+              <p>
+                Ready to enhance your Warren County property with professional floor coating solutions? 
+                Contact our county-wide service team for your comprehensive consultation.
+              </p>
+              
+              <div class="contact-details">
+                <div class="contact-item">
+                  <strong>Phone:</strong> (513) 555-0123
+                </div>
+                <div class="contact-item">
+                  <strong>Email:</strong> info@queencitysurface.com
+                </div>
+                <div class="contact-item">
+                  <strong>Service Area:</strong> All of Warren County, Ohio
+                </div>
+                <div class="contact-item">
+                  <strong>Business Hours:</strong> Monday-Saturday 7AM-7PM
+                </div>
+              </div>
+              
+              <div class="service-promise">
+                <h3>Our Warren County Service Commitment</h3>
+                <ul>
+                  <li>Free estimates county-wide with tourism industry expertise</li>
+                  <li>Historic preservation and heritage building specialization</li>
+                  <li>Licensed and insured throughout Ohio</li>
+                  <li>Complete warranty coverage for all county projects</li>
+                  <li>Warren County's entertainment industry flooring specialists</li>
+                  <li>Flexible scheduling for seasonal and educational requirements</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <Footer 
+      footerLists={footerLists}
+      footerSocials={footerSocials}
+      copyrightName={settings.name}
+    >
+      <Logo slot="logo" />
+    </Footer>
+    
+    <!-- Schema Markup for Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Queen City Surface Coatings",
+      "image": "https://queencitysurfacecoatings.com/images/logo.png",
+      "description": "Professional floor coating services throughout Warren County, OH. Comprehensive coverage from Lebanon to Mason with expert epoxy and concrete solutions for all county communities.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Warren County, OH",
+        "addressCountry": "US"
+      },
+      "telephone": "(513) 555-0123",
+      "email": "info@queencitysurface.com",
+      "url": "https://queencitysurfacecoatings.com/service-areas/ohio/warren-county-floor-coating",
+      "serviceArea": {
+        "@type": "AdministrativeArea",
+        "name": "Warren County, OH"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Warren County Floor Coating Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entertainment Industry Flooring",
+              "description": "Professional floor coatings for Warren County's tourism and entertainment facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Historic Preservation Coatings",
+              "description": "Specialized floor coatings for Warren County historic districts and heritage buildings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Educational Facility Flooring",
+              "description": "Professional floor coating solutions for Warren County schools and educational facilities"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Residential Community Coatings",
+              "description": "Custom floor coatings for Warren County homes and residential developments"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "278",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+  </body>
+</html>

@@ -29,18 +29,17 @@
 	--theme-text-secondary: #333333; /* Charcoal for body text */
 	--theme-text-muted: #6C757D; /* Gray for secondary text */
 
-	/* Theme Shapes - Refined for premium feel */
-	--theme-shape-radius: 8px; /* Consistent rounded corners */
-	--theme-button-border-radius: 8px; /* Rounded corners as specified */
-	--theme-card-radius: 12px; /* Slightly larger radius for cards */
+	/* Theme Shapes */
+	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
+	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
+	--theme-button-border-radius: 3rem;
 
 	/* Theme Transition */
 	--theme-transition: 0.2s ease-in-out;
 
-	/* Theme Layout - Enhanced spacing for breathing room */
-	--section-margin: 5rem; /* Increased from 3rem to 5rem for more breathing room */
-	--section-padding: 5rem 0; /* 80px equivalent for section padding */
-	--theme-grid-gap: 1.5rem; /* Increased gap for better spacing */
+	/* Theme Layout */
+	--section-margin: 3rem;
+	--theme-grid-gap: 1rem;
 	--container-max-width: 1440px;
 	--container-max-width-narrow: 960px;
 	--container-padding: 0 1rem;

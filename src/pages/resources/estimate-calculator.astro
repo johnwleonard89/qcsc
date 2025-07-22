@@ -56,8 +56,48 @@ const seo = {
 					<button type="button" onclick="calculateEstimate()" class="btn btn-primary">Calculate Estimate</button>
 				</form>
 
+				<div id="contactForm" class="contact-form-section" style="display: none;">
+					<h3>Get Your Detailed Estimate</h3>
+					<p>To receive your detailed estimate and additional project information, please provide your contact details:</p>
+					<form id="contactInfoForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="firstName">First Name:</label>
+								<input type="text" id="firstName" required>
+							</div>
+							<div class="form-group">
+								<label for="lastName">Last Name:</label>
+								<input type="text" id="lastName" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email">Email Address:</label>
+							<input type="email" id="email" required>
+						</div>
+						<div class="form-group">
+							<label for="phone">Phone Number:</label>
+							<input type="tel" id="phone" required>
+						</div>
+						<button type="button" onclick="submitContactInfo()" class="btn btn-primary">Get My Estimate</button>
+					</form>
+				</div>
+
 				<div id="estimateResults" class="results-section" style="display: none;">
-					<h3>Estimated Project Cost</h3>
+					<h3>Your Estimated Project Cost</h3>
+					<div class="project-details">
+						<div class="detail-item">
+							<span class="detail-label">Project Type:</span>
+							<span class="detail-value" id="projectTypeDisplay"></span>
+						</div>
+						<div class="detail-item">
+							<span class="detail-label">Square Footage:</span>
+							<span class="detail-value" id="squareFootageDisplay"></span>
+						</div>
+						<div class="detail-item">
+							<span class="detail-label">Surface Condition:</span>
+							<span class="detail-value" id="conditionDisplay"></span>
+						</div>
+					</div>
 					<div class="cost-breakdown">
 						<div class="cost-item">
 							<span class="cost-label">Material Costs:</span>
@@ -72,11 +112,22 @@ const seo = {
 							<span class="cost-value" id="totalCost">$0</span>
 						</div>
 					</div>
+					<div class="next-steps">
+						<h4>What's Next?</h4>
+						<ul>
+							<li>Our team will contact you within 24 hours to schedule a free on-site consultation</li>
+							<li>We'll assess your specific site conditions and requirements</li>
+							<li>You'll receive a detailed written quote with material specifications</li>
+							<li>We'll answer any questions about the process and timeline</li>
+						</ul>
+					</div>
 					<p class="disclaimer">
-						*This is a rough estimate only. Actual costs may vary based on specific project requirements, 
-						site conditions, and chosen finishes. Contact us for a detailed, accurate quote.
+						*This is a rough estimate only. Your final quote may vary based on specific project requirements, 
+						site conditions, and chosen finishes.
 					</p>
-					<a href="/company/contact/" class="btn btn-outline">Get Detailed Quote</a>
+					<div class="contact-info">
+						<p><strong>Questions? Call us at (513) 555-0123</strong></p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -84,6 +135,8 @@ const seo = {
 </Layout>
 
 <script>
+let calculatedEstimate = null;
+
 function calculateEstimate() {
 	const projectType = document.getElementById('projectType').value;
 	const squareFootage = parseInt(document.getElementById('squareFootage').value);
@@ -119,11 +172,66 @@ function calculateEstimate() {
 	const laborCost = Math.round(squareFootage * totalRate * 0.6);
 	const totalCost = materialCost + laborCost;
 
-	// Display results
-	document.getElementById('materialCost').textContent = `$${materialCost.toLocaleString()}`;
-	document.getElementById('laborCost').textContent = `$${laborCost.toLocaleString()}`;
-	document.getElementById('totalCost').textContent = `$${totalCost.toLocaleString()}`;
+	// Store the estimate data
+	calculatedEstimate = {
+		projectType,
+		squareFootage,
+		condition,
+		materialCost,
+		laborCost,
+		totalCost
+	};
+
+	// Show contact form
+	document.getElementById('contactForm').style.display = 'block';
+	document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+}
+
+function submitContactInfo() {
+	const firstName = document.getElementById('firstName').value;
+	const lastName = document.getElementById('lastName').value;
+	const email = document.getElementById('email').value;
+	const phone = document.getElementById('phone').value;
+
+	if (!firstName || !lastName || !email || !phone) {
+		alert('Please fill in all contact fields');
+		return;
+	}
+
+	// Hide contact form and display results
+	document.getElementById('contactForm').style.display = 'none';
+
+	// Display project details
+	const projectTypeLabels = {
+		garage: 'Garage Floor Coating',
+		basement: 'Basement Floor Coating',
+		commercial: 'Commercial Flooring',
+		metallic: 'Metallic Epoxy',
+		polyaspartic: 'Polyaspartic Coating'
+	};
+
+	const conditionLabels = {
+		excellent: 'Excellent (minimal prep needed)',
+		good: 'Good (standard prep required)',
+		fair: 'Fair (moderate repair needed)',
+		poor: 'Poor (extensive prep required)'
+	};
+
+	document.getElementById('projectTypeDisplay').textContent = projectTypeLabels[calculatedEstimate.projectType];
+	document.getElementById('squareFootageDisplay').textContent = `${calculatedEstimate.squareFootage} sq ft`;
+	document.getElementById('conditionDisplay').textContent = conditionLabels[calculatedEstimate.condition];
+
+	// Display cost breakdown
+	document.getElementById('materialCost').textContent = `$${calculatedEstimate.materialCost.toLocaleString()}`;
+	document.getElementById('laborCost').textContent = `$${calculatedEstimate.laborCost.toLocaleString()}`;
+	document.getElementById('totalCost').textContent = `$${calculatedEstimate.totalCost.toLocaleString()}`;
+
+	// Show results
 	document.getElementById('estimateResults').style.display = 'block';
+	document.getElementById('estimateResults').scrollIntoView({ behavior: 'smooth' });
+
+	// Here you could send the data to your backend/CRM
+	// sendToBackend({ contact: { firstName, lastName, email, phone }, estimate: calculatedEstimate });
 }
 </script>
 
@@ -167,11 +275,83 @@ function calculateEstimate() {
 	border-color: var(--theme-primary);
 }
 
+.contact-form-section {
+	padding: 2rem;
+	background: var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+	margin-top: 2rem;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
 .results-section {
 	padding: 2rem;
 	background: var(--theme-bg);
 	border-radius: var(--theme-shape-radius);
 	border: 2px solid var(--theme-primary);
+	margin-top: 2rem;
+}
+
+.project-details {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+	margin-bottom: 1.5rem;
+}
+
+.detail-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.detail-item:last-child {
+	border-bottom: none;
+}
+
+.detail-label {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+.detail-value {
+	color: var(--theme-on-surface-1);
+}
+
+.next-steps {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+	margin: 1.5rem 0;
+}
+
+.next-steps h4 {
+	margin: 0 0 1rem 0;
+	color: var(--theme-primary);
+}
+
+.next-steps ul {
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+.next-steps li {
+	margin-bottom: 0.5rem;
+	color: var(--theme-on-surface-1);
+}
+
+.contact-info {
+	text-align: center;
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	padding: 1rem;
+	border-radius: 0.375rem;
+	margin-top: 1rem;
 }
 
 .cost-breakdown {
@@ -230,5 +410,11 @@ function calculateEstimate() {
 
 .btn:hover {
 	transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+	.form-row {
+		grid-template-columns: 1fr;
+	}
 }
 </style>

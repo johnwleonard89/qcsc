@@ -66,8 +66,52 @@ const seo = {
 				</form>
 			</div>
 
+			<div id="contactForm" class="contact-form-section" style="display: none;">
+				<h3>Get Your Detailed Project Timeline</h3>
+				<p>To receive your detailed project timeline and schedule a consultation, please provide your contact details:</p>
+				<form id="contactInfoForm">
+					<div class="form-row">
+						<div class="form-group">
+							<label for="firstName">First Name:</label>
+							<input type="text" id="firstName" required>
+						</div>
+						<div class="form-group">
+							<label for="lastName">Last Name:</label>
+							<input type="text" id="lastName" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email">Email Address:</label>
+						<input type="email" id="email" required>
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone Number:</label>
+						<input type="tel" id="phone" required>
+					</div>
+					<button type="button" onclick="submitContactInfo()" class="btn btn-primary">Get My Timeline</button>
+				</form>
+			</div>
+
 			<div id="timelineResults" class="timeline-results" style="display: none;">
 				<h3>Your Project Timeline</h3>
+				<div class="project-summary">
+					<div class="summary-item">
+						<span class="summary-label">Project Size:</span>
+						<span class="summary-value" id="projectSizeDisplay"></span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Coating Type:</span>
+						<span class="summary-value" id="coatingTypeDisplay"></span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Surface Condition:</span>
+						<span class="summary-value" id="surfaceConditionDisplay"></span>
+					</div>
+					<div class="summary-item">
+						<span class="summary-label">Start Date:</span>
+						<span class="summary-value" id="startDateDisplay"></span>
+					</div>
+				</div>
 				<div id="timelinePhases" class="timeline-phases">
 					<!-- Timeline phases will be populated by JavaScript -->
 				</div>
@@ -75,16 +119,29 @@ const seo = {
 					<p><strong>Total Project Duration: <span id="totalDuration"></span></strong></p>
 					<p><strong>Estimated Completion: <span id="completionDate"></span></strong></p>
 				</div>
+				<div class="next-steps">
+					<h4>What's Next?</h4>
+					<ul>
+						<li>Our project manager will contact you within 24 hours to confirm your timeline</li>
+						<li>We'll schedule a free on-site consultation to assess specific conditions</li>
+						<li>You'll receive a detailed project schedule with backup dates</li>
+						<li>We'll coordinate with you on any site preparation requirements</li>
+					</ul>
+				</div>
 				<div class="timeline-note">
 					<p><em>Note: Weather conditions, surface complications, and seasonal factors may affect the actual timeline. We'll provide a detailed schedule during your consultation.</em></p>
 				</div>
-				<a href="/company/contact/" class="btn btn-primary">Schedule Consultation</a>
+				<div class="contact-info">
+					<p><strong>Questions? Call us at (513) 555-0123</strong></p>
+				</div>
 			</div>
 		</section>
 	</Container>
 </Layout>
 
 <script>
+let calculatedTimeline = null;
+
 function updateTimeline() {
 	const projectSize = document.getElementById('projectSize').value;
 	const coatingType = document.getElementById('coatingType').value;
@@ -92,6 +149,7 @@ function updateTimeline() {
 	const startDate = document.getElementById('startDate').value;
 
 	if (!projectSize || !coatingType || !surfaceCondition || !startDate) {
+		document.getElementById('contactForm').style.display = 'none';
 		document.getElementById('timelineResults').style.display = 'none';
 		return;
 	}
@@ -100,9 +158,69 @@ function updateTimeline() {
 	const timeline = calculateProjectTimeline(projectSize, coatingType, surfaceCondition);
 	const phases = generateTimelinePhases(timeline, new Date(startDate));
 
-	// Display results
-	displayTimeline(phases, timeline.totalDays);
+	// Store the timeline data
+	calculatedTimeline = {
+		projectSize,
+		coatingType,
+		surfaceCondition,
+		startDate,
+		timeline,
+		phases
+	};
+
+	// Show contact form
+	document.getElementById('contactForm').style.display = 'block';
+	document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+}
+
+function submitContactInfo() {
+	const firstName = document.getElementById('firstName').value;
+	const lastName = document.getElementById('lastName').value;
+	const email = document.getElementById('email').value;
+	const phone = document.getElementById('phone').value;
+
+	if (!firstName || !lastName || !email || !phone) {
+		alert('Please fill in all contact fields');
+		return;
+	}
+
+	// Hide contact form and display results
+	document.getElementById('contactForm').style.display = 'none';
+
+	// Display project summary
+	const projectSizeLabels = {
+		small: 'Small (Under 500 sq ft)',
+		medium: 'Medium (500-1,500 sq ft)',
+		large: 'Large (1,500-3,000 sq ft)',
+		xlarge: 'Extra Large (Over 3,000 sq ft)'
+	};
+
+	const coatingTypeLabels = {
+		standard: 'Standard Epoxy',
+		metallic: 'Metallic Epoxy',
+		polyaspartic: 'Polyaspartic',
+		polyurea: 'Polyurea'
+	};
+
+	const conditionLabels = {
+		excellent: 'Excellent (minimal prep)',
+		good: 'Good (standard prep)',
+		fair: 'Fair (moderate repair)',
+		poor: 'Poor (extensive prep)'
+	};
+
+	document.getElementById('projectSizeDisplay').textContent = projectSizeLabels[calculatedTimeline.projectSize];
+	document.getElementById('coatingTypeDisplay').textContent = coatingTypeLabels[calculatedTimeline.coatingType];
+	document.getElementById('surfaceConditionDisplay').textContent = conditionLabels[calculatedTimeline.surfaceCondition];
+	document.getElementById('startDateDisplay').textContent = new Date(calculatedTimeline.startDate).toLocaleDateString();
+
+	// Display timeline results
+	displayTimeline(calculatedTimeline.phases, calculatedTimeline.timeline.totalDays);
 	document.getElementById('timelineResults').style.display = 'block';
+	document.getElementById('timelineResults').scrollIntoView({ behavior: 'smooth' });
+
+	// Here you could send the data to your backend/CRM
+	// sendToBackend({ contact: { firstName, lastName, email, phone }, timeline: calculatedTimeline });
 }
 
 function calculateProjectTimeline(size, coating, condition) {
@@ -248,11 +366,85 @@ function displayTimeline(phases, totalDays) {
 	background: var(--theme-bg);
 }
 
+.contact-form-section {
+	padding: 2rem;
+	background: var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+	margin-top: 2rem;
+	grid-column: 1 / -1;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+}
+
 .timeline-results {
 	padding: 2rem;
 	background: var(--theme-bg);
 	border-radius: var(--theme-shape-radius);
 	border: 2px solid var(--theme-primary);
+	grid-column: 1 / -1;
+	margin-top: 2rem;
+}
+
+.project-summary {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+	margin-bottom: 1.5rem;
+}
+
+.summary-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.summary-item:last-child {
+	border-bottom: none;
+}
+
+.summary-label {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+.summary-value {
+	color: var(--theme-on-surface-1);
+}
+
+.next-steps {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.375rem;
+	margin: 1.5rem 0;
+}
+
+.next-steps h4 {
+	margin: 0 0 1rem 0;
+	color: var(--theme-primary);
+}
+
+.next-steps ul {
+	margin: 0;
+	padding-left: 1.5rem;
+}
+
+.next-steps li {
+	margin-bottom: 0.5rem;
+	color: var(--theme-on-surface-1);
+}
+
+.contact-info {
+	text-align: center;
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	padding: 1rem;
+	border-radius: 0.375rem;
+	margin-top: 1rem;
 }
 
 .timeline-phases {
@@ -334,6 +526,10 @@ function displayTimeline(phases, totalDays) {
 
 @media (max-width: 768px) {
 	.timeline-tool-section {
+		grid-template-columns: 1fr;
+	}
+	
+	.form-row {
 		grid-template-columns: 1fr;
 	}
 }

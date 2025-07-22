@@ -1,0 +1,234 @@
+---
+import { Container, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+	title: 'Free Estimate Calculator | Queen City Surface Coatings',
+	description: 'Get a rough estimate for your concrete coating project. Calculate costs for epoxy flooring, garage floor coating, and more.',
+	keywords: 'concrete coating estimate, epoxy flooring cost, garage floor coating price, project calculator',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Resources', url: 'https://queencitysurfacecoatings.com/resources/' },
+		{ name: 'Estimate Calculator', url: 'https://queencitysurfacecoatings.com/resources/estimate-calculator/' }
+	]
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<TextSection>
+			<h1>Free Estimate Calculator</h1>
+			<p>Get a rough estimate for your surface coating project. This calculator provides ballpark figures to help you plan your budget.</p>
+		</TextSection>
+
+		<section class="calculator-section">
+			<div class="calculator-container">
+				<form id="estimateCalculator" class="estimate-form">
+					<div class="form-group">
+						<label for="projectType">Project Type:</label>
+						<select id="projectType" required>
+							<option value="">Select Project Type</option>
+							<option value="garage">Garage Floor Coating</option>
+							<option value="basement">Basement Floor Coating</option>
+							<option value="commercial">Commercial Flooring</option>
+							<option value="metallic">Metallic Epoxy</option>
+							<option value="polyaspartic">Polyaspartic Coating</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="squareFootage">Square Footage:</label>
+						<input type="number" id="squareFootage" min="1" placeholder="Enter square feet" required>
+					</div>
+
+					<div class="form-group">
+						<label for="condition">Surface Condition:</label>
+						<select id="condition" required>
+							<option value="">Select Condition</option>
+							<option value="excellent">Excellent (minimal prep needed)</option>
+							<option value="good">Good (standard prep required)</option>
+							<option value="fair">Fair (moderate repair needed)</option>
+							<option value="poor">Poor (extensive prep required)</option>
+						</select>
+					</div>
+
+					<button type="button" onclick="calculateEstimate()" class="btn btn-primary">Calculate Estimate</button>
+				</form>
+
+				<div id="estimateResults" class="results-section" style="display: none;">
+					<h3>Estimated Project Cost</h3>
+					<div class="cost-breakdown">
+						<div class="cost-item">
+							<span class="cost-label">Material Costs:</span>
+							<span class="cost-value" id="materialCost">$0</span>
+						</div>
+						<div class="cost-item">
+							<span class="cost-label">Labor Costs:</span>
+							<span class="cost-value" id="laborCost">$0</span>
+						</div>
+						<div class="cost-item total">
+							<span class="cost-label">Total Estimate:</span>
+							<span class="cost-value" id="totalCost">$0</span>
+						</div>
+					</div>
+					<p class="disclaimer">
+						*This is a rough estimate only. Actual costs may vary based on specific project requirements, 
+						site conditions, and chosen finishes. Contact us for a detailed, accurate quote.
+					</p>
+					<a href="/company/contact/" class="btn btn-outline">Get Detailed Quote</a>
+				</div>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<script>
+function calculateEstimate() {
+	const projectType = document.getElementById('projectType').value;
+	const squareFootage = parseInt(document.getElementById('squareFootage').value);
+	const condition = document.getElementById('condition').value;
+
+	if (!projectType || !squareFootage || !condition) {
+		alert('Please fill in all fields');
+		return;
+	}
+
+	// Base rates per square foot
+	const rates = {
+		garage: 8,
+		basement: 7,
+		commercial: 10,
+		metallic: 15,
+		polyaspartic: 12
+	};
+
+	// Condition multipliers
+	const conditionMultipliers = {
+		excellent: 1.0,
+		good: 1.1,
+		fair: 1.3,
+		poor: 1.6
+	};
+
+	const baseRate = rates[projectType];
+	const conditionMultiplier = conditionMultipliers[condition];
+	const totalRate = baseRate * conditionMultiplier;
+
+	const materialCost = Math.round(squareFootage * totalRate * 0.4);
+	const laborCost = Math.round(squareFootage * totalRate * 0.6);
+	const totalCost = materialCost + laborCost;
+
+	// Display results
+	document.getElementById('materialCost').textContent = `$${materialCost.toLocaleString()}`;
+	document.getElementById('laborCost').textContent = `$${laborCost.toLocaleString()}`;
+	document.getElementById('totalCost').textContent = `$${totalCost.toLocaleString()}`;
+	document.getElementById('estimateResults').style.display = 'block';
+}
+</script>
+
+<style>
+.calculator-section {
+	max-width: 800px;
+	margin: 2rem auto;
+	padding: 2rem;
+	background: var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+}
+
+.estimate-form {
+	margin-bottom: 2rem;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 0.75rem;
+	border: 2px solid var(--theme-border-light);
+	border-radius: 0.375rem;
+	font-size: 1rem;
+	background: var(--theme-bg);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+	outline: none;
+	border-color: var(--theme-primary);
+}
+
+.results-section {
+	padding: 2rem;
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-primary);
+}
+
+.cost-breakdown {
+	margin: 1rem 0;
+}
+
+.cost-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.cost-item.total {
+	border-top: 2px solid var(--theme-primary);
+	border-bottom: none;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--theme-primary);
+	margin-top: 1rem;
+	padding-top: 1rem;
+}
+
+.disclaimer {
+	font-size: 0.9rem;
+	color: var(--theme-on-surface-1);
+	margin: 1rem 0;
+	font-style: italic;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.75rem 1.5rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	border: 2px solid transparent;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.btn-primary {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+</style>

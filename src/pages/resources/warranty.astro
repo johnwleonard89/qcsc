@@ -1,0 +1,445 @@
+---
+import { Container, TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+	title: 'Warranty Information | Queen City Surface Coatings',
+	description: 'Understand your concrete coating warranty coverage, terms, and what is included in our comprehensive protection plan.',
+	keywords: 'concrete coating warranty, epoxy flooring guarantee, surface coating protection, warranty terms',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Resources', url: 'https://queencitysurfacecoatings.com/resources/' },
+		{ name: 'Warranty', url: 'https://queencitysurfacecoatings.com/resources/warranty/' }
+	]
+};
+---
+
+<Layout seo={seo}>
+	<Container>
+		<TextSection>
+			<h1>Warranty Information</h1>
+			<p>At Queen City Surface Coatings, we stand behind our work with comprehensive warranty coverage. Learn about what's included and how we protect your investment.</p>
+		</TextSection>
+
+		<section class="warranty-section">
+			<!-- Warranty Overview -->
+			<div class="warranty-overview">
+				<h2>Our Warranty Promise</h2>
+				<p class="warranty-intro">
+					Every Queen City Surface Coatings installation comes with our comprehensive warranty that covers both materials and workmanship. 
+					We're committed to delivering lasting results and will stand behind our work to ensure your complete satisfaction.
+				</p>
+				
+				<div class="warranty-highlights">
+					<div class="highlight-card">
+						<div class="highlight-icon">🛡️</div>
+						<h3>Material Warranty</h3>
+						<p>Premium materials with manufacturer backing</p>
+					</div>
+					<div class="highlight-card">
+						<div class="highlight-icon">⚒️</div>
+						<h3>Workmanship Warranty</h3>
+						<p>Professional installation guarantee</p>
+					</div>
+					<div class="highlight-card">
+						<div class="highlight-icon">📞</div>
+						<h3>24/7 Support</h3>
+						<p>Always available for warranty claims</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Warranty Coverage Details -->
+			<div class="coverage-section">
+				<h2>Warranty Coverage Details</h2>
+				
+				<div class="coverage-types">
+					<div class="coverage-type">
+						<h3>Residential Warranty</h3>
+						<div class="coverage-details">
+							<div class="coverage-item">
+								<strong>Standard Epoxy Systems:</strong>
+								<span>5-Year Limited Warranty</span>
+							</div>
+							<div class="coverage-item">
+								<strong>Metallic Epoxy Systems:</strong>
+								<span>7-Year Limited Warranty</span>
+							</div>
+							<div class="coverage-item">
+								<strong>Polyaspartic Systems:</strong>
+								<span>10-Year Limited Warranty</span>
+							</div>
+							<div class="coverage-item">
+								<strong>Polyurea Systems:</strong>
+								<span>15-Year Limited Warranty</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="coverage-type">
+						<h3>Commercial Warranty</h3>
+						<div class="coverage-details">
+							<div class="coverage-item">
+								<strong>Light Commercial:</strong>
+								<span>3-5 Year Limited Warranty</span>
+							</div>
+							<div class="coverage-item">
+								<strong>Industrial Applications:</strong>
+								<span>2-3 Year Limited Warranty</span>
+							</div>
+							<div class="coverage-item">
+								<strong>High-Traffic Areas:</strong>
+								<span>1-2 Year Limited Warranty</span>
+							</div>
+						</div>
+						<p class="coverage-note">
+							<em>Commercial warranty terms vary based on usage, traffic levels, and environmental conditions.</em>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- What's Covered -->
+			<div class="covered-section">
+				<h2>What's Covered</h2>
+				<div class="coverage-grid">
+					<div class="covered-item">
+						<h4>✅ Material Defects</h4>
+						<p>Manufacturing defects in coating materials that affect performance or appearance</p>
+					</div>
+					<div class="covered-item">
+						<h4>✅ Installation Issues</h4>
+						<p>Workmanship problems including improper application, preparation, or curing</p>
+					</div>
+					<div class="covered-item">
+						<h4>✅ Adhesion Failure</h4>
+						<p>Coating separation from properly prepared substrate under normal conditions</p>
+					</div>
+					<div class="covered-item">
+						<h4>✅ Premature Wear</h4>
+						<p>Excessive wear beyond normal expectations for the coating type and usage</p>
+					</div>
+					<div class="covered-item">
+						<h4>✅ Color Fading</h4>
+						<p>Significant UV-related color changes beyond normal aging (where applicable)</p>
+					</div>
+					<div class="covered-item">
+						<h4>✅ Structural Issues</h4>
+						<p>Cracking or damage caused by installation processes</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- What's Not Covered -->
+			<div class="not-covered-section">
+				<h2>What's Not Covered</h2>
+				<div class="exclusions-grid">
+					<div class="exclusion-item">
+						<h4>❌ Substrate Issues</h4>
+						<p>Pre-existing concrete problems, settling, or structural movement</p>
+					</div>
+					<div class="exclusion-item">
+						<h4>❌ Improper Use</h4>
+						<p>Damage from misuse, abuse, or exposure to incompatible chemicals</p>
+					</div>
+					<div class="exclusion-item">
+						<h4>❌ Normal Wear</h4>
+						<p>Expected wear patterns from regular use over time</p>
+					</div>
+					<div class="exclusion-item">
+						<h4>❌ External Damage</h4>
+						<p>Impact damage, cuts, burns, or chemical spills</p>
+					</div>
+					<div class="exclusion-item">
+						<h4>❌ Maintenance Issues</h4>
+						<p>Damage from lack of proper cleaning or maintenance</p>
+					</div>
+					<div class="exclusion-item">
+						<h4>❌ Environmental Factors</h4>
+						<p>Damage from extreme weather, flooding, or acts of nature</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Warranty Claims Process -->
+			<div class="claims-process">
+				<h2>Filing a Warranty Claim</h2>
+				<div class="process-steps">
+					<div class="process-step">
+						<div class="step-number">1</div>
+						<div class="step-content">
+							<h4>Contact Us</h4>
+							<p>Call us at (513) 296-5525 or email to report the issue. Include photos and description of the problem.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">2</div>
+						<div class="step-content">
+							<h4>Inspection</h4>
+							<p>We'll schedule a site visit to assess the issue and determine if it's covered under warranty.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">3</div>
+						<div class="step-content">
+							<h4>Resolution</h4>
+							<p>If covered, we'll repair or replace the affected area at no cost to you, including materials and labor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Maintenance Requirements -->
+			<div class="maintenance-requirements">
+				<h2>Maintaining Your Warranty</h2>
+				<p>To keep your warranty valid, follow these simple maintenance requirements:</p>
+				<ul class="maintenance-list">
+					<li>Clean spills promptly to prevent staining or chemical damage</li>
+					<li>Use only recommended cleaning products and methods</li>
+					<li>Avoid dragging heavy objects across the surface</li>
+					<li>Report any issues promptly - don't wait for problems to worsen</li>
+					<li>Keep your warranty documentation and installation records</li>
+					<li>Allow annual inspections if requested (commercial installations)</li>
+				</ul>
+			</div>
+
+			<!-- Contact Information -->
+			<div class="warranty-contact">
+				<h2>Warranty Support</h2>
+				<div class="contact-info">
+					<div class="contact-method">
+						<h4>Phone Support</h4>
+						<p>(513) 296-5525</p>
+						<p>Available 24/7 for warranty claims</p>
+					</div>
+					<div class="contact-method">
+						<h4>Email Support</h4>
+						<p>warranty@queencitysurfacecoatings.com</p>
+						<p>Include photos and job details</p>
+					</div>
+					<div class="contact-method">
+						<h4>Emergency Service</h4>
+						<p>For urgent warranty issues affecting safety or causing ongoing damage</p>
+						<a href="/company/contact/" class="btn btn-primary">Emergency Contact</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+</Layout>
+
+<style>
+.warranty-section {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.warranty-overview {
+	margin-bottom: 3rem;
+	padding: 2rem;
+	background: var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+}
+
+.warranty-intro {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+	color: var(--theme-on-surface-1);
+}
+
+.warranty-highlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1.5rem;
+}
+
+.highlight-card {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	border: 2px solid var(--theme-primary);
+}
+
+.highlight-icon {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+}
+
+.coverage-section,
+.covered-section,
+.not-covered-section,
+.claims-process,
+.maintenance-requirements,
+.warranty-contact {
+	margin-bottom: 3rem;
+	padding: 2rem;
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	border: 1px solid var(--theme-surface-1);
+}
+
+.coverage-types {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 2rem;
+	margin-top: 1.5rem;
+}
+
+.coverage-type {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.coverage-details {
+	margin: 1rem 0;
+}
+
+.coverage-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.coverage-item:last-child {
+	border-bottom: none;
+}
+
+.coverage-note {
+	font-size: 0.9rem;
+	font-style: italic;
+	color: var(--theme-on-surface-1);
+	margin-top: 1rem;
+}
+
+.coverage-grid,
+.exclusions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.covered-item,
+.exclusion-item {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.covered-item h4 {
+	color: #22c55e;
+	margin-bottom: 0.5rem;
+}
+
+.exclusion-item h4 {
+	color: #ef4444;
+	margin-bottom: 0.5rem;
+}
+
+.process-steps {
+	margin-top: 1.5rem;
+}
+
+.process-step {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+	padding: 1.5rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+}
+
+.step-number {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 1.25rem;
+	flex-shrink: 0;
+}
+
+.step-content h4 {
+	margin-bottom: 0.5rem;
+	color: var(--theme-surface-2);
+}
+
+.maintenance-list {
+	list-style: none;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+.maintenance-list li {
+	padding: 0.75rem 0;
+	padding-left: 2rem;
+	position: relative;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.maintenance-list li::before {
+	content: '✓';
+	position: absolute;
+	left: 0;
+	color: var(--theme-primary);
+	font-weight: bold;
+}
+
+.contact-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-top: 1.5rem;
+}
+
+.contact-method {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	text-align: center;
+}
+
+.contact-method h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.75rem 1.5rem;
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border: none;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	margin-top: 1rem;
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+	.coverage-types {
+		grid-template-columns: 1fr;
+	}
+	
+	.process-step {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+</style>

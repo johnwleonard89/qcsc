@@ -10,8 +10,7 @@ https://www.queencitysurfacecoatings.com/* https://queencitysurfacecoatings.com/
 
 # Image optimization redirects for WebP support
 # Serve WebP if browser supports it and WebP version exists
-/assets/images/* /assets/images/:splat 200
-  Accept: image/webp
+/assets/images/*  /assets/images/:splat  200  Accept=image/webp
 
 # Legacy image redirects (if migrating from WordPress)
 /wp-content/uploads/* /assets/images/:splat 301

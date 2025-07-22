@@ -11,7 +11,7 @@ const STATIC_ASSETS = [
   '/',
   '/styles/critical.css',
   '/styles/mobile-responsive.css',
-  '/favicon.png',
+  '/images/favicon.png',
   '/offline/',
   '/manifest.json'
 ];

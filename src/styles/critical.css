@@ -3,15 +3,15 @@
 
 /* CSS Custom Properties - Critical Variables Only */
 :root {
-  /* Core Theme Colors - Royal Blue & Yellow */
-  --theme-primary: #FFD700;
-  --theme-primary-hover: #FFC107;
-  --theme-on-primary: #000;
+  /* Core Theme Colors - Queen City Surface Coatings */
+  --theme-primary: #FFC107;
+  --theme-primary-hover: #E6AC00;
+  --theme-on-primary: #fff;
   --theme-bg: #ffffff;
-  --theme-on-bg: #000;
-  --theme-surface-1: #f8fafc;
-  --theme-surface-2: #1E3A8A;
-  --theme-on-surface-1: #000;
+  --theme-on-bg: #333333;
+  --theme-surface-1: #F5F5F5;
+  --theme-surface-2: #002F4B;
+  --theme-on-surface-1: #333333;
   --theme-on-surface-2: #fff;
   
   /* Typography */

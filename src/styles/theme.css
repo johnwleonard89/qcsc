@@ -102,6 +102,7 @@
 .surface-dark,
 .trust-section,
 .contact-section,
+.credentials-section,
 [style*="background: var(--theme-surface-2)"],
 [style*="background-color: var(--theme-surface-2)"],
 [class*="surface-2"] {

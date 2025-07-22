@@ -10,6 +10,7 @@ const { navData, rightMenu } = Astro.props;
   const menuButtonIconHam = document.querySelector('#menuButtonIconHam');
   const menuButtonIconClose = document.querySelector('#menuButtonIconClose');
   let scrollPosition = 0;
+  let lastScrollTop = 0;
 
   menuButton.addEventListener('click', toggleMenu)
 
@@ -37,6 +38,31 @@ const { navData, rightMenu } = Astro.props;
     
     navHeader.toggleAttribute('mobile-menu-open');
   }
+
+  // Sticky header functionality
+  function handleScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > 100) {
+      navHeader.classList.add('header--sticky');
+    } else {
+      navHeader.classList.remove('header--sticky');
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }
+
+  // Throttle scroll events for better performance
+  let ticking = false;
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(handleScroll);
+      ticking = true;
+      setTimeout(() => ticking = false, 16);
+    }
+  }
+
+  window.addEventListener('scroll', requestTick);
 </script>  
 
 <header id="odysseyNavHeader" class={`${rightMenu ? "header--right" : ``.trim()}`}>
@@ -78,6 +104,34 @@ const { navData, rightMenu } = Astro.props;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--theme-bg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+  }
+
+  /* Sticky header styles */
+  header.header--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--theme-border-light);
+    box-shadow: var(--theme-shadow-light);
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
   header.header--right {
     display: grid;

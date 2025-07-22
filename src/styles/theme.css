@@ -1,64 +1,124 @@
 :root {
-	/* Theme Colors - Queen City Surface Coatings */
-	--theme-primary: #FFD700; /* Royal Yellow/Gold */
-	--theme-primary-hover: #FFC107; /* Darker yellow on hover */
+	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
+	--theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
+	--theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
 	--theme-on-primary: #fff;
 
+	/* Navy - Primary headers and trustworthy elements */
+	--theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
+	--theme-navy-light: #003B5C; /* Lighter navy for hover states */
+	--theme-navy-dark: #001A2E; /* Darker navy for emphasis */
+
+	/* Backgrounds and surfaces */
 	--theme-bg: #fff;
-	--theme-on-bg: #000;
+	--theme-on-bg: #333333; /* Charcoal for better readability */
 
-	--theme-surface-1: #f8fafc; /* Light gray background */
-	--theme-on-surface-1: #000;
+	--theme-surface-1: #F5F5F5; /* Cool Gray - clean backdrop */
+	--theme-on-surface-1: #333333;
 
-	--theme-surface-2: #1E3A8A; /* Royal Blue */
+	--theme-surface-2: #002F4B; /* Navy background for contrast sections */
 	--theme-on-surface-2: #fff;
 
-	/* Theme Shapes */
-	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
-	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
-	--theme-button-border-radius: 3rem;
+	/* Additional grays for hierarchy */
+	--theme-gray-light: #F8F9FA;
+	--theme-gray-medium: #E9ECEF;
+	--theme-gray-dark: #6C757D;
+
+	/* Text colors */
+	--theme-text-primary: #002F4B; /* Navy for headings */
+	--theme-text-secondary: #333333; /* Charcoal for body text */
+	--theme-text-muted: #6C757D; /* Gray for secondary text */
+
+	/* Theme Shapes - Refined for premium feel */
+	--theme-shape-radius: 8px; /* Consistent rounded corners */
+	--theme-button-border-radius: 8px; /* Rounded corners as specified */
+	--theme-card-radius: 12px; /* Slightly larger radius for cards */
 
 	/* Theme Transition */
 	--theme-transition: 0.2s ease-in-out;
 
-	/* Theme Layout */
-	--section-margin: 3rem;
-	--theme-grid-gap: 1rem;
+	/* Theme Layout - Enhanced spacing for breathing room */
+	--section-margin: 5rem; /* Increased from 3rem to 5rem for more breathing room */
+	--section-padding: 5rem 0; /* 80px equivalent for section padding */
+	--theme-grid-gap: 1.5rem; /* Increased gap for better spacing */
 	--container-max-width: 1440px;
 	--container-max-width-narrow: 960px;
 	--container-padding: 0 1rem;
 
 	--theme-blog-post-header-width: 1200px;
 
-	/* Theme Shadows & Transparency */
-	--theme-shadow-light: rgba(0, 0, 0, 0.1);
-	--theme-shadow-medium: rgba(0, 0, 0, 0.15);
-	--theme-shadow-dark: rgba(0, 0, 0, 0.3);
-	--theme-border-light: rgba(0, 0, 0, 0.05);
-	--theme-overlay: rgba(0, 0, 0, 0.5);
+	/* Theme Shadows & Transparency - Enhanced for depth */
+	--theme-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle card shadow */
+	--theme-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.1); /* Medium elevation */
+	--theme-shadow-dark: 0 16px 32px rgba(0, 0, 0, 0.15); /* High elevation */
+	--theme-border-light: rgba(0, 0, 0, 0.08);
+	--theme-overlay: rgba(0, 47, 75, 0.6); /* Navy-tinted overlay for hero images */
 
-	/* Theme Fonts */
-	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
-		Times, serif;
-	--theme-font-family-sans: 'Lato', 'Open Sans', -apple-system, BlinkMacSystemFont,
-		sans-serif;
+	/* Interactive states */
+	--theme-hover-scale: 1.05; /* Micro-animation scale for hover */
+	--theme-transition-fast: 0.15s ease-out;
+	--theme-transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* Theme Fonts - Typography Scale */
+	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+	--theme-font-family-sans: 'Lato', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+	--theme-font-family-headings: 'Montserrat', 'Lato', sans-serif; /* Strong sans-serif for headings */
+
+	/* Typography Scale - Consistent sizing */
+	--font-size-h1: 48px; /* Large headings */
+	--font-size-h2: 36px; /* Section headings */
+	--font-size-h3: 28px; /* Subsection headings */
+	--font-size-h4: 24px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--font-size-body: 16px; /* Body text */
+	--font-size-small: 14px;
+	--font-size-xs: 12px;
+
+	/* Line heights */
+	--line-height-tight: 1.2;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.6; /* For paragraphs - airy and readable */
+
+	/* Font weights */
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
 }
 
 [data-theme='default'] {
 	color-scheme: light;
-	/* Theme Colors - Queen City Surface Coatings */
-	--theme-primary: #FFD700; /* Royal Yellow/Gold */
-	--theme-primary-hover: #FFC107; /* Darker yellow on hover */
+	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
+	--theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
+	--theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
 	--theme-on-primary: #fff;
 
+	/* Navy - Primary headers and trustworthy elements */
+	--theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
+	--theme-navy-light: #003B5C; /* Lighter navy for hover states */
+	--theme-navy-dark: #001A2E; /* Darker navy for emphasis */
+
+	/* Backgrounds and surfaces */
 	--theme-bg: #fff;
-	--theme-on-bg: #000;
+	--theme-on-bg: #333333; /* Charcoal for better readability */
 
-	--theme-surface-1: #f8fafc; /* Light gray background */
-	--theme-on-surface-1: #000;
+	--theme-surface-1: #F5F5F5; /* Cool Gray - clean backdrop */
+	--theme-on-surface-1: #333333;
 
-	--theme-surface-2: #1E3A8A; /* Royal Blue */
+	--theme-surface-2: #002F4B; /* Navy background for contrast sections */
 	--theme-on-surface-2: #fff;
+
+	/* Additional grays for hierarchy */
+	--theme-gray-light: #F8F9FA;
+	--theme-gray-medium: #E9ECEF;
+	--theme-gray-dark: #6C757D;
+
+	/* Text colors */
+	--theme-text-primary: #002F4B; /* Navy for headings */
+	--theme-text-secondary: #333333; /* Charcoal for body text */
+	--theme-text-muted: #6C757D; /* Gray for secondary text */
 
 	/* Theme Shape */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */

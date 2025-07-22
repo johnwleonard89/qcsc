@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Your Free Quote - Advanced Contact & Project Calculator | Queen City Surface Coatings</title>
+    <meta name="description" content="Get instant quotes for epoxy flooring projects. Upload photos, calculate costs, and schedule consultations. Professional floor coating estimates in Cincinnati, OH." />
+    <meta name="keywords" content="epoxy flooring quote, floor coating calculator, free estimate Cincinnati, garage floor quote, basement flooring cost" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Get Your Free Epoxy Flooring Quote" />
+    <meta property="og:description" content="Instant quote calculator and multi-step contact form for professional floor coating services." />
+    <meta property="og:image" content="https://queencitysurfacecoatings.com/images/contact-hero.jpg" />
+    <meta property="og:url" content="https://queencitysurfacecoatings.com/contact-advanced" />
+    <meta property="og:type" content="website" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #2c5530 0%, #1a3d1f 100%);
+            color: white;
+            padding: 4rem 2rem;
+            margin: -2rem -2rem 3rem;
+            border-radius: 0 0 20px 20px;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+        
+        .multi-step-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-step {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+            position: relative;
+        }
+        
+        .progress-step::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background: #e9ecef;
+            z-index: 1;
+        }
+        
+        .progress-step:last-child::after {
+            display: none;
+        }
+        
+        .progress-step.active::after {
+            background: #2c5530;
+        }
+        
+        .progress-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #6c757d;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .progress-step.active .progress-circle {
+            background: #2c5530;
+            color: white;
+        }
+        
+        .progress-step.completed .progress-circle {
+            background: #28a745;
+            color: white;
+        }
+        
+        .progress-label {
+            font-size: 0.8rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+        
+        .progress-step.active .progress-label {
+            color: #2c5530;
+            font-weight: 600;
+        }
+        
+        .form-step {
+            display: none;
+            animation: slideIn 0.3s ease-in-out;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .step-title {
+            font-size: 1.5rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #2c5530;
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .project-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .project-type-option {
+            position: relative;
+        }
+        
+        .project-type-input {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .project-type-label {
+            display: block;
+            padding: 1rem;
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .project-type-input:checked + .project-type-label {
+            background: #2c5530;
+            color: white;
+            border-color: #2c5530;
+        }
+        
+        .project-type-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .square-footage-slider {
+            margin: 1rem 0;
+        }
+        
+        .slider-input {
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+            background: #e9ecef;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .slider-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #2c5530;
+            cursor: pointer;
+        }
+        
+        .slider-value {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .file-upload {
+            border: 2px dashed #e9ecef;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+        
+        .file-upload:hover {
+            border-color: #2c5530;
+        }
+        
+        .file-upload-icon {
+            font-size: 3rem;
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        
+        .file-upload-text {
+            color: #6c757d;
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-list {
+            margin-top: 1rem;
+        }
+        
+        .file-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .file-name {
+            font-weight: 500;
+        }
+        
+        .file-remove {
+            color: #dc3545;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: #2c5530;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #1a3d1f;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+            flex: 1;
+        }
+        
+        .btn-success:hover {
+            background: #218838;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .quote-calculator {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .calculator-title {
+            font-size: 1.3rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .cost-breakdown {
+            margin: 1rem 0;
+        }
+        
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .cost-item:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            color: #2c5530;
+            font-size: 1.1rem;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #2c5530;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .trust-indicators {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .trust-item {
+            padding: 1rem;
+        }
+        
+        .trust-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2c5530;
+            display: block;
+        }
+        
+        .trust-label {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .calendar-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .calendar-title {
+            font-size: 1.3rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.25rem;
+            margin: 1rem 0;
+        }
+        
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .calendar-day:hover {
+            background: #f8f9fa;
+        }
+        
+        .calendar-day.available {
+            background: #e8f5e8;
+            color: #2c5530;
+            font-weight: 600;
+        }
+        
+        .calendar-day.selected {
+            background: #2c5530;
+            color: white;
+        }
+        
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .time-slot {
+            padding: 0.5rem;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .time-slot:hover {
+            background: #f8f9fa;
+        }
+        
+        .time-slot.selected {
+            background: #2c5530;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .form-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .progress-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .progress-step::after {
+                display: none;
+            }
+            
+            .project-type-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+        
+        .success-title {
+            font-size: 2rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .success-text {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact-container">
+        <div class="hero-section">
+            <h1 class="hero-title">Get Your Free Quote</h1>
+            <p class="hero-subtitle">Professional epoxy flooring estimates with instant calculations, photo uploads, and easy scheduling</p>
+        </div>
+
+        <div class="form-container">
+            <div class="multi-step-form" id="contactForm">
+                <!-- Progress Bar -->
+                <div class="progress-bar">
+                    <div class="progress-step active" data-step="1">
+                        <div class="progress-circle">1</div>
+                        <div class="progress-label">Project Type</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="progress-circle">2</div>
+                        <div class="progress-label">Details</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="progress-circle">3</div>
+                        <div class="progress-label">Photos</div>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="progress-circle">4</div>
+                        <div class="progress-label">Contact Info</div>
+                    </div>
+                    <div class="progress-step" data-step="5">
+                        <div class="progress-circle">5</div>
+                        <div class="progress-label">Schedule</div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Project Type -->
+                <div class="form-step active" data-step="1">
+                    <h2 class="step-title">What type of project do you have?</h2>
+                    <div class="project-type-grid">
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="garage" id="garage" class="project-type-input">
+                            <label for="garage" class="project-type-label">
+                                <span class="project-type-icon">🚗</span>
+                                Garage Floor
+                            </label>
+                        </div>
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="basement" id="basement" class="project-type-input">
+                            <label for="basement" class="project-type-label">
+                                <span class="project-type-icon">🏠</span>
+                                Basement
+                            </label>
+                        </div>
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="commercial" id="commercial" class="project-type-input">
+                            <label for="commercial" class="project-type-label">
+                                <span class="project-type-icon">🏢</span>
+                                Commercial
+                            </label>
+                        </div>
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="warehouse" id="warehouse" class="project-type-input">
+                            <label for="warehouse" class="project-type-label">
+                                <span class="project-type-icon">🏭</span>
+                                Warehouse
+                            </label>
+                        </div>
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="patio" id="patio" class="project-type-input">
+                            <label for="patio" class="project-type-label">
+                                <span class="project-type-icon">🌿</span>
+                                Patio/Deck
+                            </label>
+                        </div>
+                        <div class="project-type-option">
+                            <input type="radio" name="projectType" value="other" id="other" class="project-type-input">
+                            <label for="other" class="project-type-label">
+                                <span class="project-type-icon">❓</span>
+                                Other
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Project Details -->
+                <div class="form-step" data-step="2">
+                    <h2 class="step-title">Tell us about your project</h2>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Square Footage</label>
+                        <div class="square-footage-slider">
+                            <input type="range" min="100" max="5000" value="500" class="slider-input" id="squareFootage">
+                            <div class="slider-value">
+                                <span>100 sq ft</span>
+                                <span id="squareFootageValue">500 sq ft</span>
+                                <span>5,000+ sq ft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currentCondition" class="form-label">Current Floor Condition</label>
+                        <select id="currentCondition" class="form-select" name="currentCondition">
+                            <option value="">Select condition...</option>
+                            <option value="new-concrete">New Concrete</option>
+                            <option value="good-condition">Good Condition</option>
+                            <option value="minor-cracks">Minor Cracks/Wear</option>
+                            <option value="major-damage">Major Damage/Stains</option>
+                            <option value="existing-coating">Has Existing Coating</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="desiredFinish" class="form-label">Desired Finish</label>
+                        <select id="desiredFinish" class="form-select" name="desiredFinish">
+                            <option value="">Select finish...</option>
+                            <option value="solid-color">Solid Color</option>
+                            <option value="decorative-flakes">Decorative Flakes</option>
+                            <option value="metallic">Metallic/Pearl</option>
+                            <option value="high-gloss">High Gloss</option>
+                            <option value="slip-resistant">Slip Resistant</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timeline" class="form-label">Preferred Timeline</label>
+                        <select id="timeline" class="form-select" name="timeline">
+                            <option value="">Select timeline...</option>
+                            <option value="asap">ASAP</option>
+                            <option value="1-2-weeks">1-2 Weeks</option>
+                            <option value="1-month">Within 1 Month</option>
+                            <option value="2-3-months">2-3 Months</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 3: Photo Upload -->
+                <div class="form-step" data-step="3">
+                    <h2 class="step-title">Upload project photos (optional)</h2>
+                    <p>Photos help us provide more accurate estimates</p>
+                    
+                    <div class="file-upload" id="fileUpload">
+                        <div class="file-upload-icon">📷</div>
+                        <div class="file-upload-text">Click to upload photos or drag and drop</div>
+                        <div style="font-size: 0.8rem; color: #999;">Support: JPG, PNG, PDF up to 10MB each</div>
+                        <input type="file" id="fileInput" multiple accept="image/*,.pdf" style="display: none;">
+                    </div>
+                    
+                    <div class="file-list" id="fileList"></div>
+                </div>
+
+                <!-- Step 4: Contact Information -->
+                <div class="form-step" data-step="4">
+                    <h2 class="step-title">Contact Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address" class="form-label">Project Address</label>
+                        <input type="text" id="address" name="address" class="form-input" placeholder="Street address, City, State">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="additionalInfo" class="form-label">Additional Information</label>
+                        <textarea id="additionalInfo" name="additionalInfo" class="form-textarea" placeholder="Any specific requirements, concerns, or questions?"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 5: Schedule Consultation -->
+                <div class="form-step" data-step="5">
+                    <h2 class="step-title">Schedule Your Free Consultation</h2>
+                    <p>Choose your preferred date and time for an on-site visit</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Preferred Contact Method</label>
+                        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="contactMethod" value="phone" checked>
+                                Phone Call
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="contactMethod" value="email">
+                                Email
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="radio" name="contactMethod" value="text">
+                                Text Message
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Best Time to Contact</label>
+                        <select class="form-select" name="bestTime">
+                            <option value="morning">Morning (8am - 12pm)</option>
+                            <option value="afternoon" selected>Afternoon (12pm - 5pm)</option>
+                            <option value="evening">Evening (5pm - 8pm)</option>
+                            <option value="anytime">Anytime</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Form Navigation -->
+                <div class="form-buttons">
+                    <button type="button" id="prevBtn" class="btn btn-secondary" style="display: none;">Previous</button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">Next</button>
+                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">Get My Free Quote</button>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">✅</div>
+                    <h2 class="success-title">Thank You!</h2>
+                    <p class="success-text">Your quote request has been submitted. We'll contact you within 2 hours during business hours with your estimate and to schedule your free consultation.</p>
+                    <button type="button" class="btn btn-primary" onclick="resetForm()">Submit Another Quote</button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <!-- Quote Calculator -->
+                <div class="quote-calculator">
+                    <h3 class="calculator-title">💰 Instant Quote Estimate</h3>
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span>Base Cost:</span>
+                            <span id="baseCost">$0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Prep Work:</span>
+                            <span id="prepCost">$0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Finish Upgrade:</span>
+                            <span id="finishCost">$0</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Total Estimate:</span>
+                            <span id="totalCost">$0</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: #666; text-align: center; margin-top: 1rem;">
+                        *Estimate based on average pricing. Final quote may vary based on site conditions.
+                    </p>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 1rem; color: #2c5530;">Quick Contact</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <div style="font-weight: 600;">Call Now</div>
+                            <div>(513) 555-0123</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <div style="font-weight: 600;">Email Us</div>
+                            <div>info@queencitycoatings.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <div style="font-weight: 600;">Business Hours</div>
+                            <div>Mon-Fri: 8am-6pm<br>Sat: 9am-4pm</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="trust-indicators">
+                    <h3 style="margin-bottom: 1rem; text-align: center; color: #2c5530;">Why Choose Us</h3>
+                    <div class="trust-grid">
+                        <div class="trust-item">
+                            <span class="trust-number">500+</span>
+                            <span class="trust-label">Projects Completed</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-number">15+</span>
+                            <span class="trust-label">Years Experience</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-number">4.9</span>
+                            <span class="trust-label">Star Rating</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-number">100%</span>
+                            <span class="trust-label">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendar Widget -->
+                <div class="calendar-widget">
+                    <h3 class="calendar-title">📅 Available Dates</h3>
+                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 1rem;">
+                        Green dates show our availability
+                    </p>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                    <div class="time-slots" id="timeSlots" style="display: none;">
+                        <div class="time-slot" data-time="9:00 AM">9:00 AM</div>
+                        <div class="time-slot" data-time="11:00 AM">11:00 AM</div>
+                        <div class="time-slot" data-time="1:00 PM">1:00 PM</div>
+                        <div class="time-slot" data-time="3:00 PM">3:00 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class MultiStepForm {
+            constructor() {
+                this.currentStep = 1;
+                this.maxStep = 5;
+                this.formData = {};
+                this.uploadedFiles = [];
+                
+                this.initializeForm();
+                this.initializeCalendar();
+                this.bindEvents();
+                this.updateQuote();
+            }
+            
+            initializeForm() {
+                this.updateProgressBar();
+                this.updateButtons();
+            }
+            
+            bindEvents() {
+                document.getElementById('nextBtn').addEventListener('click', () => this.nextStep());
+                document.getElementById('prevBtn').addEventListener('click', () => this.prevStep());
+                document.getElementById('submitBtn').addEventListener('click', (e) => this.submitForm(e));
+                
+                // File upload
+                document.getElementById('fileUpload').addEventListener('click', () => {
+                    document.getElementById('fileInput').click();
+                });
+                
+                document.getElementById('fileInput').addEventListener('change', (e) => {
+                    this.handleFileUpload(e.target.files);
+                });
+                
+                // Drag and drop
+                const fileUpload = document.getElementById('fileUpload');
+                fileUpload.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = '#2c5530';
+                });
+                
+                fileUpload.addEventListener('dragleave', () => {
+                    fileUpload.style.borderColor = '#e9ecef';
+                });
+                
+                fileUpload.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = '#e9ecef';
+                    this.handleFileUpload(e.dataTransfer.files);
+                });
+                
+                // Square footage slider
+                const slider = document.getElementById('squareFootage');
+                slider.addEventListener('input', (e) => {
+                    document.getElementById('squareFootageValue').textContent = e.target.value + ' sq ft';
+                    this.updateQuote();
+                });
+                
+                // Project type change
+                document.querySelectorAll('input[name="projectType"]').forEach(input => {
+                    input.addEventListener('change', () => this.updateQuote());
+                });
+                
+                // Condition and finish changes
+                document.getElementById('currentCondition').addEventListener('change', () => this.updateQuote());
+                document.getElementById('desiredFinish').addEventListener('change', () => this.updateQuote());
+            }
+            
+            nextStep() {
+                if (this.validateStep(this.currentStep)) {
+                    this.saveStepData();
+                    if (this.currentStep < this.maxStep) {
+                        this.currentStep++;
+                        this.showStep(this.currentStep);
+                    }
+                }
+            }
+            
+            prevStep() {
+                if (this.currentStep > 1) {
+                    this.currentStep--;
+                    this.showStep(this.currentStep);
+                }
+            }
+            
+            showStep(step) {
+                // Hide all steps
+                document.querySelectorAll('.form-step').forEach(s => {
+                    s.classList.remove('active');
+                });
+                
+                // Show current step
+                document.querySelector(`[data-step="${step}"]`).classList.add('active');
+                
+                this.updateProgressBar();
+                this.updateButtons();
+            }
+            
+            updateProgressBar() {
+                document.querySelectorAll('.progress-step').forEach((step, index) => {
+                    const stepNumber = index + 1;
+                    step.classList.remove('active', 'completed');
+                    
+                    if (stepNumber < this.currentStep) {
+                        step.classList.add('completed');
+                    } else if (stepNumber === this.currentStep) {
+                        step.classList.add('active');
+                    }
+                });
+            }
+            
+            updateButtons() {
+                const prevBtn = document.getElementById('prevBtn');
+                const nextBtn = document.getElementById('nextBtn');
+                const submitBtn = document.getElementById('submitBtn');
+                
+                prevBtn.style.display = this.currentStep > 1 ? 'block' : 'none';
+                
+                if (this.currentStep === this.maxStep) {
+                    nextBtn.style.display = 'none';
+                    submitBtn.style.display = 'block';
+                } else {
+                    nextBtn.style.display = 'block';
+                    submitBtn.style.display = 'none';
+                }
+            }
+            
+            validateStep(step) {
+                switch(step) {
+                    case 1:
+                        const projectType = document.querySelector('input[name="projectType"]:checked');
+                        if (!projectType) {
+                            alert('Please select a project type');
+                            return false;
+                        }
+                        break;
+                    case 2:
+                        const condition = document.getElementById('currentCondition').value;
+                        const finish = document.getElementById('desiredFinish').value;
+                        const timeline = document.getElementById('timeline').value;
+                        
+                        if (!condition || !finish || !timeline) {
+                            alert('Please fill in all project details');
+                            return false;
+                        }
+                        break;
+                    case 4:
+                        const firstName = document.getElementById('firstName').value.trim();
+                        const lastName = document.getElementById('lastName').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const phone = document.getElementById('phone').value.trim();
+                        
+                        if (!firstName || !lastName || !email || !phone) {
+                            alert('Please fill in all required contact information');
+                            return false;
+                        }
+                        
+                        if (!this.validateEmail(email)) {
+                            alert('Please enter a valid email address');
+                            return false;
+                        }
+                        break;
+                }
+                return true;
+            }
+            
+            validateEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            saveStepData() {
+                const currentStepElement = document.querySelector(`[data-step="${this.currentStep}"]`);
+                const inputs = currentStepElement.querySelectorAll('input, select, textarea');
+                
+                inputs.forEach(input => {
+                    if (input.type === 'radio' || input.type === 'checkbox') {
+                        if (input.checked) {
+                            this.formData[input.name] = input.value;
+                        }
+                    } else {
+                        this.formData[input.name] = input.value;
+                    }
+                });
+            }
+            
+            handleFileUpload(files) {
+                Array.from(files).forEach(file => {
+                    if (file.size > 10 * 1024 * 1024) {
+                        alert(`File ${file.name} is too large. Maximum size is 10MB.`);
+                        return;
+                    }
+                    
+                    this.uploadedFiles.push(file);
+                    this.displayFile(file);
+                });
+            }
+            
+            displayFile(file) {
+                const fileList = document.getElementById('fileList');
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <span class="file-remove" onclick="removeFile('${file.name}')">Remove</span>
+                `;
+                fileList.appendChild(fileItem);
+            }
+            
+            removeFile(fileName) {
+                this.uploadedFiles = this.uploadedFiles.filter(file => file.name !== fileName);
+                const fileItems = document.querySelectorAll('.file-item');
+                fileItems.forEach(item => {
+                    if (item.querySelector('.file-name').textContent === fileName) {
+                        item.remove();
+                    }
+                });
+            }
+            
+            updateQuote() {
+                const projectType = document.querySelector('input[name="projectType"]:checked')?.value;
+                const squareFootage = parseInt(document.getElementById('squareFootage').value);
+                const condition = document.getElementById('currentCondition').value;
+                const finish = document.getElementById('desiredFinish').value;
+                
+                let baseCostPerSqFt = 5; // Default
+                let prepMultiplier = 1;
+                let finishMultiplier = 1;
+                
+                // Base cost by project type
+                switch(projectType) {
+                    case 'garage': baseCostPerSqFt = 6; break;
+                    case 'basement': baseCostPerSqFt = 7; break;
+                    case 'commercial': baseCostPerSqFt = 8; break;
+                    case 'warehouse': baseCostPerSqFt = 9; break;
+                    case 'patio': baseCostPerSqFt = 10; break;
+                }
+                
+                // Prep work multiplier
+                switch(condition) {
+                    case 'new-concrete': prepMultiplier = 0.8; break;
+                    case 'good-condition': prepMultiplier = 1; break;
+                    case 'minor-cracks': prepMultiplier = 1.2; break;
+                    case 'major-damage': prepMultiplier = 1.5; break;
+                    case 'existing-coating': prepMultiplier = 1.3; break;
+                }
+                
+                // Finish multiplier
+                switch(finish) {
+                    case 'solid-color': finishMultiplier = 1; break;
+                    case 'decorative-flakes': finishMultiplier = 1.3; break;
+                    case 'metallic': finishMultiplier = 2; break;
+                    case 'high-gloss': finishMultiplier = 1.5; break;
+                    case 'slip-resistant': finishMultiplier = 1.2; break;
+                }
+                
+                const baseCost = Math.round(squareFootage * baseCostPerSqFt);
+                const prepCost = Math.round(baseCost * (prepMultiplier - 1));
+                const finishCost = Math.round(baseCost * (finishMultiplier - 1));
+                const totalCost = baseCost + prepCost + finishCost;
+                
+                document.getElementById('baseCost').textContent = `$${baseCost.toLocaleString()}`;
+                document.getElementById('prepCost').textContent = `$${prepCost.toLocaleString()}`;
+                document.getElementById('finishCost').textContent = `$${finishCost.toLocaleString()}`;
+                document.getElementById('totalCost').textContent = `$${totalCost.toLocaleString()}`;
+            }
+            
+            initializeCalendar() {
+                const grid = document.getElementById('calendarGrid');
+                const today = new Date();
+                const currentMonth = today.getMonth();
+                const currentYear = today.getFullYear();
+                
+                // Create calendar days
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+                
+                // Add day headers
+                const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+                dayHeaders.forEach(day => {
+                    const header = document.createElement('div');
+                    header.textContent = day;
+                    header.style.fontWeight = '600';
+                    header.style.textAlign = 'center';
+                    header.style.padding = '0.5rem';
+                    header.style.background = '#f8f9fa';
+                    grid.appendChild(header);
+                });
+                
+                // Add empty cells for days before month starts
+                for (let i = 0; i < firstDay; i++) {
+                    const emptyDay = document.createElement('div');
+                    emptyDay.className = 'calendar-day';
+                    grid.appendChild(emptyDay);
+                }
+                
+                // Add days of the month
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.className = 'calendar-day';
+                    dayElement.textContent = day;
+                    
+                    const dayDate = new Date(currentYear, currentMonth, day);
+                    if (dayDate >= today && dayDate.getDay() !== 0) { // Not Sunday and not in past
+                        dayElement.classList.add('available');
+                        dayElement.addEventListener('click', () => this.selectDate(dayElement, dayDate));
+                    }
+                    
+                    grid.appendChild(dayElement);
+                }
+            }
+            
+            selectDate(element, date) {
+                // Remove previous selection
+                document.querySelectorAll('.calendar-day.selected').forEach(day => {
+                    day.classList.remove('selected');
+                });
+                
+                element.classList.add('selected');
+                document.getElementById('timeSlots').style.display = 'grid';
+            }
+            
+            async submitForm(e) {
+                e.preventDefault();
+                
+                if (!this.validateStep(this.currentStep)) {
+                    return;
+                }
+                
+                this.saveStepData();
+                
+                // Show loading state
+                const submitBtn = document.getElementById('submitBtn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    
+                    // Show success message
+                    document.getElementById('contactForm').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                    
+                    // Track conversion
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-XXXXXXXXX/XXXXXXXXX',
+                            'value': this.getEstimatedValue(),
+                            'currency': 'USD'
+                        });
+                    }
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    alert('There was an error submitting your request. Please try again or call us directly.');
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            }
+            
+            getEstimatedValue() {
+                const totalText = document.getElementById('totalCost').textContent;
+                return parseInt(totalText.replace(/[$,]/g, '')) || 0;
+            }
+        }
+        
+        // Initialize form when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new MultiStepForm();
+        });
+        
+        // Global function for removing files (called from HTML)
+        function removeFile(fileName) {
+            // This will be handled by the form instance
+            if (window.formInstance) {
+                window.formInstance.removeFile(fileName);
+            }
+        }
+        
+        function resetForm() {
+            location.reload();
+        }
+        
+        // Time slot selection
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('time-slot')) {
+                document.querySelectorAll('.time-slot.selected').forEach(slot => {
+                    slot.classList.remove('selected');
+                });
+                e.target.classList.add('selected');
+            }
+        });
+    </script>
+</body>
+</html>

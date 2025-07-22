@@ -15,7 +15,7 @@ const seo = {
 			"@type": "LocalBusiness",
 			"name": "Queen City Surface Coatings",
 			"url": "https://queencitysurfacecoatings.com",
-			"telephone": "(513) 732-3276",
+			"telephone": "+1-513-296-5525",
 			"address": {
 				"@type": "PostalAddress",
 				"addressLocality": "Cincinnati",
@@ -23,7 +23,20 @@ const seo = {
 				"addressCountry": "US"
 			}
 		},
-		"areaServed": ["Cincinnati", "Ohio", "Kentucky", "Hamilton County", "Clermont County", "Warren County", "Butler County"],
+		"areaServed": [
+		{
+			"@type": "GeoCircle",
+			"geoMidpoint": {
+				"@type": "GeoCoordinates",
+				"latitude": "39.1756",
+				"longitude": "-84.2930"
+			},
+			"geoRadius": "50 miles"
+		},
+		{"@type": "State", "name": "Ohio"},
+		{"@type": "State", "name": "Kentucky"},
+		{"@type": "State", "name": "Indiana"}
+	],
 		"description": "Custom metallic epoxy flooring with unique artistic patterns and stunning visual effects for residential and commercial spaces.",
 		"offers": {
 			"@type": "Offer",

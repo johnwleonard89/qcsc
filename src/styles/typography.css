@@ -1,6 +1,10 @@
-/* Special thanks to this tool for local fonts CSS generation:
-  https://google-webfonts-helper.herokuapp.com/fonts/lato?subsets=latin
+/* Enhanced Typography System - Queen City Surface Coatings
+   Special thanks to this tool for local fonts CSS generation:
+   https://google-webfonts-helper.herokuapp.com/fonts/lato?subsets=latin
 */
+
+/* Import Montserrat for headings */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 /* roboto-serif-600 - latin */
 @font-face {
@@ -81,47 +85,60 @@ body {
 	color: var(--theme-on-bg);
 } 
 
-h1,
-h2,
-h3 {
-	font-family: var(--theme-font-family-serif);
-	font-weight: 700;
-}
-
-h1 {
-	font-size: var(--font-size-xxl);
-}
-
-h2 {
-	font-size: var(--font-size-xl);
-}
-
-h3 {
-	font-size: var(--font-size-lg);
-}
-
-h1,
-h2 {
-	line-height: 1.1;
-	font-weight: 700;
-}
-
-h3 {
-	font-weight: 500;
-}
-
-h6 {
-	font-size: var(--font-size-sm);
-}
-
+/* Enhanced heading hierarchy with our design system */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
+	font-family: var(--theme-font-family-headings);
+	color: var(--theme-text-primary);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-tight);
 	margin: 0 0 1rem 0;
+	text-rendering: optimizeLegibility;
+}
+
+h1 {
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 1.25rem;
+}
+
+h3 {
+	font-size: var(--font-size-h3);
+	font-weight: var(--font-weight-semibold);
+	margin-bottom: 1rem;
+}
+
+h4 {
+	font-size: var(--font-size-h4);
+	font-weight: var(--font-weight-semibold);
+}
+
+h5 {
+	font-size: var(--font-size-h5);
+	font-weight: var(--font-weight-medium);
+}
+
+h6 {
+	font-size: var(--font-size-h6);
+	font-weight: var(--font-weight-medium);
+}
+
+/* Enhanced paragraph styling */
+p {
+	margin: 0 0 1.5rem 0;
+	line-height: var(--line-height-relaxed);
+	color: var(--theme-text-secondary);
 }
 
 blockquote {

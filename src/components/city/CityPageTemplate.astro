@@ -38,6 +38,28 @@ export interface Props {
 
 const { city, primaryService, slug } = Astro.props;
 
+// Geographic coordinates mapping for major cities
+const cityCoords = {
+	'Cincinnati': { lat: '39.1031', lng: '-84.5120' },
+	'Covington': { lat: '39.0837', lng: '-84.5085' },
+	'Florence': { lat: '38.9989', lng: '-84.6266' },
+	'Independence': { lat: '38.9431', lng: '-84.5444' },
+	'Newport': { lat: '39.0914', lng: '-84.4916' },
+	'Mason': { lat: '39.3598', lng: '-84.3099' },
+	'Loveland': { lat: '39.2687', lng: '-84.2638' },
+	'West Chester': { lat: '39.3298', lng: '-84.3983' },
+	'Hamilton': { lat: '39.3995', lng: '-84.5614' },
+	'Fairfield': { lat: '39.3456', lng: '-84.5203' },
+	'Middletown': { lat: '39.5151', lng: '-84.3983' },
+	'Springdale': { lat: '39.2870', lng: '-84.4855' },
+	'Sharonville': { lat: '39.2681', lng: '-84.4133' },
+	'Blue Ash': { lat: '39.2323', lng: '-84.3783' },
+	'Montgomery': { lat: '39.2323', lng: '-84.3549' },
+	'Milford': { lat: '39.1756', lng: '-84.2930' }
+};
+
+const coords = cityCoords[city.name] || { lat: '39.1756', lng: '-84.2930' };
+
 const seo = {
 	title: `${primaryService} ${city.name} ${city.stateAbbr} | Queen City Surface Coatings`,
 	description: `Professional ${primaryService.toLowerCase()} in ${city.name}, ${city.stateAbbr}. Expert concrete coating services near ${city.landmarks.slice(0, 2).join(' and ')}. Licensed, bonded, insured. Free estimates.`,
@@ -59,30 +81,84 @@ const seo = {
 			"name": "Queen City Surface Coatings LLC",
 			"address": {
 				"@type": "PostalAddress",
-				"addressLocality": "Cincinnati",
+				"addressLocality": "Milford",
 				"addressRegion": "OH",
+				"postalCode": "45150",
 				"addressCountry": "US"
 			},
 			"telephone": "+1-513-296-5525",
-			"url": "https://queencitysurfacecoatings.com"
+			"url": "https://queencitysurfacecoatings.com",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "39.1756",
+				"longitude": "-84.2930"
+			}
 		},
 		"areaServed": {
 			"@type": "City",
 			"name": city.name,
 			"addressRegion": city.stateAbbr,
-			"addressCountry": "US"
+			"addressCountry": "US",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": coords.lat,
+				"longitude": coords.lng
+			}
 		},
 		"serviceType": primaryService,
 		"offers": {
 			"@type": "Offer",
+			"name": `${primaryService} in ${city.name}`,
+			"description": `Professional ${primaryService.toLowerCase()} services in ${city.name}, ${city.stateAbbr}`,
 			"priceCurrency": "USD",
-			"availability": "https://schema.org/InStock"
+			"availability": "https://schema.org/InStock",
+			"validThrough": "2025-12-31",
+			"seller": {
+				"@type": "LocalBusiness",
+				"name": "Queen City Surface Coatings LLC"
+			}
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"reviewCount": "3",
+			"bestRating": "5",
+			"worstRating": "5"
 		}
 	}
+};
+
+// FAQ Schema for city-specific questions
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": city.faqs.map(faq => ({
+		"@type": "Question",
+		"name": faq.question,
+		"acceptedAnswer": {
+			"@type": "Answer",
+			"text": faq.answer
+		}
+	}))
+};
+
+// Breadcrumb Schema
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": seo.breadcrumbs.map((breadcrumb, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": breadcrumb.name,
+		"item": breadcrumb.url
+	}))
 };
 ---
 
 <Layout {seo}>
+	<!-- Additional Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
 	<!-- Page Header -->
 	<Container>
 		<section class="page-header">

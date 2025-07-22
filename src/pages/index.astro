@@ -10,13 +10,105 @@ const seo = {
 	type: 'website',
 	structuredData: {
 		"@context": "https://schema.org",
-		"@type": "WebPage",
-		"name": "Queen City Surface Coatings - Cincinnati Concrete Coating Specialists",
-		"description": "Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision",
+		"@type": "LocalBusiness",
+		"name": "Queen City Surface Coatings LLC",
+		"image": "https://queencitysurfacecoatings.com/assets/images/business/logo-4.webp",
+		"description": "Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision and military-grade quality.",
 		"url": "https://queencitysurfacecoatings.com",
-		"mainEntity": {
-			"@type": "LocalBusiness",
-			"name": "Queen City Surface Coatings LLC"
+		"telephone": "+1-513-296-5525",
+		"email": "john@queencitysurfacecoatings.com",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Milford",
+			"addressRegion": "OH",
+			"postalCode": "45150",
+			"addressCountry": "US"
+		},
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "39.1756",
+			"longitude": "-84.2930"
+		},
+		"areaServed": [
+			{
+				"@type": "GeoCircle",
+				"geoMidpoint": {
+					"@type": "GeoCoordinates",
+					"latitude": "39.1756",
+					"longitude": "-84.2930"
+				},
+				"geoRadius": "50 miles"
+			}
+		],
+		"serviceType": [
+			"Epoxy Flooring",
+			"Concrete Coating", 
+			"Polyaspartic Application",
+			"Metallic Epoxy Installation",
+			"Commercial Floor Coating",
+			"Garage Floor Coating",
+			"Basement Floor Coating"
+		],
+		"founder": {
+			"@type": "Person",
+			"name": "John Leonard",
+			"description": "U.S. Marine Corps Veteran and Founder"
+		},
+		"foundingDate": "2025",
+		"openingHours": [
+			"Mo-Fr 08:00-18:00",
+			"Sa 09:00-16:00"
+		],
+		"priceRange": "$",
+		"paymentAccepted": ["Cash", "Check", "Credit Card"],
+		"currenciesAccepted": "USD",
+		"review": [
+			{
+				"@type": "Review",
+				"reviewRating": {
+					"@type": "Rating",
+					"ratingValue": 5,
+					"bestRating": 5
+				},
+				"author": {
+					"@type": "Person",
+					"name": "Mike & Sarah Thompson"
+				},
+				"reviewBody": "Queen City Surface Coatings transformed our garage into a showroom-quality space. John's attention to detail and professional approach exceeded our expectations. The floor looks amazing and has held up perfectly through Cincinnati's harsh winter conditions."
+			},
+			{
+				"@type": "Review", 
+				"reviewRating": {
+					"@type": "Rating",
+					"ratingValue": 5,
+					"bestRating": 5
+				},
+				"author": {
+					"@type": "Person",
+					"name": "David Rodriguez"
+				},
+				"reviewBody": "Professional, punctual, and perfect results. As a fellow veteran, I appreciated John's military precision and commitment to excellence. Our warehouse floor looks incredible and performs even better."
+			},
+			{
+				"@type": "Review",
+				"reviewRating": {
+					"@type": "Rating", 
+					"ratingValue": 5,
+					"bestRating": 5
+				},
+				"author": {
+					"@type": "Person",
+					"name": "Jennifer Chen"
+				},
+				"reviewBody": "Outstanding work from start to finish. The team was knowledgeable, clean, and delivered exactly what they promised. Our basement floor transformation is remarkable and has been maintenance-free for months."
+			}
+		],
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"reviewCount": "3",
+			"bestRating": "5",
+			"worstRating": "5"
 		}
 	}
 };
@@ -29,6 +121,7 @@ const seo = {
 			<div class="hero-content">
 				<div class="hero-text">
 					<h1 class="hero-headline">Military Precision, Lifetime Quality</h1>
+					<p class="hero-tagline">Military Precision. Lifetime Quality.</p>
 					<p class="hero-subheadline">
 						Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision
 					</p>
@@ -314,140 +407,326 @@ const seo = {
 </Layout>
 
 <style>
-	/* Hero Section */
+	/* Hero Section - Enhanced with gradient overlay and navy theme */
 	.hero-section {
-		background: linear-gradient(135deg, var(--theme-surface-2) 0%, #1a2332 100%);
+		background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
 		color: var(--theme-on-surface-2);
-		padding: 4rem 0;
-		margin-bottom: 3rem;
+		padding: var(--section-padding);
+		margin-bottom: var(--section-margin);
+		position: relative;
+		overflow: hidden;
+	}
+
+	/* Add subtle pattern overlay */
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+						  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+		pointer-events: none;
 	}
 
 	.hero-content {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
+		gap: 4rem;
 		align-items: center;
-		min-height: 500px;
+		min-height: 600px;
+		position: relative;
+		z-index: 1;
 	}
 
 	.hero-headline {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 700;
+		font-family: var(--theme-font-family-headings);
+		font-size: var(--font-size-h1);
+		font-weight: var(--font-weight-bold);
 		margin-bottom: 1rem;
-		line-height: 1.1;
+		line-height: var(--line-height-tight);
 		color: var(--theme-primary);
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.hero-tagline {
+		font-family: var(--theme-font-family-headings);
+		font-size: 1.375rem;
+		font-weight: var(--font-weight-medium);
+		color: var(--theme-primary);
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		opacity: 0.95;
 	}
 
 	.hero-subheadline {
 		font-size: 1.25rem;
-		margin-bottom: 2rem;
-		opacity: 0.9;
-		line-height: 1.5;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		line-height: var(--line-height-relaxed);
+		color: rgba(255, 255, 255, 0.9);
 	}
 
 	.hero-ctas {
 		display: flex;
-		gap: 1rem;
+		gap: 1.5rem;
 		flex-wrap: wrap;
 	}
 
 	.btn-large {
-		padding: 1rem 2rem;
-		font-size: 1.1rem;
-		font-weight: 600;
+		padding: 1.25rem 2.5rem;
+		font-size: 1.125rem;
+		font-weight: var(--font-weight-semibold);
+		border-radius: var(--theme-button-border-radius);
+		transition: all var(--theme-transition-smooth);
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 56px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	/* Enhanced primary button with micro-animation */
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border: 2px solid var(--theme-primary);
+		box-shadow: var(--theme-shadow-medium);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		border-color: var(--theme-primary-hover);
+		transform: scale(var(--theme-hover-scale)) translateY(-2px);
+		box-shadow: var(--theme-shadow-dark);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border: 2px solid var(--theme-primary);
+		backdrop-filter: blur(10px);
+	}
+
+	.btn-outline:hover {
+		background: rgba(255, 193, 7, 0.1);
+		transform: scale(var(--theme-hover-scale));
+		box-shadow: var(--theme-shadow-medium);
+	}
+
+	.hero-image {
+		position: relative;
+	}
+
+	.hero-image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+		z-index: 1;
+		border-radius: var(--theme-card-radius);
 	}
 
 	.hero-image img {
 		width: 100%;
-		height: 400px;
+		height: 480px;
 		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		border-radius: var(--theme-card-radius);
+		box-shadow: var(--theme-shadow-dark);
+		filter: contrast(1.1) saturate(1.05);
+		position: relative;
 	}
 
-	/* Value Propositions */
+	/* Value Propositions - Enhanced with better spacing and shadows */
 	.value-props-section {
-		margin: 4rem 0;
+		margin: var(--section-margin) 0;
+		padding: var(--section-padding);
 	}
 
 	.value-props-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--theme-grid-gap);
 	}
 
 	.value-prop {
 		text-align: center;
-		padding: 2rem;
+		padding: 2.5rem 2rem;
 		background: var(--theme-surface-1);
-		border-radius: var(--theme-shape-radius);
-		border: 1px solid rgba(0, 0, 0, 0.05);
+		border-radius: var(--theme-card-radius);
+		border: 1px solid var(--theme-border-light);
+		box-shadow: var(--theme-shadow-light);
+		transition: all var(--theme-transition-smooth);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.value-prop:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--theme-shadow-medium);
+		border-color: rgba(255, 193, 7, 0.2);
+	}
+
+	.value-prop::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 3px;
+		background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-hover));
+		transition: left 0.3s ease;
+	}
+
+	.value-prop:hover::before {
+		left: 0;
 	}
 
 	.prop-icon {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+		filter: grayscale(0.2);
 	}
 
 	.value-prop h3 {
-		color: var(--theme-primary);
-		margin-bottom: 0.75rem;
-		font-size: 1.25rem;
+		font-family: var(--theme-font-family-headings);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+		font-size: var(--font-size-h5);
+		font-weight: var(--font-weight-semibold);
 	}
 
-	/* Services Overview */
+	.value-prop p {
+		color: var(--theme-text-secondary);
+		line-height: var(--line-height-relaxed);
+		font-size: var(--font-size-body);
+	}
+
+	/* Services Overview - Enhanced design with consistent heights */
 	.services-overview {
-		margin: 4rem 0;
+		margin: var(--section-margin) 0;
+		padding: var(--section-padding);
 	}
 
 	.services-header {
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 
 	.services-header h2 {
-		font-size: 2.5rem;
-		color: var(--theme-on-bg);
-		margin-bottom: 1rem;
+		font-family: var(--theme-font-family-headings);
+		font-size: var(--font-size-h2);
+		color: var(--theme-text-primary);
+		margin-bottom: 1.5rem;
+		font-weight: var(--font-weight-bold);
+	}
+
+	.services-header p {
+		font-size: 1.125rem;
+		color: var(--theme-text-secondary);
+		line-height: var(--line-height-relaxed);
+		max-width: 600px;
+		margin: 0 auto;
 	}
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: var(--theme-grid-gap);
 	}
 
 	.service-card {
 		background: var(--theme-surface-1);
-		border-radius: var(--theme-shape-radius);
+		border-radius: var(--theme-card-radius);
 		overflow: hidden;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-		transition: transform var(--theme-transition);
+		box-shadow: var(--theme-shadow-light);
+		transition: all var(--theme-transition-smooth);
+		border: 1px solid var(--theme-border-light);
+		height: 100%; /* Consistent height */
+		display: flex;
+		flex-direction: column;
+		position: relative;
 	}
 
 	.service-card:hover {
-		transform: translateY(-5px);
+		transform: translateY(-8px);
+		box-shadow: var(--theme-shadow-medium);
+		border-color: rgba(255, 193, 7, 0.3);
+	}
+
+	.service-card::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-hover));
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+		border-radius: 0 0 var(--theme-card-radius) var(--theme-card-radius);
+	}
+
+	.service-card:hover::after {
+		transform: scaleX(1);
 	}
 
 	.service-image {
-		height: 200px;
+		height: 220px;
 		overflow: hidden;
+		position: relative;
+	}
+
+	.service-image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(to bottom, transparent 0%, rgba(0, 47, 75, 0.1) 100%);
+		z-index: 1;
 	}
 
 	.service-image img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		filter: contrast(1.05) saturate(1.05);
+		transition: transform var(--theme-transition-smooth);
+	}
+
+	.service-card:hover .service-image img {
+		transform: scale(1.05);
 	}
 
 	.service-content {
-		padding: 1.5rem;
+		padding: 2rem 1.5rem 1.5rem;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.service-content h3 {
-		color: var(--theme-primary);
-		margin-bottom: 0.75rem;
-		font-size: 1.25rem;
+		font-family: var(--theme-font-family-headings);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+		font-size: var(--font-size-h4);
+		font-weight: var(--font-weight-semibold);
+	}
+
+	.service-content p {
+		color: var(--theme-text-secondary);
+		line-height: var(--line-height-relaxed);
+		margin-bottom: 1.5rem;
+		flex-grow: 1;
 	}
 
 	.service-features {

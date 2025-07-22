@@ -67,14 +67,95 @@ a[role="button"] {
 	border: 0;
 }
 
+/* Contextual color classes for better contrast */
+.text-primary-contextual {
+	color: var(--theme-primary-on-light);
+}
+
+.text-primary-contextual.on-dark,
+.on-dark .text-primary-contextual {
+	color: var(--theme-primary-on-dark);
+}
+
+/* Light background context - use navy for text */
+.bg-light,
+.bg-white,
+.surface-light {
+	background-color: var(--theme-bg);
+}
+
+.bg-light .text-primary,
+.bg-white .text-primary,
+.surface-light .text-primary,
+.bg-light a:not(.btn),
+.bg-white a:not(.btn),
+.surface-light a:not(.btn) {
+	color: var(--theme-primary-on-light) !important;
+}
+
+.bg-light .text-primary:hover,
+.bg-white .text-primary:hover,
+.surface-light .text-primary:hover,
+.bg-light a:not(.btn):hover,
+.bg-white a:not(.btn):hover,
+.surface-light a:not(.btn):hover {
+	color: var(--theme-navy-light) !important;
+}
+
+/* Surface-1 context (light gray) - use navy for text */
+.bg-surface-1,
+.surface-1 {
+	background-color: var(--theme-surface-1);
+}
+
+.bg-surface-1 .text-primary,
+.surface-1 .text-primary,
+.bg-surface-1 a:not(.btn),
+.surface-1 a:not(.btn) {
+	color: var(--theme-primary-on-light) !important;
+}
+
+.bg-surface-1 .text-primary:hover,
+.surface-1 .text-primary:hover,
+.bg-surface-1 a:not(.btn):hover,
+.surface-1 a:not(.btn):hover {
+	color: var(--theme-navy-light) !important;
+}
+
+/* Dark background context - use yellow for text */
+.bg-dark,
+.bg-navy,
+.surface-dark {
+	background-color: var(--theme-surface-2);
+	color: var(--theme-on-surface-2);
+}
+
+.bg-dark .text-primary,
+.bg-navy .text-primary,
+.surface-dark .text-primary,
+.bg-dark a:not(.btn),
+.bg-navy a:not(.btn),
+.surface-dark a:not(.btn) {
+	color: var(--theme-primary-on-dark) !important;
+}
+
+.bg-dark .text-primary:hover,
+.bg-navy .text-primary:hover,
+.surface-dark .text-primary:hover,
+.bg-dark a:not(.btn):hover,
+.bg-navy a:not(.btn):hover,
+.surface-dark a:not(.btn):hover {
+	color: var(--theme-primary-hover) !important;
+}
+
 /* Ensure proper contrast for links */
 a {
-	color: var(--theme-primary);
+	color: var(--theme-primary-on-light);
 }
 
 a:hover,
 a:focus {
-	color: var(--theme-primary-hover);
+	color: var(--theme-navy-light);
 	text-decoration: underline;
 }
 

@@ -451,6 +451,18 @@ img {
   }
 }
 
+/* Critical contextual color rules */
+a {
+  color: var(--theme-primary-on-light);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--theme-navy-light);
+  text-decoration: underline;
+}
+
 /* Critical utility classes */
 .sr-only {
   position: absolute;

@@ -28,6 +28,10 @@
 	--theme-text-primary: #002F4B; /* Navy for headings */
 	--theme-text-secondary: #333333; /* Charcoal for body text */
 	--theme-text-muted: #6C757D; /* Gray for secondary text */
+	
+	/* Contextual colors for better contrast */
+	--theme-primary-on-light: #002F4B; /* Navy for light backgrounds */
+	--theme-primary-on-dark: #FFC107; /* Yellow for dark backgrounds */
 
 	/* Theme Shapes */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */

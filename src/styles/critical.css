@@ -4,8 +4,8 @@
 /* CSS Custom Properties - Complete theme variables for critical rendering */
 :root {
   /* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
-  --theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
-  --theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
+  --theme-primary: #002F4B; /* Default to Navy for better contrast */
+  --theme-primary-hover: #003B5C; /* Darker navy on hover */
   --theme-on-primary: #fff;
 
   /* Navy - Primary headers and trustworthy elements */
@@ -145,6 +145,9 @@ header {
   margin-bottom: var(--section-margin);
   position: relative;
   overflow: hidden;
+  /* Override primary color to yellow for dark background */
+  --theme-primary: #FFC107;
+  --theme-primary-hover: #E6AC00;
 }
 
 /* Add subtle pattern overlay */

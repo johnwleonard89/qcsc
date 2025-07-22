@@ -1,8 +1,12 @@
 :root {
 	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
-	--theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
-	--theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
+	--theme-primary: #002F4B; /* Default to Navy for better contrast */
+	--theme-primary-hover: #003B5C; /* Darker navy on hover */
 	--theme-on-primary: #fff;
+	
+	/* Original yellow colors for dark backgrounds */
+	--theme-yellow: #FFC107; /* Warm Amber - For dark backgrounds only */
+	--theme-yellow-hover: #E6AC00; /* Darker amber on hover */
 
 	/* Navy - Primary headers and trustworthy elements */
 	--theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
@@ -91,11 +95,38 @@
 	--font-weight-bold: 700;
 }
 
+/* Context-specific color overrides for dark backgrounds */
+.hero-section,
+.bg-dark,
+.bg-navy,
+.surface-dark,
+.trust-section,
+.contact-section,
+[style*="background: var(--theme-surface-2)"],
+[style*="background-color: var(--theme-surface-2)"],
+[class*="surface-2"] {
+	--theme-primary: #FFC107 !important;
+	--theme-primary-hover: #E6AC00 !important;
+}
+
+/* Keep buttons yellow everywhere for brand consistency */
+.btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #000 !important;
+}
+
+.btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #000 !important;
+}
+
 [data-theme='default'] {
 	color-scheme: light;
 	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
-	--theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
-	--theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
+	--theme-primary: #002F4B; /* Default to Navy for better contrast */
+	--theme-primary-hover: #003B5C; /* Darker navy on hover */
 	--theme-on-primary: #fff;
 
 	/* Navy - Primary headers and trustworthy elements */

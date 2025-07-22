@@ -159,24 +159,7 @@ a:focus {
 	text-decoration: underline;
 }
 
-/* Global contrast fixes for common elements on light backgrounds */
-.service-link,
-.testimonial-author strong,
-.contact-info h2,
-.contact-info h3,
-.contact-info h4,
-.phone-number,
-.method-content h4,
-.business-hours h4,
-.credential strong,
-.map-content h4 {
-	color: var(--theme-primary-on-light) !important;
-}
-
-.service-link:hover,
-.phone-number:hover {
-	color: var(--theme-navy-light) !important;
-}
+/* Removed global contrast fixes - now handled at theme level */
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {

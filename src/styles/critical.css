@@ -1,27 +1,94 @@
 /* Critical CSS - Above the fold styles for Core Web Vitals optimization */
 /* Queen City Surface Coatings - Performance Optimized */
 
-/* CSS Custom Properties - Critical Variables Only */
+/* CSS Custom Properties - Complete theme variables for critical rendering */
 :root {
-  /* Core Theme Colors - Queen City Surface Coatings */
-  --theme-primary: #FFC107;
-  --theme-primary-hover: #E6AC00;
+  /* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
+  --theme-primary: #FFC107; /* Warm Amber - Primary CTA color */
+  --theme-primary-hover: #E6AC00; /* Darker amber on hover (10% darker) */
   --theme-on-primary: #fff;
-  --theme-bg: #ffffff;
-  --theme-on-bg: #333333;
-  --theme-surface-1: #F5F5F5;
-  --theme-surface-2: #002F4B;
+
+  /* Navy - Primary headers and trustworthy elements */
+  --theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
+  --theme-navy-light: #003B5C; /* Lighter navy for hover states */
+  --theme-navy-dark: #001A2E; /* Darker navy for emphasis */
+
+  /* Backgrounds and surfaces */
+  --theme-bg: #fff;
+  --theme-on-bg: #333333; /* Charcoal for better readability */
+
+  --theme-surface-1: #F5F5F5; /* Cool Gray - clean backdrop */
   --theme-on-surface-1: #333333;
+
+  --theme-surface-2: #002F4B; /* Navy background for contrast sections */
   --theme-on-surface-2: #fff;
+
+  /* Additional grays for hierarchy */
+  --theme-gray-light: #F8F9FA;
+  --theme-gray-medium: #E9ECEF;
+  --theme-gray-dark: #6C757D;
+
+  /* Text colors */
+  --theme-text-primary: #002F4B; /* Navy for headings */
+  --theme-text-secondary: #333333; /* Charcoal for body text */
+  --theme-text-muted: #6C757D; /* Gray for secondary text */
+
+  /* Theme Shapes */
+  --theme-shape-radius: clamp(1rem, 2rem, 3rem);
+  --theme-button-border-radius: 3rem;
+
+  /* Theme Transition */
+  --theme-transition: 0.2s ease-in-out;
+  --theme-transition-fast: 0.15s ease-out;
+  --theme-transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Theme Layout */
+  --section-margin: 3rem;
+  --section-padding: var(--section-margin);
+  --theme-grid-gap: 1rem;
+  --container-max-width: 1440px;
+  --container-max-width-narrow: 960px;
+  --container-padding: 0 1rem;
+
+  /* Theme Shadows & Transparency */
+  --theme-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --theme-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --theme-shadow-dark: 0 16px 32px rgba(0, 0, 0, 0.15);
+  --theme-border-light: rgba(0, 0, 0, 0.08);
+  --theme-overlay: rgba(0, 47, 75, 0.6);
+
+  /* Interactive states */
+  --theme-hover-scale: 1.05;
+
+  /* Theme Fonts - Typography Scale */
+  --theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --theme-font-family-sans: 'Lato', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --theme-font-family-headings: 'Montserrat', 'Lato', sans-serif;
+
+  /* Typography Scale */
+  --font-size-h1: 48px;
+  --font-size-h2: 36px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-h6: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   
-  /* Typography */
-  --font-family-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-secondary: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  
-  /* Critical Layout */
-  --container-max-width: 1200px;
-  --header-height: 80px;
-  --mobile-padding: 1rem;
+  /* Card radius */
+  --theme-card-radius: var(--theme-shape-radius);
 }
 
 /* CSS Reset - Critical Only */
@@ -72,35 +139,96 @@ header {
 
 /* Hero Section - Above the Fold Critical */
 .hero-section {
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--theme-surface-2) 0%, #1a2f5a 100%);
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
   color: var(--theme-on-surface-2);
+  padding: var(--section-padding);
+  margin-bottom: var(--section-margin);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add subtle pattern overlay */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
   align-items: center;
-  width: 100%;
+  min-height: 600px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-headline {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--theme-primary);
-  font-family: var(--font-family-primary);
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: var(--theme-primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--theme-primary);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
 }
 
 .hero-subheadline {
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  line-height: 1.5;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+  z-index: 1;
+  border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-dark);
+  filter: contrast(1.1) saturate(1.05);
+  position: relative;
 }
 
 /* Critical Button Styles */
@@ -108,63 +236,73 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  min-width: 44px;
   padding: 0.75rem 1.5rem;
-  font-weight: 600;
+  border-radius: var(--theme-button-border-radius);
   text-decoration: none;
-  border-radius: 0.375rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--theme-transition);
   border: 2px solid transparent;
-  font-family: var(--font-family-secondary);
+  cursor: pointer;
+  min-height: 44px;
+  font-family: var(--theme-font-family-sans);
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn-primary {
-  background-color: var(--theme-primary);
-  color: var(--theme-on-primary);
-  border-color: var(--theme-primary);
+.btn-large {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--theme-button-border-radius);
+  transition: all var(--theme-transition-smooth);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: var(--theme-primary-hover);
+.btn-primary {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  border: 2px solid var(--theme-primary);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.btn-primary:hover {
+  background: var(--theme-primary-hover);
   border-color: var(--theme-primary-hover);
-  transform: translateY(-1px);
+  transform: scale(var(--theme-hover-scale)) translateY(-2px);
+  box-shadow: var(--theme-shadow-dark);
 }
 
 .btn-outline {
-  background-color: transparent;
+  background: transparent;
   color: var(--theme-primary);
-  border-color: var(--theme-primary);
+  border: 2px solid var(--theme-primary);
+  backdrop-filter: blur(10px);
 }
 
-.btn-outline:hover,
-.btn-outline:focus {
-  background-color: var(--theme-primary);
-  color: var(--theme-on-primary);
-}
-
-.btn-large {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  min-height: 48px;
+.btn-outline:hover {
+  background: rgba(255, 193, 7, 0.1);
+  transform: scale(var(--theme-hover-scale));
+  box-shadow: var(--theme-shadow-medium);
 }
 
 /* Critical Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-primary);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--theme-on-bg);
+  font-family: var(--theme-font-family-headings);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--theme-text-primary);
   margin-bottom: 1rem;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3rem); }
-h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
 
 /* Mobile Navigation Critical */
 #menuButton {
@@ -240,7 +378,7 @@ img {
   
   .hero-content {
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 4rem;
   }
   
   .grid-sm-2 { grid-template-columns: repeat(2, 1fr); }
@@ -251,6 +389,18 @@ img {
   .grid-md-2 { grid-template-columns: repeat(2, 1fr); }
   .grid-md-3 { grid-template-columns: repeat(3, 1fr); }
   .grid-md-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -260,19 +410,15 @@ img {
   }
   
   .hero-section {
-    min-height: 50vh;
     padding: 2rem 0;
   }
   
-  .btn {
-    width: 100%;
-    justify-content: center;
+  .hero-headline {
+    font-size: 2rem;
   }
   
   .hero-ctas {
-    display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
   }
 }

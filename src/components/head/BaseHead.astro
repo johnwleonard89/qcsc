@@ -149,8 +149,9 @@ const allStructuredData = [
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
-<!-- Main CSS - Load synchronously to prevent FOUC -->
-<link rel="stylesheet" href="/styles/index.css">
+<!-- Non-critical CSS - Loaded asynchronously -->
+<link rel="preload" href="/styles/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/styles/index.css"></noscript>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

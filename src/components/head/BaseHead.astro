@@ -143,15 +143,13 @@ const allStructuredData = [
 <meta name="msapplication-TileColor" content="#1E3A8A" />
 <meta name="msapplication-TileImage" content="/favicon.png" />
 
-<!-- Google Fonts for Queen City Surface Coatings branding - Optimized for Core Web Vitals -->
+<!-- Google Fonts for Queen City Surface Coatings branding -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- Non-critical CSS - Loaded asynchronously -->
-<link rel="preload" href="/styles/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="/styles/index.css"></noscript>
+<!-- Main CSS - Load synchronously to prevent FOUC -->
+<link rel="stylesheet" href="/styles/index.css">
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

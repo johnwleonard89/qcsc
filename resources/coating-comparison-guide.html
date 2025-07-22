@@ -1,0 +1,1867 @@
+---
+import Layout from '../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Concrete Coating Comparison Guide | Epoxy vs Polyaspartic vs Polyurea Cincinnati',
+	description: 'Expert comparison of concrete coating types with performance data, cost analysis, and application recommendations from Cincinnati\'s veteran-owned coating specialists.',
+	keywords: 'concrete coating comparison, epoxy vs polyaspartic, polyurea coating guide, coating performance data, Cincinnati concrete experts, coating selection guide',
+	type: 'guide',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Resources', url: 'https://queencitysurfacecoatings.com/resources/' },
+		{ name: 'Coating Comparison Guide', url: 'https://queencitysurfacecoatings.com/resources/coating-comparison-guide/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"headline": "Concrete Coating Comparison Guide: Epoxy vs Polyaspartic vs Polyurea",
+		"description": "Comprehensive technical comparison of concrete coating systems with performance data and selection criteria",
+		"author": {
+			"@type": "Person",
+			"name": "John Leonard",
+			"jobTitle": "Owner & Lead Coating Specialist",
+			"description": "U.S. Marine veteran with 15+ years of concrete coating expertise"
+		},
+		"publisher": {
+			"@type": "LocalBusiness",
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cincinnati",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525"
+		},
+		"datePublished": "2024-03-15",
+		"dateModified": "2024-03-15",
+		"url": "https://queencitysurfacecoatings.com/resources/coating-comparison-guide/",
+		"mainEntityOfPage": "https://queencitysurfacecoatings.com/resources/coating-comparison-guide/"
+	}
+};
+
+const coatingSystems = [
+	{
+		name: 'Epoxy Flooring',
+		type: 'epoxy',
+		summary: 'Proven multi-layer system with excellent adhesion and durability',
+		bestFor: 'Residential garages, light commercial, decorative applications',
+		priceRange: '$5-12/sq ft',
+		cureTime: '2-3 days',
+		lifespan: '15-20+ years',
+		advantages: [
+			'Excellent adhesion to concrete',
+			'Wide variety of decorative options',
+			'Chemical resistance',
+			'Cost-effective for most applications',
+			'Proven track record'
+		],
+		disadvantages: [
+			'Longer cure times',
+			'UV sensitivity (yellowing)',
+			'Temperature-sensitive installation',
+			'Can be brittle in extreme conditions'
+		],
+		performance: {
+			adhesion: 95,
+			durability: 85,
+			chemical: 90,
+			uv: 60,
+			impact: 75,
+			abrasion: 85
+		},
+		applications: [
+			'Residential garage floors',
+			'Basement floors',
+			'Light commercial spaces',
+			'Decorative showrooms',
+			'Workshop areas'
+		]
+	},
+	{
+		name: 'Polyaspartic Coating',
+		type: 'polyaspartic',
+		summary: 'Fast-cure system with superior UV stability and chemical resistance',
+		bestFor: 'Quick turnaround projects, outdoor applications, commercial spaces',
+		priceRange: '$8-15/sq ft',
+		cureTime: '2-4 hours',
+		lifespan: '20-25+ years',
+		advantages: [
+			'Rapid cure times',
+			'Excellent UV stability',
+			'Superior chemical resistance',
+			'Wide temperature application range',
+			'Low VOC emissions'
+		],
+		disadvantages: [
+			'Higher material cost',
+			'Shorter working time',
+			'Requires experienced installers',
+			'Limited decorative options'
+		],
+		performance: {
+			adhesion: 90,
+			durability: 95,
+			chemical: 95,
+			uv: 95,
+			impact: 85,
+			abrasion: 90
+		},
+		applications: [
+			'Commercial facilities',
+			'Outdoor concrete',
+			'High-traffic areas',
+			'Fast-turnaround projects',
+			'Chemical storage areas'
+		]
+	},
+	{
+		name: 'Polyurea Coating',
+		type: 'polyurea',
+		summary: 'Industrial-grade system for extreme conditions and heavy-duty applications',
+		bestFor: 'Industrial facilities, extreme environments, heavy machinery areas',
+		priceRange: '$10-20/sq ft',
+		cureTime: '1-2 hours',
+		lifespan: '25+ years',
+		advantages: [
+			'Exceptional impact resistance',
+			'Extreme temperature tolerance',
+			'Fastest cure times',
+			'Superior elongation properties',
+			'Excellent for harsh environments'
+		],
+		disadvantages: [
+			'Highest cost',
+			'Very short working time',
+			'Requires specialized equipment',
+			'Limited to experienced contractors'
+		],
+		performance: {
+			adhesion: 85,
+			durability: 98,
+			chemical: 98,
+			uv: 90,
+			impact: 98,
+			abrasion: 95
+		},
+		applications: [
+			'Manufacturing facilities',
+			'Chemical processing plants',
+			'Heavy machinery areas',
+			'Extreme environment applications',
+			'Infrastructure projects'
+		]
+	}
+];
+
+const decisionMatrix = [
+	{
+		factor: 'Budget',
+		weight: 25,
+		epoxy: 'Most cost-effective option',
+		polyaspartic: 'Moderate cost increase',
+		polyurea: 'Highest investment'
+	},
+	{
+		factor: 'Timeline',
+		weight: 20,
+		epoxy: '2-3 days installation',
+		polyaspartic: 'Same-day completion',
+		polyurea: 'Fastest cure available'
+	},
+	{
+		factor: 'Durability',
+		weight: 20,
+		epoxy: '15-20 year lifespan',
+		polyaspartic: '20-25 year lifespan',
+		polyurea: '25+ year lifespan'
+	},
+	{
+		factor: 'Environment',
+		weight: 15,
+		epoxy: 'Indoor, controlled conditions',
+		polyaspartic: 'Indoor/outdoor, variable conditions',
+		polyurea: 'Extreme conditions, industrial'
+	},
+	{
+		factor: 'Usage',
+		weight: 10,
+		epoxy: 'Light to moderate traffic',
+		polyaspartic: 'Moderate to heavy traffic',
+		polyurea: 'Heavy industrial traffic'
+	},
+	{
+		factor: 'Appearance',
+		weight: 10,
+		epoxy: 'Widest decorative options',
+		polyaspartic: 'Limited decorative options',
+		polyurea: 'Functional appearance focus'
+	}
+];
+---
+
+<Layout {seo}>
+	<Container>
+		<div class="comparison-guide">
+			<!-- Page Header -->
+			<header class="guide-header">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/resources/">Resources</a></li>
+						<li aria-current="page">Coating Comparison Guide</li>
+					</ol>
+				</nav>
+
+				<div class="header-content">
+					<h1>Concrete Coating Comparison Guide</h1>
+					<p class="header-subtitle">
+						Expert analysis and performance data to help you choose the right concrete coating system. 
+						Compare epoxy, polyaspartic, and polyurea coatings with real-world insights from 15+ years 
+						of Cincinnati installations.
+					</p>
+					
+					<div class="guide-stats">
+						<div class="stat-item">
+							<span class="stat-number">3</span>
+							<span class="stat-label">Coating Types</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-number">500+</span>
+							<span class="stat-label">Installations Analyzed</span>
+						</div>
+						<div class="stat-item">
+							<span class="stat-number">15+</span>
+							<span class="stat-label">Years Experience</span>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Quick Comparison Table -->
+			<section class="quick-comparison">
+				<h2>At-a-Glance Comparison</h2>
+				<div class="comparison-table-wrapper">
+					<table class="comparison-table">
+						<thead>
+							<tr>
+								<th>Feature</th>
+								<th class="coating-column epoxy">Epoxy</th>
+								<th class="coating-column polyaspartic">Polyaspartic</th>
+								<th class="coating-column polyurea">Polyurea</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>Cost Range</strong></td>
+								<td>$5-12/sq ft</td>
+								<td>$8-15/sq ft</td>
+								<td>$10-20/sq ft</td>
+							</tr>
+							<tr>
+								<td><strong>Cure Time</strong></td>
+								<td>2-3 days</td>
+								<td>2-4 hours</td>
+								<td>1-2 hours</td>
+							</tr>
+							<tr>
+								<td><strong>Lifespan</strong></td>
+								<td>15-20+ years</td>
+								<td>20-25+ years</td>
+								<td>25+ years</td>
+							</tr>
+							<tr>
+								<td><strong>Best For</strong></td>
+								<td>Residential & Light Commercial</td>
+								<td>Quick Turnaround & Outdoor</td>
+								<td>Industrial & Extreme Conditions</td>
+							</tr>
+							<tr>
+								<td><strong>UV Stability</strong></td>
+								<td>⭐⭐⭐</td>
+								<td>⭐⭐⭐⭐⭐</td>
+								<td>⭐⭐⭐⭐</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- Detailed System Comparisons -->
+			<section class="detailed-comparison">
+				<h2>Detailed System Analysis</h2>
+				
+				<div class="systems-grid">
+					{coatingSystems.map(system => (
+						<article class={`system-card ${system.type}`}>
+							<div class="system-header">
+								<h3>{system.name}</h3>
+								<div class="system-price">{system.priceRange}</div>
+							</div>
+							
+							<div class="system-summary">
+								<p>{system.summary}</p>
+							</div>
+
+							<div class="system-details">
+								<div class="detail-grid">
+									<div class="detail-item">
+										<span class="detail-label">Best For:</span>
+										<span class="detail-value">{system.bestFor}</span>
+									</div>
+									<div class="detail-item">
+										<span class="detail-label">Cure Time:</span>
+										<span class="detail-value">{system.cureTime}</span>
+									</div>
+									<div class="detail-item">
+										<span class="detail-label">Lifespan:</span>
+										<span class="detail-value">{system.lifespan}</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Performance Chart -->
+							<div class="performance-chart">
+								<h4>Performance Ratings</h4>
+								<div class="performance-bars">
+									{Object.entries(system.performance).map(([key, value]) => (
+										<div class="performance-bar">
+											<span class="performance-label">{key.charAt(0).toUpperCase() + key.slice(1)}</span>
+											<div class="bar-container">
+												<div 
+													class="bar-fill" 
+													style={`width: ${value}%`}
+													data-value={value}
+												></div>
+											</div>
+											<span class="performance-value">{value}%</span>
+										</div>
+									))}
+								</div>
+							</div>
+
+							<!-- Advantages/Disadvantages -->
+							<div class="pros-cons">
+								<div class="pros">
+									<h4>Advantages</h4>
+									<ul>
+										{system.advantages.map(advantage => (
+											<li>✅ {advantage}</li>
+										))}
+									</ul>
+								</div>
+								<div class="cons">
+									<h4>Considerations</h4>
+									<ul>
+										{system.disadvantages.map(disadvantage => (
+											<li>⚠️ {disadvantage}</li>
+										))}
+									</ul>
+								</div>
+							</div>
+
+							<!-- Applications -->
+							<div class="applications">
+								<h4>Ideal Applications</h4>
+								<div class="application-tags">
+									{system.applications.map(app => (
+										<span class="application-tag">{app}</span>
+									))}
+								</div>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<!-- Decision Matrix -->
+			<section class="decision-matrix">
+				<h2>Decision-Making Framework</h2>
+				<p class="matrix-intro">
+					Use this weighted comparison to evaluate which coating system best fits your specific needs. 
+					Each factor is weighted by importance for most projects.
+				</p>
+
+				<div class="matrix-table-wrapper">
+					<table class="matrix-table">
+						<thead>
+							<tr>
+								<th>Decision Factor</th>
+								<th class="weight-col">Weight</th>
+								<th class="coating-col epoxy">Epoxy</th>
+								<th class="coating-col polyaspartic">Polyaspartic</th>
+								<th class="coating-col polyurea">Polyurea</th>
+							</tr>
+						</thead>
+						<tbody>
+							{decisionMatrix.map(factor => (
+								<tr>
+									<td class="factor-name">{factor.factor}</td>
+									<td class="weight-value">{factor.weight}%</td>
+									<td class="factor-score">{factor.epoxy}</td>
+									<td class="factor-score">{factor.polyaspartic}</td>
+									<td class="factor-score">{factor.polyurea}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<!-- Cincinnati-Specific Considerations -->
+			<section class="local-considerations">
+				<h2>Cincinnati Climate Considerations</h2>
+				<div class="climate-grid">
+					<div class="climate-factor">
+						<div class="factor-icon">🌡️</div>
+						<h3>Temperature Extremes</h3>
+						<p>Cincinnati's temperature swings from below freezing to 90°F+ summers require coatings that can handle thermal expansion and contraction. <strong>Polyaspartic and polyurea</strong> offer superior thermal stability.</p>
+					</div>
+					
+					<div class="climate-factor">
+						<div class="factor-icon">💧</div>
+						<h3>Humidity & Moisture</h3>
+						<p>High humidity levels in spring and summer can affect curing. <strong>Polyaspartic systems</strong> are less sensitive to moisture during installation than traditional epoxy systems.</p>
+					</div>
+					
+					<div class="climate-factor">
+						<div class="factor-icon">❄️</div>
+						<h3>Winter Salt Exposure</h3>
+						<p>Road salt and deicing chemicals are aggressive to concrete coatings. All our systems provide excellent chemical resistance, with <strong>polyurea</strong> offering the highest protection.</p>
+					</div>
+					
+					<div class="climate-factor">
+						<div class="factor-icon">☀️</div>
+						<h3>UV Exposure</h3>
+						<p>Outdoor applications face significant UV exposure in summer months. <strong>Polyaspartic coatings</strong> provide the best UV stability, while standard epoxy may yellow over time.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Cost Analysis -->
+			<section class="cost-analysis">
+				<h2>Total Cost of Ownership</h2>
+				<div class="cost-comparison">
+					<div class="cost-chart">
+						<h3>20-Year Cost Analysis</h3>
+						<p>Including initial installation, maintenance, and potential replacement costs</p>
+						
+						<div class="cost-bars">
+							<div class="cost-bar epoxy">
+								<div class="cost-label">
+									<h4>Epoxy System</h4>
+									<span class="cost-breakdown">$6/sq ft initial + maintenance</span>
+								</div>
+								<div class="cost-visual">
+									<div class="initial-cost" style="width: 60%">Initial: $2,400</div>
+									<div class="maintenance-cost" style="width: 25%">Maintenance: $1,000</div>
+									<div class="replacement-cost" style="width: 15%">Replacement: $600</div>
+								</div>
+								<div class="total-cost">Total: $4,000 (400 sq ft)</div>
+							</div>
+
+							<div class="cost-bar polyaspartic">
+								<div class="cost-label">
+									<h4>Polyaspartic System</h4>
+									<span class="cost-breakdown">$12/sq ft initial + minimal maintenance</span>
+								</div>
+								<div class="cost-visual">
+									<div class="initial-cost" style="width: 90%">Initial: $4,800</div>
+									<div class="maintenance-cost" style="width: 10%">Maintenance: $500</div>
+									<div class="replacement-cost" style="width: 0%">Replacement: $0</div>
+								</div>
+								<div class="total-cost">Total: $5,300 (400 sq ft)</div>
+							</div>
+
+							<div class="cost-bar polyurea">
+								<div class="cost-label">
+									<h4>Polyurea System</h4>
+									<span class="cost-breakdown">$15/sq ft initial + minimal maintenance</span>
+								</div>
+								<div class="cost-visual">
+									<div class="initial-cost" style="width: 92%">Initial: $6,000</div>
+									<div class="maintenance-cost" style="width: 8%">Maintenance: $500</div>
+									<div class="replacement-cost" style="width: 0%">Replacement: $0</div>
+								</div>
+								<div class="total-cost">Total: $6,500 (400 sq ft)</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="cost-factors">
+						<h3>Cost Factors to Consider</h3>
+						<ul class="factor-list">
+							<li><strong>Surface Condition:</strong> Poor concrete requires more prep, increasing costs 20-40%</li>
+							<li><strong>Decorative Options:</strong> Metallic finishes and custom designs add $2-5/sq ft</li>
+							<li><strong>Site Access:</strong> Difficult access may increase labor costs by 15-30%</li>
+							<li><strong>Timeline Requirements:</strong> Rush jobs typically cost 20-50% more</li>
+							<li><strong>Environmental Controls:</strong> Winter installations may require heating/ventilation</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Selection Wizard -->
+			<section class="selection-wizard">
+				<h2>Find Your Ideal Coating System</h2>
+				<div class="wizard-container">
+					<div class="wizard-intro">
+						<p>Answer these questions to get a personalized coating recommendation based on your specific needs and priorities.</p>
+					</div>
+
+					<div class="wizard-questions">
+						<div class="question-group">
+							<h3>1. What's your primary use case?</h3>
+							<div class="option-grid">
+								<label class="option-card" data-question="use-case" data-value="residential">
+									<input type="radio" name="use-case" value="residential">
+									<div class="option-content">
+										<h4>🏠 Residential Garage</h4>
+										<p>Personal vehicles, occasional projects</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="use-case" data-value="commercial">
+									<input type="radio" name="use-case" value="commercial">
+									<div class="option-content">
+										<h4>🏢 Commercial Space</h4>
+										<p>Customer traffic, business operations</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="use-case" data-value="industrial">
+									<input type="radio" name="use-case" value="industrial">
+									<div class="option-content">
+										<h4>🏭 Industrial Facility</h4>
+										<p>Heavy machinery, chemical exposure</p>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="question-group">
+							<h3>2. What's your timeline priority?</h3>
+							<div class="option-grid">
+								<label class="option-card" data-question="timeline" data-value="flexible">
+									<input type="radio" name="timeline" value="flexible">
+									<div class="option-content">
+										<h4>⏰ Flexible Timeline</h4>
+										<p>Quality over speed, can wait 2-3 days</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="timeline" data-value="fast">
+									<input type="radio" name="timeline" value="fast">
+									<div class="option-content">
+										<h4>🚀 Fast Turnaround</h4>
+										<p>Need same-day completion</p>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="question-group">
+							<h3>3. What's your budget priority?</h3>
+							<div class="option-grid">
+								<label class="option-card" data-question="budget" data-value="economy">
+									<input type="radio" name="budget" value="economy">
+									<div class="option-content">
+										<h4>💰 Cost-Effective</h4>
+										<p>Best value for money</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="budget" data-value="premium">
+									<input type="radio" name="budget" value="premium">
+									<div class="option-content">
+										<h4>🏆 Premium Investment</h4>
+										<p>Long-term performance priority</p>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="question-group">
+							<h3>4. Environmental considerations?</h3>
+							<div class="option-grid">
+								<label class="option-card" data-question="environment" data-value="indoor">
+									<input type="radio" name="environment" value="indoor">
+									<div class="option-content">
+										<h4>🏠 Indoor Only</h4>
+										<p>Controlled environment, no UV exposure</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="environment" data-value="outdoor">
+									<input type="radio" name="environment" value="outdoor">
+									<div class="option-content">
+										<h4>☀️ Outdoor/Mixed</h4>
+										<p>UV exposure, weather elements</p>
+									</div>
+								</label>
+								<label class="option-card" data-question="environment" data-value="extreme">
+									<input type="radio" name="environment" value="extreme">
+									<div class="option-content">
+										<h4>⚡ Extreme Conditions</h4>
+										<p>Chemicals, heavy impact, temperature extremes</p>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<button type="button" class="wizard-submit" id="get-recommendation">
+						Get My Coating Recommendation
+					</button>
+
+					<div class="recommendation-result" id="recommendation-result" style="display: none;">
+						<div class="result-content">
+							<h3>Your Recommended Coating System</h3>
+							<div class="recommended-system">
+								<!-- Populated by JavaScript -->
+							</div>
+							<div class="next-steps">
+								<h4>Next Steps</h4>
+								<div class="step-buttons">
+									<a href="/contact/" class="step-button primary">Get Free Estimate</a>
+									<a href="tel:513-296-5525" class="step-button secondary">Call (513) 296-5525</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Expert Consultation CTA -->
+			<section class="expert-consultation">
+				<div class="consultation-content">
+					<h2>Still Have Questions?</h2>
+					<p>
+						Every project is unique, and the best coating system depends on your specific requirements, 
+						budget, and timeline. Get personalized recommendations from our experienced team.
+					</p>
+					
+					<div class="consultation-benefits">
+						<div class="benefit-item">
+							<div class="benefit-icon">🎖️</div>
+							<h3>Veteran-Owned Expertise</h3>
+							<p>15+ years of military precision and coating experience</p>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">📊</div>
+							<h3>Data-Driven Recommendations</h3>
+							<p>Based on 500+ Cincinnati installations and performance data</p>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">🔬</div>
+							<h3>Technical Analysis</h3>
+							<p>Professional assessment of your specific conditions and needs</p>
+						</div>
+						<div class="benefit-item">
+							<div class="benefit-icon">💯</div>
+							<h3>No-Pressure Consultation</h3>
+							<p>Honest recommendations focused on your best interests</p>
+						</div>
+					</div>
+
+					<div class="consultation-cta">
+						<a href="/contact/" class="cta-button primary">Schedule Free Consultation</a>
+						<a href="tel:513-296-5525" class="cta-button secondary">Call Expert: (513) 296-5525</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Related Resources -->
+			<aside class="related-resources">
+				<h3>Related Resources</h3>
+				<div class="resource-grid">
+					<div class="resource-item">
+						<h4><a href="/resources/maintenance-guide/">Maintenance Guide</a></h4>
+						<p>Complete care instructions to maximize your coating's lifespan and performance.</p>
+					</div>
+					<div class="resource-item">
+						<h4><a href="/resources/faq/">Frequently Asked Questions</a></h4>
+						<p>Expert answers to common concrete coating questions and concerns.</p>
+					</div>
+					<div class="resource-item">
+						<h4><a href="/resources/blog/">Expert Blog</a></h4>
+						<p>In-depth articles on concrete coating topics and industry insights.</p>
+					</div>
+					<div class="resource-item">
+						<h4><a href="/portfolio/">Project Portfolio</a></h4>
+						<p>See real examples of our coating installations across different applications.</p>
+					</div>
+				</div>
+			</aside>
+		</div>
+	</Container>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(seo.structuredData)}></script>
+</Layout>
+
+<style>
+/* Comparison Guide Styling */
+.comparison-guide {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+/* Guide Header */
+.guide-header {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-surface-3) 100%);
+	color: white;
+	padding: 4rem 2rem;
+	margin: -2rem -2rem 3rem -2rem;
+	border-radius: 0 0 2rem 2rem;
+	text-align: center;
+}
+
+.breadcrumb {
+	margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb a {
+	color: var(--theme-primary);
+	text-decoration: none;
+}
+
+.header-content h1 {
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+	margin-bottom: 1.5rem;
+}
+
+.header-subtitle {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	opacity: 0.9;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.6;
+}
+
+.guide-stats {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.stat-item {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 1rem;
+	backdrop-filter: blur(10px);
+}
+
+.stat-number {
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--theme-primary);
+	margin-bottom: 0.5rem;
+}
+
+.stat-label {
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+/* Quick Comparison */
+.quick-comparison {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.quick-comparison h2 {
+	text-align: center;
+	color: var(--theme-surface-2);
+	margin-bottom: 2rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.comparison-table-wrapper {
+	overflow-x: auto;
+}
+
+.comparison-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	overflow: hidden;
+	box-shadow: 0 4px 16px var(--theme-shadow-medium);
+}
+
+.comparison-table th,
+.comparison-table td {
+	padding: 1.5rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.comparison-table th {
+	background: var(--theme-surface-2);
+	color: white;
+	font-weight: 600;
+}
+
+.coating-column.epoxy {
+	background: rgba(46, 125, 50, 0.1);
+}
+
+.coating-column.polyaspartic {
+	background: rgba(25, 118, 210, 0.1);
+}
+
+.coating-column.polyurea {
+	background: rgba(156, 39, 176, 0.1);
+}
+
+.comparison-table td strong {
+	color: var(--theme-surface-2);
+}
+
+/* Detailed Comparison */
+.detailed-comparison {
+	margin: 4rem 0;
+}
+
+.detailed-comparison h2 {
+	text-align: center;
+	color: var(--theme-surface-2);
+	margin-bottom: 3rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.systems-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 2rem;
+}
+
+.system-card {
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	padding: 2rem;
+	border: 3px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.system-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 8px 32px var(--theme-shadow-medium);
+}
+
+.system-card.epoxy {
+	border-color: #2E7D32;
+}
+
+.system-card.polyaspartic {
+	border-color: #1976D2;
+}
+
+.system-card.polyurea {
+	border-color: #9C27B0;
+}
+
+.system-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid var(--theme-border-light);
+}
+
+.system-header h3 {
+	color: var(--theme-surface-2);
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+.system-price {
+	background: var(--theme-primary);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.system-summary {
+	margin-bottom: 2rem;
+}
+
+.system-summary p {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	line-height: 1.6;
+}
+
+.detail-grid {
+	display: grid;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.detail-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+}
+
+.detail-label {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+.detail-value {
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+}
+
+/* Performance Chart */
+.performance-chart {
+	margin: 2rem 0;
+}
+
+.performance-chart h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.performance-bars {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.performance-bar {
+	display: grid;
+	grid-template-columns: 100px 1fr 50px;
+	align-items: center;
+	gap: 1rem;
+}
+
+.performance-label {
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: var(--theme-on-surface-1);
+	text-transform: capitalize;
+}
+
+.bar-container {
+	background: var(--theme-border-light);
+	height: 8px;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+}
+
+.bar-fill {
+	height: 100%;
+	background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-hover));
+	border-radius: 4px;
+	transition: width 0.6s ease;
+	position: relative;
+}
+
+.performance-value {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--theme-surface-2);
+	text-align: right;
+}
+
+/* Pros and Cons */
+.pros-cons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.pros h4,
+.cons h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.pros ul,
+.cons ul {
+	list-style: none;
+	padding: 0;
+}
+
+.pros li,
+.cons li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+	line-height: 1.4;
+}
+
+.pros li:last-child,
+.cons li:last-child {
+	border-bottom: none;
+}
+
+/* Applications */
+.applications {
+	margin-top: 2rem;
+}
+
+.applications h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.application-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+
+.application-tag {
+	background: var(--theme-surface-1);
+	color: var(--theme-on-surface-1);
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 0.85rem;
+	font-weight: 500;
+	border: 1px solid var(--theme-border-light);
+}
+
+/* Decision Matrix */
+.decision-matrix {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.decision-matrix h2 {
+	text-align: center;
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.matrix-intro {
+	text-align: center;
+	margin-bottom: 2rem;
+	color: var(--theme-on-surface-1);
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.matrix-table-wrapper {
+	overflow-x: auto;
+}
+
+.matrix-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	overflow: hidden;
+}
+
+.matrix-table th,
+.matrix-table td {
+	padding: 1.25rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.matrix-table th {
+	background: var(--theme-surface-2);
+	color: white;
+	font-weight: 600;
+}
+
+.weight-col {
+	text-align: center;
+	width: 80px;
+}
+
+.weight-value {
+	text-align: center;
+	font-weight: 600;
+	color: var(--theme-primary);
+}
+
+.factor-name {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+/* Local Considerations */
+.local-considerations {
+	margin: 4rem 0;
+}
+
+.local-considerations h2 {
+	text-align: center;
+	color: var(--theme-surface-2);
+	margin-bottom: 3rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.climate-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.climate-factor {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.climate-factor:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.factor-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.climate-factor h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+/* Cost Analysis */
+.cost-analysis {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.cost-analysis h2 {
+	text-align: center;
+	color: var(--theme-surface-2);
+	margin-bottom: 3rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.cost-comparison {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.cost-chart h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.cost-chart p {
+	color: var(--theme-on-surface-1);
+	margin-bottom: 2rem;
+}
+
+.cost-bars {
+	display: grid;
+	gap: 2rem;
+}
+
+.cost-bar {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.cost-label h4 {
+	margin-bottom: 0.5rem;
+	color: var(--theme-surface-2);
+}
+
+.cost-breakdown {
+	font-size: 0.9rem;
+	color: var(--theme-on-surface-1);
+}
+
+.cost-visual {
+	display: flex;
+	height: 30px;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.initial-cost,
+.maintenance-cost,
+.replacement-cost {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.initial-cost {
+	background: #2E7D32;
+}
+
+.maintenance-cost {
+	background: #F57C00;
+}
+
+.replacement-cost {
+	background: #D32F2F;
+}
+
+.total-cost {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+	text-align: center;
+}
+
+.cost-factors h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.factor-list {
+	list-style: none;
+	padding: 0;
+}
+
+.factor-list li {
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.factor-list li:last-child {
+	border-bottom: none;
+}
+
+/* Selection Wizard */
+.selection-wizard {
+	margin: 4rem 0;
+	background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-hover) 100%);
+	color: white;
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.selection-wizard h2 {
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	color: white;
+}
+
+.wizard-intro {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.wizard-intro p {
+	font-size: 1.1rem;
+	opacity: 0.9;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.question-group {
+	margin-bottom: 3rem;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	backdrop-filter: blur(10px);
+}
+
+.question-group h3 {
+	color: white;
+	margin-bottom: 1.5rem;
+	font-size: 1.3rem;
+}
+
+.option-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.option-card {
+	background: rgba(255, 255, 255, 0.1);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: var(--theme-shape-radius);
+	padding: 1.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.option-card:hover {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: rgba(255, 255, 255, 0.5);
+	transform: translateY(-2px);
+}
+
+.option-card input {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.option-card input:checked + .option-content {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.option-card input:checked ~ .option-card {
+	border-color: white;
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.option-content h4 {
+	color: white;
+	margin-bottom: 0.5rem;
+	font-size: 1.1rem;
+}
+
+.option-content p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+.wizard-submit {
+	display: block;
+	width: 100%;
+	max-width: 400px;
+	margin: 2rem auto;
+	background: white;
+	color: var(--theme-primary);
+	border: none;
+	padding: 1.5rem 2rem;
+	border-radius: 2rem;
+	font-size: 1.1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.wizard-submit:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.wizard-submit:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.recommendation-result {
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: var(--theme-shape-radius);
+	padding: 2rem;
+	margin-top: 2rem;
+	backdrop-filter: blur(10px);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.recommended-system {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 1rem 0;
+}
+
+.step-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.step-button {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.step-button.primary {
+	background: white;
+	color: var(--theme-primary);
+	border-color: white;
+}
+
+.step-button.secondary {
+	background: transparent;
+	color: white;
+	border-color: white;
+}
+
+.step-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Expert Consultation */
+.expert-consultation {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+}
+
+.expert-consultation h2 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.consultation-content p {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	max-width: 800px;
+	margin: 0 auto 3rem auto;
+}
+
+.consultation-benefits {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-bottom: 3rem;
+}
+
+.benefit-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.benefit-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+}
+
+.consultation-cta {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cta-button {
+	display: inline-block;
+	padding: 1.25rem 2.5rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.1rem;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.cta-button.primary {
+	background: var(--theme-primary);
+	color: white;
+	border-color: var(--theme-primary);
+}
+
+.cta-button.secondary {
+	background: transparent;
+	color: var(--theme-surface-2);
+	border-color: var(--theme-surface-2);
+}
+
+.cta-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.primary:hover {
+	background: var(--theme-primary-hover);
+	border-color: var(--theme-primary-hover);
+}
+
+.cta-button.secondary:hover {
+	background: var(--theme-surface-2);
+	color: white;
+}
+
+/* Related Resources */
+.related-resources {
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 3rem 0;
+}
+
+.related-resources h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 1.8rem;
+}
+
+.resource-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+.resource-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.resource-item h4 {
+	margin-bottom: 1rem;
+}
+
+.resource-item h4 a {
+	color: var(--theme-surface-2);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.resource-item h4 a:hover {
+	color: var(--theme-primary);
+}
+
+.resource-item p {
+	color: var(--theme-on-surface-1);
+	line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.guide-stats {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	
+	.systems-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.pros-cons {
+		grid-template-columns: 1fr;
+	}
+	
+	.cost-comparison {
+		grid-template-columns: 1fr;
+	}
+	
+	.option-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.consultation-benefits {
+		grid-template-columns: 1fr;
+	}
+	
+	.consultation-cta {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.cta-button {
+		width: 100%;
+		max-width: 300px;
+	}
+	
+	.comparison-table,
+	.matrix-table {
+		font-size: 0.9rem;
+	}
+	
+	.comparison-table th,
+	.comparison-table td,
+	.matrix-table th,
+	.matrix-table td {
+		padding: 1rem 0.5rem;
+	}
+	
+	.step-buttons {
+		flex-direction: column;
+	}
+	
+	.step-button {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+/* Focus styles for accessibility */
+.option-card:focus,
+.wizard-submit:focus,
+.cta-button:focus,
+.step-button:focus {
+	outline: 2px solid var(--theme-primary);
+	outline-offset: 2px;
+}
+</style>
+
+<script>
+// Coating Comparison Guide Functionality
+document.addEventListener('DOMContentLoaded', function() {
+	// Selection Wizard Logic
+	const wizardContainer = document.querySelector('.selection-wizard');
+	const wizardSubmit = document.getElementById('get-recommendation');
+	const recommendationResult = document.getElementById('recommendation-result');
+	const optionCards = document.querySelectorAll('.option-card');
+	
+	// Coating recommendations based on answers
+	const recommendations = {
+		'residential-flexible-economy-indoor': {
+			system: 'Epoxy Flooring System',
+			type: 'epoxy',
+			price: '$5-8/sq ft',
+			reason: 'Perfect balance of cost, performance, and decorative options for residential garage applications.',
+			benefits: ['Most cost-effective', 'Wide variety of decorative options', 'Proven 15-20 year lifespan', 'Excellent for controlled indoor environments'],
+			nextSteps: 'Standard epoxy with decorative flakes is ideal for your residential garage.'
+		},
+		'residential-fast-premium-indoor': {
+			system: 'Polyaspartic Coating System',
+			type: 'polyaspartic',
+			price: '$8-12/sq ft',
+			reason: 'Fast installation with premium performance for homeowners who want quick turnaround.',
+			benefits: ['Same-day installation', 'Superior UV resistance', '20-25 year lifespan', 'Excellent chemical resistance'],
+			nextSteps: 'Polyaspartic system will have you back in your garage the same day.'
+		},
+		'commercial-fast-premium-outdoor': {
+			system: 'Polyaspartic Coating System',
+			type: 'polyaspartic',
+			price: '$10-15/sq ft',
+			reason: 'Commercial-grade system with UV stability and rapid cure for minimal business disruption.',
+			benefits: ['Minimal downtime', 'UV stable for outdoor areas', 'Superior chemical resistance', 'Professional appearance'],
+			nextSteps: 'Ideal for commercial spaces that need fast turnaround and long-term performance.'
+		},
+		'industrial-fast-premium-extreme': {
+			system: 'Polyurea Coating System',
+			type: 'polyurea',
+			price: '$12-20/sq ft',
+			reason: 'Industrial-grade system designed for extreme conditions and heavy-duty applications.',
+			benefits: ['Fastest cure time', 'Exceptional impact resistance', 'Chemical resistant', '25+ year lifespan'],
+			nextSteps: 'Polyurea provides maximum durability for demanding industrial environments.'
+		}
+	};
+	
+	// Update wizard submit button state
+	function updateWizardState() {
+		const questions = ['use-case', 'timeline', 'budget', 'environment'];
+		const answers = {};
+		let allAnswered = true;
+		
+		questions.forEach(question => {
+			const selected = document.querySelector(`input[name="${question}"]:checked`);
+			if (selected) {
+				answers[question] = selected.value;
+			} else {
+				allAnswered = false;
+			}
+		});
+		
+		wizardSubmit.disabled = !allAnswered;
+		
+		if (allAnswered) {
+			wizardSubmit.onclick = () => showRecommendation(answers);
+		}
+	}
+	
+	// Show coating recommendation
+	function showRecommendation(answers) {
+		// Generate recommendation key
+		const key = `${answers['use-case']}-${answers.timeline}-${answers.budget}-${answers.environment}`;
+		
+		// Find best match or default
+		let recommendation = recommendations[key] || findBestMatch(answers);
+		
+		if (!recommendation) {
+			recommendation = {
+				system: 'Custom Consultation Needed',
+				type: 'custom',
+				price: 'Contact for estimate',
+				reason: 'Your specific requirements need personalized analysis for the best recommendation.',
+				benefits: ['Tailored to your exact needs', 'Expert site evaluation', 'Customized performance requirements', 'Professional installation guidance'],
+				nextSteps: 'Schedule a consultation for personalized recommendations.'
+			};
+		}
+		
+		// Display recommendation
+		const recommendedSystemDiv = document.querySelector('.recommended-system');
+		recommendedSystemDiv.innerHTML = `
+			<div class="system-recommendation ${recommendation.type}">
+				<h4>${recommendation.system}</h4>
+				<div class="rec-price">${recommendation.price}</div>
+				<p class="rec-reason">${recommendation.reason}</p>
+				<div class="rec-benefits">
+					<h5>Key Benefits for You:</h5>
+					<ul>
+						${recommendation.benefits.map(benefit => `<li>✓ ${benefit}</li>`).join('')}
+					</ul>
+				</div>
+				<p class="rec-next"><strong>Recommendation:</strong> ${recommendation.nextSteps}</p>
+			</div>
+		`;
+		
+		recommendationResult.style.display = 'block';
+		recommendationResult.scrollIntoView({ behavior: 'smooth' });
+		
+		// Analytics tracking if available
+		if (typeof gtag !== 'undefined') {
+			gtag('event', 'coating_recommendation', {
+				'event_category': 'engagement',
+				'event_label': recommendation.system,
+				'custom_parameters': answers
+			});
+		}
+	}
+	
+	// Find best match for answers not in exact recommendations
+	function findBestMatch(answers) {
+		// Logic to find closest match based on priorities
+		if (answers.environment === 'extreme') {
+			return recommendations['industrial-fast-premium-extreme'];
+		} else if (answers.timeline === 'fast') {
+			return recommendations['residential-fast-premium-indoor'];
+		} else if (answers.budget === 'economy') {
+			return recommendations['residential-flexible-economy-indoor'];
+		}
+		return null;
+	}
+	
+	// Handle option selection
+	optionCards.forEach(card => {
+		card.addEventListener('click', function() {
+			const input = this.querySelector('input');
+			const questionName = input.name;
+			
+			// Clear other selections in same question group
+			document.querySelectorAll(`input[name="${questionName}"]`).forEach(otherInput => {
+				otherInput.closest('.option-card').classList.remove('selected');
+			});
+			
+			// Select current option
+			input.checked = true;
+			this.classList.add('selected');
+			
+			updateWizardState();
+		});
+	});
+	
+	// Animate performance bars on scroll
+	const observerOptions = {
+		threshold: 0.5,
+		rootMargin: '0px 0px -100px 0px'
+	};
+	
+	const performanceObserver = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				const bars = entry.target.querySelectorAll('.bar-fill');
+				bars.forEach(bar => {
+					const value = bar.getAttribute('data-value');
+					setTimeout(() => {
+						bar.style.width = value + '%';
+					}, 200);
+				});
+			}
+		});
+	}, observerOptions);
+	
+	// Observe performance charts
+	document.querySelectorAll('.performance-chart').forEach(chart => {
+		performanceObserver.observe(chart);
+	});
+	
+	// Enhanced table responsiveness
+	function makeTablesResponsive() {
+		const tables = document.querySelectorAll('.comparison-table, .matrix-table');
+		tables.forEach(table => {
+			if (!table.parentElement.classList.contains('table-responsive')) {
+				const wrapper = document.createElement('div');
+				wrapper.className = 'table-responsive';
+				table.parentNode.insertBefore(wrapper, table);
+				wrapper.appendChild(table);
+			}
+		});
+	}
+	
+	makeTablesResponsive();
+	
+	// Smooth scrolling for anchor links
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		anchor.addEventListener('click', function(e) {
+			e.preventDefault();
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				target.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			}
+		});
+	});
+	
+	// Initialize wizard state
+	updateWizardState();
+});
+</script>

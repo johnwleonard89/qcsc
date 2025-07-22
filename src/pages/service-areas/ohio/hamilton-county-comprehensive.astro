@@ -1,0 +1,236 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const countyData = {
+	name: 'Hamilton County',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Hamilton',
+	population: '817,473',
+	specialty: 'Urban & Suburban Comprehensive Services',
+	landmarks: [
+		'Cincinnati Downtown',
+		'University of Cincinnati',
+		'Cincinnati Zoo & Botanical Garden',
+		'Cincinnati Museum Center',
+		'Great American Ball Park',
+		'Paul Brown Stadium',
+		'Fountain Square',
+		'Procter & Gamble Headquarters',
+		'Cincinnati Children\'s Hospital',
+		'Xavier University',
+		'Cincinnati Art Museum',
+		'Eden Park',
+		'Mount Adams',
+		'Over-the-Rhine Historic District',
+		'Riverfront Parks',
+		'Spring Grove Cemetery'
+	],
+	description: 'Hamilton County is the crown jewel of Queen City Surface Coatings\' service area, representing our deepest expertise and most comprehensive coverage. As Ohio\'s third-most populous county and home to Cincinnati, we\'ve built our reputation serving the diverse needs of urban commercial districts, historic neighborhoods, suburban developments, and industrial facilities throughout this dynamic region. Our veteran-owned company brings military precision to every project, from downtown high-rises to suburban garages, understanding that Hamilton County\'s varied landscape requires specialized knowledge and adaptable solutions.',
+	serviceRadius: 'Complete Hamilton County coverage including all 49 municipalities',
+	zipCodes: ['45201', '45202', '45203', '45204', '45205', '45206', '45207', '45208', '45209', '45211', '45212', '45213', '45214', '45215', '45216', '45217', '45219', '45220', '45221', '45223', '45224', '45225', '45226', '45227', '45229', '45230', '45231', '45232', '45233', '45237', '45238', '45239', '45240', '45241', '45242', '45243', '45244', '45245', '45246', '45247', '45248', '45249', '45250', '45251', '45252', '45254', '45255', '45258', '45262', '45263', '45264', '45267', '45268', '45269', '45270', '45271', '45274', '45275', '45277', '45280', '45296', '45298', '45299'],
+	keyServices: [
+		'Downtown Commercial Epoxy Systems',
+		'Historic District Restoration Coatings',
+		'Suburban Residential Garage Floors',
+		'Industrial Warehouse Flooring',
+		'Healthcare Facility Surfaces',
+		'Educational Institution Coatings',
+		'Municipal Building Solutions',
+		'Retail and Restaurant Flooring'
+	],
+	cities: [
+		{ name: 'Cincinnati', population: '309,317', specialty: 'Urban Commercial & Residential' },
+		{ name: 'Springdale', population: '11,223', specialty: 'Suburban Community Services' },
+		{ name: 'Forest Park', population: '18,720', specialty: 'Mixed Development Coatings' },
+		{ name: 'Blue Ash', population: '12,333', specialty: 'Corporate and Business Parks' },
+		{ name: 'Montgomery', population: '10,251', specialty: 'Upscale Residential Estates' },
+		{ name: 'Sharonville', population: '13,560', specialty: 'Commercial and Retail Centers' },
+		{ name: 'Norwood', population: '19,207', specialty: 'Dense Urban Residential' },
+		{ name: 'Reading', population: '10,358', specialty: 'Community-Focused Services' },
+		{ name: 'Deer Park', population: '5,736', specialty: 'Residential Neighborhood Focus' },
+		{ name: 'Golf Manor', population: '3,580', specialty: 'Small Community Excellence' },
+		{ name: 'Evendale', population: '2,773', specialty: 'Industrial and Aviation Sector' }
+	],
+	localProjects: [
+		{
+			title: 'Cincinnati Children\'s Hospital Medical Center',
+			description: 'Completed a 15,000 sq ft medical-grade epoxy flooring installation across multiple departments, meeting strict healthcare facility requirements for antimicrobial properties and chemical resistance.',
+			service: 'Healthcare Epoxy Systems'
+		},
+		{
+			title: 'Procter & Gamble Corporate Campus',
+			description: 'Transformed lobby and common areas with stunning metallic epoxy flooring that reflects P&G\'s innovative corporate culture while maintaining durability for high foot traffic.',
+			service: 'Corporate Metallic Systems'
+		},
+		{
+			title: 'University of Cincinnati Research Facility',
+			description: 'Installed specialized chemical-resistant polyaspartic coating systems in laboratory environments, ensuring long-term durability against research chemicals and frequent cleaning protocols.',
+			service: 'Laboratory Coating Systems'
+		},
+		{
+			title: 'Montgomery Executive Home',
+			description: 'Created a luxury basement entertainment area featuring custom metallic epoxy with integrated lighting effects, showcasing the premium residential possibilities of modern coating technology.',
+			service: 'Residential Luxury Coatings'
+		},
+		{
+			title: 'Blue Ash Business Park Warehouse',
+			description: 'Completed 40,000 sq ft of industrial-grade polyurea flooring for a distribution center, designed for heavy forklift traffic and 24/7 operations with minimal downtime during installation.',
+			service: 'Industrial Distribution Center'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Dr. Sarah Mitchell',
+			location: 'Cincinnati Children\'s Hospital',
+			quote: 'The Queen City team delivered exactly what we needed for our medical facility - a floor system that meets our strictest hygiene standards while looking professional. Their attention to healthcare requirements was exceptional.',
+			service: 'Medical Facility Coating'
+		},
+		{
+			name: 'Mark Chen',
+			location: 'Montgomery Homeowner',
+			quote: 'We wanted something special for our basement renovation, and the metallic epoxy exceeded our expectations. It\'s become the centerpiece of our entertainment area. The craftsmanship is outstanding.',
+			service: 'Residential Metallic Epoxy'
+		},
+		{
+			name: 'Jennifer Rodriguez',
+			location: 'Blue Ash Manufacturing',
+			quote: 'Our warehouse needed a floor that could handle constant heavy equipment traffic. Six months later, it still looks brand new. The durability is exactly what they promised.',
+			service: 'Industrial Warehouse Coating'
+		}
+	],
+	marketSegments: [
+		{
+			title: 'Healthcare & Medical',
+			description: 'Hamilton County\'s concentration of world-class medical facilities requires specialized antimicrobial and chemical-resistant coating solutions.',
+			applications: ['Hospital corridors and patient rooms', 'Laboratory environments', 'Surgical suites', 'Pharmaceutical manufacturing', 'Medical office buildings']
+		},
+		{
+			title: 'Corporate & Commercial',
+			description: 'From Fortune 500 headquarters to small businesses, we understand the professional image requirements of Hamilton County\'s diverse commercial sector.',
+			applications: ['Corporate lobbies and common areas', 'Retail showrooms', 'Restaurant and hospitality', 'Office building common areas', 'Banking and financial institutions']
+		},
+		{
+			title: 'Industrial & Manufacturing',
+			description: 'Supporting Hamilton County\'s manufacturing heritage with heavy-duty flooring solutions for production facilities and distribution centers.',
+			applications: ['Manufacturing plant floors', 'Warehouse and distribution centers', 'Food processing facilities', 'Automotive service centers', 'Aviation maintenance facilities']
+		},
+		{
+			title: 'Educational Institutions',
+			description: 'Serving the University of Cincinnati, Cincinnati State, and numerous schools throughout the county with durable, safe educational facility coatings.',
+			applications: ['University research laboratories', 'School cafeterias and gymnasiums', 'Library and common areas', 'Dormitory common spaces', 'Technical training facilities']
+		},
+		{
+			title: 'Residential Communities',
+			description: 'From historic Over-the-Rhine to upscale Montgomery estates, we provide tailored residential solutions for Hamilton County\'s diverse neighborhoods.',
+			applications: ['Luxury home basements', 'Garage floor transformations', 'Pool deck coatings', 'Patio and outdoor living spaces', 'Historic home restorations']
+		}
+	],
+	faqs: [
+		{
+			question: 'What makes Hamilton County unique for concrete coating services?',
+			answer: 'Hamilton County\'s diverse urban-suburban mix, from Cincinnati\'s dense urban core to Montgomery\'s estates, requires adaptable expertise. We understand local building codes, historic district requirements, and the varied substrate conditions found throughout the county. Our experience with everything from 100-year-old buildings in Over-the-Rhine to modern corporate facilities gives us unique insights into what works best in each environment.'
+		},
+		{
+			question: 'How do you handle projects in Cincinnati\'s historic districts?',
+			answer: 'Historic districts like Over-the-Rhine require special consideration for preservation guidelines and older building characteristics. We work with architects, contractors, and city officials to ensure our coating solutions complement historic preservation goals while providing modern durability. Our experience includes projects in buildings dating from the 1800s, where we\'ve successfully addressed substrate challenges while maintaining historical integrity.'
+		},
+		{
+			question: 'What\'s your experience with Hamilton County\'s major institutions?',
+			answer: 'We\'ve completed projects at Cincinnati Children\'s Hospital, University of Cincinnati, Procter & Gamble facilities, and numerous other major institutions. Each sector has unique requirements - healthcare needs antimicrobial properties, educational facilities need durability and safety, corporate spaces need aesthetic appeal. Our institutional experience means we understand procurement processes, scheduling around operations, and meeting strict specifications.'
+		},
+		{
+			question: 'How do you manage projects across Hamilton County\'s 49 municipalities?',
+			answer: 'Each municipality has its own permitting requirements and regulations. We maintain relationships with building departments throughout the county and stay current on local codes. Our project management system tracks requirements for each jurisdiction, ensuring compliance whether we\'re working in Cincinnati\'s urban core or smaller communities like Golf Manor or Deer Park.'
+		},
+		{
+			question: 'What seasonal considerations affect Hamilton County projects?',
+			answer: 'Hamilton County\'s Ohio River valley climate brings humid summers and cold winters that affect coating applications. We schedule projects to optimize curing conditions, often recommending spring and fall installations. Winter projects are possible with proper environmental controls. We also consider the county\'s elevation changes and microclimates when planning installations, particularly for outdoor applications.'
+		}
+	]
+};
+
+const primaryService = 'Hamilton County Concrete Coating';
+const slug = 'hamilton-county-comprehensive';
+---
+
+<CityPageTemplate city={countyData} primaryService={primaryService} slug={slug} />
+
+<style>
+/* Additional county-specific styling */
+.cities-served {
+	background: var(--theme-bg);
+	padding: 4rem 0;
+}
+
+.cities-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.city-card {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border-left: 4px solid var(--theme-primary);
+}
+
+.city-card h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.city-population {
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+	margin-bottom: 1rem;
+}
+
+.city-specialty {
+	color: var(--theme-primary);
+	font-weight: 600;
+}
+
+.market-segments {
+	background: var(--theme-surface-1);
+	padding: 4rem 0;
+}
+
+.segments-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.market-segment {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.segment-applications {
+	list-style: none;
+	padding: 0;
+	margin: 1rem 0;
+}
+
+.segment-applications li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: var(--theme-on-surface-1);
+}
+
+.segment-applications li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--theme-primary);
+	font-weight: bold;
+}
+</style>

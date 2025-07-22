@@ -1,11 +1,12 @@
 ---
 import { Container, CtaCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
 
 const seo = {
-	title: 'Garage Floor Epoxy Coating Cincinnati | Professional Installation & Repair',
-	description: 'Transform your garage with professional epoxy floor coating in Cincinnati. Durable, chemical-resistant, slip-resistant floors. Free estimates from veteran-owned specialists.',
-	keywords: 'garage floor epoxy, epoxy coating Cincinnati, garage floor refinishing, concrete coating, Cincinnati epoxy installer, garage makeover Ohio',
+	title: 'Garage Floor Epoxy Coating | Professional Installation Cincinnati',
+	description: 'Transform your garage with professional epoxy floor coating in Cincinnati. Durable, chemical-resistant, slip-resistant floors with 15-20+ year lifespan. Free estimates from veteran-owned specialists.',
+	keywords: 'garage floor epoxy, epoxy garage floor coating, garage floor refinishing, concrete coating Cincinnati, Cincinnati epoxy installer, garage makeover Ohio, epoxy flooring Cincinnati',
 	type: 'service',
 	breadcrumbs: [
 		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
@@ -16,277 +17,1455 @@ const seo = {
 		"@context": "https://schema.org",
 		"@type": "Service",
 		"name": "Garage Floor Epoxy Coating",
-		"description": "Professional garage floor epoxy coating installation and repair services in Cincinnati",
+		"description": "Professional garage floor epoxy coating installation and repair services in Cincinnati, Ohio. Transform your garage with durable, chemical-resistant flooring systems.",
 		"provider": {
 			"@type": "LocalBusiness",
-			"name": "Queen City Surface Coatings LLC"
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cincinnati",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525",
+			"url": "https://queencitysurfacecoatings.com"
 		},
-		"areaServed": {
-			"@type": "State",
-			"name": "Ohio"
-		},
+		"areaServed": [
+			{
+				"@type": "City",
+				"name": "Cincinnati",
+				"addressRegion": "OH"
+			},
+			{
+				"@type": "State",
+				"name": "Ohio"
+			},
+			{
+				"@type": "State", 
+				"name": "Kentucky"
+			},
+			{
+				"@type": "State",
+				"name": "Indiana"
+			}
+		],
+		"serviceType": "Garage Floor Epoxy Coating",
 		"offers": {
 			"@type": "Offer",
 			"priceCurrency": "USD",
-			"availability": "https://schema.org/InStock"
+			"availability": "https://schema.org/InStock",
+			"priceRange": "$3-$15 per square foot"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"reviewCount": "50"
 		}
 	}
+};
+
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "How long does garage floor epoxy installation take?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Most residential garage floor epoxy installations take 2-3 days. Day 1 involves surface preparation and primer application. Day 2 includes base coat and decorative elements. Day 3 is the topcoat application. Full curing takes 7 days for complete chemical resistance."
+			}
+		},
+		{
+			"@type": "Question", 
+			"name": "How long does garage floor epoxy last?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Professional garage floor epoxy coatings last 15-20+ years with proper installation and maintenance. The lifespan depends on traffic levels, maintenance quality, and coating system type. Industrial-grade systems can last even longer."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What's the cost of garage floor epoxy coating?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Garage floor epoxy coating costs range from $3-15 per square foot, depending on the system type, surface condition, and decorative options. Standard epoxy costs $3-8/sq ft, while metallic or decorative systems range $8-15/sq ft."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "Is garage floor epoxy resistant to road salt and chemicals?",
+			"acceptedAnswer": {
+				"@type": "Answer", 
+				"text": "Yes, professional garage floor epoxy provides excellent resistance to road salt, automotive fluids, and household chemicals. The topcoat creates a non-porous barrier that prevents stains and chemical damage common with concrete floors."
+			}
+		}
+	]
 };
 ---
 
 <Layout {seo}>
-	<!-- Page Header -->
-	<Container>
-		<section class="page-header">
-			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<ol>
-					<li><a href="/">Home</a></li>
-					<li><a href="/services">Services</a></li>
-					<li aria-current="page">Garage Floor Epoxy</li>
-				</ol>
-			</nav>
-			<h1>Garage Floor Epoxy Coating</h1>
-			<p class="page-subtitle">
-				Transform your garage with professional epoxy flooring that resists stains, chemicals, and wear while creating a showroom-quality finish
-			</p>
-		</section>
-	</Container>
-
-	<!-- Service Hero Section -->
+	<!-- Hero Section -->
 	<Container>
 		<section class="service-hero">
 			<div class="hero-content">
-				<div class="hero-text">
-					<h2>Military Precision Garage Floor Coatings</h2>
-					<p>
-						Your garage deserves the same attention to detail we brought to serving our country. 
-						Our professional epoxy coating systems transform ordinary concrete into durable, 
-						beautiful floors that resist oil stains, chemicals, and hot tire pickup while 
-						adding value to your home.
-					</p>
-					<div class="key-benefits">
-						<div class="benefit-item">
-							<span class="benefit-icon">🛡️</span>
-							<span>Chemical & Stain Resistant</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">✨</span>
-							<span>Easy to Clean & Maintain</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">🏠</span>
-							<span>Increases Home Value</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">🎨</span>
-							<span>Custom Colors & Finishes</span>
-						</div>
-					</div>
-					<div class="hero-cta">
-						<a href="/company/contact" class="btn btn-primary">Get Free Estimate</a>
-						<a href="tel:+15132965525" class="btn btn-outline">Call (513) 296-5525</a>
-					</div>
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li aria-current="page">Garage Floor Epoxy</li>
+					</ol>
+				</nav>
+				
+				<h1>Professional Garage Floor Epoxy Coating</h1>
+				<p class="hero-subtitle">
+					Transform your garage into a showroom-quality space with professional epoxy floor coating. 
+					Durable, chemical-resistant, and beautiful flooring that lasts 15-20+ years.
+				</p>
+				
+				<div class="hero-features">
+					<span>✓ 15-20+ Year Lifespan</span>
+					<span>✓ Chemical & Stain Resistant</span>
+					<span>✓ Easy to Clean & Maintain</span>
+					<span>✓ Veteran-Owned Excellence</span>
 				</div>
-				<div class="hero-image">
-					<img src="/assets/images/services/garage-floor-epoxy-hero.webp" alt="Professional garage floor epoxy coating installation" loading="eager" />
+				
+				<div class="hero-cta">
+					<a href="#quote-form" class="btn btn-primary">Get Free Estimate</a>
+					<a href="tel:513-296-5525" class="btn btn-secondary">Call (513) 296-5525</a>
+				</div>
+			</div>
+			
+			<div class="hero-image">
+				<img 
+					src="/assets/images/services/garage-floor-epoxy-hero.webp" 
+					alt="Professional garage floor epoxy coating transformation in Cincinnati"
+					width="600"
+					height="400"
+					loading="eager"
+				/>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Introduction Section -->
+	<Container>
+		<section class="intro-section">
+			<h2>What is Garage Floor Epoxy Coating?</h2>
+			<div class="intro-content">
+				<div class="intro-text">
+					<p>
+						Garage floor epoxy coating is a high-performance flooring system that transforms ordinary concrete into a durable, 
+						attractive, and functional surface. Unlike paint, epoxy creates a chemical bond with the concrete, forming a 
+						seamless, non-porous layer that resists stains, chemicals, impacts, and daily wear.
+					</p>
+					<p>
+						Our professional-grade epoxy systems consist of multiple layers: a penetrating primer that bonds to the concrete, 
+						a thick base coat for durability, optional decorative elements for aesthetics, and a clear topcoat for protection 
+						and easy maintenance. This multi-layer approach ensures maximum performance and longevity.
+					</p>
+					<p>
+						At Queen City Surface Coatings, we use only commercial-grade materials and proven application techniques developed 
+						through years of experience. Our veteran-owned company brings military precision to every installation, ensuring 
+						your garage floor coating will perform beautifully for decades.
+					</p>
+				</div>
+				
+				<div class="benefits-preview">
+					<h3>Why Choose Professional Installation?</h3>
+					<ul>
+						<li><strong>Proper Surface Preparation:</strong> Critical for adhesion and longevity</li>
+						<li><strong>Commercial-Grade Materials:</strong> Superior to DIY store options</li>
+						<li><strong>Expert Application:</strong> Ensures even coverage and proper curing</li>
+						<li><strong>Warranty Protection:</strong> Professional guarantee on materials and workmanship</li>
+						<li><strong>Time Savings:</strong> No learning curve or equipment purchase needed</li>
+					</ul>
 				</div>
 			</div>
 		</section>
 	</Container>
 
-	<!-- Content sections would continue here -->
-	<!-- This is the basic structure template that will be expanded -->
+	<!-- Epoxy Types & Options -->
+	<Container>
+		<section class="epoxy-types">
+			<h2>Epoxy Types & Customization Options</h2>
+			<p class="section-intro">
+				Choose from our comprehensive range of epoxy systems, each designed for specific performance requirements and aesthetic preferences.
+			</p>
+			
+			<div class="types-grid">
+				<div class="epoxy-type">
+					<h3>Standard Epoxy Systems</h3>
+					<div class="type-image">
+						<img src="/assets/images/services/garage-floor-epoxy.webp" alt="Standard epoxy garage floor" width="300" height="200" />
+					</div>
+					<div class="type-details">
+						<p><strong>Best For:</strong> Residential garages, light to moderate use</p>
+						<p><strong>Thickness:</strong> 5-10 mils (primer + base + topcoat)</p>
+						<p><strong>Durability:</strong> 15-20 years with proper maintenance</p>
+						<p><strong>Cost Range:</strong> $3-8 per square foot</p>
+						<p><strong>Features:</strong> Solid colors, excellent chemical resistance, easy maintenance</p>
+					</div>
+				</div>
 
-	<!-- Final Call to Action -->
-	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-		<h2>Ready to Transform Your Garage?</h2>
-		<p>
-			Experience the difference military precision makes. Contact Queen City Surface Coatings 
-			today for your free garage floor coating consultation and estimate.
-		</p>
-		<div class="cta-buttons">
-			<a href="/company/contact" class="btn btn-primary">Schedule Free Consultation</a>
-			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
-		</div>
-	</CtaCardSection>
+				<div class="epoxy-type featured">
+					<h3>Metallic Epoxy Systems</h3>
+					<div class="type-image">
+						<img src="/assets/images/services/metallic-epoxy.webp" alt="Metallic epoxy garage floor" width="300" height="200" />
+					</div>
+					<div class="type-details">
+						<p><strong>Best For:</strong> Showroom garages, luxury homes, unique aesthetics</p>
+						<p><strong>Thickness:</strong> 10-20 mils (multi-layer system)</p>
+						<p><strong>Durability:</strong> 20+ years premium performance</p>
+						<p><strong>Cost Range:</strong> $8-15 per square foot</p>
+						<p><strong>Features:</strong> Stunning visual effects, depth and movement, custom patterns</p>
+					</div>
+				</div>
+
+				<div class="epoxy-type">
+					<h3>Flake/Chip Systems</h3>
+					<div class="type-image">
+						<img src="/assets/images/services/basement-flooring.webp" alt="Decorative flake epoxy system" width="300" height="200" />
+					</div>
+					<div class="type-details">
+						<p><strong>Best For:</strong> Hiding imperfections, slip resistance, decorative appeal</p>
+						<p><strong>Thickness:</strong> 8-15 mils (includes flake layer)</p>
+						<p><strong>Durability:</strong> 15-18 years with excellent wear resistance</p>
+						<p><strong>Cost Range:</strong> $5-10 per square foot</p>
+						<p><strong>Features:</strong> Multiple color combinations, texture, enhanced grip</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="color-options">
+				<h3>Color Options Available</h3>
+				<div class="color-showcase">
+					<div class="color-category">
+						<h4>Solid Colors</h4>
+						<div class="color-samples">
+							<span class="color-sample" style="background: #36454F;" title="Charcoal Gray"></span>
+							<span class="color-sample" style="background: #D3D3D3;" title="Light Gray"></span>
+							<span class="color-sample" style="background: #800020;" title="Burgundy"></span>
+							<span class="color-sample" style="background: #228B22;" title="Forest Green"></span>
+							<span class="color-sample" style="background: #1E3A8A;" title="Royal Blue"></span>
+						</div>
+					</div>
+					<div class="color-category">
+						<h4>Metallic Effects</h4>
+						<div class="color-samples">
+							<span class="color-sample metallic" style="background: linear-gradient(45deg, #B87333, #CD7F32);" title="Copper"></span>
+							<span class="color-sample metallic" style="background: linear-gradient(45deg, #C0C0C0, #A8A8A8);" title="Silver"></span>
+							<span class="color-sample metallic" style="background: linear-gradient(45deg, #FFD700, #FFA500);" title="Gold"></span>
+							<span class="color-sample metallic" style="background: linear-gradient(45deg, #4682B4, #2F4F4F);" title="Steel Blue"></span>
+						</div>
+					</div>
+				</div>
+				<p><em>Custom colors available upon request. Color matching services for specific design requirements.</em></p>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Overview -->
+	<Container>
+		<section class="process-section">
+			<h2>Professional Installation Process</h2>
+			<p class="section-intro">
+				Our proven 6-step process ensures maximum adhesion, durability, and visual appeal. Every step is critical to long-term performance.
+			</p>
+			
+			<div class="process-steps">
+				<div class="process-step">
+					<div class="step-number">1</div>
+					<div class="step-content">
+						<h3>Surface Preparation</h3>
+						<p>
+							<strong>Critical Foundation:</strong> We mechanically grind or diamond polish the concrete to create the proper surface profile. 
+							This removes any existing coatings, oils, or contaminants that could prevent adhesion. Cracks are repaired, and the surface 
+							is thoroughly cleaned and tested for moisture content.
+						</p>
+						<ul>
+							<li>Mechanical surface profiling (not just acid etching)</li>
+							<li>Oil and contaminant removal</li>
+							<li>Crack repair and patching</li>
+							<li>Moisture testing and mitigation</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">2</div>
+					<div class="step-content">
+						<h3>Primer Application</h3>
+						<p>
+							<strong>Adhesion Foundation:</strong> A penetrating primer is applied to create maximum bond strength with the concrete. 
+							This primer also seals the surface and provides a uniform base for subsequent coats.
+						</p>
+						<ul>
+							<li>100% solids epoxy primer</li>
+							<li>Deep penetration for maximum adhesion</li>
+							<li>Surface sealing and stabilization</li>
+							<li>12-24 hour cure time before next coat</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">3</div>
+					<div class="step-content">
+						<h3>Base Coat Installation</h3>
+						<p>
+							<strong>Performance Layer:</strong> The thick base coat provides the primary protection and color. Applied in multiple passes 
+							to ensure uniform thickness and complete coverage without thin spots or defects.
+						</p>
+						<ul>
+							<li>Commercial-grade epoxy base coat</li>
+							<li>Multiple application passes</li>
+							<li>Quality control thickness measurements</li>
+							<li>Color consistency verification</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">4</div>
+					<div class="step-content">
+						<h3>Decorative Elements</h3>
+						<p>
+							<strong>Aesthetic Enhancement:</strong> If selected, decorative flakes, metallic effects, or custom patterns are applied 
+							while the base coat is still wet for optimal integration and adhesion.
+						</p>
+						<ul>
+							<li>Decorative flake broadcast (if selected)</li>
+							<li>Metallic pigment application</li>
+							<li>Custom pattern creation</li>
+							<li>Excess material removal</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">5</div>
+					<div class="step-content">
+						<h3>Top Coat Sealing</h3>
+						<p>
+							<strong>Protection Layer:</strong> A clear, high-performance topcoat provides chemical resistance, UV protection, 
+							and easy cleaning. This layer also enhances the appearance and provides the final surface texture.
+						</p>
+						<ul>
+							<li>Clear polyurethane or polyaspartic topcoat</li>
+							<li>Chemical and UV resistance</li>
+							<li>Easy-clean surface finish</li>
+							<li>Optional slip-resistant additives</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">6</div>
+					<div class="step-content">
+						<h3>Curing & Quality Control</h3>
+						<p>
+							<strong>Final Performance:</strong> Proper curing is essential for maximum performance. We provide detailed care instructions 
+							and conduct final quality inspections to ensure every square foot meets our standards.
+						</p>
+						<ul>
+							<li>Climate-controlled curing environment</li>
+							<li>24-48 hour light foot traffic</li>
+							<li>7-day full chemical resistance</li>
+							<li>Final quality inspection and client walkthrough</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Benefits Section -->
+	<Container>
+		<section class="benefits-section">
+			<h2>Garage Floor Epoxy Benefits</h2>
+			<p class="section-intro">
+				Professional garage floor epoxy coating provides numerous advantages over bare concrete or other flooring options.
+			</p>
+			
+			<div class="benefits-grid">
+				<div class="benefit-item">
+					<div class="benefit-icon">🛡️</div>
+					<h3>Exceptional Durability</h3>
+					<p>
+						<strong>15-20+ Year Lifespan:</strong> Professional epoxy coatings withstand heavy foot traffic, vehicle loads, 
+						and daily use without cracking, peeling, or significant wear. The chemical bond with concrete creates a surface 
+						that's actually stronger than the original concrete.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🧪</div>
+					<h3>Chemical Resistance</h3>
+					<p>
+						<strong>Automotive Fluid Protection:</strong> Resist oil, gasoline, brake fluid, antifreeze, and household chemicals. 
+						Spills can be easily cleaned without staining or damaging the surface. Road salt and de-icing chemicals won't 
+						penetrate or cause damage.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🧽</div>
+					<h3>Easy Maintenance</h3>
+					<p>
+						<strong>Simple Cleaning:</strong> The non-porous surface prevents dirt and contaminants from penetrating. 
+						Regular cleaning requires only soap and water or mild detergent. No special cleaning products or equipment needed 
+						for routine maintenance.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">💡</div>
+					<h3>Improved Lighting</h3>
+					<p>
+						<strong>Enhanced Visibility:</strong> The glossy finish reflects light, improving illumination throughout the garage. 
+						This enhanced brightness makes the space more functional and safer for detailed work, storage organization, 
+						and vehicle maintenance.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🏠</div>
+					<h3>Increased Property Value</h3>
+					<p>
+						<strong>Home Investment:</strong> Professional garage floor coating adds tangible value to your property. 
+						Potential buyers recognize the quality, durability, and low maintenance requirements, making it an attractive 
+						feature that sets your home apart.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🌡️</div>
+					<h3>Temperature Resistance</h3>
+					<p>
+						<strong>Climate Durability:</strong> Our coatings withstand Ohio's temperature extremes, from sub-zero winters 
+						to hot summers. The system expands and contracts with the concrete without cracking or losing adhesion, 
+						maintaining performance year-round.
+					</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Applications Section -->
+	<Container>
+		<section class="applications-section">
+			<h2>Garage Floor Epoxy Applications</h2>
+			
+			<div class="applications-grid">
+				<div class="application-item">
+					<h3>Residential Garages</h3>
+					<p>
+						Transform your home garage into a clean, attractive space that complements your home's value. Perfect for 
+						single, double, or triple-car garages. Protects against automotive fluids, provides easy cleaning, and 
+						creates a showroom-quality appearance that impresses guests and potential buyers.
+					</p>
+					<ul>
+						<li>Single and multi-car garages</li>
+						<li>Attached and detached structures</li>
+						<li>New construction and renovation projects</li>
+						<li>Collector car storage spaces</li>
+					</ul>
+				</div>
+
+				<div class="application-item">
+					<h3>Workshop Floors</h3>
+					<p>
+						Create a professional workshop environment with chemical-resistant, easy-to-clean flooring. Ideal for 
+						woodworking, automotive repair, and hobby spaces. The smooth surface prevents dust accumulation and 
+						makes cleaning sawdust, metal shavings, and spilled fluids simple.
+					</p>
+					<ul>
+						<li>Woodworking and metal fabrication shops</li>
+						<li>Automotive repair and maintenance areas</li>
+						<li>Hobby and craft workspaces</li>
+						<li>Professional contractor workshops</li>
+					</ul>
+				</div>
+
+				<div class="application-item">
+					<h3>Man Caves & Entertainment</h3>
+					<p>
+						Design the ultimate entertainment space with attractive, durable flooring that handles spills and heavy use. 
+						Metallic and decorative options create stunning visual effects perfect for game rooms, bars, and social areas. 
+						Easy cleanup after parties and events.
+					</p>
+					<ul>
+						<li>Game rooms and entertainment areas</li>
+						<li>Home bars and social spaces</li>
+						<li>Media rooms and home theaters</li>
+						<li>Exercise and fitness areas</li>
+					</ul>
+				</div>
+
+				<div class="application-item">
+					<h3>Storage Areas</h3>
+					<p>
+						Maximize storage efficiency with smooth, clean flooring that prevents damage to stored items. The sealed 
+						surface prevents moisture wicking and protects against pests. Improved lighting from the reflective surface 
+						makes finding stored items easier.
+					</p>
+					<ul>
+						<li>Seasonal item storage</li>
+						<li>Tool and equipment storage</li>
+						<li>Archive and document storage</li>
+						<li>Temperature-sensitive item protection</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Maintenance Guidelines -->
+	<Container>
+		<section class="maintenance-section">
+			<h2>Maintenance Guidelines</h2>
+			<p class="section-intro">
+				Proper maintenance ensures your garage floor epoxy coating maintains its appearance and performance for decades.
+			</p>
+			
+			<div class="maintenance-content">
+				<div class="maintenance-do">
+					<h3>Daily Care Instructions</h3>
+					<ul>
+						<li><strong>Immediate Spill Cleanup:</strong> Clean automotive fluids, chemicals, and spills immediately to prevent any potential staining</li>
+						<li><strong>Regular Sweeping:</strong> Remove dirt, debris, and road salt with a soft-bristle broom or microfiber dust mop</li>
+						<li><strong>Weekly Mopping:</strong> Use warm water with mild detergent for routine cleaning. Avoid abrasive cleaners</li>
+						<li><strong>Mat Usage:</strong> Place mats under vehicles during winter to catch road salt and prevent tracking throughout the garage</li>
+					</ul>
+				</div>
+
+				<div class="maintenance-dont">
+					<h3>Long-Term Maintenance</h3>
+					<ul>
+						<li><strong>Annual Deep Cleaning:</strong> Thorough cleaning with degreasing agents to remove accumulated grime</li>
+						<li><strong>Inspection Schedule:</strong> Annual inspection for any wear patterns, minor damage, or areas needing attention</li>
+						<li><strong>Minor Repairs:</strong> Small chips or scratches can be spot-repaired to prevent further damage</li>
+						<li><strong>Protective Measures:</strong> Use furniture pads under heavy equipment and avoid dragging sharp objects</li>
+					</ul>
+				</div>
+
+				<div class="maintenance-avoid">
+					<h3>What to Avoid</h3>
+					<ul>
+						<li><strong>Abrasive Cleaners:</strong> Avoid steel wool, abrasive pads, or harsh chemicals that could dull the finish</li>
+						<li><strong>Sharp Objects:</strong> Don't drag tools, equipment, or furniture directly on the surface</li>
+						<li><strong>Excessive Heat:</strong> Avoid welding or torch work directly on the coating; use protective mats</li>
+						<li><strong>Standing Water:</strong> Although water-resistant, avoid prolonged standing water in any area</li>
+					</ul>
+				</div>
+
+				<div class="recoat-info">
+					<h3>When to Recoat</h3>
+					<p>
+						Professional garage floor epoxy coatings rarely need complete recoating if properly maintained. However, 
+						after 15-20 years of service, you may choose to refresh the topcoat for renewed appearance and protection. 
+						Signs that recoating may be beneficial include:
+					</p>
+					<ul>
+						<li>Significant wear patterns in high-traffic areas</li>
+						<li>Loss of gloss or reflective properties</li>
+						<li>Minor surface scratches that affect appearance</li>
+						<li>Desire to change colors or decorative elements</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Cost Factors -->
+	<Container>
+		<section class="cost-section">
+			<h2>Garage Floor Epoxy Cost Factors</h2>
+			<p class="section-intro">
+				Understanding the factors that influence garage floor epoxy coating costs helps you make an informed investment decision.
+			</p>
+			
+			<div class="cost-factors">
+				<div class="cost-factor">
+					<h3>Size Considerations</h3>
+					<p>
+						<strong>Square Footage Impact:</strong> Larger garages benefit from economies of scale, with lower per-square-foot costs. 
+						Standard garage sizes range from 200-400 sq ft (single car) to 600-900 sq ft (three-car). Setup costs are distributed 
+						across more area, making larger projects more cost-effective per square foot.
+					</p>
+					<div class="cost-breakdown">
+						<div class="cost-item">
+							<span>Single Car Garage (200-400 sq ft):</span>
+							<span>$600-$6,000</span>
+						</div>
+						<div class="cost-item">
+							<span>Two Car Garage (400-600 sq ft):</span>
+							<span>$1,200-$9,000</span>
+						</div>
+						<div class="cost-item">
+							<span>Three Car Garage (600-900 sq ft):</span>
+							<span>$1,800-$13,500</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="cost-factor">
+					<h3>Surface Condition</h3>
+					<p>
+						<strong>Preparation Requirements:</strong> Concrete condition significantly affects installation cost. New, clean concrete 
+						requires minimal preparation, while older surfaces with stains, cracks, or existing coatings need extensive prep work.
+					</p>
+					<ul>
+						<li><strong>Excellent Condition:</strong> New concrete, minimal prep needed</li>
+						<li><strong>Good Condition:</strong> Minor cleaning and standard surface profiling</li>
+						<li><strong>Fair Condition:</strong> Crack repair, stain removal, moderate prep work</li>
+						<li><strong>Poor Condition:</strong> Extensive repair, coating removal, major preparation</li>
+					</ul>
+				</div>
+
+				<div class="cost-factor">
+					<h3>Coating Type Selection</h3>
+					<p>
+						<strong>System Performance Levels:</strong> Different epoxy systems offer varying performance levels and aesthetic options, 
+						directly affecting material and installation costs.
+					</p>
+					<div class="coating-costs">
+						<div class="coating-type-cost">
+							<h4>Standard Epoxy</h4>
+							<span class="price-range">$3-8/sq ft</span>
+							<p>Solid colors, excellent durability</p>
+						</div>
+						<div class="coating-type-cost">
+							<h4>Decorative Flake</h4>
+							<span class="price-range">$5-10/sq ft</span>
+							<p>Color variety, texture, slip resistance</p>
+						</div>
+						<div class="coating-type-cost">
+							<h4>Metallic Epoxy</h4>
+							<span class="price-range">$8-15/sq ft</span>
+							<p>Stunning effects, premium appearance</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="cost-factor">
+					<h3>Additional Services</h3>
+					<p>
+						<strong>Value-Added Options:</strong> Optional services can enhance the installation and provide additional value, 
+						though they affect the total project cost.
+					</p>
+					<ul>
+						<li><strong>Coving/Base Trim:</strong> Seamless transition up walls for easy cleaning</li>
+						<li><strong>Custom Colors:</strong> Color matching and special pigment options</li>
+						<li><strong>Slip-Resistant Additives:</strong> Enhanced safety for wet conditions</li>
+						<li><strong>Drainage Integration:</strong> Floor drain sealing and integration</li>
+						<li><strong>Fast-Track Scheduling:</strong> Expedited installation for quick turnaround</li>
+					</ul>
+				</div>
+
+				<div class="estimate-process">
+					<h3>Free Estimate Process</h3>
+					<p>
+						<strong>Comprehensive Assessment:</strong> Our free estimate includes on-site evaluation, surface condition assessment, 
+						system recommendations, and detailed pricing. We explain all options and provide transparent pricing without hidden costs.
+					</p>
+					<div class="estimate-steps">
+						<div class="estimate-step">
+							<span class="step-num">1</span>
+							<span>Schedule convenient on-site visit</span>
+						</div>
+						<div class="estimate-step">
+							<span class="step-num">2</span>
+							<span>Assess garage condition and requirements</span>
+						</div>
+						<div class="estimate-step">
+							<span class="step-num">3</span>
+							<span>Review system options and recommendations</span>
+						</div>
+						<div class="estimate-step">
+							<span class="step-num">4</span>
+							<span>Provide detailed written estimate</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Local Considerations -->
+	<Container>
+		<section class="local-considerations">
+			<h2>Cincinnati Climate & Local Considerations</h2>
+			<p class="section-intro">
+				Our garage floor epoxy systems are specifically designed for Cincinnati's unique climate challenges and local conditions.
+			</p>
+			
+			<div class="climate-factors">
+				<div class="climate-factor">
+					<h3>🌡️ Temperature Fluctuations</h3>
+					<p>
+						<strong>Seasonal Extremes:</strong> Cincinnati experiences temperature ranges from below 0°F in winter to over 90°F in summer. 
+						Our epoxy systems are formulated to expand and contract with these temperature changes without cracking or losing adhesion. 
+						We use flexible intermediate layers that accommodate thermal movement while maintaining surface integrity.
+					</p>
+				</div>
+
+				<div class="climate-factor">
+					<h3>🧂 Road Salt Resistance</h3>
+					<p>
+						<strong>Winter Protection:</strong> Ohio's heavy road salt use during winter months can damage unprotected concrete. 
+						Our garage floor epoxy creates an impermeable barrier that prevents salt penetration and the freeze-thaw damage 
+						that destroys bare concrete. The coating also makes salt cleanup easier, protecting both the floor and stored items.
+					</p>
+				</div>
+
+				<div class="climate-factor">
+					<h3>💧 Humidity Considerations</h3>
+					<p>
+						<strong>Moisture Management:</strong> Cincinnati's humid summers can create condensation issues in garages. Our epoxy systems 
+						include moisture vapor transmission considerations and can incorporate humidity-resistant primers when needed. 
+						We also provide guidance on ventilation and dehumidification to maintain optimal garage conditions.
+					</p>
+				</div>
+
+				<div class="climate-factor">
+					<h3>❄️ Freeze-Thaw Cycles</h3>
+					<p>
+						<strong>Durability Engineering:</strong> The repeated freeze-thaw cycles common in Ohio can cause concrete movement and 
+						surface stress. Our multi-layer epoxy systems are designed with flexibility to accommodate this movement. 
+						We use crack-bridging primers and flexible base coats that move with the concrete substrate.
+					</p>
+				</div>
+			</div>
+
+			<div class="local-advantages">
+				<h3>Local Service Advantages</h3>
+				<div class="advantages-grid">
+					<div class="advantage">
+						<h4>Climate Expertise</h4>
+						<p>15+ years of experience with Ohio weather patterns and how they affect coating performance</p>
+					</div>
+					<div class="advantage">
+						<h4>Local Suppliers</h4>
+						<p>Established relationships with regional material suppliers for consistent quality and competitive pricing</p>
+					</div>
+					<div class="advantage">
+						<h4>Code Knowledge</h4>
+						<p>Familiarity with local building codes, permit requirements, and HOA guidelines</p>
+					</div>
+					<div class="advantage">
+						<h4>Fast Response</h4>
+						<p>Local presence means quick response for estimates, installations, and any service needs</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- FAQ Section -->
+	<Container>
+		<section class="faq-section">
+			<h2>Frequently Asked Questions</h2>
+			<p class="section-intro">
+				Get answers to the most common questions about garage floor epoxy coating installation and performance.
+			</p>
+			
+			<div class="faq-list">
+				<div class="faq-item">
+					<h3>How long does garage floor epoxy installation take?</h3>
+					<p>
+						Most residential garage floor epoxy installations take 2-3 days. Day 1 involves surface preparation and primer application. 
+						Day 2 includes base coat and decorative elements. Day 3 is the topcoat application. The garage can be used for light 
+						foot traffic after 24-48 hours, with full vehicle use recommended after 7 days for complete chemical resistance.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>How long does garage floor epoxy last?</h3>
+					<p>
+						Professional garage floor epoxy coatings last 15-20+ years with proper installation and maintenance. The lifespan depends 
+						on traffic levels, maintenance quality, and coating system type. Industrial-grade systems in residential applications 
+						can last even longer. Our warranty covers materials and workmanship defects for the specified period.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What's the cost of garage floor epoxy coating?</h3>
+					<p>
+						Garage floor epoxy coating costs range from $3-15 per square foot, depending on the system type, surface condition, 
+						and decorative options. Standard epoxy costs $3-8/sq ft, decorative flake systems $5-10/sq ft, while metallic 
+						systems range $8-15/sq ft. We provide free estimates with transparent pricing and no hidden costs.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Is garage floor epoxy resistant to road salt and chemicals?</h3>
+					<p>
+						Yes, professional garage floor epoxy provides excellent resistance to road salt, automotive fluids, and household 
+						chemicals. The topcoat creates a non-porous barrier that prevents stains and chemical damage common with concrete floors. 
+						This makes cleanup easy and prevents the deterioration that affects unprotected concrete.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Can epoxy be applied over existing garage floor coatings?</h3>
+					<p>
+						In most cases, existing coatings must be removed for proper adhesion. We test existing coatings for adhesion and 
+						compatibility. If removal is required, we use mechanical methods that don't damage the concrete substrate. 
+						Proper surface preparation is critical for long-term performance, so we never compromise on this step.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What warranty do you provide on garage floor epoxy?</h3>
+					<p>
+						We provide comprehensive warranty coverage on both materials and workmanship. Standard residential installations 
+						include a 5-year warranty, with premium systems warranted for 7-10 years. The warranty covers adhesion failure, 
+						premature wear, and material defects. Normal wear and damage from misuse are not covered.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Do you provide garage floor epoxy in winter months?</h3>
+					<p>
+						Yes, we install garage floor epoxy year-round using climate-controlled techniques. Winter installations require 
+						temporary heating to maintain proper application and curing temperatures. We schedule installations during favorable 
+						weather windows and can provide expedited service when needed. Indoor garage applications are less affected by 
+						outdoor weather conditions.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What makes your garage floor epoxy different from DIY options?</h3>
+					<p>
+						Professional installation uses commercial-grade materials, proper surface preparation equipment, and proven application 
+						techniques. DIY store epoxy is typically thin, single-coat systems that lack durability. Our multi-layer systems, 
+						mechanical surface preparation, and quality control ensure superior performance and longevity compared to DIY alternatives.
+					</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Call-to-Action Section -->
+	<Container>
+		<section class="cta-section" id="quote-form">
+			<div class="cta-content">
+				<h2>Transform Your Garage Today</h2>
+				<p>
+					Ready to upgrade your garage with professional epoxy coating? Get your free estimate and discover 
+					how we can transform your space with durable, beautiful flooring that lasts decades.
+				</p>
+				
+				<div class="cta-options">
+					<div class="cta-option">
+						<h3>📞 Phone Consultation</h3>
+						<p>Speak directly with our garage floor epoxy specialists</p>
+						<a href="tel:513-296-5525" class="btn btn-primary">Call (513) 296-5525</a>
+					</div>
+					
+					<div class="cta-option">
+						<h3>📋 Free Estimate</h3>
+						<p>Complete our form for a detailed written estimate</p>
+						<QuoteRequestForm />
+					</div>
+					
+					<div class="cta-option">
+						<h3>🏠 Service Areas</h3>
+						<p>We serve Cincinnati, Hamilton County, and surrounding areas</p>
+						<a href="/service-areas/" class="btn btn-outline">View Service Areas</a>
+					</div>
+				</div>
+
+				<div class="testimonial-highlight">
+					<blockquote>
+						"The garage floor transformation exceeded our expectations. Two years later, it still looks brand new 
+						despite daily use. The professional installation and quality materials were worth every penny."
+					</blockquote>
+					<cite>— Robert & Jennifer Chen, Hamilton County</cite>
+				</div>
+
+				<div class="portfolio-cta">
+					<h3>See Our Work</h3>
+					<p>Browse our portfolio of completed garage floor epoxy installations throughout the Cincinnati area.</p>
+					<a href="/portfolio/" class="btn btn-secondary">View Portfolio Examples</a>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)}></script>
 </Layout>
 
 <style>
-	/* Page Header */
-	.page-header {
-		text-align: center;
-		padding: 2rem 0 3rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 3rem;
-	}
+/* Service-specific styles */
+.service-hero {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+	padding: 4rem 0;
+	background: linear-gradient(135deg, var(--theme-surface-1) 0%, var(--theme-bg) 100%);
+	border-radius: var(--theme-shape-radius);
+	margin: 2rem 0;
+}
 
-	.breadcrumb {
-		margin-bottom: 1.5rem;
-	}
+.hero-content {
+	padding: 2rem;
+}
 
-	.breadcrumb ol {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		font-size: 0.9rem;
-	}
+.breadcrumb {
+	margin-bottom: 1rem;
+}
 
-	.breadcrumb li:not(:last-child)::after {
-		content: ">";
-		margin-left: 0.5rem;
-		opacity: 0.6;
-	}
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+}
 
-	.breadcrumb a {
-		color: var(--theme-primary);
-		text-decoration: none;
-	}
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: var(--theme-on-surface-1);
+}
 
-	.breadcrumb a:hover {
-		text-decoration: underline;
-	}
+.breadcrumb li:last-child::after {
+	display: none;
+}
 
-	.page-header h1 {
-		font-size: 3rem;
-		color: var(--theme-on-bg);
-		margin-bottom: 1rem;
-	}
+.breadcrumb a {
+	color: var(--theme-primary);
+	text-decoration: none;
+}
 
-	.page-subtitle {
-		font-size: 1.25rem;
-		color: var(--theme-on-bg);
-		opacity: 0.8;
-		max-width: 700px;
-		margin: 0 auto;
-		line-height: 1.5;
-	}
+.hero-features {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 2rem 0;
+}
 
-	/* Service Hero */
+.hero-features span {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	padding: 0.5rem 1rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.hero-image img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: var(--theme-shape-radius);
+}
+
+.intro-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.benefits-preview {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.benefits-preview ul {
+	list-style: none;
+	padding: 0;
+}
+
+.benefits-preview li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.types-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.epoxy-type {
+	background: var(--theme-bg);
+	border: 2px solid var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+	padding: 2rem;
+	transition: var(--theme-transition);
+}
+
+.epoxy-type.featured {
+	border-color: var(--theme-primary);
+	box-shadow: 0 4px 12px rgba(30, 58, 138, 0.1);
+}
+
+.epoxy-type:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.type-image img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.color-showcase {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.color-samples {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.color-sample {
+	width: 50px;
+	height: 50px;
+	border-radius: 0.5rem;
+	border: 2px solid var(--theme-border-light);
+	cursor: pointer;
+	transition: var(--theme-transition);
+}
+
+.color-sample:hover {
+	transform: scale(1.1);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.color-sample.metallic {
+	background-size: 200% 200%;
+	animation: metallic-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes metallic-shimmer {
+	0%, 100% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+}
+
+.process-steps {
+	display: grid;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.process-step {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2rem;
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.step-number {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.step-content h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.step-content ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+.step-content li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.step-content li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--theme-primary);
+	font-weight: bold;
+}
+
+.benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.benefit-item {
+	background: var(--theme-bg);
+	border: 2px solid var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+	padding: 2rem;
+	text-align: center;
+	transition: var(--theme-transition);
+}
+
+.benefit-item:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.benefit-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.applications-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.application-item {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border-left: 4px solid var(--theme-primary);
+}
+
+.maintenance-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.maintenance-do, .maintenance-dont, .maintenance-avoid, .recoat-info {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.cost-factors {
+	display: grid;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.cost-factor {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.cost-breakdown, .coating-costs {
+	margin: 1.5rem 0;
+}
+
+.cost-item {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.coating-type-cost {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.price-range {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	padding: 0.5rem 1rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+}
+
+.estimate-steps {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.estimate-step {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--theme-bg);
+	border-radius: 0.5rem;
+}
+
+.step-num {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	flex-shrink: 0;
+}
+
+.climate-factors {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.climate-factor {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.climate-factor h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.advantages-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.advantage {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+}
+
+.advantage h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.faq-list {
+	display: grid;
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.faq-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.faq-item h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.cta-section {
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 4rem 0;
+	text-align: center;
+}
+
+.cta-options {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 3rem 0;
+}
+
+.cta-option {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-primary);
+}
+
+.cta-option h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.testimonial-highlight {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 3rem 0;
+	border-left: 4px solid var(--theme-primary);
+}
+
+.testimonial-highlight blockquote {
+	font-style: italic;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: var(--theme-on-surface-1);
+}
+
+.testimonial-highlight cite {
+	color: var(--theme-surface-2);
+	font-weight: 600;
+}
+
+.portfolio-cta {
+	margin-top: 3rem;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	border: 2px solid transparent;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.btn-primary {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--theme-surface-2);
+	border-color: var(--theme-surface-2);
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+	background: var(--theme-primary-hover);
+	border-color: var(--theme-primary-hover);
+}
+
+.btn-secondary:hover, .btn-outline:hover {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
 	.service-hero {
-		margin: 4rem 0;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		padding: 2rem 0;
 	}
-
-	.hero-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
+	
+	.intro-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	
+	.types-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.process-step {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+		text-align: center;
+	}
+	
+	.hero-cta, .cta-options {
+		flex-direction: column;
 		align-items: center;
 	}
-
-	.hero-text h2 {
-		color: var(--theme-primary);
-		font-size: 2rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.hero-text p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
-	}
-
-	.key-benefits {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-
-	.benefit-item {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-weight: 500;
-	}
-
-	.benefit-icon {
-		font-size: 1.2rem;
-	}
-
-	.hero-cta {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.hero-image img {
-		width: 100%;
-		height: 400px;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-	}
-
-	/* CTA Buttons */
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 2rem;
-		flex-wrap: wrap;
-	}
-
+	
 	.btn {
-		padding: 1rem 2rem;
-		border-radius: var(--theme-button-border-radius);
-		text-decoration: none;
-		font-weight: 600;
-		transition: all var(--theme-transition);
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		border: 2px solid transparent;
-		min-height: 44px;
+		width: 100%;
+		max-width: 300px;
 	}
+}
 
-	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border-color: var(--theme-primary);
-	}
+/* Section spacing */
+section {
+	margin: 4rem 0;
+}
 
-	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
-		transform: translateY(-2px);
-	}
+.section-intro {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	margin-bottom: 2rem;
+	max-width: 800px;
+}
 
-	.btn-outline {
-		background: transparent;
-		color: var(--theme-primary);
-		border-color: var(--theme-primary);
-	}
+/* Typography enhancements */
+h2 {
+	color: var(--theme-surface-2);
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
 
-	.btn-outline:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-	}
+h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
 
-	/* Mobile Responsive */
-	@media (max-width: 768px) {
-		.page-header h1 {
-			font-size: 2rem;
-		}
-		
-		.hero-content {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		
-		.key-benefits {
-			grid-template-columns: 1fr;
-		}
-		
-		.hero-cta {
-			justify-content: center;
-		}
-		
-		.cta-buttons {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
+p {
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
+
+strong {
+	color: var(--theme-surface-2);
+}
 </style>

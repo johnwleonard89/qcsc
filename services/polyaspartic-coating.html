@@ -1,0 +1,2022 @@
+---
+import Layout from '../../layouts/Page.astro';
+import { Container, Button } from '@components/odyssey-theme';
+import QuoteRequestForm from '@components/forms/QuoteRequestForm.astro';
+
+const seo = {
+	title: 'Polyaspartic Coating | Fast-Cure Concrete Coating Cincinnati',
+	description: 'Advanced polyaspartic coating technology with same-day service return. Superior durability, UV resistance, and temperature tolerance. Professional installation for commercial and residential applications.',
+	keywords: 'polyaspartic coating, fast-cure concrete coating, same-day flooring, UV resistant coating, temperature tolerant flooring, quick turnaround coating Cincinnati',
+	type: 'service',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Services', url: 'https://queencitysurfacecoatings.com/services/' },
+		{ name: 'Polyaspartic Coating', url: 'https://queencitysurfacecoatings.com/services/polyaspartic-coating/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": "Polyaspartic Coating",
+		"description": "Advanced polyaspartic coating technology with fast-cure properties, superior durability, and UV resistance for commercial and residential concrete surfaces in Cincinnati, Ohio.",
+		"provider": {
+			"@type": "LocalBusiness",
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cincinnati",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525",
+			"url": "https://queencitysurfacecoatings.com"
+		},
+		"areaServed": [
+			{
+				"@type": "City",
+				"name": "Cincinnati",
+				"addressRegion": "OH"
+			},
+			{
+				"@type": "State",
+				"name": "Ohio"
+			},
+			{
+				"@type": "State", 
+				"name": "Kentucky"
+			},
+			{
+				"@type": "State",
+				"name": "Indiana"
+			}
+		],
+		"serviceType": "Polyaspartic Coating",
+		"offers": {
+			"@type": "Offer",
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock",
+			"priceRange": "$4-$12 per square foot"
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"reviewCount": "42"
+		}
+	}
+};
+
+const faqData = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "What is polyaspartic coating and how does it differ from epoxy?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Polyaspartic coating is an advanced aliphatic polyurea technology that cures much faster than epoxy (hours vs. days), offers superior UV resistance, and maintains flexibility at extreme temperatures. Unlike epoxy, polyaspartic doesn't yellow over time and can be installed year-round regardless of temperature."
+			}
+		},
+		{
+			"@type": "Question", 
+			"name": "How quickly can I return to service after polyaspartic coating installation?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Polyaspartic coatings typically allow return to service within 2-4 hours for light traffic and 24 hours for heavy traffic and vehicles. This dramatically reduces downtime compared to traditional epoxy systems that require 3-7 days for full cure."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "What are the temperature limits for polyaspartic coating installation?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "Polyaspartic coatings can be installed in temperatures from 20°F to 120°F (-7°C to 49°C), making year-round installation possible. The coating also performs in service temperatures from -30°F to 140°F (-34°C to 60°C) without cracking or losing adhesion."
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "How does polyaspartic coating perform outdoors compared to epoxy?",
+			"acceptedAnswer": {
+				"@type": "Answer", 
+				"text": "Polyaspartic coatings excel in outdoor applications due to their aliphatic chemistry, providing complete UV resistance without yellowing or degradation. They maintain color stability and physical properties for decades, while epoxy coatings typically fail within 1-2 years when exposed to direct sunlight."
+			}
+		}
+	]
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<Container>
+		<section class="service-hero">
+			<div class="hero-content">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li aria-current="page">Polyaspartic Coating</li>
+					</ol>
+				</nav>
+				
+				<h1>Advanced Polyaspartic Coating Technology</h1>
+				<p class="hero-subtitle">
+					Next-generation coating technology delivering same-day service return, superior durability, 
+					and unmatched performance in all weather conditions. The future of concrete protection is here.
+				</p>
+				
+				<div class="hero-features">
+					<span>⚡ 2-4 Hour Service Return</span>
+					<span>🌞 100% UV Resistant</span>
+					<span>🌡️ -30°F to 140°F Performance</span>
+					<span>🔬 Advanced Chemistry</span>
+				</div>
+				
+				<div class="performance-stats">
+					<div class="stat-item">
+						<span class="stat-number">2-4hr</span>
+						<span class="stat-label">Return to Service</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">25+</span>
+						<span class="stat-label">Year Lifespan</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">170°F</span>
+						<span class="stat-label">Temperature Range</span>
+					</div>
+				</div>
+				
+				<div class="hero-cta">
+					<a href="#quote-form" class="btn btn-primary">Get Technical Consultation</a>
+					<a href="tel:513-296-5525" class="btn btn-secondary">Call (513) 296-5525</a>
+				</div>
+			</div>
+			
+			<div class="hero-image">
+				<img 
+					src="/assets/images/services/polyaspartic-coating-hero.webp" 
+					alt="Professional polyaspartic coating installation with fast-cure technology"
+					width="600"
+					height="400"
+					loading="eager"
+				/>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Polyaspartic Technology -->
+	<Container>
+		<section class="technology-section">
+			<h2>Revolutionary Polyaspartic Technology</h2>
+			<p class="section-intro">
+				Polyaspartic technology represents the next evolution in concrete coating systems, combining the durability 
+				of traditional systems with unprecedented speed and weather resistance.
+			</p>
+			
+			<div class="technology-grid">
+				<div class="tech-advantage">
+					<div class="tech-icon">⚗️</div>
+					<h3>Advanced Aliphatic Chemistry</h3>
+					<p>
+						<strong>Superior Molecular Structure:</strong> Polyaspartic coatings use aliphatic polyurea chemistry 
+						that provides exceptional UV stability, chemical resistance, and flexibility. Unlike aromatic epoxy 
+						systems that yellow and degrade, aliphatic polyaspartics maintain their properties indefinitely.
+					</p>
+					<div class="tech-details">
+						<h4>Chemical Advantages:</h4>
+						<ul>
+							<li>Aliphatic backbone prevents UV degradation</li>
+							<li>Flexible polymer chains accommodate thermal movement</li>
+							<li>Cross-linked structure provides chemical resistance</li>
+							<li>100% solids formulation eliminates shrinkage</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tech-advantage">
+					<div class="tech-icon">⏱️</div>
+					<h3>Fast-Cure Benefits</h3>
+					<p>
+						<strong>Revolutionary Speed:</strong> Polyaspartic coatings cure through moisture catalyzed chemical 
+						reaction that's independent of temperature, allowing same-day installation and service return in 
+						most applications.
+					</p>
+					<div class="tech-details">
+						<h4>Cure Time Advantages:</h4>
+						<ul>
+							<li>Gel time: 15-45 minutes (adjustable)</li>
+							<li>Tack-free: 1-2 hours</li>
+							<li>Light traffic: 2-4 hours</li>
+							<li>Full cure: 24 hours</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tech-advantage">
+					<div class="tech-icon">☀️</div>
+					<h3>Complete UV Resistance</h3>
+					<p>
+						<strong>Permanent Color Stability:</strong> The aliphatic chemistry provides complete resistance to 
+						UV radiation, maintaining color and gloss indefinitely. This makes polyaspartic ideal for outdoor 
+						applications and areas with significant sunlight exposure.
+					</p>
+					<div class="tech-details">
+						<h4>UV Protection Features:</h4>
+						<ul>
+							<li>Zero yellowing or color shift</li>
+							<li>Maintains 95%+ gloss retention</li>
+							<li>Prevents UV polymer degradation</li>
+							<li>Suitable for outdoor applications</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tech-advantage">
+					<div class="tech-icon">🌡️</div>
+					<h3>Extreme Temperature Tolerance</h3>
+					<p>
+						<strong>Unmatched Performance Range:</strong> Polyaspartic coatings maintain flexibility and adhesion 
+						across extreme temperature ranges, from arctic conditions to desert heat, without cracking or 
+						losing performance.
+					</p>
+					<div class="tech-details">
+						<h4>Temperature Capabilities:</h4>
+						<ul>
+							<li>Installation: 20°F to 120°F (-7°C to 49°C)</li>
+							<li>Service: -30°F to 140°F (-34°C to 60°C)</li>
+							<li>Thermal cycling resistance</li>
+							<li>Freeze-thaw stability</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tech-advantage">
+					<div class="tech-icon">🔧</div>
+					<h3>Superior Flexibility</h3>
+					<p>
+						<strong>Dynamic Movement Accommodation:</strong> The flexible polymer backbone allows polyaspartic 
+						coatings to move with substrate expansion and contraction without cracking, making them ideal for 
+						challenging environments.
+					</p>
+					<div class="tech-details">
+						<h4>Flexibility Benefits:</h4>
+						<ul>
+							<li>Accommodates substrate movement</li>
+							<li>Resists impact and abrasion damage</li>
+							<li>Maintains adhesion during thermal cycling</li>
+							<li>Self-healing properties for minor scratches</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Speed Advantages -->
+	<Container>
+		<section class="speed-section">
+			<h2>Unmatched Speed Advantages</h2>
+			<p class="section-intro">
+				When time is critical, polyaspartic coating technology delivers unprecedented installation speed 
+				without compromising performance or durability.
+			</p>
+			
+			<div class="speed-comparison">
+				<div class="speed-chart">
+					<h3>Installation Timeline Comparison</h3>
+					<div class="timeline-comparison">
+						<div class="timeline-item epoxy">
+							<div class="timeline-header">
+								<span class="coating-type">Traditional Epoxy</span>
+								<span class="total-time">5-7 Days Total</span>
+							</div>
+							<div class="timeline-bar">
+								<div class="day-segment" data-day="Day 1">Surface Prep</div>
+								<div class="day-segment" data-day="Day 2">Primer Cure</div>
+								<div class="day-segment" data-day="Day 3">Base Coat</div>
+								<div class="day-segment" data-day="Day 4">Base Cure</div>
+								<div class="day-segment" data-day="Day 5">Top Coat</div>
+								<div class="day-segment" data-day="Day 6-7">Final Cure</div>
+							</div>
+						</div>
+						<div class="timeline-item polyaspartic">
+							<div class="timeline-header">
+								<span class="coating-type">Polyaspartic System</span>
+								<span class="total-time">Same Day Service</span>
+							</div>
+							<div class="timeline-bar short">
+								<div class="hour-segment" data-time="0-4hr">Surface Prep</div>
+								<div class="hour-segment" data-time="4-6hr">Coating Application</div>
+								<div class="hour-segment" data-time="6-8hr">Cure & Service Ready</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="speed-benefits">
+					<h3>Business Impact of Speed</h3>
+					<div class="impact-grid">
+						<div class="impact-item">
+							<div class="impact-icon">💰</div>
+							<h4>Reduced Downtime Costs</h4>
+							<p>Same-day return to service minimizes lost revenue and operational disruption. Typical savings of $10,000-50,000 per day for commercial operations.</p>
+						</div>
+						<div class="impact-item">
+							<div class="impact-icon">⚡</div>
+							<h4>Emergency Repair Capability</h4>
+							<p>Fast cure times enable emergency floor repairs that can be completed overnight or during short maintenance windows.</p>
+						</div>
+						<div class="impact-item">
+							<div class="impact-icon">📅</div>
+							<h4>Flexible Scheduling</h4>
+							<p>Installation can be scheduled around business operations, including same-day completion for time-sensitive projects.</p>
+						</div>
+						<div class="impact-item">
+							<div class="impact-icon">🌡️</div>
+							<h4>Weather Independence</h4>
+							<p>Temperature-independent curing allows installation year-round, eliminating weather-related delays.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="installation-conditions">
+				<h3>Year-Round Installation Capabilities</h3>
+				<div class="conditions-grid">
+					<div class="condition-item winter">
+						<div class="condition-icon">❄️</div>
+						<h4>Winter Installation</h4>
+						<p>Successful installation down to 20°F (-7°C) with proper surface preparation. No heating requirements for most applications.</p>
+					</div>
+					<div class="condition-item summer">
+						<div class="condition-icon">☀️</div>
+						<h4>Summer Installation</h4>
+						<p>Performs excellently in high temperatures up to 120°F (49°C) without extending cure times or affecting quality.</p>
+					</div>
+					<div class="condition-item humidity">
+						<div class="condition-icon">💧</div>
+						<h4>High Humidity</h4>
+						<p>Moisture-catalyzed cure actually benefits from humidity, making installation reliable in all weather conditions.</p>
+					</div>
+					<div class="condition-item emergency">
+						<div class="condition-icon">🚨</div>
+						<h4>Emergency Response</h4>
+						<p>24/7 emergency installation capability for critical infrastructure and time-sensitive repairs.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Performance Benefits -->
+	<Container>
+		<section class="performance-section">
+			<h2>Superior Performance Benefits</h2>
+			<p class="section-intro">
+				Polyaspartic coatings don't just install faster – they deliver superior long-term performance 
+				across all critical metrics compared to traditional coating systems.
+			</p>
+			
+			<div class="performance-grid">
+				<div class="performance-item">
+					<div class="performance-header">
+						<div class="perf-icon">🛡️</div>
+						<h3>Exceptional Durability</h3>
+					</div>
+					<div class="performance-content">
+						<p>
+							<strong>25+ Year Service Life:</strong> Advanced polymer chemistry provides exceptional resistance 
+							to wear, impact, and environmental degradation. Polyaspartic coatings maintain their performance 
+							characteristics throughout their extended service life.
+						</p>
+						<div class="performance-data">
+							<div class="data-point">
+								<span class="data-value">25+</span>
+								<span class="data-label">Years Service Life</span>
+							</div>
+							<div class="data-point">
+								<span class="data-value">400</span>
+								<span class="data-label">lbs Impact Resistance</span>
+							</div>
+							<div class="data-point">
+								<span class="data-value">5000</span>
+								<span class="data-label">PSI Tensile Strength</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="performance-item">
+					<div class="performance-header">
+						<div class="perf-icon">🧪</div>
+						<h3>Superior Chemical Resistance</h3>
+					</div>
+					<div class="performance-content">
+						<p>
+							<strong>Broad Spectrum Protection:</strong> Excellent resistance to acids, bases, solvents, and 
+							automotive fluids. The cross-linked polymer structure prevents chemical penetration and maintains 
+							surface integrity under harsh conditions.
+						</p>
+						<div class="chemical-resistance">
+							<div class="resistance-category">
+								<h4>Acids</h4>
+								<ul>
+									<li>Hydrochloric Acid: Excellent</li>
+									<li>Sulfuric Acid: Excellent</li>
+									<li>Acetic Acid: Excellent</li>
+								</ul>
+							</div>
+							<div class="resistance-category">
+								<h4>Automotive</h4>
+								<ul>
+									<li>Motor Oil: Excellent</li>
+									<li>Gasoline: Excellent</li>
+									<li>Brake Fluid: Excellent</li>
+								</ul>
+							</div>
+							<div class="resistance-category">
+								<h4>Industrial</h4>
+								<ul>
+									<li>MEK: Good</li>
+									<li>Acetone: Good</li>
+									<li>Toluene: Fair</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="performance-item">
+					<div class="performance-header">
+						<div class="perf-icon">⚙️</div>
+						<h3>Outstanding Abrasion Resistance</h3>
+					</div>
+					<div class="performance-content">
+						<p>
+							<strong>Heavy Traffic Performance:</strong> Superior resistance to foot traffic, vehicle traffic, 
+							and mechanical wear. The flexible polymer structure absorbs impact energy and resists surface 
+							damage that would compromise other coatings.
+						</p>
+						<div class="abrasion-data">
+							<div class="test-result">
+								<h4>ASTM D4060 Taber Abrasion</h4>
+								<p>CS-17 Wheel, 1000 cycles: <strong>12mg weight loss</strong></p>
+							</div>
+							<div class="test-result">
+								<h4>Heavy Traffic Rating</h4>
+								<p>Suitable for forklift traffic and industrial equipment</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="performance-item">
+					<div class="performance-header">
+						<div class="perf-icon">🎨</div>
+						<h3>Permanent Color Stability</h3>
+					</div>
+					<div class="performance-content">
+						<p>
+							<strong>UV-Stable Pigment System:</strong> Advanced pigment technology combined with UV-resistant 
+							chemistry ensures colors remain vibrant and true throughout the coating's service life, even in 
+							direct sunlight exposure.
+						</p>
+						<div class="color-stability">
+							<div class="stability-metric">
+								<span class="metric-value">95%+</span>
+								<span class="metric-label">Gloss Retention (10 years)</span>
+							</div>
+							<div class="stability-metric">
+								<span class="metric-value">ΔE <2</span>
+								<span class="metric-label">Color Change (ASTM G154)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="performance-item">
+					<div class="performance-header">
+						<div class="perf-icon">🌦️</div>
+						<h3>All-Weather Durability</h3>
+					</div>
+					<div class="performance-content">
+						<p>
+							<strong>Environmental Resistance:</strong> Performs excellently in all weather conditions including 
+							freeze-thaw cycles, thermal shock, humidity extremes, and direct UV exposure. Maintains performance 
+							in both indoor and outdoor applications.
+						</p>
+						<div class="weather-performance">
+							<div class="weather-test">
+								<h4>Freeze-Thaw Cycling</h4>
+								<p>300 cycles per ASTM C666: No delamination or cracking</p>
+							</div>
+							<div class="weather-test">
+								<h4>Thermal Shock</h4>
+								<p>-20°F to 180°F cycling: Maintains adhesion and flexibility</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Applications -->
+	<Container>
+		<section class="applications-section">
+			<h2>Polyaspartic Coating Applications</h2>
+			
+			<div class="applications-grid">
+				<div class="application-category commercial">
+					<div class="app-icon">🏢</div>
+					<h3>Commercial Fast-Track Projects</h3>
+					<p>
+						When business downtime costs thousands per hour, polyaspartic coatings provide the solution. 
+						Complete installations during overnight maintenance windows or weekend shutdowns with full 
+						service restoration by Monday morning.
+					</p>
+					<div class="app-examples">
+						<h4>Ideal Applications:</h4>
+						<ul>
+							<li>Retail stores during renovation</li>
+							<li>Restaurants between service periods</li>
+							<li>Warehouses with tight schedules</li>
+							<li>Manufacturing facilities</li>
+							<li>Healthcare emergency repairs</li>
+							<li>Educational facility summer projects</li>
+						</ul>
+					</div>
+					<div class="app-benefits">
+						<span class="benefit-tag">⚡ Same-Day Service</span>
+						<span class="benefit-tag">💰 Minimal Revenue Loss</span>
+						<span class="benefit-tag">📅 Flexible Scheduling</span>
+					</div>
+				</div>
+
+				<div class="application-category outdoor">
+					<div class="app-icon">🌞</div>
+					<h3>Outdoor Concrete Surfaces</h3>
+					<p>
+						The only coating system suitable for permanent outdoor concrete applications. Complete UV resistance 
+						and weather durability make polyaspartic ideal for patios, pool decks, walkways, and other exterior surfaces.
+					</p>
+					<div class="app-examples">
+						<h4>Outdoor Applications:</h4>
+						<ul>
+							<li>Pool decks and patios</li>
+							<li>Outdoor walkways and stairs</li>
+							<li>Loading docks and ramps</li>
+							<li>Parking garage surfaces</li>
+							<li>Outdoor dining areas</li>
+							<li>Stadium and arena surfaces</li>
+						</ul>
+					</div>
+					<div class="app-benefits">
+						<span class="benefit-tag">☀️ UV Resistant</span>
+						<span class="benefit-tag">🌧️ All Weather</span>
+						<span class="benefit-tag">🎨 Color Stable</span>
+					</div>
+				</div>
+
+				<div class="application-category traffic">
+					<div class="app-icon">🚛</div>
+					<h3>High-Traffic Industrial Areas</h3>
+					<p>
+						Superior durability and flexibility make polyaspartic coatings ideal for the most demanding industrial 
+						environments. Withstands forklift traffic, heavy machinery, and industrial chemical exposure.
+					</p>
+					<div class="app-examples">
+						<h4>High-Traffic Uses:</h4>
+						<ul>
+							<li>Warehouse and distribution centers</li>
+							<li>Manufacturing production floors</li>
+							<li>Automotive service bays</li>
+							<li>Aircraft hangars</li>
+							<li>Heavy equipment facilities</li>
+							<li>Industrial maintenance areas</li>
+						</ul>
+					</div>
+					<div class="app-benefits">
+						<span class="benefit-tag">💪 Impact Resistant</span>
+						<span class="benefit-tag">🔧 Heavy Duty</span>
+						<span class="benefit-tag">🧪 Chemical Proof</span>
+					</div>
+				</div>
+
+				<div class="application-category industrial">
+					<div class="app-icon">⚙️</div>
+					<h3>Specialized Industrial Applications</h3>
+					<p>
+						Advanced chemistry and performance characteristics make polyaspartic suitable for specialized 
+						industrial environments requiring specific properties like anti-static, chemical resistance, or 
+						extreme temperature performance.
+					</p>
+					<div class="app-examples">
+						<h4>Specialized Uses:</h4>
+						<ul>
+							<li>Chemical processing facilities</li>
+							<li>Pharmaceutical clean rooms</li>
+							<li>Food processing plants</li>
+							<li>Electronics manufacturing</li>
+							<li>Aerospace facilities</li>
+							<li>Energy generation plants</li>
+						</ul>
+					</div>
+					<div class="app-benefits">
+						<span class="benefit-tag">🔬 Specialized Chemistry</span>
+						<span class="benefit-tag">🏭 Industrial Grade</span>
+						<span class="benefit-tag">✅ Code Compliant</span>
+					</div>
+				</div>
+
+				<div class="application-category residential">
+					<div class="app-icon">🏠</div>
+					<h3>Residential Quick Turnarounds</h3>
+					<p>
+						Perfect for homeowners who need their spaces back quickly. Ideal for garage floors, basements, 
+						and outdoor areas where traditional multi-day installations aren't practical.
+					</p>
+					<div class="app-examples">
+						<h4>Residential Applications:</h4>
+						<ul>
+							<li>Garage floors with same-day use</li>
+							<li>Basement finishing projects</li>
+							<li>Workshop and hobby areas</li>
+							<li>Outdoor entertainment spaces</li>
+							<li>Home gym facilities</li>
+							<li>Emergency repair situations</li>
+						</ul>
+					</div>
+					<div class="app-benefits">
+						<span class="benefit-tag">🏠 Same-Day Use</span>
+						<span class="benefit-tag">👨‍👩‍👧‍👦 Family Friendly</span>
+						<span class="benefit-tag">⚡ Quick Install</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Technical Specifications -->
+	<Container>
+		<section class="technical-section">
+			<h2>Technical Specifications & Performance Data</h2>
+			<p class="section-intro">
+				Comprehensive technical data demonstrating the superior performance characteristics 
+				of polyaspartic coating systems compared to traditional alternatives.
+			</p>
+			
+			<div class="specifications-grid">
+				<div class="spec-category">
+					<h3>Cure Time Data</h3>
+					<div class="spec-table">
+						<table>
+							<thead>
+								<tr>
+									<th>Stage</th>
+									<th>Polyaspartic</th>
+									<th>Traditional Epoxy</th>
+									<th>Advantage</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Pot Life</td>
+									<td>15-45 minutes</td>
+									<td>30-60 minutes</td>
+									<td>Adjustable working time</td>
+								</tr>
+								<tr>
+									<td>Tack-Free</td>
+									<td>1-2 hours</td>
+									<td>8-24 hours</td>
+									<td>12x faster</td>
+								</tr>
+								<tr>
+									<td>Light Traffic</td>
+									<td>2-4 hours</td>
+									<td>24-48 hours</td>
+									<td>12x faster</td>
+								</tr>
+								<tr>
+									<td>Full Cure</td>
+									<td>24 hours</td>
+									<td>7 days</td>
+									<td>7x faster</td>
+								</tr>
+								<tr>
+									<td>Chemical Resistance</td>
+									<td>24 hours</td>
+									<td>7-14 days</td>
+									<td>7x faster</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="spec-category">
+					<h3>Performance Ratings</h3>
+					<div class="performance-ratings">
+						<div class="rating-item">
+							<h4>Tensile Strength</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 95%"></div>
+								<span class="rating-value">5,200 PSI</span>
+							</div>
+						</div>
+						<div class="rating-item">
+							<h4>Elongation</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 85%"></div>
+								<span class="rating-value">45%</span>
+							</div>
+						</div>
+						<div class="rating-item">
+							<h4>Adhesion Strength</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 100%"></div>
+								<span class="rating-value">2,800 PSI</span>
+							</div>
+						</div>
+						<div class="rating-item">
+							<h4>Impact Resistance</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 90%"></div>
+								<span class="rating-value">400 ft-lbs</span>
+							</div>
+						</div>
+						<div class="rating-item">
+							<h4>Chemical Resistance</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 92%"></div>
+								<span class="rating-value">Excellent</span>
+							</div>
+						</div>
+						<div class="rating-item">
+							<h4>UV Stability</h4>
+							<div class="rating-bar">
+								<div class="rating-fill" style="width: 100%"></div>
+								<span class="rating-value">100%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="spec-category">
+					<h3>Polyaspartic vs. Epoxy Comparison</h3>
+					<div class="comparison-chart">
+						<div class="comparison-table">
+							<table>
+								<thead>
+									<tr>
+										<th>Property</th>
+										<th>Polyaspartic</th>
+										<th>Epoxy</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Cure Speed</td>
+										<td class="advantage">2-4 hours</td>
+										<td>3-7 days</td>
+									</tr>
+									<tr>
+										<td>UV Resistance</td>
+										<td class="advantage">Excellent</td>
+										<td>Poor (yellows)</td>
+									</tr>
+									<tr>
+										<td>Temperature Range</td>
+										<td class="advantage">-30°F to 140°F</td>
+										<td>-10°F to 120°F</td>
+									</tr>
+									<tr>
+										<td>Installation Temp</td>
+										<td class="advantage">20°F to 120°F</td>
+										<td>50°F to 90°F</td>
+									</tr>
+									<tr>
+										<td>Flexibility</td>
+										<td class="advantage">High (45% elongation)</td>
+										<td>Low (5% elongation)</td>
+									</tr>
+									<tr>
+										<td>Chemical Resistance</td>
+										<td>Excellent</td>
+										<td class="advantage">Excellent</td>
+									</tr>
+									<tr>
+										<td>Abrasion Resistance</td>
+										<td>Excellent</td>
+										<td class="advantage">Excellent</td>
+									</tr>
+									<tr>
+										<td>Cost</td>
+										<td>Higher initial</td>
+										<td class="advantage">Lower initial</td>
+									</tr>
+									<tr>
+										<td>Lifespan</td>
+										<td class="advantage">25+ years</td>
+										<td>15-20 years</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="spec-category">
+					<h3>Test Results & Certifications</h3>
+					<div class="certifications">
+						<div class="cert-item">
+							<div class="cert-icon">🧪</div>
+							<h4>ASTM Testing</h4>
+							<ul>
+								<li>ASTM D2240: Shore D Hardness 82</li>
+								<li>ASTM D638: Tensile Strength 5,200 PSI</li>
+								<li>ASTM D4060: Abrasion Resistance 12mg loss</li>
+								<li>ASTM D7234: Adhesion Strength 2,800 PSI</li>
+							</ul>
+						</div>
+						<div class="cert-item">
+							<div class="cert-icon">✅</div>
+							<h4>Industry Certifications</h4>
+							<ul>
+								<li>NSF/ANSI 61: Drinking Water Safe</li>
+								<li>USDA Approved: Food Service Areas</li>
+								<li>ICC-ES Evaluation Report</li>
+								<li>GREENGUARD Gold Certified</li>
+							</ul>
+						</div>
+						<div class="cert-item">
+							<div class="cert-icon">🏭</div>
+							<h4>Industrial Standards</h4>
+							<ul>
+								<li>FDA 21 CFR 175.300 Compliant</li>
+								<li>OSHA 29 CFR 1910.22 Slip Resistant</li>
+								<li>ACI 503R Concrete Coating Standard</li>
+								<li>ICRI Technical Guideline 03732</li>
+							</ul>
+						</div>
+						<div class="cert-item">
+							<div class="cert-icon">🌱</div>
+							<h4>Environmental</h4>
+							<ul>
+								<li>Zero VOC Emissions</li>
+								<li>Low Environmental Impact</li>
+								<li>LEED Credit Eligible</li>
+								<li>Sustainable Chemistry</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Professional Installation -->
+	<Container>
+		<section class="installation-section">
+			<h2>Professional Installation Excellence</h2>
+			<p class="section-intro">
+				Polyaspartic coating requires specialized knowledge and equipment for optimal performance. 
+				Our certified technicians ensure proper installation for maximum durability and performance.
+			</p>
+			
+			<div class="installation-process">
+				<h3>Advanced Installation Process</h3>
+				<div class="process-steps">
+					<div class="process-step">
+						<div class="step-number">1</div>
+						<div class="step-content">
+							<h4>Technical Assessment</h4>
+							<p>Comprehensive evaluation of substrate condition, moisture content, ambient conditions, and project requirements to determine optimal system specification.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">2</div>
+						<div class="step-content">
+							<h4>Precision Surface Preparation</h4>
+							<p>Mechanical preparation to achieve proper surface profile (CSP 2-3) for maximum adhesion. Complete contaminant removal and moisture mitigation.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">3</div>
+						<div class="step-content">
+							<h4>Environmental Control</h4>
+							<p>Temperature and humidity monitoring with adjustment protocols. Substrate temperature verification and dew point analysis.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">4</div>
+						<div class="step-content">
+							<h4>System Application</h4>
+							<p>Professional mixing and application using specialized equipment. Precise thickness control and quality monitoring throughout installation.</p>
+						</div>
+					</div>
+					<div class="process-step">
+						<div class="step-number">5</div>
+						<div class="step-content">
+							<h4>Quality Assurance</h4>
+							<p>Comprehensive inspection of coverage, thickness, and cure progression. Documentation of installation parameters and performance verification.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="installer-certification">
+				<h3>Professional Installer Certification</h3>
+				<div class="certification-grid">
+					<div class="cert-feature">
+						<div class="feature-icon">🎓</div>
+						<h4>Advanced Training</h4>
+						<p>Our technicians complete manufacturer certification programs and continuous education in polyaspartic application techniques.</p>
+					</div>
+					<div class="cert-feature">
+						<div class="feature-icon">🔬</div>
+						<h4>Technical Expertise</h4>
+						<p>Deep understanding of polyaspartic chemistry, curing mechanisms, and environmental factors affecting installation success.</p>
+					</div>
+					<div class="cert-feature">
+						<div class="feature-icon">⚙️</div>
+						<h4>Specialized Equipment</h4>
+						<p>Professional-grade mixing and application equipment specifically designed for polyaspartic coating systems.</p>
+					</div>
+					<div class="cert-feature">
+						<div class="feature-icon">🛡️</div>
+						<h4>Quality Guarantee</h4>
+						<p>Comprehensive warranty on materials and workmanship backed by manufacturer and contractor guarantees.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- FAQ Section -->
+	<Container>
+		<section class="faq-section">
+			<h2>Frequently Asked Questions</h2>
+			<p class="section-intro">
+				Expert answers to common questions about polyaspartic coating technology, installation, and performance.
+			</p>
+			
+			<div class="faq-list">
+				<div class="faq-item">
+					<h3>What is polyaspartic coating and how does it differ from epoxy?</h3>
+					<p>
+						Polyaspartic coating is an advanced aliphatic polyurea technology that cures much faster than epoxy 
+						(hours vs. days), offers superior UV resistance, and maintains flexibility at extreme temperatures. 
+						Unlike epoxy, polyaspartic doesn't yellow over time and can be installed year-round regardless of temperature. 
+						The aliphatic chemistry provides permanent UV stability while the flexible polymer backbone accommodates 
+						thermal movement without cracking.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>How quickly can I return to service after polyaspartic coating installation?</h3>
+					<p>
+						Polyaspartic coatings typically allow return to service within 2-4 hours for light traffic and 24 hours 
+						for heavy traffic and vehicles. This dramatically reduces downtime compared to traditional epoxy systems 
+						that require 3-7 days for full cure. The fast cure time is due to moisture-catalyzed chemical reaction 
+						that's independent of temperature, allowing same-day completion for most projects.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What are the temperature limits for polyaspartic coating installation?</h3>
+					<p>
+						Polyaspartic coatings can be installed in temperatures from 20°F to 120°F (-7°C to 49°C), making 
+						year-round installation possible. The coating also performs in service temperatures from -30°F to 140°F 
+						(-34°C to 60°C) without cracking or losing adhesion. This wide temperature range is due to the flexible 
+						polymer structure that accommodates thermal expansion and contraction.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>How does polyaspartic coating perform outdoors compared to epoxy?</h3>
+					<p>
+						Polyaspartic coatings excel in outdoor applications due to their aliphatic chemistry, providing complete 
+						UV resistance without yellowing or degradation. They maintain color stability and physical properties for 
+						decades, while epoxy coatings typically fail within 1-2 years when exposed to direct sunlight. The UV 
+						stability comes from the aliphatic backbone that doesn't absorb UV radiation, preventing polymer degradation.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What makes polyaspartic coating more flexible than epoxy?</h3>
+					<p>
+						Polyaspartic coatings achieve 45% elongation compared to epoxy's 5%, due to their flexible polymer chains 
+						that can stretch without breaking. This flexibility allows the coating to accommodate substrate movement, 
+						thermal cycling, and impact without cracking. The flexible structure also provides better impact resistance 
+						and prevents the brittleness that can affect rigid epoxy coatings over time.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>Are polyaspartic coatings suitable for industrial chemical exposure?</h3>
+					<p>
+						Yes, polyaspartic coatings provide excellent chemical resistance to acids, bases, solvents, and automotive 
+						fluids. The cross-linked polymer structure prevents chemical penetration while the aliphatic chemistry 
+						resists degradation from harsh chemicals. They're particularly effective against automotive fluids, making 
+						them ideal for service centers, manufacturing facilities, and chemical processing areas.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>How do polyaspartic coatings compare in cost to epoxy systems?</h3>
+					<p>
+						While polyaspartic coatings have higher initial material costs, they provide superior value through reduced 
+						installation time, minimal downtime costs, longer service life (25+ years vs. 15-20 for epoxy), and 
+						eliminated UV degradation maintenance. The total cost of ownership is typically lower due to reduced 
+						labor costs and extended replacement cycles.
+					</p>
+				</div>
+
+				<div class="faq-item">
+					<h3>What certifications and testing validate polyaspartic performance?</h3>
+					<p>
+						Our polyaspartic systems meet ASTM standards for tensile strength, adhesion, and abrasion resistance. 
+						They're NSF/ANSI 61 certified for drinking water contact, USDA approved for food service areas, and 
+						GREENGUARD Gold certified for indoor air quality. The systems also comply with FDA, OSHA, and ACI 
+						standards for commercial and industrial applications.
+					</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Call-to-Action Section -->
+	<Container>
+		<section class="cta-section" id="quote-form">
+			<div class="cta-content">
+				<h2>Experience Advanced Polyaspartic Technology</h2>
+				<p>
+					Ready to revolutionize your flooring with same-day service return and superior performance? 
+					Get your technical consultation and discover how polyaspartic coating can transform your project timeline and results.
+				</p>
+				
+				<div class="cta-options">
+					<div class="cta-option">
+						<h3>🔬 Technical Consultation</h3>
+						<p>Speak with our polyaspartic specialists about your specific requirements</p>
+						<a href="tel:513-296-5525" class="btn btn-primary">Call (513) 296-5525</a>
+					</div>
+					
+					<div class="cta-option">
+						<h3>📋 Project Assessment</h3>
+						<p>Complete technical evaluation with installation timeline and specifications</p>
+						<QuoteRequestForm />
+					</div>
+					
+					<div class="cta-option">
+						<h3>📍 Service Coverage</h3>
+						<p>Professional polyaspartic installation throughout Greater Cincinnati</p>
+						<a href="/service-areas/" class="btn btn-outline">View Service Areas</a>
+					</div>
+				</div>
+
+				<div class="testimonial-highlight">
+					<blockquote>
+						"The polyaspartic coating allowed us to complete our warehouse floor renovation over a weekend. 
+						We were back to full operations Monday morning with zero downtime costs. The performance after 
+						three years has been exceptional."
+					</blockquote>
+					<cite>— David Rodriguez, Warehouse Operations Manager</cite>
+				</div>
+
+				<div class="technical-resources">
+					<h3>Technical Resources</h3>
+					<p>Access detailed specifications, installation guides, and performance data for informed decision-making.</p>
+					<div class="resource-links">
+						<a href="/resources/" class="btn btn-secondary">Technical Documentation</a>
+						<a href="/portfolio/" class="btn btn-secondary">Performance Case Studies</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(faqData)}></script>
+</Layout>
+
+<style>
+/* Polyaspartic-specific technical styling */
+.service-hero {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: center;
+	padding: 4rem 0;
+	background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+	border-radius: var(--theme-shape-radius);
+	margin: 2rem 0;
+	color: #ffffff;
+}
+
+.hero-content {
+	padding: 2rem;
+}
+
+.breadcrumb {
+	margin-bottom: 1rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: #a0aec0;
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb a {
+	color: #4299e1;
+	text-decoration: none;
+}
+
+.hero-features {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+.hero-features span {
+	background: linear-gradient(45deg, #3182ce, #4299e1);
+	color: #ffffff;
+	padding: 0.5rem 1rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.performance-stats {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin: 2rem 0;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: var(--theme-shape-radius);
+	backdrop-filter: blur(10px);
+}
+
+.stat-item {
+	text-align: center;
+}
+
+.stat-number {
+	display: block;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #4299e1;
+	margin-bottom: 0.5rem;
+}
+
+.stat-label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	opacity: 0.9;
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.hero-image img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: var(--theme-shape-radius);
+	border: 3px solid #4299e1;
+}
+
+.technology-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.tech-advantage {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	transition: var(--theme-transition);
+}
+
+.tech-advantage:hover {
+	border-color: #3182ce;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(49, 130, 206, 0.15);
+}
+
+.tech-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	display: block;
+}
+
+.tech-advantage h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.tech-details {
+	margin-top: 1.5rem;
+	padding-top: 1.5rem;
+	border-top: 2px solid var(--theme-surface-1);
+}
+
+.tech-details h4 {
+	color: #3182ce;
+	margin-bottom: 1rem;
+	font-size: 1.1rem;
+}
+
+.tech-details ul {
+	list-style: none;
+	padding: 0;
+}
+
+.tech-details li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.tech-details li::before {
+	content: '⚙️';
+	position: absolute;
+	left: 0;
+	font-size: 0.9rem;
+}
+
+.speed-comparison {
+	display: grid;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.speed-chart {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.timeline-comparison {
+	display: grid;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.timeline-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: 0.5rem;
+	border: 2px solid var(--theme-border-light);
+}
+
+.timeline-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.coating-type {
+	font-weight: 700;
+	font-size: 1.1rem;
+	color: var(--theme-surface-2);
+}
+
+.total-time {
+	background: #dc3545;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 0.25rem;
+	font-weight: 600;
+	font-size: 0.9rem;
+}
+
+.timeline-item.polyaspartic .total-time {
+	background: #28a745;
+}
+
+.timeline-bar {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 0.25rem;
+	height: 3rem;
+}
+
+.timeline-bar.short {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.day-segment, .hour-segment {
+	background: #dc3545;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	font-weight: 600;
+	border-radius: 0.25rem;
+	text-align: center;
+	padding: 0.25rem;
+}
+
+.hour-segment {
+	background: #28a745;
+}
+
+.impact-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.impact-item {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	text-align: center;
+}
+
+.impact-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.impact-item h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.conditions-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.condition-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	text-align: center;
+	transition: var(--theme-transition);
+}
+
+.condition-item:hover {
+	border-color: #3182ce;
+	transform: translateY(-2px);
+}
+
+.condition-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.condition-item h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.performance-grid {
+	display: grid;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.performance-item {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border-left: 4px solid #3182ce;
+}
+
+.performance-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.perf-icon {
+	font-size: 2.5rem;
+}
+
+.performance-header h3 {
+	color: var(--theme-surface-2);
+	margin: 0;
+}
+
+.performance-data {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.data-point {
+	text-align: center;
+	background: var(--theme-bg);
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.data-value {
+	display: block;
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: #3182ce;
+	margin-bottom: 0.5rem;
+}
+
+.data-label {
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--theme-on-surface-1);
+}
+
+.chemical-resistance {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.resistance-category {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+}
+
+.resistance-category h4 {
+	color: #3182ce;
+	margin-bottom: 1rem;
+}
+
+.resistance-category ul {
+	list-style: none;
+	padding: 0;
+}
+
+.resistance-category li {
+	padding: 0.25rem 0;
+	font-size: 0.9rem;
+}
+
+.performance-ratings {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.rating-item {
+	display: grid;
+	grid-template-columns: 150px 1fr auto;
+	align-items: center;
+	gap: 1rem;
+}
+
+.rating-bar {
+	position: relative;
+	height: 1.5rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.75rem;
+	overflow: hidden;
+}
+
+.rating-fill {
+	height: 100%;
+	background: linear-gradient(45deg, #3182ce, #4299e1);
+	border-radius: 0.75rem;
+	transition: width 0.3s ease;
+}
+
+.rating-value {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+	min-width: 80px;
+	text-align: right;
+}
+
+.comparison-table table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 2px solid var(--theme-surface-1);
+}
+
+.comparison-table th {
+	background: var(--theme-surface-2);
+	color: white;
+	font-weight: 600;
+}
+
+.comparison-table .advantage {
+	background: rgba(49, 130, 206, 0.1);
+	font-weight: 600;
+	color: #3182ce;
+}
+
+.certifications {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.cert-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.cert-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.cert-item h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.cert-item ul {
+	list-style: none;
+	padding: 0;
+}
+
+.cert-item li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.cert-item li::before {
+	content: '✓';
+	position: absolute;
+	left: 0;
+	color: #3182ce;
+	font-weight: bold;
+}
+
+.applications-grid {
+	display: grid;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.application-category {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	transition: var(--theme-transition);
+}
+
+.application-category:hover {
+	border-color: #3182ce;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(49, 130, 206, 0.15);
+}
+
+.app-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.application-category h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.app-examples {
+	margin: 1.5rem 0;
+}
+
+.app-examples h4 {
+	color: #3182ce;
+	margin-bottom: 1rem;
+}
+
+.app-examples ul {
+	list-style: none;
+	padding: 0;
+}
+
+.app-examples li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.app-examples li::before {
+	content: '▶';
+	position: absolute;
+	left: 0;
+	color: #3182ce;
+	font-size: 0.8rem;
+}
+
+.app-benefits {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+}
+
+.benefit-tag {
+	background: linear-gradient(45deg, #3182ce, #4299e1);
+	color: white;
+	padding: 0.25rem 0.75rem;
+	border-radius: 1rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.specifications-grid {
+	display: grid;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.spec-category {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.spec-category h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.spec-table table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.spec-table th,
+.spec-table td {
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 2px solid var(--theme-border-light);
+}
+
+.spec-table th {
+	background: var(--theme-surface-2);
+	color: white;
+	font-weight: 600;
+}
+
+.spec-table tbody tr:nth-child(even) {
+	background: rgba(49, 130, 206, 0.05);
+}
+
+.process-steps {
+	display: grid;
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.process-step {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1.5rem;
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+}
+
+.step-number {
+	background: linear-gradient(45deg, #3182ce, #4299e1);
+	color: white;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.step-content h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.certification-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.cert-feature {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	text-align: center;
+	transition: var(--theme-transition);
+}
+
+.cert-feature:hover {
+	border-color: #3182ce;
+	transform: translateY(-2px);
+}
+
+.feature-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.cert-feature h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.faq-list {
+	display: grid;
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.faq-item {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-surface-1);
+	transition: var(--theme-transition);
+}
+
+.faq-item:hover {
+	border-color: #3182ce;
+}
+
+.faq-item h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.cta-section {
+	background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2d3748 100%);
+	color: #ffffff;
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 4rem 0;
+	text-align: center;
+}
+
+.cta-section h2 {
+	color: #4299e1;
+}
+
+.cta-options {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 3rem 0;
+}
+
+.cta-option {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid #4299e1;
+}
+
+.cta-option h3 {
+	color: #4299e1;
+	margin-bottom: 1rem;
+}
+
+.testimonial-highlight {
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 3rem 0;
+	border-left: 4px solid #4299e1;
+}
+
+.testimonial-highlight blockquote {
+	font-style: italic;
+	font-size: 1.1rem;
+	margin-bottom: 1rem;
+	color: #ffffff;
+}
+
+.testimonial-highlight cite {
+	color: #4299e1;
+	font-weight: 600;
+}
+
+.technical-resources {
+	margin-top: 3rem;
+}
+
+.resource-links {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	border: 2px solid transparent;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.btn-primary {
+	background: linear-gradient(45deg, #3182ce, #4299e1);
+	color: #ffffff;
+	border-color: #3182ce;
+}
+
+.btn-secondary {
+	background: transparent;
+	color: #4299e1;
+	border-color: #4299e1;
+}
+
+.btn-outline {
+	background: transparent;
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+	background: linear-gradient(45deg, #4299e1, #63b3ed);
+	border-color: #4299e1;
+}
+
+.btn-secondary:hover {
+	background: #4299e1;
+	color: #ffffff;
+	border-color: #4299e1;
+}
+
+.btn-outline:hover {
+	background: #ffffff;
+	color: #0f1419;
+	border-color: #ffffff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.service-hero {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		padding: 2rem 0;
+	}
+	
+	.performance-stats {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+	
+	.technology-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.timeline-comparison {
+		gap: 1rem;
+	}
+	
+	.timeline-bar {
+		grid-template-columns: 1fr;
+		height: auto;
+		gap: 0.5rem;
+	}
+	
+	.day-segment, .hour-segment {
+		height: 2rem;
+	}
+	
+	.impact-grid, .conditions-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.performance-data {
+		grid-template-columns: 1fr;
+	}
+	
+	.chemical-resistance {
+		grid-template-columns: 1fr;
+	}
+	
+	.rating-item {
+		grid-template-columns: 1fr;
+		gap: 0.5rem;
+		text-align: center;
+	}
+	
+	.certifications {
+		grid-template-columns: 1fr;
+	}
+	
+	.certification-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.hero-cta, .cta-options {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.resource-links {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.btn {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+/* Section spacing and typography */
+section {
+	margin: 4rem 0;
+}
+
+.section-intro {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	margin-bottom: 2rem;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h2 {
+	color: var(--theme-surface-2);
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
+
+strong {
+	color: var(--theme-surface-2);
+}
+</style>

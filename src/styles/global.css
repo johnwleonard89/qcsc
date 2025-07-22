@@ -148,7 +148,7 @@ a[role="button"] {
 	color: var(--theme-primary-hover) !important;
 }
 
-/* Ensure proper contrast for links */
+/* Ensure proper contrast for links - automatic context switching */
 a {
 	color: var(--theme-primary-on-light);
 }
@@ -157,6 +157,25 @@ a:hover,
 a:focus {
 	color: var(--theme-navy-light);
 	text-decoration: underline;
+}
+
+/* Global contrast fixes for common elements on light backgrounds */
+.service-link,
+.testimonial-author strong,
+.contact-info h2,
+.contact-info h3,
+.contact-info h4,
+.phone-number,
+.method-content h4,
+.business-hours h4,
+.credential strong,
+.map-content h4 {
+	color: var(--theme-primary-on-light) !important;
+}
+
+.service-link:hover,
+.phone-number:hover {
+	color: var(--theme-navy-light) !important;
 }
 
 /* Reduce motion for users who prefer it */

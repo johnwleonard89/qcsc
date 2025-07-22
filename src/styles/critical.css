@@ -453,13 +453,13 @@ img {
 
 /* Critical contextual color rules */
 a {
-  color: var(--theme-primary-on-light);
+  color: var(--theme-primary);
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  color: var(--theme-navy-light);
+  color: var(--theme-primary-hover);
   text-decoration: underline;
 }
 

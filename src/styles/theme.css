@@ -128,7 +128,7 @@ a.btn-primary,
 button.btn-primary {
 	background: #FFC107 !important;
 	border-color: #FFC107 !important;
-	color: #000 !important;
+	color: #002F4B !important;
 }
 
 .btn-primary:hover,
@@ -137,7 +137,26 @@ a.btn-primary:hover,
 button.btn-primary:hover {
 	background: #E6AC00 !important;
 	border-color: #E6AC00 !important;
-	color: #000 !important;
+	color: #002F4B !important;
+}
+
+/* Outline buttons on light backgrounds should be navy with yellow on hover */
+.btn-outline,
+.btn.btn-outline,
+a.btn-outline,
+button.btn-outline {
+	background: transparent !important;
+	color: #002F4B !important;
+	border-color: #002F4B !important;
+}
+
+.btn-outline:hover,
+.btn.btn-outline:hover,
+a.btn-outline:hover,
+button.btn-outline:hover {
+	background: #002F4B !important;
+	color: #FFC107 !important;
+	border-color: #002F4B !important;
 }
 
 /* Outline buttons on dark backgrounds should be yellow */

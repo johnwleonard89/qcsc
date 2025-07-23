@@ -63,22 +63,48 @@ const faqSchema = {
 	<!-- FAQ Schema -->
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 
-	<!-- Page Header -->
+	<!-- Hero Section -->
 	<Container>
-		<section class="page-header">
-			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<ol>
-					<li><a href="/">Home</a></li>
-					<li><a href="/services/">Services</a></li>
-					<li><a href={`/services/${service.slug}/`}>{service.name}</a></li>
-					<li aria-current="page">{county.name} County</li>
-				</ol>
-			</nav>
-			<h1>{service.name} {county.name} County, {county.stateAbbr}</h1>
-			<p class="page-subtitle">
-				Expert {service.name.toLowerCase()} services throughout {county.name} County, {county.state}. 
-				Professional concrete coating solutions with military precision and lifetime quality.
-			</p>
+		<section class="service-hero">
+			<div class="hero-content">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li><a href={`/services/${service.slug}/`}>{service.name}</a></li>
+						<li aria-current="page">{county.name} County</li>
+					</ol>
+				</nav>
+				
+				<h1>{service.name} {county.name} County, {county.stateAbbr}</h1>
+				<p class="hero-subtitle">
+					Expert {service.name.toLowerCase()} services throughout {county.name} County, {county.state}. 
+					Professional concrete coating solutions with military precision and lifetime quality.
+				</p>
+				
+				<div class="hero-features">
+					<span>✓ Licensed & Insured</span>
+					<span>✓ Veteran-Owned Excellence</span>
+					<span>✓ County-Wide Service</span>
+					<span>✓ Free Estimates</span>
+				</div>
+				
+				<div class="hero-cta">
+					<a href="#quote-form" class="btn btn-primary">Get Free Estimate</a>
+					<a href="tel:513-296-5525" class="btn btn-secondary">Call (513) 296-5525</a>
+				</div>
+			</div>
+			
+			<div class="hero-image">
+				<img 
+					src={`/assets/images/services/${service.slug}-${county.name.toLowerCase()}-county.webp`}
+					alt={`Professional ${service.name.toLowerCase()} in ${county.name} County, ${county.stateAbbr}`}
+					loading="eager"
+					width="500"
+					height="400"
+					onerror="this.src='/assets/images/services/{service.slug}-hero.webp'"
+				/>
+			</div>
 		</section>
 	</Container>
 
@@ -942,4 +968,194 @@ const faqSchema = {
 			align-items: center;
 		}
 	}
+
+/* Service Hero Section */
+.service-hero {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+	color: var(--theme-on-surface-2);
+	padding: 4rem 0;
+	margin-bottom: 3rem;
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+	min-height: 600px;
+}
+
+.service-hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+					  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+}
+
+.breadcrumb {
+	margin-bottom: 1.5rem;
+	align-self: center;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb a {
+	color: #FFC107;
+	text-decoration: none;
+}
+
+.breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content h1 {
+	font-family: var(--theme-font-family-headings);
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 1rem;
+	line-height: var(--line-height-tight);
+	color: #FFC107;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	opacity: 0.95;
+	line-height: var(--line-height-relaxed);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+}
+
+.hero-features span {
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.service-hero .btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-secondary {
+	background: transparent !important;
+	border-color: #FFC107 !important;
+	color: #FFC107 !important;
+}
+
+.service-hero .btn-secondary:hover {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.hero-image {
+	position: relative;
+}
+
+.hero-image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+	z-index: 1;
+	border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: var(--theme-card-radius);
+	box-shadow: var(--theme-shadow-dark);
+	filter: contrast(1.1) saturate(1.05);
+	position: relative;
+}
+
+/* Mobile Responsive for Hero */
+@media (max-width: 1024px) {
+	.service-hero {
+		grid-template-columns: 1fr;
+		text-align: center;
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.service-hero {
+		padding: 2rem 0;
+	}
+	
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	
+	.hero-cta {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.hero-features {
+		grid-template-columns: 1fr;
+	}
+}
 </style>

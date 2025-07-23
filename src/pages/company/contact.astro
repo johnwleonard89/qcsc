@@ -342,8 +342,23 @@ const seo = {
 	}
 
 	.contact-method.priority {
-		background: linear-gradient(135deg, var(--theme-surface-1) 0%, rgba(255, 192, 61, 0.1) 100%);
-		border-color: var(--theme-primary);
+		background: linear-gradient(135deg, #002F4B 0%, #003B5C 100%);
+		border-color: #FFC107;
+		border-width: 2px;
+	}
+
+	.contact-method.priority .method-content h3,
+	.contact-method.priority .phone-number,
+	.contact-method.priority .availability {
+		color: #FFC107;
+	}
+
+	.contact-method.priority .method-content p {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.contact-method.priority .method-icon {
+		filter: sepia(1) saturate(2) hue-rotate(35deg);
 	}
 
 	.method-icon {
@@ -477,7 +492,7 @@ const seo = {
 	}
 
 	.emergency-header h2 {
-		color: var(--theme-primary);
+		color: #FFC107;
 		font-size: 2rem;
 		margin: 0;
 	}
@@ -498,7 +513,7 @@ const seo = {
 	}
 
 	.emergency-item h3 {
-		color: var(--theme-primary);
+		color: #FFC107;
 		margin-bottom: 1rem;
 		font-size: 1.25rem;
 	}
@@ -509,31 +524,39 @@ const seo = {
 	}
 
 	.emergency-btn {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		padding: 1rem 2rem;
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
+		background: #FFC107;
+		color: #002F4B;
 		text-decoration: none;
 		border-radius: var(--theme-button-border-radius);
 		font-weight: 600;
 		transition: all var(--theme-transition);
-		min-height: 44px;
+		min-height: 48px;
+		border: 2px solid #FFC107;
+		box-shadow: 0 4px 16px rgba(255, 193, 7, 0.2);
 	}
 
 	.emergency-btn:hover {
-		background: var(--theme-primary-hover);
+		background: #E6AC00;
+		border-color: #E6AC00;
 		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(255, 193, 7, 0.3);
 	}
 
 	.emergency-btn.secondary {
 		background: transparent;
-		color: var(--theme-primary);
-		border: 2px solid var(--theme-primary);
+		color: #FFC107;
+		border: 2px solid #FFC107;
+		box-shadow: none;
 	}
 
 	.emergency-btn.secondary:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
+		background: #FFC107;
+		color: #002F4B;
+		box-shadow: 0 4px 16px rgba(255, 193, 7, 0.3);
 	}
 
 	/* Service Area Section */
@@ -577,7 +600,7 @@ const seo = {
 	}
 
 	.map-overlay h3 {
-		color: var(--theme-primary);
+		color: #FFC107;
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
 	}
@@ -600,7 +623,7 @@ const seo = {
 	.stat strong {
 		display: block;
 		font-size: 2rem;
-		color: var(--theme-primary);
+		color: #FFC107;
 		font-weight: 700;
 	}
 
@@ -740,26 +763,31 @@ const seo = {
 	}
 
 	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border-color: var(--theme-primary);
+		background: #FFC107;
+		color: #002F4B;
+		border-color: #FFC107;
+		box-shadow: 0 4px 16px rgba(255, 193, 7, 0.2);
 	}
 
 	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
+		background: #E6AC00;
+		border-color: #E6AC00;
 		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(255, 193, 7, 0.3);
 	}
 
 	.btn-outline {
 		background: transparent;
-		color: var(--theme-primary);
-		border-color: var(--theme-primary);
+		color: #002F4B;
+		border-color: #002F4B;
+		box-shadow: none;
 	}
 
 	.btn-outline:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
+		background: #002F4B;
+		color: #FFC107;
+		border-color: #002F4B;
+		box-shadow: 0 4px 16px rgba(0, 47, 75, 0.2);
 	}
 
 	/* Mobile Responsive */

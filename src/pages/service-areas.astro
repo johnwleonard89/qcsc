@@ -86,28 +86,28 @@ const serviceAreas = [
 						<div class="coverage-item">
 							<h4>Ohio Counties</h4>
 							<ul>
-								<li>Hamilton County</li>
-								<li>Butler County</li>
-								<li>Warren County</li>
-								<li>Clermont County</li>
+								<li><a href="/service-areas/ohio/hamilton-county-comprehensive/">Hamilton County</a></li>
+								<li><a href="/service-areas/ohio/butler-county-comprehensive/">Butler County</a></li>
+								<li><a href="/service-areas/ohio/warren-county-comprehensive/">Warren County</a></li>
+								<li><a href="/service-areas/ohio/clermont-county-comprehensive/">Clermont County</a></li>
 								<li>Brown County</li>
 							</ul>
 						</div>
 						<div class="coverage-item">
 							<h4>Kentucky Counties</h4>
 							<ul>
-								<li>Campbell County</li>
-								<li>Kenton County</li>
-								<li>Boone County</li>
+								<li><a href="/service-areas/kentucky/campbell-county-comprehensive/">Campbell County</a></li>
+								<li><a href="/service-areas/kentucky/kenton-county-comprehensive/">Kenton County</a></li>
+								<li><a href="/service-areas/kentucky/boone-county-comprehensive/">Boone County</a></li>
 								<li>Grant County</li>
 							</ul>
 						</div>
 						<div class="coverage-item">
 							<h4>Indiana Counties</h4>
 							<ul>
-								<li>Dearborn County</li>
-								<li>Ohio County</li>
-								<li>Switzerland County</li>
+								<li><a href="/service-areas/indiana/dearborn-county-comprehensive/">Dearborn County</a></li>
+								<li><a href="/service-areas/indiana/ohio-county-comprehensive/">Ohio County</a></li>
+								<li><a href="/service-areas/indiana/switzerland-county-comprehensive/">Switzerland County</a></li>
 							</ul>
 						</div>
 					</div>
@@ -369,6 +369,18 @@ const serviceAreas = [
 	.coverage-item li {
 		padding: 0.25rem 0;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
+	.coverage-item li a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.coverage-item li a:hover {
+		color: var(--theme-primary-hover);
+		text-decoration: underline;
 	}
 
 	.service-areas-section {

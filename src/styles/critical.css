@@ -1,5 +1,4 @@
-/* Critical CSS - Import utilities and base styles */
-@import 'utilities.css';
+/* Critical CSS - Essential base styles only */
 
 /* CSS Reset - Critical Only */
 *,
@@ -11,7 +10,7 @@
 }
 
 html {
-  font-family: var(--theme-font-family-sans);
+  font-family: var(--font-family-sans);
   font-size: 16px;
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
@@ -22,7 +21,7 @@ html {
 body {
   background-color: var(--white);
   color: var(--text-primary);
-  font-family: var(--theme-font-family-sans);
+  font-family: var(--font-family-sans);
   line-height: 1.6;
   overflow-x: hidden;
   max-width: 1920px;

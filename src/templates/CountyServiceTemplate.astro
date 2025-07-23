@@ -446,16 +446,16 @@ const faqSchema = {
 	.benefits-list li {
 		padding: 0.5rem 0;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		position: relative;
-		padding-left: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 
 	.benefits-list li::before {
 		content: '✓';
-		position: absolute;
-		left: 0;
 		color: var(--theme-primary);
 		font-weight: bold;
+		flex-shrink: 0;
 	}
 
 	/* County Coverage */

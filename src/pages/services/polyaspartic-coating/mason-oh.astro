@@ -1,0 +1,30 @@
+---
+import CityServiceTemplate from '../../../templates/CityServiceTemplate.astro';
+import { cities, services, counties } from '../../../data/locations';
+
+const city = cities['mason-ohio'];
+const service = services['polyaspartic-coating'];
+const county = counties['warren-county-ohio'];
+
+const relatedCities = [
+	cities['cincinnati-ohio'],
+	cities['west-chester-ohio'],
+	cities['covington-kentucky'],
+	cities['florence-kentucky']
+];
+
+const relatedServices = [
+	services['garage-floor-epoxy'],
+	services['metallic-epoxy-flooring'],
+	services['basement-floor-coating'],
+	services['commercial-concrete-coating']
+];
+
+const nearbyCounties = [
+	counties['hamilton-county-ohio'],
+	counties['butler-county-ohio'],
+	counties['kenton-county-kentucky']
+];
+---
+
+<CityServiceTemplate {city} {service} {county} {relatedCities} {relatedServices} {nearbyCounties} />

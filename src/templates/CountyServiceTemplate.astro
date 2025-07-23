@@ -1,0 +1,713 @@
+---
+import { Container, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
+import type { County, Service } from '../data/locations';
+
+export interface Props {
+	county: County;
+	service: Service;
+	relatedCounties: County[];
+	relatedServices: Service[];
+}
+
+const { county, service, relatedCounties, relatedServices } = Astro.props;
+
+const seo = {
+	title: `${service.name} ${county.name} County ${county.stateAbbr} | Queen City Surface Coatings`,
+	description: `Professional ${service.name.toLowerCase()} services throughout ${county.name} County, ${county.state}. Expert concrete coating near ${county.landmarks.slice(0, 2).join(' and ')}. Licensed, bonded, insured.`,
+	keywords: `${service.name.toLowerCase()} ${county.name} county, concrete coating ${county.name} county ${county.stateAbbr}, ${service.slug} ${county.state}, ${county.name} county flooring contractors`,
+	type: 'service',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Services', url: 'https://queencitysurfacecoatings.com/services/' },
+		{ name: service.name, url: `https://queencitysurfacecoatings.com/services/${service.slug}/` },
+		{ name: `${county.name} County`, url: `https://queencitysurfacecoatings.com/services/${service.slug}/${county.name.toLowerCase()}-county-${county.stateAbbr.toLowerCase()}/` }
+	]
+};
+
+// FAQ Schema
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": `Do you provide ${service.name.toLowerCase()} throughout all of ${county.name} County?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Yes, we provide professional ${service.name.toLowerCase()} services throughout all of ${county.name} County, ${county.state}, including all ${county.cities.length} municipalities and unincorporated areas. We serve ${county.cities.slice(0, 5).join(', ')}, and all surrounding communities.`
+			}
+		},
+		{
+			"@type": "Question", 
+			"name": `What makes your ${service.name.toLowerCase()} suitable for ${county.name} County?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Our ${service.name.toLowerCase()} systems are specifically designed for ${county.state}'s climate conditions. We use premium materials that withstand freeze-thaw cycles, humidity, and temperature fluctuations common in ${county.name} County.`
+			}
+		},
+		{
+			"@type": "Question",
+			"name": `How long does ${service.name.toLowerCase()} installation take in ${county.name} County?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Installation timelines vary by project size and scope. Most residential ${service.name.toLowerCase()} projects in ${county.name} County are completed in 1-3 days, while commercial installations may take longer depending on square footage and preparation requirements.`
+			}
+		}
+	]
+};
+---
+
+<Layout {seo}>
+	<!-- FAQ Schema -->
+	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+
+	<!-- Page Header -->
+	<Container>
+		<section class="page-header">
+			<nav class="breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="/">Home</a></li>
+					<li><a href="/services/">Services</a></li>
+					<li><a href={`/services/${service.slug}/`}>{service.name}</a></li>
+					<li aria-current="page">{county.name} County</li>
+				</ol>
+			</nav>
+			<h1>{service.name} {county.name} County, {county.stateAbbr}</h1>
+			<p class="page-subtitle">
+				Expert {service.name.toLowerCase()} services throughout {county.name} County, {county.state}. 
+				Professional concrete coating solutions with military precision and lifetime quality.
+			</p>
+		</section>
+	</Container>
+
+	<!-- Service Overview -->
+	<Container>
+		<section class="service-overview">
+			<div class="overview-content">
+				<div class="overview-text">
+					<h2>Professional {service.name} Throughout {county.name} County</h2>
+					<p>{service.description}</p>
+					<p>
+						Queen City Surface Coatings proudly serves all of {county.name} County with comprehensive {service.name.toLowerCase()} solutions. 
+						From {county.cities[0]} to {county.cities[county.cities.length - 1]}, we bring the same level of expertise and quality to every project.
+					</p>
+
+					<div class="service-benefits">
+						<h3>Why Choose Our {service.name} in {county.name} County?</h3>
+						<ul class="benefits-list">
+							{service.benefits.map((benefit) => (
+								<li>{benefit}</li>
+							))}
+						</ul>
+					</div>
+				</div>
+				
+				<div class="overview-image">
+					<img 
+						src={`/assets/images/services/${service.slug}-hero.webp`} 
+						alt={`Professional ${service.name.toLowerCase()} in ${county.name} County, ${county.stateAbbr}`}
+						loading="eager"
+						width="500"
+						height="400"
+						style="object-fit: cover; border-radius: 0.5rem;"
+					/>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- County Coverage -->
+	<Container>
+		<section class="county-coverage">
+			<h2>{service.name} Coverage Across {county.name} County</h2>
+			<p>We provide {service.name.toLowerCase()} services to all {county.cities.length} municipalities and communities throughout {county.name} County:</p>
+			
+			<div class="cities-grid">
+				{county.cities.map((city) => (
+					<div class="city-link-card">
+						<h3>
+							<a href={`/services/${service.slug}/${city.toLowerCase().replace(/\s+/g, '-')}-${county.stateAbbr.toLowerCase()}/`}>
+								{service.name} {city}, {county.stateAbbr}
+							</a>
+						</h3>
+						<p>Professional {service.name.toLowerCase()} services in {city}, {county.name} County</p>
+					</div>
+				))}
+			</div>
+
+			<div class="county-details">
+				<div class="detail-item">
+					<strong>Population Served:</strong> {county.population}
+				</div>
+				<div class="detail-item">
+					<strong>ZIP Codes:</strong> {county.zipCodes.slice(0, 10).join(', ')}...
+				</div>
+				<div class="detail-item">
+					<strong>Major Landmarks:</strong> {county.landmarks.slice(0, 5).join(', ')}
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Steps -->
+	<Container>
+		<section class="process-section">
+			<h2>Our {service.name} Process in {county.name} County</h2>
+			<div class="process-grid">
+				{service.process.map((step, index) => (
+					<div class="process-step">
+						<div class="step-number">{index + 1}</div>
+						<h3>{step}</h3>
+						<p>Professional {step.toLowerCase()} techniques perfected through years of experience in {county.name} County.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Applications -->
+	<Container>
+		<section class="applications-section">
+			<h2>{service.name} Applications in {county.name} County</h2>
+			<div class="applications-grid">
+				{service.applications.map((application) => (
+					<div class="application-card">
+						<h3>{application}</h3>
+						<p>Specialized {service.name.toLowerCase()} solutions for {application.toLowerCase()} throughout {county.name} County, {county.state}.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Related Services -->
+	<Container>
+		<section class="related-services">
+			<h2>Additional Services in {county.name} County</h2>
+			<p>Explore our complete range of concrete coating services available throughout {county.name} County:</p>
+			
+			<div class="services-grid">
+				{relatedServices.map((relatedService) => (
+					<div class="service-card">
+						<h3>
+							<a href={`/services/${relatedService.slug}/${county.name.toLowerCase()}-county-${county.stateAbbr.toLowerCase()}/`}>
+								{relatedService.name} {county.name} County
+							</a>
+						</h3>
+						<p>{relatedService.description}</p>
+						<a href={`/services/${relatedService.slug}/${county.name.toLowerCase()}-county-${county.stateAbbr.toLowerCase()}/`} class="service-link">
+							Learn More →
+						</a>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Related Counties -->
+	<Container>
+		<section class="related-counties">
+			<h2>{service.name} in Nearby Counties</h2>
+			<p>We also provide {service.name.toLowerCase()} services in surrounding counties:</p>
+			
+			<div class="counties-grid">
+				{relatedCounties.map((relatedCounty) => (
+					<div class="county-card">
+						<h3>
+							<a href={`/services/${service.slug}/${relatedCounty.name.toLowerCase()}-county-${relatedCounty.stateAbbr.toLowerCase()}/`}>
+								{service.name} {relatedCounty.name} County, {relatedCounty.stateAbbr}
+							</a>
+						</h3>
+						<p>Expert {service.name.toLowerCase()} throughout {relatedCounty.name} County, serving {relatedCounty.population} residents.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Contact Form -->
+	<Container>
+		<section class="contact-form-section">
+			<div class="contact-grid">
+				<div class="contact-info">
+					<h2>Get Your Free {service.name} Estimate in {county.name} County</h2>
+					<p>
+						Ready to transform your {county.name} County property with professional {service.name.toLowerCase()}? 
+						Contact us today for a free, no-obligation estimate.
+					</p>
+					
+					<div class="contact-details">
+						<div class="contact-item">
+							<strong>📞 Phone:</strong>
+							<a href="tel:+15132965525">(513) 296-5525</a>
+						</div>
+						<div class="contact-item">
+							<strong>📧 Email:</strong>
+							<span>john@queencitysurfacecoatings.com</span>
+						</div>
+						<div class="contact-item">
+							<strong>🚚 Service Area:</strong>
+							<span>All of {county.name} County, {county.stateAbbr}</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-container">
+					<QuoteRequestForm />
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Final CTA -->
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Ready for {service.name} in {county.name} County?</h2>
+		<p>
+			Contact Queen City Surface Coatings today for expert {service.name.toLowerCase()} services 
+			throughout {county.name} County, {county.state}. Military precision meets lifetime quality.
+		</p>
+		<div class="cta-buttons">
+			<a href="/company/contact/" class="btn btn-primary">Schedule Free Consultation</a>
+			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+		</div>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	/* Page Header */
+	.page-header {
+		text-align: center;
+		padding: 2rem 0 3rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.breadcrumb {
+		margin-bottom: 1.5rem;
+	}
+
+	.breadcrumb ol {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.breadcrumb li:not(:last-child)::after {
+		content: ">";
+		margin-left: 0.5rem;
+		opacity: 0.6;
+	}
+
+	.breadcrumb a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		color: var(--theme-on-bg);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--theme-on-bg);
+		opacity: 0.8;
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	/* Service Overview */
+	.service-overview {
+		margin: 4rem 0;
+	}
+
+	.overview-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.overview-text h2 {
+		color: var(--theme-primary);
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.overview-text p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-benefits h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.benefits-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.benefits-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		position: relative;
+		padding-left: 1.5rem;
+	}
+
+	.benefits-list li::before {
+		content: '✓';
+		position: absolute;
+		left: 0;
+		color: var(--theme-primary);
+		font-weight: bold;
+	}
+
+	/* County Coverage */
+	.county-coverage {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.county-coverage h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.county-coverage p {
+		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+		opacity: 0.8;
+	}
+
+	.cities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+		margin: 3rem 0;
+	}
+
+	.city-link-card {
+		background: var(--theme-bg);
+		padding: 1.5rem;
+		border-radius: 0.5rem;
+		border-left: 4px solid var(--theme-primary);
+	}
+
+	.city-link-card h3 {
+		margin-bottom: 0.5rem;
+	}
+
+	.city-link-card h3 a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-size: 1.1rem;
+	}
+
+	.city-link-card h3 a:hover {
+		text-decoration: underline;
+	}
+
+	.city-link-card p {
+		font-size: 0.9rem;
+		opacity: 0.8;
+		margin: 0;
+	}
+
+	.county-details {
+		display: grid;
+		gap: 1rem;
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.detail-item {
+		font-size: 0.95rem;
+	}
+
+	.detail-item strong {
+		color: var(--theme-primary);
+	}
+
+	/* Process Section */
+	.process-section {
+		margin: 4rem 0;
+	}
+
+	.process-section h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.process-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.process-step {
+		text-align: center;
+		padding: 2rem;
+		background: var(--theme-surface-1);
+		border-radius: 0.75rem;
+	}
+
+	.step-number {
+		width: 60px;
+		height: 60px;
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0 auto 1rem auto;
+	}
+
+	.process-step h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	/* Applications */
+	.applications-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.applications-section h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.applications-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.application-card {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		text-align: center;
+	}
+
+	.application-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+	}
+
+	/* Related Services & Counties */
+	.related-services, .related-counties {
+		margin: 4rem 0;
+	}
+
+	.related-services h2, .related-counties h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.related-services p, .related-counties p {
+		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+		opacity: 0.8;
+	}
+
+	.services-grid, .counties-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card, .county-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.service-card h3, .county-card h3 {
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 a, .county-card h3 a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-size: 1.1rem;
+	}
+
+	.service-card h3 a:hover, .county-card h3 a:hover {
+		text-decoration: underline;
+	}
+
+	.service-link {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+		margin-top: 1rem;
+		display: inline-block;
+	}
+
+	.service-link:hover {
+		text-decoration: underline;
+	}
+
+	/* Contact Form */
+	.contact-form-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.contact-info h2 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+
+	.contact-info p {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.contact-details {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.contact-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.contact-item strong {
+		color: var(--theme-primary);
+		font-weight: 600;
+	}
+
+	.contact-item a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	/* CTA Buttons */
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid transparent;
+		min-height: 44px;
+	}
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		
+		.overview-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		
+		.cities-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.process-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.applications-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.services-grid, .counties-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>

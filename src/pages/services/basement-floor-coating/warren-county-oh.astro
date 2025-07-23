@@ -1,0 +1,23 @@
+---
+import CountyServiceTemplate from '../../../templates/CountyServiceTemplate.astro';
+import { counties, services } from '../../../data/locations';
+
+const county = counties['warren-county-ohio'];
+const service = services['basement-floor-coating'];
+
+const relatedCounties = [
+	counties['hamilton-county-ohio'],
+	counties['butler-county-ohio'],
+	counties['kenton-county-kentucky'],
+	counties['campbell-county-kentucky']
+];
+
+const relatedServices = [
+	services['garage-floor-epoxy'],
+	services['metallic-epoxy-flooring'],
+	services['polyaspartic-coating'],
+	services['commercial-concrete-coating']
+];
+---
+
+<CountyServiceTemplate {county} {service} {relatedCounties} {relatedServices} />

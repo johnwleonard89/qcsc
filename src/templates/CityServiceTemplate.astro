@@ -1,0 +1,1261 @@
+---
+import { Container, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
+import type { City, Service, County } from '../data/locations';
+
+export interface Props {
+	city: City;
+	service: Service;
+	county: County;
+	relatedCities: City[];
+	relatedServices: Service[];
+	nearbyCounties: County[];
+}
+
+const { city, service, county, relatedCities, relatedServices, nearbyCounties } = Astro.props;
+
+// Geographic coordinates for major cities
+const cityCoords = {
+	'Cincinnati': { lat: '39.1031', lng: '-84.5120' },
+	'Covington': { lat: '39.0837', lng: '-84.5085' },
+	'Florence': { lat: '38.9989', lng: '-84.6266' },
+	'Independence': { lat: '38.9431', lng: '-84.5444' },
+	'Newport': { lat: '39.0914', lng: '-84.4916' },
+	'Mason': { lat: '39.3598', lng: '-84.3099' },
+	'Loveland': { lat: '39.2687', lng: '-84.2638' },
+	'West Chester': { lat: '39.3298', lng: '-84.3983' },
+	'Hamilton': { lat: '39.3995', lng: '-84.5614' },
+	'Fairfield': { lat: '39.3456', lng: '-84.5203' },
+	'Middletown': { lat: '39.5151', lng: '-84.3983' },
+	'Springdale': { lat: '39.2870', lng: '-84.4855' },
+	'Sharonville': { lat: '39.2681', lng: '-84.4133' },
+	'Blue Ash': { lat: '39.2323', lng: '-84.3783' },
+	'Montgomery': { lat: '39.2323', lng: '-84.3549' }
+};
+
+const coords = cityCoords[city.name] || { lat: '39.1756', lng: '-84.2930' };
+
+const seo = {
+	title: `${service.name} ${city.name} ${city.stateAbbr} | Queen City Surface Coatings`,
+	description: `Professional ${service.name.toLowerCase()} in ${city.name}, ${city.stateAbbr}. Expert concrete coating near ${city.landmarks?.slice(0, 2).join(' and ') || city.neighborhoods?.slice(0, 2).join(' and ')}. Licensed, bonded, insured. Free estimates.`,
+	keywords: `${service.name.toLowerCase()} ${city.name}, concrete coating ${city.name} ${city.stateAbbr}, ${service.slug} ${city.name}, ${city.county} county concrete services, ${city.name} flooring contractors`,
+	type: 'service',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Services', url: 'https://queencitysurfacecoatings.com/services/' },
+		{ name: service.name, url: `https://queencitysurfacecoatings.com/services/${service.slug}/` },
+		{ name: `${city.name}, ${city.stateAbbr}`, url: `https://queencitysurfacecoatings.com/services/${service.slug}/${city.name.toLowerCase().replace(/\s+/g, '-')}-${city.stateAbbr.toLowerCase()}/` }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "Service",
+		"name": `${service.name} Services in ${city.name}, ${city.stateAbbr}`,
+		"description": `Professional ${service.name.toLowerCase()} and concrete coating services in ${city.name}, ${city.stateAbbr}`,
+		"provider": {
+			"@type": "LocalBusiness",
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Milford",
+				"addressRegion": "OH",
+				"postalCode": "45150",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525",
+			"url": "https://queencitysurfacecoatings.com",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "39.1756",
+				"longitude": "-84.2930"
+			}
+		},
+		"areaServed": {
+			"@type": "City",
+			"name": city.name,
+			"addressRegion": city.stateAbbr,
+			"addressCountry": "US",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": coords.lat,
+				"longitude": coords.lng
+			}
+		},
+		"serviceType": service.name,
+		"offers": {
+			"@type": "Offer",
+			"name": `${service.name} in ${city.name}`,
+			"description": `Professional ${service.name.toLowerCase()} services in ${city.name}, ${city.stateAbbr}`,
+			"priceCurrency": "USD",
+			"availability": "https://schema.org/InStock",
+			"validThrough": "2025-12-31",
+			"seller": {
+				"@type": "LocalBusiness",
+				"name": "Queen City Surface Coatings LLC"
+			}
+		},
+		"aggregateRating": {
+			"@type": "AggregateRating",
+			"ratingValue": "5.0",
+			"reviewCount": "3",
+			"bestRating": "5",
+			"worstRating": "5"
+		}
+	}
+};
+
+// FAQ Schema for city-specific questions
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": `Do you provide ${service.name.toLowerCase()} services throughout ${city.name}?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Yes, we provide professional ${service.name.toLowerCase()} services throughout all of ${city.name}, ${city.stateAbbr}, including ${city.neighborhoods?.slice(0, 3).join(', ') || 'all neighborhoods'} and surrounding areas. We're familiar with local building requirements and conditions specific to ${city.name}.`
+			}
+		},
+		{
+			"@type": "Question",
+			"name": `What makes your ${service.name.toLowerCase()} suitable for ${city.name} weather?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Our ${service.name.toLowerCase()} systems are specifically chosen to withstand ${city.state}'s variable climate, including freeze-thaw cycles, humidity, and temperature fluctuations common in the ${city.name} area. All systems are UV-stable and weather-resistant.`
+			}
+		},
+		{
+			"@type": "Question",
+			"name": `How long does ${service.name.toLowerCase()} take to install in ${city.name}?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Installation timelines vary by project size. Most residential ${service.name.toLowerCase()} projects in ${city.name} are completed in 1-3 days, while commercial installations may take longer. We work efficiently to minimize disruption to your ${city.name} property.`
+			}
+		},
+		{
+			"@type": "Question",
+			"name": `Do you offer free estimates for ${service.name.toLowerCase()} in ${city.name}?`,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": `Absolutely! We provide free, no-obligation estimates for all ${service.name.toLowerCase()} projects throughout ${city.name} and ${city.county} County. Contact us to schedule your consultation.`
+			}
+		}
+	]
+};
+
+// Breadcrumb Schema
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": seo.breadcrumbs.map((breadcrumb, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": breadcrumb.name,
+		"item": breadcrumb.url
+	}))
+};
+
+// Sample local projects for the city
+const localProjects = [
+	{
+		title: `${city.name} Residential Garage Project`,
+		description: `Transformed a 2-car garage in ${city.name} with durable ${service.name.toLowerCase()}, featuring decorative elements that complement the neighborhood aesthetic.`,
+		service: service.name,
+		location: `${city.name}, ${city.stateAbbr}`
+	},
+	{
+		title: `${city.name} Commercial Space`,
+		description: `Professional ${service.name.toLowerCase()} installation for a ${city.name} business, designed for high traffic and durability requirements.`,
+		service: service.name,
+		location: `${city.name}, ${city.stateAbbr}`
+	}
+];
+
+// Sample testimonials for the city
+const localTestimonials = [
+	{
+		name: "Sarah Johnson",
+		location: `${city.name}, ${city.stateAbbr}`,
+		quote: `Outstanding ${service.name.toLowerCase()} work in our ${city.name} home. The team was professional, punctual, and the results exceeded our expectations. Highly recommend for any ${city.name} resident.`,
+		service: service.name
+	},
+	{
+		name: "Mike Rodriguez",
+		location: `${city.name}, ${city.stateAbbr}`,
+		quote: `Queen City Surface Coatings transformed our ${city.name} property beautifully. Their attention to detail and quality craftsmanship is evident in every square foot.`,
+		service: service.name
+	}
+];
+---
+
+<Layout {seo}>
+	<!-- Additional Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+	<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+	<!-- Page Header -->
+	<Container>
+		<section class="page-header">
+			<nav class="breadcrumb" aria-label="Breadcrumb">
+				<ol>
+					<li><a href="/">Home</a></li>
+					<li><a href="/services/">Services</a></li>
+					<li><a href={`/services/${service.slug}/`}>{service.name}</a></li>
+					<li aria-current="page">{city.name}, {city.stateAbbr}</li>
+				</ol>
+			</nav>
+			<h1>{service.name} {city.name}, {city.stateAbbr}</h1>
+			<p class="page-subtitle">
+				Expert {service.name.toLowerCase()} services in {city.name}, {city.stateAbbr}. 
+				Serving {city.county} County with military precision and lifetime quality.
+			</p>
+		</section>
+	</Container>
+
+	<!-- Local Introduction -->
+	<Container>
+		<section class="local-intro">
+			<div class="intro-content">
+				<div class="intro-text">
+					<h2>Professional {service.name} in {city.name}</h2>
+					<p>{service.description}</p>
+					<p>
+						Queen City Surface Coatings proudly serves {city.name} with comprehensive {service.name.toLowerCase()} solutions. 
+						Our veteran-owned company brings military precision to every {city.name} project, understanding the unique needs of {city.county} County properties.
+					</p>
+					
+					{city.landmarks && (
+						<div class="local-landmarks">
+							<h3>Proudly Serving Areas Near:</h3>
+							<ul class="landmarks-list">
+								{city.landmarks.map((landmark) => (
+									<li>{landmark}</li>
+								))}
+							</ul>
+						</div>
+					)}
+
+					{city.neighborhoods && (
+						<div class="local-neighborhoods">
+							<h3>{city.name} Neighborhoods We Serve:</h3>
+							<ul class="neighborhoods-list">
+								{city.neighborhoods.map((neighborhood) => (
+									<li>{neighborhood}</li>
+								))}
+							</ul>
+						</div>
+					)}
+					
+					<div class="service-coverage">
+						<div class="coverage-item">
+							<strong>Population Served:</strong> {city.population}
+						</div>
+						<div class="coverage-item">
+							<strong>County:</strong> {city.county} County, {city.state}
+						</div>
+						{city.zipCodes && (
+							<div class="coverage-item">
+								<strong>ZIP Codes:</strong> {city.zipCodes.slice(0, 8).join(', ')}{city.zipCodes.length > 8 ? '...' : ''}
+							</div>
+						)}
+					</div>
+				</div>
+				
+				<div class="intro-image">
+					<img 
+						src={`/assets/images/services/${service.slug}-${city.name.toLowerCase().replace(/\s+/g, '-')}.webp`} 
+						alt={`Professional ${service.name.toLowerCase()} in ${city.name}, ${city.stateAbbr}`}
+						loading="eager"
+						width="500"
+						height="400"
+						style="object-fit: cover; border-radius: 0.5rem;"
+						onerror="this.src='/assets/images/services/${service.slug}-hero.webp'"
+					/>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Service Benefits -->
+	<Container>
+		<section class="service-benefits">
+			<h2>Why Choose {service.name} in {city.name}?</h2>
+			<div class="benefits-grid">
+				{service.benefits.map((benefit) => (
+					<div class="benefit-card">
+						<div class="benefit-icon">✓</div>
+						<h3>{benefit}</h3>
+						<p>Professional {benefit.toLowerCase()} specifically designed for {city.name} properties and {city.state} climate conditions.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Local Projects -->
+	<Container>
+		<section class="local-projects">
+			<h2>Recent {service.name} Projects in {city.name}</h2>
+			<p>See how we've transformed properties throughout {city.name} with our expert {service.name.toLowerCase()} services.</p>
+			
+			<div class="projects-grid">
+				{localProjects.map((project) => (
+					<div class="project-card">
+						<div class="project-header">
+							<h3>{project.title}</h3>
+							<span class="project-service">{project.service}</span>
+						</div>
+						<p>{project.description}</p>
+						<div class="project-location">
+							📍 {project.location}
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Steps -->
+	<Container>
+		<section class="process-section">
+			<h2>Our {service.name} Process in {city.name}</h2>
+			<div class="process-grid">
+				{service.process.map((step, index) => (
+					<div class="process-step">
+						<div class="step-number">{index + 1}</div>
+						<h3>{step}</h3>
+						<p>Professional {step.toLowerCase()} techniques perfected through years of experience in {city.name} and {city.county} County.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Applications -->
+	<Container>
+		<section class="applications-section">
+			<h2>{service.name} Applications in {city.name}</h2>
+			<div class="applications-grid">
+				{service.applications.map((application) => (
+					<div class="application-card">
+						<div class="application-icon">
+							{application.includes('Residential') && '🏠'}
+							{application.includes('Commercial') && '🏢'}
+							{application.includes('Industrial') && '🏭'}
+							{application.includes('Garage') && '🚗'}
+							{application.includes('Warehouse') && '📦'}
+							{!application.includes('Residential') && !application.includes('Commercial') && !application.includes('Industrial') && !application.includes('Garage') && !application.includes('Warehouse') && '⚙️'}
+						</div>
+						<h3>{application}</h3>
+						<p>Specialized {service.name.toLowerCase()} solutions for {application.toLowerCase()} throughout {city.name}, {city.stateAbbr}.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Why Choose Us -->
+	<Container>
+		<section class="why-choose-us">
+			<h2>Why Choose Queen City Surface Coatings for {city.name}?</h2>
+			
+			<div class="benefits-grid">
+				<div class="benefit-item">
+					<div class="benefit-icon">🇺🇸</div>
+					<h3>Veteran-Owned & Local</h3>
+					<p>Military precision and community commitment in {city.name} and throughout {city.county} County.</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">🚚</div>
+					<h3>Free Travel to {city.name}</h3>
+					<p>No additional travel charges for service calls to {city.name} and surrounding areas.</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">⭐</div>
+					<h3>Local {city.name} Reputation</h3>
+					<p>Trusted by {city.name} homeowners and businesses for quality {service.name.toLowerCase()} services.</p>
+				</div>
+				<div class="benefit-item">
+					<div class="benefit-icon">📞</div>
+					<h3>Same-Day Response</h3>
+					<p>Quick response times for all {city.name} area service requests and emergencies.</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Testimonials -->
+	<Container>
+		<section class="local-testimonials">
+			<h2>What {city.name} Customers Say</h2>
+			
+			<div class="testimonials-grid">
+				{localTestimonials.map((testimonial) => (
+					<div class="testimonial-card">
+						<div class="testimonial-content">
+							<div class="testimonial-stars">★★★★★</div>
+							<blockquote>"{testimonial.quote}"</blockquote>
+							<div class="testimonial-author">
+								<strong>{testimonial.name}</strong>
+								<span>{testimonial.location}</span>
+								<span class="testimonial-service">{testimonial.service}</span>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Related Services -->
+	<Container>
+		<section class="related-services">
+			<h2>Additional Services in {city.name}</h2>
+			<p>Explore our complete range of concrete coating services available in {city.name}:</p>
+			
+			<div class="services-grid">
+				{relatedServices.map((relatedService) => (
+					<div class="service-card">
+						<h3>
+							<a href={`/services/${relatedService.slug}/${city.name.toLowerCase().replace(/\s+/g, '-')}-${city.stateAbbr.toLowerCase()}/`}>
+								{relatedService.name} {city.name}
+							</a>
+						</h3>
+						<p>{relatedService.description}</p>
+						<a href={`/services/${relatedService.slug}/${city.name.toLowerCase().replace(/\s+/g, '-')}-${city.stateAbbr.toLowerCase()}/`} class="service-link">
+							Learn More →
+						</a>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Related Cities -->
+	<Container>
+		<section class="related-cities">
+			<h2>{service.name} in Nearby Cities</h2>
+			<p>We also provide {service.name.toLowerCase()} services in nearby {city.county} County cities:</p>
+			
+			<div class="cities-grid">
+				{relatedCities.map((relatedCity) => (
+					<div class="city-card">
+						<h3>
+							<a href={`/services/${service.slug}/${relatedCity.name.toLowerCase().replace(/\s+/g, '-')}-${relatedCity.stateAbbr.toLowerCase()}/`}>
+								{service.name} {relatedCity.name}, {relatedCity.stateAbbr}
+							</a>
+						</h3>
+						<p>Professional {service.name.toLowerCase()} services in {relatedCity.name}, serving {relatedCity.population} residents.</p>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- County Link -->
+	<Container>
+		<section class="county-link-section">
+			<div class="county-link-card">
+				<h2>
+					<a href={`/services/${service.slug}/${county.name.toLowerCase()}-county-${county.stateAbbr.toLowerCase()}/`}>
+						{service.name} Throughout {county.name} County
+					</a>
+				</h2>
+				<p>
+					Discover comprehensive {service.name.toLowerCase()} services throughout all of {county.name} County, {county.state}. 
+					We serve all {county.cities.length} municipalities with the same level of expertise and quality.
+				</p>
+				<a href={`/services/${service.slug}/${county.name.toLowerCase()}-county-${county.stateAbbr.toLowerCase()}/`} class="btn btn-outline">
+					View {county.name} County Services
+				</a>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Contact Form -->
+	<Container>
+		<section class="contact-form-section">
+			<div class="contact-grid">
+				<div class="contact-info">
+					<h2>Get Your Free {service.name} Estimate in {city.name}</h2>
+					<p>
+						Ready to transform your {city.name} property with professional {service.name.toLowerCase()}? 
+						Contact us today for a free, no-obligation estimate.
+					</p>
+					
+					<div class="contact-details">
+						<div class="contact-item">
+							<strong>📞 Phone:</strong>
+							<a href="tel:+15132965525">(513) 296-5525</a>
+						</div>
+						<div class="contact-item">
+							<strong>📧 Email:</strong>
+							<span>john@queencitysurfacecoatings.com</span>
+						</div>
+						<div class="contact-item">
+							<strong>🕒 Response Time:</strong>
+							<span>Same day for {city.name} area</span>
+						</div>
+						<div class="contact-item">
+							<strong>🚚 Service Area:</strong>
+							<span>All of {city.name} & {city.county} County</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-container">
+					<QuoteRequestForm />
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- FAQ Section -->
+	<Container>
+		<section class="faq-section">
+			<h2>Frequently Asked Questions - {service.name} {city.name}</h2>
+			
+			<div class="faq-list">
+				{faqSchema.mainEntity.map((faq, index) => (
+					<div class="faq-item">
+						<button class="faq-question" data-faq={index}>
+							<span>{faq.name}</span>
+							<span class="faq-icon">+</span>
+						</button>
+						<div class="faq-answer" data-faq-answer={index}>
+							<p>{faq.acceptedAnswer.text}</p>
+						</div>
+					</div>
+				))}
+			</div>
+		</section>
+	</Container>
+
+	<!-- Final CTA -->
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Ready for {service.name} in {city.name}?</h2>
+		<p>
+			Contact Queen City Surface Coatings today for expert {service.name.toLowerCase()} services 
+			in {city.name}, {city.stateAbbr}. We bring military precision to every project.
+		</p>
+		<div class="cta-buttons">
+			<a href="/company/contact/" class="btn btn-primary">Schedule Free Consultation</a>
+			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+		</div>
+	</CtaCardSection>
+</Layout>
+
+<style>
+	/* Page Header */
+	.page-header {
+		text-align: center;
+		padding: 2rem 0 3rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 3rem;
+	}
+
+	.breadcrumb {
+		margin-bottom: 1.5rem;
+	}
+
+	.breadcrumb ol {
+		display: flex;
+		justify-content: center;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0.9rem;
+	}
+
+	.breadcrumb li:not(:last-child)::after {
+		content: ">";
+		margin-left: 0.5rem;
+		opacity: 0.6;
+	}
+
+	.breadcrumb a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.page-header h1 {
+		font-size: 3rem;
+		color: var(--theme-on-bg);
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.25rem;
+		color: var(--theme-on-bg);
+		opacity: 0.8;
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.5;
+	}
+
+	/* Local Introduction */
+	.local-intro {
+		margin: 4rem 0;
+	}
+
+	.intro-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+
+	.intro-text h2 {
+		color: var(--theme-primary);
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.intro-text p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.local-landmarks, .local-neighborhoods {
+		margin-bottom: 2rem;
+	}
+
+	.local-landmarks h3, .local-neighborhoods h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.landmarks-list, .neighborhoods-list {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 0.5rem;
+	}
+
+	.landmarks-list li, .neighborhoods-list li {
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		font-weight: 500;
+		font-size: 0.95rem;
+	}
+
+	.service-coverage {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.coverage-item {
+		font-size: 0.95rem;
+	}
+
+	.coverage-item strong {
+		color: var(--theme-primary);
+	}
+
+	/* Service Benefits */
+	.service-benefits {
+		margin: 4rem 0;
+	}
+
+	.service-benefits h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.benefit-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		text-align: center;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease;
+	}
+
+	.benefit-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.benefit-icon {
+		font-size: 2rem;
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-weight: bold;
+	}
+
+	.benefit-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+		font-size: 1.25rem;
+	}
+
+	.benefit-card p {
+		margin: 0;
+		line-height: 1.5;
+		font-size: 0.95rem;
+	}
+
+	/* Projects Grid */
+	.local-projects {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.local-projects h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.local-projects p {
+		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+		opacity: 0.8;
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.project-card {
+		background: var(--theme-bg);
+		padding: 1.5rem;
+		border-radius: 0.75rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.project-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 1rem;
+	}
+
+	.project-header h3 {
+		color: var(--theme-primary);
+		font-size: 1.25rem;
+		margin: 0;
+	}
+
+	.project-service {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 0.25rem 0.75rem;
+		border-radius: 1rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+
+	.project-location {
+		font-size: 0.9rem;
+		color: var(--theme-primary);
+		font-weight: 500;
+		margin-top: 1rem;
+	}
+
+	/* Process Steps */
+	.process-section {
+		margin: 4rem 0;
+	}
+
+	.process-section h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.process-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.process-step {
+		text-align: center;
+		padding: 2rem;
+		background: var(--theme-surface-1);
+		border-radius: 0.75rem;
+	}
+
+	.step-number {
+		width: 60px;
+		height: 60px;
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0 auto 1rem auto;
+	}
+
+	.process-step h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+	}
+
+	/* Applications */
+	.applications-section {
+		margin: 4rem 0;
+	}
+
+	.applications-section h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.applications-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+	}
+
+	.application-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		text-align: center;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.application-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.application-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+	}
+
+	/* Why Choose Us */
+	.why-choose-us {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.why-choose-us h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.benefit-item {
+		text-align: center;
+		padding: 1.5rem;
+	}
+
+	.benefit-item .benefit-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.benefit-item h3 {
+		color: var(--theme-primary);
+		margin-bottom: 0.75rem;
+		font-size: 1.25rem;
+	}
+
+	/* Testimonials */
+	.local-testimonials {
+		margin: 4rem 0;
+	}
+
+	.local-testimonials h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.testimonial-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.testimonial-stars {
+		color: var(--theme-primary);
+		font-size: 1.25rem;
+		margin-bottom: 1rem;
+	}
+
+	.testimonial-card blockquote {
+		font-style: italic;
+		margin-bottom: 1.5rem;
+		line-height: 1.6;
+	}
+
+	.testimonial-author strong {
+		color: var(--theme-primary);
+		display: block;
+		margin-bottom: 0.25rem;
+	}
+
+	.testimonial-author span {
+		display: block;
+		font-size: 0.9rem;
+		opacity: 0.8;
+	}
+
+	.testimonial-service {
+		color: var(--theme-primary) !important;
+		font-weight: 600 !important;
+		opacity: 1 !important;
+	}
+
+	/* Related Services & Cities */
+	.related-services, .related-cities {
+		margin: 4rem 0;
+	}
+
+	.related-services h2, .related-cities h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.related-services p, .related-cities p {
+		text-align: center;
+		font-size: 1.1rem;
+		margin-bottom: 3rem;
+		opacity: 0.8;
+	}
+
+	.services-grid, .cities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card, .city-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: 0.75rem;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.service-card h3, .city-card h3 {
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 a, .city-card h3 a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-size: 1.1rem;
+	}
+
+	.service-card h3 a:hover, .city-card h3 a:hover {
+		text-decoration: underline;
+	}
+
+	.service-link {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+		margin-top: 1rem;
+		display: inline-block;
+	}
+
+	.service-link:hover {
+		text-decoration: underline;
+	}
+
+	/* County Link Section */
+	.county-link-section {
+		margin: 4rem 0;
+	}
+
+	.county-link-card {
+		background: var(--theme-surface-1);
+		padding: 3rem;
+		border-radius: 1rem;
+		text-align: center;
+		border: 2px solid var(--theme-primary);
+	}
+
+	.county-link-card h2 {
+		margin-bottom: 1rem;
+	}
+
+	.county-link-card h2 a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-size: 2rem;
+	}
+
+	.county-link-card h2 a:hover {
+		text-decoration: underline;
+	}
+
+	.county-link-card p {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	/* Contact Form Section */
+	.contact-form-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		border-radius: 1rem;
+		margin: 4rem 0;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.contact-info h2 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+
+	.contact-info p {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.contact-details {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.contact-item {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.contact-item strong {
+		color: var(--theme-primary);
+		font-weight: 600;
+	}
+
+	.contact-item a {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	/* FAQ Section */
+	.faq-section {
+		margin: 4rem 0;
+	}
+
+	.faq-section h2 {
+		text-align: center;
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.faq-list {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.faq-question {
+		width: 100%;
+		background: none;
+		border: none;
+		padding: 1.5rem 0;
+		text-align: left;
+		font-size: 1.1rem;
+		font-weight: 600;
+		color: var(--theme-primary);
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.faq-question:hover {
+		opacity: 0.8;
+	}
+
+	.faq-icon {
+		font-size: 1.5rem;
+		transition: transform 0.3s ease;
+	}
+
+	.faq-question.active .faq-icon {
+		transform: rotate(45deg);
+	}
+
+	.faq-answer {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease;
+	}
+
+	.faq-answer.active {
+		max-height: 200px;
+		padding-bottom: 1.5rem;
+	}
+
+	.faq-answer p {
+		line-height: 1.6;
+		opacity: 0.8;
+	}
+
+	/* CTA Buttons */
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	.btn {
+		padding: 1rem 2rem;
+		border-radius: var(--theme-button-border-radius);
+		text-decoration: none;
+		font-weight: 600;
+		transition: all var(--theme-transition);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid transparent;
+		min-height: 44px;
+	}
+
+	.btn-primary {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-primary:hover {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	.btn-outline {
+		background: transparent;
+		color: var(--theme-primary);
+		border-color: var(--theme-primary);
+	}
+
+	.btn-outline:hover {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		
+		.intro-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.process-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.applications-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.services-grid, .cities-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.testimonials-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
+
+<script>
+	// FAQ functionality
+	document.addEventListener('DOMContentLoaded', function() {
+		const faqQuestions = document.querySelectorAll('.faq-question');
+		
+		faqQuestions.forEach(question => {
+			question.addEventListener('click', () => {
+				const faqIndex = question.dataset.faq;
+				const answer = document.querySelector(`[data-faq-answer="${faqIndex}"]`);
+				const isActive = question.classList.contains('active');
+				
+				// Close all other FAQs
+				faqQuestions.forEach(q => {
+					q.classList.remove('active');
+					const a = document.querySelector(`[data-faq-answer="${q.dataset.faq}"]`);
+					a.classList.remove('active');
+				});
+				
+				// Toggle current FAQ
+				if (!isActive) {
+					question.classList.add('active');
+					answer.classList.add('active');
+				}
+			});
+		});
+	});
+</script>

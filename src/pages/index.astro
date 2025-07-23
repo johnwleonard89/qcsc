@@ -116,25 +116,26 @@ const seo = {
 
 <Layout seo={seo}>
 	<!-- Hero Section -->
-	<section class="hero-section">
+	<section class="hero bg-gradient-primary text-white py-20 relative overflow-hidden">
 		<Container>
-			<div class="hero-content">
-				<div class="hero-text">
-					<h1 class="hero-headline">Military Precision, Lifetime Quality</h1>
-					<p class="hero-tagline">Military Precision. Lifetime Quality.</p>
-					<p class="hero-subheadline">
+			<div class="grid lg:grid-cols-2 gap-16 items-center min-h-screen">
+				<div class="text-center lg:text-left relative z-10">
+					<h1 class="text-5xl lg:text-6xl font-bold mb-4 leading-tight text-accent">Military Precision, Lifetime Quality</h1>
+					<p class="text-xl font-medium text-accent mb-6 uppercase tracking-wide opacity-95">Military Precision. Lifetime Quality.</p>
+					<p class="text-xl mb-10 opacity-95 leading-relaxed text-white">
 						Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision
 					</p>
-					<div class="hero-ctas">
-						<a href="/company/contact" class="btn btn-primary btn-large">Get Your Free Estimate</a>
-						<a href="/portfolio" class="btn btn-outline btn-large">View Our Work</a>
+					<div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+						<a href="/company/contact" class="btn btn-accent btn-lg">Get Your Free Estimate</a>
+						<a href="/portfolio" class="btn btn-outline-inverse btn-lg">View Our Work</a>
 					</div>
 				</div>
-				<div class="hero-image">
+				<div class="relative">
 					<img 
 						src="/assets/images/gallery/IMG_2678.webp" 
 						alt="Professional epoxy flooring installation by Queen City Surface Coatings"
 						loading="eager"
+						class="w-full h-96 lg:h-128 object-cover rounded-lg shadow-xl"
 					/>
 				</div>
 			</div>
@@ -143,27 +144,27 @@ const seo = {
 
 	<!-- Value Propositions -->
 	<Container>
-		<section class="value-props-section">
-			<div class="value-props-grid">
-				<div class="value-prop">
-					<div class="prop-icon">🇺🇸</div>
-					<h3>Veteran-Owned Trust</h3>
-					<p>Military precision and integrity in every project we undertake</p>
+		<section class="py-16">
+			<div class="grid grid-auto-fit-sm gap-8">
+				<div class="card p-10 text-center hover:-translate-y-1 transition border border-neutral-200">
+					<div class="text-5xl mb-6">🇺🇸</div>
+					<h3 class="text-xl font-semibold text-primary mb-4">Veteran-Owned Trust</h3>
+					<p class="text-secondary leading-relaxed">Military precision and integrity in every project we undertake</p>
 				</div>
-				<div class="value-prop">
-					<div class="prop-icon">🛡️</div>
-					<h3>Licensed, Bonded, Insured</h3>
-					<p>Complete protection and peace of mind for every customer</p>
+				<div class="card p-10 text-center hover:-translate-y-1 transition border border-neutral-200">
+					<div class="text-5xl mb-6">🛡️</div>
+					<h3 class="text-xl font-semibold text-primary mb-4">Licensed, Bonded, Insured</h3>
+					<p class="text-secondary leading-relaxed">Complete protection and peace of mind for every customer</p>
 				</div>
-				<div class="value-prop">
-					<div class="prop-icon">⭐</div>
-					<h3>Premium Coating Systems</h3>
-					<p>Only the highest quality materials and proven application methods</p>
+				<div class="card p-10 text-center hover:-translate-y-1 transition border border-neutral-200">
+					<div class="text-5xl mb-6">⭐</div>
+					<h3 class="text-xl font-semibold text-primary mb-4">Premium Coating Systems</h3>
+					<p class="text-secondary leading-relaxed">Only the highest quality materials and proven application methods</p>
 				</div>
-				<div class="value-prop">
-					<div class="prop-icon">📍</div>
-					<h3>50-Mile Service Area</h3>
-					<p>Comprehensive coverage throughout the Cincinnati tri-state region</p>
+				<div class="card p-10 text-center hover:-translate-y-1 transition border border-neutral-200">
+					<div class="text-5xl mb-6">📍</div>
+					<h3 class="text-xl font-semibold text-primary mb-4">50-Mile Service Area</h3>
+					<p class="text-secondary leading-relaxed">Comprehensive coverage throughout the Cincinnati tri-state region</p>
 				</div>
 			</div>
 		</section>
@@ -171,78 +172,78 @@ const seo = {
 
 	<!-- Services Overview -->
 	<Container>
-		<section class="services-overview">
-			<div class="services-header">
-				<h2>Our Professional Services</h2>
-				<p>Premium surface coating solutions designed to exceed your expectations and stand the test of time</p>
+		<section class="py-16">
+			<div class="text-center mb-16">
+				<h2 class="text-4xl font-bold text-primary mb-6">Our Professional Services</h2>
+				<p class="text-lg text-secondary leading-relaxed max-w-2xl mx-auto">Premium surface coating solutions designed to exceed your expectations and stand the test of time</p>
 			</div>
 			
-			<div class="services-grid">
-				<div class="service-card">
-					<div class="service-image">
-						<img src="/assets/images/services/epoxy-flooring.webp" alt="Professional epoxy garage floor coating with decorative flakes in Cincinnati home" loading="lazy" />
+			<div class="grid grid-auto-fit-md gap-8">
+				<div class="card hover:-translate-y-2 transition">
+					<div class="h-56 overflow-hidden">
+						<img src="/assets/images/services/epoxy-flooring.webp" alt="Professional epoxy garage floor coating with decorative flakes in Cincinnati home" loading="lazy" class="w-full h-full object-cover" />
 					</div>
-					<div class="service-content">
-						<h3>Epoxy Flooring Systems</h3>
-						<p>Durable, chemical-resistant coatings perfect for garages, basements, and light commercial applications. Available in solid colors with decorative flake options.</p>
-						<ul class="service-features">
-							<li>15-20 year lifespan</li>
-							<li>Chemical & stain resistant</li>
-							<li>Easy maintenance</li>
-							<li>Custom color options</li>
+					<div class="p-8 flex flex-col h-full">
+						<h3 class="text-2xl font-semibold text-primary mb-4">Epoxy Flooring Systems</h3>
+						<p class="text-secondary leading-relaxed mb-6 flex-grow">Durable, chemical-resistant coatings perfect for garages, basements, and light commercial applications. Available in solid colors with decorative flake options.</p>
+						<ul class="space-y-2 mb-6 text-sm">
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>15-20 year lifespan</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Chemical & stain resistant</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Easy maintenance</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Custom color options</li>
 						</ul>
-						<a href="/services/epoxy-flooring" class="service-link">Learn More →</a>
+						<a href="/services/epoxy-flooring" class="text-primary font-semibold hover:underline">Learn More →</a>
 					</div>
 				</div>
 
-				<div class="service-card">
-					<div class="service-image">
-						<img src="/assets/images/services/concrete-polishing.webp" alt="Fast-curing polyaspartic concrete coating with UV-resistant finish" loading="lazy" />
+				<div class="card hover:-translate-y-2 transition">
+					<div class="h-56 overflow-hidden">
+						<img src="/assets/images/services/concrete-polishing.webp" alt="Fast-curing polyaspartic concrete coating with UV-resistant finish" loading="lazy" class="w-full h-full object-cover" />
 					</div>
-					<div class="service-content">
-						<h3>Polyaspartic Coatings</h3>
-						<p>Fast-curing, UV-resistant systems ideal for high-traffic areas and commercial spaces. Superior durability with faster installation times.</p>
-						<ul class="service-features">
-							<li>Same-day installation</li>
-							<li>UV stable finish</li>
-							<li>Extreme durability</li>
-							<li>Temperature resistant</li>
+					<div class="p-8 flex flex-col h-full">
+						<h3 class="text-2xl font-semibold text-primary mb-4">Polyaspartic Coatings</h3>
+						<p class="text-secondary leading-relaxed mb-6 flex-grow">Fast-curing, UV-resistant systems ideal for high-traffic areas and commercial spaces. Superior durability with faster installation times.</p>
+						<ul class="space-y-2 mb-6 text-sm">
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Same-day installation</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>UV stable finish</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Extreme durability</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Temperature resistant</li>
 						</ul>
-						<a href="/services/concrete-polishing" class="service-link">Learn More →</a>
+						<a href="/services/concrete-polishing" class="text-primary font-semibold hover:underline">Learn More →</a>
 					</div>
 				</div>
 
-				<div class="service-card">
-					<div class="service-image">
-						<img src="/assets/images/services/surface-restoration.webp" alt="Stunning metallic epoxy flooring with artistic flowing patterns" loading="lazy" />
+				<div class="card hover:-translate-y-2 transition">
+					<div class="h-56 overflow-hidden">
+						<img src="/assets/images/services/surface-restoration.webp" alt="Stunning metallic epoxy flooring with artistic flowing patterns" loading="lazy" class="w-full h-full object-cover" />
 					</div>
-					<div class="service-content">
-						<h3>Metallic Epoxy Floors</h3>
-						<p>Stunning decorative systems that create unique, flowing patterns resembling natural stone, water, or custom designs for upscale applications.</p>
-						<ul class="service-features">
-							<li>Unique artistic patterns</li>
-							<li>Premium aesthetic appeal</li>
-							<li>Seamless application</li>
-							<li>Commercial grade durability</li>
+					<div class="p-8 flex flex-col h-full">
+						<h3 class="text-2xl font-semibold text-primary mb-4">Metallic Epoxy Floors</h3>
+						<p class="text-secondary leading-relaxed mb-6 flex-grow">Stunning decorative systems that create unique, flowing patterns resembling natural stone, water, or custom designs for upscale applications.</p>
+						<ul class="space-y-2 mb-6 text-sm">
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Unique artistic patterns</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Premium aesthetic appeal</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Seamless application</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Commercial grade durability</li>
 						</ul>
-						<a href="/services/surface-restoration" class="service-link">Learn More →</a>
+						<a href="/services/surface-restoration" class="text-primary font-semibold hover:underline">Learn More →</a>
 					</div>
 				</div>
 
-				<div class="service-card">
-					<div class="service-image">
-						<img src="/assets/images/gallery/IMG_1662.webp" alt="Commercial warehouse concrete coating installation by Queen City Surface Coatings" loading="lazy" />
+				<div class="card hover:-translate-y-2 transition">
+					<div class="h-56 overflow-hidden">
+						<img src="/assets/images/gallery/IMG_1662.webp" alt="Commercial warehouse concrete coating installation by Queen City Surface Coatings" loading="lazy" class="w-full h-full object-cover" />
 					</div>
-					<div class="service-content">
-						<h3>Commercial Applications</h3>
-						<p>Heavy-duty systems engineered for warehouses, manufacturing facilities, and high-traffic commercial environments requiring maximum performance.</p>
-						<ul class="service-features">
-							<li>Industrial strength systems</li>
-							<li>Heavy traffic rated</li>
-							<li>Chemical processing safe</li>
-							<li>Minimal downtime installation</li>
+					<div class="p-8 flex flex-col h-full">
+						<h3 class="text-2xl font-semibold text-primary mb-4">Commercial Applications</h3>
+						<p class="text-secondary leading-relaxed mb-6 flex-grow">Heavy-duty systems engineered for warehouses, manufacturing facilities, and high-traffic commercial environments requiring maximum performance.</p>
+						<ul class="space-y-2 mb-6 text-sm">
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Industrial strength systems</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Heavy traffic rated</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Chemical processing safe</li>
+							<li class="flex items-center"><span class="text-primary font-bold mr-3">✓</span>Minimal downtime installation</li>
 						</ul>
-						<a href="/services" class="service-link">Learn More →</a>
+						<a href="/services" class="text-primary font-semibold hover:underline">Learn More →</a>
 					</div>
 				</div>
 			</div>
@@ -250,36 +251,34 @@ const seo = {
 	</Container>
 
 	<!-- Trust Indicators -->
-	<section class="trust-section">
+	<section class="bg-surface py-16">
 		<Container>
-			<div class="trust-content">
-				<div class="founder-story">
-					<div class="founder-text">
-						<h2>Founded in 2025 by Marine Corps Veteran John Leonard</h2>
-						<p>
-							After serving our country with honor, John Leonard founded Queen City Surface Coatings 
-							to bring the same level of precision, integrity, and commitment to excellence to the 
-							Cincinnati tri-state area. Every project reflects our military values of attention to 
-							detail, reliability, and getting the job done right the first time.
-						</p>
-						<div class="credentials">
-							<div class="credential">
-								<strong>Marine Corps Veteran</strong>
-								<span>Discipline & Precision</span>
-							</div>
-							<div class="credential">
-								<strong>Licensed & Insured</strong>
-								<span>Professional Standards</span>
-							</div>
-							<div class="credential">
-								<strong>Cincinnati Local</strong>
-								<span>Community Focused</span>
-							</div>
+			<div class="grid lg:grid-cols-3 gap-12 items-center">
+				<div class="lg:col-span-2">
+					<h2 class="text-4xl font-bold text-primary mb-6">Founded in 2025 by Marine Corps Veteran John Leonard</h2>
+					<p class="text-lg leading-relaxed mb-8">
+						After serving our country with honor, John Leonard founded Queen City Surface Coatings 
+						to bring the same level of precision, integrity, and commitment to excellence to the 
+						Cincinnati tri-state area. Every project reflects our military values of attention to 
+						detail, reliability, and getting the job done right the first time.
+					</p>
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+						<div class="text-center p-4 bg-white rounded-lg">
+							<div class="font-semibold text-primary mb-1">Marine Corps Veteran</div>
+							<div class="text-sm opacity-80">Discipline & Precision</div>
+						</div>
+						<div class="text-center p-4 bg-white rounded-lg">
+							<div class="font-semibold text-primary mb-1">Licensed & Insured</div>
+							<div class="text-sm opacity-80">Professional Standards</div>
+						</div>
+						<div class="text-center p-4 bg-white rounded-lg">
+							<div class="font-semibold text-primary mb-1">Cincinnati Local</div>
+							<div class="text-sm opacity-80">Community Focused</div>
 						</div>
 					</div>
-					<div class="founder-image">
-						<img src="/assets/images/team/john-leonard.jpg" alt="John Leonard, Founder and Marine Corps Veteran" loading="lazy" />
-					</div>
+				</div>
+				<div class="text-center">
+					<img src="/assets/images/team/john-leonard.jpg" alt="John Leonard, Founder and Marine Corps Veteran" loading="lazy" class="w-full max-w-sm h-80 object-cover rounded-lg mx-auto" />
 				</div>
 			</div>
 		</Container>
@@ -287,118 +286,110 @@ const seo = {
 
 	<!-- Customer Testimonials -->
 	<Container>
-		<section class="testimonials-section">
-			<h2>What Our Customers Say</h2>
-			<div class="testimonials-carousel">
-				<div class="testimonial active">
-					<div class="testimonial-content">
-						<div class="stars">★★★★★</div>
-						<blockquote>
-							"Queen City Surface Coatings transformed our garage into a showroom-quality space. John's attention to detail and professional approach exceeded our expectations. The floor looks amazing and has held up perfectly through Cincinnati's harsh winter conditions."
-						</blockquote>
-						<div class="testimonial-author">
-							<strong>Mike & Sarah Thompson</strong>
-							<span>West Chester, OH</span>
-						</div>
+		<section class="py-16">
+			<h2 class="text-4xl font-bold text-primary text-center mb-12">What Our Customers Say</h2>
+			<div class="max-w-3xl mx-auto mb-12">
+				<div class="testimonial active card-surface p-8 rounded-lg">
+					<div class="text-2xl text-accent mb-4">★★★★★</div>
+					<blockquote class="text-lg italic leading-relaxed mb-6">
+						"Queen City Surface Coatings transformed our garage into a showroom-quality space. John's attention to detail and professional approach exceeded our expectations. The floor looks amazing and has held up perfectly through Cincinnati's harsh winter conditions."
+					</blockquote>
+					<div class="text-center">
+						<div class="font-semibold text-primary mb-1">Mike & Sarah Thompson</div>
+						<div class="text-sm opacity-80">West Chester, OH</div>
 					</div>
 				</div>
 				
-				<div class="testimonial">
-					<div class="testimonial-content">
-						<div class="stars">★★★★★</div>
-						<blockquote>
-							"Professional, punctual, and perfect results. As a fellow veteran, I appreciated John's military precision and commitment to excellence. Our warehouse floor looks incredible and performs even better."
-						</blockquote>
-						<div class="testimonial-author">
-							<strong>David Rodriguez</strong>
-							<span>Cincinnati, OH</span>
-						</div>
+				<div class="testimonial hidden card-surface p-8 rounded-lg">
+					<div class="text-2xl text-accent mb-4">★★★★★</div>
+					<blockquote class="text-lg italic leading-relaxed mb-6">
+						"Professional, punctual, and perfect results. As a fellow veteran, I appreciated John's military precision and commitment to excellence. Our warehouse floor looks incredible and performs even better."
+					</blockquote>
+					<div class="text-center">
+						<div class="font-semibold text-primary mb-1">David Rodriguez</div>
+						<div class="text-sm opacity-80">Cincinnati, OH</div>
 					</div>
 				</div>
 				
-				<div class="testimonial">
-					<div class="testimonial-content">
-						<div class="stars">★★★★★</div>
-						<blockquote>
-							"Outstanding work from start to finish. The team was knowledgeable, clean, and delivered exactly what they promised. Our basement floor transformation is remarkable and has been maintenance-free for months."
-						</blockquote>
-						<div class="testimonial-author">
-							<strong>Jennifer Chen</strong>
-							<span>Mason, OH</span>
-						</div>
+				<div class="testimonial hidden card-surface p-8 rounded-lg">
+					<div class="text-2xl text-accent mb-4">★★★★★</div>
+					<blockquote class="text-lg italic leading-relaxed mb-6">
+						"Outstanding work from start to finish. The team was knowledgeable, clean, and delivered exactly what they promised. Our basement floor transformation is remarkable and has been maintenance-free for months."
+					</blockquote>
+					<div class="text-center">
+						<div class="font-semibold text-primary mb-1">Jennifer Chen</div>
+						<div class="text-sm opacity-80">Mason, OH</div>
 					</div>
 				</div>
 			</div>
 			
 			<!-- Service Area Map Placeholder -->
-			<div class="service-area-preview">
-				<h3>Serving the Cincinnati Tri-State Area</h3>
-				<div class="service-map-placeholder">
-					<div class="map-content">
-						<h4>50-Mile Service Radius</h4>
-						<ul class="service-areas">
-							<li>Hamilton County, OH</li>
-							<li>Butler County, OH</li>
-							<li>Warren County, OH</li>
-							<li>Campbell County, KY</li>
-							<li>Kenton County, KY</li>
-							<li>Boone County, KY</li>
-						</ul>
-						<a href="/service-areas" class="btn btn-outline">View All Service Areas</a>
+			<div class="mt-12">
+				<h3 class="text-2xl font-bold text-primary text-center mb-8">Serving the Cincinnati Tri-State Area</h3>
+				<div class="bg-surface-dark text-white p-12 rounded-lg text-center">
+					<h4 class="text-accent text-xl font-semibold mb-6">50-Mile Service Radius</h4>
+					<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+						<div class="bg-white bg-opacity-10 p-3 rounded">Hamilton County, OH</div>
+						<div class="bg-white bg-opacity-10 p-3 rounded">Butler County, OH</div>
+						<div class="bg-white bg-opacity-10 p-3 rounded">Warren County, OH</div>
+						<div class="bg-white bg-opacity-10 p-3 rounded">Campbell County, KY</div>
+						<div class="bg-white bg-opacity-10 p-3 rounded">Kenton County, KY</div>
+						<div class="bg-white bg-opacity-10 p-3 rounded">Boone County, KY</div>
 					</div>
+					<a href="/service-areas" class="btn btn-outline-inverse">View All Service Areas</a>
 				</div>
 			</div>
 		</section>
 	</Container>
 
 	<!-- Contact Section -->
-	<section class="contact-section">
+	<section class="bg-surface py-16">
 		<Container>
-			<div class="contact-grid">
-				<div class="contact-info">
-					<h2>Ready to Transform Your Space?</h2>
-					<p>Get your free, no-obligation estimate today. We'll assess your space and provide detailed recommendations tailored to your specific needs.</p>
+			<div class="grid lg:grid-cols-2 gap-12 items-start">
+				<div>
+					<h2 class="text-4xl font-bold text-primary mb-4">Ready to Transform Your Space?</h2>
+					<p class="text-lg leading-relaxed mb-8">Get your free, no-obligation estimate today. We'll assess your space and provide detailed recommendations tailored to your specific needs.</p>
 					
-					<div class="contact-methods">
-						<div class="contact-method">
-							<div class="method-icon">📞</div>
-							<div class="method-content">
-								<h4>Call for Immediate Service</h4>
-								<a href="tel:+15132965525" class="phone-number">(513) 296-5525</a>
-								<span>Available 7 days a week</span>
+					<div class="space-y-6 mb-8">
+						<div class="flex items-start gap-4 p-4 bg-white rounded-lg">
+							<div class="text-2xl">📞</div>
+							<div>
+								<h4 class="font-semibold text-primary mb-2">Call for Immediate Service</h4>
+								<a href="tel:+15132965525" class="text-xl font-semibold text-primary block">(513) 296-5525</a>
+								<span class="text-sm opacity-80">Available 7 days a week</span>
 							</div>
 						</div>
 						
-						<div class="contact-method">
-							<div class="method-icon">📧</div>
-							<div class="method-content">
-								<h4>Email for Detailed Quotes</h4>
-								<a href="mailto:john@queencitysurfacecoatings.com">john@queencitysurfacecoatings.com</a>
-								<span>Response within 24 hours</span>
+						<div class="flex items-start gap-4 p-4 bg-white rounded-lg">
+							<div class="text-2xl">📧</div>
+							<div>
+								<h4 class="font-semibold text-primary mb-2">Email for Detailed Quotes</h4>
+								<a href="mailto:john@queencitysurfacecoatings.com" class="text-primary block">john@queencitysurfacecoatings.com</a>
+								<span class="text-sm opacity-80">Response within 24 hours</span>
 							</div>
 						</div>
 					</div>
 					
-					<div class="business-hours">
-						<h4>Business Hours</h4>
-						<div class="hours-grid">
-							<div class="hours-row">
+					<div class="bg-white p-6 rounded-lg">
+						<h4 class="font-semibold text-primary mb-4">Business Hours</h4>
+						<div class="space-y-3">
+							<div class="flex justify-between py-2 border-b border-neutral-200">
 								<span>Monday - Friday:</span>
-								<span>7:00 AM - 6:00 PM</span>
+								<span class="font-medium">7:00 AM - 6:00 PM</span>
 							</div>
-							<div class="hours-row">
+							<div class="flex justify-between py-2 border-b border-neutral-200">
 								<span>Saturday:</span>
-								<span>8:00 AM - 4:00 PM</span>
+								<span class="font-medium">8:00 AM - 4:00 PM</span>
 							</div>
-							<div class="hours-row">
+							<div class="flex justify-between py-2">
 								<span>Sunday:</span>
-								<span>By Appointment</span>
+								<span class="font-medium">By Appointment</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				
-				<div class="contact-form-container">
+				<div>
 					<QuoteRequestForm />
 				</div>
 			</div>
@@ -406,677 +397,7 @@ const seo = {
 	</section>
 </Layout>
 
-<style>
-	/* Hero Section - Enhanced with gradient overlay and navy theme */
-	.hero-section {
-		background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
-		color: var(--theme-on-surface-2);
-		padding: var(--section-padding);
-		margin-bottom: var(--section-margin);
-		position: relative;
-		overflow: hidden;
-	}
-
-	/* Add subtle pattern overlay */
-	.hero-section::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
-						  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
-		pointer-events: none;
-	}
-
-	.hero-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 4rem;
-		align-items: center;
-		min-height: 600px;
-		position: relative;
-		z-index: 1;
-	}
-
-	.hero-headline {
-		font-family: var(--theme-font-family-headings);
-		font-size: var(--font-size-h1);
-		font-weight: var(--font-weight-bold);
-		margin-bottom: 1rem;
-		line-height: var(--line-height-tight);
-		color: var(--theme-primary);
-		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	}
-
-	.hero-tagline {
-		font-family: var(--theme-font-family-headings);
-		font-size: 1.375rem;
-		font-weight: var(--font-weight-medium);
-		color: var(--theme-primary);
-		margin-bottom: 1.5rem;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		opacity: 0.95;
-	}
-
-	.hero-subheadline {
-		font-size: 1.25rem;
-		margin-bottom: 2.5rem;
-		opacity: 0.95;
-		line-height: var(--line-height-relaxed);
-		color: rgba(255, 255, 255, 0.9);
-	}
-
-	.hero-ctas {
-		display: flex;
-		gap: 1.5rem;
-		flex-wrap: wrap;
-	}
-
-	.btn-large {
-		padding: 1.25rem 2.5rem;
-		font-size: 1.125rem;
-		font-weight: var(--font-weight-semibold);
-		border-radius: var(--theme-button-border-radius);
-		transition: all var(--theme-transition-smooth);
-		text-decoration: none;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 56px;
-		position: relative;
-		overflow: hidden;
-	}
-
-	/* Enhanced primary button with micro-animation */
-	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border: 2px solid var(--theme-primary);
-		box-shadow: var(--theme-shadow-medium);
-	}
-
-	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
-		transform: scale(var(--theme-hover-scale)) translateY(-2px);
-		box-shadow: var(--theme-shadow-dark);
-	}
-
-	.btn-outline {
-		background: transparent;
-		color: var(--theme-primary);
-		border: 2px solid var(--theme-primary);
-		backdrop-filter: blur(10px);
-	}
-
-	.btn-outline:hover {
-		background: rgba(255, 193, 7, 0.1);
-		transform: scale(var(--theme-hover-scale));
-		box-shadow: var(--theme-shadow-medium);
-	}
-
-	.hero-image {
-		position: relative;
-	}
-
-	.hero-image::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
-		z-index: 1;
-		border-radius: var(--theme-card-radius);
-	}
-
-	.hero-image img {
-		width: 100%;
-		height: 480px;
-		object-fit: cover;
-		border-radius: var(--theme-card-radius);
-		box-shadow: var(--theme-shadow-dark);
-		filter: contrast(1.1) saturate(1.05);
-		position: relative;
-	}
-
-	/* Value Propositions */
-	.value-props-section {
-		margin: 4rem 0;
-	}
-
-	.value-props-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-	}
-
-	.value-prop {
-		text-align: center;
-		padding: 2.5rem 2rem;
-		background: var(--theme-surface-1);
-		border-radius: var(--theme-card-radius);
-		border: 1px solid var(--theme-border-light);
-		box-shadow: var(--theme-shadow-light);
-		transition: all var(--theme-transition-smooth);
-		position: relative;
-		overflow: hidden;
-	}
-
-	.value-prop:hover {
-		transform: translateY(-4px);
-		box-shadow: var(--theme-shadow-medium);
-		border-color: rgba(255, 193, 7, 0.2);
-	}
-
-	.value-prop::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 3px;
-		background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-hover));
-		transition: left 0.3s ease;
-	}
-
-	.value-prop:hover::before {
-		left: 0;
-	}
-
-	.prop-icon {
-		font-size: 3rem;
-		margin-bottom: 1.5rem;
-		filter: grayscale(0.2);
-	}
-
-	.value-prop h3 {
-		font-family: var(--theme-font-family-headings);
-		color: var(--theme-text-primary);
-		margin-bottom: 1rem;
-		font-size: var(--font-size-h5);
-		font-weight: var(--font-weight-semibold);
-	}
-
-	.value-prop p {
-		color: var(--theme-text-secondary);
-		line-height: var(--line-height-relaxed);
-		font-size: var(--font-size-body);
-	}
-
-	/* Services Overview */
-	.services-overview {
-		margin: 4rem 0;
-	}
-
-	.services-header {
-		text-align: center;
-		margin-bottom: 4rem;
-	}
-
-	.services-header h2 {
-		font-family: var(--theme-font-family-headings);
-		font-size: var(--font-size-h2);
-		color: var(--theme-text-primary);
-		margin-bottom: 1.5rem;
-		font-weight: var(--font-weight-bold);
-	}
-
-	.services-header p {
-		font-size: 1.125rem;
-		color: var(--theme-text-secondary);
-		line-height: var(--line-height-relaxed);
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.services-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
-
-	.service-card {
-		background: var(--theme-surface-1);
-		border-radius: var(--theme-card-radius);
-		overflow: hidden;
-		box-shadow: var(--theme-shadow-light);
-		transition: all var(--theme-transition-smooth);
-		border: 1px solid var(--theme-border-light);
-		height: 100%; /* Consistent height */
-		display: flex;
-		flex-direction: column;
-		position: relative;
-	}
-
-	.service-card:hover {
-		transform: translateY(-8px);
-		box-shadow: var(--theme-shadow-medium);
-		border-color: rgba(255, 193, 7, 0.3);
-	}
-
-	.service-card::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 4px;
-		background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-hover));
-		transform: scaleX(0);
-		transition: transform 0.3s ease;
-		border-radius: 0 0 var(--theme-card-radius) var(--theme-card-radius);
-	}
-
-	.service-card:hover::after {
-		transform: scaleX(1);
-	}
-
-	.service-image {
-		height: 220px;
-		overflow: hidden;
-		position: relative;
-	}
-
-	.service-image::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(to bottom, transparent 0%, rgba(0, 47, 75, 0.1) 100%);
-		z-index: 1;
-	}
-
-	.service-image img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		filter: contrast(1.05) saturate(1.05);
-		transition: transform var(--theme-transition-smooth);
-	}
-
-	.service-card:hover .service-image img {
-		transform: scale(1.05);
-	}
-
-	.service-content {
-		padding: 2rem 1.5rem 1.5rem;
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.service-content h3 {
-		font-family: var(--theme-font-family-headings);
-		color: var(--theme-text-primary);
-		margin-bottom: 1rem;
-		font-size: var(--font-size-h4);
-		font-weight: var(--font-weight-semibold);
-	}
-
-	.service-content p {
-		color: var(--theme-text-secondary);
-		line-height: var(--line-height-relaxed);
-		margin-bottom: 1.5rem;
-		flex-grow: 1;
-	}
-
-	.service-features {
-		list-style: none;
-		padding: 0;
-		margin: 1rem 0;
-	}
-
-	.service-features li {
-		padding: 0.25rem 0;
-		position: relative;
-		padding-left: 1.5rem;
-		font-size: 0.9rem;
-	}
-
-	.service-features li::before {
-		content: "✓";
-		position: absolute;
-		left: 0;
-		color: var(--theme-primary);
-		font-weight: bold;
-	}
-
-	.service-link {
-		color: var(--theme-primary);
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 0.9rem;
-	}
-
-	.service-link:hover {
-		text-decoration: underline;
-	}
-
-	/* Trust Section */
-	.trust-section {
-		background: var(--theme-surface-1);
-		padding: 4rem 0;
-		margin: 4rem 0;
-	}
-
-	.founder-story {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap: 3rem;
-		align-items: center;
-	}
-
-	.founder-text h2 {
-		color: var(--theme-primary);
-		margin-bottom: 1.5rem;
-		font-size: 2rem;
-	}
-
-	.founder-text p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
-	}
-
-	.credentials {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: 1rem;
-	}
-
-	.credential {
-		text-align: center;
-		padding: 1rem;
-		background: var(--theme-bg);
-		border-radius: var(--theme-shape-radius);
-	}
-
-	.credential strong {
-		display: block;
-		color: var(--theme-primary);
-		font-weight: 600;
-		margin-bottom: 0.25rem;
-	}
-
-	.credential span {
-		font-size: 0.9rem;
-		opacity: 0.8;
-	}
-
-	.founder-image img {
-		width: 100%;
-		height: 300px;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
-	}
-
-	/* Testimonials */
-	.testimonials-section {
-		margin: 4rem 0;
-		text-align: center;
-	}
-
-	.testimonials-section h2 {
-		margin-bottom: 3rem;
-		font-size: 2.5rem;
-	}
-
-	.testimonials-carousel {
-		max-width: 800px;
-		margin: 0 auto 3rem auto;
-	}
-
-	.testimonial {
-		display: none;
-		padding: 2rem;
-		background: var(--theme-surface-1);
-		border-radius: var(--theme-shape-radius);
-	}
-
-	.testimonial.active {
-		display: block;
-	}
-
-	.stars {
-		color: var(--theme-primary);
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-	}
-
-	.testimonial blockquote {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 1.5rem;
-		font-style: italic;
-	}
-
-	.testimonial-author strong {
-		color: var(--theme-primary);
-		display: block;
-		margin-bottom: 0.25rem;
-	}
-
-	.testimonial-author span {
-		opacity: 0.8;
-		font-size: 0.9rem;
-	}
-
-	/* Service Area Preview */
-	.service-area-preview {
-		margin-top: 3rem;
-	}
-
-	.service-map-placeholder {
-		background: var(--theme-surface-2);
-		color: var(--theme-on-surface-2);
-		padding: 3rem;
-		border-radius: var(--theme-shape-radius);
-		text-align: center;
-		/* Override primary color to yellow for dark background */
-		--theme-primary: #FFC107;
-		--theme-primary-hover: #E6AC00;
-	}
-
-	.map-content h4 {
-		color: var(--theme-primary);
-		margin-bottom: 1.5rem;
-		font-size: 1.5rem;
-	}
-
-	.service-areas {
-		list-style: none;
-		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: 0.5rem;
-		margin: 1.5rem 0;
-	}
-
-	.service-areas li {
-		padding: 0.5rem;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 4px;
-	}
-
-	/* Contact Section */
-	.contact-section {
-		background: var(--theme-surface-1);
-		padding: 4rem 0;
-		margin: 4rem 0;
-	}
-
-	.contact-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: start;
-	}
-
-	.contact-info h2 {
-		color: var(--theme-primary);
-		margin-bottom: 1rem;
-		font-size: 2rem;
-	}
-
-	.contact-info p {
-		font-size: 1.1rem;
-		margin-bottom: 2rem;
-		line-height: 1.6;
-	}
-
-	.contact-methods {
-		margin-bottom: 2rem;
-	}
-
-	.contact-method {
-		display: flex;
-		align-items: flex-start;
-		gap: 1rem;
-		margin-bottom: 1.5rem;
-		padding: 1rem;
-		background: var(--theme-bg);
-		border-radius: var(--theme-shape-radius);
-	}
-
-	.method-icon {
-		font-size: 1.5rem;
-		flex-shrink: 0;
-	}
-
-	.method-content h4 {
-		color: var(--theme-primary);
-		margin-bottom: 0.5rem;
-	}
-
-	.phone-number {
-		color: var(--theme-primary);
-		text-decoration: none;
-		font-weight: 600;
-		font-size: 1.25rem;
-	}
-
-	.method-content span {
-		display: block;
-		font-size: 0.9rem;
-		opacity: 0.8;
-		margin-top: 0.25rem;
-	}
-
-	.business-hours {
-		background: var(--theme-bg);
-		padding: 1.5rem;
-		border-radius: var(--theme-shape-radius);
-	}
-
-	.business-hours h4 {
-		color: var(--theme-primary);
-		margin-bottom: 1rem;
-	}
-
-	.hours-row {
-		display: flex;
-		justify-content: space-between;
-		padding: 0.5rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-	}
-
-	.hours-row:last-child {
-		border-bottom: none;
-	}
-
-	/* Buttons */
-	.btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 0.75rem 1.5rem;
-		border-radius: var(--theme-button-border-radius);
-		text-decoration: none;
-		font-weight: 600;
-		transition: all var(--theme-transition);
-		border: 2px solid transparent;
-		cursor: pointer;
-		min-height: 44px;
-	}
-
-	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border-color: var(--theme-primary);
-	}
-
-	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
-		transform: translateY(-2px);
-	}
-
-	.btn-outline {
-		background: transparent;
-		color: var(--theme-primary);
-		border-color: var(--theme-primary);
-	}
-
-	.btn-outline:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-	}
-
-	/* Mobile Responsive */
-	@media (max-width: 1024px) {
-		.hero-content {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		
-		.founder-story {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		
-		.contact-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	@media (max-width: 768px) {
-		.hero-section {
-			padding: 2rem 0;
-		}
-		
-		.hero-headline {
-			font-size: 2rem;
-		}
-		
-		.hero-ctas {
-			flex-direction: column;
-			align-items: center;
-		}
-		
-		.value-props-grid {
-			grid-template-columns: 1fr;
-		}
-		
-		.services-grid {
-			grid-template-columns: 1fr;
-		}
-		
-		.credentials {
-			grid-template-columns: 1fr;
-		}
-		
-		.service-areas {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-</style>
+<!-- All styles moved to utilities.css -->
 
 <script>
 	// Testimonials carousel functionality

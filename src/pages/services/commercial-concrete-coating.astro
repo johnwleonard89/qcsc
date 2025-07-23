@@ -76,33 +76,85 @@ const faqSchema = {
 	<script type="application/ld+json" set:html={JSON.stringify(seo.structuredData)}></script>
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 	
+	<!-- Hero Section -->
 	<Container>
-		<!-- Hero Section -->
-		<section class="hero-section">
+		<section class="service-hero">
 			<div class="hero-content">
-				<h1>Commercial Concrete Coating & Industrial Floor Solutions</h1>
-				<p class="hero-subtitle">Professional-grade flooring systems that reduce costs, improve safety, and enhance your business operations. Trusted by Cincinnati's leading businesses for over a decade.</p>
-				<div class="hero-stats">
-					<div class="stat-item">
-						<span class="stat-number">75%</span>
-						<span class="stat-label">Maintenance Cost Reduction</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-number">48hr</span>
-						<span class="stat-label">Minimal Downtime Options</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-number">15+</span>
-						<span class="stat-label">Years Commercial Experience</span>
-					</div>
-					<div class="stat-item">
-						<span class="stat-number">100%</span>
-						<span class="stat-label">Compliance Guaranteed</span>
-					</div>
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li aria-current="page">Commercial Concrete Coating</li>
+					</ol>
+				</nav>
+				
+				<h1>Professional Commercial Concrete Coating</h1>
+				<p class="hero-subtitle">
+					Professional-grade flooring systems that reduce costs, improve safety, and enhance your business operations. 
+					Trusted by Cincinnati's leading businesses for over a decade with proven performance and reliability.
+				</p>
+				
+				<div class="hero-features">
+					<span>✓ 75% Maintenance Cost Reduction</span>
+					<span>✓ 48hr Minimal Downtime Options</span>
+					<span>✓ 15+ Years Commercial Experience</span>
+					<span>✓ 100% Compliance Guaranteed</span>
 				</div>
-				<Button href="#commercial-quote" class="cta-button">Get Commercial Quote</Button>
+				
+				<div class="hero-cta">
+					<a href="#commercial-quote" class="btn btn-primary">Get Commercial Quote</a>
+					<a href="tel:513-296-5525" class="btn btn-secondary">Call (513) 296-5525</a>
+				</div>
+			</div>
+			
+			<div class="hero-image">
+				<img 
+					src="/assets/images/services/commercial-concrete-coating-hero.webp" 
+					alt="Professional commercial concrete coating installation"
+					width="600"
+					height="400"
+					loading="eager"
+				/>
 			</div>
 		</section>
+	</Container>
+
+	<!-- Introduction Section -->
+	<Container>
+		<section class="intro-section">
+			<h2>What is Commercial Concrete Coating?</h2>
+			<div class="intro-content">
+				<div class="intro-text">
+					<p>
+						Commercial concrete coating is a specialized flooring system designed to meet the demanding requirements 
+						of business and industrial environments. Unlike residential applications, commercial coatings must withstand 
+						heavy traffic, chemical exposure, and rigorous cleaning protocols while maintaining professional appearance.
+					</p>
+					<p>
+						Our commercial-grade systems incorporate advanced materials and application techniques proven in the most 
+						challenging environments. From warehouse floors that handle forklift traffic to healthcare facilities 
+						requiring antimicrobial properties, we engineer solutions that deliver long-term performance and value.
+					</p>
+					<p>
+						At Queen City Surface Coatings, we understand that downtime costs money. Our commercial team specializes 
+						in efficient installations that minimize business disruption while delivering maximum durability. 
+						Our veteran-owned company brings military precision to every commercial project.
+					</p>
+				</div>
+				
+				<div class="benefits-preview">
+					<h3>Why Choose Commercial Coating?</h3>
+					<ul>
+						<li><strong>Cost Reduction:</strong> Up to 75% savings in maintenance costs</li>
+						<li><strong>Minimal Downtime:</strong> Fast-cure options for quick turnaround</li>
+						<li><strong>Safety Compliance:</strong> Meets all industry and safety standards</li>
+						<li><strong>Professional Appearance:</strong> Enhances business image and brand</li>
+						<li><strong>Long-Term Value:</strong> 15-20+ year performance lifespan</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
 
 		<!-- Commercial Applications -->
 		<section class="content-section">
@@ -322,32 +374,189 @@ const faqSchema = {
 </Layout>
 
 <style>
-/* Hero Section */
-.hero-section {
-	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-surface-3) 100%);
-	color: white;
-	padding: 4rem 2rem;
-	margin: -2rem -2rem 3rem -2rem;
+/* Service Hero Section */
+.service-hero {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+	color: var(--theme-on-surface-2);
+	padding: 4rem 0;
+	margin-bottom: 3rem;
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+	min-height: 600px;
+}
+
+.service-hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+					  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+	pointer-events: none;
+}
+
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
-	border-radius: 0 0 2rem 2rem;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+}
+
+.breadcrumb {
+	margin-bottom: 1.5rem;
+	align-self: center;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb a {
+	color: #FFC107;
+	text-decoration: none;
+}
+
+.breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+	color: rgba(255, 255, 255, 0.8);
 }
 
 .hero-content h1 {
-	font-size: clamp(2rem, 5vw, 3.5rem);
-	font-weight: 700;
-	margin-bottom: 1.5rem;
-	color: var(--theme-primary);
-	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+	font-family: var(--theme-font-family-headings);
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 1rem;
+	line-height: var(--line-height-tight);
+	color: #FFC107;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero-subtitle {
-	font-size: clamp(1.1rem, 3vw, 1.3rem);
-	margin-bottom: 3rem;
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
 	opacity: 0.95;
-	max-width: 900px;
-	margin-left: auto;
-	margin-right: auto;
-	line-height: 1.6;
+	line-height: var(--line-height-relaxed);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+}
+
+.hero-features span {
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.service-hero .btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-secondary {
+	background: transparent !important;
+	border-color: #FFC107 !important;
+	color: #FFC107 !important;
+}
+
+.service-hero .btn-secondary:hover {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.hero-image {
+	position: relative;
+}
+
+.hero-image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+	z-index: 1;
+	border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: var(--theme-card-radius);
+	box-shadow: var(--theme-shadow-dark);
+	filter: contrast(1.1) saturate(1.05);
+	position: relative;
+}
+
+.intro-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.benefits-preview {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.benefits-preview ul {
+	list-style: none;
+	padding: 0;
+}
+
+.benefits-preview li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
 }
 
 .hero-stats {
@@ -609,28 +818,135 @@ const faqSchema = {
 	text-decoration: underline;
 }
 
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	border: 2px solid transparent;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.btn-primary {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+	background: var(--theme-primary-hover);
+	border-color: var(--theme-primary-hover);
+}
+
+.btn-secondary:hover {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+/* Section spacing */
+section {
+	margin: 4rem 0;
+}
+
+.section-intro {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	margin-bottom: 2rem;
+	max-width: 800px;
+}
+
+/* Typography enhancements */
+h2 {
+	color: var(--theme-text-primary);
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+h3 {
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+}
+
+p {
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
+
+strong {
+	color: var(--theme-text-primary);
+}
+
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
-	.hero-stats {
-		grid-template-columns: 1fr 1fr;
-	}
-	
-	.applications-grid {
+@media (max-width: 1024px) {
+	.service-hero {
 		grid-template-columns: 1fr;
+		text-align: center;
+		gap: 2rem;
 	}
 	
 	.cta-content {
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
+}
+
+@media (max-width: 768px) {
+	.service-hero {
+		padding: 2rem 0;
+	}
+	
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	
+	.hero-cta {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.hero-features {
+		grid-template-columns: 1fr;
+	}
+	
+	.intro-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	
+	.applications-grid {
+		grid-template-columns: 1fr;
+	}
 	
 	.area-links {
 		grid-template-columns: 1fr;
 	}
+	
+	.btn {
+		width: 100%;
+		max-width: 300px;
+	}
 }
 
 @media (max-width: 480px) {
-	.hero-stats {
+	.hero-features {
 		grid-template-columns: 1fr;
 	}
 }

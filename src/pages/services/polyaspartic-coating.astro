@@ -1,6 +1,7 @@
 ---
 import { Container, CtaCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
 
 const seo = {
 	title: 'Polyaspartic Coating | Fast-Cure Concrete Coating Cincinnati | Queen City Surface Coatings',
@@ -70,60 +71,153 @@ const seo = {
 ---
 
 <Layout {seo}>
-	<!-- Page Header -->
-	<Container>
-		<section class="page-header">
-			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<ol>
-					<li><a href="/">Home</a></li>
-					<li><a href="/services">Services</a></li>
-					<li aria-current="page">Polyaspartic Coating</li>
-				</ol>
-			</nav>
-			<h1>Polyaspartic Coating</h1>
-			<p class="page-subtitle">
-				Fast-curing, UV-stable systems that offer superior durability and can be installed in a single day for most projects
-			</p>
-		</section>
-	</Container>
-
-	<!-- Service Hero Section -->
+	<!-- Hero Section -->
 	<Container>
 		<section class="service-hero">
 			<div class="hero-content">
-				<div class="hero-text">
-					<h2>Next-Generation Coating Technology</h2>
-					<p>
-						When time is critical and performance can't be compromised, polyaspartic coatings 
-						deliver both. These advanced systems cure rapidly while maintaining superior 
-						durability and UV stability. With military-precision application, we can transform 
-						your space in a single day without sacrificing quality or longevity.
-					</p>
-					<div class="key-benefits">
-						<div class="benefit-item">
-							<span class="benefit-icon">⚡</span>
-							<span>Same-Day Installation</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">☀️</span>
-							<span>UV Stable - Won't Yellow</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">💪</span>
-							<span>Superior Abrasion Resistance</span>
-						</div>
-						<div class="benefit-item">
-							<span class="benefit-icon">🌡️</span>
-							<span>Temperature Tolerant</span>
-						</div>
-					</div>
-					<div class="hero-cta">
-						<a href="/company/contact" class="btn btn-primary">Get Fast-Track Quote</a>
-						<a href="tel:+15132965525" class="btn btn-outline">Call (513) 296-5525</a>
-					</div>
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li aria-current="page">Polyaspartic Coating</li>
+					</ol>
+				</nav>
+				
+				<h1>Professional Polyaspartic Coating</h1>
+				<p class="hero-subtitle">
+					Fast-curing, UV-stable systems that offer superior durability and can be installed in a single day for most projects.
+					When time is critical and performance can't be compromised, polyaspartic delivers both.
+				</p>
+				
+				<div class="hero-features">
+					<span>✓ Same-Day Installation</span>
+					<span>✓ UV Stable - Won't Yellow</span>
+					<span>✓ Superior Abrasion Resistance</span>
+					<span>✓ Temperature Tolerant</span>
 				</div>
-				<div class="hero-image">
-					<img src="/assets/images/services/polyaspartic-coating-hero.webp" alt="Professional polyaspartic coating installation with fast cure time" loading="eager" />
+				
+				<div class="hero-cta">
+					<a href="#quote-form" class="btn btn-primary">Get Fast-Track Quote</a>
+					<a href="tel:513-296-5525" class="btn btn-secondary">Call (513) 296-5525</a>
+				</div>
+			</div>
+			
+			<div class="hero-image">
+				<img 
+					src="/assets/images/services/polyaspartic-coating-hero.webp" 
+					alt="Professional polyaspartic coating installation with fast cure time"
+					width="600"
+					height="400"
+					loading="eager"
+				/>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Introduction Section -->
+	<Container>
+		<section class="intro-section">
+			<h2>What is Polyaspartic Coating?</h2>
+			<div class="intro-content">
+				<div class="intro-text">
+					<p>
+						Polyaspartic coating is a next-generation floor coating technology that represents the pinnacle of rapid-cure, 
+						high-performance surface protection. Unlike traditional epoxy systems that require days to cure, polyaspartic 
+						coatings can be applied and fully cured within hours, allowing for same-day installation and immediate return to service.
+					</p>
+					<p>
+						Developed from advanced aliphatic polyurea technology, polyaspartic coatings offer exceptional UV stability, 
+						chemical resistance, and mechanical durability. The fast-cure properties don't compromise performance – 
+						these systems actually provide superior long-term durability compared to many traditional coating options.
+					</p>
+					<p>
+						At Queen City Surface Coatings, we specialize in professional polyaspartic installations that maximize 
+						the unique benefits of this advanced technology. Our veteran-owned company brings military precision 
+						to rapid deployment projects where downtime must be minimized without sacrificing quality.
+					</p>
+				</div>
+				
+				<div class="benefits-preview">
+					<h3>Why Choose Polyaspartic?</h3>
+					<ul>
+						<li><strong>Rapid Installation:</strong> Same-day completion for most projects</li>
+						<li><strong>UV Resistance:</strong> Won't yellow or fade like traditional coatings</li>
+						<li><strong>Temperature Tolerance:</strong> Performs in extreme weather conditions</li>
+						<li><strong>Superior Durability:</strong> Outperforms traditional epoxy systems</li>
+						<li><strong>Commercial Grade:</strong> Professional-grade materials and application</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Polyaspartic Benefits -->
+	<Container>
+		<section class="benefits-section">
+			<h2>Polyaspartic Coating Benefits</h2>
+			<p class="section-intro">
+				Polyaspartic coatings provide numerous advantages over traditional coating systems, especially when time and performance are critical.
+			</p>
+			
+			<div class="benefits-grid">
+				<div class="benefit-item">
+					<div class="benefit-icon">⚡</div>
+					<h3>Same-Day Installation</h3>
+					<p>
+						<strong>Rapid Deployment:</strong> Complete installation and return to service within 24 hours. 
+						Polyaspartic coatings cure so quickly that most residential and commercial projects can be 
+						completed in a single day, minimizing disruption to your schedule and operations.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">☀️</div>
+					<h3>UV Stability</h3>
+					<p>
+						<strong>Won't Yellow or Fade:</strong> Unlike traditional epoxy coatings that can yellow over time, 
+						polyaspartic coatings maintain their color and clarity for decades. UV-stable formulation 
+						ensures consistent appearance even in high-sunlight environments.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🌡️</div>
+					<h3>Temperature Tolerance</h3>
+					<p>
+						<strong>Extreme Weather Performance:</strong> Functions effectively in temperatures from -40°F to 
+						140°F. Can be applied in conditions where traditional coatings would fail, extending 
+						the installation season and providing reliable performance year-round.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">💪</div>
+					<h3>Superior Durability</h3>
+					<p>
+						<strong>Enhanced Performance:</strong> Superior abrasion resistance, chemical resistance, and 
+						impact strength compared to traditional epoxy systems. The flexible nature of polyaspartic 
+						coatings allows them to withstand substrate movement without cracking.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">🛡️</div>
+					<h3>Chemical Resistance</h3>
+					<p>
+						<strong>Comprehensive Protection:</strong> Excellent resistance to automotive fluids, road salt, 
+						household chemicals, and industrial solvents. The dense, non-porous surface prevents 
+						penetration and staining that can damage other coating types.
+					</p>
+				</div>
+
+				<div class="benefit-item">
+					<div class="benefit-icon">💼</div>
+					<h3>Commercial Grade</h3>
+					<p>
+						<strong>Professional Performance:</strong> Meets or exceeds commercial standards for durability 
+						and performance. Used in industrial applications where downtime costs are prohibitive 
+						and long-term reliability is essential for operations.
+					</p>
 				</div>
 			</div>
 		</section>
@@ -131,20 +225,170 @@ const seo = {
 
 	<!-- Applications Section -->
 	<Container>
-		<section class="applications">
-			<h2>Perfect Applications for Polyaspartic Coatings</h2>
+		<section class="applications-section">
+			<h2>Polyaspartic Coating Applications</h2>
+			
 			<div class="applications-grid">
-				<div class="application-card">
-					<h3>🚗 High-Performance Garages</h3>
-					<p>Upgrade from standard <a href="/services/garage-floor-epoxy">garage floor epoxy</a> when you need maximum durability and same-day turnaround. Perfect for automotive enthusiasts and collectors.</p>
+				<div class="application-item">
+					<h3>High-Performance Garages</h3>
+					<p>
+						Upgrade from standard <a href="/services/garage-floor-epoxy">garage floor epoxy</a> when you need maximum 
+						durability and same-day turnaround. Perfect for automotive enthusiasts, collectors, and showroom-quality 
+						garages where appearance and performance are paramount.
+					</p>
+					<ul>
+						<li>Collector car storage spaces</li>
+						<li>Automotive enthusiast garages</li>
+						<li>Showroom-quality finishes</li>
+						<li>High-end residential applications</li>
+					</ul>
 				</div>
-				<div class="application-card">
-					<h3>🏭 Commercial Applications</h3>
-					<p>Ideal for <a href="/services/commercial-concrete-coating">commercial concrete coating</a> projects where downtime must be minimized. Warehouses, retail spaces, and manufacturing facilities.</p>
+
+				<div class="application-item">
+					<h3>Commercial Applications</h3>
+					<p>
+						Ideal for <a href="/services/commercial-concrete-coating">commercial concrete coating</a> projects where 
+						downtime must be minimized. Warehouses, retail spaces, manufacturing facilities, and healthcare 
+						environments benefit from rapid installation and immediate return to service.
+					</p>
+					<ul>
+						<li>Warehouse and distribution centers</li>
+						<li>Retail and showroom spaces</li>
+						<li>Manufacturing facilities</li>
+						<li>Healthcare and food service areas</li>
+					</ul>
 				</div>
-				<div class="application-card">
-					<h3>✨ Metallic Topcoats</h3>
-					<p>Often used as a protective topcoat over <a href="/services/metallic-epoxy-flooring">metallic epoxy flooring</a> to enhance UV resistance and extend lifespan of decorative effects.</p>
+
+				<div class="application-item">
+					<h3>Metallic System Topcoats</h3>
+					<p>
+						Often used as a protective topcoat over <a href="/services/metallic-epoxy-flooring">metallic epoxy flooring</a> 
+						to enhance UV resistance and extend the lifespan of decorative effects. The clear, non-yellowing 
+						formulation preserves the beauty of metallic patterns while providing superior protection.
+					</p>
+					<ul>
+						<li>Metallic epoxy protection</li>
+						<li>Decorative system topcoats</li>
+						<li>UV protection for colored systems</li>
+						<li>Long-term appearance preservation</li>
+					</ul>
+				</div>
+
+				<div class="application-item">
+					<h3>Urgent Repair Projects</h3>
+					<p>
+						When existing floors fail and immediate replacement is needed, polyaspartic coatings provide 
+						the fastest return to service. Emergency repairs, facility maintenance, and urgent upgrades 
+						can be completed with minimal operational disruption.
+					</p>
+					<ul>
+						<li>Emergency floor repairs</li>
+						<li>Facility maintenance windows</li>
+						<li>Rapid system upgrades</li>
+						<li>Minimal downtime installations</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Overview -->
+	<Container>
+		<section class="process-section">
+			<h2>Professional Installation Process</h2>
+			<p class="section-intro">
+				Our proven 5-step polyaspartic installation process ensures maximum adhesion, durability, and rapid deployment. Speed doesn't compromise quality.
+			</p>
+			
+			<div class="process-steps">
+				<div class="process-step">
+					<div class="step-number">1</div>
+					<div class="step-content">
+						<h3>Rapid Surface Preparation</h3>
+						<p>
+							<strong>Accelerated Prep:</strong> High-speed diamond grinding and surface profiling optimized for polyaspartic 
+							adhesion. We remove existing coatings, contaminants, and create the proper surface texture in a fraction 
+							of the time required for traditional systems.
+						</p>
+						<ul>
+							<li>High-speed mechanical profiling</li>
+							<li>Expedited contaminate removal</li>
+							<li>Fast-track crack repair</li>
+							<li>Moisture testing and immediate mitigation</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">2</div>
+					<div class="step-content">
+						<h3>Fast-Cure Primer Application</h3>
+						<p>
+							<strong>Rapid Bonding:</strong> Advanced polyaspartic primer penetrates deeply and cures quickly, creating 
+							maximum adhesion in minimal time. Unlike slow-cure epoxy primers, polyaspartic primers are ready 
+							for topcoats within hours.
+						</p>
+						<ul>
+							<li>100% solids polyaspartic primer</li>
+							<li>Deep penetration and fast cure</li>
+							<li>Enhanced adhesion properties</li>
+							<li>2-4 hour recoat window</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">3</div>
+					<div class="step-content">
+						<h3>Base Coat Installation</h3>
+						<p>
+							<strong>High-Performance Application:</strong> The polyaspartic base coat provides color, thickness, and 
+							primary protection. Applied with precision to ensure uniform coverage and optimal performance 
+							characteristics while maintaining rapid cure properties.
+						</p>
+						<ul>
+							<li>Commercial-grade polyaspartic base</li>
+							<li>Uniform thickness application</li>
+							<li>Color consistency verification</li>
+							<li>Quality control measurements</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">4</div>
+					<div class="step-content">
+						<h3>Decorative Elements (Optional)</h3>
+						<p>
+							<strong>Rapid Integration:</strong> Decorative flakes, textures, or slip-resistant additives are applied 
+							while the base coat is workable. The fast-cure nature requires precise timing and expert application 
+							for optimal integration.
+						</p>
+						<ul>
+							<li>Decorative flake broadcast</li>
+							<li>Slip-resistant additives</li>
+							<li>Texture enhancement options</li>
+							<li>Rapid integration techniques</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">5</div>
+					<div class="step-content">
+						<h3>Top Coat & Final Cure</h3>
+						<p>
+							<strong>Ultimate Protection:</strong> The clear polyaspartic topcoat provides chemical resistance, UV protection, 
+							and final surface properties. Cures rapidly for same-day return to service while providing decades 
+							of protection.
+						</p>
+						<ul>
+							<li>Clear UV-stable polyaspartic topcoat</li>
+							<li>Chemical and abrasion resistance</li>
+							<li>Same-day cure and return to service</li>
+							<li>Final quality inspection and walkthrough</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -153,313 +397,691 @@ const seo = {
 	<!-- Related Services Section -->
 	<Container>
 		<section class="related-services">
-			<h2>Compare Our Flooring Solutions</h2>
-			<div class="services-comparison">
-				<div class="service-option">
-					<h3><a href="/services/garage-floor-epoxy">Traditional Epoxy Systems</a></h3>
-					<p>Longer cure times but lower cost. Best for projects where time is not critical and budget is a primary concern.</p>
+			<h2>Related Flooring Services</h2>
+			<p class="section-intro">
+				Explore our complete range of concrete coating and flooring solutions for every application and timeline requirement.
+			</p>
+			
+			<div class="related-services-grid">
+				<div class="related-service">
+					<h3><a href="/services/garage-floor-epoxy">Garage Floor Epoxy</a></h3>
+					<p>Traditional epoxy systems with longer cure times but proven durability. Perfect for projects where time is not critical and cost-effectiveness is important.</p>
 					<a href="/services/garage-floor-epoxy" class="btn btn-outline">Learn More</a>
 				</div>
-				<div class="service-option featured">
-					<h3>Polyaspartic Coating</h3>
-					<p>Premium fast-cure technology. Higher initial cost but exceptional value for urgent projects and commercial applications.</p>
-					<span class="current-page">Current Page</span>
-				</div>
-				<div class="service-option">
-					<h3><a href="/services/metallic-epoxy-flooring">Metallic Epoxy Systems</a></h3>
-					<p>Artistic decorative solutions. Often combined with polyaspartic topcoats for the ultimate in both beauty and performance.</p>
+				
+				<div class="related-service">
+					<h3><a href="/services/metallic-epoxy-flooring">Metallic Epoxy Flooring</a></h3>
+					<p>Artistic decorative solutions that create stunning visual effects. Often combined with polyaspartic topcoats for the ultimate in both beauty and performance.</p>
 					<a href="/services/metallic-epoxy-flooring" class="btn btn-outline">Learn More</a>
+				</div>
+				
+				<div class="related-service">
+					<h3><a href="/services/commercial-concrete-coating">Commercial Coating</a></h3>
+					<p>Heavy-duty commercial and industrial coatings where rapid deployment and minimal downtime are critical for business operations.</p>
+					<a href="/services/commercial-concrete-coating" class="btn btn-outline">Learn More</a>
+				</div>
+				
+				<div class="related-service">
+					<h3><a href="/services/basement-floor-coating">Basement Floor Coating</a></h3>
+					<p>Moisture-resistant basement flooring solutions that can be installed quickly when timeline constraints are important.</p>
+					<a href="/services/basement-floor-coating" class="btn btn-outline">Learn More</a>
 				</div>
 			</div>
 		</section>
 	</Container>
 
-	<!-- Final Call to Action -->
-	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-		<h2>Ready for Rapid Results?</h2>
-		<p>
-			Experience the speed and performance of polyaspartic technology. Contact Queen City Surface Coatings 
-			for your fast-track coating consultation and same-day installation estimate.
-		</p>
-		<div class="cta-buttons">
-			<a href="/company/contact" class="btn btn-primary">Schedule Fast-Track Consultation</a>
-			<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
-		</div>
-	</CtaCardSection>
+	<!-- Call-to-Action Section -->
+	<section class="contact-section" id="quote-form">
+		<Container>
+			<div class="contact-content">
+				<div class="contact-info">
+					<h2>Ready for Rapid Results?</h2>
+					<p>Experience the speed and performance of polyaspartic technology. Get your free estimate and discover how we can transform your space with fast-curing, durable flooring that lasts decades.</p>
+					
+					<div class="contact-methods">
+						<div class="contact-button-wrapper">
+							<a href="tel:+15132965525" class="contact-button contact-button-phone">
+								<div class="contact-icon">📞</div>
+								<div class="contact-details">
+									<h4>Call for Immediate Service</h4>
+									<span class="contact-info">(513) 296-5525</span>
+									<span class="contact-availability">Available 7 days a week</span>
+								</div>
+							</a>
+						</div>
+						
+						<div class="contact-button-wrapper">
+							<a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+								<div class="contact-icon">📧</div>
+								<div class="contact-details">
+									<h4>Email for Detailed Quotes</h4>
+									<span class="contact-info">john@queencitysurfacecoatings.com</span>
+									<span class="contact-availability">Response within 24 hours</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<div class="service-areas-compact">
+						<h4>Service Areas</h4>
+						<p>We serve <a href="/service-areas/ohio/cincinnati-concrete-coating">Cincinnati</a>, <a href="/service-areas/ohio/hamilton-county-comprehensive">Hamilton County</a>, and the entire tri-state region.</p>
+						<a href="/service-areas/" class="btn btn-outline btn-small">View All Areas</a>
+					</div>
+				</div>
+				
+				<div class="contact-form">
+					<QuoteRequestForm />
+				</div>
+			</div>
+		</Container>
+	</section>
 </Layout>
 
 <style>
-	/* Page Header */
-	.page-header {
-		text-align: center;
-		padding: 2rem 0 3rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 3rem;
-	}
+/* Service Hero Section */
+.service-hero {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+	color: var(--theme-on-surface-2);
+	padding: 4rem 0;
+	margin-bottom: 3rem;
+	position: relative;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	align-items: center;
+	min-height: 600px;
+}
 
-	.breadcrumb {
-		margin-bottom: 1.5rem;
-	}
+.service-hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+					  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+	pointer-events: none;
+}
 
-	.breadcrumb ol {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		font-size: 0.9rem;
-	}
+.hero-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	padding: 0;
+}
 
-	.breadcrumb li:not(:last-child)::after {
-		content: ">";
-		margin-left: 0.5rem;
-		opacity: 0.6;
-	}
+.breadcrumb {
+	margin-bottom: 1.5rem;
+	align-self: center;
+}
 
-	.breadcrumb a {
-		color: var(--theme-primary);
-		text-decoration: none;
-	}
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+}
 
-	.breadcrumb a:hover {
-		text-decoration: underline;
-	}
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: rgba(255, 255, 255, 0.6);
+}
 
-	.page-header h1 {
-		font-size: 3rem;
-		color: var(--theme-on-bg);
-		margin-bottom: 1rem;
-	}
+.breadcrumb li:last-child::after {
+	display: none;
+}
 
-	.page-subtitle {
-		font-size: 1.25rem;
-		color: var(--theme-on-bg);
-		opacity: 0.8;
-		max-width: 700px;
-		margin: 0 auto;
-		line-height: 1.5;
-	}
+.breadcrumb a {
+	color: #FFC107;
+	text-decoration: none;
+}
 
-	/* Service Hero */
+.breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content h1 {
+	font-family: var(--theme-font-family-headings);
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 1rem;
+	line-height: var(--line-height-tight);
+	color: #FFC107;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	opacity: 0.95;
+	line-height: var(--line-height-relaxed);
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
+}
+
+.hero-features span {
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 600;
+	font-size: 0.95rem;
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.service-hero .btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-secondary {
+	background: transparent !important;
+	border-color: #FFC107 !important;
+	color: #FFC107 !important;
+}
+
+.service-hero .btn-secondary:hover {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.hero-image {
+	position: relative;
+}
+
+.hero-image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+	z-index: 1;
+	border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+	width: 100%;
+	height: 480px;
+	object-fit: cover;
+	border-radius: var(--theme-card-radius);
+	box-shadow: var(--theme-shadow-dark);
+	filter: contrast(1.1) saturate(1.05);
+	position: relative;
+}
+
+.intro-content {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.benefits-preview {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.benefits-preview ul {
+	list-style: none;
+	padding: 0;
+}
+
+.benefits-preview li {
+	padding: 0.5rem 0;
+	border-bottom: 1px solid var(--theme-border-light);
+}
+
+.benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.benefit-item {
+	background: var(--theme-bg);
+	border: 2px solid var(--theme-surface-1);
+	border-radius: var(--theme-shape-radius);
+	padding: 2rem;
+	text-align: center;
+	transition: var(--theme-transition);
+}
+
+.benefit-item:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.benefit-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+}
+
+.applications-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.application-item {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border-left: 4px solid var(--theme-primary);
+}
+
+.process-steps {
+	display: grid;
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.process-step {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2rem;
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.step-number {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.step-content h3 {
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+}
+
+.step-content ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 1rem;
+}
+
+.step-content li {
+	position: relative;
+	padding-left: 1.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.step-content li::before {
+	content: '▸';
+	position: absolute;
+	left: 0;
+	color: var(--theme-primary);
+	font-weight: bold;
+}
+
+.related-services {
+	background: var(--theme-bg);
+	padding: 4rem 2rem;
+	margin: 4rem 0;
+}
+
+.related-services-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.related-service {
+	background: var(--theme-surface-1);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid transparent;
+	transition: var(--theme-transition);
+	text-align: center;
+}
+
+.related-service:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.related-service h3 {
+	margin-bottom: 1rem;
+}
+
+.related-service h3 a {
+	color: var(--theme-text-primary);
+	text-decoration: none;
+}
+
+.related-service h3 a:hover {
+	color: var(--theme-primary);
+}
+
+.related-service p {
+	margin-bottom: 1.5rem;
+	color: var(--theme-text-secondary);
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 2rem;
+	border-radius: var(--theme-button-border-radius);
+	font-weight: 600;
+	text-decoration: none;
+	transition: var(--theme-transition);
+	border: 2px solid transparent;
+	cursor: pointer;
+	margin: 0.5rem;
+}
+
+.btn-primary {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-secondary {
+	background: transparent;
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn-outline {
+	background: transparent;
+	color: var(--theme-primary);
+	border-color: var(--theme-primary);
+}
+
+.btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+	background: var(--theme-primary-hover);
+	border-color: var(--theme-primary-hover);
+}
+
+.btn-secondary:hover, .btn-outline:hover {
+	background: var(--theme-primary);
+	color: var(--theme-on-primary);
+	border-color: var(--theme-primary);
+}
+
+/* Contact Section */
+.contact-section {
+	background: var(--theme-surface-1);
+	padding: 4rem 0;
+	margin-top: 4rem;
+}
+
+.contact-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	align-items: start;
+}
+
+.contact-info h2 {
+	font-size: 2.5rem;
+	font-weight: var(--font-weight-bold);
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+	text-align: left;
+}
+
+.contact-info > p {
+	font-size: 1.125rem;
+	line-height: var(--line-height-relaxed);
+	margin-bottom: 2rem;
+	color: var(--theme-text-secondary);
+}
+
+.contact-methods {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.contact-button-wrapper {
+	flex: 1;
+}
+
+.contact-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.75rem;
+	padding: 1rem;
+	border-radius: var(--theme-card-radius);
+	border: none;
+	transition: var(--theme-transition);
+	text-decoration: none;
+	width: 100%;
+	cursor: pointer;
+	min-height: 120px;
+	justify-content: center;
+}
+
+.contact-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Phone button - Yellow background, blue text */
+.contact-button-phone {
+	background: #FFC107;
+	color: #002F4B;
+}
+
+.contact-button-phone:hover {
+	background: #E6AC00;
+	color: #002F4B;
+}
+
+/* Email button - Blue background, white text (except email address) */
+.contact-button-email {
+	background: #002F4B;
+	color: white;
+}
+
+.contact-button-email:hover {
+	background: #001f36;
+	color: white;
+}
+
+/* Keep email address yellow */
+.contact-button-email .contact-info {
+	color: #FFC107;
+}
+
+.contact-icon {
+	font-size: 2rem;
+}
+
+.contact-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.25rem;
+}
+
+.contact-details h4 {
+	font-weight: var(--font-weight-semibold);
+	margin: 0;
+	font-size: 1rem;
+}
+
+.contact-info {
+	font-size: 1rem;
+	font-weight: var(--font-weight-semibold);
+	display: block;
+	margin: 0;
+}
+
+.contact-availability {
+	font-size: 0.75rem;
+	opacity: 0.8;
+	margin: 0;
+}
+
+.service-areas-compact {
+	background: var(--theme-bg);
+	padding: 1.5rem;
+	border-radius: var(--theme-card-radius);
+}
+
+.service-areas-compact h4 {
+	font-weight: var(--font-weight-semibold);
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+}
+
+.service-areas-compact p {
+	margin-bottom: 1rem;
+	font-size: 0.95rem;
+}
+
+.btn-small {
+	padding: 0.75rem 1.5rem;
+	font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
 	.service-hero {
-		margin: 4rem 0;
+		grid-template-columns: 1fr;
+		text-align: center;
+		gap: 2rem;
 	}
-
-	.hero-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: center;
+	
+	.contact-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
+	
+	.contact-methods {
+		flex-direction: column;
+	}
+}
 
-	.hero-text h2 {
-		color: var(--theme-primary);
+@media (max-width: 768px) {
+	.service-hero {
+		padding: 2rem 0;
+	}
+	
+	.hero-content h1 {
 		font-size: 2rem;
-		margin-bottom: 1.5rem;
 	}
-
-	.hero-text p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
-	}
-
-	.key-benefits {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-
-	.benefit-item {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-weight: 500;
-	}
-
-	.benefit-icon {
-		font-size: 1.2rem;
-	}
-
+	
 	.hero-cta {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.hero-image img {
-		width: 100%;
-		height: 400px;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-	}
-
-	/* CTA Buttons */
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 2rem;
-		flex-wrap: wrap;
-	}
-
-	.btn {
-		padding: 1rem 2rem;
-		border-radius: var(--theme-button-border-radius);
-		text-decoration: none;
-		font-weight: 600;
-		transition: all var(--theme-transition);
-		display: inline-flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		border: 2px solid transparent;
-		min-height: 44px;
 	}
-
-	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border-color: var(--theme-primary);
+	
+	.hero-features {
+		grid-template-columns: 1fr;
 	}
-
-	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
-		transform: translateY(-2px);
+	
+	.intro-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
-
-	.btn-outline {
-		background: transparent;
-		color: var(--theme-primary);
-		border-color: var(--theme-primary);
-	}
-
-	.btn-outline:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-	}
-
-	/* Mobile Responsive */
-	@media (max-width: 768px) {
-		.page-header h1 {
-			font-size: 2rem;
-		}
-		
-		.hero-content {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		
-		.key-benefits {
-			grid-template-columns: 1fr;
-		}
-		
-		.hero-cta {
-			justify-content: center;
-		}
-		
-		.cta-buttons {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
-	/* Applications Section */
-	.applications {
-		padding: 4rem 0;
+	
+	.process-step {
+		grid-template-columns: 1fr;
+		gap: 1rem;
 		text-align: center;
 	}
-
-	.applications-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-		margin: 2rem 0;
+	
+	.btn {
+		width: 100%;
+		max-width: 300px;
 	}
+}
 
-	.application-card {
-		background: var(--theme-surface-1);
-		padding: 2rem;
-		border-radius: var(--theme-shape-radius);
-		border: 2px solid transparent;
-		transition: var(--theme-transition);
-	}
+/* Section spacing */
+section {
+	margin: 4rem 0;
+}
 
-	.application-card:hover {
-		border-color: var(--theme-primary);
-		transform: translateY(-2px);
-	}
+.section-intro {
+	font-size: 1.1rem;
+	color: var(--theme-on-surface-1);
+	margin-bottom: 2rem;
+	max-width: 800px;
+}
 
-	.application-card h3 {
-		color: var(--theme-text-primary);
-		margin-bottom: 1rem;
-	}
+/* Typography enhancements */
+h2 {
+	color: var(--theme-text-primary);
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
 
-	.application-card a {
-		color: var(--theme-primary);
-		text-decoration: none;
-	}
+h3 {
+	color: var(--theme-text-primary);
+	margin-bottom: 1rem;
+}
 
-	.application-card a:hover {
-		text-decoration: underline;
-	}
+p {
+	line-height: 1.7;
+	margin-bottom: 1rem;
+}
 
-	/* Related Services Section */
-	.related-services {
-		background: var(--theme-surface-1);
-		padding: 4rem 2rem;
-		margin: 2rem 0;
-		border-radius: var(--theme-shape-radius);
-	}
-
-	.services-comparison {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-		margin: 2rem 0;
-	}
-
-	.service-option {
-		background: var(--theme-bg);
-		padding: 2rem;
-		border-radius: var(--theme-shape-radius);
-		border: 2px solid var(--theme-border-light);
-		text-align: center;
-		transition: var(--theme-transition);
-	}
-
-	.service-option.featured {
-		border-color: var(--theme-primary);
-		background: linear-gradient(135deg, var(--theme-primary), var(--theme-primary-hover));
-		color: var(--theme-on-primary);
-	}
-
-	.service-option h3 {
-		color: var(--theme-text-primary);
-		margin-bottom: 1rem;
-	}
-
-	.service-option.featured h3 {
-		color: var(--theme-on-primary);
-	}
-
-	.service-option h3 a {
-		color: var(--theme-text-primary);
-		text-decoration: none;
-	}
-
-	.service-option h3 a:hover {
-		color: var(--theme-primary);
-	}
-
-	.current-page {
-		background: var(--theme-on-primary);
-		color: var(--theme-primary);
-		padding: 0.5rem 1rem;
-		border-radius: var(--theme-button-border-radius);
-		font-weight: 600;
-		display: inline-block;
-	}
+strong {
+	color: var(--theme-text-primary);
+}
 </style>

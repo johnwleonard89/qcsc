@@ -937,24 +937,44 @@ const faqData = {
 </Layout>
 
 <style>
-/* Service-specific styles */
+/* Service Hero Section */
 .service-hero {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+	color: var(--theme-on-surface-2);
+	padding: 4rem 0;
+	margin-bottom: 3rem;
+	position: relative;
+	overflow: hidden;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 3rem;
+	gap: 4rem;
 	align-items: center;
-	padding: 4rem 0;
-	background: linear-gradient(135deg, var(--theme-surface-1) 0%, var(--theme-bg) 100%);
-	border-radius: var(--theme-shape-radius);
-	margin: 2rem 0;
+	min-height: 600px;
+}
+
+.service-hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+					  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+	pointer-events: none;
 }
 
 .hero-content {
-	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	padding: 0;
 }
 
 .breadcrumb {
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 
 .breadcrumb ol {
@@ -967,7 +987,7 @@ const faqData = {
 .breadcrumb li::after {
 	content: '›';
 	margin-left: 0.5rem;
-	color: var(--theme-on-surface-1);
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .breadcrumb li:last-child::after {
@@ -975,37 +995,104 @@ const faqData = {
 }
 
 .breadcrumb a {
-	color: var(--theme-primary);
+	color: #FFC107;
 	text-decoration: none;
 }
 
+.breadcrumb a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content h1 {
+	font-family: var(--theme-font-family-headings);
+	font-size: var(--font-size-h1);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: 1rem;
+	line-height: var(--line-height-tight);
+	color: #FFC107;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	opacity: 0.95;
+	line-height: var(--line-height-relaxed);
+	color: rgba(255, 255, 255, 0.9);
+}
+
 .hero-features {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1rem;
-	margin: 2rem 0;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 0.75rem;
+	margin-bottom: 2.5rem;
 }
 
 .hero-features span {
-	background: var(--theme-primary);
-	color: var(--theme-on-primary);
-	padding: 0.5rem 1rem;
-	border-radius: var(--theme-button-border-radius);
+	color: rgba(255, 255, 255, 0.9);
 	font-weight: 600;
-	font-size: 0.9rem;
+	font-size: 0.95rem;
 }
 
 .hero-cta {
 	display: flex;
-	gap: 1rem;
+	gap: 1.5rem;
 	flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.service-hero .btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #002F4B !important;
+}
+
+.service-hero .btn-secondary {
+	background: transparent !important;
+	border-color: #FFC107 !important;
+	color: #FFC107 !important;
+}
+
+.service-hero .btn-secondary:hover {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #002F4B !important;
+}
+
+.hero-image {
+	position: relative;
+}
+
+.hero-image::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+	z-index: 1;
+	border-radius: var(--theme-card-radius);
 }
 
 .hero-image img {
 	width: 100%;
-	height: 400px;
+	height: 480px;
 	object-fit: cover;
-	border-radius: var(--theme-shape-radius);
+	border-radius: var(--theme-card-radius);
+	box-shadow: var(--theme-shadow-dark);
+	filter: contrast(1.1) saturate(1.05);
+	position: relative;
 }
 
 .intro-content {
@@ -1485,11 +1572,30 @@ const faqData = {
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 	.service-hero {
 		grid-template-columns: 1fr;
+		text-align: center;
 		gap: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.service-hero {
 		padding: 2rem 0;
+	}
+	
+	.hero-content h1 {
+		font-size: 2rem;
+	}
+	
+	.hero-cta {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.hero-features {
+		grid-template-columns: 1fr;
 	}
 	
 	.intro-content {

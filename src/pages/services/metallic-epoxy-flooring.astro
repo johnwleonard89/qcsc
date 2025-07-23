@@ -89,33 +89,37 @@ const faqSchema = {
 	<script type="application/ld+json" set:html={JSON.stringify(seo.structuredData)}></script>
 	<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 	
-	<Container>
-		<!-- Hero Section -->
-		<section class="hero-section">
+	<!-- Service Hero Section -->
+	<section class="service-hero">
+		<Container>
 			<div class="hero-content">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/services/">Services</a></li>
+						<li aria-current="page">Metallic Epoxy Flooring</li>
+					</ol>
+				</nav>
 				<h1>Metallic Epoxy Flooring</h1>
 				<p class="hero-subtitle">Transform your space into a work of art with stunning metallic epoxy floors. Each installation is unique, creating flowing patterns that mimic natural stone, water, or custom artistic designs.</p>
 				<div class="hero-features">
-					<div class="feature-item">
-						<span class="feature-icon">🎨</span>
-						<span>One-of-a-Kind Patterns</span>
-					</div>
-					<div class="feature-item">
-						<span class="feature-icon">✨</span>
-						<span>Stunning Visual Effects</span>
-					</div>
-					<div class="feature-item">
-						<span class="feature-icon">💎</span>
-						<span>Luxury Aesthetic Appeal</span>
-					</div>
-					<div class="feature-item">
-						<span class="feature-icon">🛡️</span>
-						<span>Durable Protection</span>
-					</div>
+					<span>🎨 One-of-a-Kind Patterns</span>
+					<span>✨ Stunning Visual Effects</span>
+					<span>💎 Luxury Aesthetic Appeal</span>
+					<span>🛡️ Durable Protection</span>
 				</div>
-				<Button href="#design-quote" class="cta-button">Get Design Consultation</Button>
+				<div class="hero-cta">
+					<a href="#design-quote" class="btn btn-primary">Get Design Consultation</a>
+					<a href="tel:+15132965525" class="btn btn-outline">(513) 296-5525</a>
+				</div>
 			</div>
-		</section>
+			<div class="hero-image">
+				<img src="/assets/images/services/metallic-epoxy-hero.webp" alt="Stunning metallic epoxy flooring installation" loading="eager" />
+			</div>
+		</Container>
+	</section>
+
+	<Container>
 
 		<!-- What is Metallic Epoxy -->
 		<section class="content-section">
@@ -560,50 +564,34 @@ const faqSchema = {
 
 		<!-- Design CTA Section -->
 		<section class="cta-section" id="design-quote">
-			<div class="cta-content">
-				<div class="cta-text">
-					<h2>Ready to Create Your Unique Artistic Floor?</h2>
-					<p>Transform your space with one-of-a-kind metallic epoxy artistry. Our design team specializes in creating custom floors that reflect your personal style and enhance your space's aesthetic appeal.</p>
-					
-					<div class="design-cta-features">
-						<div class="cta-feature">
-							<span class="feature-icon">🎨</span>
-							<strong>Free Design Consultation:</strong> Comprehensive aesthetic planning and visualization
+			<Container>
+				<div class="cta-content">
+					<div class="cta-text">
+						<h2>Ready to Create Your Unique Artistic Floor?</h2>
+						<p>Transform your space with one-of-a-kind metallic epoxy artistry. Our design team specializes in creating custom floors that reflect your personal style and enhance your space's aesthetic appeal.</p>
+						
+						<div class="design-features">
+							<div class="feature">🎨 Free Design Consultation</div>
+							<div class="feature">🎯 Custom Pattern Creation</div>
+							<div class="feature">✨ Premium Materials</div>
+							<div class="feature">🛡️ Artistic Warranty</div>
 						</div>
-						<div class="cta-feature">
-							<span class="feature-icon">🎯</span>
-							<strong>Custom Pattern Creation:</strong> Unique designs tailored to your vision
-						</div>
-						<div class="cta-feature">
-							<span class="feature-icon">✨</span>
-							<strong>Premium Materials:</strong> High-quality metallic pigments and protective coatings
-						</div>
-						<div class="cta-feature">
-							<span class="feature-icon">🛡️</span>
-							<strong>Artistic Warranty:</strong> Comprehensive coverage for your investment
+
+						<div class="contact-info">
+							<div class="contact-item">
+								<strong>📱 Call for Design Consultation:</strong> <a href="tel:+15132965525">(513) 296-5525</a>
+							</div>
+							<div class="contact-item">
+								<strong>📧 Email for Details:</strong> <a href="mailto:john@queencitysurfacecoatings.com">john@queencitysurfacecoatings.com</a>
+							</div>
 						</div>
 					</div>
 
-					<div class="contact-design">
-						<h3>Start Your Design Journey</h3>
-						<div class="contact-options">
-							<div class="contact-option">
-								<strong>📱 Design Consultation:</strong> <a href="tel:5137323276">(513) 732-3276</a>
-							</div>
-							<div class="contact-option">
-								<strong>📧 Design Inquiries:</strong> <a href="mailto:design@queencitysurfacecoatings.com">design@queencitysurfacecoatings.com</a>
-							</div>
-							<div class="contact-option">
-								<strong>💬 Project Planning:</strong> Complete the form below for personalized consultation
-							</div>
-						</div>
+					<div class="quote-form-container">
+						<QuoteRequestForm />
 					</div>
 				</div>
-
-				<div class="design-quote-form">
-					<QuoteRequestForm />
-				</div>
-			</div>
+			</Container>
 		</section>
 
 		<!-- Portfolio Gallery -->
@@ -682,7 +670,7 @@ const faqSchema = {
 			<div class="portfolio-cta">
 				<h3>See More of Our Work</h3>
 				<p>Visit our complete portfolio to explore additional metallic epoxy installations and get inspired for your project.</p>
-				<Button href="/portfolio" class="portfolio-button">View Complete Portfolio</Button>
+				<a href="/portfolio" class="btn btn-primary">View Complete Portfolio</a>
 			</div>
 		</section>
 
@@ -721,183 +709,7 @@ const faqSchema = {
 </Layout>
 
 <style>
-	/* Page Header */
-	.page-header {
-		text-align: center;
-		padding: 2rem 0 3rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 3rem;
-	}
-
-	.breadcrumb {
-		margin-bottom: 1.5rem;
-	}
-
-	.breadcrumb ol {
-		display: flex;
-		justify-content: center;
-		gap: 0.5rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		font-size: 0.9rem;
-	}
-
-	.breadcrumb li:not(:last-child)::after {
-		content: ">";
-		margin-left: 0.5rem;
-		opacity: 0.6;
-	}
-
-	.breadcrumb a {
-		color: var(--theme-primary);
-		text-decoration: none;
-	}
-
-	.breadcrumb a:hover {
-		text-decoration: underline;
-	}
-
-	.page-header h1 {
-		font-size: 3rem;
-		color: var(--theme-on-bg);
-		margin-bottom: 1rem;
-	}
-
-	.page-subtitle {
-		font-size: 1.25rem;
-		color: var(--theme-on-bg);
-		opacity: 0.8;
-		max-width: 700px;
-		margin: 0 auto;
-		line-height: 1.5;
-	}
-
-	/* Service Hero */
-	.service-hero {
-		margin: 4rem 0;
-	}
-
-	.hero-content {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: center;
-	}
-
-	.hero-text h2 {
-		color: var(--theme-primary);
-		font-size: 2rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.hero-text p {
-		font-size: 1.1rem;
-		line-height: 1.6;
-		margin-bottom: 2rem;
-	}
-
-	.key-benefits {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-		margin-bottom: 2rem;
-	}
-
-	.benefit-item {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-weight: 500;
-	}
-
-	.benefit-icon {
-		font-size: 1.2rem;
-	}
-
-	.hero-cta {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-	}
-
-	.hero-image img {
-		width: 100%;
-		height: 400px;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-	}
-
-	/* CTA Buttons */
-	.cta-buttons {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 2rem;
-		flex-wrap: wrap;
-	}
-
-	.btn {
-		padding: 1rem 2rem;
-		border-radius: var(--theme-button-border-radius);
-		text-decoration: none;
-		font-weight: 600;
-		transition: all var(--theme-transition);
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		border: 2px solid transparent;
-		min-height: 44px;
-	}
-
-	.btn-primary {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		border-color: var(--theme-primary);
-	}
-
-	.btn-primary:hover {
-		background: var(--theme-primary-hover);
-		border-color: var(--theme-primary-hover);
-		transform: translateY(-2px);
-	}
-
-	.btn-outline {
-		background: transparent;
-		color: var(--theme-primary);
-		border-color: var(--theme-primary);
-	}
-
-	.btn-outline:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-	}
-
-	/* Mobile Responsive */
-	@media (max-width: 768px) {
-		.page-header h1 {
-			font-size: 2rem;
-		}
-		
-		.hero-content {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		
-		.key-benefits {
-			grid-template-columns: 1fr;
-		}
-		
-		.hero-cta {
-			justify-content: center;
-		}
-		
-		.cta-buttons {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
+	/* Service hero and layout styling handled by global theme.css */
 
 	/* Content Sections */
 	.content-section {
@@ -1428,11 +1240,10 @@ const faqSchema = {
 
 	/* CTA Section */
 	.cta-section {
-		background: linear-gradient(135deg, var(--theme-surface-2), var(--theme-surface-3));
-		padding: 4rem 2rem;
-		margin: 4rem -2rem 0 -2rem;
-		border-radius: 2rem 2rem 0 0;
-		color: white;
+		background: var(--theme-surface-2);
+		color: var(--theme-on-surface-2);
+		padding: 4rem 0;
+		margin: 4rem 0;
 	}
 
 	.cta-content {
@@ -1440,78 +1251,54 @@ const faqSchema = {
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
 		align-items: start;
-		max-width: 1200px;
-		margin: 0 auto;
 	}
 
 	.cta-text h2 {
-		color: var(--theme-primary);
+		color: #FFC107;
 		margin-bottom: 1.5rem;
-		font-size: clamp(1.8rem, 4vw, 2.5rem);
+		font-size: 2.5rem;
 	}
 
 	.cta-text p {
 		line-height: 1.6;
 		margin-bottom: 2rem;
+		color: rgba(255, 255, 255, 0.9);
 	}
 
-	.design-cta-features {
-		margin: 2rem 0;
+	.design-features {
 		display: grid;
+		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
+		margin: 2rem 0;
 	}
 
-	.cta-feature {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		background: rgba(255, 255, 255, 0.1);
-		padding: 1rem;
-		border-radius: 0.5rem;
-		backdrop-filter: blur(10px);
+	.feature {
+		color: rgba(255, 255, 255, 0.9);
+		font-weight: 500;
 	}
 
-	.feature-icon {
-		font-size: 1.5rem;
-	}
-
-	.contact-design {
+	.contact-info {
 		margin-top: 2rem;
 	}
 
-	.contact-design h3 {
-		color: white;
+	.contact-item {
 		margin-bottom: 1rem;
+		color: rgba(255, 255, 255, 0.9);
 	}
 
-	.contact-options {
-		display: grid;
-		gap: 1rem;
-		margin-top: 1rem;
-	}
-
-	.contact-option {
-		background: rgba(255, 255, 255, 0.1);
-		padding: 1rem;
-		border-radius: 0.5rem;
-		backdrop-filter: blur(10px);
-	}
-
-	.contact-option a {
-		color: var(--theme-primary);
+	.contact-item a {
+		color: #FFC107;
 		font-weight: 600;
 		text-decoration: none;
 	}
 
-	.contact-option a:hover {
+	.contact-item a:hover {
 		text-decoration: underline;
 	}
 
-	.design-quote-form {
-		background: white;
-		border-radius: 1rem;
-		padding: 2rem;
-		box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+	.quote-form-container {
+		position: sticky;
+		top: 2rem;
 	}
 
 	/* Gallery */
@@ -1585,24 +1372,7 @@ const faqSchema = {
 		margin-bottom: 2rem;
 	}
 
-	.portfolio-button {
-		background: var(--theme-primary) !important;
-		color: var(--theme-on-primary) !important;
-		padding: 1rem 2rem !important;
-		font-size: 1rem !important;
-		font-weight: 600 !important;
-		border-radius: 2rem !important;
-		text-decoration: none !important;
-		display: inline-block;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-	}
-
-	.portfolio-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-		background: var(--theme-primary-hover) !important;
-	}
+	/* Portfolio button styling handled by global theme */
 
 	/* Service Areas */
 	.service-areas {
@@ -1678,6 +1448,10 @@ const faqSchema = {
 		.cta-content {
 			grid-template-columns: 1fr;
 			gap: 2rem;
+		}
+
+		.design-features {
+			grid-template-columns: 1fr;
 		}
 	}
 

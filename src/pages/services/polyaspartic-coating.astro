@@ -129,8 +129,50 @@ const seo = {
 		</section>
 	</Container>
 
-	<!-- Content sections would continue here -->
-	<!-- This is the basic structure template that will be expanded -->
+	<!-- Applications Section -->
+	<Container>
+		<section class="applications">
+			<h2>Perfect Applications for Polyaspartic Coatings</h2>
+			<div class="applications-grid">
+				<div class="application-card">
+					<h3>🚗 High-Performance Garages</h3>
+					<p>Upgrade from standard <a href="/services/garage-floor-epoxy">garage floor epoxy</a> when you need maximum durability and same-day turnaround. Perfect for automotive enthusiasts and collectors.</p>
+				</div>
+				<div class="application-card">
+					<h3>🏭 Commercial Applications</h3>
+					<p>Ideal for <a href="/services/commercial-concrete-coating">commercial concrete coating</a> projects where downtime must be minimized. Warehouses, retail spaces, and manufacturing facilities.</p>
+				</div>
+				<div class="application-card">
+					<h3>✨ Metallic Topcoats</h3>
+					<p>Often used as a protective topcoat over <a href="/services/metallic-epoxy-flooring">metallic epoxy flooring</a> to enhance UV resistance and extend lifespan of decorative effects.</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Related Services Section -->
+	<Container>
+		<section class="related-services">
+			<h2>Compare Our Flooring Solutions</h2>
+			<div class="services-comparison">
+				<div class="service-option">
+					<h3><a href="/services/garage-floor-epoxy">Traditional Epoxy Systems</a></h3>
+					<p>Longer cure times but lower cost. Best for projects where time is not critical and budget is a primary concern.</p>
+					<a href="/services/garage-floor-epoxy" class="btn btn-outline">Learn More</a>
+				</div>
+				<div class="service-option featured">
+					<h3>Polyaspartic Coating</h3>
+					<p>Premium fast-cure technology. Higher initial cost but exceptional value for urgent projects and commercial applications.</p>
+					<span class="current-page">Current Page</span>
+				</div>
+				<div class="service-option">
+					<h3><a href="/services/metallic-epoxy-flooring">Metallic Epoxy Systems</a></h3>
+					<p>Artistic decorative solutions. Often combined with polyaspartic topcoats for the ultimate in both beauty and performance.</p>
+					<a href="/services/metallic-epoxy-flooring" class="btn btn-outline">Learn More</a>
+				</div>
+			</div>
+		</section>
+	</Container>
 
 	<!-- Final Call to Action -->
 	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
@@ -323,5 +365,101 @@ const seo = {
 			flex-direction: column;
 			align-items: center;
 		}
+	}
+	/* Applications Section */
+	.applications {
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.applications-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.application-card {
+		background: var(--theme-surface-1);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 2px solid transparent;
+		transition: var(--theme-transition);
+	}
+
+	.application-card:hover {
+		border-color: var(--theme-primary);
+		transform: translateY(-2px);
+	}
+
+	.application-card h3 {
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.application-card a {
+		color: var(--theme-primary);
+		text-decoration: none;
+	}
+
+	.application-card a:hover {
+		text-decoration: underline;
+	}
+
+	/* Related Services Section */
+	.related-services {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		margin: 2rem 0;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.services-comparison {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.service-option {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 2px solid var(--theme-border-light);
+		text-align: center;
+		transition: var(--theme-transition);
+	}
+
+	.service-option.featured {
+		border-color: var(--theme-primary);
+		background: linear-gradient(135deg, var(--theme-primary), var(--theme-primary-hover));
+		color: var(--theme-on-primary);
+	}
+
+	.service-option h3 {
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.service-option.featured h3 {
+		color: var(--theme-on-primary);
+	}
+
+	.service-option h3 a {
+		color: var(--theme-text-primary);
+		text-decoration: none;
+	}
+
+	.service-option h3 a:hover {
+		color: var(--theme-primary);
+	}
+
+	.current-page {
+		background: var(--theme-on-primary);
+		color: var(--theme-primary);
+		padding: 0.5rem 1rem;
+		border-radius: var(--theme-button-border-radius);
+		font-weight: 600;
+		display: inline-block;
 	}
 </style>

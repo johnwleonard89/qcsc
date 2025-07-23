@@ -32,11 +32,11 @@ Epoxy flooring isn't just paint – it's a two-part system that creates a chemic
 
 ### Types of Epoxy Systems We Use:
 
-**100% Solids Epoxy**: The gold standard for durability and chemical resistance. Perfect for garages and high-traffic areas.
+**100% Solids Epoxy**: The gold standard for durability and chemical resistance. Perfect for [garage floor epoxy](/services/garage-floor-epoxy) and high-traffic areas.
 
-**Water-Based Epoxy**: Great for areas where odor is a concern, like finished basements.
+**Water-Based Epoxy**: Great for areas where odor is a concern, like [finished basements](/services/basement-floor-coating).
 
-**Polyaspartic Topcoats**: UV-resistant and incredibly fast-curing. We can often complete your project in one day!
+**[Polyaspartic Topcoats](/services/polyaspartic-coating)**: UV-resistant and incredibly fast-curing. We can often complete your project in one day!
 
 ## The Real Benefits for Cincinnati Homeowners
 
@@ -158,7 +158,7 @@ While store-bought epoxy kits are available, professional installation offers si
 
 ### Color Fading
 **Cause**: UV exposure without proper topcoat
-**Our Solution**: UV-resistant polyaspartic topcoats
+**Our Solution**: UV-resistant [polyaspartic topcoats](/services/polyaspartic-coating)
 
 ### Slippery Surface
 **Cause**: High-gloss finish without anti-slip additives
@@ -166,15 +166,15 @@ While store-bought epoxy kits are available, professional installation offers si
 
 ## The Queen City Difference
 
-As a veteran-owned business based right here in Milford, we understand Cincinnati's unique challenges. We're not just installing floors – we're protecting your investment and improving your quality of life.
+As a veteran-owned business based right here in [Milford](/service-areas/ohio/milford-concrete-coating), we understand [Cincinnati's](/service-areas/ohio/cincinnati-concrete-coating) unique challenges. We're not just installing floors – we're protecting your investment and improving your quality of life.
 
-Every project gets our full attention, whether it's a single-car garage in Hyde Park or a warehouse in Sharonville. We use only the best materials, follow proven processes, and stand behind our work with solid warranties.
+Every project gets our full attention, whether it's a single-car garage in [Hyde Park](/service-areas/ohio/hyde-park-concrete-coating) or a [commercial warehouse](/services/commercial-concrete-coating) in [Sharonville](/service-areas/ohio/sharonville-concrete-coating). We use only the best materials, follow proven processes, and stand behind our work with solid warranties.
 
 ## Ready to Get Started?
 
 If you're tired of looking at that ugly concrete floor, we're here to help. We offer free consultations where we'll assess your space, discuss options, and provide an honest quote with no pressure.
 
-Give us a call at (513) 296-5525 or shoot us an email at john@queencitysurfacecoatings.com. We serve the entire Cincinnati tri-state area and would love to help transform your space.
+Give us a call at (513) 296-5525 or shoot us an email at john@queencitysurfacecoatings.com. We serve the entire [Cincinnati tri-state area](/service-areas/) and would love to help transform your space.
 
 Remember, a quality epoxy floor is an investment in your home that you'll enjoy for years to come. Don't settle for cheap imitations – choose a contractor who'll do it right the first time.
 

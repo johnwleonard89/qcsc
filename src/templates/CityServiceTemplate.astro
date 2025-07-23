@@ -473,43 +473,84 @@ const localTestimonials = [
 		</section>
 	</Container>
 
-	<!-- Contact Form -->
+	<!-- Contact Section -->
 	<Container>
-		<section class="contact-form-section">
-			<div class="contact-grid">
-				<div class="contact-info">
-					<h2>Get Your Free {service.name} Estimate in {city.name}</h2>
-					<p>
-						Ready to transform your {city.name} property with professional {service.name.toLowerCase()}? 
-						Contact us today for a free, no-obligation estimate.
-					</p>
-					
-					<div class="contact-details">
-						<div class="contact-item">
-							<strong>📞 Phone:</strong>
-							<a href="tel:+15132965525">(513) 296-5525</a>
-						</div>
-						<div class="contact-item">
-							<strong>📧 Email:</strong>
-							<span>john@queencitysurfacecoatings.com</span>
-						</div>
-						<div class="contact-item">
-							<strong>🕒 Response Time:</strong>
-							<span>Same day for {city.name} area</span>
-						</div>
-						<div class="contact-item">
-							<strong>🚚 Service Area:</strong>
-							<span>All of {city.name} & {city.county} County</span>
-						</div>
-					</div>
+		<section class="contact-section">
+			<div class="contact-content">
+				<h2>Get Your Free {service.name} Estimate in {city.name}</h2>
+				<p>
+					Ready to transform your {city.name} property with professional {service.name.toLowerCase()}? 
+					Contact us today for a free, no-obligation estimate.
+				</p>
+				
+				<div class="contact-buttons">
+					<a href="tel:+15132965525" class="phone-button">
+						📞 (513) 296-5525
+					</a>
+					<button class="estimate-button" onclick="openEstimateModal()">
+						Get Free Estimate
+					</button>
 				</div>
 				
-				<div class="form-container">
-					<QuoteRequestForm />
+				<div class="contact-details">
+					<div class="contact-item">
+						<strong>📧 Email:</strong>
+						<span>john@queencitysurfacecoatings.com</span>
+					</div>
+					<div class="contact-item">
+						<strong>🕒 Response Time:</strong>
+						<span>Same day for {city.name} area</span>
+					</div>
+					<div class="contact-item">
+						<strong>🚚 Service Area:</strong>
+						<span>All of {city.name} & {city.county} County</span>
+					</div>
 				</div>
 			</div>
 		</section>
 	</Container>
+
+	<!-- Estimate Modal -->
+	<div id="estimateModal" class="modal" onclick="closeModalOutside(event)">
+		<div class="modal-content">
+			<span class="close" onclick="closeEstimateModal()">&times;</span>
+			<h3>Request Free Estimate</h3>
+			<form class="estimate-form" onsubmit="submitEstimateForm(event)">
+				<div class="form-group">
+					<label for="name">Name *</label>
+					<input type="text" id="name" name="name" required>
+				</div>
+				<div class="form-group">
+					<label for="phone">Phone *</label>
+					<input type="tel" id="phone" name="phone" required>
+				</div>
+				<div class="form-group">
+					<label for="email">Email *</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<div class="form-group">
+					<label for="address">Property Address</label>
+					<input type="text" id="address" name="address" placeholder="{city.name}, {city.stateAbbr} address">
+				</div>
+				<div class="form-group">
+					<label for="service">Service Needed</label>
+					<select id="service" name="service">
+						<option value="{service.slug}" selected>{service.name}</option>
+						<option value="garage-floor-epoxy">Garage Floor Epoxy</option>
+						<option value="metallic-epoxy-flooring">Metallic Epoxy Flooring</option>
+						<option value="basement-floor-coating">Basement Floor Coating</option>
+						<option value="polyaspartic-coating">Polyaspartic Coating</option>
+						<option value="commercial-concrete-coating">Commercial Concrete Coating</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="message">Project Details</label>
+					<textarea id="message" name="message" rows="4" placeholder="Tell us about your {service.name.toLowerCase()} project in {city.name}..."></textarea>
+				</div>
+				<button type="submit" class="submit-button">Request Free Estimate</button>
+			</form>
+		</div>
+	</div>
 
 	<!-- FAQ Section -->
 	<Container>
@@ -598,6 +639,7 @@ const localTestimonials = [
 	/* Local Introduction */
 	.local-intro {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.intro-content {
@@ -660,6 +702,7 @@ const localTestimonials = [
 	/* Service Benefits */
 	.service-benefits {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.service-benefits h2 {
@@ -713,6 +756,7 @@ const localTestimonials = [
 		padding: 4rem 2rem;
 		border-radius: 1rem;
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.local-projects h2 {
@@ -774,6 +818,7 @@ const localTestimonials = [
 	/* Process Steps */
 	.process-section {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.process-section h2 {
@@ -818,6 +863,7 @@ const localTestimonials = [
 	/* Applications */
 	.applications-section {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.applications-section h2 {
@@ -857,6 +903,7 @@ const localTestimonials = [
 		padding: 4rem 2rem;
 		border-radius: 1rem;
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.why-choose-us h2 {
@@ -885,6 +932,7 @@ const localTestimonials = [
 	/* Testimonials */
 	.local-testimonials {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.local-testimonials h2 {
@@ -940,6 +988,7 @@ const localTestimonials = [
 	/* Related Services & Cities */
 	.related-services, .related-cities {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.related-services h2, .related-cities h2 {
@@ -967,6 +1016,7 @@ const localTestimonials = [
 		padding: 2rem;
 		border-radius: 0.75rem;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		text-align: center;
 	}
 
 	.service-card h3, .city-card h3 {
@@ -998,6 +1048,7 @@ const localTestimonials = [
 	/* County Link Section */
 	.county-link-section {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.county-link-card {
@@ -1028,36 +1079,85 @@ const localTestimonials = [
 		line-height: 1.6;
 	}
 
-	/* Contact Form Section */
-	.contact-form-section {
+	/* Contact Section */
+	.contact-section {
 		background: var(--theme-surface-1);
 		padding: 4rem 2rem;
 		border-radius: 1rem;
 		margin: 4rem 0;
+		text-align: center;
 	}
 
-	.contact-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-		align-items: start;
+	.contact-content {
+		max-width: 800px;
+		margin: 0 auto;
 	}
 
-	.contact-info h2 {
+	.contact-content h2 {
 		color: var(--theme-primary);
 		margin-bottom: 1rem;
 		font-size: 2rem;
 	}
 
-	.contact-info p {
+	.contact-content p {
 		font-size: 1.1rem;
 		margin-bottom: 2rem;
 		line-height: 1.6;
 	}
 
+	.contact-buttons {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin: 2rem 0;
+		flex-wrap: wrap;
+	}
+
+	.phone-button {
+		background: #FFD700;
+		color: #0066CC;
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		border: 2px solid #FFD700;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.phone-button:hover {
+		background: #FFC000;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+	}
+
+	.estimate-button {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		border: 2px solid var(--theme-primary);
+		font-weight: 700;
+		font-size: 1.1rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+
+	.estimate-button:hover {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
 	.contact-details {
 		display: grid;
 		gap: 1rem;
+		margin-top: 2rem;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.contact-item {
@@ -1071,15 +1171,113 @@ const localTestimonials = [
 		font-weight: 600;
 	}
 
-	.contact-item a {
+	/* Modal Styles */
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		animation: fadeIn 0.3s;
+	}
+
+	.modal-content {
+		background-color: var(--theme-bg);
+		margin: 5% auto;
+		padding: 2rem;
+		border-radius: 1rem;
+		width: 90%;
+		max-width: 500px;
+		position: relative;
+		max-height: 80vh;
+		overflow-y: auto;
+	}
+
+	.close {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		font-size: 2rem;
+		font-weight: bold;
+		cursor: pointer;
+		color: var(--theme-on-bg);
+		transition: color 0.3s;
+	}
+
+	.close:hover {
 		color: var(--theme-primary);
-		text-decoration: none;
+	}
+
+	.modal-content h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.estimate-form {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.form-group label {
 		font-weight: 600;
+		color: var(--theme-on-bg);
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		padding: 0.75rem;
+		border: 2px solid rgba(0, 0, 0, 0.1);
+		border-radius: 0.5rem;
+		font-size: 1rem;
+		transition: border-color 0.3s;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: var(--theme-primary);
+	}
+
+	.submit-button {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 0.5rem;
+		font-weight: 700;
+		font-size: 1.1rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-top: 1rem;
+	}
+
+	.submit-button:hover {
+		background: var(--theme-primary-hover);
+		transform: translateY(-2px);
+	}
+
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
 	}
 
 	/* FAQ Section */
 	.faq-section {
 		margin: 4rem 0;
+		text-align: center;
 	}
 
 	.faq-section h2 {
@@ -1221,8 +1419,9 @@ const localTestimonials = [
 			grid-template-columns: 1fr;
 		}
 		
-		.contact-grid {
-			grid-template-columns: 1fr;
+		.contact-buttons {
+			flex-direction: column;
+			align-items: center;
 		}
 		
 		.cta-buttons {
@@ -1257,5 +1456,47 @@ const localTestimonials = [
 				}
 			});
 		});
+	});
+</script>
+
+<script>
+	function openEstimateModal() {
+		document.getElementById('estimateModal').style.display = 'block';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeEstimateModal() {
+		document.getElementById('estimateModal').style.display = 'none';
+		document.body.style.overflow = 'auto';
+	}
+
+	function closeModalOutside(event) {
+		if (event.target === document.getElementById('estimateModal')) {
+			closeEstimateModal();
+		}
+	}
+
+	function submitEstimateForm(event) {
+		event.preventDefault();
+		
+		const formData = new FormData(event.target);
+		const data = Object.fromEntries(formData);
+		
+		// Here you would typically send the data to your backend
+		console.log('Form submitted:', data);
+		
+		// Show success message
+		alert('Thank you! We\'ll contact you soon with your free estimate.');
+		
+		// Close modal and reset form
+		closeEstimateModal();
+		event.target.reset();
+	}
+
+	// Close modal with Escape key
+	document.addEventListener('keydown', function(event) {
+		if (event.key === 'Escape') {
+			closeEstimateModal();
+		}
 	});
 </script>

@@ -1065,12 +1065,18 @@ const seo = {
 
 .contact-method {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 1rem;
-	padding: 1rem;
+	padding: 1.5rem;
 	background: var(--theme-bg);
 	border-radius: var(--theme-card-radius);
-	text-align: center;
+	border: 1px solid var(--theme-border-light);
+	transition: var(--theme-transition);
+}
+
+.contact-method:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--theme-shadow-medium);
 }
 
 .contact-icon {

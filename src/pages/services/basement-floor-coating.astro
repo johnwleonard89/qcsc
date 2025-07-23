@@ -129,8 +129,71 @@ const seo = {
 		</section>
 	</Container>
 
-	<!-- Content sections would continue here -->
-	<!-- This is the basic structure template that will be expanded -->
+	<!-- Benefits Section -->
+	<Container>
+		<section class="benefits-section">
+			<h2>Basement Floor Coating Benefits</h2>
+			<div class="benefits-grid">
+				<div class="benefit-card">
+					<div class="benefit-icon">💧</div>
+					<h3>Moisture Protection</h3>
+					<p>Creates a vapor barrier that prevents moisture from seeping through concrete, protecting against mold and mildew growth.</p>
+				</div>
+				<div class="benefit-card">
+					<div class="benefit-icon">🏠</div>
+					<h3>Usable Living Space</h3>
+					<p>Transform dark, musty basements into bright, comfortable living areas perfect for recreation rooms, home gyms, or storage.</p>
+				</div>
+				<div class="benefit-card">
+					<div class="benefit-icon">💡</div>
+					<h3>Enhanced Lighting</h3>
+					<p>Light-colored coatings reflect more light, making basement spaces brighter and more welcoming.</p>
+				</div>
+				<div class="benefit-card">
+					<div class="benefit-icon">🛡️</div>
+					<h3>Easy Maintenance</h3>
+					<p>Sealed surfaces are easy to clean and maintain, resisting stains and requiring only basic cleaning.</p>
+				</div>
+			</div>
+		</section>
+	</Container>
+
+	<!-- Process Section -->
+	<Container>
+		<section class="process-section">
+			<h2>Our Basement Coating Process</h2>
+			<div class="process-steps">
+				<div class="process-step">
+					<div class="step-number">1</div>
+					<div class="step-content">
+						<h3>Moisture Assessment</h3>
+						<p>We thoroughly test for moisture levels and identify any water infiltration issues that need to be addressed before coating.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="step-number">2</div>
+					<div class="step-content">
+						<h3>Surface Preparation</h3>
+						<p>Concrete surfaces are cleaned, repaired, and properly prepared to ensure maximum adhesion of the coating system.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="step-number">3</div>
+					<div class="step-content">
+						<h3>Moisture Barrier Application</h3>
+						<p>We apply a specialized moisture-resistant primer that creates an effective vapor barrier.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="step-number">4</div>
+					<div class="step-content">
+						<h3>Finish Coating</h3>
+						<p>The final coating is applied, creating a durable, attractive surface that's ready for immediate use.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</Container>
 
 	<!-- Final Call to Action -->
 	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
@@ -322,6 +385,110 @@ const seo = {
 		.cta-buttons {
 			flex-direction: column;
 			align-items: center;
+		}
+	}
+	/* Benefits Section */
+	.benefits-section {
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.benefits-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.benefit-card {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 2px solid var(--theme-surface-1);
+		transition: var(--theme-transition);
+		text-align: center;
+	}
+
+	.benefit-card:hover {
+		border-color: var(--theme-primary);
+		transform: translateY(-2px);
+		box-shadow: var(--theme-shadow-medium);
+	}
+
+	.benefit-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.benefit-card h3 {
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	/* Process Section */
+	.process-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 2rem;
+		margin: 2rem 0;
+		border-radius: var(--theme-shape-radius);
+	}
+
+	.process-steps {
+		display: grid;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.process-step {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2rem;
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 2px solid transparent;
+		transition: var(--theme-transition);
+	}
+
+	.process-step:hover {
+		border-color: var(--theme-primary);
+		transform: translateY(-2px);
+	}
+
+	.step-number {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+
+	.step-content h3 {
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	/* Mobile Responsiveness */
+	@media (max-width: 768px) {
+		.hero-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+		
+		.benefits-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.process-step {
+			grid-template-columns: 1fr;
+			text-align: center;
+			gap: 1rem;
 		}
 	}
 </style>

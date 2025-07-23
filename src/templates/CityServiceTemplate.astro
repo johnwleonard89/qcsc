@@ -515,40 +515,19 @@ const localTestimonials = [
 		<div class="modal-content">
 			<span class="close" onclick="closeEstimateModal()">&times;</span>
 			<h3>Request Free Estimate</h3>
-			<form class="estimate-form" onsubmit="submitEstimateForm(event)">
-				<div class="form-group">
-					<label for="name">Name *</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-				<div class="form-group">
-					<label for="phone">Phone *</label>
-					<input type="tel" id="phone" name="phone" required>
-				</div>
-				<div class="form-group">
-					<label for="email">Email *</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-				<div class="form-group">
-					<label for="address">Property Address</label>
-					<input type="text" id="address" name="address" placeholder="{city.name}, {city.stateAbbr} address">
-				</div>
-				<div class="form-group">
-					<label for="service">Service Needed</label>
-					<select id="service" name="service">
-						<option value="{service.slug}" selected>{service.name}</option>
-						<option value="garage-floor-epoxy">Garage Floor Epoxy</option>
-						<option value="metallic-epoxy-flooring">Metallic Epoxy Flooring</option>
-						<option value="basement-floor-coating">Basement Floor Coating</option>
-						<option value="polyaspartic-coating">Polyaspartic Coating</option>
-						<option value="commercial-concrete-coating">Commercial Concrete Coating</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="message">Project Details</label>
-					<textarea id="message" name="message" rows="4" placeholder="Tell us about your {service.name.toLowerCase()} project in {city.name}..."></textarea>
-				</div>
-				<button type="submit" class="submit-button">Request Free Estimate</button>
-			</form>
+			<!-- Google Forms Embedded -->
+			<iframe 
+				class="google-form-iframe"
+				src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true&usp=pp_url&entry.FIELD_ID={service.name}&entry.LOCATION_FIELD_ID={city.name}, {city.stateAbbr}"
+				width="100%" 
+				height="600" 
+				frameborder="0" 
+				marginheight="0" 
+				marginwidth="0"
+				loading="lazy"
+			>
+				Loading form...
+			</iframe>
 		</div>
 	</div>
 

@@ -265,40 +265,19 @@ const faqSchema = {
 		<div class="modal-content">
 			<span class="close" onclick="closeEstimateModal()">&times;</span>
 			<h3>Request Free Estimate</h3>
-			<form class="estimate-form" onsubmit="submitEstimateForm(event)">
-				<div class="form-group">
-					<label for="name">Name *</label>
-					<input type="text" id="name" name="name" required>
-				</div>
-				<div class="form-group">
-					<label for="phone">Phone *</label>
-					<input type="tel" id="phone" name="phone" required>
-				</div>
-				<div class="form-group">
-					<label for="email">Email *</label>
-					<input type="email" id="email" name="email" required>
-				</div>
-				<div class="form-group">
-					<label for="address">Property Address</label>
-					<input type="text" id="address" name="address" placeholder="{county.name} County address">
-				</div>
-				<div class="form-group">
-					<label for="service">Service Needed</label>
-					<select id="service" name="service">
-						<option value="{service.slug}" selected>{service.name}</option>
-						<option value="garage-floor-epoxy">Garage Floor Epoxy</option>
-						<option value="metallic-epoxy-flooring">Metallic Epoxy Flooring</option>
-						<option value="basement-floor-coating">Basement Floor Coating</option>
-						<option value="polyaspartic-coating">Polyaspartic Coating</option>
-						<option value="commercial-concrete-coating">Commercial Concrete Coating</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label for="message">Project Details</label>
-					<textarea id="message" name="message" rows="4" placeholder="Tell us about your {service.name.toLowerCase()} project in {county.name} County..."></textarea>
-				</div>
-				<button type="submit" class="submit-button">Request Free Estimate</button>
-			</form>
+			<!-- Google Forms Embedded -->
+			<iframe 
+				class="google-form-iframe"
+				src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true&usp=pp_url&entry.FIELD_ID={service.name}&entry.LOCATION_FIELD_ID={county.name} County, {county.stateAbbr}"
+				width="100%" 
+				height="600" 
+				frameborder="0" 
+				marginheight="0" 
+				marginwidth="0"
+				loading="lazy"
+			>
+				Loading form...
+			</iframe>
 		</div>
 	</div>
 
@@ -809,55 +788,72 @@ const faqSchema = {
 		text-align: center;
 	}
 
-	.estimate-form {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.form-group {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.form-group label {
-		font-weight: 600;
-		color: var(--theme-on-bg);
-	}
-
-	.form-group input,
-	.form-group select,
-	.form-group textarea {
-		padding: 0.75rem;
-		border: 2px solid rgba(0, 0, 0, 0.1);
+	/* Google Form Styling */
+	.google-form-iframe {
 		border-radius: 0.5rem;
-		font-size: 1rem;
-		transition: border-color 0.3s;
+		overflow: hidden;
 	}
 
-	.form-group input:focus,
-	.form-group select:focus,
-	.form-group textarea:focus {
-		outline: none;
-		border-color: var(--theme-primary);
+	/* Hide Google Forms branding and style form elements */
+	.google-form-iframe :global(.freebirdFormviewerViewFormCard) {
+		background: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
 	}
 
-	.submit-button {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
-		padding: 1rem 2rem;
-		border: none;
-		border-radius: 0.5rem;
-		font-weight: 700;
-		font-size: 1.1rem;
-		cursor: pointer;
-		transition: all 0.3s ease;
-		margin-top: 1rem;
+	.google-form-iframe :global(.freebirdFormviewerViewHeaderHeader) {
+		display: none !important;
 	}
 
-	.submit-button:hover {
-		background: var(--theme-primary-hover);
-		transform: translateY(-2px);
+	.google-form-iframe :global(.freebirdFormviewerViewFormContent) {
+		padding: 0 !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionBaseRoot) {
+		margin-bottom: 1rem !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionTextRoot input),
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionTextareaRoot textarea),
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionDropdownRoot select) {
+		padding: 0.75rem !important;
+		border: 2px solid rgba(0, 0, 0, 0.1) !important;
+		border-radius: 0.5rem !important;
+		font-size: 1rem !important;
+		font-family: inherit !important;
+		width: 100% !important;
+		box-sizing: border-box !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionTextRoot input:focus),
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionTextareaRoot textarea:focus),
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionDropdownRoot select:focus) {
+		border-color: var(--theme-primary) !important;
+		outline: none !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerViewNavigationSubmitButton) {
+		background: var(--theme-primary) !important;
+		color: var(--theme-on-primary) !important;
+		padding: 1rem 2rem !important;
+		border: none !important;
+		border-radius: 0.5rem !important;
+		font-weight: 700 !important;
+		font-size: 1.1rem !important;
+		cursor: pointer !important;
+		transition: all 0.3s ease !important;
+		margin-top: 1rem !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerViewNavigationSubmitButton:hover) {
+		background: var(--theme-primary-hover) !important;
+		transform: translateY(-2px) !important;
+	}
+
+	.google-form-iframe :global(.freebirdFormviewerComponentsQuestionBaseTitle) {
+		font-weight: 600 !important;
+		color: var(--theme-on-bg) !important;
+		margin-bottom: 0.5rem !important;
 	}
 
 	@keyframes fadeIn {

@@ -2,8 +2,8 @@
 import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
 ---
 
-<form class="quote-form" name="quote-request" method="POST" data-netlify="true">
-	<input type="hidden" name="form-name" value="quote-request" />
+<form class="quote-form" action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.getElementById('form-success').style.display='block'; document.querySelector('.quote-form').style.display='none';}"></iframe>
 	
 	<div class="form-header">
 		<h3>Request a Free Quote</h3>
@@ -15,14 +15,14 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 			type="text"
 			label="First Name *"
 			id="firstName"
-			name="firstName"
+			name="entry.FIRST_NAME_ENTRY_ID"
 			required
 		/>
 		<FormInput
 			type="text"
 			label="Last Name *"
 			id="lastName"
-			name="lastName"
+			name="entry.LAST_NAME_ENTRY_ID"
 			required
 		/>
 	</div>
@@ -31,7 +31,7 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 		type="email"
 		label="Email Address *"
 		id="email"
-		name="email"
+		name="entry.EMAIL_ENTRY_ID"
 		required
 	/>
 
@@ -39,61 +39,19 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 		type="tel"
 		label="Phone Number *"
 		id="phone"
-		name="phone"
+		name="entry.PHONE_ENTRY_ID"
 		required
 		autocomplete="tel"
 		inputmode="tel"
 	/>
 
-	<FormInput
-		type="text"
-		label="City/Location"
-		id="location"
-		name="location"
-		placeholder="e.g., Cincinnati, West Chester"
-	/>
-
-	<FormSelect
-		label="Service Type *"
-		id="serviceType"
-		name="serviceType"
-		required
-	>
-		<option value="">Select a service</option>
-		<option value="epoxy-flooring">Epoxy Flooring</option>
-		<option value="concrete-polishing">Concrete Polishing</option>
-		<option value="surface-restoration">Surface Restoration</option>
-		<option value="not-sure">Not Sure - Need Consultation</option>
-	</FormSelect>
-
-	<FormInput
-		type="number"
-		label="Approximate Square Footage"
-		id="squareFootage"
-		name="squareFootage"
-		placeholder="e.g., 400"
-		inputmode="numeric"
-		pattern="[0-9]*"
-	/>
-
 	<FormTextarea
-		label="Project Details"
+		label="Project Details *"
 		id="projectDetails"
-		name="projectDetails"
+		name="entry.PROJECT_DETAILS_ENTRY_ID"
 		placeholder="Tell us about your project: location (garage, basement, commercial space), current floor condition, timeline, specific requirements, etc."
+		required
 	/>
-
-	<FormSelect
-		label="Timeline"
-		id="timeline"
-		name="timeline"
-	>
-		<option value="">When do you want to start?</option>
-		<option value="asap">As soon as possible</option>
-		<option value="1-month">Within 1 month</option>
-		<option value="2-3-months">2-3 months</option>
-		<option value="planning">Just planning/researching</option>
-	</FormSelect>
 
 	<Button type="submit" class="quote-submit-button">
 		Get My Free Quote
@@ -104,10 +62,20 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	</p>
 </form>
 
+<div id="form-success" style="display:none;" class="form-success">
+	<div class="success-content">
+		<h3>Thank You!</h3>
+		<p>Your quote request has been submitted successfully. We'll get back to you within 24 hours.</p>
+		<div class="success-contact">
+			<p>For immediate assistance, call us at <a href="tel:+15132965525">(513) 296-5525</a></p>
+		</div>
+	</div>
+</div>
+
 <style>
-/* Quote Request Form - Consistent Styling */
+/* Quote Request Form - Navy & Yellow Theme */
 .quote-form {
-	background: var(--theme-bg);
+	background: #002F4B;
 	padding: 2rem;
 	border-radius: var(--theme-shape-radius);
 	box-shadow: 0 4px 16px var(--theme-shadow-light);
@@ -123,7 +91,7 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 }
 
 .form-header h3 {
-	color: var(--theme-primary);
+	color: #FFC107;
 	margin-bottom: 1rem;
 	font-size: clamp(1.5rem, 4vw, 2rem);
 	font-weight: 700;
@@ -131,8 +99,8 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 }
 
 .form-header p {
-	color: var(--theme-on-bg);
-	opacity: 0.8;
+	color: white;
+	opacity: 0.9;
 	line-height: 1.6;
 	margin: 0;
 }
@@ -145,8 +113,8 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 
 .form-note {
 	font-size: 0.875rem;
-	color: var(--theme-on-bg);
-	opacity: 0.7;
+	color: white;
+	opacity: 0.8;
 	text-align: center;
 	line-height: 1.4;
 	margin-top: 0.5rem;
@@ -157,7 +125,7 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	margin-top: 1rem;
 }
 
-/* Ensure form components match theme */
+/* Form components styling */
 :global(.quote-form .form-input),
 :global(.quote-form .form-select),
 :global(.quote-form .form-textarea) {
@@ -165,19 +133,24 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	font-size: 16px;
 	border-radius: var(--theme-shape-radius);
 	padding: 0.75rem 1rem;
-	border: 2px solid var(--theme-border-light);
-	background: var(--theme-bg);
-	color: var(--theme-on-bg);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
 	transition: var(--theme-transition);
 	font-family: var(--theme-font-family-sans);
+}
+
+:global(.quote-form .form-input::placeholder),
+:global(.quote-form .form-textarea::placeholder) {
+	color: rgba(255, 255, 255, 0.6);
 }
 
 :global(.quote-form .form-input:focus),
 :global(.quote-form .form-select:focus),
 :global(.quote-form .form-textarea:focus) {
 	outline: none;
-	border-color: var(--theme-primary);
-	box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-primary) 20%, transparent);
+	border-color: #FFC107;
+	box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3);
 }
 
 :global(.quote-form .form-textarea) {
@@ -188,8 +161,8 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 :global(.quote-form button) {
 	width: 100%;
 	min-height: 48px;
-	background: var(--theme-primary);
-	color: var(--theme-on-primary);
+	background: #FFC107;
+	color: #002F4B;
 	border: none;
 	border-radius: var(--theme-button-border-radius);
 	font-size: 1rem;
@@ -197,21 +170,53 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	font-family: var(--theme-font-family-sans);
 	cursor: pointer;
 	transition: var(--theme-transition);
-	box-shadow: 0 4px 16px var(--theme-shadow-medium);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 :global(.quote-form button:hover) {
-	background: var(--theme-primary-hover);
+	background: #E6AC00;
 	transform: translateY(-2px);
-	box-shadow: 0 8px 24px var(--theme-shadow-dark);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 :global(.quote-form label) {
 	font-weight: 600;
-	color: var(--theme-on-bg);
+	color: white;
 	margin-bottom: 0.5rem;
 	display: block;
 	font-size: 0.875rem;
+}
+
+/* Success Message Styling */
+.form-success {
+	background: #002F4B;
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	box-shadow: 0 4px 16px var(--theme-shadow-light);
+	text-align: center;
+	color: white;
+}
+
+.form-success h3 {
+	color: #FFC107;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.form-success p {
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+.success-contact a {
+	color: #FFC107;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.success-contact a:hover {
+	text-decoration: underline;
 }
 
 /* Mobile Responsive */
@@ -233,3 +238,19 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	}
 }
 </style>
+
+<script>
+	// Initialize form submission state
+	let submitted = false;
+	
+	// Handle form submission success
+	document.addEventListener('DOMContentLoaded', function() {
+		const form = document.querySelector('.quote-form');
+		const successDiv = document.getElementById('form-success');
+		
+		// Add form submit event listener
+		form.addEventListener('submit', function() {
+			submitted = true;
+		});
+	});
+</script>

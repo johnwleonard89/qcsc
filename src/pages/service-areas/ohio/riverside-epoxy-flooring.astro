@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Riverside',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '25,201',
+	specialty: 'Military Community Services',
+	landmarks: [
+		'Wright-Patterson Air Force Base',
+		'Riverside Municipal Building',
+		'Harshman Middle School',
+		'Stebbins High School',
+		'Community Park',
+		'Mad River',
+		'Historic Downtown Riverside',
+		'Wright State University (nearby)',
+		'Base Housing Areas',
+		'Military Family Community Center',
+		'Mad River Recreation Area',
+		'Veterans Memorial'
+	],
+	description: 'Queen City Surface Coatings proudly serves Riverside, Ohio, a Montgomery County military community adjacent to Wright-Patterson Air Force Base. As a veteran-owned company, we understand the unique needs of military families and provide epoxy flooring services that meet the high standards expected in this community of service members, veterans, and defense contractors.',
+	serviceRadius: 'All Riverside neighborhoods and Wright-Patterson AFB area',
+	zipCodes: ['45404', '45431'],
+	keyServices: [
+		'Military Family Epoxy Systems',
+		'Base Housing Community Services',
+		'Veteran Family Solutions',
+		'Quick Installation for PCS Moves',
+		'Defense Contractor Commercial',
+		'Military Community Residential'
+	],
+	localProjects: [
+		{
+			title: 'Wright-Patterson Military Family',
+			description: 'Expedited garage epoxy flooring for Air Force family preparing for PCS move, completed quickly to maximize home value and meet military timeline.',
+			service: 'Military PCS Garage System'
+		},
+		{
+			title: 'Riverside Veteran Family',
+			description: 'Premium basement floor coating for retired military family, creating functional space for hobbies and family activities in permanent residence.',
+			service: 'Veteran Family Basement'
+		},
+		{
+			title: 'Base Area Defense Contractor',
+			description: 'Commercial epoxy flooring for business serving Wright-Patterson area, providing professional appearance and durability for defense industry operations.',
+			service: 'Defense Contractor Commercial'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Staff Sergeant Michael Rodriguez',
+			location: 'Riverside, OH',
+			quote: 'Outstanding service from fellow veterans who understood our timeline. The garage epoxy was completed quickly and helped us get top dollar when we sold for our PCS move.',
+			service: 'Military PCS Garage System'
+		},
+		{
+			name: 'Colonel (Ret.) David Chen',
+			location: 'Wright-Patterson Area',
+			quote: 'Professional work from people who understand military standards. Our basement floor coating has created a perfect workshop space for retirement projects.',
+			service: 'Veteran Family Basement'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Wright-Patterson Air Force Base families?',
+			answer: 'Yes! As a veteran-owned company, we\'re proud to serve active duty military families at Wright-Patterson AFB and throughout Riverside, with expedited service for PCS moves.'
+		},
+		{
+			question: 'Can you work quickly for military families preparing for PCS moves?',
+			answer: 'Absolutely! We understand military timelines and offer priority scheduling for PCS moves, helping maximize home value and complete projects within tight deployment or transfer schedules.'
+		},
+		{
+			question: 'How do you serve defense contractors in the Riverside area?',
+			answer: 'We provide commercial epoxy flooring services for defense contractors and businesses serving Wright-Patterson, understanding the professional standards expected in the defense industry community.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'riverside-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

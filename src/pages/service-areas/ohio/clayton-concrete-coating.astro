@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Clayton',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '13,216',
+	specialty: 'Growing Suburban Services',
+	landmarks: [
+		'Northmont High School',
+		'Clayton Government Center',
+		'Wacky Golf & Go-Karts',
+		'Clayton Community Center',
+		'Englewood MetroPark (nearby)',
+		'Randolph Park',
+		'Clayton Fire Department',
+		'Stillwater River Access',
+		'MetroParks Bike Trail',
+		'Historic Salem Avenue',
+		'Community Recreation Areas',
+		'Northmont City Schools District'
+	],
+	description: 'Queen City Surface Coatings serves Clayton, Ohio, a growing Montgomery County suburban community known for family-friendly neighborhoods, excellent schools, and convenient access to recreational amenities. Our concrete coating services help Clayton residents enhance their homes with quality solutions that support the community\'s suburban lifestyle and growing family population.',
+	serviceRadius: 'All Clayton neighborhoods and Montgomery County areas',
+	zipCodes: ['45315', '45322'],
+	keyServices: [
+		'Growing Community Residential',
+		'Suburban Family Solutions',
+		'School District Services',
+		'New Development Coatings',
+		'Family-Focused Garage Systems',
+		'Community-Centered Services'
+	],
+	localProjects: [
+		{
+			title: 'Clayton New Family Home',
+			description: 'Garage floor coating for growing Clayton family, providing durable surface designed for suburban lifestyle and children\'s activities.',
+			service: 'Growing Community Family'
+		},
+		{
+			title: 'Northmont School District Family',
+			description: 'Complete basement transformation creating additional family space for school-age children and their activities in established Clayton neighborhood.',
+			service: 'School District Family Basement'
+		},
+		{
+			title: 'Clayton Suburban Development',
+			description: 'Multiple garage floor coatings throughout new Clayton subdivision, providing consistent quality for growing suburban community.',
+			service: 'New Development Systems'
+		}
+	],
+	testimonials: [
+		{
+			name: 'David and Sarah Martinez',
+			location: 'Clayton, OH',
+			quote: 'Perfect for our growing family! The garage coating handles all our suburban family needs - from sports equipment to DIY projects. Professional service that understands our community.',
+			service: 'Growing Community Family'
+		},
+		{
+			name: 'Clayton School Family',
+			location: 'Northmont District',
+			quote: 'Excellent work that created the extra family space we needed. The basement floor coating has been perfect for our kids\' activities and family gatherings.',
+			service: 'School District Family Basement'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Clayton\'s growing suburban community?',
+			answer: 'Yes! We understand the needs of Clayton\'s growing families and provide concrete coating solutions that support suburban lifestyles, children\'s activities, and home enhancement projects.'
+		},
+		{
+			question: 'Can you work in Clayton\'s new developments?',
+			answer: 'Absolutely! We work with Clayton families in both established neighborhoods and new developments, providing consistent quality that matches the community\'s growth and standards.'
+		},
+		{
+			question: 'How do you serve Northmont school district families?',
+			answer: 'We understand active families with school-age children and provide garage and basement coating solutions that handle sports equipment, school projects, and family activities with easy maintenance.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'clayton-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Xenia',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Greene',
+	population: '25,441',
+	specialty: 'County Seat Concrete Services',
+	landmarks: [
+		'Greene County Courthouse',
+		'Shawnee Park',
+		'Xenia Station',
+		'Blue Jacket Park',
+		'Prairie Run Trail',
+		'Creekside Trail',
+		'Xenia Community Center',
+		'Greene County Fairgrounds',
+		'Galloway Park',
+		'Arrowood Golf Course',
+		'Central State University (nearby)',
+		'Historic Downtown Xenia'
+	],
+	description: 'Queen City Surface Coatings serves Xenia, Ohio, the Greene County seat known for its historic downtown, excellent trail system, and strong community spirit. Our concrete coating services help Xenia residents and businesses enhance their properties with durable, professional-grade solutions that stand up to Ohio weather and provide long-lasting value.',
+	serviceRadius: 'All Xenia neighborhoods and Greene County areas',
+	zipCodes: ['45385'],
+	keyServices: [
+		'Residential Concrete Coating',
+		'Commercial Concrete Systems',
+		'Garage Floor Coating',
+		'Basement Floor Coating',
+		'Industrial Concrete Solutions',
+		'Municipal Building Coatings'
+	],
+	localProjects: [
+		{
+			title: 'Xenia Historic Downtown Business',
+			description: 'Commercial concrete coating renovation for historic downtown Xenia business, providing durable flooring that respects the building\'s character.',
+			service: 'Historic Commercial Coating'
+		},
+		{
+			title: 'Shawnee Park Area Residence',
+			description: 'Complete garage and basement floor coating for family home near Shawnee Park, creating durable, attractive living spaces.',
+			service: 'Residential Concrete Coating'
+		},
+		{
+			title: 'Greene County Municipal Building',
+			description: 'Government-grade concrete coating installation for county facility, providing professional appearance and long-term durability.',
+			service: 'Municipal Building Systems'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Tom and Mary Johnson',
+			location: 'Xenia, OH',
+			quote: 'Great service and quality work. Our garage floor has held up perfectly through two harsh Ohio winters. Professional team that understands our community.',
+			service: 'Garage Floor Coating'
+		},
+		{
+			name: 'Downtown Xenia Business Owner',
+			location: 'Historic District',
+			quote: 'They worked with us to find a solution that honored our historic building while providing modern functionality. Excellent results and professional service.',
+			service: 'Historic Commercial Renovation'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Xenia neighborhoods?',
+			answer: 'Yes, we provide concrete coating services throughout Xenia, including downtown historic district, Shawnee Park area, and all residential and commercial areas in the county seat.'
+		},
+		{
+			question: 'Can you work on historic buildings in downtown Xenia?',
+			answer: 'Absolutely. We have experience working with historic properties, ensuring our concrete coating solutions respect architectural character while providing modern performance and durability.'
+		},
+		{
+			question: 'What makes your coatings suitable for Ohio weather?',
+			answer: 'We use weather-resistant coating systems specifically designed for Ohio\'s climate variations, providing excellent protection against freeze-thaw cycles, moisture, and temperature changes.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'xenia-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

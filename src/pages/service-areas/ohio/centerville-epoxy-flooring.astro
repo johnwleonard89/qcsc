@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Centerville',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '24,090',
+	specialty: 'Premium Residential Epoxy Flooring',
+	landmarks: [
+		'Centerville High School',
+		'Oak Grove Park',
+		'Activity Center of Centerville',
+		'Stubbs Park',
+		'Centerville-Washington Park District',
+		'Yankee Trace Golf Club',
+		'Centerville Recreation Center',
+		'Holes Creek Park',
+		'Iron Horse Golf Club',
+		'Centerville Historic District',
+		'Benham\'s Grove',
+		'Grant Park'
+	],
+	description: 'Queen City Surface Coatings serves Centerville, Ohio, an upscale Montgomery County community known for excellent schools, beautiful neighborhoods, and high property values. Our premium epoxy flooring services help Centerville homeowners enhance their luxury properties with professional-grade coatings that match the community\'s high standards for quality and aesthetics.',
+	serviceRadius: 'All Centerville neighborhoods and surrounding Montgomery County areas',
+	zipCodes: ['45458', '45459'],
+	keyServices: [
+		'Premium Residential Epoxy Flooring',
+		'Luxury Garage Floor Coating',
+		'Basement Floor Coating',
+		'Decorative Concrete Systems',
+		'Metallic Epoxy Flooring',
+		'Polyaspartic Coating Systems'
+	],
+	localProjects: [
+		{
+			title: 'Centerville Executive Estate',
+			description: 'Premium garage transformation featuring custom metallic epoxy flooring with decorative elements for an upscale Centerville executive home.',
+			service: 'Luxury Garage Floor Coating'
+		},
+		{
+			title: 'Oak Grove Area Family',
+			description: 'Complete basement renovation with premium epoxy flooring, creating beautiful family entertainment space near Oak Grove Park.',
+			service: 'Basement Floor Coating'
+		},
+		{
+			title: 'Yankee Trace Golf Community',
+			description: 'Multiple garage floor coating installations throughout the exclusive Yankee Trace golf community residential area.',
+			service: 'Premium Residential Coatings'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Michael and Jennifer Thompson',
+			location: 'Centerville, OH',
+			quote: 'Outstanding quality that matches our Centerville home\'s luxury standards. The metallic epoxy garage floor is absolutely stunning and has become a showcase feature.',
+			service: 'Luxury Garage Floor Coating'
+		},
+		{
+			name: 'Dr. Robert Chen',
+			location: 'Oak Grove Area',
+			quote: 'Professional service from start to finish. Our basement floor coating has created a beautiful entertainment space that our family enjoys every day.',
+			service: 'Basement Floor Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Centerville neighborhoods?',
+			answer: 'Yes, we provide premium epoxy flooring services throughout Centerville, including Oak Grove area, Yankee Trace golf community, and all luxury residential neighborhoods.'
+		},
+		{
+			question: 'What premium coating options complement Centerville luxury homes?',
+			answer: 'For Centerville\'s upscale properties, we offer metallic epoxy systems, custom decorative coatings, and premium polyaspartic options that enhance luxury home value and aesthetic appeal.'
+		},
+		{
+			question: 'How do you ensure quality matches Centerville standards?',
+			answer: 'We maintain the highest quality standards appropriate for Centerville\'s luxury market, using premium materials and meticulous installation processes to deliver results that exceed expectations.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'centerville-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Miamisburg',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '20,076',
+	specialty: 'Historic City Garage Floor Coatings',
+	landmarks: [
+		'Miamisburg Mound',
+		'RiverScape MetroPark',
+		'Cox Arboretum MetroPark',
+		'Sycamore Park',
+		'Miamisburg Historical Society',
+		'First Street Bridge',
+		'Austin Landing',
+		'Miami Riverview Park',
+		'Miamisburg Community Center',
+		'Baum Park',
+		'Civitan Park',
+		'Historic Downtown Miamisburg'
+	],
+	description: 'Queen City Surface Coatings serves Miamisburg, Ohio, a historic Montgomery County community known for the ancient Miamisburg Mound and beautiful riverfront parks. Our garage floor coating services help Miamisburg homeowners enhance their properties with professional-grade solutions that complement the city\'s blend of historic character and modern amenities.',
+	serviceRadius: 'All Miamisburg neighborhoods and surrounding areas',
+	zipCodes: ['45342', '45343'],
+	keyServices: [
+		'Residential Garage Floor Coating',
+		'Historic Home Basement Coating',
+		'Decorative Concrete Systems',
+		'Weather-Resistant Coatings',
+		'Commercial Building Solutions',
+		'Custom Color Matching'
+	],
+	localProjects: [
+		{
+			title: 'Historic Miamisburg Home',
+			description: 'Garage floor coating for beautiful historic home, using period-appropriate colors that complement the property\'s character and charm.',
+			service: 'Historic Residential Coating'
+		},
+		{
+			title: 'RiverScape Area Family',
+			description: 'Complete garage transformation for family near RiverScape MetroPark, featuring durable coating system that withstands Ohio river valley climate.',
+			service: 'Residential Garage Floor Coating'
+		},
+		{
+			title: 'Austin Landing Commercial',
+			description: 'Professional concrete coating for Austin Landing business facility, providing attractive and durable flooring for commercial operations.',
+			service: 'Commercial Concrete Systems'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert and Linda Wilson',
+			location: 'Miamisburg, OH',
+			quote: 'Excellent work that respects our historic neighborhood character. The garage floor coating has been maintenance-free and looks fantastic after three years.',
+			service: 'Historic Residential Coating'
+		},
+		{
+			name: 'Jennifer Martinez',
+			location: 'RiverScape Area',
+			quote: 'Professional service from start to finish. They worked around our schedule and delivered a beautiful garage floor that our whole family enjoys.',
+			service: 'Residential Garage Floor Coating'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve historic neighborhoods in Miamisburg?',
+			answer: 'Yes, we have extensive experience working with historic homes in Miamisburg, ensuring our coating solutions complement the character of older properties while providing modern performance.'
+		},
+		{
+			question: 'Can you match colors to complement historic home styles?',
+			answer: 'Absolutely. We offer custom color matching and period-appropriate coating options that enhance historic properties while providing the durability benefits of modern coating systems.'
+		},
+		{
+			question: 'How do your coatings handle the Miami Valley climate?',
+			answer: 'Our coating systems are specifically designed for Ohio\'s river valley climate, providing excellent protection against humidity, temperature variations, and seasonal weather changes.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'miamisburg-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

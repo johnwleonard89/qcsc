@@ -377,12 +377,12 @@ const seo = {
 					<div class="service-content-overlay">
 						<h4>50-Mile Service Radius</h4>
 						<div class="service-areas-grid">
-							<div class="service-area-item">Hamilton County, OH</div>
-							<div class="service-area-item">Butler County, OH</div>
-							<div class="service-area-item">Warren County, OH</div>
-							<div class="service-area-item">Campbell County, KY</div>
-							<div class="service-area-item">Kenton County, KY</div>
-							<div class="service-area-item">Boone County, KY</div>
+							<div class="service-area-item"><a href="/service-areas/ohio/hamilton-county-comprehensive">Hamilton County, OH</a></div>
+							<div class="service-area-item"><a href="/service-areas/ohio/butler-county-comprehensive">Butler County, OH</a></div>
+							<div class="service-area-item"><a href="/service-areas/ohio/warren-county-comprehensive">Warren County, OH</a></div>
+							<div class="service-area-item"><a href="/service-areas/kentucky/campbell-county-comprehensive">Campbell County, KY</a></div>
+							<div class="service-area-item"><a href="/service-areas/kentucky/kenton-county-comprehensive">Kenton County, KY</a></div>
+							<div class="service-area-item"><a href="/service-areas/kentucky/boone-county-comprehensive">Boone County, KY</a></div>
 						</div>
 						<a href="/service-areas" class="btn btn-outline">View All Service Areas</a>
 					</div>
@@ -1002,6 +1002,16 @@ const seo = {
 	background: rgba(255, 255, 255, 0.1);
 	padding: 0.75rem;
 	border-radius: 0.25rem;
+	text-align: center;
+}
+
+.service-area-item a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.service-area-item a:hover {
+	text-decoration: underline;
 }
 
 /* Service map section button overrides */
@@ -1060,6 +1070,7 @@ const seo = {
 	padding: 1rem;
 	background: var(--theme-bg);
 	border-radius: var(--theme-card-radius);
+	text-align: center;
 }
 
 .contact-icon {

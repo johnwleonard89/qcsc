@@ -1,0 +1,150 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const countyData = {
+	name: 'Dearborn County',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Dearborn',
+	population: '50,047',
+	specialty: 'Historic Ohio River Valley & Southeastern Indiana Gateway',
+	landmarks: [
+		'Perfect North Slopes',
+		'Hillforest Victorian House Museum',
+		'Lawrenceburg Speedway',
+		'Hollywood Casino Lawrenceburg',
+		'Dearborn County Courthouse',
+		'Aurora Historic District',
+		'Oxbow Inc. Nature Preserve',
+		'Whisky Island Nature Preserve',
+		'Laughter Park',
+		'Aurora Farmers Market',
+		'Historic Aurora Ferry Landing',
+		'Mary Gray Bird Sanctuary',
+		'Dearborn County 4-H Fairgrounds',
+		'The Great Ohio River Recreation Trail'
+	],
+	description: 'Dearborn County represents Queen City Surface Coatings\' expertise in Southeastern Indiana\'s historic Ohio River valley, where agricultural heritage meets recreational tourism and riverfront commerce. From Lawrenceburg\'s entertainment industry and Perfect North Slopes\' four-season recreation to Aurora\'s historic charm and rural communities throughout the county, Dearborn County requires concrete coating solutions that honor its agricultural roots while supporting tourism and entertainment industries. Our veteran-owned company understands the seasonal demands of recreation facilities, the durability needs of agricultural operations, and the quality expectations of communities that value both heritage and progress. We deliver solutions that support the county\'s diverse economy while respecting its historic character.',
+	serviceRadius: 'Complete Dearborn County including Lawrenceburg, Aurora, Moores Hill, Dillsboro, West Harrison',
+	zipCodes: ['47006', '47025', '47040', '47018', '47060'],
+	keyServices: [
+		'Recreation and Entertainment Facility Coatings',
+		'Agricultural Building and Farm Facility Systems',
+		'Historic District Preservation Coatings',
+		'Seasonal Tourism Facility Applications',
+		'Rural Residential and Outbuilding Services',
+		'Riverfront Commercial Property Solutions',
+		'Municipal and Government Building Coatings',
+		'Small Business and Rural Commercial Systems'
+	],
+	cities: [
+		{ name: 'Lawrenceburg', population: '4,685', specialty: 'Entertainment and Gaming Hub' },
+		{ name: 'Aurora', population: '3,750', specialty: 'Historic Riverfront Community' },
+		{ name: 'Dillsboro', population: '1,327', specialty: 'Rural Agricultural Center' },
+		{ name: 'Moores Hill', population: '598', specialty: 'Historic Educational Community' },
+		{ name: 'West Harrison', population: '258', specialty: 'Rural Residential Community' }
+	],
+	localProjects: [
+		{
+			title: 'Perfect North Slopes Facility Renovation',
+			description: 'Applied specialized recreational facility coatings throughout base lodge and equipment storage areas, designed to withstand seasonal temperature variations and heavy equipment traffic from skiing and snow sports operations.',
+			service: 'Recreation and Seasonal Sports Facility Coatings'
+		},
+		{
+			title: 'Hollywood Casino Support Buildings',
+			description: 'Installed commercial-grade epoxy systems throughout back-of-house areas, designed to meet gaming industry standards for durability, maintenance, and regulatory compliance.',
+			service: 'Entertainment and Gaming Facility Systems'
+		},
+		{
+			title: 'Aurora Historic District Preservation',
+			description: 'Applied heritage-sensitive coating solutions to historic riverfront buildings while providing modern protection against Ohio River valley weather conditions and seasonal flooding concerns.',
+			service: 'Historic Riverfront Preservation Coatings'
+		},
+		{
+			title: 'Dearborn County Agricultural Complex',
+			description: 'Completed farm facility coating installation throughout livestock buildings and equipment storage areas, providing agricultural-grade durability for year-round farming operations.',
+			service: 'Agricultural and Farm Facility Systems'
+		},
+		{
+			title: 'Lawrenceburg Municipal Building',
+			description: 'Applied government-grade flooring systems throughout city offices and public areas, designed for high public use while maintaining professional appearance for municipal operations.',
+			service: 'Municipal Government Facility Coatings'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Mike Johnson',
+			location: 'Perfect North Slopes Operations',
+			quote: 'Our facility faces extreme seasonal conditions from winter sports to summer events. Queen City delivered coating systems that handle everything from ski equipment to concert staging, year after year.',
+			service: 'Seasonal Recreation Facility Coatings'
+		},
+		{
+			name: 'Sarah and David Miller',
+			location: 'Aurora Historic District',
+			quote: 'Living in Aurora\'s historic district means balancing preservation with practical improvements. Their work on our basement renovation respected our home\'s character while providing modern functionality.',
+			service: 'Historic Residential Renovation'
+		},
+		{
+			name: 'Tom Richardson',
+			location: 'Dillsboro Farm Operation',
+			quote: 'Farming requires surfaces that can handle heavy equipment, weather, and livestock. The coating system they installed in our equipment barn has been maintenance-free for three seasons.',
+			service: 'Agricultural Building Coatings'
+		}
+	],
+	marketSegments: [
+		{
+			title: 'Recreation and Entertainment',
+			description: 'Dearborn County\'s recreation industry, from Perfect North Slopes to Hollywood Casino, requires specialized coatings that handle seasonal demands and high-traffic conditions.',
+			applications: ['Ski resort and recreation facilities', 'Gaming and entertainment venues', 'Tourism and hospitality buildings', 'Event venues and conference facilities', 'Seasonal sports and recreation buildings']
+		},
+		{
+			title: 'Agricultural Operations',
+			description: 'Supporting Dearborn County\'s agricultural heritage with practical coating solutions for modern farming operations and rural businesses.',
+			applications: ['Livestock buildings and barns', 'Equipment storage and maintenance facilities', 'Feed storage and processing buildings', 'Rural commercial and agricultural buildings', 'Farm equipment and machinery areas']
+		},
+		{
+			title: 'Historic Preservation',
+			description: 'Aurora and other historic communities require sensitive coating solutions that preserve character while providing modern protection.',
+			applications: ['Historic downtown commercial buildings', 'Riverfront heritage properties', 'Historic residential renovations', 'Museum and cultural facilities', 'Religious and community landmarks']
+		},
+		{
+			title: 'Rural Residential Communities',
+			description: 'Serving Dearborn County\'s rural communities with quality coating solutions that match small-town values and rural property needs.',
+			applications: ['Rural residential renovations', 'Garage and outbuilding projects', 'Community centers and facilities', 'Small town municipal buildings', 'Rural business and commercial properties']
+		},
+		{
+			title: 'Riverfront and Tourism',
+			description: 'Ohio River valley location creates unique demands for coatings that resist moisture while supporting tourism and riverfront commerce.',
+			applications: ['Riverfront commercial properties', 'Tourism and visitor facilities', 'Marina and boat-related buildings', 'Flood-resistant applications', 'Seasonal tourism businesses']
+		}
+	],
+	faqs: [
+		{
+			question: 'What makes Dearborn County unique for concrete coating services?',
+			answer: 'Dearborn County\'s combination of seasonal recreation facilities, agricultural operations, historic preservation needs, and riverfront location creates diverse coating requirements. From Perfect North Slopes\' extreme seasonal conditions to Aurora\'s historic preservation needs, plus the agricultural demands throughout rural areas, we\'ve developed expertise across recreation, agriculture, tourism, and heritage applications. The Ohio River valley location also requires moisture-resistant solutions.'
+		},
+		{
+			question: 'How do you handle seasonal recreation facility requirements like Perfect North Slopes?',
+			answer: 'Seasonal recreation facilities face extreme conditions from winter snow sports to summer events. We use specialized coatings designed for temperature extremes, moisture resistance, heavy equipment traffic, and the unique demands of facilities that operate in multiple seasons. Understanding seasonal business cycles helps us schedule work during appropriate maintenance periods.'
+		},
+		{
+			question: 'What\'s your experience with Dearborn County\'s agricultural industry?',
+			answer: 'Agricultural applications require coatings that withstand heavy equipment, livestock, weather exposure, and chemical resistance from feeds and cleaning agents. We understand farming operations, seasonal agricultural demands, and the need for durable, practical solutions that work in working farm environments. Our agricultural experience includes livestock facilities, equipment storage, and feed handling areas.'
+		},
+		{
+			question: 'How do you approach historic preservation in Aurora and other historic areas?',
+			answer: 'Historic preservation requires careful attention to architectural guidelines and community character. We work with local preservation groups and understand the importance of maintaining historic integrity while providing modern protection. Aurora\'s riverfront location adds complexity with moisture considerations. Our experience includes buildings dating from the 19th century river commerce era.'
+		},
+		{
+			question: 'What considerations affect Ohio River valley and flood-prone areas?',
+			answer: 'The Ohio River valley creates unique moisture and occasional flooding challenges requiring specialized moisture-resistant coatings and application techniques. We understand seasonal river conditions, humidity variations, and the importance of systems that can handle periodic moisture exposure. Our riverfront experience includes properties that must maintain function even during high water periods.'
+		}
+	]
+};
+
+const primaryService = 'Dearborn County IN Services';
+const slug = 'dearborn-county-comprehensive';
+---
+
+<CityPageTemplate city={countyData} primaryService={primaryService} slug={slug} />

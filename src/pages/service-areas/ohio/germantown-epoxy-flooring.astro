@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Germantown',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '5,547',
+	specialty: 'Small Town Premium Services',
+	landmarks: [
+		'Germantown MetroPark',
+		'Historic Downtown Germantown',
+		'Twin Creek MetroPark',
+		'Germantown Community Center',
+		'Valley View Elementary School',
+		'Germantown Historic District',
+		'Twin Creek',
+		'Germantown Municipal Building',
+		'Lions Club Park',
+		'Germantown Fire Department',
+		'Preble County Line',
+		'Historic German Settlement Area'
+	],
+	description: 'Queen City Surface Coatings serves Germantown, Ohio, a charming Montgomery County community that maintains its historic small-town character while providing modern amenities. Our epoxy flooring services help Germantown residents enhance their properties with premium coatings that complement the community\'s blend of historic charm and contemporary living.',
+	serviceRadius: 'All Germantown neighborhoods and surrounding areas',
+	zipCodes: ['45327'],
+	keyServices: [
+		'Small Town Residential Epoxy',
+		'Historic Property Coatings',
+		'Premium Garage Floor Systems',
+		'Basement Renovation Coatings',
+		'Commercial Building Solutions',
+		'Community-Focused Services'
+	],
+	localProjects: [
+		{
+			title: 'Germantown Historic District Home',
+			description: 'Garage floor coating for beautiful historic home, using colors that complement the property\'s traditional character and neighborhood aesthetic.',
+			service: 'Historic Residential Coating'
+		},
+		{
+			title: 'Germantown MetroPark Area Family',
+			description: 'Complete basement transformation for outdoor-loving family, creating space for recreation equipment and family activities.',
+			service: 'Family Basement Renovation'
+		},
+		{
+			title: 'Downtown Germantown Business',
+			description: 'Commercial epoxy flooring for local business, providing durable surface that serves the close-knit community with professional appearance.',
+			service: 'Small Town Commercial'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert and Linda Miller',
+			location: 'Germantown, OH',
+			quote: 'Perfect service for our small community. They understood our historic home and delivered a garage floor coating that looks fantastic and fits our neighborhood character.',
+			service: 'Historic Residential Coating'
+		},
+		{
+			name: 'Thompson Family',
+			location: 'MetroPark Area',
+			quote: 'Great work that accommodated our family\'s needs and timeline. The basement floor coating has created a wonderful space for our kids and their activities.',
+			service: 'Family Basement Renovation'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve small communities like Germantown?',
+			answer: 'Absolutely! We value small-town communities and provide the same professional service and quality to Germantown residents, with personal attention that reflects small-town values.'
+		},
+		{
+			question: 'Can you work on historic properties in Germantown?',
+			answer: 'Yes, we have experience with historic homes and understand how to provide modern epoxy flooring solutions that complement Germantown\'s historic character and charm.'
+		},
+		{
+			question: 'What makes your service appropriate for Germantown families?',
+			answer: 'We understand community relationships and family needs, providing reliable service, fair pricing, and quality work that Germantown neighbors recommend to each other.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'germantown-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

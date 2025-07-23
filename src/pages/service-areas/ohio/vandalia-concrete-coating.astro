@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Vandalia',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '15,246',
+	specialty: 'Airport Area Services',
+	landmarks: [
+		'Dayton International Airport',
+		'Vandalia Recreation Center',
+		'Calamityville Historic Village',
+		'Taylorsville MetroPark',
+		'Vandalia-Butler High School',
+		'Helke Park',
+		'Vandalia Sports Complex',
+		'Historic Downtown Vandalia',
+		'Great Miami River',
+		'Vandalia Municipal Building',
+		'Airport Business District',
+		'Randolph Street Historic District'
+	],
+	description: 'Queen City Surface Coatings serves Vandalia, Ohio, a dynamic Montgomery County community strategically located near Dayton International Airport and known for its recreational facilities and strong business presence. Our concrete coating services help Vandalia residents and businesses enhance their properties with durable solutions that serve both the residential community and the airport-area commercial district.',
+	serviceRadius: 'All Vandalia neighborhoods and airport area',
+	zipCodes: ['45377', '45414'],
+	keyServices: [
+		'Airport Area Commercial Coatings',
+		'Residential Community Services',
+		'Business District Solutions',
+		'Recreation Facility Systems',
+		'Transportation Hub Services',
+		'Municipal Building Coatings'
+	],
+	localProjects: [
+		{
+			title: 'Vandalia Airport Business Facility',
+			description: 'Commercial concrete coating for business serving airport area, providing professional appearance and durability for high-traffic commercial operations.',
+			service: 'Airport Area Commercial'
+		},
+		{
+			title: 'Vandalia Recreation Center Area Home',
+			description: 'Family garage floor coating designed for active household, creating organized space for recreation equipment and seasonal sports gear.',
+			service: 'Recreation Community Residential'
+		},
+		{
+			title: 'Historic Vandalia Downtown',
+			description: 'Commercial concrete coating for historic downtown business, balancing preservation character with modern functionality.',
+			service: 'Historic Downtown Commercial'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Vandalia Business Owner',
+			location: 'Airport District',
+			quote: 'Professional service that understood our business needs near the airport. The concrete coating has improved our facility appearance and functionality significantly.',
+			service: 'Airport Area Commercial'
+		},
+		{
+			name: 'Jim and Linda Patterson',
+			location: 'Vandalia, OH',
+			quote: 'Great work for our active family. The garage floor coating handles all our recreation equipment and still looks fantastic. Professional service from start to finish.',
+			service: 'Recreation Community Residential'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve businesses in Vandalia\'s airport area?',
+			answer: 'Yes! We provide commercial concrete coating services throughout Vandalia, including the airport business district, with solutions designed for professional commercial operations and high-traffic use.'
+		},
+		{
+			question: 'Can you work with Vandalia\'s recreation-focused families?',
+			answer: 'Absolutely! We understand active Vandalia families and provide garage and basement coating solutions that organize recreation equipment while maintaining attractive home appearance.'
+		},
+		{
+			question: 'How do you serve Vandalia\'s historic downtown area?',
+			answer: 'We have experience with historic properties and provide concrete coating solutions that respect downtown Vandalia\'s character while delivering modern performance and durability.'
+		}
+	]
+};
+
+const primaryService = 'Concrete Coating';
+const slug = 'vandalia-concrete-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

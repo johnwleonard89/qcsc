@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Englewood',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '13,485',
+	specialty: 'Residential Community Coatings',
+	landmarks: [
+		'Englewood MetroPark',
+		'Englewood Reserve Golf Club',
+		'Northmont High School',
+		'Englewood Fun Center',
+		'Aullwood Audubon Center and Farm',
+		'Englewood Municipal Building',
+		'Community Park',
+		'Stillwater River',
+		'Historic Downtown Englewood',
+		'Northmont City Schools',
+		'MetroParks Bike Trail',
+		'Englewood Family Recreation'
+	],
+	description: 'Queen City Surface Coatings serves Englewood, Ohio, a well-established Montgomery County residential community known for excellent recreational facilities, quality schools, and family-oriented neighborhoods. Our epoxy flooring services help Englewood families enhance their homes with premium solutions that support active lifestyles while maintaining the community\'s high standards for residential quality.',
+	serviceRadius: 'All Englewood neighborhoods and surrounding areas',
+	zipCodes: ['45315', '45322'],
+	keyServices: [
+		'Family Residential Epoxy Systems',
+		'School District Community Services',
+		'Recreation-Focused Coatings',
+		'Established Neighborhood Solutions',
+		'Active Lifestyle Garage Systems',
+		'Quality Home Enhancement'
+	],
+	localProjects: [
+		{
+			title: 'Englewood School District Family',
+			description: 'Premium garage epoxy flooring for Northmont school family, designed to handle sports equipment and school project materials while maintaining attractive appearance.',
+			service: 'School District Family System'
+		},
+		{
+			title: 'MetroPark Area Residence',
+			description: 'Complete basement floor coating for outdoor enthusiasts, creating organized space for biking, hiking, and recreation equipment storage.',
+			service: 'Recreation Family Basement'
+		},
+		{
+			title: 'Englewood Reserve Golf Community',
+			description: 'Luxury garage floor coating for golf community residence, providing premium appearance that matches upscale neighborhood standards.',
+			service: 'Golf Community Premium Coating'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Tom and Jennifer Chen',
+			location: 'Englewood, OH',
+			quote: 'Excellent service that understood our family\'s needs. The garage epoxy flooring handles everything from golf clubs to kids\' sports gear, and it looks amazing.',
+			service: 'School District Family System'
+		},
+		{
+			name: 'Englewood Active Family',
+			location: 'MetroPark Area',
+			quote: 'Perfect for our outdoor-loving household! The basement coating has created wonderful organized space for all our recreation equipment and family activities.',
+			service: 'Recreation Family Basement'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve Northmont school district families in Englewood?',
+			answer: 'Yes! We understand the needs of active Englewood families with school-age children and provide epoxy flooring solutions that handle sports equipment, projects, and family activities.'
+		},
+		{
+			question: 'How do your coatings complement Englewood\'s recreational lifestyle?',
+			answer: 'Our epoxy systems are designed for active families who enjoy Englewood\'s MetroParks and recreation facilities, providing organized storage and easy maintenance for outdoor equipment.'
+		},
+		{
+			question: 'Can you work in Englewood\'s established neighborhoods?',
+			answer: 'Absolutely! We understand Englewood\'s community standards and provide epoxy flooring solutions that enhance established homes while maintaining neighborhood character and property values.'
+		}
+	]
+};
+
+const primaryService = 'Epoxy Flooring';
+const slug = 'englewood-epoxy-flooring';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,147 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const countyData = {
+	name: 'Ohio County',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Ohio',
+	population: '5,940',
+	specialty: 'Smallest County & Historic River Community',
+	landmarks: [
+		'Ohio County Courthouse',
+		'Rising Sun Historic District',
+		'Ohio River Scenic Byway',
+		'Rising Sun Casino Resort',
+		'Randolph State Forest',
+		'Ohio County Park',
+		'Rising Sun Ferry Landing',
+		'Aurora Historic District (nearby)',
+		'Tanners Creek',
+		'Ohio County Historical Society',
+		'Rising Sun Presbyterian Church',
+		'Laughery Creek Wildlife Area',
+		'Ohio River Recreation Trail',
+		'Historic Rising Sun Downtown'
+	],
+	description: 'Ohio County represents Queen City Surface Coatings\' expertise in Indiana\'s smallest county, where intimate community character meets Ohio River heritage and entertainment industry demands. As Indiana\'s smallest county by area, Ohio County centers around Rising Sun\'s riverfront location and casino entertainment industry, requiring concrete coating solutions that honor small-town values while supporting tourism, entertainment, and the unique challenges of river valley living. Our veteran-owned company understands the personal service expectations of small communities, the specialized requirements of entertainment facilities, and the moisture considerations of Ohio River proximity. We deliver solutions that respect the county\'s intimate character while providing the durability needed for its diverse economic base.',
+	serviceRadius: 'Complete Ohio County including Rising Sun, Patriot, and rural areas',
+	zipCodes: ['47040', '47038'],
+	keyServices: [
+		'Entertainment and Gaming Facility Coatings',
+		'Small Community Municipal Building Systems',
+		'Historic District Preservation Coatings',
+		'Riverfront and Flood-Resistant Applications',
+		'Rural Residential and Small Business Solutions',
+		'Tourism and Hospitality Facility Systems',
+		'Agricultural and Rural Property Coatings',
+		'Community Center and Civic Building Applications'
+	],
+	cities: [
+		{ name: 'Rising Sun', population: '2,304', specialty: 'County Seat and Entertainment Hub' },
+		{ name: 'Patriot', population: '209', specialty: 'Small Riverfront Community' }
+	],
+	localProjects: [
+		{
+			title: 'Rising Sun Casino Resort Support Facilities',
+			description: 'Installed commercial-grade epoxy systems throughout back-of-house and maintenance areas, designed to meet gaming industry standards for durability, maintenance, and regulatory compliance.',
+			service: 'Entertainment and Gaming Facility Systems'
+		},
+		{
+			title: 'Ohio County Courthouse Restoration',
+			description: 'Applied government-grade coating systems throughout courthouse facilities while maintaining historic character appropriate for this small county\'s seat of government.',
+			service: 'Historic Government Building Preservation'
+		},
+		{
+			title: 'Rising Sun Historic District Commercial Buildings',
+			description: 'Completed heritage-sensitive coating applications throughout downtown commercial area, providing modern protection while preserving small-town historic character.',
+			service: 'Historic Commercial District Preservation'
+		},
+		{
+			title: 'Ohio County Rural Properties',
+			description: 'Applied residential and agricultural coatings throughout rural properties, providing practical solutions for small-scale farming and rural residential needs.',
+			service: 'Rural Residential and Agricultural Applications'
+		},
+		{
+			title: 'Rising Sun Community Center',
+			description: 'Installed community-grade flooring systems throughout civic facilities, designed to handle community events while maintaining appearance for this close-knit community.',
+			service: 'Community and Civic Facility Coatings'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Mike and Carol Thompson',
+			location: 'Rising Sun Residents',
+			quote: 'In a small community like ours, word travels fast about quality work. Queen City delivered exactly what they promised - professional service with small-town attention to detail.',
+			service: 'Residential Garage and Basement Coating'
+		},
+		{
+			name: 'Tom Richardson',
+			location: 'Patriot Property Owner',
+			quote: 'Our riverfront property faces unique moisture challenges. They understood our Ohio River location and delivered a coating system that\'s handled everything from flooding to humidity.',
+			service: 'Riverfront Residential Property Coatings'
+		},
+		{
+			name: 'Rising Sun Business Association',
+			location: 'Downtown Rising Sun',
+			quote: 'Our main street businesses needed coordinated improvements that respected our historic character. Their work helped maintain our small-town charm while providing modern functionality.',
+			service: 'Historic Commercial District Renovation'
+		}
+	],
+	marketSegments: [
+		{
+			title: 'Entertainment and Gaming',
+			description: 'Rising Sun Casino Resort and related entertainment facilities require specialized coatings that meet gaming industry standards and handle high-traffic conditions.',
+			applications: ['Casino and gaming facilities', 'Entertainment venue support areas', 'Hospitality and hotel facilities', 'Restaurant and dining establishments', 'Tourism and visitor service buildings']
+		},
+		{
+			title: 'Historic Preservation',
+			description: 'Rising Sun\'s historic district and small-town character require preservation-sensitive coatings that maintain community heritage while providing modern protection.',
+			applications: ['Historic downtown commercial buildings', 'Government and civic buildings', 'Historic residential properties', 'Community and cultural facilities', 'Religious and institutional buildings']
+		},
+		{
+			title: 'Small Community Municipal',
+			description: 'Ohio County\'s small-town government and community facilities require cost-effective solutions that provide professional appearance and long-term durability.',
+			applications: ['County government buildings', 'Municipal facilities and offices', 'Community centers and meeting halls', 'Emergency services facilities', 'Public works and maintenance buildings']
+		},
+		{
+			title: 'Rural and Agricultural',
+			description: 'Supporting Ohio County\'s rural properties and small-scale agricultural operations with practical coating solutions appropriate for rural living.',
+			applications: ['Rural residential properties', 'Small farm and agricultural buildings', 'Rural business and service facilities', 'Outbuildings and storage facilities', 'Agricultural equipment and machinery areas']
+		},
+		{
+			title: 'Riverfront and Tourism',
+			description: 'Ohio River location creates unique demands for moisture-resistant coatings while supporting tourism and riverfront commerce.',
+			applications: ['Riverfront commercial properties', 'Tourism and visitor facilities', 'Marina and boat-related buildings', 'Flood-resistant applications', 'Seasonal tourism and recreation facilities']
+		}
+	],
+	faqs: [
+		{
+			question: 'What makes Ohio County unique for concrete coating services?',
+			answer: 'Ohio County\'s distinction as Indiana\'s smallest county creates unique dynamics - intimate community relationships, concentrated development around Rising Sun, gaming industry demands from the casino resort, and Ohio River valley moisture challenges. Every project matters more in a small community, requiring attention to both technical performance and community relationships. The entertainment industry adds specialized requirements while the river location demands moisture-resistant solutions.'
+		},
+		{
+			question: 'How do you handle gaming industry requirements at Rising Sun Casino Resort?',
+			answer: 'Gaming facilities require specialized coatings that meet gaming industry standards, handle heavy traffic, resist chemical exposure from cleaning agents, and maintain regulatory compliance. We understand gaming operations, security considerations, and the importance of minimizing operational disruption during installations. Our experience includes both public areas and back-of-house facilities with different performance requirements.'
+		},
+		{
+			question: 'What\'s the importance of community relationships in Ohio County?',
+			answer: 'In Indiana\'s smallest county, community relationships and reputation are paramount. Every project impacts multiple referrals, and small-town expectations include personal service, fair pricing, and standing behind our work long-term. We understand that Ohio County residents know each other, and our reputation depends on consistent quality and community-focused service across all projects, large and small.'
+		},
+		{
+			question: 'How do you address Ohio River valley moisture and flooding concerns?',
+			answer: 'Ohio River proximity creates unique moisture challenges and occasional flooding risks requiring specialized moisture-resistant coatings and application techniques. We understand seasonal river conditions, humidity variations, and the importance of systems that can handle periodic water exposure while maintaining structural integrity. Our riverfront experience includes properties in flood-prone areas with specific moisture management needs.'
+		},
+		{
+			question: 'What considerations affect small-scale and rural projects in Ohio County?',
+			answer: 'Ohio County\'s rural and small-town projects often require practical, cost-effective solutions that provide long-term value without unnecessary complexity. We understand small-town budgets, the importance of solutions that work reliably with minimal maintenance, and the personal attention expected in close-knit communities. Our approach balances quality materials and professional installation with appropriate pricing for rural Indiana properties.'
+		}
+	]
+};
+
+const primaryService = 'Ohio County IN Services';
+const slug = 'ohio-county-comprehensive';
+---
+
+<CityPageTemplate city={countyData} primaryService={primaryService} slug={slug} />

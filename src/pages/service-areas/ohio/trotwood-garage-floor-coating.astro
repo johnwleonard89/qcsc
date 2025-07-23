@@ -1,0 +1,88 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const city = {
+	name: 'Trotwood',
+	state: 'Ohio',
+	stateAbbr: 'OH',
+	county: 'Montgomery',
+	population: '24,431',
+	specialty: 'Community Residential Services',
+	landmarks: [
+		'Trotwood-Madison High School',
+		'Madison Park',
+		'Sycamore Park',
+		'Trotwood Community Center',
+		'Wolf Creek Park',
+		'Madison Township Park',
+		'Historic Downtown Trotwood',
+		'Trotwood Municipal Building',
+		'Wolf Creek',
+		'Madison Township',
+		'Community Recreation Areas',
+		'Trotwood-Madison City Schools'
+	],
+	description: 'Queen City Surface Coatings serves Trotwood, Ohio, a diverse Montgomery County community known for strong neighborhoods, community spirit, and family-focused amenities. Our garage floor coating services help Trotwood residents enhance their homes with reliable, durable solutions that serve the community\'s hardworking families and support their daily needs.',
+	serviceRadius: 'All Trotwood neighborhoods and Madison Township',
+	zipCodes: ['45426', '45427'],
+	keyServices: [
+		'Community Residential Coatings',
+		'Hardworking Family Solutions',
+		'Neighborhood Enhancement Systems',
+		'School District Family Services',
+		'Reliable Home Improvements',
+		'Community-Focused Garage Systems'
+	],
+	localProjects: [
+		{
+			title: 'Trotwood Family Neighborhood',
+			description: 'Durable garage floor coating for hardworking Trotwood family, providing practical surface that handles daily use while improving home functionality.',
+			service: 'Community Family Garage'
+		},
+		{
+			title: 'Madison Township Residence',
+			description: 'Basement floor coating creating additional family space for Trotwood household, designed for durability and easy maintenance.',
+			service: 'Community Family Basement'
+		},
+		{
+			title: 'Trotwood-Madison School District Family',
+			description: 'Garage transformation for active school family, organizing space for sports equipment and school activities.',
+			service: 'School District Community'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Robert and Linda Johnson',
+			location: 'Trotwood, OH',
+			quote: 'Solid work at a fair price. Our garage floor coating has held up perfectly through daily family use. Professional service that understands working families.',
+			service: 'Community Family Garage'
+		},
+		{
+			name: 'Trotwood School Family',
+			location: 'Madison Township',
+			quote: 'Great service that worked with our family budget and schedule. The basement coating has given us the extra space our growing family needed.',
+			service: 'Community Family Basement'
+		}
+	],
+	faqs: [
+		{
+			question: 'Do you serve all Trotwood neighborhoods?',
+			answer: 'Yes! We provide garage floor coating services throughout Trotwood and Madison Township, understanding the needs of diverse community families and working households.'
+		},
+		{
+			question: 'How do you serve Trotwood-Madison school district families?',
+			answer: 'We understand active families with school-age children and provide practical coating solutions that handle sports equipment, projects, and family activities with reliable performance.'
+		},
+		{
+			question: 'What makes your service appropriate for Trotwood\'s working families?',
+			answer: 'We offer reliable, durable solutions at fair prices, working with family schedules and budgets to provide home improvements that serve hardworking Trotwood residents.'
+		}
+	]
+};
+
+const primaryService = 'Garage Floor Coating';
+const slug = 'trotwood-garage-floor-coating';
+---
+
+<CityPageTemplate {city} {primaryService} {slug} />

@@ -1,0 +1,150 @@
+---
+import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
+import '../../../styles/service-areas.css';
+
+const countyData = {
+	name: 'Ripley County',
+	state: 'Indiana',
+	stateAbbr: 'IN',
+	county: 'Ripley',
+	population: '28,818',
+	specialty: 'Rural Heritage & Agricultural Excellence',
+	landmarks: [
+		'Versailles State Park',
+		'Ripley County Courthouse',
+		'Batesville Casket Company Historic District',
+		'Hillside Orchard',
+		'Laughery Creek',
+		'Versailles Railroad Depot',
+		'Ripley County 4-H Fairgrounds',
+		'Milan \'54 Hoosiers Museum',
+		'Osgood General Store',
+		'Cross Plains Church',
+		'Tyson United Methodist Church',
+		'Ripley County Historical Society',
+		'Batesville Memorial Public Library',
+		'Oldenburg Historic District'
+	],
+	description: 'Ripley County represents Queen City Surface Coatings\' expertise in rural Southeastern Indiana, where agricultural tradition meets small-town community values and recreational tourism. From Batesville\'s manufacturing heritage and Versailles\' state park recreation to Osgood\'s rural charm and the farming communities throughout the county, Ripley County requires concrete coating solutions that honor its agricultural roots while supporting manufacturing, recreation, and small business needs. Our veteran-owned company understands the seasonal demands of agricultural operations, the durability requirements of rural manufacturing, and the quality expectations of communities that value both tradition and reliability. We deliver solutions that support the county\'s diverse rural economy while respecting its agricultural character.',
+	serviceRadius: 'Complete Ripley County including Batesville, Versailles, Osgood, Milan, Napoleon',
+	zipCodes: ['47006', '47042', '47037', '47031', '47034'],
+	keyServices: [
+		'Agricultural Building and Farm Facility Systems',
+		'Manufacturing and Industrial Facility Coatings',
+		'Recreation and State Park Facility Applications',
+		'Rural Residential and Outbuilding Services',
+		'Small Business and Rural Commercial Solutions',
+		'Municipal and Government Building Coatings',
+		'Historic District Preservation Systems',
+		'Seasonal Tourism and Recreation Facility Coatings'
+	],
+	cities: [
+		{ name: 'Batesville', population: '6,520', specialty: 'Manufacturing and Industrial Hub' },
+		{ name: 'Versailles', population: '2,113', specialty: 'State Park and Recreation Gateway' },
+		{ name: 'Osgood', population: '1,611', specialty: 'Rural Agricultural Community' },
+		{ name: 'Milan', population: '1,899', specialty: 'Historic Hoosiers Basketball Community' },
+		{ name: 'Napoleon', population: '175', specialty: 'Small Rural Community' }
+	],
+	localProjects: [
+		{
+			title: 'Batesville Manufacturing Complex',
+			description: 'Installed industrial-grade epoxy systems throughout production and equipment areas, designed to withstand heavy machinery operations and meet manufacturing industry durability standards.',
+			service: 'Manufacturing and Industrial Facility Coatings'
+		},
+		{
+			title: 'Versailles State Park Facilities',
+			description: 'Applied recreational facility coatings throughout visitor center and maintenance buildings, designed for high-traffic use while providing easy maintenance for state park operations.',
+			service: 'Recreation and State Park Facility Systems'
+		},
+		{
+			title: 'Ripley County Agricultural Center',
+			description: 'Completed farm facility coating installation throughout livestock and equipment buildings, providing agricultural-grade durability for year-round farming operations and 4-H activities.',
+			service: 'Agricultural and Farm Facility Systems'
+		},
+		{
+			title: 'Milan Community Center Renovation',
+			description: 'Applied community-grade flooring systems throughout the historic community center, honoring the town\'s basketball heritage while providing modern functionality.',
+			service: 'Community and Municipal Facility Coatings'
+		},
+		{
+			title: 'Osgood Rural Business District',
+			description: 'Completed coordinated coating installation throughout main street business area, providing consistent quality while maintaining small-town character.',
+			service: 'Rural Commercial and Small Business Systems'
+		}
+	],
+	testimonials: [
+		{
+			name: 'Jim Patterson',
+			location: 'Batesville Manufacturing',
+			quote: 'Our production facility requires flooring that can handle heavy equipment and constant traffic. Queen City delivered a system that\'s held up perfectly through two years of manufacturing operations.',
+			service: 'Industrial Manufacturing Coatings'
+		},
+		{
+			name: 'Mary and Bob Stevens',
+			location: 'Versailles Farm',
+			quote: 'Farming requires surfaces that work as hard as we do. The coating system in our equipment barn has been maintenance-free through all weather conditions and heavy equipment use.',
+			service: 'Agricultural Building Coatings'
+		},
+		{
+			name: 'Carol Johnson',
+			location: 'Osgood Business Owner',
+			quote: 'Our small-town business needed flooring that looked professional but could handle daily operations. They understood our needs and delivered exactly what we needed within our budget.',
+			service: 'Small Business Commercial Coatings'
+		}
+	],
+	marketSegments: [
+		{
+			title: 'Agricultural Operations',
+			description: 'Supporting Ripley County\'s strong agricultural heritage with practical coating solutions for modern farming operations and rural businesses.',
+			applications: ['Livestock buildings and dairy barns', 'Equipment storage and maintenance facilities', 'Feed storage and processing buildings', 'Farm equipment and machinery areas', 'Agricultural processing and packaging facilities']
+		},
+		{
+			title: 'Manufacturing and Industrial',
+			description: 'Batesville\'s manufacturing sector requires industrial-grade coatings that meet production facility demands and regulatory standards.',
+			applications: ['Manufacturing production floors', 'Industrial equipment areas', 'Warehouse and distribution facilities', 'Maintenance and service buildings', 'Quality control and testing areas']
+		},
+		{
+			title: 'Recreation and Tourism',
+			description: 'Versailles State Park and recreational facilities require coatings designed for high-traffic public use and seasonal demands.',
+			applications: ['State park visitor centers', 'Recreation and camping facilities', 'Tourism and visitor buildings', 'Event venues and pavilions', 'Seasonal recreation buildings']
+		},
+		{
+			title: 'Rural Residential Communities',
+			description: 'Serving Ripley County\'s rural communities with quality coating solutions that match small-town values and rural property needs.',
+			applications: ['Rural residential renovations', 'Garage and outbuilding projects', 'Community centers and facilities', 'Small town municipal buildings', 'Rural business and commercial properties']
+		},
+		{
+			title: 'Small Business and Commercial',
+			description: 'Supporting Ripley County\'s small businesses and rural commercial operations with practical, cost-effective coating solutions.',
+			applications: ['Main street business districts', 'Rural commercial buildings', 'Service and repair facilities', 'Retail and customer service areas', 'Professional offices and services']
+		}
+	],
+	faqs: [
+		{
+			question: 'What makes Ripley County unique for concrete coating services?',
+			answer: 'Ripley County\'s combination of agricultural operations, manufacturing in Batesville, state park recreation facilities, and rural communities creates diverse coating requirements. From farm buildings that handle livestock and equipment to manufacturing floors that meet industrial standards, plus the seasonal demands of recreation facilities, we\'ve developed expertise across agricultural, industrial, recreational, and small business applications. The rural character requires understanding of practical, long-lasting solutions.'
+		},
+		{
+			question: 'How do you handle agricultural facility requirements throughout Ripley County?',
+			answer: 'Agricultural applications require coatings that withstand heavy equipment, livestock, weather exposure, and chemical resistance from feeds and cleaning agents. We understand farming operations, seasonal agricultural demands, and the durability needed for working farm environments. Our agricultural experience includes dairy operations, livestock facilities, equipment storage, and feed handling throughout rural Ripley County.'
+		},
+		{
+			question: 'What\'s your experience with manufacturing facilities in Batesville?',
+			answer: 'Manufacturing facilities require industrial-grade coatings that meet production standards, handle heavy equipment loads, resist chemical exposure, and maintain safety compliance. We understand manufacturing operations, regulatory requirements, and the importance of minimizing production disruption during installations. Our industrial experience includes production floors, equipment areas, and support facilities.'
+		},
+		{
+			question: 'How do you serve state park and recreation facilities like Versailles State Park?',
+			answer: 'State park and recreation facilities require coatings designed for high public traffic, easy maintenance, weather resistance, and seasonal use patterns. We understand park operations, public facility requirements, and the importance of systems that maintain appearance with heavy visitor use. Our recreation experience includes visitor centers, maintenance buildings, and seasonal facilities.'
+		},
+		{
+			question: 'What considerations affect rural and small-town projects in Ripley County?',
+			answer: 'Rural projects often require practical, cost-effective solutions that provide long-term durability without unnecessary complexity. We understand small-town budgets, rural property access considerations, and the importance of solutions that work reliably with minimal maintenance. Our rural experience includes farm buildings, small businesses, community facilities, and residential properties throughout rural Indiana communities.'
+		}
+	]
+};
+
+const primaryService = 'Ripley County IN Services';
+const slug = 'ripley-county-comprehensive';
+---
+
+<CityPageTemplate city={countyData} primaryService={primaryService} slug={slug} />

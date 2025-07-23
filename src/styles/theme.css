@@ -1,21 +1,299 @@
-/* Theme.css - Legacy support and special overrides */
-/* All main design tokens moved to utilities.css */
-
-/* Legacy CSS variable mapping for backward compatibility */
 :root {
-  /* Map legacy variables to new ones */
-  --theme-primary: var(--primary);
-  --theme-primary-hover: var(--primary-hover);
-  --theme-on-primary: var(--white);
-  --theme-bg: var(--white);
-  --theme-on-bg: var(--text-primary);
-  --theme-surface-1: var(--surface);
-  --theme-surface-2: var(--surface-dark);
-  --theme-text-primary: var(--text-primary);
-  --theme-text-secondary: var(--text-secondary);
-  --theme-text-muted: var(--text-muted);
+	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
+	--theme-primary: #002F4B; /* Default to Navy for better contrast */
+	--theme-primary-hover: #003B5C; /* Darker navy on hover */
+	--theme-on-primary: #fff;
+	
+	/* Original yellow colors for dark backgrounds */
+	--theme-yellow: #FFC107; /* Warm Amber - For dark backgrounds only */
+	--theme-yellow-hover: #E6AC00; /* Darker amber on hover */
+
+	/* Navy - Primary headers and trustworthy elements */
+	--theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
+	--theme-navy-light: #003B5C; /* Lighter navy for hover states */
+	--theme-navy-dark: #001A2E; /* Darker navy for emphasis */
+
+	/* Backgrounds and surfaces */
+	--theme-bg: #fff;
+	--theme-on-bg: #333333; /* Charcoal for better readability */
+
+	--theme-surface-1: #F5F5F5; /* Cool Gray - clean backdrop */
+	--theme-on-surface-1: #333333;
+
+	--theme-surface-2: #002F4B; /* Navy background for contrast sections */
+	--theme-on-surface-2: #fff;
+
+	/* Additional grays for hierarchy */
+	--theme-gray-light: #F8F9FA;
+	--theme-gray-medium: #E9ECEF;
+	--theme-gray-dark: #6C757D;
+
+	/* Text colors */
+	--theme-text-primary: #002F4B; /* Navy for headings */
+	--theme-text-secondary: #333333; /* Charcoal for body text */
+	--theme-text-muted: #6C757D; /* Gray for secondary text */
+	
+	/* Contextual colors for better contrast */
+	--theme-primary-on-light: #002F4B; /* Navy for light backgrounds */
+	--theme-primary-on-dark: #FFC107; /* Yellow for dark backgrounds */
+
+	/* Theme Shapes */
+	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
+	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
+	--theme-button-border-radius: 3rem;
+
+	/* Theme Transition */
+	--theme-transition: 0.2s ease-in-out;
+
+	/* Theme Layout */
+	--section-margin: 3rem;
+	--theme-grid-gap: 1rem;
+	--container-max-width: 1440px;
+	--container-max-width-narrow: 960px;
+	--container-padding: 0 1rem;
+
+	--theme-blog-post-header-width: 1200px;
+
+	/* Theme Shadows & Transparency - Enhanced for depth */
+	--theme-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle card shadow */
+	--theme-shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.1); /* Medium elevation */
+	--theme-shadow-dark: 0 16px 32px rgba(0, 0, 0, 0.15); /* High elevation */
+	--theme-border-light: rgba(0, 0, 0, 0.08);
+	--theme-overlay: rgba(0, 47, 75, 0.6); /* Navy-tinted overlay for hero images */
+
+	/* Interactive states */
+	--theme-hover-scale: 1.05; /* Micro-animation scale for hover */
+	--theme-transition-fast: 0.15s ease-out;
+	--theme-transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+	/* Theme Fonts - Typography Scale */
+	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman', Times, serif;
+	--theme-font-family-sans: 'Lato', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+	--theme-font-family-headings: 'Montserrat', 'Lato', sans-serif; /* Strong sans-serif for headings */
+
+	/* Typography Scale - Consistent sizing */
+	--font-size-h1: 48px; /* Large headings */
+	--font-size-h2: 36px; /* Section headings */
+	--font-size-h3: 28px; /* Subsection headings */
+	--font-size-h4: 24px;
+	--font-size-h5: 20px;
+	--font-size-h6: 18px;
+	--font-size-body: 16px; /* Body text */
+	--font-size-small: 14px;
+	--font-size-xs: 12px;
+
+	/* Line heights */
+	--line-height-tight: 1.2;
+	--line-height-normal: 1.5;
+	--line-height-relaxed: 1.6; /* For paragraphs - airy and readable */
+
+	/* Font weights */
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
 }
 
-/* Legacy overrides removed - using utility classes instead */
+/* Context-specific color overrides for dark backgrounds */
+/* This ensures yellow text/buttons on any dark navy background automatically */
+.hero-section,
+.bg-dark,
+.bg-navy,
+.surface-dark,
+.trust-section,
+.contact-section,
+.credentials-section,
+.company-story,
+.service-map-placeholder,
+.cta-buttons,
+.service-area-preview,
+[style*="background: var(--theme-surface-2)"],
+[style*="background-color: var(--theme-surface-2)"],
+[style*="background:var(--theme-surface-2)"],
+[class*="surface-2"],
+/* Component-based selectors */
+astro-island[component-url*="CtaCardSection"],
+/* Any section/div with navy background */
+section[style*="--theme-surface-2"],
+div[style*="--theme-surface-2"] {
+	--theme-primary: #FFC107 !important;
+	--theme-primary-hover: #E6AC00 !important;
+}
 
-/* Theme variants removed - using single utility-based theme */
+/* Ensure all buttons are consistently themed */
+.btn-primary,
+.btn.btn-primary,
+a.btn-primary,
+button.btn-primary {
+	background: #FFC107 !important;
+	border-color: #FFC107 !important;
+	color: #000 !important;
+}
+
+.btn-primary:hover,
+.btn.btn-primary:hover,
+a.btn-primary:hover,
+button.btn-primary:hover {
+	background: #E6AC00 !important;
+	border-color: #E6AC00 !important;
+	color: #000 !important;
+}
+
+/* Outline buttons on dark backgrounds should be yellow */
+.hero-section .btn-outline,
+.bg-dark .btn-outline,
+.bg-navy .btn-outline,
+.surface-dark .btn-outline,
+.trust-section .btn-outline,
+.contact-section .btn-outline,
+.credentials-section .btn-outline,
+.service-map-placeholder .btn-outline,
+.cta-buttons .btn-outline,
+[style*="background: var(--theme-surface-2)"] .btn-outline,
+[style*="background-color: var(--theme-surface-2)"] .btn-outline,
+[class*="surface-2"] .btn-outline {
+	color: #FFC107 !important;
+	border-color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover,
+.bg-dark .btn-outline:hover,
+.bg-navy .btn-outline:hover,
+.surface-dark .btn-outline:hover,
+.trust-section .btn-outline:hover,
+.contact-section .btn-outline:hover,
+.credentials-section .btn-outline:hover,
+.service-map-placeholder .btn-outline:hover,
+.cta-buttons .btn-outline:hover,
+[style*="background: var(--theme-surface-2)"] .btn-outline:hover,
+[style*="background-color: var(--theme-surface-2)"] .btn-outline:hover,
+[class*="surface-2"] .btn-outline:hover {
+	background: #FFC107 !important;
+	color: #000 !important;
+}
+
+[data-theme='default'] {
+	color-scheme: light;
+	/* Theme Colors - Queen City Surface Coatings - Harmonized Palette */
+	--theme-primary: #002F4B; /* Default to Navy for better contrast */
+	--theme-primary-hover: #003B5C; /* Darker navy on hover */
+	--theme-on-primary: #fff;
+
+	/* Navy - Primary headers and trustworthy elements */
+	--theme-navy: #002F4B; /* Deep Navy - trustworthy, veteran vibe */
+	--theme-navy-light: #003B5C; /* Lighter navy for hover states */
+	--theme-navy-dark: #001A2E; /* Darker navy for emphasis */
+
+	/* Backgrounds and surfaces */
+	--theme-bg: #fff;
+	--theme-on-bg: #333333; /* Charcoal for better readability */
+
+	--theme-surface-1: #F5F5F5; /* Cool Gray - clean backdrop */
+	--theme-on-surface-1: #333333;
+
+	--theme-surface-2: #002F4B; /* Navy background for contrast sections */
+	--theme-on-surface-2: #fff;
+
+	/* Additional grays for hierarchy */
+	--theme-gray-light: #F8F9FA;
+	--theme-gray-medium: #E9ECEF;
+	--theme-gray-dark: #6C757D;
+
+	/* Text colors */
+	--theme-text-primary: #002F4B; /* Navy for headings */
+	--theme-text-secondary: #333333; /* Charcoal for body text */
+	--theme-text-muted: #6C757D; /* Gray for secondary text */
+
+	/* Theme Shape */
+	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
+	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
+	--theme-button-border-radius: 3rem;
+
+	/* Theme Transition */
+	--theme-transition: 0.2s ease-in-out;
+
+	/* Theme Layout */
+	--section-margin: 3rem;
+	--theme-grid-gap: 1rem;
+	--container-max-width: 1440px;
+	--container-max-width-narrow: 960px;
+	--container-padding: 0 1rem;
+
+	--theme-blog-post-header-width: 1200px;
+}
+
+[data-theme='dark'] {
+	color-scheme: dark;
+	/* Theme Colors */
+	--theme-primary: hsl(0, 0%, 100%);
+	--theme-primary-hover: hsl(0, 0%, 90%);
+	--theme-on-primary: hsl(0, 0%, 0%);
+
+	--theme-bg: hsl(0, 0%, 2%);
+	--theme-on-bg: hsl(0, 0%, 100%);
+
+	--theme-surface-1: hsl(0, 0%, 20%);
+	--theme-on-surface-1: hsl(0, 0%, 100%);
+
+	--theme-surface-2: #203422;
+	--theme-on-surface-2: #ffffff;
+
+	--theme-shape-radius: 0;
+
+	--form-field-input-color: var(--theme-on-bg);
+}
+
+[data-theme='earth'] {
+	/* Theme Colors */
+	--theme-primary: #2c3e2d;
+	--theme-primary-hover: #395a3b;
+	--theme-on-primary: hsl(0, 0%, 100%);
+
+	--theme-bg: #eeeff1;
+	--theme-on-bg: #272f27;
+
+	--theme-surface-1: #e6e4e0;
+	--theme-on-surface-1: #272f27;
+
+	--theme-surface-2: #c3d9c4;
+	--theme-on-surface-2: #fff;
+
+	--theme-button-border-radius: 0.5rem;
+}
+
+[data-theme='ocean'] {
+	/* Theme Colors */
+	/* Theme Colors */
+	--theme-primary: #1556ac;
+	--theme-primary-hover: #2569c3;
+	--theme-on-primary: hsl(0, 0%, 100%);
+
+	--theme-bg: #fafafa;
+	--theme-on-bg: #0c0d0d;
+
+	--theme-surface-1: #eef1f3;
+	--theme-on-surface-1: #0c0d0d;
+
+	--theme-surface-2: #072650;
+	--theme-on-surface-2: #ffffff;
+}
+
+[data-theme='sand'] {
+	/* Theme Colors */
+	/* Theme Colors */
+	--theme-primary: #e38a20;
+	--theme-primary-hover: #eb870f;
+	--theme-on-primary: hsl(0, 0%, 100%);
+
+	--theme-bg: #fffffe;
+	--theme-on-bg: #5e4536;
+
+	--theme-surface-1: #ffecd9;
+	--theme-on-surface-1: #5e4536;
+
+	--theme-surface-2: #6a4d34;
+	--theme-on-surface-2: #ffffff;
+
+	--theme-button-border-radius: 0.5rem;
+}

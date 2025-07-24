@@ -2629,47 +2629,50 @@ export const ohioCities = {
       fullName: "Centerville, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Centerville, Ohio with premium concrete coating services. This highly regarded Montgomery County community is known for excellent schools, beautiful neighborhoods, and high property values, where we deliver exceptional concrete coating solutions for upscale homes, businesses, and community facilities that demand superior quality and craftsmanship.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Centerville, Ohio with premium concrete coating services. This highly regarded Montgomery County community is known for excellent schools, beautiful neighborhoods, and high property values, where we deliver exceptional concrete coating solutions for upscale homes, businesses, and community facilities that demand superior quality and craftsmanship.</p>
       
       <p>From established luxury neighborhoods to thriving business districts and community facilities, Centerville's reputation for excellence requires coating solutions that maintain the highest standards. Our veteran-owned company brings military-grade precision and upscale community expertise to every garage floor, commercial space, and residential coating project in this prestigious Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Centerville, Ohio",
-      text: `<p>We specialize in serving Centerville's upscale residential community and business needs, providing concrete coating solutions that enhance luxury homes, support high-end commercial facilities, and contribute to this prestigious Montgomery County community's continued excellence.</p>`,
-      list: [
-        "Luxury residential garage floor epoxy for Centerville homes",
-        "High-end commercial flooring for Centerville businesses",
-        "Upscale basement concrete coating and moisture protection",
-        "Premium decorative concrete for luxury residential properties",
-        "Community facility and municipal building coatings",
-        "Custom decorative concrete for high-end properties",
-        "Superior home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Centerville's Premium Residential and Commercial Areas",
-      locations: [
-        "Centerville luxury residential neighborhoods and subdivisions",
-        "Uptown Centerville business and shopping districts",
-        "Oak Creek Golf Club and recreational facilities",
-        "Centerville community centers and municipal buildings",
-        "High-end residential developments throughout Centerville",
-        "Premium shopping centers and commercial facilities",
-        "Centerville-Washington Township area properties"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Centerville Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with luxury community experience",
-        "Understanding of high-end residential and commercial standards",
-        "Licensed, bonded, and fully insured for premium property work",
-        "Free estimates with attention to luxury property requirements",
-        "Local expertise serving Montgomery County upscale communities",
-        "Military-grade quality that meets the highest homeowner expectations",
-        "Professional service that respects premium community values"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Luxury residential garage floor epoxy coatings for Centerville's upscale homes and neighborhoods."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "High-end commercial flooring solutions for Centerville businesses and premium facilities."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Upscale basement concrete coating and moisture protection for luxury residential properties."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Premium decorative concrete coatings for high-end Centerville properties."
+      }
+    ],
+    landmarks: [
+      "Uptown Centerville business district",
+      "Oak Creek Golf Club",
+      "Centerville community centers",
+      "Centerville-Washington Township",
+      "Premium shopping centers",
+      "Municipal buildings",
+      "Luxury residential subdivisions"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with luxury community experience",
+      "Understanding of high-end residential and commercial standards",
+      "Licensed, bonded, and fully insured for premium property work",
+      "Free travel to all Centerville neighborhoods and Montgomery County areas",
+      "Local expertise serving upscale communities",
+      "Military-grade quality that meets the highest expectations",
+      "Professional service that respects premium community values"
+    ],
     testimonials: [
       {
         name: "Robert Anderson",
@@ -2719,47 +2722,50 @@ export const ohioCities = {
       fullName: "Kettering, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Kettering, Ohio with premium concrete coating services. This well-established Montgomery County community combines historic neighborhoods with modern amenities, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value quality craftsmanship and reliable service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Kettering, Ohio with premium concrete coating services. This well-established Montgomery County community combines historic neighborhoods with modern amenities, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value quality craftsmanship and reliable service.</p>
       
       <p>From historic Oakwood to modern residential developments and thriving business districts, Kettering's diverse community character requires coating solutions that serve both traditional and contemporary needs. Our veteran-owned company brings military-grade precision and established community expertise to every garage floor, commercial space, and residential coating project in this respected Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Kettering, Ohio",
-      text: `<p>We specialize in serving Kettering's diverse residential community and business needs, providing concrete coating solutions that enhance established homes, support local commerce, and contribute to this well-regarded Montgomery County community's continued appeal.</p>`,
-      list: [
-        "Residential garage floor epoxy for Kettering neighborhoods",
-        "Commercial flooring for Kettering business districts",
-        "Historic home basement concrete coating and protection",
-        "Community facility and municipal building coatings",
-        "Established neighborhood property restoration services",
-        "Decorative concrete for residential and commercial properties",
-        "Quality home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Kettering's Residential and Commercial Areas",
-      locations: [
-        "Kettering residential neighborhoods and subdivisions",
-        "Lincoln Park Commons and shopping districts",
-        "Kettering recreational facilities and community centers",
-        "Historic Oakwood area properties",
-        "Local business districts and commercial facilities",
-        "Kettering City School District properties",
-        "Established neighborhoods throughout Kettering"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Kettering Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with established community experience",
-        "Understanding of both historic and modern property needs",
-        "Licensed, bonded, and fully insured for residential and commercial work",
-        "Free estimates with attention to community property standards",
-        "Local expertise serving Montgomery County established communities",
-        "Military-grade quality that meets homeowner and business expectations",
-        "Professional service that respects neighborhood values and history"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy solutions for Kettering's established neighborhoods, enhancing property values with durable, attractive coatings."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial concrete coatings for Kettering business districts, providing durable flooring solutions that support local commerce."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for historic and modern Kettering homes, preventing moisture issues and enhancing usable space."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings ideal for Kettering's diverse residential and commercial properties requiring quick turnaround."
+      }
+    ],
+    landmarks: [
+      "Kettering residential neighborhoods and subdivisions",
+      "Lincoln Park Commons and shopping districts",
+      "Kettering recreational facilities and community centers",
+      "Historic Oakwood area properties",
+      "Local business districts and commercial facilities",
+      "Kettering City School District properties",
+      "Established neighborhoods throughout Kettering"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with established community experience",
+      "Understanding of both historic and modern property needs",
+      "Licensed, bonded, and fully insured for residential and commercial work",
+      "Free estimates with attention to community property standards",
+      "Local expertise serving Montgomery County established communities",
+      "Military-grade quality that meets homeowner and business expectations",
+      "Professional service that respects neighborhood values and history"
+    ],
     testimonials: [
       {
         name: "James Mitchell",
@@ -2809,47 +2815,50 @@ export const ohioCities = {
       fullName: "Miamisburg, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Miamisburg, Ohio with premium concrete coating services. This historic Montgomery County city combines rich heritage with modern growth, home to the famous Miamisburg Mound and thriving business community, where we deliver exceptional concrete coating solutions for historic properties, contemporary homes, and commercial facilities that demand quality and preservation-sensitive approaches.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Miamisburg, Ohio with premium concrete coating services. This historic Montgomery County city combines rich heritage with modern growth, home to the famous Miamisburg Mound and thriving business community, where we deliver exceptional concrete coating solutions for historic properties, contemporary homes, and commercial facilities that demand quality and preservation-sensitive approaches.</p>
       
       <p>From historic downtown districts to modern residential developments and industrial facilities, Miamisburg's unique blend of history and progress requires coating solutions that respect the past while serving contemporary needs. Our veteran-owned company brings military-grade precision and historic community expertise to every concrete coating project in this distinctive Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Miamisburg, Ohio",
-      text: `<p>We specialize in serving Miamisburg's unique combination of historic preservation needs and modern development requirements, providing concrete coating solutions that honor the city's heritage while delivering contemporary performance and durability.</p>`,
-      list: [
-        "Historic district property concrete coating and preservation",
-        "Residential garage floor epoxy for Miamisburg neighborhoods",
-        "Commercial and industrial facility floor coatings",
-        "Historic downtown business district concrete services",
-        "Modern residential development concrete coatings",
-        "Municipal and community facility building coatings",
-        "Heritage-sensitive decorative concrete applications"
-      ]
-    },
-    landmarks: {
-      title: "Serving Miamisburg's Historic and Modern Properties",
-      locations: [
-        "Historic downtown Miamisburg business district",
-        "Miamisburg Mound and historic area properties",
-        "Modern residential neighborhoods and subdivisions",
-        "Industrial and commercial facility districts",
-        "Heritage preservation district properties",
-        "Community centers and municipal buildings",
-        "Mixed-use developments throughout Miamisburg"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Miamisburg Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with historic city experience",
-        "Sensitivity to heritage preservation and modern development needs",
-        "Licensed, bonded, and fully insured for diverse property types",
-        "Free estimates with understanding of historic and contemporary challenges",
-        "Local expertise serving Montgomery County historic communities",
-        "Military-grade quality with preservation awareness",
-        "Professional service for unique community requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor coatings for Miamisburg neighborhoods, serving both historic homes and modern developments with quality solutions."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial and industrial facility coatings for Miamisburg's diverse business community, from historic downtown to modern developments."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Heritage-sensitive basement coatings for historic Miamisburg properties and modern residential developments throughout the city."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Advanced polyaspartic coatings that respect Miamisburg's historic character while providing modern performance and durability."
+      }
+    ],
+    landmarks: [
+      "Historic downtown Miamisburg business district",
+      "Miamisburg Mound and historic area properties",
+      "Modern residential neighborhoods and subdivisions",
+      "Industrial and commercial facility districts",
+      "Heritage preservation district properties",
+      "Community centers and municipal buildings",
+      "Mixed-use developments throughout Miamisburg"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with historic city experience",
+      "Sensitivity to heritage preservation and modern development needs",
+      "Licensed, bonded, and fully insured for diverse property types",
+      "Free estimates with understanding of historic and contemporary challenges",
+      "Local expertise serving Montgomery County historic communities",
+      "Military-grade quality with preservation awareness",
+      "Professional service for unique community requirements"
+    ],
     testimonials: [
       {
         name: "David Harrison",
@@ -2899,47 +2908,50 @@ export const ohioCities = {
       fullName: "Clayton, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Clayton, Ohio with premium concrete coating services. This growing Montgomery County community offers modern suburban living with family-friendly neighborhoods and expanding business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value quality craftsmanship and contemporary performance.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Clayton, Ohio with premium concrete coating services. This growing Montgomery County community offers modern suburban living with family-friendly neighborhoods and expanding business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value quality craftsmanship and contemporary performance.</p>
       
       <p>From newer residential developments to established neighborhoods and growing commercial areas, Clayton's suburban character requires coating solutions that enhance property values while serving modern family and business needs. Our veteran-owned company brings military-grade precision and suburban community expertise to every garage floor, commercial space, and residential coating project in this thriving Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Clayton, Ohio",
-      text: `<p>We specialize in serving Clayton's suburban residential community and growing business needs, providing concrete coating solutions that enhance modern homes, support local commerce, and contribute to this developing Montgomery County community's continued growth.</p>`,
-      list: [
-        "Modern residential garage floor epoxy for Clayton neighborhoods",
-        "Commercial flooring for Clayton business developments",
-        "Suburban home basement concrete coating and protection",
-        "New construction residential concrete coatings",
-        "Community facility and municipal building coatings",
-        "Contemporary decorative concrete for residential properties",
-        "Modern home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Clayton's Residential and Commercial Areas",
-      locations: [
-        "Clayton residential neighborhoods and subdivisions",
-        "Salem Avenue commercial corridor",
-        "Clayton community centers and recreational facilities",
-        "New residential developments throughout Clayton",
-        "Local business districts and shopping centers",
-        "Clayton school district properties",
-        "Modern suburban developments and family neighborhoods"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Clayton Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with suburban community experience",
-        "Understanding of modern residential and commercial needs",
-        "Licensed, bonded, and fully insured for all property types",
-        "Free estimates with attention to contemporary property standards",
-        "Local expertise serving Montgomery County growing communities",
-        "Military-grade quality that meets modern homeowner expectations",
-        "Professional service that supports community growth and development"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Modern garage floor epoxy solutions for Clayton's growing residential neighborhoods, enhancing property values in new and established developments."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring solutions for Clayton's expanding business districts, supporting local commerce with durable, professional coatings."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for Clayton's suburban homes, creating functional spaces that add value to family properties."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings perfect for Clayton's busy families and businesses requiring quick, professional installation."
+      }
+    ],
+    landmarks: [
+      "Clayton residential neighborhoods and subdivisions",
+      "Salem Avenue commercial corridor",
+      "Clayton community centers and recreational facilities",
+      "New residential developments throughout Clayton",
+      "Local business districts and shopping centers",
+      "Clayton school district properties",
+      "Modern suburban developments and family neighborhoods"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with suburban community experience",
+      "Understanding of modern residential and commercial needs",
+      "Licensed, bonded, and fully insured for all property types",
+      "Free estimates with attention to contemporary property standards",
+      "Local expertise serving Montgomery County growing communities",
+      "Military-grade quality that meets modern homeowner expectations",
+      "Professional service that supports community growth and development"
+    ],
     testimonials: [
       {
         name: "Michael Stevens",
@@ -2989,47 +3001,50 @@ export const ohioCities = {
       fullName: "Englewood, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Englewood, Ohio with premium concrete coating services. This established Montgomery County community combines suburban neighborhoods with local business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value reliable quality and personalized service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Englewood, Ohio with premium concrete coating services. This established Montgomery County community combines suburban neighborhoods with local business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value reliable quality and personalized service.</p>
       
       <p>From well-maintained residential neighborhoods to local business areas and community facilities, Englewood's character as an established suburban community requires coating solutions that enhance property values while serving both family and commercial needs. Our veteran-owned company brings military-grade precision and community expertise to every garage floor, business facility, and residential coating project in this respected Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Englewood, Ohio",
-      text: `<p>We specialize in serving Englewood's residential community and local business needs, providing concrete coating solutions that enhance established homes, support neighborhood commerce, and contribute to this stable Montgomery County community's continued appeal.</p>`,
-      list: [
-        "Residential garage floor epoxy for Englewood neighborhoods",
-        "Local business commercial flooring solutions",
-        "Established home basement concrete coating and protection",
-        "Community facility and municipal building coatings",
-        "Neighborhood property maintenance and restoration services",
-        "Decorative concrete for residential and commercial properties",
-        "Quality home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Englewood's Residential and Commercial Areas",
-      locations: [
-        "Englewood residential neighborhoods and subdivisions",
-        "Union Boulevard commercial areas",
-        "Englewood recreational facilities and community centers",
-        "Local business districts and shopping areas",
-        "Englewood school district properties",
-        "Established neighborhoods throughout Englewood",
-        "Community parks and municipal facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Englewood Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with established community experience",
-        "Understanding of residential neighborhood and local business needs",
-        "Licensed, bonded, and fully insured for community property work",
-        "Free estimates with attention to neighborhood property standards",
-        "Local expertise serving Montgomery County residential communities",
-        "Military-grade quality that meets community expectations",
-        "Professional service that values neighborhood relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Englewood's established neighborhoods, enhancing property values with reliable, attractive coatings."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring solutions for Englewood's local business districts, supporting neighborhood commerce with durable, professional coatings."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for established Englewood homes, preventing moisture issues and creating functional living space."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings ideal for Englewood's busy families and businesses requiring reliable, quick-turnaround solutions."
+      }
+    ],
+    landmarks: [
+      "Englewood residential neighborhoods and subdivisions",
+      "Union Boulevard commercial areas",
+      "Englewood recreational facilities and community centers",
+      "Local business districts and shopping areas",
+      "Englewood school district properties",
+      "Established neighborhoods throughout Englewood",
+      "Community parks and municipal facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with established community experience",
+      "Understanding of residential neighborhood and local business needs",
+      "Licensed, bonded, and fully insured for community property work",
+      "Free estimates with attention to neighborhood property standards",
+      "Local expertise serving Montgomery County residential communities",
+      "Military-grade quality that meets community expectations",
+      "Professional service that values neighborhood relationships"
+    ],
     testimonials: [
       {
         name: "Robert Taylor",
@@ -3079,47 +3094,50 @@ export const ohioCities = {
       fullName: "Germantown, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Germantown, Ohio with premium concrete coating services. This charming Montgomery County community combines small-town character with historic heritage, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value both tradition and quality craftsmanship.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Germantown, Ohio with premium concrete coating services. This charming Montgomery County community combines small-town character with historic heritage, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value both tradition and quality craftsmanship.</p>
       
       <p>From historic downtown areas to established residential neighborhoods and community facilities, Germantown's small-town character requires coating solutions that respect the area's heritage while providing modern performance. Our veteran-owned company brings military-grade precision and small community expertise to every garage floor, business facility, and residential coating project in this distinctive Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Germantown, Ohio",
-      text: `<p>We specialize in serving Germantown's small-town community needs, providing concrete coating solutions that enhance family homes, support local businesses, and contribute to this historic Montgomery County community's continued charm and functionality.</p>`,
-      list: [
-        "Residential garage floor epoxy for Germantown homes",
-        "Historic downtown business district concrete services",
-        "Small-town community facility and building coatings",
-        "Traditional home basement concrete coating and protection",
-        "Local business commercial flooring solutions",
-        "Heritage-sensitive decorative concrete applications",
-        "Community property maintenance and restoration services"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Germantown's Residential and Historic Areas",
-      locations: [
-        "Historic downtown Germantown business district",
-        "Germantown residential neighborhoods and homes",
-        "Community centers and municipal facilities",
-        "Local parks and recreational areas",
-        "Germantown school district properties",
-        "Historic area properties and buildings",
-        "Small-town commercial and retail facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Germantown Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with small-town community experience",
-        "Sensitivity to historic character and community values",
-        "Licensed, bonded, and fully insured for diverse property needs",
-        "Free estimates with understanding of small-town requirements",
-        "Local expertise serving Montgomery County historic communities",
-        "Military-grade quality with community-focused service",
-        "Professional service that respects small-town relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Germantown homes, providing quality coatings that complement the community's small-town character."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Heritage-sensitive commercial flooring for Germantown's historic downtown business district and local establishments."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Traditional home basement protection for Germantown properties, providing moisture control while respecting historic character."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Advanced polyaspartic coatings that provide modern performance while maintaining sensitivity to Germantown's historic community values."
+      }
+    ],
+    landmarks: [
+      "Historic downtown Germantown business district",
+      "Germantown residential neighborhoods and homes",
+      "Community centers and municipal facilities",
+      "Local parks and recreational areas",
+      "Germantown school district properties",
+      "Historic area properties and buildings",
+      "Small-town commercial and retail facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with small-town community experience",
+      "Sensitivity to historic character and community values",
+      "Licensed, bonded, and fully insured for diverse property needs",
+      "Free estimates with understanding of small-town requirements",
+      "Local expertise serving Montgomery County historic communities",
+      "Military-grade quality with community-focused service",
+      "Professional service that respects small-town relationships"
+    ],
     testimonials: [
       {
         name: "William Schmidt",
@@ -3169,47 +3187,50 @@ export const ohioCities = {
       fullName: "Moraine, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Moraine, Ohio with premium concrete coating services. This Montgomery County community has strong automotive industry heritage and diverse residential neighborhoods, where we deliver exceptional concrete coating solutions for industrial facilities, family homes, and commercial properties that demand durability and professional quality.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Moraine, Ohio with premium concrete coating services. This Montgomery County community has strong automotive industry heritage and diverse residential neighborhoods, where we deliver exceptional concrete coating solutions for industrial facilities, family homes, and commercial properties that demand durability and professional quality.</p>
       
       <p>From automotive-related facilities to established residential areas and growing commercial districts, Moraine's industrial character combined with family neighborhoods requires coating solutions that handle both heavy-duty applications and residential needs. Our veteran-owned company brings military-grade precision and industrial expertise to every garage floor, facility, and residential coating project in this dynamic Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Moraine, Ohio",
-      text: `<p>We specialize in serving Moraine's unique combination of industrial heritage and residential community needs, providing concrete coating solutions that handle automotive industry demands while enhancing family homes and local businesses.</p>`,
-      list: [
-        "Industrial facility and automotive-related concrete coatings",
-        "Residential garage floor epoxy for Moraine neighborhoods",
-        "Heavy-duty commercial flooring for industrial applications",
-        "Manufacturing facility concrete restoration and protection",
-        "Family home basement concrete coating and moisture protection",
-        "Automotive service facility floor coatings",
-        "Community facility and municipal building coatings"
-      ]
-    },
-    landmarks: {
-      title: "Serving Moraine's Industrial and Residential Properties",
-      locations: [
-        "Moraine industrial and manufacturing facilities",
-        "Residential neighborhoods throughout Moraine",
-        "Automotive industry and related business facilities",
-        "Commercial districts and retail areas",
-        "Community centers and municipal buildings",
-        "Moraine school district properties",
-        "Mixed-use industrial and residential developments"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Moraine Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with industrial and residential experience",
-        "Understanding of both automotive industry and family community needs",
-        "Licensed, bonded, and fully insured for diverse facility types",
-        "Free estimates for industrial, commercial, and residential projects",
-        "Local expertise serving Montgomery County industrial communities",
-        "Military-grade quality that handles both industrial and residential demands",
-        "Professional service for unique community requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Moraine's residential neighborhoods, providing durable coatings that handle automotive enthusiasts' needs."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Heavy-duty commercial and industrial flooring for Moraine's automotive facilities and manufacturing operations."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for Moraine family homes, providing moisture control and enhanced usable space."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings perfect for Moraine's industrial operations and busy residential families."
+      }
+    ],
+    landmarks: [
+      "Moraine industrial and manufacturing facilities",
+      "Residential neighborhoods throughout Moraine",
+      "Automotive industry and related business facilities",
+      "Commercial districts and retail areas",
+      "Community centers and municipal buildings",
+      "Moraine school district properties",
+      "Mixed-use industrial and residential developments"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with industrial and residential experience",
+      "Understanding of both automotive industry and family community needs",
+      "Licensed, bonded, and fully insured for diverse facility types",
+      "Free estimates for industrial, commercial, and residential projects",
+      "Local expertise serving Montgomery County industrial communities",
+      "Military-grade quality that handles both industrial and residential demands",
+      "Professional service for unique community requirements"
+    ],
     testimonials: [
       {
         name: "Frank Rodriguez",
@@ -3259,47 +3280,50 @@ export const ohioCities = {
       fullName: "Oakwood, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Oakwood, Ohio with premium concrete coating services. This prestigious Montgomery County community is renowned for its luxury homes, tree-lined streets, and exceptional property values, where we deliver exceptional concrete coating solutions for high-end residences and community facilities that demand the finest quality and craftsmanship.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Oakwood, Ohio with premium concrete coating services. This prestigious Montgomery County community is renowned for its luxury homes, tree-lined streets, and exceptional property values, where we deliver exceptional concrete coating solutions for high-end residences and community facilities that demand the finest quality and craftsmanship.</p>
       
       <p>From historic mansions to luxury estates and premium community facilities, Oakwood's reputation as one of the region's most desirable communities requires coating solutions that maintain the highest standards of excellence. Our veteran-owned company brings military-grade precision and luxury property expertise to every garage floor, estate facility, and residential coating project in this distinguished Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Oakwood, Ohio",
-      text: `<p>We specialize in serving Oakwood's luxury residential community needs, providing concrete coating solutions that enhance premium properties, support high-end facilities, and contribute to this prestigious Montgomery County community's continued excellence and distinction.</p>`,
-      list: [
-        "Luxury residential garage floor epoxy for Oakwood estates",
-        "Premium basement concrete coating for high-end homes",
-        "Custom decorative concrete for luxury residential properties",
-        "Historic estate property concrete preservation and restoration",
-        "High-end community facility and club building coatings",
-        "Luxury property maintenance and enhancement services",
-        "Designer concrete solutions for premium residential applications"
-      ]
-    },
-    landmarks: {
-      title: "Serving Oakwood's Luxury Residential and Premium Properties",
-      locations: [
-        "Historic Oakwood luxury estates and mansions",
-        "Premium residential neighborhoods and tree-lined streets",
-        "Oakwood Country Club and recreational facilities",
-        "High-end community centers and municipal buildings",
-        "Prestigious residential developments throughout Oakwood",
-        "Historic district luxury properties",
-        "Premium estates and luxury home communities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Oakwood Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with luxury property experience",
-        "Understanding of the highest residential quality standards",
-        "Licensed, bonded, and fully insured for premium property work",
-        "Free estimates with attention to luxury property requirements",
-        "Local expertise serving Montgomery County's most prestigious communities",
-        "Military-grade quality that exceeds the highest expectations",
-        "Professional service that respects luxury community values and discretion"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Luxury garage floor epoxy solutions for Oakwood's prestigious estates, providing premium coatings that meet the highest quality standards."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "High-end commercial coatings for Oakwood's exclusive community facilities and club buildings, maintaining luxury standards."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Premium basement concrete protection for Oakwood's luxury homes, creating elegant spaces that enhance estate values."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Designer polyaspartic coatings for Oakwood's historic estates, providing modern performance while respecting luxury property aesthetics."
+      }
+    ],
+    landmarks: [
+      "Historic Oakwood luxury estates and mansions",
+      "Premium residential neighborhoods and tree-lined streets",
+      "Oakwood Country Club and recreational facilities",
+      "High-end community centers and municipal buildings",
+      "Prestigious residential developments throughout Oakwood",
+      "Historic district luxury properties",
+      "Premium estates and luxury home communities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with luxury property experience",
+      "Understanding of the highest residential quality standards",
+      "Licensed, bonded, and fully insured for premium property work",
+      "Free estimates with attention to luxury property requirements",
+      "Local expertise serving Montgomery County's most prestigious communities",
+      "Military-grade quality that exceeds the highest expectations",
+      "Professional service that respects luxury community values and discretion"
+    ],
     testimonials: [
       {
         name: "Charles Wellington",
@@ -3349,47 +3373,50 @@ export const ohioCities = {
       fullName: "Vandalia, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Vandalia, Ohio with premium concrete coating services. This thriving Montgomery County community combines family-friendly neighborhoods with excellent schools and growing business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value quality and community pride.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Vandalia, Ohio with premium concrete coating services. This thriving Montgomery County community combines family-friendly neighborhoods with excellent schools and growing business districts, where we deliver exceptional concrete coating solutions for residential homes, commercial facilities, and community properties that value quality and community pride.</p>
       
       <p>From established residential neighborhoods to new developments and bustling commercial areas, Vandalia's growth as a desirable family community requires coating solutions that enhance property values while serving modern needs. Our veteran-owned company brings military-grade precision and community expertise to every garage floor, commercial space, and residential coating project in this dynamic Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Vandalia, Ohio",
-      text: `<p>We specialize in serving Vandalia's family-oriented community and growing business needs, providing concrete coating solutions that enhance family homes, support local commerce, and contribute to this thriving Montgomery County community's continued success.</p>`,
-      list: [
-        "Family residential garage floor epoxy for Vandalia neighborhoods",
-        "Commercial flooring for Vandalia business districts",
-        "Community facility and school district building coatings",
-        "New construction residential concrete coatings",
-        "Established home basement concrete coating and protection",
-        "Shopping center and retail facility concrete services",
-        "Modern home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Vandalia's Residential and Commercial Areas",
-      locations: [
-        "Vandalia residential neighborhoods and family subdivisions",
-        "Dayton-Vandalia shopping areas and commercial districts",
-        "Vandalia-Butler school district facilities",
-        "Community centers and recreational facilities",
-        "New residential developments throughout Vandalia",
-        "Local business districts and retail centers",
-        "Municipal buildings and community facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Vandalia Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with family community experience",
-        "Understanding of growing residential and commercial needs",
-        "Licensed, bonded, and fully insured for all property types",
-        "Free estimates with attention to family and business property standards",
-        "Local expertise serving Montgomery County growing communities",
-        "Military-grade quality that meets family and business expectations",
-        "Professional service that supports community growth and family values"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Family-friendly garage floor epoxy for Vandalia neighborhoods, providing durable coatings that enhance property values in this growing community."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring solutions for Vandalia's expanding business districts, supporting local commerce with professional, durable coatings."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for Vandalia family homes, creating functional spaces that add value to growing residential properties."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings perfect for Vandalia's busy families and thriving businesses requiring efficient, quality installations."
+      }
+    ],
+    landmarks: [
+      "Vandalia residential neighborhoods and family subdivisions",
+      "Dayton-Vandalia shopping areas and commercial districts",
+      "Vandalia-Butler school district facilities",
+      "Community centers and recreational facilities",
+      "New residential developments throughout Vandalia",
+      "Local business districts and retail centers",
+      "Municipal buildings and community facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with family community experience",
+      "Understanding of growing residential and commercial needs",
+      "Licensed, bonded, and fully insured for all property types",
+      "Free estimates with attention to family and business property standards",
+      "Local expertise serving Montgomery County growing communities",
+      "Military-grade quality that meets family and business expectations",
+      "Professional service that supports community growth and family values"
+    ],
     testimonials: [
       {
         name: "Mark Henderson",
@@ -3439,47 +3466,50 @@ export const ohioCities = {
       fullName: "Riverside, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Riverside, Ohio with premium concrete coating services. This established Montgomery County community offers residential neighborhoods with convenient access to Dayton amenities, where we deliver exceptional concrete coating solutions for family homes, local businesses, and community facilities that value quality craftsmanship and reliable service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Riverside, Ohio with premium concrete coating services. This established Montgomery County community offers residential neighborhoods with convenient access to Dayton amenities, where we deliver exceptional concrete coating solutions for family homes, local businesses, and community facilities that value quality craftsmanship and reliable service.</p>
       
       <p>From well-maintained residential neighborhoods to local business areas and community facilities, Riverside's character as a stable residential community requires coating solutions that enhance property values while serving both family and commercial needs. Our veteran-owned company brings military-grade precision and community expertise to every garage floor, business facility, and residential coating project in this respected Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Riverside, Ohio",
-      text: `<p>We specialize in serving Riverside's residential community and local business needs, providing concrete coating solutions that enhance established homes, support neighborhood commerce, and contribute to this stable Montgomery County community's continued appeal.</p>`,
-      list: [
-        "Residential garage floor epoxy for Riverside neighborhoods",
-        "Local business commercial flooring solutions",
-        "Established home basement concrete coating and protection",
-        "Community facility and municipal building coatings",
-        "Neighborhood property maintenance and restoration services",
-        "Decorative concrete for residential and commercial properties",
-        "Quality home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Riverside's Residential and Commercial Areas",
-      locations: [
-        "Riverside residential neighborhoods and subdivisions",
-        "Local business districts and commercial areas",
-        "Riverside recreational facilities and community centers",
-        "Neighborhood parks and municipal facilities",
-        "Riverside school district properties",
-        "Established neighborhoods throughout Riverside",
-        "Community gathering spaces and local facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Riverside Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with established community experience",
-        "Understanding of residential neighborhood and local business needs",
-        "Licensed, bonded, and fully insured for community property work",
-        "Free estimates with attention to neighborhood property standards",
-        "Local expertise serving Montgomery County residential communities",
-        "Military-grade quality that meets community expectations",
-        "Professional service that values neighborhood relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Riverside's established neighborhoods, enhancing property values with reliable, attractive coatings."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring solutions for Riverside's local business areas, supporting neighborhood commerce with durable, professional coatings."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for established Riverside homes, preventing moisture issues and creating functional living spaces."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings ideal for Riverside's busy families and local businesses requiring reliable, efficient solutions."
+      }
+    ],
+    landmarks: [
+      "Riverside residential neighborhoods and subdivisions",
+      "Local business districts and commercial areas",
+      "Riverside recreational facilities and community centers",
+      "Neighborhood parks and municipal facilities",
+      "Riverside school district properties",
+      "Established neighborhoods throughout Riverside",
+      "Community gathering spaces and local facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with established community experience",
+      "Understanding of residential neighborhood and local business needs",
+      "Licensed, bonded, and fully insured for community property work",
+      "Free estimates with attention to neighborhood property standards",
+      "Local expertise serving Montgomery County residential communities",
+      "Military-grade quality that meets community expectations",
+      "Professional service that values neighborhood relationships"
+    ],
     testimonials: [
       {
         name: "Gary Peterson",
@@ -3529,47 +3559,50 @@ export const ohioCities = {
       fullName: "Trotwood, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Trotwood, Ohio with premium concrete coating services. This diverse Montgomery County community combines residential neighborhoods with local businesses and community facilities, where we deliver exceptional concrete coating solutions for family homes, commercial properties, and community buildings that value quality craftsmanship and inclusive service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Trotwood, Ohio with premium concrete coating services. This diverse Montgomery County community combines residential neighborhoods with local businesses and community facilities, where we deliver exceptional concrete coating solutions for family homes, commercial properties, and community buildings that value quality craftsmanship and inclusive service.</p>
       
       <p>From established residential areas to growing business districts and community facilities, Trotwood's diverse community character requires coating solutions that serve all residents and businesses with equal quality and care. Our veteran-owned company brings military-grade precision and community-focused expertise to every garage floor, commercial space, and residential coating project in this vibrant Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Trotwood, Ohio",
-      text: `<p>We specialize in serving Trotwood's diverse residential community and local business needs, providing concrete coating solutions that enhance family homes, support neighborhood commerce, and contribute to this inclusive Montgomery County community's continued growth.</p>`,
-      list: [
-        "Residential garage floor epoxy for Trotwood neighborhoods",
-        "Community-focused commercial flooring solutions",
-        "Diverse home basement concrete coating and protection",
-        "Community facility and municipal building coatings",
-        "Neighborhood revitalization property services",
-        "Local business and retail facility concrete services",
-        "Inclusive home improvement concrete coating solutions"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Trotwood's Residential and Commercial Areas",
-      locations: [
-        "Trotwood residential neighborhoods and subdivisions",
-        "Local business districts and commercial facilities",
-        "Community centers and recreational facilities",
-        "Trotwood municipal buildings and civic facilities",
-        "Neighborhood shopping centers and retail areas",
-        "Trotwood school district properties",
-        "Diverse community gathering spaces throughout Trotwood"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Trotwood Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with diverse community experience",
-        "Understanding of inclusive residential and commercial needs",
-        "Licensed, bonded, and fully insured for all community property work",
-        "Free estimates with attention to diverse property standards",
-        "Local expertise serving Montgomery County diverse communities",
-        "Military-grade quality that serves all community members equally",
-        "Professional service that values community diversity and inclusion"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Trotwood's diverse neighborhoods, providing quality coatings that serve all community members equally."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Community-focused commercial flooring solutions for Trotwood's local businesses and neighborhood commerce."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for Trotwood family homes, creating functional spaces for diverse community households."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings that provide efficient, quality installations for Trotwood's busy community members."
+      }
+    ],
+    landmarks: [
+      "Trotwood residential neighborhoods and subdivisions",
+      "Local business districts and commercial facilities",
+      "Community centers and recreational facilities",
+      "Trotwood municipal buildings and civic facilities",
+      "Neighborhood shopping centers and retail areas",
+      "Trotwood school district properties",
+      "Diverse community gathering spaces throughout Trotwood"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with diverse community experience",
+      "Understanding of inclusive residential and commercial needs",
+      "Licensed, bonded, and fully insured for all community property work",
+      "Free estimates with attention to diverse property standards",
+      "Local expertise serving Montgomery County diverse communities",
+      "Military-grade quality that serves all community members equally",
+      "Professional service that values community diversity and inclusion"
+    ],
     testimonials: [
       {
         name: "Marcus Johnson",
@@ -3619,47 +3652,50 @@ export const ohioCities = {
       fullName: "West Carrollton, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves West Carrollton, Ohio with premium concrete coating services. This historic Montgomery County community combines traditional neighborhoods with local business districts and community pride, where we deliver exceptional concrete coating solutions for established homes, local businesses, and community facilities that value both heritage and quality craftsmanship.</p>
+      content: `<p>Queen City Surface Coatings proudly serves West Carrollton, Ohio with premium concrete coating services. This historic Montgomery County community combines traditional neighborhoods with local business districts and community pride, where we deliver exceptional concrete coating solutions for established homes, local businesses, and community facilities that value both heritage and quality craftsmanship.</p>
       
       <p>From historic downtown areas to established residential neighborhoods and community facilities, West Carrollton's character as a traditional community with strong local identity requires coating solutions that respect the area's heritage while providing modern performance. Our veteran-owned company brings military-grade precision and community-focused expertise to every garage floor, business facility, and residential coating project in this proud Montgomery County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in West Carrollton, Ohio",
-      text: `<p>We specialize in serving West Carrollton's established community needs, providing concrete coating solutions that enhance traditional homes, support local businesses, and contribute to this historic Montgomery County community's continued character and functionality.</p>`,
-      list: [
-        "Traditional residential garage floor epoxy for West Carrollton homes",
-        "Historic downtown business district concrete services",
-        "Established home basement concrete coating and protection",
-        "Community facility and municipal building coatings",
-        "Local business and retail facility concrete services",
-        "Heritage-sensitive decorative concrete applications",
-        "Traditional community property maintenance services"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of West Carrollton's Residential and Historic Areas",
-      locations: [
-        "Historic downtown West Carrollton business district",
-        "West Carrollton residential neighborhoods and homes",
-        "Community centers and municipal facilities",
-        "Local parks and recreational areas",
-        "West Carrollton school district properties",
-        "Traditional neighborhood commercial areas",
-        "Historic area properties and community buildings"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why West Carrollton Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with traditional community experience",
-        "Understanding of historic character and community values",
-        "Licensed, bonded, and fully insured for diverse property needs",
-        "Free estimates with respect for traditional community standards",
-        "Local expertise serving Montgomery County established communities",
-        "Military-grade quality with community heritage awareness",
-        "Professional service that respects local traditions and relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for West Carrollton's traditional homes, providing quality coatings that respect the community's heritage."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Heritage-sensitive commercial flooring for West Carrollton's historic downtown business district and local establishments."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete protection for established West Carrollton homes, maintaining traditional character while providing modern performance."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Advanced polyaspartic coatings that provide modern performance while respecting West Carrollton's traditional community values."
+      }
+    ],
+    landmarks: [
+      "Historic downtown West Carrollton business district",
+      "West Carrollton residential neighborhoods and homes",
+      "Community centers and municipal facilities",
+      "Local parks and recreational areas",
+      "West Carrollton school district properties",
+      "Traditional neighborhood commercial areas",
+      "Historic area properties and community buildings"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with traditional community experience",
+      "Understanding of historic character and community values",
+      "Licensed, bonded, and fully insured for diverse property needs",
+      "Free estimates with respect for traditional community standards",
+      "Local expertise serving Montgomery County established communities",
+      "Military-grade quality with community heritage awareness",
+      "Professional service that respects local traditions and relationships"
+    ],
     testimonials: [
       {
         name: "Robert Clarke",
@@ -3709,47 +3745,50 @@ export const ohioCities = {
       fullName: "Farmersville, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Farmersville, Ohio with premium concrete coating services. This charming Montgomery County village combines small-town character with rural heritage, where we deliver exceptional concrete coating solutions for family homes, local businesses, and community facilities that value both tradition and quality craftsmanship.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Farmersville, Ohio with premium concrete coating services. This charming Montgomery County village combines small-town character with rural heritage, where we deliver exceptional concrete coating solutions for family homes, local businesses, and community facilities that value both tradition and quality craftsmanship.</p>
       
       <p>From historic village areas to residential neighborhoods and rural properties, Farmersville's small-town character requires coating solutions that respect the area's heritage while providing modern performance. Our veteran-owned company brings military-grade precision and small community expertise to every garage floor, business facility, and residential coating project in this distinctive Montgomery County village.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Farmersville, Ohio",
-      text: `<p>We specialize in serving Farmersville's small village community needs, providing concrete coating solutions that enhance family homes, support local businesses, and contribute to this historic Montgomery County village's continued charm and functionality.</p>`,
-      list: [
-        "Village residential garage floor epoxy for Farmersville homes",
-        "Small-town business district concrete services",
-        "Rural property and outbuilding concrete coatings",
-        "Village community facility and building coatings",
-        "Traditional home basement concrete coating and protection",
-        "Local business commercial flooring solutions",
-        "Heritage-sensitive village property services"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Farmersville's Village and Rural Properties",
-      locations: [
-        "Historic Farmersville village center and business district",
-        "Farmersville residential neighborhoods and homes",
-        "Rural properties and countryside areas",
-        "Community centers and municipal facilities",
-        "Local parks and recreational areas",
-        "Farmersville school district properties",
-        "Small-town commercial and retail facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Farmersville Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with small village community experience",
-        "Understanding of rural heritage and small-town values",
-        "Licensed, bonded, and fully insured for diverse village property needs",
-        "Free estimates with respect for small community requirements",
-        "Local expertise serving Montgomery County villages and rural areas",
-        "Military-grade quality with village community personal attention",
-        "Professional service that values small-town relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Farmersville homes, providing quality coatings that complement the village's rural character."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Small-town business flooring solutions for Farmersville's village commercial district and local establishments."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Traditional home basement protection for Farmersville properties, providing modern performance with village sensibility."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Advanced polyaspartic coatings suitable for Farmersville's rural properties and village buildings, providing durable protection."
+      }
+    ],
+    landmarks: [
+      "Historic Farmersville village center and business district",
+      "Farmersville residential neighborhoods and homes",
+      "Rural properties and countryside areas",
+      "Community centers and municipal facilities",
+      "Local parks and recreational areas",
+      "Farmersville school district properties",
+      "Small-town commercial and retail facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with small village community experience",
+      "Understanding of rural heritage and small-town values",
+      "Licensed, bonded, and fully insured for diverse village property needs",
+      "Free estimates with respect for small community requirements",
+      "Local expertise serving Montgomery County villages and rural areas",
+      "Military-grade quality with village community personal attention",
+      "Professional service that values small-town relationships"
+    ],
     testimonials: [
       {
         name: "Dale Hoffman",
@@ -3799,47 +3838,50 @@ export const ohioCities = {
       fullName: "Drexel, Ohio"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Drexel, Ohio with premium concrete coating services. This Census-Designated Place (CDP) in Montgomery County offers established residential living with community character, where we deliver exceptional concrete coating solutions for family homes and community properties that value quality craftsmanship and reliable service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Drexel, Ohio with premium concrete coating services. This Census-Designated Place (CDP) in Montgomery County offers established residential living with community character, where we deliver exceptional concrete coating solutions for family homes and community properties that value quality craftsmanship and reliable service.</p>
       
       <p>From residential neighborhoods to community facilities, Drexel's character as a recognized CDP requires coating solutions that enhance property values while serving the community's residential and local needs. Our veteran-owned company brings military-grade precision and community expertise to every garage floor, basement, and residential coating project in this Montgomery County area.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Drexel, Ohio",
-      text: `<p>We specialize in serving Drexel's residential community needs, providing concrete coating solutions that enhance family homes, support neighborhood property values, and contribute to this established Montgomery County CDP's appeal.</p>`,
-      list: [
-        "Residential garage floor epoxy for Drexel homes",
-        "CDP community basement concrete coating and protection",
-        "Neighborhood property maintenance and restoration services",
-        "Community facility and local building coatings",
-        "Decorative concrete for residential properties",
-        "Family home improvement concrete coating solutions",
-        "Local area property enhancement services"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Drexel's Residential and Community Areas",
-      locations: [
-        "Drexel residential neighborhoods and homes",
-        "CDP community developments and properties",
-        "Local community facilities and buildings",
-        "Neighborhood parks and recreational areas",
-        "Established residential streets and developments",
-        "Community gathering spaces",
-        "Montgomery County residential properties in Drexel area"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Drexel Residents Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with CDP community experience",
-        "Understanding of established residential neighborhood needs",
-        "Licensed, bonded, and fully insured for residential work",
-        "Free estimates with attention to community property standards",
-        "Local expertise serving Montgomery County residential areas",
-        "Military-grade quality that meets homeowner expectations",
-        "Professional service that respects community values and relationships"
-      ]
-    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor epoxy for Drexel homes, providing quality residential coatings for this established CDP community."
+      },
+      {
+        name: "Commercial Epoxy Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Community facility coatings for Drexel's local buildings and neighborhood properties requiring professional solutions."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "CDP residential basement protection for Drexel family homes, enhancing property values and functionality."
+      },
+      {
+        name: "Polyaspartic Coating",
+        href: "/services/polyaspartic-coating/",
+        description: "Fast-curing polyaspartic coatings ideal for Drexel's residential properties requiring efficient, quality installations."
+      }
+    ],
+    landmarks: [
+      "Drexel residential neighborhoods and homes",
+      "CDP community developments and properties",
+      "Local community facilities and buildings",
+      "Neighborhood parks and recreational areas",
+      "Established residential streets and developments",
+      "Community gathering spaces",
+      "Montgomery County residential properties in Drexel area"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with CDP community experience",
+      "Understanding of established residential neighborhood needs",
+      "Licensed, bonded, and fully insured for residential work",
+      "Free estimates with attention to community property standards",
+      "Local expertise serving Montgomery County residential areas",
+      "Military-grade quality that meets homeowner expectations",
+      "Professional service that respects community values and relationships"
+    ],
     testimonials: [
       {
         name: "Thomas Reed",

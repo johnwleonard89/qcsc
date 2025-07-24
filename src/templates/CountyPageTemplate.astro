@@ -98,11 +98,11 @@ const testimonials = getRandomTestimonials(3);
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Cities We Serve in {county.name}
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 justify-items-center max-w-4xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
           {cities.sort((a, b) => a.name.localeCompare(b.name)).map((city) => (
             <a 
               href={city.href}
-              class="bg-white px-4 py-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 text-center group w-full max-w-[200px]"
+              class="bg-white px-4 py-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 text-center group justify-self-center"
             >
               <span class="text-gray-700 font-medium group-hover:text-primary-600 transition-colors text-sm">
                 {city.name}
@@ -195,9 +195,7 @@ const testimonials = getRandomTestimonials(3);
 
           <!-- Call Button -->
           <a 
-            href="tel:+1-513-296-5525" 
-            role="button"
-            aria-label="Call Queen City Surface Coatings at (513) 296-5525"
+            href="tel:5132965525" 
             class="inline-flex items-center justify-center px-6 py-4 bg-green-600 text-white font-bold text-lg rounded-xl hover:bg-green-700 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 min-w-[200px] text-center"
           >
             📞 Call Now
@@ -206,9 +204,7 @@ const testimonials = getRandomTestimonials(3);
 
           <!-- Email Button -->
           <a 
-            href="mailto:john@queencitysurfacecoatings.com?subject=Free Estimate Request for {county.name}&body=Hi! I'm interested in getting a free estimate for concrete coating services in {county.name}. Please contact me to discuss my project." 
-            role="button"
-            aria-label="Email Queen City Surface Coatings for a free estimate"
+            href={`mailto:john@queencitysurfacecoatings.com?subject=Free%20Estimate%20Request%20for%20${encodeURIComponent(county.name)}&body=Hi!%20I'm%20interested%20in%20getting%20a%20free%20estimate%20for%20concrete%20coating%20services%20in%20${encodeURIComponent(county.name)}.%20Please%20contact%20me%20to%20discuss%20my%20project.`}
             class="inline-flex items-center justify-center px-6 py-4 border-2 border-primary-600 text-primary-600 font-semibold text-lg rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-300 min-w-[200px] text-center"
           >
             📧 Email Us

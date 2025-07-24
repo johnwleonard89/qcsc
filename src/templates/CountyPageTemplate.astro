@@ -98,15 +98,15 @@ const testimonials = getRandomTestimonials(3);
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Cities We Serve in {county.name}
         </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-4xl mx-auto">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {cities.sort((a, b) => a.name.localeCompare(b.name)).map((city) => (
             <a 
               href={city.href}
-              class="bg-white px-4 py-3 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 text-center group justify-self-center"
+              class="bg-white px-6 py-4 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-md transition-all duration-300 text-center group block w-full"
             >
-              <span class="text-gray-700 font-medium group-hover:text-primary-600 transition-colors text-sm">
+              <h3 class="text-base font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
                 {city.name}
-              </span>
+              </h3>
             </a>
           ))}
         </div>
@@ -121,15 +121,10 @@ const testimonials = getRandomTestimonials(3);
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
           Why Choose Queen City Surface Coatings for {county.name}?
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {whyChooseUs.map((reason) => (
-            <div class="flex items-start space-x-4 p-6 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl border border-primary-100">
-              <div class="flex-shrink-0 w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center mt-1">
-                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                </svg>
-              </div>
-              <p class="text-gray-700 font-medium leading-relaxed">{reason}</p>
+            <div class="p-6 bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl border border-primary-100 text-center">
+              <h3 class="text-lg font-semibold text-gray-900 leading-relaxed">{reason.replace(/^[^\s]+\s/, '')}</h3>
             </div>
           ))}
         </div>

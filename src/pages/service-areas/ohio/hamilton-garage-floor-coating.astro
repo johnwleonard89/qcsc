@@ -1,83 +1,17 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-import '../../../styles/service-areas.css';
+import CityPageTemplate from '../../../templates/CityPageTemplate.astro';
+import { cityPages } from '../../../data/cityPages.js';
 
-const city = {
-	name: 'Hamilton',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Butler',
-	population: '62,258',
-	specialty: 'Garage Floor Coatings',
-	landmarks: [
-		'Pyramid Hill Sculpture Park',
-		'Butler County Courthouse',
-		'RiversEdge Amphitheater',
-		'Fitton Center for Creative Arts',
-		'Miami University Hamilton',
-		'Great Miami River',
-		'Marcum Park'
-	],
-	description: 'Queen City Surface Coatings serves Hamilton, Ohio, a vibrant city along the Great Miami River known for its arts scene and outdoor recreation. Our garage floor coating services help Hamilton homeowners create beautiful, functional spaces that complement their active lifestyles.',
-	serviceRadius: 'All Hamilton neighborhoods and Butler County areas',
-	zipCodes: ['45011', '45012', '45013'],
-	keyServices: [
-		'Garage Floor Coating',
-		'Residential Epoxy Flooring',
-		'Basement Floor Coating',
-		'Driveway Coating',
-		'Polyaspartic Coating',
-		'Decorative Concrete'
-	],
-	localProjects: [
-		{
-			title: 'Riverfront Home Garage',
-			description: 'Custom garage floor coating for a Great Miami River area home, featuring moisture-resistant epoxy with decorative elements.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			title: 'Historic Hamilton District',
-			description: 'Basement floor coating for a restored historic home, preserving character while adding modern functionality.',
-			service: 'Basement Coating'
-		},
-		{
-			title: 'Miami University Faculty Home',
-			description: 'Professional garage transformation for university faculty, creating organized storage and workspace areas.',
-			service: 'Garage Epoxy'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Rachel and Steve Johnson',
-			location: 'Hamilton, OH',
-			quote: 'Fantastic transformation of our garage! The coating looks beautiful and handles everything from gardening tools to sports equipment. Highly recommend.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			name: 'Dr. Maria Santos',
-			location: 'Miami University Hamilton',
-			quote: 'Professional service that worked perfectly with our academic schedule. The basement floor coating has transformed our home office space.',
-			service: 'Basement Coating'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you serve all areas of Hamilton?',
-			answer: 'Yes, we provide concrete coating services throughout Hamilton, including downtown, riverfront areas, Miami University Hamilton campus vicinity, and all Butler County neighborhoods.'
-		},
-		{
-			question: 'How do your coatings handle Hamilton\'s river proximity?',
-			answer: 'Our coatings include moisture barriers and vapor-resistant systems perfect for Hamilton\'s Great Miami River environment, preventing humidity and moisture issues.'
-		},
-		{
-			question: 'Can you accommodate Hamilton\'s festival and event schedule?',
-			answer: 'Absolutely! We understand Hamilton\'s active community calendar with RiversEdge events and can schedule projects around your family\'s activities and local events.'
-		}
-	]
-};
-
-const primaryService = 'Garage Floor Coating';
-const slug = 'hamilton-garage-floor-coating';
+const pageData = cityPages.hamiltonOH;
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<CityPageTemplate 
+  seo={pageData.seo}
+  city={pageData.city}
+  intro={pageData.intro}
+  services={pageData.services}
+  landmarks={pageData.landmarks}
+  whyChooseUs={pageData.whyChooseUs}
+  testimonials={pageData.testimonials}
+  faqs={pageData.faqs}
+/>

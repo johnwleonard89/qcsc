@@ -1,83 +1,17 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-import '../../../styles/service-areas.css';
+import CityPageTemplate from '../../../templates/CityPageTemplate.astro';
+import { cityPages } from '../../../data/cityPages.js';
 
-const city = {
-	name: 'Sharonville',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Hamilton',
-	population: '14,117',
-	specialty: 'Commercial & Industrial Epoxy',
-	landmarks: [
-		'Sharonville Convention Center',
-		'Sharon Woods Park',
-		'Heritage Village Museum',
-		'Trammel Fossil Park',
-		'Crossroads Church',
-		'Sharonville Cultural Arts Center',
-		'I-75 Business Corridor'
-	],
-	description: 'Queen City Surface Coatings serves Sharonville, Ohio, a thriving business community home to major corporate facilities and the renowned Convention Center. Our epoxy flooring services support Sharonville\'s commercial success with professional-grade flooring solutions.',
-	serviceRadius: 'All Sharonville areas and Hamilton County',
-	zipCodes: ['45241', '45246'],
-	keyServices: [
-		'Commercial Epoxy Flooring',
-		'Convention Center Flooring',
-		'Industrial Floor Coating',
-		'Corporate Facility Flooring',
-		'Garage Floor Coating',
-		'Warehouse Epoxy Systems'
-	],
-	localProjects: [
-		{
-			title: 'Convention Center Area Business',
-			description: 'High-performance commercial epoxy flooring for a Sharonville business facility, designed for professional appearance and heavy use.',
-			service: 'Commercial Epoxy'
-		},
-		{
-			title: 'I-75 Corridor Warehouse',
-			description: 'Industrial-grade epoxy coating for a Sharonville distribution facility, handling forklift traffic and demanding operations.',
-			service: 'Industrial Epoxy'
-		},
-		{
-			title: 'Sharon Woods Family Home',
-			description: 'Residential garage floor coating for a family near Sharon Woods Park, combining durability with aesthetic appeal.',
-			service: 'Garage Floor Coating'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Sharonville Business Owner',
-			location: 'Convention Center District',
-			quote: 'Outstanding commercial flooring that has enhanced our facility\'s professional appearance and improved operational efficiency.',
-			service: 'Commercial Epoxy'
-		},
-		{
-			name: 'Jennifer and Mark Davis',
-			location: 'Sharon Woods Area',
-			quote: 'Excellent residential service! Our garage floor coating looks amazing and handles our active family\'s needs perfectly.',
-			service: 'Garage Floor Coating'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you work with Sharonville\'s business community?',
-			answer: 'Yes, we provide commercial and industrial epoxy flooring for Sharonville\'s business district, including Convention Center area facilities, I-75 corridor businesses, and corporate headquarters.'
-		},
-		{
-			question: 'How do your coatings handle industrial operations?',
-			answer: 'Our industrial epoxy systems are designed for Sharonville\'s demanding commercial environment, offering chemical resistance, abrasion resistance, and durability for warehouse and manufacturing operations.'
-		},
-		{
-			question: 'Can you work around business operations schedules?',
-			answer: 'Absolutely! We understand Sharonville\'s 24/7 business environment and can schedule commercial projects during off-hours, weekends, or planned shutdowns to minimize operational disruption.'
-		}
-	]
-};
-
-const primaryService = 'Epoxy Flooring';
-const slug = 'sharonville-epoxy-flooring';
+const pageData = cityPages.sharonvilleEpoxyOH;
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<CityPageTemplate 
+  seo={pageData.seo}
+  city={pageData.city}
+  intro={pageData.intro}
+  services={pageData.services}
+  landmarks={pageData.landmarks}
+  whyChooseUs={pageData.whyChooseUs}
+  testimonials={pageData.testimonials}
+  faqs={pageData.faqs}
+/>

@@ -5,8 +5,8 @@ export const countyPages = {
   hamiltonCountyOH: {
     seo: {
       title: 'Hamilton County Ohio Concrete Coating | Queen City Surface Coatings',
-      description: 'Professional concrete coating services in Hamilton County, Ohio. Serving Cincinnati, Mason, West Chester and surrounding areas with veteran-owned precision.',
-      keywords: 'Hamilton County concrete coating, Cincinnati epoxy floors, Mason garage coating, West Chester basement floors'
+      description: 'Professional concrete coating services in Hamilton County, Ohio. Serving Cincinnati, Mason, Loveland and surrounding areas with veteran-owned precision.',
+      keywords: 'Hamilton County concrete coating, Cincinnati epoxy floors, Mason garage coating, Loveland basement floors'
     },
     county: {
       name: 'Hamilton County',
@@ -14,7 +14,7 @@ export const countyPages = {
       fullName: 'Hamilton County, Ohio'
     },
     intro: {
-      content: '<p>Hamilton County represents the heart of Southwest Ohio, and Queen City Surface Coatings is proud to serve homeowners and businesses throughout <strong>Cincinnati</strong>, <strong>Mason</strong>, <strong>West Chester</strong>, <strong>Loveland</strong>, and all surrounding communities with professional concrete coating solutions.</p><p>From historic neighborhoods in <strong>downtown Cincinnati</strong> to modern developments in <strong>Mason</strong> and thriving business districts in <strong>West Chester</strong>, we understand the unique concrete challenges faced by Hamilton County property owners and deliver customized solutions that last.</p>'
+      content: '<p>Hamilton County represents the heart of Southwest Ohio, and Queen City Surface Coatings is proud to serve homeowners and businesses throughout <strong>Cincinnati</strong>, <strong>Mason</strong>, <strong>Loveland</strong>, <strong>Springdale</strong>, and all surrounding communities with professional concrete coating solutions.</p><p>From historic neighborhoods in <strong>downtown Cincinnati</strong> to modern developments in <strong>Mason</strong> and established communities in <strong>Loveland</strong>, we understand the unique concrete challenges faced by Hamilton County property owners and deliver customized solutions that last.</p>'
     },
     services: [
       {
@@ -46,7 +46,6 @@ export const countyPages = {
     cities: [
       { name: 'Cincinnati', href: '/service-areas/ohio/cincinnati-concrete-coating/' },
       { name: 'Mason', href: '/service-areas/ohio/mason-concrete-coating/' },
-      { name: 'West Chester', href: '/service-areas/ohio/west-chester-concrete-services/' },
       { name: 'Loveland', href: '/service-areas/ohio/loveland-concrete-coating/' },
       { name: 'Springdale', href: '/service-areas/ohio/springdale-concrete-coating/' },
       { name: 'Sharonville', href: '/service-areas/ohio/sharonville-epoxy-flooring/' },
@@ -58,20 +57,20 @@ export const countyPages = {
       { name: 'Norwood', href: '/service-areas/ohio/norwood-garage-floor-coating/' }
     ],
     whyChooseUs: [
-      '🏠 Local Hamilton County Expertise - We understand the unique concrete challenges in Cincinnati, Mason, and West Chester homes and businesses',
+      '🏠 Local Hamilton County Expertise - We understand the unique concrete challenges in Cincinnati, Mason, and Loveland homes and businesses',
       '🇺🇸 Veteran-Owned Precision - Military-grade attention to detail and commitment to excellence in every Hamilton County project',
       '🛡️ Licensed, Bonded & Insured - Full protection and peace of mind for all Hamilton County residential and commercial projects',
       '📱 24/7 Emergency Service - Immediate response for urgent concrete coating needs throughout Hamilton County',
       '⭐ 100% Satisfaction Guarantee - We stand behind our work with industry-leading warranties for Hamilton County customers',
-      '🚀 Same-Day Estimates - Fast, professional quotes delivered within hours across Mason, Cincinnati, and West Chester'
+      '🚀 Same-Day Estimates - Fast, professional quotes delivered within hours across Mason, Cincinnati, and Loveland'
     ]
   },
 
   butlerCountyOH: {
     seo: {
       title: 'Butler County Ohio Concrete Coating | Queen City Surface Coatings',
-      description: 'Professional concrete coating services in Butler County, Ohio. Serving Hamilton, Fairfield, Middletown and surrounding areas with veteran precision.',
-      keywords: 'Butler County concrete coating, Hamilton Ohio epoxy floors, Fairfield garage coating, Middletown basement floors'
+      description: 'Professional concrete coating services in Butler County, Ohio. Serving Hamilton, Fairfield, West Chester, Middletown and surrounding areas with veteran precision.',
+      keywords: 'Butler County concrete coating, Hamilton Ohio epoxy floors, Fairfield garage coating, West Chester concrete services, Middletown basement floors'
     },
     county: {
       name: 'Butler County',
@@ -79,7 +78,7 @@ export const countyPages = {
       fullName: 'Butler County, Ohio'
     },
     intro: {
-      content: '<p>Butler County is home to thriving communities and growing businesses, and Queen City Surface Coatings proudly serves property owners throughout <strong>Hamilton</strong>, <strong>Fairfield</strong>, <strong>Middletown</strong>, <strong>Oxford</strong>, and all Butler County areas with professional concrete coating expertise.</p><p>From family homes in <strong>Hamilton</strong> to student housing near <strong>Miami University in Oxford</strong> and industrial facilities in <strong>Middletown</strong>, we deliver customized concrete solutions that meet the diverse needs of Butler County properties.</p>'
+      content: '<p>Butler County is home to thriving communities and growing businesses, and Queen City Surface Coatings proudly serves property owners throughout <strong>Hamilton</strong>, <strong>Fairfield</strong>, <strong>West Chester</strong>, <strong>Middletown</strong>, <strong>Oxford</strong>, and all Butler County areas with professional concrete coating expertise.</p><p>From family homes in <strong>Hamilton</strong> to modern developments in <strong>West Chester</strong>, student housing near <strong>Miami University in Oxford</strong>, and industrial facilities in <strong>Middletown</strong>, we deliver customized concrete solutions that meet the diverse needs of Butler County properties.</p>'
     },
     services: [
       {
@@ -111,16 +110,17 @@ export const countyPages = {
     cities: [
       { name: 'Hamilton', href: '/service-areas/ohio/hamilton-garage-floor-coating/' },
       { name: 'Fairfield', href: '/service-areas/ohio/fairfield-concrete-coating/' },
+      { name: 'West Chester', href: '/service-areas/ohio/west-chester-concrete-services/' },
       { name: 'Middletown', href: '/service-areas/ohio/middletown-epoxy-flooring/' },
       { name: 'Oxford', href: '/service-areas/ohio/oxford-concrete-coating/' }
     ],
     whyChooseUs: [
-      '🏠 Local Butler County Knowledge - Deep understanding of Hamilton, Fairfield, and Middletown property needs',
+      '🏠 Local Butler County Knowledge - Deep understanding of Hamilton, Fairfield, West Chester, and Middletown property needs',
       '🇺🇸 Veteran-Owned Excellence - Military precision applied to every Butler County concrete coating project',
       '🛡️ Fully Licensed & Insured - Complete protection for all Butler County residential and commercial work',
       '📱 Rapid Response Service - Quick emergency service throughout Butler County communities',
       '⭐ Guaranteed Results - 100% satisfaction warranty for all Butler County customers',
-      '🚀 Fast Turnaround - Same-day estimates available across Hamilton, Fairfield, and surrounding areas'
+      '🚀 Fast Turnaround - Same-day estimates available across Hamilton, Fairfield, West Chester, and surrounding areas'
     ]
   },
 

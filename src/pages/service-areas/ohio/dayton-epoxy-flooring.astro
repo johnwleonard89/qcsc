@@ -1,83 +1,17 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-import '../../../styles/service-areas.css';
+import CityPageTemplate from '../../../templates/CityPageTemplate.astro';
+import { cityPages } from '../../../data/cityPages.js';
 
-const city = {
-	name: 'Dayton',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Montgomery',
-	population: '137,644',
-	specialty: 'Commercial Epoxy Flooring',
-	landmarks: [
-		'National Museum of the US Air Force',
-		'Dayton Art Institute',
-		'Carillon Historical Park',
-		'University of Dayton',
-		'Wright-Patterson Air Force Base',
-		'Oregon Historic District',
-		'Fifth Third Field'
-	],
-	description: 'Queen City Surface Coatings proudly serves Dayton, Ohio, the birthplace of aviation and home to Wright-Patterson Air Force Base. Our epoxy flooring services bring military-grade precision to Dayton\'s commercial and residential properties, honoring the city\'s aerospace heritage.',
-	serviceRadius: 'All Dayton neighborhoods and Montgomery County',
-	zipCodes: ['45400', '45401', '45402', '45403', '45404', '45405', '45406', '45407', '45408', '45409', '45410', '45412', '45413', '45414', '45415', '45416', '45417', '45418', '45419', '45420', '45422', '45423', '45424', '45426', '45427', '45428', '45429', '45430', '45431', '45432', '45433', '45434', '45435', '45437', '45439', '45440', '45441', '45448', '45449', '45458', '45459', '45469', '45470', '45475', '45479', '45482', '45490', '45499'],
-	keyServices: [
-		'Commercial Epoxy Flooring',
-		'Aircraft Hangar Flooring',
-		'Garage Floor Coating',
-		'Metallic Epoxy Flooring',
-		'Polyaspartic Coating',
-		'Industrial Floor Coating'
-	],
-	localProjects: [
-		{
-			title: 'Aerospace Manufacturing Floor',
-			description: 'High-performance epoxy flooring for a Dayton aerospace contractor, meeting strict military specifications and standards.',
-			service: 'Industrial Epoxy'
-		},
-		{
-			title: 'University of Dayton Research Lab',
-			description: 'Chemical-resistant epoxy flooring for engineering research facilities, designed for safety and easy decontamination.',
-			service: 'Commercial Epoxy'
-		},
-		{
-			title: 'Oregon District Restaurant',
-			description: 'Decorative epoxy flooring for a historic district restaurant, combining durability with aesthetic appeal.',
-			service: 'Decorative Epoxy'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Colonel (Ret.) James Peterson',
-			location: 'Dayton, OH',
-			quote: 'Outstanding attention to detail and military precision. The garage floor coating exceeded expectations and reflects the quality standards we expect in Dayton.',
-			service: 'Garage Floor Epoxy'
-		},
-		{
-			name: 'Michelle Rodriguez',
-			location: 'University of Dayton Area',
-			quote: 'Professional service from consultation to completion. Our basement transformation has added significant value to our Dayton home.',
-			service: 'Basement Epoxy'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you work with aerospace contractors in Dayton?',
-			answer: 'Yes, we have extensive experience with Dayton\'s aerospace industry, providing coatings that meet military specifications and contractor requirements for Wright-Patterson AFB area facilities.'
-		},
-		{
-			question: 'How do your coatings handle Dayton\'s industrial environment?',
-			answer: 'Our epoxy systems are designed for Dayton\'s diverse industrial needs, from aerospace manufacturing to automotive, with chemical resistance and durability for heavy industrial use.'
-		},
-		{
-			question: 'Do you serve both Wright-Patt AFB and civilian areas?',
-			answer: 'We serve all of Dayton including residential areas, University of Dayton campus, Oregon District, and work with contractors serving Wright-Patterson Air Force Base facilities.'
-		}
-	]
-};
-
-const primaryService = 'Epoxy Flooring';
-const slug = 'dayton-epoxy-flooring';
+const pageData = cityPages.daytonOH;
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<CityPageTemplate 
+  seo={pageData.seo}
+  city={pageData.city}
+  intro={pageData.intro}
+  services={pageData.services}
+  landmarks={pageData.landmarks}
+  whyChooseUs={pageData.whyChooseUs}
+  testimonials={pageData.testimonials}
+  faqs={pageData.faqs}
+/>

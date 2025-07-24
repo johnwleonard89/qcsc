@@ -1,83 +1,17 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-import '../../../styles/service-areas.css';
+import CityPageTemplate from '../../../templates/CityPageTemplate.astro';
+import { cityPages } from '../../../data/cityPages.js';
 
-const city = {
-	name: 'Blue Ash',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Hamilton',
-	population: '12,333',
-	specialty: 'Executive Garage Solutions',
-	landmarks: [
-		'Blue Ash Golf Course',
-		'Summit Park',
-		'Blue Ash Chili',
-		'Cooper Creek Park',
-		'Reed Hartman Highway',
-		'Blue Ash Recreation Center',
-		'Kenwood Country Club'
-	],
-	description: 'Queen City Surface Coatings serves Blue Ash, Ohio, an upscale business and residential community known for its corporate headquarters and luxury homes. Our garage floor coating services provide executive-quality results that match Blue Ash\'s reputation for excellence.',
-	serviceRadius: 'All Blue Ash neighborhoods and Hamilton County',
-	zipCodes: ['45242', '45241'],
-	keyServices: [
-		'Executive Garage Solutions',
-		'Luxury Garage Floor Coating',
-		'Corporate Facility Flooring',
-		'Metallic Epoxy Systems',
-		'Basement Floor Coating',
-		'Premium Polyaspartic Coating'
-	],
-	localProjects: [
-		{
-			title: 'Blue Ash Executive Home',
-			description: 'Luxury garage transformation featuring premium metallic epoxy with custom design elements for a Blue Ash executive residence.',
-			service: 'Executive Garage Coating'
-		},
-		{
-			title: 'Corporate Headquarters Facility',
-			description: 'Commercial floor coating for a Blue Ash corporate facility, providing professional appearance and long-term durability.',
-			service: 'Corporate Flooring'
-		},
-		{
-			title: 'Summit Park Area Home',
-			description: 'Premium basement floor coating creating sophisticated entertainment space for a Blue Ash luxury home.',
-			service: 'Basement Coating'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Richard and Katherine Mills',
-			location: 'Blue Ash, OH',
-			quote: 'Absolutely exceptional quality! Our garage floor is now a showpiece that reflects the quality we expect in Blue Ash. True craftsmanship.',
-			service: 'Executive Garage Coating'
-		},
-		{
-			name: 'Corporate Executive',
-			location: 'Reed Hartman Highway',
-			quote: 'Professional service that understands executive expectations. Our facility flooring represents our company\'s commitment to excellence.',
-			service: 'Corporate Flooring'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you serve Blue Ash\'s corporate facilities?',
-			answer: 'Yes, we provide commercial concrete coating services for Blue Ash corporations, including Reed Hartman Highway business district and all corporate facilities requiring executive-quality flooring.'
-		},
-		{
-			question: 'What premium options do you offer for Blue Ash luxury homes?',
-			answer: 'For Blue Ash\'s executive homes, we offer metallic epoxy systems, custom decorative options, and premium polyaspartic coatings that enhance luxury properties and create stunning showcase spaces.'
-		},
-		{
-			question: 'How do you ensure results match Blue Ash quality standards?',
-			answer: 'We maintain the highest quality standards using premium materials and meticulous processes to deliver results that meet Blue Ash\'s reputation for excellence in both residential and corporate environments.'
-		}
-	]
-};
-
-const primaryService = 'Garage Floor Coating';
-const slug = 'blue-ash-garage-floor-coating';
+const pageData = cityPages.blueAshOH;
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<CityPageTemplate 
+  seo={pageData.seo}
+  city={pageData.city}
+  intro={pageData.intro}
+  services={pageData.services}
+  landmarks={pageData.landmarks}
+  whyChooseUs={pageData.whyChooseUs}
+  testimonials={pageData.testimonials}
+  faqs={pageData.faqs}
+/>

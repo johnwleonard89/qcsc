@@ -1,83 +1,17 @@
 ---
-import CityPageTemplate from '../../../components/city/CityPageTemplate.astro';
-import '../../../styles/service-areas.css';
+import CityPageTemplate from '../../../templates/CityPageTemplate.astro';
+import { cityPages } from '../../../data/cityPages.js';
 
-const city = {
-	name: 'Fairfield',
-	state: 'Ohio',
-	stateAbbr: 'OH',
-	county: 'Butler',
-	population: '42,635',
-	specialty: 'Residential Concrete Coating',
-	landmarks: [
-		'Jungle Jim\'s International Market',
-		'Village Green Park',
-		'Fairfield Community Arts Center',
-		'Harbin Park',
-		'Fairfield High School',
-		'Butler County Fairgrounds',
-		'Central Park'
-	],
-	description: 'Queen City Surface Coatings serves Fairfield, Ohio, home to the famous Jungle Jim\'s International Market and a thriving suburban community. Our residential concrete coating services help Fairfield families enhance their homes with durable, beautiful flooring solutions.',
-	serviceRadius: 'All Fairfield neighborhoods and surrounding areas',
-	zipCodes: ['45014', '45011'],
-	keyServices: [
-		'Residential Concrete Coating',
-		'Garage Floor Coating',
-		'Basement Floor Coating',
-		'Driveway Sealing',
-		'Epoxy Flooring',
-		'Polyaspartic Coating'
-	],
-	localProjects: [
-		{
-			title: 'Fairfield Family Garage',
-			description: 'Complete garage makeover for a growing family, featuring durable epoxy coating that handles kids\' bikes and sports equipment.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			title: 'Village Green Area Home',
-			description: 'Basement floor coating creating additional family recreational space near Fairfield\'s parks and amenities.',
-			service: 'Basement Coating'
-		},
-		{
-			title: 'Harbin Park Vicinity Driveway',
-			description: 'Driveway coating for a home near Harbin Park, enhancing curb appeal and providing long-lasting protection.',
-			service: 'Driveway Coating'
-		}
-	],
-	testimonials: [
-		{
-			name: 'Kevin and Lisa Chang',
-			location: 'Fairfield, OH',
-			quote: 'Amazing transformation! Our garage went from a concrete slab to a showroom-quality space. Perfect for our active family lifestyle.',
-			service: 'Garage Floor Coating'
-		},
-		{
-			name: 'Mark Williams',
-			location: 'Village Green Area',
-			quote: 'Professional service from start to finish. The basement coating has given us a beautiful space for the kids to play year-round.',
-			service: 'Basement Coating'
-		}
-	],
-	faqs: [
-		{
-			question: 'Do you serve all Fairfield neighborhoods?',
-			answer: 'Yes, we provide concrete coating services throughout Fairfield, including Village Green, Harbin Park area, and all residential neighborhoods near Jungle Jim\'s and the fairgrounds.'
-		},
-		{
-			question: 'What coating options work best for Fairfield families?',
-			answer: 'For Fairfield\'s active families, we recommend our durable epoxy systems with decorative options that handle sports equipment, bikes, and daily family activities while maintaining their appearance.'
-		},
-		{
-			question: 'How long does a typical Fairfield project take?',
-			answer: 'Most residential garage floors in Fairfield can be completed in 1-2 days. We work efficiently to minimize disruption to your family\'s schedule and activities.'
-		}
-	]
-};
-
-const primaryService = 'Concrete Coating';
-const slug = 'fairfield-concrete-coating';
+const pageData = cityPages.fairfieldOH;
 ---
 
-<CityPageTemplate {city} {primaryService} {slug} />
+<CityPageTemplate 
+  seo={pageData.seo}
+  city={pageData.city}
+  intro={pageData.intro}
+  services={pageData.services}
+  landmarks={pageData.landmarks}
+  whyChooseUs={pageData.whyChooseUs}
+  testimonials={pageData.testimonials}
+  faqs={pageData.faqs}
+/>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Page.astro';
 import { Container } from '@components/odyssey-theme';
+import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
 
 export interface Props {
   seo?: {
@@ -180,6 +181,24 @@ const { seo, hero, content } = Astro.props;
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {section.type === 'form' && (
+            <div class="text-center">
+              {section.title && (
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                  {section.title}
+                </h2>
+              )}
+              {section.content && (
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                  {section.content}
+                </p>
+              )}
+              <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                <QuoteRequestForm />
               </div>
             </div>
           )}

@@ -39,15 +39,9 @@ export const servicePages = {
           ]
         },
         {
-          type: 'cta',
-          title: 'Ready to Transform Your Space?',
-          content: 'Get a free consultation and see how metallic epoxy can elevate your floors.',
-          ctaText: 'Get Free Design Consultation',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        },
-        {
-          type: 'contact'
+          type: 'form',
+          title: 'Get Your Free Design Consultation',
+          content: 'Ready to see how metallic epoxy can transform your space? Fill out the form below and we\'ll provide you with a detailed quote and design consultation.'
         }
       ]
     }
@@ -90,15 +84,9 @@ export const servicePages = {
           ]
         },
         {
-          type: 'cta',
-          title: 'Transform Your Garage Today',
-          content: 'Get a free estimate for your garage floor epoxy project.',
-          ctaText: 'Get Free Garage Floor Estimate',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        },
-        {
-          type: 'contact'
+          type: 'form',
+          title: 'Get Your Free Garage Floor Estimate',
+          content: 'Transform your garage into a showroom-quality space. Fill out the form below for your free estimate and consultation.'
         }
       ]
     }
@@ -141,15 +129,9 @@ export const servicePages = {
           ]
         },
         {
-          type: 'cta',
-          title: 'Reclaim Your Basement Space',
-          content: 'Get a free consultation for your basement floor coating project.',
-          ctaText: 'Get Free Basement Floor Quote',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        },
-        {
-          type: 'contact'
+          type: 'form',
+          title: 'Get Your Free Basement Floor Quote',
+          content: 'Turn your basement into beautiful, functional living space. Fill out the form below for your free consultation and detailed estimate.'
         }
       ]
     }
@@ -192,15 +174,9 @@ export const servicePages = {
           ]
         },
         {
-          type: 'cta',
-          title: 'Need Fast Installation?',
-          content: 'Get polyaspartic coating installed and ready to use the same day.',
-          ctaText: 'Get Fast-Cure Quote',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        },
-        {
-          type: 'contact'
+          type: 'form',
+          title: 'Get Your Fast-Cure Quote',
+          content: 'Need same-day installation? Fill out the form below and we\'ll provide you with a quote for our rapid polyaspartic coating service.'
         }
       ]
     }
@@ -243,15 +219,9 @@ export const servicePages = {
           ]
         },
         {
-          type: 'cta',
-          title: 'Ready for Commercial Installation?',
-          content: 'Get a comprehensive quote for your commercial flooring project.',
-          ctaText: 'Get Commercial Quote',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call Commercial Line (513) 732-3276', href: 'tel:+15137323276'}
-        },
-        {
-          type: 'contact'
+          type: 'form',
+          title: 'Get Your Commercial Quote',
+          content: 'Ready for industrial-strength flooring? Fill out the form below and we\'ll provide a comprehensive quote for your commercial concrete coating project.'
         }
       ]
     }
@@ -281,6 +251,11 @@ export const companyPages = {
           type: 'text',
           title: 'Get Your Free Estimate',
           content: '<p>Ready to transform your concrete floors? Our veteran-owned team is standing by to provide you with a comprehensive, no-obligation estimate.</p><p>We serve the entire Cincinnati tri-state area with professional concrete coating solutions.</p>'
+        },
+        {
+          type: 'form',
+          title: 'Request Your Free Estimate',
+          content: 'Fill out the form below and we\'ll contact you within 24 hours with a detailed estimate for your project.'
         },
         {
           type: 'contact'

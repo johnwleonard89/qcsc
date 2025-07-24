@@ -4639,43 +4639,57 @@ export const cityPages = {
       fullName: "Burlington, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Burlington, Kentucky, the county seat of Boone County. This historic community combines small-town charm with county government facilities and growing residential areas, where we deliver exceptional concrete coating solutions for government buildings, homes, and businesses that demand quality and professionalism.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Burlington, Kentucky, the county seat of Boone County. This historic community combines small-town charm with county government facilities and growing residential areas, where we deliver exceptional concrete coating solutions for government buildings, homes, and businesses that demand quality and professionalism.</p>
       
       <p>From the courthouse and county administrative buildings to residential neighborhoods and local businesses, Burlington's role as county seat requires the highest standards in facility maintenance and home improvement. Our veteran-owned company brings military-grade precision and government facility expertise to every concrete coating project in this important Boone County community.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Burlington, Kentucky",
-      text: `<p>We specialize in serving Burlington's unique needs as Boone County's seat of government, providing concrete coating solutions for county facilities, residential properties, and local businesses. Our services meet the demanding standards required for public facilities and private properties alike.</p>`,
-      list: [
-        "Government facility concrete coating and restoration",
-        "Residential garage floor epoxy for Burlington neighborhoods",
-        "Commercial flooring for Burlington business district",
-        "County building maintenance and facility coatings", 
-        "Courthouse and administrative building floor services",
-        "Decorative concrete for public spaces and civic facilities",
-        "Industrial-grade coatings for county maintenance facilities"
-      ]
-    },
-    landmarks: {
-      title: "Serving Burlington's Government District and Residential Communities",
-      locations: [
-        "Boone County Courthouse and government complex",
-        "County administrative building facilities",
-        "Burlington residential neighborhoods",
-        "Main Street business district properties",
-        "Burlington Elementary School area homes",
-        "Gunpowder Creek vicinity residential areas",
-        "County maintenance and service facilities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Burlington Chooses Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with government facility experience",
-        "Specialized expertise in county seat community needs",
-        "Licensed, bonded, and fully insured for public and private work",
-        "Free estimates with detailed specifications for all projects",
-        "Local knowledge of Boone County government requirements",
+    services: [
+      {
+        name: "Government Facility Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Government facility concrete coating and restoration"
+      },
+      {
+        name: "Residential Garage Floor Epoxy",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floor epoxy for Burlington neighborhoods"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for Burlington business district"
+      },
+      {
+        name: "County Building Maintenance",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "County building maintenance and facility coatings"
+      },
+      {
+        name: "Courthouse Floor Services",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Courthouse and administrative building floor services"
+      },
+      {
+        name: "Decorative Concrete",
+        href: "/services/decorative-concrete/",
+        description: "Decorative concrete for public spaces and civic facilities"
+      }
+    ],
+    landmarks: [
+      "Boone County Courthouse and government complex",
+      "County administrative building facilities",
+      "Burlington residential neighborhoods",
+      "Main Street business district properties",
+      "Burlington Elementary School area homes",
+      "Gunpowder Creek vicinity residential areas",
+      "County maintenance and service facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with government facility experience",
+      "Specialized expertise in county seat community needs",
+      "Licensed, bonded, and fully insured for public and private work",
+      "Free estimates with detailed specifications for all projects",
+      "Local knowledge of Boone County government requirements",
         "Military-grade quality standards for official buildings",
         "Reliable service that respects both public trust and private property"
       ]
@@ -4730,47 +4744,60 @@ export const cityPages = {
       fullName: "Verona, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Verona, Kentucky with premium concrete coating services. This charming Boone County community offers rural character with convenient access to the Greater Cincinnati area, where we deliver exceptional concrete coating solutions for homes, farms, and businesses that value quality craftsmanship and reliable service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Verona, Kentucky with premium concrete coating services. This charming Boone County community offers rural character with convenient access to the Greater Cincinnati area, where we deliver exceptional concrete coating solutions for homes, farms, and businesses that value quality craftsmanship and reliable service.</p>
       
       <p>From established family farms to residential properties and local businesses, Verona's blend of rural and suburban living requires versatile coating solutions. Our veteran-owned company brings military-grade precision and rural property expertise to every garage floor, barn, commercial space, and agricultural facility coating project in this scenic Boone County community.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Verona, Kentucky",
-      text: `<p>We specialize in serving Verona's diverse needs from residential garages to agricultural facilities, providing concrete coating solutions that handle both family home requirements and the demanding conditions of rural properties and farm operations.</p>`,
-      list: [
-        "Residential garage floor epoxy for Verona homes",
-        "Agricultural building and barn floor coatings",
-        "Commercial flooring for Verona businesses",
-        "Farm equipment and machinery area coatings",
-        "Rural property concrete restoration and protection",
-        "Industrial-grade coatings for agricultural facilities",
-        "Decorative concrete for residential and commercial spaces"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Verona's Residential and Rural Properties",
-      locations: [
-        "Verona residential neighborhoods and homes",
-        "Agricultural properties and working farms",
-        "Rural Boone County family properties",
-        "Local business and commercial facilities",
-        "Farm equipment storage and machinery areas",
-        "Suburban developments near Verona center",
-        "Rural roads and countryside properties"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Verona Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with rural property experience",
-        "Specialized knowledge of agricultural and residential coating needs",
-        "Licensed, bonded, and fully insured for all property types",
-        "Free estimates for both residential and agricultural projects",
-        "Local expertise serving Boone County rural communities",
-        "Military-grade quality that handles farm and family demands",
-        "Reliable service that understands rural property requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Residential Garage Floor Epoxy",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floor epoxy for Verona homes"
+      },
+      {
+        name: "Agricultural Building Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Agricultural building and barn floor coatings"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for Verona businesses"
+      },
+      {
+        name: "Farm Equipment Area Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Farm equipment and machinery area coatings"
+      },
+      {
+        name: "Rural Property Restoration",
+        href: "/services/residential-concrete-coating/",
+        description: "Rural property concrete restoration and protection"
+      },
+      {
+        name: "Industrial Agricultural Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Industrial-grade coatings for agricultural facilities"
+      }
+    ],
+    landmarks: [
+      "Verona residential neighborhoods and homes",
+      "Agricultural properties and working farms",
+      "Rural Boone County family properties",
+      "Local business and commercial facilities",
+      "Farm equipment storage and machinery areas",
+      "Suburban developments near Verona center",
+      "Rural roads and countryside properties"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with rural property experience",
+      "Specialized knowledge of agricultural and residential coating needs",
+      "Licensed, bonded, and fully insured for all property types",
+      "Free estimates for both residential and agricultural projects",
+      "Local expertise serving Boone County rural communities",
+      "Military-grade quality that handles farm and family demands",
+      "Reliable service that understands rural property requirements"
+    ],
     testimonials: [
       {
         name: "Tom Bradford",
@@ -4821,47 +4848,60 @@ export const cityPages = {
       fullName: "Rabbit Hash, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Rabbit Hash, Kentucky with specialized concrete coating services. This historic Ohio River community is famous for its general store and unique character, where we deliver exceptional concrete coating solutions for historic properties, riverfront facilities, and residential homes that require both preservation sensitivity and modern performance.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Rabbit Hash, Kentucky with specialized concrete coating services. This historic Ohio River community is famous for its general store and unique character, where we deliver exceptional concrete coating solutions for historic properties, riverfront facilities, and residential homes that require both preservation sensitivity and modern performance.</p>
       
       <p>From the famous Rabbit Hash General Store area to riverside properties and rural homes, this unique Boone County community demands coating solutions that respect its historic character while providing modern durability. Our veteran-owned company brings military-grade precision and historic preservation awareness to every concrete coating project in this one-of-a-kind riverside community.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Rabbit Hash, Kentucky",
-      text: `<p>We specialize in serving Rabbit Hash's unique blend of historic preservation needs and modern property requirements, providing concrete coating solutions that respect the community's character while delivering contemporary performance and durability.</p>`,
-      list: [
-        "Historic property concrete coating and preservation",
-        "Riverfront facility and marina floor coatings",
-        "Residential garage floors for Rabbit Hash homes",
-        "Commercial flooring for local businesses and facilities",
-        "Moisture-resistant coatings for Ohio River proximity",
-        "Decorative concrete that complements historic character",
-        "Specialized coatings for unique community facilities"
-      ]
-    },
-    landmarks: {
-      title: "Serving Rabbit Hash's Historic and Riverfront Properties",
-      locations: [
-        "Historic Rabbit Hash General Store area",
-        "Ohio River waterfront properties and facilities",
-        "Riverside residential homes and cabins",
-        "Rural Boone County properties near Rabbit Hash",
-        "Historic district buildings and facilities",
-        "Marina and boat-related facility areas",
-        "Community gathering spaces and local businesses"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Rabbit Hash Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with historic property experience",
-        "Sensitivity to historic preservation and community character",
-        "Licensed, bonded, and fully insured for unique property needs",
-        "Free estimates with respect for historic and riverfront challenges",
-        "Local expertise serving Ohio River communities",
-        "Military-grade quality with historic preservation awareness",
-        "Specialized service for unique community requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Historic Property Coatings",
+        href: "/services/residential-concrete-coating/",
+        description: "Historic property concrete coating and preservation"
+      },
+      {
+        name: "Riverfront Facility Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Riverfront facility and marina floor coatings"
+      },
+      {
+        name: "Residential Garage Floors",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floors for Rabbit Hash homes"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for local businesses and facilities"
+      },
+      {
+        name: "Moisture-Resistant Coatings",
+        href: "/services/residential-concrete-coating/",
+        description: "Moisture-resistant coatings for Ohio River proximity"
+      },
+      {
+        name: "Decorative Concrete",
+        href: "/services/decorative-concrete/",
+        description: "Decorative concrete that complements historic character"
+      }
+    ],
+    landmarks: [
+      "Historic Rabbit Hash General Store area",
+      "Ohio River waterfront properties and facilities",
+      "Riverside residential homes and cabins",
+      "Rural Boone County properties near Rabbit Hash",
+      "Historic district buildings and facilities",
+      "Marina and boat-related facility areas",
+      "Community gathering spaces and local businesses"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with historic property experience",
+      "Sensitivity to historic preservation and community character",
+      "Licensed, bonded, and fully insured for unique property needs",
+      "Free estimates with respect for historic and riverfront challenges",
+      "Local expertise serving Ohio River communities",
+      "Military-grade quality with historic preservation awareness",
+      "Specialized service for unique community requirements"
+    ],
     testimonials: [
       {
         name: "Robert Klein",
@@ -4912,47 +4952,60 @@ export const cityPages = {
       fullName: "Hebron, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Hebron, Kentucky with premium concrete coating services. This important Boone County community is home to Cincinnati/Northern Kentucky International Airport and growing residential developments, where we deliver exceptional concrete coating solutions for airport-related facilities, commercial properties, and family homes that demand professional quality and reliability.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Hebron, Kentucky with premium concrete coating services. This important Boone County community is home to Cincinnati/Northern Kentucky International Airport and growing residential developments, where we deliver exceptional concrete coating solutions for airport-related facilities, commercial properties, and family homes that demand professional quality and reliability.</p>
       
       <p>From airport corridor commercial facilities to established residential neighborhoods and new developments, Hebron's strategic location requires coating solutions that meet both aviation industry standards and residential community needs. Our veteran-owned company brings military-grade precision and commercial facility expertise to every concrete coating project in this vital transportation hub community.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Hebron, Kentucky",
-      text: `<p>We specialize in serving Hebron's unique needs as an airport community and growing residential area, providing concrete coating solutions for aviation-related facilities, commercial properties, and residential homes that require superior durability and professional appearance.</p>`,
-      list: [
-        "Airport facility and aviation-related concrete coatings",
-        "Commercial flooring for Hebron business corridors",
-        "Residential garage floor epoxy for neighborhood homes",
-        "Industrial facility coatings for airport area businesses",
-        "Transportation facility concrete restoration and protection",
-        "Heavy-duty coatings for high-traffic commercial areas",
-        "Decorative concrete for residential and commercial properties"
-      ]
-    },
-    landmarks: {
-      title: "Serving Hebron's Airport Corridor and Residential Communities",
-      locations: [
-        "Cincinnati/Northern Kentucky International Airport area",
-        "Airport corridor commercial and industrial facilities",
-        "Hebron residential neighborhoods and subdivisions",
-        "Aviation-related business and facility areas",
-        "Transportation industry commercial properties",
-        "New residential developments near airport",
-        "Established Hebron family communities"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Hebron Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with aviation and commercial facility experience",
-        "Specialized knowledge of airport corridor and residential needs",
-        "Licensed, bonded, and fully insured for all facility types",
-        "Free estimates for residential, commercial, and industrial projects",
-        "Local expertise serving Boone County airport communities",
-        "Military-grade quality standards for aviation industry requirements",
-        "Professional service that handles both commercial and residential demands"
-      ]
-    },
+    services: [
+      {
+        name: "Airport Facility Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Airport facility and aviation-related concrete coatings"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for Hebron business corridors"
+      },
+      {
+        name: "Residential Garage Floor Epoxy",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floor epoxy for neighborhood homes"
+      },
+      {
+        name: "Industrial Facility Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Industrial facility coatings for airport area businesses"
+      },
+      {
+        name: "Transportation Facility Restoration",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Transportation facility concrete restoration and protection"
+      },
+      {
+        name: "Heavy-Duty Commercial Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Heavy-duty coatings for high-traffic commercial areas"
+      }
+    ],
+    landmarks: [
+      "Cincinnati/Northern Kentucky International Airport area",
+      "Airport corridor commercial and industrial facilities",
+      "Hebron residential neighborhoods and subdivisions",
+      "Aviation-related business and facility areas",
+      "Transportation industry commercial properties",
+      "New residential developments near airport",
+      "Established Hebron family communities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with aviation and commercial facility experience",
+      "Specialized knowledge of airport corridor and residential needs",
+      "Licensed, bonded, and fully insured for all facility types",
+      "Free estimates for residential, commercial, and industrial projects",
+      "Local expertise serving Boone County airport communities",
+      "Military-grade quality standards for aviation industry requirements",
+      "Professional service that handles both commercial and residential demands"
+    ],
     testimonials: [
       {
         name: "Mike Johnson",
@@ -5003,47 +5056,60 @@ export const cityPages = {
       fullName: "Belleview, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Belleview, Kentucky with premium concrete coating services. This peaceful Boone County community offers scenic rural beauty with convenient access to Northern Kentucky amenities, where we deliver exceptional concrete coating solutions for residential properties, small businesses, and rural facilities that value quality craftsmanship and personalized service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Belleview, Kentucky with premium concrete coating services. This peaceful Boone County community offers scenic rural beauty with convenient access to Northern Kentucky amenities, where we deliver exceptional concrete coating solutions for residential properties, small businesses, and rural facilities that value quality craftsmanship and personalized service.</p>
       
       <p>From established family homes to rural properties and local businesses, Belleview's quiet community character requires coating solutions that respect the area's natural beauty while providing modern performance. Our veteran-owned company brings military-grade precision and rural community expertise to every garage floor, commercial space, and residential coating project in this charming Boone County area.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Belleview, Kentucky",
-      text: `<p>We specialize in serving Belleview's residential community and rural property needs, providing concrete coating solutions that enhance homes, support local businesses, and handle the unique requirements of this scenic Northern Kentucky area.</p>`,
-      list: [
-        "Residential garage floor epoxy for Belleview homes",
-        "Rural property and outbuilding concrete coatings",
-        "Commercial flooring for local Belleview businesses",
-        "Basement concrete coating and moisture protection",
-        "Decorative concrete for residential and small commercial spaces",
-        "Property maintenance facility coatings",
-        "Concrete restoration for established properties"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Belleview's Residential and Rural Properties",
-      locations: [
-        "Belleview residential neighborhoods and homes",
-        "Rural Boone County family properties",
-        "Local business and small commercial facilities",
-        "Countryside homes and rural developments",
-        "Property outbuildings and maintenance facilities",
-        "Established Belleview community areas",
-        "Scenic rural roads and countryside properties"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Belleview Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with rural community experience",
-        "Personalized service that respects Belleview's quiet character",
-        "Licensed, bonded, and fully insured for all property types",
-        "Free estimates with attention to individual property needs",
-        "Local expertise serving Boone County rural communities",
-        "Military-grade quality with small community personal touch",
-        "Reliable service that understands rural property requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Residential Garage Floor Epoxy",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floor epoxy for Belleview homes"
+      },
+      {
+        name: "Rural Property Coatings",
+        href: "/services/residential-concrete-coating/",
+        description: "Rural property and outbuilding concrete coatings"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for local Belleview businesses"
+      },
+      {
+        name: "Basement Concrete Coating",
+        href: "/services/residential-concrete-coating/",
+        description: "Basement concrete coating and moisture protection"
+      },
+      {
+        name: "Decorative Concrete",
+        href: "/services/decorative-concrete/",
+        description: "Decorative concrete for residential and small commercial spaces"
+      },
+      {
+        name: "Facility Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Property maintenance facility coatings"
+      }
+    ],
+    landmarks: [
+      "Belleview residential neighborhoods and homes",
+      "Rural Boone County family properties",
+      "Local business and small commercial facilities",
+      "Countryside homes and rural developments",
+      "Property outbuildings and maintenance facilities",
+      "Established Belleview community areas",
+      "Scenic rural roads and countryside properties"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with rural community experience",
+      "Personalized service that respects Belleview's quiet character",
+      "Licensed, bonded, and fully insured for all property types",
+      "Free estimates with attention to individual property needs",
+      "Local expertise serving Boone County rural communities",
+      "Military-grade quality with small community personal touch",
+      "Reliable service that understands rural property requirements"
+    ],
     testimonials: [
       {
         name: "Robert Williams",
@@ -5458,47 +5524,65 @@ export const cityPages = {
       fullName: "Atwood, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Atwood, Kentucky with premium concrete coating services. This quiet unincorporated community in Kenton County offers peaceful rural living with convenient access to Greater Cincinnati amenities, where we deliver exceptional concrete coating solutions for residential properties and rural facilities that value quality craftsmanship and personalized service.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Atwood, Kentucky with premium concrete coating services. This quiet unincorporated community in Kenton County offers peaceful rural living with convenient access to Greater Cincinnati amenities, where we deliver exceptional concrete coating solutions for residential properties and rural facilities that value quality craftsmanship and personalized service.</p>
       
       <p>From rural family homes to country properties and small agricultural facilities, Atwood's serene community character requires coating solutions that enhance property value while respecting the area's natural beauty and quiet lifestyle. Our veteran-owned company brings military-grade precision and rural community expertise to every garage floor, outbuilding, and residential coating project in this peaceful Kenton County area.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Atwood, Kentucky",
-      text: `<p>We specialize in serving Atwood's rural residential community and property needs, providing concrete coating solutions that enhance country homes, support rural property maintenance, and contribute to this peaceful Kenton County community's quality of life.</p>`,
-      list: [
-        "Rural residential garage floor epoxy for Atwood homes",
-        "Country property outbuilding and storage facility coatings",
-        "Basement concrete coating and moisture protection",
-        "Rural property maintenance facility coatings",
-        "Decorative concrete for residential and rural properties",
-        "Small agricultural building and equipment storage coatings",
-        "Concrete restoration for established country properties"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Atwood's Rural and Residential Properties",
-      locations: [
-        "Atwood rural residential homes and properties",
-        "Country family homes and rural developments",
-        "Small agricultural properties and hobby farms",
-        "Rural property outbuildings and storage facilities",
-        "Countryside roads and property access areas",
-        "Established Atwood community properties",
-        "Scenic rural Kenton County countryside locations"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Atwood Property Owners Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with rural community experience",
-        "Personalized service that respects Atwood's peaceful character",
-        "Licensed, bonded, and fully insured for all rural property types",
-        "Free estimates with attention to individual country property needs",
-        "Local expertise serving Kenton County rural residential areas",
-        "Military-grade quality with rural community personal touch",
-        "Reliable service that understands country property requirements"
-      ]
-    },
+    services: [
+      {
+        name: "Rural Residential Garage Coatings",
+        href: "/services/garage-floor-epoxy/",
+        description: "Rural residential garage floor epoxy for Atwood homes"
+      },
+      {
+        name: "Outbuilding Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Country property outbuilding and storage facility coatings"
+      },
+      {
+        name: "Basement Concrete Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete coating and moisture protection"
+      },
+      {
+        name: "Property Maintenance Coatings",
+        href: "/services/concrete-repair/",
+        description: "Rural property maintenance facility coatings"
+      },
+      {
+        name: "Decorative Concrete",
+        href: "/services/decorative-concrete-coating/",
+        description: "Decorative concrete for residential and rural properties"
+      },
+      {
+        name: "Agricultural Building Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Small agricultural building and equipment storage coatings"
+      },
+      {
+        name: "Concrete Restoration",
+        href: "/services/concrete-repair/",
+        description: "Concrete restoration for established country properties"
+      }
+    ],
+    landmarks: [
+      "Atwood rural residential homes and properties",
+      "Country family homes and rural developments",
+      "Small agricultural properties and hobby farms",
+      "Rural property outbuildings and storage facilities",
+      "Countryside roads and property access areas",
+      "Established Atwood community properties",
+      "Scenic rural Kenton County countryside locations"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with rural community experience",
+      "Personalized service that respects Atwood's peaceful character",
+      "Licensed, bonded, and fully insured for all rural property types",
+      "Free estimates with attention to individual country property needs",
+      "Local expertise serving Kenton County rural residential areas",
+      "Military-grade quality with rural community personal touch",
+      "Reliable service that understands country property requirements"
+    ],
     testimonials: [
       {
         name: "John Marshall",
@@ -5822,47 +5906,65 @@ export const cityPages = {
       fullName: "Alexandria, Kentucky"
     },
     intro: {
-      text: `<p>Queen City Surface Coatings proudly serves Alexandria, Kentucky with premium concrete coating services. This growing Campbell County community offers small-town charm with convenient access to Greater Cincinnati amenities, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value quality craftsmanship and lasting performance.</p>
+      content: `<p>Queen City Surface Coatings proudly serves Alexandria, Kentucky with premium concrete coating services. This growing Campbell County community offers small-town charm with convenient access to Greater Cincinnati amenities, where we deliver exceptional concrete coating solutions for residential homes, local businesses, and community facilities that value quality craftsmanship and lasting performance.</p>
       
       <p>From established neighborhoods to new residential developments and local commercial facilities, Alexandria's growing community deserves the best in concrete coating solutions. Our veteran-owned company brings military-grade precision and small-town community expertise to every garage floor, business facility, and residential coating project in this thriving Campbell County city.</p>`
     },
-    services: {
-      title: "Professional Concrete Coating Services in Alexandria, Kentucky",
-      text: `<p>We specialize in serving Alexandria's residential community and local business needs, providing concrete coating solutions that enhance family homes, support neighborhood businesses, and contribute to this growing Campbell County community's appeal.</p>`,
-      list: [
-        "Residential garage floor epoxy for Alexandria neighborhoods",
-        "Commercial flooring for local Alexandria businesses",
-        "Basement concrete coating and moisture protection",
-        "Community facility and municipal building coatings",
-        "New construction residential concrete coatings",
-        "Decorative concrete for residential and commercial properties",
-        "Property maintenance and facility restoration services"
-      ]
-    },
-    landmarks: {
-      title: "Serving All of Alexandria's Residential and Commercial Areas",
-      locations: [
-        "Alexandria residential neighborhoods and subdivisions",
-        "Downtown Alexandria business district",
-        "Local shopping centers and commercial facilities",
-        "Community centers and municipal buildings",
-        "New construction and established neighborhoods",
-        "Alexandria school district properties",
-        "Suburban and rural residential areas"
-      ]
-    },
-    whyChooseUs: {
-      title: "Why Alexandria Residents and Businesses Choose Queen City Surface Coatings",
-      reasons: [
-        "Veteran-owned company with small-town community experience",
-        "Specialized knowledge of growing community coating needs",
-        "Licensed, bonded, and fully insured for residential and commercial work",
-        "Free estimates with detailed planning for all projects",
-        "Local expertise serving Campbell County communities",
-        "Military-grade quality that meets family home and business standards",
-        "Professional service that respects community values and schedules"
-      ]
-    },
+    services: [
+      {
+        name: "Residential Garage Floor Epoxy",
+        href: "/services/garage-floor-epoxy/",
+        description: "Residential garage floor epoxy for Alexandria neighborhoods"
+      },
+      {
+        name: "Commercial Flooring",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Commercial flooring for local Alexandria businesses"
+      },
+      {
+        name: "Basement Concrete Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Basement concrete coating and moisture protection"
+      },
+      {
+        name: "Municipal Building Coatings",
+        href: "/services/commercial-epoxy-flooring/",
+        description: "Community facility and municipal building coatings"
+      },
+      {
+        name: "New Construction Coatings",
+        href: "/services/garage-floor-epoxy/",
+        description: "New construction residential concrete coatings"
+      },
+      {
+        name: "Decorative Concrete",
+        href: "/services/decorative-concrete-coating/",
+        description: "Decorative concrete for residential and commercial properties"
+      },
+      {
+        name: "Property Maintenance Services",
+        href: "/services/concrete-repair/",
+        description: "Property maintenance and facility restoration services"
+      }
+    ],
+    landmarks: [
+      "Alexandria residential neighborhoods and subdivisions",
+      "Downtown Alexandria business district",
+      "Local shopping centers and commercial facilities",
+      "Community centers and municipal buildings",
+      "New construction and established neighborhoods",
+      "Alexandria school district properties",
+      "Suburban and rural residential areas"
+    ],
+    whyChooseUs: [
+      "Veteran-owned company with small-town community experience",
+      "Specialized knowledge of growing community coating needs",
+      "Licensed, bonded, and fully insured for residential and commercial work",
+      "Free estimates with detailed planning for all projects",
+      "Local expertise serving Campbell County communities",
+      "Military-grade quality that meets family home and business standards",
+      "Professional service that respects community values and schedules"
+    ],
     testimonials: [
       {
         name: "Brian Mueller",

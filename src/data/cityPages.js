@@ -19270,5 +19270,742 @@ export const cityPages = {
         answer: "Yes, we provide comprehensive warranties on all our concrete coating services in Johnsville. Our military-grade standards ensure long-lasting results that can handle agricultural and rural demands."
       }
     ]
+  },
+
+  // Highland County, Ohio
+  hillsboroHighlandOH: {
+    seo: {
+      title: "Concrete Coating Hillsboro OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Hillsboro, Ohio. Expert garage floor epoxy and residential coatings for Highland County's county seat. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Hillsboro, garage floor epoxy Hillsboro OH, Highland county concrete services, county seat coating services, residential concrete Hillsboro"
+    },
+    city: {
+      name: "Hillsboro",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Hillsboro, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings proudly serves Hillsboro, Ohio, the county seat of Highland County and a historic community that combines small-town charm with modern growth. Our expert concrete coating services provide quality solutions for this thriving southwestern Ohio community, where historic character meets contemporary living.</p>
+      
+      <p>From the historic courthouse square to the growing residential neighborhoods, we understand the unique needs of Hillsboro homeowners and businesses. Our professional concrete coatings enhance properties throughout this Highland County hub while respecting the community's rich heritage and supporting its continued development.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Transform your Hillsboro garage with durable epoxy coatings designed for Highland County's four-season climate."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Moisture-resistant basement coatings perfect for Hillsboro's established home foundations."
+      },
+      {
+        name: "Commercial Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Professional concrete solutions for Hillsboro businesses and county facilities."
+      },
+      {
+        name: "Residential Concrete Coating",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential coating services for Hillsboro's diverse neighborhoods."
+      }
+    ],
+    landmarks: [
+      "Highland County Courthouse",
+      "Hillsboro Historic Square",
+      "Highland District Hospital",
+      "Hillsboro City Schools",
+      "Hillsboro Municipal Building",
+      "Main Street Historic District",
+      "Highland County Fairgrounds",
+      "Hillsboro Community Park",
+      "Southern State Community College",
+      "Rocky Fork Creek"
+    ],
+    whyChooseUs: [
+      "Veteran-owned and local to southwestern Ohio region",
+      "Experience serving county seat communities and government facilities",
+      "Free travel throughout Hillsboro and Highland County",
+      "Understanding of both historic and modern property needs",
+      "Support for local Highland County businesses and residents",
+      "Same-day response for all Hillsboro area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Robert and Mary Mitchell",
+        location: "Hillsboro, OH",
+        text: "Excellent work on our garage floor coating. They respected our historic home's character while providing modern functionality.",
+        service: "Garage Floor Coating",
+        rating: 5
+      },
+      {
+        name: "Highland County Business Owner",
+        location: "Hillsboro, OH",
+        text: "Professional service that worked with our business schedule. The commercial coating has held up perfectly to heavy use.",
+        service: "Commercial Concrete Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you serve government facilities in Hillsboro?",
+        answer: "Yes, we work with Highland County government facilities and can provide specialized coatings for courthouse areas, municipal buildings, and other county seat facilities throughout Hillsboro."
+      },
+      {
+        question: "What areas around Hillsboro do you serve?",
+        answer: "We serve all of Hillsboro and throughout Highland County, including rural areas, farming communities, and neighboring townships around the county seat."
+      }
+    ]
+  },
+
+  greenfieldHighlandOH: {
+    seo: {
+      title: "Concrete Coating Greenfield OH | Queen City Surface Coatings", 
+      description: "Professional concrete coating services in Greenfield, Ohio. Expert garage floor epoxy and residential coatings for Highland County village. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Greenfield, garage floor epoxy Greenfield OH, Highland county village concrete services, residential concrete Greenfield"
+    },
+    city: {
+      name: "Greenfield",
+      state: "Ohio", 
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Greenfield, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Greenfield, Ohio, a charming Highland County village that represents the best of rural Ohio living. Our concrete coating services provide quality solutions for this peaceful community, combining modern techniques with the personal service that small-town residents appreciate.</p>
+      
+      <p>From established family homes along the quiet streets to rural properties throughout the Greenfield area, we understand the unique needs of village life in Highland County. Our expert concrete coatings enhance your property while respecting the character and values of this close-knit community.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Durable garage floor coatings perfect for Greenfield homes and rural properties."
+      },
+      {
+        name: "Basement Floor Coating", 
+        href: "/services/basement-floor-coating/",
+        description: "Moisture-resistant basement coatings ideal for Greenfield's village home foundations."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Specialized concrete coating services designed for Greenfield's village properties."
+      }
+    ],
+    landmarks: [
+      "Greenfield Village Center",
+      "Highland County Rural Areas",
+      "Greenfield Community Park",
+      "Village Municipal Building",
+      "Local Rural Roads",
+      "Highland County Farmland"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with deep understanding of rural Ohio communities",
+      "Personal service that matches Greenfield's small-town values",
+      "Free travel throughout Greenfield and Highland County rural areas",
+      "One-on-one attention for every village property",
+      "Support for local Highland County residents and businesses",
+      "Same-day response for all Greenfield area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Tom and Linda Baker",
+        location: "Greenfield, OH",
+        text: "They treated our village home with the care it deserved. Professional work that fits perfectly with our quiet community.",
+        service: "Garage Floor Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you work on rural properties around Greenfield?",
+        answer: "Absolutely! We specialize in rural property concrete coatings and understand the unique needs of village homes, farm buildings, and country properties throughout the Greenfield area."
+      },
+      {
+        question: "What makes your service right for small communities like Greenfield?",
+        answer: "We provide personal, one-on-one service that matches the values of small Highland County communities. We take time to understand each property's unique needs and work at your pace."
+      }
+    ]
+  },
+
+  leesburgHighlandOH: {
+    seo: {
+      title: "Concrete Coating Leesburg OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Leesburg, Ohio. Expert garage floor epoxy and residential coatings for Highland County village. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Leesburg, garage floor epoxy Leesburg OH, Highland county village concrete services, residential concrete Leesburg"
+    },
+    city: {
+      name: "Leesburg",
+      state: "Ohio",
+      stateAbbr: "OH", 
+      county: "Highland",
+      fullName: "Leesburg, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Leesburg, Ohio, a picturesque Highland County village that embodies the tranquil spirit of rural southwestern Ohio. Our concrete coating services provide premium solutions for this peaceful community, where quality craftsmanship meets the personal attention that village residents value.</p>
+      
+      <p>From cozy family homes along tree-lined streets to rural properties throughout the Leesburg area, we understand the distinctive character of village life in Highland County. Our expert concrete coatings enhance your property while preserving the charm and community values that make Leesburg special.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor coatings designed for Leesburg's village homes and rural properties."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Moisture-resistant basement coatings perfect for Leesburg's established home foundations."
+      },
+      {
+        name: "Residential Concrete Services", 
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive concrete coating services tailored to Leesburg's village property needs."
+      }
+    ],
+    landmarks: [
+      "Leesburg Village Center",
+      "Highland County Rural Areas",
+      "Village Municipal Facilities", 
+      "Leesburg Community Spaces",
+      "Local Country Roads",
+      "Highland County Agricultural Areas"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with appreciation for Highland County's rural character",
+      "Personal service that respects Leesburg's small-town atmosphere",
+      "Free travel throughout Leesburg and surrounding Highland County areas", 
+      "Individual attention for every village property and homeowner",
+      "Support for local Highland County community members",
+      "Prompt response for all Leesburg area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Charles and Susan Wright",
+        location: "Leesburg, OH",
+        text: "Outstanding service that understood our village home's needs. The coating quality exceeds our expectations and fits our community perfectly.",
+        service: "Basement Floor Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you provide services to rural areas around Leesburg?",
+        answer: "Yes! We serve all of Leesburg and the surrounding Highland County rural areas, including country homes, agricultural properties, and farm buildings throughout the region."
+      },
+      {
+        question: "How do you adapt your services for village properties?",
+        answer: "We understand that village properties in Leesburg have unique characteristics. We provide personalized service, work with your schedule, and ensure our coatings complement your home's style and the community's character."
+      }
+    ]
+  },
+
+  lynchburgHighlandOH: {
+    seo: {
+      title: "Concrete Coating Lynchburg OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Lynchburg, Ohio. Expert garage floor epoxy and residential coatings for Highland County village. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Lynchburg, garage floor epoxy Lynchburg OH, Highland county village concrete services, residential concrete Lynchburg"
+    },
+    city: {
+      name: "Lynchburg",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland", 
+      fullName: "Lynchburg, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Lynchburg, Ohio, a historic Highland County village that represents the enduring values of rural Ohio communities. Our concrete coating services provide exceptional solutions for this charming village, where traditional craftsmanship meets modern innovation in concrete coating technology.</p>
+      
+      <p>From historic family homes that tell the story of Ohio's heritage to newer properties throughout the Lynchburg area, we understand the unique needs of this Highland County community. Our expert concrete coatings enhance your property while honoring the character and traditions that make Lynchburg a special place to call home.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Durable garage floor coatings suited for Lynchburg's village homes and historic properties."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Specialized basement coatings for Lynchburg's older home foundations and unique structural needs."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential concrete services designed for Lynchburg's village properties."
+      }
+    ],
+    landmarks: [
+      "Lynchburg Historic Village",
+      "Highland County Heritage Areas",
+      "Village Community Center",
+      "Lynchburg Municipal Facilities",
+      "Historic Rural Roads", 
+      "Highland County Countryside"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with respect for Highland County's historic communities",
+      "Experience working with both historic and modern village properties",
+      "Free travel throughout Lynchburg and Highland County",
+      "Personal service that honors small-town values and traditions",
+      "Support for preserving Highland County's community character",
+      "Reliable response for all Lynchburg area service needs"
+    ],
+    testimonials: [
+      {
+        name: "David and Margaret Thompson",
+        location: "Lynchburg, OH", 
+        text: "They respected our historic home's character while providing modern coating solutions. Excellent craftsmanship that honors our village's heritage.",
+        service: "Garage Floor Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Can you work with historic properties in Lynchburg?",
+        answer: "Absolutely! We have experience working with Highland County's historic homes and understand how to provide modern concrete coating solutions while respecting the character and integrity of older properties."
+      },
+      {
+        question: "What areas around Lynchburg do you serve?",
+        answer: "We serve all of Lynchburg and the surrounding Highland County areas, including rural properties, historic sites, and neighboring communities throughout the region."
+      }
+    ]
+  },
+
+  mowrystownHighlandOH: {
+    seo: {
+      title: "Concrete Coating Mowrystown OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Mowrystown, Ohio. Expert garage floor epoxy and residential coatings for Highland County village. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Mowrystown, garage floor epoxy Mowrystown OH, Highland county village concrete services, residential concrete Mowrystown"
+    },
+    city: {
+      name: "Mowrystown",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Mowrystown, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Mowrystown, Ohio, a welcoming Highland County village that captures the essence of rural Ohio living. Our concrete coating services provide superior solutions for this tight-knit community, where neighborly service and quality craftsmanship go hand in hand.</p>
+      
+      <p>From family homes along quiet village streets to rural properties throughout the Mowrystown area, we understand the importance of personal service and attention to detail that Highland County residents expect. Our expert concrete coatings enhance your property while supporting the community spirit that makes Mowrystown a wonderful place to live.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Quality garage floor coatings designed for Mowrystown's village homes and rural properties."
+      },
+      {
+        name: "Basement Floor Coating",
+        href: "/services/basement-floor-coating/",
+        description: "Moisture-resistant basement coatings ideal for Mowrystown's village home foundations."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Personalized concrete coating services tailored to Mowrystown's community needs."
+      }
+    ],
+    landmarks: [
+      "Mowrystown Village Center",
+      "Highland County Rural Communities",
+      "Village Community Facilities",
+      "Mowrystown Municipal Services",
+      "Local Country Roads",
+      "Highland County Agricultural Areas"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with commitment to Highland County communities",
+      "Neighborly service that matches Mowrystown's community values",
+      "Free travel throughout Mowrystown and Highland County",
+      "Personal attention for every village property and family",
+      "Support for local Highland County residents and neighbors",
+      "Dependable response for all Mowrystown area service requests"
+    ],  
+    testimonials: [
+      {
+        name: "James and Carol Anderson",
+        location: "Mowrystown, OH",
+        text: "Wonderful service that felt like working with neighbors. They understood our village home's needs and delivered exceptional results.",
+        service: "Garage Floor Coating", 
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you serve rural areas around Mowrystown?",
+        answer: "Yes! We provide concrete coating services throughout Mowrystown and all surrounding Highland County rural areas, including country homes, agricultural properties, and farm facilities."
+      },
+      {
+        question: "What makes your service special for small communities like Mowrystown?",
+        answer: "We believe in the same community values that make Mowrystown special - personal service, attention to detail, and treating every customer like a neighbor. We take time to understand your specific needs and deliver quality results."
+      }
+    ]
+  },
+
+  belfastHighlandOH: {
+    seo: {
+      title: "Concrete Coating Belfast OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Belfast, Ohio. Expert garage floor epoxy and residential coatings for Highland County unincorporated area. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Belfast, garage floor epoxy Belfast OH, Highland county rural concrete services, residential concrete Belfast"
+    },
+    city: {
+      name: "Belfast",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Belfast, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Belfast, Ohio, a rural Highland County community that embodies the tranquil beauty of southwestern Ohio countryside. Our concrete coating services provide exceptional solutions for this peaceful area, where quality workmanship meets the personal attention that rural residents value.</p>
+      
+      <p>From country homes nestled in the rolling hills to agricultural properties throughout the Belfast area, we understand the unique needs of rural Highland County living. Our expert concrete coatings enhance your property while respecting the natural character and agricultural heritage of this beautiful countryside community.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Durable garage floor coatings perfect for Belfast's rural homes and country properties."
+      },
+      {
+        name: "Agricultural Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Specialized concrete coatings for Belfast's agricultural buildings and farm facilities."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential coating services designed for Belfast's rural properties."
+      }
+    ],
+    landmarks: [
+      "Belfast Rural Community",
+      "Highland County Countryside",
+      "Local Agricultural Areas",
+      "Country Roads and Rural Routes",
+      "Highland County Farmland",
+      "Rural Heritage Sites"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with deep appreciation for Highland County's rural lifestyle",
+      "Specialized experience with country properties and agricultural facilities",
+      "Free travel throughout Belfast and Highland County rural areas",
+      "One-on-one service that understands rural community values",
+      "Support for Highland County's agricultural and rural residents",
+      "Prompt response for all Belfast area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Rural Property Owner",
+        location: "Belfast, OH",
+        text: "They understood our country property's needs perfectly. Excellent work that holds up to rural use and weather conditions.",
+        service: "Garage Floor Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you work on agricultural properties in Belfast?",
+        answer: "Yes! We specialize in rural and agricultural property concrete coatings, including barn floors, equipment storage areas, and farm facilities throughout the Belfast area of Highland County."
+      },
+      {
+        question: "How do you handle rural property access in Belfast?",
+        answer: "We're experienced with Highland County's rural roads and country property access. We plan appropriately for rural locations and bring all necessary equipment to complete your project efficiently."
+      }
+    ]
+  },
+
+  carmelHighlandOH: {
+    seo: {
+      title: "Concrete Coating Carmel OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Carmel, Ohio. Expert garage floor epoxy and residential coatings for Highland County unincorporated area. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Carmel, garage floor epoxy Carmel OH, Highland county rural concrete services, residential concrete Carmel"
+    },
+    city: {
+      name: "Carmel",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Carmel, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Carmel, Ohio, a scenic Highland County community that represents the best of rural Ohio living. Our concrete coating services provide premium solutions for this peaceful area, where traditional values meet modern concrete coating innovation.</p>
+      
+      <p>From established country homes to agricultural properties throughout the Carmel area, we understand the importance of durable, functional concrete solutions that complement Highland County's rural lifestyle. Our expert concrete coatings enhance your property while supporting the agricultural heritage and community spirit of this beautiful countryside area.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor coatings designed for Carmel's country homes and rural properties."
+      },
+      {
+        name: "Agricultural Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Durable concrete coatings for Carmel's farm buildings and agricultural facilities."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential coating services tailored to Carmel's rural property needs."
+      }
+    ],
+    landmarks: [
+      "Carmel Rural Community",
+      "Highland County Agricultural Areas",
+      "Local Farm Properties",
+      "Country Roads and Rural Routes",
+      "Highland County Countryside",
+      "Rural Community Facilities"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with understanding of Highland County's rural communities",
+      "Experience with both residential and agricultural concrete needs",
+      "Free travel throughout Carmel and Highland County",
+      "Personal service that respects rural community values",
+      "Support for Highland County's agricultural and rural lifestyle",
+      "Reliable response for all Carmel area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Farm Family",
+        location: "Carmel, OH",
+        text: "Excellent service that understood our rural property's unique needs. The coating quality is outstanding and built to last in agricultural conditions.",
+        service: "Agricultural Concrete Services",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you provide services for farm facilities in Carmel?",
+        answer: "Absolutely! We specialize in agricultural concrete coatings for Highland County farm properties, including barn floors, equipment storage, and agricultural building surfaces throughout the Carmel area."
+      },
+      {
+        question: "What rural areas around Carmel do you serve?",
+        answer: "We serve all of the Carmel area and throughout Highland County's rural communities, including country homes, agricultural properties, and farm facilities across the region."
+      }
+    ]
+  },
+
+  pricetownHighlandOH: {
+    seo: {
+      title: "Concrete Coating Pricetown OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Pricetown, Ohio. Expert garage floor epoxy and residential coatings for Highland County unincorporated area. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Pricetown, garage floor epoxy Pricetown OH, Highland county rural concrete services, residential concrete Pricetown"
+    },
+    city: {
+      name: "Pricetown",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Pricetown, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Pricetown, Ohio, a charming Highland County community that captures the essence of rural southwestern Ohio. Our concrete coating services provide exceptional solutions for this peaceful area, where quality craftsmanship meets the personal attention that rural residents appreciate.</p>
+      
+      <p>From family homes along quiet country roads to agricultural properties throughout the Pricetown area, we understand the distinctive needs of Highland County rural living. Our expert concrete coatings enhance your property while preserving the agricultural character and community values that make Pricetown a special place to call home.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Quality garage floor coatings perfect for Pricetown's rural homes and country properties."
+      },
+      {
+        name: "Agricultural Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Specialized concrete coatings for Pricetown's farm buildings and agricultural operations."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Personalized residential coating services designed for Pricetown's rural properties."
+      }
+    ],
+    landmarks: [
+      "Pricetown Rural Community",
+      "Highland County Farm Areas",
+      "Local Agricultural Properties",
+      "Country Roads and Rural Routes",
+      "Highland County Countryside",
+      "Rural Heritage Areas"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with commitment to Highland County's rural communities",
+      "Specialized knowledge of agricultural and residential concrete needs",
+      "Free travel throughout Pricetown and Highland County",
+      "Personal service that matches rural community values",
+      "Support for Highland County's agricultural heritage and residents",
+      "Dependable response for all Pricetown area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Rural Homeowner",
+        location: "Pricetown, OH",
+        text: "Outstanding service that understood our country property perfectly. They delivered quality results that fit our rural lifestyle and needs.",
+        service: "Residential Concrete Services",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you work on rural properties throughout Pricetown?",
+        answer: "Yes! We provide concrete coating services for all types of rural properties in Pricetown, including country homes, agricultural buildings, and farm facilities throughout Highland County."
+      },
+      {
+        question: "How do you handle agricultural concrete needs in Pricetown?",
+        answer: "We have extensive experience with agricultural concrete coatings for Highland County farm operations. We understand the durability requirements for agricultural use and provide coatings that withstand heavy equipment and agricultural activities."
+      }
+    ]
+  },
+
+  rockyForkPointHighlandOH: {
+    seo: {
+      title: "Concrete Coating Rocky Fork Point OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Rocky Fork Point, Ohio. Expert garage floor epoxy and residential coatings for Highland County unincorporated area. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Rocky Fork Point, garage floor epoxy Rocky Fork Point OH, Highland county rural concrete services, residential concrete Rocky Fork Point"
+    },
+    city: {
+      name: "Rocky Fork Point",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Rocky Fork Point, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Rocky Fork Point, Ohio, a picturesque Highland County community nestled in the rolling hills of southwestern Ohio. Our concrete coating services provide superior solutions for this scenic area, where natural beauty meets the practical needs of rural property owners.</p>
+      
+      <p>From country homes with beautiful countryside views to agricultural properties throughout the Rocky Fork Point area, we understand the unique requirements of Highland County rural living. Our expert concrete coatings enhance your property while respecting the natural landscape and agricultural heritage that define this beautiful Highland County community.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Durable garage floor coatings designed for Rocky Fork Point's country homes and rural properties."
+      },
+      {
+        name: "Agricultural Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Professional concrete coatings for Rocky Fork Point's agricultural buildings and farm facilities."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential coating services tailored to Rocky Fork Point's rural property needs."
+      }
+    ],
+    landmarks: [
+      "Rocky Fork Point Community",
+      "Highland County Rolling Hills",
+      "Local Agricultural Areas",
+      "Country Roads and Scenic Routes",
+      "Highland County Countryside",
+      "Rural Community Areas"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with appreciation for Highland County's scenic rural areas",
+      "Experience with diverse rural property types and agricultural needs",
+      "Free travel throughout Rocky Fork Point and Highland County",
+      "Personal service that understands rural property challenges",
+      "Support for Highland County's rural lifestyle and agricultural community",
+      "Prompt response for all Rocky Fork Point area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Country Property Owner",
+        location: "Rocky Fork Point, OH",
+        text: "They provided excellent service that respected our scenic property. The coating quality is exceptional and perfectly suited to our rural location.",
+        service: "Garage Floor Coating",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you serve the rural areas around Rocky Fork Point?",
+        answer: "Yes! We provide concrete coating services throughout the Rocky Fork Point area and all of Highland County's rural communities, including country homes, agricultural properties, and farm facilities."
+      },
+      {
+        question: "Can you handle challenging rural access in Rocky Fork Point?",
+        answer: "Absolutely! We're experienced with Highland County's rural roads and challenging property access. We come prepared with appropriate equipment to reach your property efficiently and complete your project professionally."
+      }
+    ]
+  },
+
+  rainsboroHighlandOH: {
+    seo: {
+      title: "Concrete Coating Rainsboro OH | Queen City Surface Coatings",
+      description: "Professional concrete coating services in Rainsboro, Ohio. Expert garage floor epoxy and residential coatings for Highland County unincorporated area. Licensed, bonded, insured. Free estimates.",
+      keywords: "concrete coating Rainsboro, garage floor epoxy Rainsboro OH, Highland county rural concrete services, residential concrete Rainsboro"
+    },
+    city: {
+      name: "Rainsboro",
+      state: "Ohio",
+      stateAbbr: "OH",
+      county: "Highland",
+      fullName: "Rainsboro, Ohio"
+    },
+    intro: {
+      content: `<p>Queen City Surface Coatings serves Rainsboro, Ohio, a peaceful Highland County community that represents the authentic charm of rural southwestern Ohio. Our concrete coating services provide exceptional solutions for this tranquil area, where traditional craftsmanship meets modern concrete coating technology.</p>
+      
+      <p>From established family homes along quiet country roads to agricultural properties throughout the Rainsboro area, we understand the importance of reliable, durable concrete solutions that complement Highland County's rural lifestyle. Our expert concrete coatings enhance your property while supporting the agricultural heritage and community spirit of this beautiful countryside area.</p>`
+    },
+    services: [
+      {
+        name: "Garage Floor Coating",
+        href: "/services/garage-floor-epoxy/",
+        description: "Professional garage floor coatings suited for Rainsboro's rural homes and country properties."
+      },
+      {
+        name: "Agricultural Concrete Services",
+        href: "/services/commercial-concrete-coating/",
+        description: "Durable concrete coatings for Rainsboro's farm buildings and agricultural facilities."
+      },
+      {
+        name: "Residential Concrete Services",
+        href: "/services/residential-concrete-coating/",
+        description: "Comprehensive residential coating services designed for Rainsboro's rural property needs."
+      }
+    ],
+    landmarks: [
+      "Rainsboro Rural Community",
+      "Highland County Agricultural Areas",
+      "Local Farm Properties",
+      "Country Roads and Rural Routes",
+      "Highland County Countryside",
+      "Rural Heritage Sites"
+    ],
+    whyChooseUs: [
+      "Veteran-owned with deep respect for Highland County's rural traditions",
+      "Specialized experience with agricultural and residential concrete applications",
+      "Free travel throughout Rainsboro and Highland County",
+      "Personal service that honors rural community values",
+      "Support for Highland County's agricultural and rural residents",
+      "Reliable response for all Rainsboro area service requests"
+    ],
+    testimonials: [
+      {
+        name: "Highland County Family",
+        location: "Rainsboro, OH", 
+        text: "Wonderful service that understood our rural property's needs. They delivered quality results that exceed our expectations and fit our countryside lifestyle.",
+        service: "Residential Concrete Services",
+        rating: 5
+      }
+    ],
+    faqs: [
+      {
+        question: "Do you provide services for agricultural properties in Rainsboro?",
+        answer: "Yes! We specialize in agricultural concrete coatings for Highland County farm properties, including barn floors, equipment storage areas, and agricultural building surfaces throughout the Rainsboro area."
+      },
+      {
+        question: "What rural areas around Rainsboro do you serve?",
+        answer: "We serve all of the Rainsboro area and throughout Highland County's rural communities, including country homes, agricultural properties, and farm facilities across the region."
+      }
+    ]
   }
 };

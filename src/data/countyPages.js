@@ -63,6 +63,24 @@ export const countyPages = {
       '📱 24/7 Emergency Service - Immediate response for urgent concrete coating needs throughout Hamilton County',
       '⭐ 100% Satisfaction Guarantee - We stand behind our work with industry-leading warranties for Hamilton County customers',
       '🚀 Same-Day Estimates - Fast, professional quotes delivered within hours across Mason, Cincinnati, and Loveland'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all cities in Hamilton County?",
+        answer: "Yes, we provide concrete coating services throughout Hamilton County including Cincinnati, Mason, Loveland, Springdale, Blue Ash, Montgomery, and all surrounding communities. Our team is familiar with the unique needs of each Hamilton County area."
+      },
+      {
+        question: "What makes your service ideal for Hamilton County properties?",
+        answer: "We understand Hamilton County's diverse property types from historic Cincinnati homes to modern Mason developments. Our veteran-owned company brings military precision to every project while respecting the character of each Hamilton County community."
+      },
+      {
+        question: "Do you offer emergency concrete coating services in Hamilton County?",
+        answer: "Yes, we provide 24/7 emergency response for urgent concrete coating needs throughout Hamilton County. Whether it's water damage, structural issues, or time-sensitive commercial projects, we're here to help."
+      },
+      {
+        question: "What warranties do you provide for Hamilton County projects?",
+        answer: "We offer comprehensive warranties on all concrete coating services in Hamilton County. Our military-grade standards ensure lasting results with industry-leading warranty protection for both residential and commercial projects."
+      }
     ]
   },
 
@@ -119,6 +137,24 @@ export const countyPages = {
       '📱 Rapid Response Service - Quick emergency service throughout Butler County communities',
       '⭐ Guaranteed Results - 100% satisfaction warranty for all Butler County customers',
       '🚀 Fast Turnaround - Same-day estimates available across Hamilton, Fairfield, West Chester, and surrounding areas'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all areas of Butler County?",
+        answer: "Yes, we provide concrete coating services throughout Butler County including Hamilton, Fairfield, West Chester, and all surrounding communities. We're familiar with the unique property types and needs across the county."
+      },
+      {
+        question: "Can you handle both residential and commercial projects in Butler County?",
+        answer: "Absolutely! We serve both residential and commercial clients throughout Butler County. From family garages in Hamilton to large commercial facilities in West Chester, we have the expertise and equipment for projects of all sizes."
+      },
+      {
+        question: "What makes you different from other concrete coating companies in Butler County?",
+        answer: "We're veteran-owned and bring military-grade precision to every Butler County project. Our team understands local property challenges and delivers customized solutions with industry-leading warranties and rapid response times."
+      },
+      {
+        question: "Do you offer free estimates in Butler County?",
+        answer: "Yes, we provide free estimates throughout Butler County with same-day availability in most areas. Our team will assess your property and provide detailed quotes for all concrete coating services."
+      }
     ]
   },
 
@@ -195,6 +231,24 @@ export const countyPages = {
       '📱 Emergency Service Available - Fast response for urgent concrete coating needs across Kenton County',
       '⭐ Satisfaction Guaranteed - Industry-leading warranties for all Kenton County customers',
       '🚀 Quick Estimates - Same-day quotes available throughout Northern Kentucky communities'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all of Kenton County, Kentucky?",
+        answer: "Yes, we provide concrete coating services throughout Kenton County including Covington, Independence, Fort Thomas, Erlanger, Edgewood, and all surrounding Northern Kentucky communities."
+      },
+      {
+        question: "Are you licensed to work in Kentucky?",
+        answer: "Yes, we are fully licensed, bonded, and insured to work throughout Kentucky including all Kenton County areas. We meet all state and local requirements for concrete coating services."
+      },
+      {
+        question: "What types of properties do you serve in Kenton County?",
+        answer: "We serve all property types in Kenton County from historic riverfront properties in Covington to modern developments in Independence and established neighborhoods in Fort Thomas. Both residential and commercial projects."
+      },
+      {
+        question: "How quickly can you provide estimates in Kenton County?",
+        answer: "We offer same-day estimates throughout Kenton County in most cases. Our team understands Northern Kentucky's unique concrete challenges and can quickly assess your project needs."
+      }
     ]
   },
 
@@ -249,6 +303,24 @@ export const countyPages = {
       '📱 Emergency Service Available - Fast response for urgent concrete coating needs throughout Warren County',
       '⭐ 100% Satisfaction Guarantee - Industry-leading warranties for all Warren County customers',
       '🚀 Same-Day Estimates - Quick professional quotes across Lebanon, Springboro, and surrounding areas'
+    ],
+    faqs: [
+      {
+        question: "Do you serve Warren County communities?",
+        answer: "Yes, we serve Warren County including Mason and surrounding areas. We understand the unique needs of Warren County properties and deliver customized concrete coating solutions."
+      },
+      {
+        question: "What concrete coating services do you offer in Warren County?",
+        answer: "We offer comprehensive concrete coating services in Warren County including garage floor epoxy, metallic epoxy flooring, basement coatings, commercial solutions, and polyaspartic coatings for both residential and commercial properties."
+      },
+      {
+        question: "How long do concrete coatings last in Warren County?",
+        answer: "Our concrete coatings are designed to last for decades in Warren County conditions. We use premium materials and military-grade application techniques with comprehensive warranties to ensure lasting performance."
+      },
+      {
+        question: "Do you offer emergency concrete coating services in Warren County?",
+        answer: "Yes, we provide emergency response services throughout Warren County for urgent concrete coating needs including water damage, structural issues, and time-sensitive commercial projects."
+      }
     ]
   },
 
@@ -303,6 +375,24 @@ export const countyPages = {
       '📱 24/7 Emergency Service - Immediate response for urgent concrete coating needs across Clermont County',
       '⭐ Satisfaction Guaranteed - Industry-leading warranties for all Clermont County customers',
       '🚀 Fast Estimates - Same-day quotes available throughout Eastern Cincinnati communities'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all areas of Clermont County?",
+        answer: "Yes, we provide concrete coating services throughout Clermont County including Milford and surrounding Eastern Cincinnati communities. We're familiar with the unique property types across the county."
+      },
+      {
+        question: "What makes your service ideal for Clermont County properties?",
+        answer: "We understand Clermont County's diverse landscapes from scenic riverfront areas to established neighborhoods. Our veteran-owned company delivers customized concrete solutions that enhance and protect properties throughout the county."
+      },
+      {
+        question: "Do you offer 24/7 emergency service in Clermont County?",
+        answer: "Yes, we provide 24/7 emergency response for urgent concrete coating needs throughout Clermont County including water damage, structural issues, and time-sensitive projects."
+      },
+      {
+        question: "What types of concrete coatings work best in Clermont County?",
+        answer: "We recommend weather-resistant coatings designed for Clermont County's climate conditions. Our team will assess your specific property and recommend the best coating solutions for lasting performance."
+      }
     ]
   },
 
@@ -365,6 +455,24 @@ export const countyPages = {
       '📱 Emergency Service Available - Fast response for urgent concrete coating needs throughout Campbell County',
       '⭐ Guaranteed Results - 100% satisfaction warranty for all Campbell County customers',
       '🚀 Quick Turnaround - Same-day estimates available across Northern Kentucky communities'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all of Campbell County, Kentucky?",
+        answer: "Yes, we provide concrete coating services throughout Campbell County including Newport, Bellevue, Alexandria, Cold Spring, and all surrounding Northern Kentucky communities."
+      },
+      {
+        question: "Can you handle historic properties in Campbell County?",
+        answer: "Absolutely! Campbell County has many historic and unique properties, especially in Newport and Bellevue. We have extensive experience working with historic buildings while respecting their character and architectural integrity."
+      },
+      {
+        question: "What's the typical timeline for concrete coating projects in Campbell County?",
+        answer: "Most residential projects in Campbell County can be completed in 1-3 days depending on size and scope. Commercial projects vary based on complexity. We provide detailed timelines during our free estimate process."
+      },
+      {
+        question: "Do you offer warranties on Campbell County projects?",
+        answer: "Yes, we provide comprehensive warranties on all concrete coating services in Campbell County. Our military-grade standards ensure lasting results with industry-leading warranty protection."
+      }
     ]
   },
 
@@ -429,6 +537,24 @@ export const countyPages = {
       '📱 Emergency Service Available - Immediate response for urgent concrete coating needs across Boone County',
       '⭐ Satisfaction Guaranteed - Industry-leading warranties for all Boone County customers',
       '🚀 Same-Day Estimates - Fast professional quotes throughout Northern Kentucky\'s fastest-growing county'
+    ],
+    faqs: [
+      {
+        question: "Do you serve all of Boone County, Kentucky?",
+        answer: "Yes, we provide concrete coating services throughout Boone County including Florence, Union, Burlington, Walton, and all surrounding communities in Northern Kentucky's fastest-growing county."
+      },
+      {
+        question: "Can you handle new construction projects in Boone County?",
+        answer: "Absolutely! Boone County has significant new development, and we work with builders, contractors, and homeowners on new construction concrete coating projects. We can coordinate with construction timelines."
+      },
+      {
+        question: "What makes you ideal for Boone County's growing communities?",
+        answer: "We understand Boone County's rapid growth and diverse property types from modern Florence developments to family neighborhoods in Union. Our veteran-owned company delivers scalable solutions for this dynamic county."
+      },
+      {
+        question: "How quickly can you respond to service calls in Boone County?",
+        answer: "We offer same-day estimates and emergency response throughout Boone County. Our team is strategically positioned to serve Northern Kentucky's fastest-growing communities with rapid response times."
+      }
     ]
   }
 };

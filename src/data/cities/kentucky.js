@@ -1782,47 +1782,50 @@ export const kentuckyCities = {
         fullName: "Union, Kentucky"
       },
       intro: {
-        text: `<p>Queen City Surface Coatings proudly serves Union, Kentucky with premium concrete coating services. This vibrant Boone County community offers excellent schools, parks, and a strong sense of community, where we deliver exceptional concrete coating solutions for homes and businesses that value quality craftsmanship and lasting results.</p>
+        content: `<p>Queen City Surface Coatings proudly serves Union, Kentucky with premium concrete coating services. This vibrant Boone County community offers excellent schools, parks, and a strong sense of community, where we deliver exceptional concrete coating solutions for homes and businesses that value quality craftsmanship and lasting results.</p>
         
         <p>From established residential neighborhoods to local commercial facilities, Union's growing community deserves the best in concrete coating solutions. Our veteran-owned company brings military-grade precision and local expertise to every garage floor, commercial space, and basement coating project in this thriving Boone County city.</p>`
       },
-      services: {
-        title: "Professional Concrete Coating Services in Union, Kentucky",
-        text: `<p>We specialize in transforming Union's residential garages, commercial spaces, and basement floors with our comprehensive concrete coating solutions. Our services are perfectly suited for Union's family-oriented community and local business environment.</p>`,
-        list: [
-          "Residential garage floor epoxy coatings for Union neighborhoods",
-          "Commercial flooring solutions for Union businesses",
-          "Basement concrete coating and moisture protection",
-          "Industrial facility floor coatings",
-          "Decorative concrete resurfacing and color options",
-          "Slip-resistant surface treatments for safety",
-          "Concrete repair and restoration services"
-        ]
-      },
-      landmarks: {
-        title: "Serving All of Union's Residential and Commercial Areas",
-        locations: [
-          "Union Elementary School area residential neighborhoods",
-          "Ryle High School district family communities", 
-          "Sugar Creek Golf Course vicinity homes",
-          "Gunpowder Creek area properties",
-          "Union business district commercial facilities",
-          "New residential developments throughout Union",
-          "Established Union neighborhoods and subdivisions"
-        ]
-      },
-      whyChooseUs: {
-        title: "Why Union Residents and Businesses Choose Queen City Surface Coatings",
-        reasons: [
-          "Veteran-owned company with military-grade quality standards",
-          "Specialized experience in Union's residential community needs",
-          "Licensed, bonded, and fully insured for your protection",
-          "Free estimates with detailed project planning",
-          "Local expertise serving Boone County communities",
-          "Family-focused service that respects Union's community values",
-          "Superior materials designed for Northern Kentucky climate conditions"
-        ]
-      },
+      services: [
+        {
+          name: "Garage Floor Coating",
+          href: "/services/garage-floor-epoxy/",
+          description: "Residential garage floor epoxy coatings for Union's family-oriented neighborhoods."
+        },
+        {
+          name: "Commercial Epoxy Flooring",
+          href: "/services/commercial-epoxy-flooring/",
+          description: "Professional commercial flooring solutions for Union businesses and facilities."
+        },
+        {
+          name: "Basement Floor Coating",
+          href: "/services/basement-floor-coating/",
+          description: "Basement concrete coating and moisture protection for Union homes."
+        },
+        {
+          name: "Polyaspartic Coating",
+          href: "/services/polyaspartic-coating/",
+          description: "Fast-curing decorative concrete coatings perfect for Union properties."
+        }
+      ],
+      landmarks: [
+        "Union Elementary School",
+        "Ryle High School",
+        "Sugar Creek Golf Course",
+        "Gunpowder Creek",
+        "Union business district",
+        "New residential developments",
+        "Established neighborhoods"
+      ],
+      whyChooseUs: [
+        "Veteran-owned company with military-grade quality standards",
+        "Specialized experience in Union's residential community needs",
+        "Licensed, bonded, and fully insured for your protection",
+        "Free travel to all Union neighborhoods and Boone County areas",
+        "Local expertise serving Boone County communities",
+        "Family-focused service that respects Union's community values",
+        "Superior materials designed for Northern Kentucky climate conditions"
+      ],
       testimonials: [
         {
           name: "David Thompson",

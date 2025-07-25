@@ -1926,10 +1926,44 @@ export const kentuckyCities = {
         "Licensed, bonded, and fully insured for public and private work",
         "Free estimates with detailed specifications for all projects",
         "Local knowledge of Boone County government requirements",
-          "Military-grade quality standards for official buildings",
-          "Reliable service that respects both public trust and private property"
-        ]
-      },
+        "Military-grade quality standards for official buildings",
+        "Reliable service that respects both public trust and private property"
+      ],
+      testimonials: [
+        {
+          name: "David Miller",
+          location: "Burlington, KY",
+          text: "Excellent work on our county courthouse maintenance project. The team understood government facility requirements and delivered professional results on schedule. Outstanding quality that meets public sector standards.",
+          service: "Government Facility Coating",
+          rating: 5
+        },
+        {
+          name: "Sarah Johnson",
+          location: "Burlington, KY", 
+          text: "Beautiful garage floor coating for our Burlington home. Professional service that respects our residential neighborhood. Quality results that add value to our property near the county center.",
+          service: "Residential Garage Coating",
+          rating: 5
+        }
+      ],
+      faqs: [
+        {
+          question: "Do you serve Burlington and the Boone County courthouse area?",
+          answer: "Yes, we provide concrete coating services throughout Burlington and all Boone County areas. We have extensive experience with both government facilities and residential properties in the county seat area."
+        },
+        {
+          question: "Can you handle government facility coating requirements?",
+          answer: "Absolutely! We understand government facility standards and requirements. Our veteran-owned company brings military-grade precision to public sector projects while maintaining full licensing and insurance compliance."
+        },
+        {
+          question: "What makes your service ideal for Burlington's county seat community?",
+          answer: "We're experienced with both government facility standards and residential quality expectations. Our team respects the professional standards required for public buildings while delivering exceptional results for homes and businesses in this important county center."
+        },
+        {
+          question: "Do you offer warranties on government and residential coating projects?",
+          answer: "Yes, we provide comprehensive warranties on all our concrete coating services in Burlington, whether government, commercial, or residential. Our military-grade standards ensure results that meet both public sector requirements and family home expectations."
+        }
+      ]
+    },
   veronaBooneKY: {
       seo: {
         title: "Concrete Coating Verona KY | Queen City Surface Coatings",

@@ -1,1204 +1,1105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage - Highest Priority -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Main Service Pages - High Priority -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- County-Service Matrix Pages - Priority 0.8 -->
-  <!-- Garage Floor Epoxy County Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/hamilton-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/butler-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/warren-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/kenton-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/campbell-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Metallic Epoxy Flooring County Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/hamilton-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/butler-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/warren-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/kenton-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/campbell-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Basement Floor Coating County Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/hamilton-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/butler-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/warren-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/kenton-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/campbell-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Polyaspartic Coating County Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/hamilton-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/butler-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/warren-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/kenton-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/campbell-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Commercial Concrete Coating County Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/hamilton-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/butler-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/warren-county-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/kenton-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/campbell-county-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- City-Service Matrix Pages - Priority 0.7 -->
-  <!-- Cincinnati, OH City-Service Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/cincinnati-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/cincinnati-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/cincinnati-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/cincinnati-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/cincinnati-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Mason, OH City-Service Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/mason-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/mason-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/mason-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/mason-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/mason-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- West Chester, OH City-Service Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/west-chester-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/west-chester-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/west-chester-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/west-chester-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/west-chester-oh/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Covington, KY City-Service Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/covington-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/covington-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/covington-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/covington-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/covington-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Florence, KY City-Service Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/florence-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/florence-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/florence-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/florence-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/florence-ky/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Contact Pages - High Priority for Conversion -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/company/contact/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- About and Company Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/company/about/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Portfolio and Service Areas -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/portfolio/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Resources and Blog -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/resources/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/blog/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <!-- Individual Blog Posts -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/blog/complete-guide-epoxy-flooring-cincinnati/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <!-- Legal and Administrative Pages -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/company/legal/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <!-- Ohio County/Comprehensive Service Area Pages - Priority 0.7 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/butler-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/warren-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/clermont-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Kentucky County/Comprehensive Service Area Pages - Priority 0.7 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/campbell-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/kenton-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/boone-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Indiana County/Comprehensive Service Area Pages - Priority 0.7 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/dearborn-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/ripley-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/jefferson-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/ohio-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/switzerland-county-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Ohio City Service Area Pages - Priority 0.6 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/cincinnati-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/dayton-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/dayton-concrete-contractors/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/blue-ash-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/blue-ash-concrete-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/mason-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/mason-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/west-chester-concrete-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/west-chester-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/loveland-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/loveland-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-county-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/fairfield-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/fairfield-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springdale-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/lebanon-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/middletown-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/middletown-epoxy-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/kettering-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/sharonville-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/sharonville-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/montgomery-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/montgomery-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/beavercreek-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/forest-park-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springfield-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/oxford-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/batavia-floor-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/butler-county-concrete-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/warren-county-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/clermont-county-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springboro-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springboro-comprehensive/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/milford-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/centerville-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/xenia-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/fairborn-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/miamisburg-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/wilmington-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/germantown-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/bellbrook-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/vandalia-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/englewood-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/clayton-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/trotwood-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/west-carrollton-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/riverside-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/moraine-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/seaman-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/huber-heights-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/reading-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/norwood-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/deer-park-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/evendale-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/ohio/golf-manor-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Kentucky City Service Area Pages - Priority 0.6 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/covington-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/covington-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/newport-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/florence-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/florence-garage-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/bellevue-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/erlanger-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/campbell-county-ky-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/kenton-county-ky-services/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/fort-thomas-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/independence-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/hebron-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/union-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/edgewood-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/villa-hills-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/crescent-springs-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/cold-spring-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/highland-heights-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/taylor-mill-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/walton-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/petersburg-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/verona-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/falmouth-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/demossville-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/foster-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Indiana City Service Area Pages - Priority 0.6 -->
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/lawrenceburg-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/aurora-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/dillsboro-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/hidden-valley-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/greendale-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/bright-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/west-harrison-garage-floor-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/harrison-concrete-coating/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/guilford-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://queencitysurfacecoatings.com/service-areas/indiana/oldenburg-epoxy-flooring/</loc>
-    <lastmod>2025-07-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
+    
+    <!-- ========== MAIN PAGES ========== -->
+    <!-- Homepage and primary navigation pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/about/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/contact/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/portfolio/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- ========== COMPANY PAGES ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/about/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/contact/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/legal/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- ========== INDIVIDUAL SERVICE PAGES ========== -->
+    <!-- Core service offerings -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ========== SERVICE × CITY/COUNTY MATRIX PAGES ========== -->
+    <!-- Garage Floor Epoxy by Location -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/hamilton-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/butler-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/warren-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/kenton-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/campbell-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/cincinnati-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/mason-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/west-chester-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/covington-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/florence-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Metallic Epoxy Flooring by Location -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/hamilton-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/butler-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/warren-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/kenton-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/campbell-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/cincinnati-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/mason-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/west-chester-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/covington-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/florence-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Basement Floor Coating by Location -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/hamilton-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/butler-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/warren-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/kenton-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/campbell-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/cincinnati-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/mason-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/west-chester-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/covington-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/florence-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Polyaspartic Coating by Location -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/hamilton-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/butler-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/warren-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/kenton-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/campbell-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/cincinnati-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/mason-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/west-chester-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/covington-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/polyaspartic-coating/florence-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Commercial Concrete Coating by Location -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/hamilton-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/butler-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/warren-county-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/kenton-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/campbell-county-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/cincinnati-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/mason-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/west-chester-oh/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/covington-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/florence-ky/</loc>
+        <lastmod>2025-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ========== RESOURCE PAGES ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/color-gallery/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/epoxy-buyers-guide/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/estimate-calculator/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/timeline-tool/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/warranty/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ========== LANDING PAGES ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/landing-pages/landing-1/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/landing-pages/landing-2/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ========== BLOG PAGES ========== -->
+    <!-- Main blog page -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Blog tags pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/remote-work/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/odyssey-theme/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Blog posts -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/posts/consider-hybrid-work/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/posts/odyssey-theme-officially-released/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/posts/remote-work-mental-health/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- ========== COUNTY/COMPREHENSIVE SERVICE AREA PAGES ========== -->
+    <!-- Ohio Counties -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/butler-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/butler-county-concrete-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/clermont-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/clermont-county-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-county-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/warren-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/warren-county-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springboro-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Kentucky Counties -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/campbell-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/campbell-county-ky-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/kenton-county-comprehensive/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/kenton-county-ky-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ========== CITY SERVICE AREA PAGES - OHIO ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/batavia-floor-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/beavercreek-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/blue-ash-concrete-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/blue-ash-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/cincinnati-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/dayton-concrete-contractors/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/dayton-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/deer-park-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/evendale-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/fairfield-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/fairfield-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/forest-park-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/golf-manor-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/hamilton-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/huber-heights-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/kettering-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/lebanon-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/loveland-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/loveland-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/mason-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/mason-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/middletown-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/middletown-epoxy-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/milford-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/montgomery-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/montgomery-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/norwood-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/oxford-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/reading-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/sharonville-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/sharonville-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springboro-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springdale-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/springfield-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/west-chester-concrete-services/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/west-chester-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ========== CITY SERVICE AREA PAGES - KENTUCKY ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/bellevue-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/cold-spring-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/covington-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/covington-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/crescent-springs-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/edgewood-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/erlanger-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/florence-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/florence-garage-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/fort-thomas-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/hebron-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/highland-heights-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/independence-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/newport-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/taylor-mill-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/union-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/villa-hills-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ========== CITY SERVICE AREA PAGES - INDIANA ========== -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/aurora-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/bright-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/dillsboro-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/greendale-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/guilford-epoxy-flooring/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/harrison-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/hidden-valley-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/lawrenceburg-concrete-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/west-harrison-garage-floor-coating/</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
 </urlset>

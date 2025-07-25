@@ -22,15 +22,15 @@ export const footerLists = [
 		items: [
 			{
 				title: 'Epoxy Flooring',
-				slug: '/services/epoxy-flooring',
+				slug: '/services/metallic-epoxy-flooring',
 			},
 			{
 				title: 'Concrete Polishing',
-				slug: '/services/concrete-polishing',
+				slug: '/services/polyaspartic-coating',
 			},
 			{
 				title: 'Surface Restoration',
-				slug: '/services/surface-restoration',
+				slug: '/services/basement-floor-coating',
 			},
 			{
 				title: 'Garage Floor Epoxy',
@@ -51,7 +51,7 @@ export const footerLists = [
 			},
 			{
 				title: 'Dayton, OH',
-				slug: '/service-areas/ohio/dayton-concrete-contractors',
+				slug: '/service-areas/ohio/dayton-epoxy-flooring',
 			},
 			{
 				title: 'Covington, KY',
@@ -72,7 +72,7 @@ export const footerLists = [
 		items: [
 			{
 				title: 'About Us',
-				slug: '/about',
+				slug: '/company/about',
 			},
 			{
 				title: 'Portfolio',
@@ -80,11 +80,11 @@ export const footerLists = [
 			},
 			{
 				title: 'Contact',
-				slug: '/contact',
+				slug: '/company/contact',
 			},
 			{
 				title: 'Request Quote',
-				slug: '/contact',
+				slug: '/company/contact',
 			},
 			{
 				title: 'Resources',

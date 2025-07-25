@@ -44,17 +44,17 @@ export const countyPages = {
       }
     ],
     cities: [
-      { name: 'Cincinnati', href: '/service-areas/ohio/cincinnati-concrete-coating/' },
-      { name: 'Mason', href: '/service-areas/ohio/mason-concrete-coating/' },
-      { name: 'Loveland', href: '/service-areas/ohio/loveland-concrete-coating/' },
-      { name: 'Springdale', href: '/service-areas/ohio/springdale-concrete-coating/' },
-      { name: 'Sharonville', href: '/service-areas/ohio/sharonville-epoxy-flooring/' },
       { name: 'Blue Ash', href: '/service-areas/ohio/blue-ash-concrete-services/' },
-      { name: 'Montgomery', href: '/service-areas/ohio/montgomery-concrete-coating/' },
+      { name: 'Cincinnati', href: '/service-areas/ohio/cincinnati-concrete-coating/' },
       { name: 'Deer Park', href: '/service-areas/ohio/deer-park-concrete-coating/' },
       { name: 'Evendale', href: '/service-areas/ohio/evendale-epoxy-flooring/' },
       { name: 'Golf Manor', href: '/service-areas/ohio/golf-manor-garage-floor-coating/' },
-      { name: 'Norwood', href: '/service-areas/ohio/norwood-garage-floor-coating/' }
+      { name: 'Loveland', href: '/service-areas/ohio/loveland-concrete-coating/' },
+      { name: 'Montgomery', href: '/service-areas/ohio/montgomery-concrete-coating/' },
+      { name: 'Norwood', href: '/service-areas/ohio/norwood-garage-floor-coating/' },
+      { name: 'Reading', href: '/service-areas/ohio/reading-garage-floor-coating/' },
+      { name: 'Sharonville', href: '/service-areas/ohio/sharonville-epoxy-flooring/' },
+      { name: 'Springdale', href: '/service-areas/ohio/springdale-concrete-coating/' }
     ],
     whyChooseUs: [
       '🏠 Local Hamilton County Expertise - We understand the unique concrete challenges in Cincinnati, Mason, and Loveland homes and businesses',
@@ -108,11 +108,9 @@ export const countyPages = {
       }
     ],
     cities: [
-      { name: 'Hamilton', href: '/service-areas/ohio/hamilton-garage-floor-coating/' },
       { name: 'Fairfield', href: '/service-areas/ohio/fairfield-concrete-coating/' },
-      { name: 'West Chester', href: '/service-areas/ohio/west-chester-concrete-services/' },
-      { name: 'Middletown', href: '/service-areas/ohio/middletown-epoxy-flooring/' },
-      { name: 'Oxford', href: '/service-areas/ohio/oxford-concrete-coating/' }
+      { name: 'Hamilton', href: '/service-areas/ohio/hamilton-garage-floor-coating/' },
+      { name: 'West Chester', href: '/service-areas/ohio/west-chester-concrete-services/' }
     ],
     whyChooseUs: [
       '🏠 Local Butler County Knowledge - Deep understanding of Hamilton, Fairfield, West Chester, and Middletown property needs',
@@ -166,12 +164,29 @@ export const countyPages = {
       }
     ],
     cities: [
+      { name: 'Atwood', href: '/service-areas/kentucky/atwood-kenton-concrete-coating/' },
+      { name: 'Bromley', href: '/service-areas/kentucky/bromley-concrete-coating/' },
       { name: 'Covington', href: '/service-areas/kentucky/covington-concrete-coating/' },
-      { name: 'Independence', href: '/service-areas/kentucky/independence-garage-floor-coating/' },
-      { name: 'Fort Thomas', href: '/service-areas/kentucky/fort-thomas-garage-floor-coating/' },
-      { name: 'Erlanger', href: '/service-areas/kentucky/erlanger-epoxy-flooring/' },
-      { name: 'Florence', href: '/service-areas/kentucky/florence-concrete-coating/' },
-      { name: 'Newport', href: '/service-areas/kentucky/newport-concrete-coating/' }
+      { name: 'Crescent Springs', href: '/service-areas/kentucky/crescent-springs-concrete-coating/' },
+      { name: 'Crestview Hills', href: '/service-areas/kentucky/crestview-hills-concrete-coating/' },
+      { name: 'Edgewood', href: '/service-areas/kentucky/edgewood-concrete-coating/' },
+      { name: 'Elsmere', href: '/service-areas/kentucky/elsmere-concrete-coating/' },
+      { name: 'Erlanger', href: '/service-areas/kentucky/erlanger-concrete-coating/' },
+      { name: 'Fairview', href: '/service-areas/kentucky/fairview-concrete-coating/' },
+      { name: 'Fort Mitchell', href: '/service-areas/kentucky/fort-mitchell-concrete-coating/' },
+      { name: 'Fort Wright', href: '/service-areas/kentucky/fort-wright-concrete-coating/' },
+      { name: 'Independence', href: '/service-areas/kentucky/independence-concrete-coating/' },
+      { name: 'Kenton Vale', href: '/service-areas/kentucky/kenton-vale-concrete-coating/' },
+      { name: 'Lakeside Park', href: '/service-areas/kentucky/lakeside-park-concrete-coating/' },
+      { name: 'Latonia Lakes', href: '/service-areas/kentucky/latonia-lakes-kenton-concrete-coating/' },
+      { name: 'Ludlow', href: '/service-areas/kentucky/ludlow-concrete-coating/' },
+      { name: 'Nicholson', href: '/service-areas/kentucky/nicholson-kenton-concrete-coating/' },
+      { name: 'Park Hills', href: '/service-areas/kentucky/park-hills-concrete-coating/' },
+      { name: 'Ryland Heights', href: '/service-areas/kentucky/ryland-heights-concrete-coating/' },
+      { name: 'Taylor Mill', href: '/service-areas/kentucky/taylor-mill-concrete-coating/' },
+      { name: 'Villa Hills', href: '/service-areas/kentucky/villa-hills-concrete-coating/' },
+      { name: 'Visalia', href: '/service-areas/kentucky/visalia-kenton-concrete-coating/' },
+      { name: 'Walton', href: '/service-areas/kentucky/walton-concrete-coating/' }
     ],
     whyChooseUs: [
       '🏠 Northern Kentucky Specialists - Extensive experience serving Covington, Independence, and Fort Thomas properties',
@@ -225,9 +240,6 @@ export const countyPages = {
       }
     ],
     cities: [
-      { name: 'Lebanon', href: '/service-areas/ohio/lebanon-concrete-coating/' },
-      { name: 'Springboro', href: '/service-areas/ohio/springboro-concrete-coating/' },
-      { name: 'Franklin', href: '/service-areas/ohio/franklin-concrete-coating/' },
       { name: 'Mason', href: '/service-areas/ohio/mason-concrete-coating/' }
     ],
     whyChooseUs: [
@@ -282,9 +294,7 @@ export const countyPages = {
       }
     ],
     cities: [
-      { name: 'Milford', href: '/service-areas/ohio/milford-concrete-coating/' },
-      { name: 'Loveland', href: '/service-areas/ohio/loveland-concrete-coating/' },
-      { name: 'Batavia', href: '/service-areas/ohio/batavia-floor-services/' }
+      { name: 'Milford', href: '/service-areas/ohio/milford-concrete-coating/' }
     ],
     whyChooseUs: [
       '🏠 Clermont County Specialists - Extensive experience serving Milford, Loveland, and Batavia properties',
@@ -338,10 +348,15 @@ export const countyPages = {
       }
     ],
     cities: [
+      { name: 'Alexandria', href: '/service-areas/kentucky/alexandria-campbell-concrete-coating/' },
+      { name: 'Bellevue', href: '/service-areas/kentucky/bellevue-campbell-concrete-coating/' },
+      { name: 'California', href: '/service-areas/kentucky/california-campbell-concrete-coating/' },
+      { name: 'Claryville', href: '/service-areas/kentucky/claryville-campbell-concrete-coating/' },
+      { name: 'Cold Spring', href: '/service-areas/kentucky/cold-spring-campbell-concrete-coating/' },
+      { name: 'Crestview', href: '/service-areas/kentucky/crestview-campbell-concrete-coating/' },
+      { name: 'Grant\'s Lick', href: '/service-areas/kentucky/grants-lick-campbell-concrete-coating/' },
       { name: 'Newport', href: '/service-areas/kentucky/newport-concrete-coating/' },
-      { name: 'Bellevue', href: '/service-areas/kentucky/bellevue-concrete-coating/' },
-      { name: 'Fort Thomas', href: '/service-areas/kentucky/fort-thomas-garage-floor-coating/' },
-      { name: 'Alexandria', href: '/service-areas/kentucky/alexandria-concrete-coating/' }
+      { name: 'Oneonta', href: '/service-areas/kentucky/oneonta-campbell-concrete-coating/' }
     ],
     whyChooseUs: [
       '🏠 Campbell County Knowledge - Deep understanding of Newport, Bellevue, and Fort Thomas property needs',
@@ -395,10 +410,17 @@ export const countyPages = {
       }
     ],
     cities: [
+      { name: 'Belleview', href: '/service-areas/kentucky/belleview-boone-concrete-coating/' },
+      { name: 'Big Bone', href: '/service-areas/kentucky/big-bone-boone-concrete-coating/' },
+      { name: 'Burlington', href: '/service-areas/kentucky/burlington-boone-concrete-coating/' },
+      { name: 'Constance', href: '/service-areas/kentucky/constance-boone-concrete-coating/' },
       { name: 'Florence', href: '/service-areas/kentucky/florence-concrete-coating/' },
-      { name: 'Union', href: '/service-areas/kentucky/union-concrete-coating/' },
-      { name: 'Burlington', href: '/service-areas/kentucky/burlington-concrete-coating/' },
-      { name: 'Walton', href: '/service-areas/kentucky/walton-concrete-coating/' }
+      { name: 'Hebron', href: '/service-areas/kentucky/hebron-boone-concrete-coating/' },
+      { name: 'Petersburg', href: '/service-areas/kentucky/petersburg-boone-concrete-coating/' },
+      { name: 'Rabbit Hash', href: '/service-areas/kentucky/rabbit-hash-boone-concrete-coating/' },
+      { name: 'Richwood', href: '/service-areas/kentucky/richwood-boone-concrete-coating/' },
+      { name: 'Union', href: '/service-areas/kentucky/union-boone-concrete-coating/' },
+      { name: 'Verona', href: '/service-areas/kentucky/verona-boone-concrete-coating/' }
     ],
     whyChooseUs: [
       '🏠 Boone County Specialists - Extensive experience serving Florence, Union, and Burlington properties',

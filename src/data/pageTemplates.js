@@ -305,25 +305,32 @@ export const companyPages = {
         {
           type: 'text',
           title: 'Our Story',
-          content: '<p>Queen City Surface Coatings is a veteran-owned business dedicated to providing exceptional concrete coating services throughout the Cincinnati tri-state area. We bring military precision and attention to detail to every project.</p><p>Our commitment to quality craftsmanship and customer satisfaction has made us the trusted choice for residential and commercial concrete coating projects.</p>'
+          content: '<p>Queen City Surface Coatings is a veteran-owned business dedicated to providing exceptional concrete coating services throughout the Cincinnati tri-state area. Founded in 2025 by Marine Corps veteran John Leonard, we bring military precision and attention to detail to every project.</p><p>After serving his country with honor, John returned to Cincinnati with a mission: to build something meaningful for his community and family. With over 10 years in the construction industry and the discipline learned through military service, Queen City Surface Coatings represents more than just another contractor—we\'re your neighbors, committed to transforming spaces with the same care we\'d want for our own homes.</p>'
+        },
+        {
+          type: 'text',
+          title: 'Meet John Leonard',
+          content: '<h2>From Marine Infantry to Master Craftsman</h2><h3>My Journey</h3><p>After serving two combat tours in Iraq and Afghanistan as a Marine Corps Infantry Machine Gunner, I learned what it truly means to pay attention to details—because lives depended on it. That same precision and commitment to excellence drives everything I do today at Queen City Surface Coatings.</p><p>When I returned home to Cincinnati, I didn\'t just want a job—I wanted to build something meaningful for my community and my family. With over 10 years in the construction industry, I\'ve seen too many shortcuts and half-measures that leave customers disappointed. That\'s why I founded Queen City Surface Coatings in 2025: to bring military-grade standards to concrete coatings.</p><h3>Family First</h3><p>My wife and two children are my biggest motivation. Every project I take on, I approach with the same care I\'d want someone to show if they were working on my own family\'s home. When you hire Queen City Surface Coatings, you\'re not just getting a contractor—you\'re getting a fellow parent and spouse who understands that your home is your sanctuary.</p><h3>Built on Discipline</h3><p>My time in the Marines taught me that excellence isn\'t negotiable. Whether I was maintaining weapons systems in combat zones or leading fellow Marines through challenging missions, there was no room for "good enough."</p><p>Today, that discipline shows up in every aspect of my work:</p><ul><li><strong>Preparation:</strong> Just like cleaning weapons daily kept us combat-ready, I prep every surface meticulously</li><li><strong>Precision:</strong> The same attention to detail that kept my squad safe now ensures your coating is applied perfectly</li><li><strong>Follow-through:</strong> Marines don\'t leave jobs unfinished, and neither do I</li></ul><h3>Staying Sharp</h3><p>When I\'m not transforming garages and commercial spaces, you\'ll find me on the jiu-jitsu mats. BJJ keeps me mentally sharp and physically prepared—qualities that translate directly to the problem-solving and physical demands of concrete coating work. The discipline, respect, and continuous improvement mindset of martial arts align perfectly with how I approach every project.</p><h3>Why This Matters to You</h3><p>You deserve more than just another contractor. You deserve someone who:</p><ul><li>Shows up when promised (military punctuality is non-negotiable)</li><li>Communicates clearly (no military jargon, just straight talk about your project)</li><li>Stands behind their work (my reputation and family name are on every job)</li><li>Understands quality (10 years in construction + military standards = no shortcuts)</li></ul><h3>The Cincinnati Connection</h3><p>This is my community. My family lives here, my children go to school here, and my reputation is built here. When you choose Queen City Surface Coatings, you\'re choosing a neighbor who\'s invested in this area for the long haul.</p>'
         },
         {
           type: 'features',
-          title: 'Why Choose Us?',
+          title: 'Why Choose Queen City Surface Coatings?',
           items: [
-            '🇺🇸 Veteran-owned and operated',
-            '🏆 Licensed, bonded, and insured',
-            '💯 100% satisfaction guarantee',
-            '📱 Free estimates and consultations',
-            '🛡️ Premium materials and equipment',
-            '⭐ Exceptional customer service'
+            '🇺🇸 Veteran-Owned Business',
+            '🏆 Licensed, Bonded & Insured', 
+            '💯 Quality Guarantee',
+            '📱 Free Estimates',
+            '🛡️ Premium Materials',
+            '⭐ Professional Service',
+            '🚀 Fast Turnaround',
+            '📍 Local Cincinnati Expertise'
           ]
         },
         {
           type: 'cta',
-          title: 'Ready to Work With Us?',
-          content: 'Experience the difference that veteran-owned quality makes.',
-          ctaText: 'Get Free Consultation',
+          title: 'Ready to Transform Your Space?',
+          content: 'Ready to work with someone who brings military precision to your concrete coating project? Let\'s discuss how I can transform your space with the same attention to detail I brought to protecting my fellow Marines.',
+          ctaText: 'Get Your Free Estimate',
           ctaHref: '/company/contact',
           ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
         },

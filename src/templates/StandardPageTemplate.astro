@@ -80,13 +80,13 @@ const { seo, hero, content } = Astro.props;
 
   <!-- Dynamic Content Sections -->
   {content.sections.map((section, index) => (
-    <section class={`py-16 md:py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+    <section class={index % 2 === 0 ? 'py-16 md:py-20 bg-white' : 'py-16 md:py-20 bg-gray-50'}>
       <Container>
         <div class="max-w-4xl mx-auto">
           {section.type === 'text' && (
-            <div class="text-center">
+            <div>
               {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
                   {section.title}
                 </h2>
               )}
@@ -104,10 +104,12 @@ const { seo, hero, content } = Astro.props;
                 </h2>
               )}
               {section.items && (
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="grid grid-template-columns-4 gap-8 max-w-6xl mx-auto">
                   {section.items.map((item) => (
-                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300">
-                      <p class="text-gray-700 font-medium text-center">{item}</p>
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                        {item}
+                      </h3>
                     </div>
                   ))}
                 </div>
@@ -207,3 +209,59 @@ const { seo, hero, content } = Astro.props;
     </section>
   ))}
 </Layout>
+
+<style>
+/* Simple grid for features */
+.grid-template-columns-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-template-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-template-columns-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Center headings and add spacing */
+.prose h2,
+.prose h4 {
+  text-align: center;
+}
+
+/* Add more spacing to prose content */
+.prose {
+  line-height: 2;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.prose h4 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.prose ul {
+  margin-bottom: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+</style>

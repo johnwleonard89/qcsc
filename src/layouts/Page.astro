@@ -25,7 +25,6 @@ const { seo } = Astro.props as Props;
 			<a href="tel:+15132965525" class="header-phone">
 				(513) 296-5525
 			</a>
-			<Button href="/company/contact">Free Estimate</Button>
 		</div>
 	</Header>
 	<div id="page">
@@ -55,9 +54,9 @@ const { seo } = Astro.props as Props;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		background: transparent;
-		color: var(--theme-primary);
-		border: 2px solid var(--theme-primary);
+		background: #002F4B;
+		color: #FFC107;
+		border: 2px solid #002F4B;
 		text-decoration: none;
 		font-weight: 600;
 		padding: 0.75rem 1.5rem;
@@ -68,8 +67,8 @@ const { seo } = Astro.props as Props;
 	}
 
 	.header-phone:hover {
-		background: var(--theme-primary);
-		color: var(--theme-on-primary);
+		background: #001f36;
+		color: #FFC107;
 		text-decoration: none;
 		transform: translateY(-1px);
 	}

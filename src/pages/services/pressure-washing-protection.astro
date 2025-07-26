@@ -1,0 +1,480 @@
+---
+import { Container } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+
+const seo = {
+  title: 'Pressure Washing & Protection | Concrete Cleaning Services | Queen City Surface Coatings',
+  description: 'Professional pressure washing and protective coating services for concrete surfaces in Cincinnati and Northern Kentucky. Deep cleaning and long-term protection solutions.',
+  keywords: 'pressure washing, concrete cleaning, protective coatings, surface protection, concrete maintenance, power washing Cincinnati'
+};
+---
+
+<Layout seo={seo}>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <Container>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-tagline">Clean & Protect</p>
+          <h1 class="hero-headline">Pressure Washing & Protection</h1>
+          <p class="hero-subheadline">
+            Professional pressure washing and protective coating services that restore and maintain concrete surfaces. From deep cleaning to long-term protection, we keep your concrete looking its best while extending its lifespan.
+          </p>
+          <div class="hero-ctas">
+            <a href="/company/contact" class="btn btn-primary btn-large">Get Cleaning Quote</a>
+            <a href="/portfolio" class="btn btn-outline btn-large">View Before & After</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img 
+            src="/assets/images/new-projects/blue_metalic.webp" 
+            alt="Professional pressure washing and concrete protection services - Queen City Surface Coatings"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Introduction Section -->
+  <Container>
+    <section class="intro-section">
+      <div class="intro-content">
+        <h2>Complete Concrete Care Solutions</h2>
+        <p class="large-text">Our pressure washing and protection services provide comprehensive care for concrete surfaces, combining powerful cleaning techniques with advanced protective coatings. We remove years of accumulated dirt, stains, and contaminants while applying protective systems that prevent future damage.</p>
+        <p class="large-text">From routine maintenance cleaning to deep restoration and protection, our services help extend concrete life, improve appearance, and reduce long-term maintenance costs for both residential and commercial properties.</p>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Differentiators Section -->
+  <Container>
+    <section class="differentiators-section">
+      <div class="section-header">
+        <h2>Professional Cleaning & Protection Advantages</h2>
+        <p>Our comprehensive approach delivers superior cleaning results and long-term protection:</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Advanced Pressure Washing Systems</h3>
+          <p>Commercial-grade equipment and techniques that remove deep-set stains, oil, grease, and biological growth without damaging surfaces</p>
+        </div>
+        <div class="feature-card">
+          <h3>Surface-Specific Cleaning Methods</h3>
+          <p>Customized pressure and temperature settings based on concrete type, condition, and contamination for optimal results</p>
+        </div>
+        <div class="feature-card">
+          <h3>Protective Coating Application</h3>
+          <p>Professional-grade sealers and protective coatings that prevent staining, weathering, and deterioration</p>
+        </div>
+        <div class="feature-card">
+          <h3>Environmentally Responsible Practices</h3>
+          <p>Eco-friendly cleaning solutions and proper wastewater management that protect the environment while delivering results</p>
+        </div>
+        <div class="feature-card">
+          <h3>Preventive Maintenance Programs</h3>
+          <p>Scheduled cleaning and resealing services that maintain concrete appearance and extend surface life</p>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Process Section -->
+  <Container>
+    <section class="process-section">
+      <div class="section-header">
+        <h2>Professional Cleaning & Protection Process</h2>
+        <p>Systematic approach ensuring thorough cleaning and effective protection:</p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h3>Surface Assessment</h3>
+          <ul>
+            <li>Comprehensive condition evaluation and documentation</li>
+            <li>Stain and contamination type identification</li>
+            <li>Surface porosity and absorption testing</li>
+            <li>Treatment specification development</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h3>Pre-Treatment</h3>
+          <ul>
+            <li>Specialized stain removal and degreasing</li>
+            <li>Biological growth treatment and removal</li>
+            <li>Surface preparation and masking</li>
+            <li>Environmental protection setup</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h3>Pressure Washing</h3>
+          <ul>
+            <li>Professional-grade pressure washing equipment</li>
+            <li>Surface-appropriate pressure and temperature settings</li>
+            <li>Systematic cleaning pattern application</li>
+            <li>Quality control and spot treatment</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h3>Surface Preparation</h3>
+          <ul>
+            <li>Complete drying and surface inspection</li>
+            <li>Final contamination removal and cleaning</li>
+            <li>Surface profile verification</li>
+            <li>Environmental condition monitoring</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">5</div>
+          <h3>Protection Application</h3>
+          <ul>
+            <li>Professional sealer and coating application</li>
+            <li>Uniform coverage and penetration verification</li>
+            <li>Proper curing and drying management</li>
+            <li>Final inspection and maintenance guidance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Collections Section -->
+  <Container>
+    <section class="collections-section">
+      <div class="section-header">
+        <h2>Cleaning & Protection Services</h2>
+        <p>Comprehensive concrete care solutions for all applications:</p>
+      </div>
+      
+      <div class="collections-grid">
+        <div class="collection-card">
+          <a href="/services/residential" class="collection-link">
+            <h3>Residential Cleaning</h3>
+            <p class="collection-desc">Homeowner-focused cleaning for driveways, patios, and walkways</p>
+            <ul>
+              <li>Driveway oil stain removal</li>
+              <li>Patio and walkway restoration</li>
+              <li>Deck and pool area cleaning</li>
+              <li>Exterior surface maintenance</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+        <div class="collection-card">
+          <a href="/services/commercial" class="collection-link">
+            <h3>Commercial Property Cleaning</h3>
+            <p class="collection-desc">Professional cleaning for business and commercial facilities</p>
+            <ul>
+              <li>Parking lot and sidewalk cleaning</li>
+              <li>Building exterior restoration</li>
+              <li>High-traffic area maintenance</li>
+              <li>Scheduled maintenance programs</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+        <div class="collection-card">
+          <a href="/services/commercial" class="collection-link">
+            <h3>Industrial Facility Cleaning</h3>
+            <p class="collection-desc">Heavy-duty cleaning for manufacturing and industrial sites</p>
+            <ul>
+              <li>Oil and chemical contamination removal</li>
+              <li>Heavy equipment area cleaning</li>
+              <li>Loading dock and warehouse floors</li>
+              <li>Environmental compliance cleaning</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+        <div class="collection-card">
+          <a href="/services/commercial" class="collection-link">
+            <h3>Protective Sealing</h3>
+            <p class="collection-desc">Professional sealing systems for long-term protection</p>
+            <ul>
+              <li>Penetrating sealers for deep protection</li>
+              <li>Surface sealers for stain resistance</li>
+              <li>Anti-slip additives for safety</li>
+              <li>UV-resistant formulations</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+        <div class="collection-card">
+          <a href="/services/commercial" class="collection-link">
+            <h3>Stain Removal</h3>
+            <p class="collection-desc">Specialized stain removal for challenging contamination</p>
+            <ul>
+              <li>Oil and grease stain removal</li>
+              <li>Rust and oxidation treatment</li>
+              <li>Paint and coating removal</li>
+              <li>Biological growth elimination</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+        <div class="collection-card">
+          <a href="/services/commercial" class="collection-link">
+            <h3>Maintenance Programs</h3>
+            <p class="collection-desc">Ongoing maintenance to preserve concrete appearance and performance</p>
+            <ul>
+              <li>Scheduled cleaning and inspection</li>
+              <li>Preventive stain treatment</li>
+              <li>Sealer renewal and reapplication</li>
+              <li>Performance monitoring and documentation</li>
+            </ul>
+            <div class="learn-more">Learn More →</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <Container>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Ready to Clean & Protect?</h2>
+          <p>Schedule your pressure washing and protection consultation today and discover how professional cleaning and protective coatings can restore and preserve your concrete surfaces.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Call</p>
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <div class="contact-details">
+                  <span class="contact-info">(513) 296-5525</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Email</p>
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <div class="contact-details">
+                  <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <QuoteRequestForm />
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<style>
+/* Using the same comprehensive styles as other pages - abbreviated for space */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: #FFC107;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.hero-headline {
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: #FFC107;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-outline {
+  background: transparent !important;
+  border-color: #FFC107 !important;
+  color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+  z-index: 1;
+  border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-dark);
+  filter: contrast(1.1) saturate(1.05);
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Abbreviated styles - following same pattern as other comprehensive pages */
+.intro-section, .differentiators-section, .process-section, .collections-section {
+  padding: 4rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.features-grid, .process-grid, .collections-grid {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.features-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.process-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.collections-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.feature-card, .process-card, .collection-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  transition: transform var(--theme-transition);
+}
+
+.feature-card:hover, .process-card:hover, .collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.contact-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+</style>

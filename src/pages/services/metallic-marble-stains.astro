@@ -1,0 +1,1080 @@
+---
+import { Container } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+
+const seo = {
+  title: 'Metallic Marble Stains | Premium Marble Reproduction | Queen City Surface Coatings',
+  description: 'Our signature metallic marble stain systems create authentic luxury marble finishes. Proprietary formulations with multi-layer application for superior depth and durability.',
+  keywords: 'metallic marble stains, marble reproduction coating, luxury marble finish, Cincinnati metallic stains, premium marble systems'
+};
+
+// Metallic Marble Stain Portfolio Projects
+const marbleStainProjects = [
+  {
+    id: 1,
+    title: "Carrara Marble Bathroom Floor",
+    category: "Carrara Reproduction",
+    location: "West Chester, OH",
+    size: "120 sq ft",
+    description: "Luxury master bathroom featuring our signature Carrara marble stain system. Multi-layer metallic application creates authentic Italian marble appearance with superior waterproof protection and durability.",
+    features: ["Authentic Carrara veining patterns", "Waterproof seamless surface", "Superior stain resistance", "Custom color matching"],
+    beforeImage: "/assets/images/gallery/IMG_2665.webp",
+    afterImage: "/assets/images/gallery/IMG_2678.webp",
+    stainType: "carrara"
+  },
+  {
+    id: 2,
+    title: "Calacatta Kitchen Island",
+    category: "Calacatta Effect",
+    location: "Mason, OH",
+    size: "80 sq ft",
+    description: "High-end kitchen island featuring Calacatta marble stain with dramatic veining. Our proprietary metallic stain formulation creates bold, flowing patterns that rival natural Italian marble.",
+    features: ["Dramatic bold veining", "Food-safe coating system", "Easy maintenance surface", "Custom metallic accent integration"],
+    beforeImage: "/assets/images/gallery/IMG_1662.webp",
+    afterImage: "/assets/images/gallery/IMG_2680.webp",
+    stainType: "calacatta"
+  },
+  {
+    id: 3,
+    title: "Commercial Lobby Statuario Marble",
+    category: "Statuario Design",
+    location: "Downtown Cincinnati, OH",
+    size: "800 sq ft",
+    description: "Professional office lobby featuring our premium Statuario marble stain system. Multi-coat application process creates sophisticated marble appearance with enhanced durability for high-traffic areas.",
+    features: ["Sophisticated Statuario patterns", "High-traffic durability", "Professional appearance", "Low maintenance requirements"],
+    beforeImage: "/assets/images/gallery/IMG_2677.webp",
+    afterImage: "/assets/images/gallery/Image-1.webp",
+    stainType: "statuario"
+  },
+  {
+    id: 4,
+    title: "Boutique Retail Emperador Marble",
+    category: "Emperador Effect",
+    location: "Cincinnati Shopping District",
+    size: "600 sq ft",
+    description: "Luxury retail space featuring rich Emperador marble stain with warm brown tones. Our signature metallic stain system creates depth and richness that enhances product displays.",
+    features: ["Rich warm brown tones", "Elegant sophisticated appearance", "Retail-appropriate durability", "Enhanced lighting reflection"],
+    beforeImage: "/assets/images/gallery/IMG_2679.webp",
+    afterImage: "/assets/images/gallery/IMG_2680-1.webp",
+    stainType: "emperador"
+  },
+  {
+    id: 5,
+    title: "Spa Nero Marquina Effect",
+    category: "Nero Marquina",
+    location: "Anderson Township Spa",
+    size: "400 sq ft",
+    description: "High-end spa environment featuring dramatic Nero Marquina marble stain with white veining. Our specialized stain system creates striking contrast perfect for wellness environments.",
+    features: ["Dramatic black and white contrast", "Spa-appropriate finish", "Chemical resistant surface", "Calming sophisticated aesthetic"],
+    beforeImage: "/assets/images/gallery/IMG_2665.webp",
+    afterImage: "/assets/images/gallery/IMG_2678.webp",
+    stainType: "nero"
+  },
+  {
+    id: 6,
+    title: "Custom Blend Reception Area",
+    category: "Custom Formulation",
+    location: "Northern Kentucky Office",
+    size: "300 sq ft",
+    description: "Corporate reception area with completely custom marble stain blend. Our proprietary formulation capabilities allow unlimited color matching and pattern customization for unique spaces.",
+    features: ["Custom color formulation", "Brand color integration", "Unique pattern development", "Professional reception appearance"],
+    beforeImage: "/assets/images/gallery/IMG_1662.webp",
+    afterImage: "/assets/images/gallery/IMG_2680.webp",
+    stainType: "custom"
+  }
+];
+
+// Select 3 random featured projects
+const featuredProjects = marbleStainProjects
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 3);
+---
+
+<Layout seo={seo}>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <Container>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-tagline">Our Signature Specialty</p>
+          <h1 class="hero-headline">Metallic Marble Stains</h1>
+          <p class="hero-subheadline">
+            Premium marble reproduction through our proprietary metallic stain formulations. Multi-layer application process creates authentic Italian marble depth with superior color retention and custom blend capabilities.
+          </p>
+          <div class="hero-ctas">
+            <a href="/company/contact" class="btn btn-primary btn-large">Get Custom Color Match</a>
+            <a href="/portfolio" class="btn btn-outline btn-large">View Stain Portfolio</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img 
+            src="/assets/images/new-projects/blue_metalic.webp" 
+            alt="Premium metallic marble stain coating with authentic veining patterns - Queen City Surface Coatings"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Introduction Section -->
+  <Container>
+    <section class="intro-section">
+      <div class="intro-content">
+        <h2>Proprietary Metallic Stain Technology</h2>
+        <p class="large-text">Our metallic marble stain systems represent years of research and development in marble reproduction technology. Each stain formulation is carefully crafted using premium metallic components and specialized binders to create authentic marble appearances that surpass traditional decorative techniques.</p>
+        <p class="large-text">Unlike standard concrete stains that create flat color, our metallic marble stains incorporate multiple metallic layers and proprietary application techniques to achieve the depth, luminosity, and veining patterns found in authentic Italian marble varieties.</p>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Stain Technology Section -->
+  <Container>
+    <section class="differentiators-section">
+      <div class="section-header">
+        <h2>Advanced Stain Formulation Technology</h2>
+        <p>Our proprietary metallic stain systems deliver superior marble reproduction through advanced chemistry and application techniques:</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Proprietary Metallic Stain Formulations</h3>
+          <p>Exclusive stain chemistry developed specifically for marble reproduction using premium metallic components and specialized binding agents</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multi-Layer Application for Depth</h3>
+          <p>Specialized layering technique that builds authentic marble depth through strategic stain application and metallic integration</p>
+        </div>
+        <div class="feature-card">
+          <h3>Superior Color Retention and Durability</h3>
+          <p>Advanced UV-stable formulations that maintain color integrity and resist fading while providing enhanced surface durability</p>
+        </div>
+        <div class="feature-card">
+          <h3>Custom Blend Capabilities</h3>
+          <p>Unlimited color matching and custom formulation services for unique marble appearances and architectural color coordination</p>
+        </div>
+        <div class="feature-card">
+          <h3>Italian Marble Authenticity</h3>
+          <p>Precise reproduction of Carrara, Calacatta, Statuario, Emperador, and Nero Marquina marble varieties with metallic enhancement</p>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Application Process -->
+  <Container>
+    <section class="process-section">
+      <div class="section-header">
+        <h2>Professional Metallic Stain Application Process</h2>
+        <p>Our specialized application process ensures optimal stain penetration and authentic marble appearance:</p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h3>Surface Assessment & Preparation</h3>
+          <ul>
+            <li>Porosity testing for optimal stain absorption</li>
+            <li>Surface profile preparation with diamond tooling</li>
+            <li>Contamination removal and pH balancing</li>
+            <li>Crack and joint preparation for seamless appearance</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h3>Base Stain Application</h3>
+          <ul>
+            <li>Primary color foundation application</li>
+            <li>Uniform penetration for consistent base tone</li>
+            <li>Absorption timing management for optimal results</li>
+            <li>Quality control and coverage verification</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h3>Metallic Enhancement Integration</h3>
+          <ul>
+            <li>Premium metallic component application</li>
+            <li>Strategic placement for authentic marble patterns</li>
+            <li>Specialized techniques for depth creation</li>
+            <li>Real-time pattern development and adjustment</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h3>Veining Pattern Creation</h3>
+          <ul>
+            <li>Hand-crafted veining using specialized tools</li>
+            <li>Authentic Italian marble pattern replication</li>
+            <li>Metallic accent integration throughout veins</li>
+            <li>Artistic refinement for natural marble flow</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">5</div>
+          <h3>Protective Sealing System</h3>
+          <ul>
+            <li>High-performance sealer application</li>
+            <li>UV protection for color stability</li>
+            <li>Stain resistance enhancement</li>
+            <li>Final quality inspection and warranty documentation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Stain Varieties Section -->
+  <Container>
+    <section class="collections-section">
+      <div class="section-header">
+        <h2>Premium Marble Stain Collection</h2>
+        <p>Choose from our curated collection of authentic Italian marble stain reproductions:</p>
+      </div>
+      
+      <div class="collections-grid">
+        <div class="collection-card">
+          <h3>Carrara Marble Stains</h3>
+          <p class="collection-desc">Classic Italian white marble with subtle gray veining</p>
+          <ul>
+            <li>Authentic Carrara white base color</li>
+            <li>Subtle gray veining patterns</li>
+            <li>Elegant understated luxury</li>
+            <li>Perfect for bathrooms and kitchens</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Calacatta Marble Stains</h3>
+          <p class="collection-desc">Dramatic white marble with bold, flowing veining</p>
+          <ul>
+            <li>Pure white background with dramatic veins</li>
+            <li>Bold, flowing pattern development</li>
+            <li>Luxury positioning for high-end projects</li>
+            <li>Statement piece marble appearance</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Statuario Marble Stains</h3>
+          <p class="collection-desc">Sophisticated white marble with golden undertones</p>
+          <ul>
+            <li>Warm white base with golden highlights</li>
+            <li>Sophisticated veining patterns</li>
+            <li>Professional and elegant appearance</li>
+            <li>Ideal for commercial and hospitality</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Emperador Marble Stains</h3>
+          <p class="collection-desc">Rich brown marble with warm, inviting tones</p>
+          <ul>
+            <li>Deep brown base with warm undertones</li>
+            <li>Rich, luxurious appearance</li>
+            <li>Creates cozy, sophisticated environments</li>
+            <li>Excellent for accent walls and features</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Custom Stain Formulations</h3>
+          <p class="collection-desc">Unlimited color possibilities with custom blending</p>
+          <ul>
+            <li>Unlimited color combinations available</li>
+            <li>Architectural color matching services</li>
+            <li>Brand integration capabilities</li>
+            <li>One-of-a-kind marble appearances</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <Container>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Ready for Custom Marble Stains?</h2>
+          <p>Discover how our proprietary metallic stain systems can create authentic marble beauty in your space. Schedule your custom color consultation today.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Call</p>
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <div class="contact-details">
+                  <span class="contact-info">(513) 296-5525</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Email</p>
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <div class="contact-details">
+                  <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <QuoteRequestForm />
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<style>
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: #FFC107;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.hero-headline {
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: #FFC107;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.hero-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-outline {
+  background: transparent !important;
+  border-color: #FFC107 !important;
+  color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+  z-index: 1;
+  border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-dark);
+  filter: contrast(1.1) saturate(1.05);
+  position: relative;
+}
+
+/* Responsive hero design */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Introduction Section */
+.intro-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 2rem;
+}
+
+.large-text {
+  font-size: 1.25rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Grid */
+.differentiators-section {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.feature-card {
+  background: var(--theme-bg);
+  padding: 2.5rem;
+  border-radius: var(--theme-card-radius);
+  text-align: center;
+  box-shadow: var(--theme-shadow-light);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+/* Center the last item in features grid when it's on its own row */
+.features-grid .feature-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Process Grid */
+.process-section {
+  padding: 4rem 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.process-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.process-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.process-number {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto 1rem;
+  font-size: 1.125rem;
+}
+
+.process-card h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.process-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+.process-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.process-card li::before {
+  content: '•';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Collections Grid */
+.collections-section {
+  padding: 4rem 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.collection-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+/* Center the last item in collections grid when it's on its own row */
+.collections-grid .collection-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.collection-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.collection-desc {
+  font-style: italic;
+  color: var(--theme-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.collection-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.collection-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.collection-card li::before {
+  content: '✓';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+  padding: 4rem 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.portfolio-item {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-light);
+  transition: transform var(--theme-transition);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.project-images {
+  position: relative;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--theme-card-radius);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.875rem;
+}
+
+.project-info {
+  padding: 2rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: var(--theme-text-primary);
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-category {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--theme-card-radius);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-details {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-card-radius);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+}
+
+.project-description {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.project-features h4 {
+  color: var(--theme-primary);
+  margin-bottom: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-features li {
+  padding: 0.25rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--theme-text-secondary);
+}
+
+.project-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--theme-primary);
+  font-weight: bold;
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-card-radius);
+}
+
+.portfolio-cta p {
+  font-size: 1.125rem;
+  color: var(--theme-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-cta .btn {
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: var(--theme-card-radius);
+  font-weight: var(--font-weight-semibold);
+  transition: var(--theme-transition);
+  display: inline-block;
+}
+
+.portfolio-cta .btn-outline {
+  background: transparent;
+  color: var(--theme-primary);
+  border: 2px solid var(--theme-primary);
+}
+
+.portfolio-cta .btn-outline:hover {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-info > p {
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 2rem;
+  color: var(--theme-text-secondary);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-button-wrapper {
+  width: 50%;
+}
+
+.contact-label {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: #002F4B;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--theme-card-radius);
+  border: none;
+  transition: var(--theme-transition);
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  min-height: 60px;
+  justify-content: center;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-phone {
+  background: #FFC107;
+  color: #002F4B;
+}
+
+.contact-button-phone:hover {
+  background: #E6AC00;
+  color: #002F4B;
+}
+
+.contact-button-email {
+  background: #002F4B;
+  color: white;
+}
+
+.contact-button-email:hover {
+  background: #001f36;
+  color: white;
+}
+
+.contact-button-email .contact-info {
+  color: #FFC107;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.contact-details .contact-info {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(4) {
+    grid-column: 1;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2,
+  .intro-content h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid,
+  .process-grid,
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1;
+    max-width: none;
+  }
+  
+  .process-card {
+    padding: 2rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2,
+  .intro-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .large-text {
+    font-size: 1.125rem;
+  }
+  
+  .feature-card,
+  .process-card {
+    padding: 1.5rem;
+  }
+}
+</style>

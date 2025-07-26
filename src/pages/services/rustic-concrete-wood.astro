@@ -1,0 +1,8 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { texturedConcreteServices } from '../../data/premiumServiceData.js';
+
+const serviceData = texturedConcreteServices.rusticConcreteWood;
+---
+
+<PremiumServiceTemplate {...serviceData} />

@@ -1,0 +1,1080 @@
+---
+import { Container } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+
+const seo = {
+  title: 'Pearlescent Marble Finishes | Luminous Pearl Marble Effects | Queen City Surface Coatings',
+  description: 'Sophisticated pearlescent marble finishes with pearl-like luminosity. Elegant shimmer effects that change with lighting, perfect for luxury residential and hospitality applications.',
+  keywords: 'pearlescent marble finishes, pearl marble effects, luminous marble coating, shimmer marble finish, luxury pearl marble Cincinnati'
+};
+
+// Pearlescent Marble Finishes Portfolio Projects
+const pearlescentMarbleProjects = [
+  {
+    id: 1,
+    title: "Luxury Spa Reception Lounge",
+    category: "Pearl Elegance",
+    location: "West Chester, OH",
+    size: "400 sq ft",
+    description: "High-end spa environment featuring sophisticated pearlescent marble finishes with subtle shimmer effects. Our pearl-enhanced marble creates a calming, luxurious atmosphere that changes beautifully with natural and artificial lighting.",
+    features: ["Subtle pearlescent shimmer effects", "Calming luxury spa atmosphere", "Light-responsive surface beauty", "Sophisticated wellness environment"],
+    beforeImage: "/assets/images/gallery/IMG_2665.webp",
+    afterImage: "/assets/images/gallery/IMG_2678.webp",
+    pearlType: "elegant"
+  },
+  {
+    id: 2,
+    title: "Boutique Hotel Lobby Feature",
+    category: "Luminous Pearl",
+    location: "Downtown Cincinnati, OH",
+    size: "800 sq ft",
+    description: "Boutique hotel lobby featuring luminous pearlescent marble with dynamic light interaction. Our specialized pearl finish creates welcoming elegance that transforms throughout the day with changing light conditions.",
+    features: ["Dynamic light interaction effects", "Welcoming hospitality elegance", "Day-to-night transformation", "Boutique luxury positioning"],
+    beforeImage: "/assets/images/gallery/IMG_1662.webp",
+    afterImage: "/assets/images/gallery/IMG_2680.webp",
+    pearlType: "luminous"
+  },
+  {
+    id: 3,
+    title: "Residential Master Suite",
+    category: "Soft Pearl",
+    location: "Mason, OH",
+    size: "300 sq ft",
+    description: "Luxury master bedroom featuring soft pearlescent marble finishes with gentle luminosity. Our refined pearl effects create sophisticated residential luxury with subtle elegance perfect for intimate spaces.",
+    features: ["Gentle subtle luminosity", "Sophisticated residential luxury", "Intimate space enhancement", "Refined pearl elegance"],
+    beforeImage: "/assets/images/gallery/IMG_2677.webp",
+    afterImage: "/assets/images/gallery/Image-1.webp",
+    pearlType: "soft"
+  },
+  {
+    id: 4,
+    title: "Upscale Restaurant Private Dining",
+    category: "Warm Pearl",
+    location: "Anderson Township Restaurant",
+    size: "200 sq ft",
+    description: "Private dining room featuring warm pearlescent marble with golden undertones. Our specialized warm pearl finish creates intimate dining ambiance with sophisticated luminosity that enhances culinary experiences.",
+    features: ["Warm golden pearl undertones", "Intimate dining ambiance", "Sophisticated luminosity", "Enhanced culinary atmosphere"],
+    beforeImage: "/assets/images/gallery/IMG_2679.webp",
+    afterImage: "/assets/images/gallery/IMG_2680-1.webp",
+    pearlType: "warm"
+  },
+  {
+    id: 5,
+    title: "Corporate Executive Conference Room",
+    category: "Professional Pearl",
+    location: "Northern Kentucky Office",
+    size: "500 sq ft",
+    description: "Executive conference room featuring professional pearlescent marble with understated elegance. Our refined pearl finish creates sophisticated business environments with subtle luxury that inspires confidence and success.",
+    features: ["Understated professional elegance", "Sophisticated business environment", "Subtle luxury positioning", "Executive confidence inspiration"],
+    beforeImage: "/assets/images/gallery/IMG_2665.webp",
+    afterImage: "/assets/images/gallery/IMG_2678.webp",
+    pearlType: "professional"
+  },
+  {
+    id: 6,
+    title: "Luxury Retail Jewelry Store",
+    category: "Brilliant Pearl",
+    location: "Cincinnati Shopping District",
+    size: "600 sq ft",
+    description: "High-end jewelry store featuring brilliant pearlescent marble that enhances product displays. Our specialized brilliant pearl finish creates optimal lighting reflection and sophisticated backdrop for luxury merchandise presentation.",
+    features: ["Brilliant pearl enhancement", "Optimal lighting reflection", "Luxury merchandise backdrop", "Sophisticated product presentation"],
+    beforeImage: "/assets/images/gallery/IMG_1662.webp",
+    afterImage: "/assets/images/gallery/IMG_2680.webp",
+    pearlType: "brilliant"
+  }
+];
+
+// Select 3 random featured projects
+const featuredProjects = pearlescentMarbleProjects
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 3);
+---
+
+<Layout seo={seo}>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <Container>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-tagline">Sophisticated Luminosity</p>
+          <h1 class="hero-headline">Pearlescent Marble Finishes</h1>
+          <p class="hero-subheadline">
+            Experience sophisticated luxury with our pearlescent marble finishes featuring subtle shimmer effects and elegant luminosity. Perfect for luxury residential and hospitality applications where refined beauty meets dynamic lighting interaction.
+          </p>
+          <div class="hero-ctas">
+            <a href="/company/contact" class="btn btn-primary btn-large">Explore Pearl Luxury</a>
+            <a href="/portfolio" class="btn btn-outline btn-large">View Pearl Portfolio</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img 
+            src="/assets/images/new-projects/blue_metalic.webp" 
+            alt="Sophisticated pearlescent marble finish with elegant luminosity - Queen City Surface Coatings"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Introduction Section -->
+  <Container>
+    <section class="intro-section">
+      <div class="intro-content">
+        <h2>The Elegance of Pearl-Enhanced Marble</h2>
+        <p class="large-text">Our pearlescent marble finishes represent the ultimate in sophisticated luxury, featuring specialized pearl components that create subtle shimmer effects and elegant luminosity. Each installation transforms throughout the day as lighting conditions change, creating dynamic beauty that enhances any environment.</p>
+        <p class="large-text">Perfect for luxury residential and hospitality applications, our pearlescent finishes add refined elegance without overwhelming the space. The gentle luminosity and sophisticated pearl effects create calming, luxurious atmospheres that inspire tranquility and well-being.</p>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Pearl Technology Section -->
+  <Container>
+    <section class="differentiators-section">
+      <div class="section-header">
+        <h2>Advanced Pearlescent Technology</h2>
+        <p>Our specialized pearlescent systems create sophisticated luminosity through advanced pearl integration techniques:</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Subtle Pearlescent Shimmer Effects</h3>
+          <p>Specialized pearl component integration that creates gentle, sophisticated shimmer without overpowering the marble aesthetics</p>
+        </div>
+        <div class="feature-card">
+          <h3>Elegant Luminosity That Changes With Lighting</h3>
+          <p>Dynamic light interaction properties that transform the marble appearance throughout the day as lighting conditions change</p>
+        </div>
+        <div class="feature-card">
+          <h3>Sophisticated Marble Patterns With Pearl Enhancement</h3>
+          <p>Authentic marble pattern reproduction enhanced with pearl components for added depth, beauty, and luxury positioning</p>
+        </div>
+        <div class="feature-card">
+          <h3>Perfect for Luxury Residential and Hospitality</h3>
+          <p>Optimized formulations specifically designed for high-end residential and hospitality environments requiring refined luxury appeal</p>
+        </div>
+        <div class="feature-card">
+          <h3>Calming Wellness Environment Creation</h3>
+          <p>Specialized pearl effects that promote tranquility and well-being, perfect for spa, wellness, and relaxation environments</p>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Pearl Application Process -->
+  <Container>
+    <section class="process-section">
+      <div class="section-header">
+        <h2>Sophisticated Pearl Application Process</h2>
+        <p>Our specialized pearlescent application process ensures optimal shimmer effects and elegant luminosity:</p>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-number">1</div>
+          <h3>Pearl Effect Design & Planning</h3>
+          <ul>
+            <li>Lighting analysis and pearl effect optimization</li>
+            <li>Shimmer intensity consultation and selection</li>
+            <li>Pearl pattern integration planning</li>
+            <li>Luminosity enhancement strategy development</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">2</div>
+          <h3>Premium Surface Preparation</h3>
+          <ul>
+            <li>Surface optimization for pearl adhesion</li>
+            <li>Texture enhancement for shimmer effects</li>
+            <li>Foundation preparation for luminosity</li>
+            <li>Quality substrate verification and enhancement</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">3</div>
+          <h3>Marble Foundation Application</h3>
+          <ul>
+            <li>Luxury marble base color application</li>
+            <li>Uniform coverage for optimal pearl backdrop</li>
+            <li>Color depth enhancement for luminosity</li>
+            <li>Foundation quality control and verification</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">4</div>
+          <h3>Pearlescent Enhancement Integration</h3>
+          <ul>
+            <li>Specialized pearl component application</li>
+            <li>Strategic shimmer placement and distribution</li>
+            <li>Luminosity optimization techniques</li>
+            <li>Light interaction enhancement development</li>
+          </ul>
+        </div>
+        <div class="process-card">
+          <div class="process-number">5</div>
+          <h3>Luxury Protection & Finishing</h3>
+          <ul>
+            <li>Pearl-preserving protective sealing</li>
+            <li>Shimmer effect longevity assurance</li>
+            <li>Final luminosity quality verification</li>
+            <li>Luxury warranty and maintenance guidance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+  <!-- Pearl Finish Collection -->
+  <Container>
+    <section class="collections-section">
+      <div class="section-header">
+        <h2>Sophisticated Pearl Finish Collection</h2>
+        <p>Choose from our curated collection of pearlescent finishes, each designed for elegant sophistication:</p>
+      </div>
+      
+      <div class="collections-grid">
+        <div class="collection-card">
+          <h3>Subtle Pearl Elegance</h3>
+          <p class="collection-desc">Gentle shimmer for understated luxury appeal</p>
+          <ul>
+            <li>Gentle, refined pearl shimmer effects</li>
+            <li>Understated luxury and sophistication</li>
+            <li>Perfect for intimate residential spaces</li>
+            <li>Calming, tranquil aesthetic appeal</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Luminous Pearl Dynamics</h3>
+          <p class="collection-desc">Light-responsive finishes that transform with illumination</p>
+          <ul>
+            <li>Dynamic light interaction properties</li>
+            <li>Transformation throughout the day</li>
+            <li>Hospitality and commercial applications</li>
+            <li>Enhanced lighting reflection benefits</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Warm Pearl Comfort</h3>
+          <p class="collection-desc">Golden pearl undertones for inviting warmth</p>
+          <ul>
+            <li>Warm golden pearl undertones</li>
+            <li>Inviting, comfortable atmosphere creation</li>
+            <li>Perfect for dining and relaxation areas</li>
+            <li>Enhanced warmth and hospitality appeal</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Brilliant Pearl Luxury</h3>
+          <p class="collection-desc">Enhanced shimmer for maximum luxury impact</p>
+          <ul>
+            <li>Enhanced shimmer and brilliance</li>
+            <li>Maximum luxury visual impact</li>
+            <li>Ideal for retail and showroom applications</li>
+            <li>Premium positioning and prestige appeal</li>
+          </ul>
+        </div>
+        <div class="collection-card">
+          <h3>Custom Pearl Formulations</h3>
+          <p class="collection-desc">Personalized pearl effects for unique environments</p>
+          <ul>
+            <li>Completely custom pearl effect development</li>
+            <li>Lighting-specific optimization</li>
+            <li>Brand or theme integration capabilities</li>
+            <li>One-of-a-kind luxury installations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </Container>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <Container>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Ready for Pearlescent Luxury?</h2>
+          <p>Discover the sophisticated beauty of pearlescent marble finishes that transform with light. Schedule your luxury consultation to explore our elegant pearl effects.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Call</p>
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <div class="contact-details">
+                  <span class="contact-info">(513) 296-5525</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Email</p>
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <div class="contact-details">
+                  <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <QuoteRequestForm />
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<style>
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: #FFC107;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.hero-headline {
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: #FFC107;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.hero-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-outline {
+  background: transparent !important;
+  border-color: #FFC107 !important;
+  color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+  z-index: 1;
+  border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-dark);
+  filter: contrast(1.1) saturate(1.05);
+  position: relative;
+}
+
+/* Responsive hero design */
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Introduction Section */
+.intro-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 2rem;
+}
+
+.large-text {
+  font-size: 1.25rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Grid */
+.differentiators-section {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.feature-card {
+  background: var(--theme-bg);
+  padding: 2.5rem;
+  border-radius: var(--theme-card-radius);
+  text-align: center;
+  box-shadow: var(--theme-shadow-light);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+/* Center the last item in features grid when it's on its own row */
+.features-grid .feature-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Process Grid */
+.process-section {
+  padding: 4rem 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.process-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.process-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.process-number {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto 1rem;
+  font-size: 1.125rem;
+}
+
+.process-card h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.process-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+.process-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.process-card li::before {
+  content: '•';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Collections Grid */
+.collections-section {
+  padding: 4rem 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.collection-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+/* Center the last item in collections grid when it's on its own row */
+.collections-grid .collection-card:nth-child(5) {
+  grid-column: 1 / -1;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.collection-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.collection-desc {
+  font-style: italic;
+  color: var(--theme-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.collection-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.collection-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.collection-card li::before {
+  content: '✓';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+  padding: 4rem 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.portfolio-item {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-light);
+  transition: transform var(--theme-transition);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.project-images {
+  position: relative;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--theme-card-radius);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.875rem;
+}
+
+.project-info {
+  padding: 2rem;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: var(--theme-text-primary);
+  flex: 1;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-category {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--theme-card-radius);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-details {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-card-radius);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+}
+
+.project-description {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.project-features h4 {
+  color: var(--theme-primary);
+  margin-bottom: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-features li {
+  padding: 0.25rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  color: var(--theme-text-secondary);
+}
+
+.project-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--theme-primary);
+  font-weight: bold;
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-card-radius);
+}
+
+.portfolio-cta p {
+  font-size: 1.125rem;
+  color: var(--theme-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-cta .btn {
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  border-radius: var(--theme-card-radius);
+  font-weight: var(--font-weight-semibold);
+  transition: var(--theme-transition);
+  display: inline-block;
+}
+
+.portfolio-cta .btn-outline {
+  background: transparent;
+  color: var(--theme-primary);
+  border: 2px solid var(--theme-primary);
+}
+
+.portfolio-cta .btn-outline:hover {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+}
+
+.contact-info > p {
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 2rem;
+  color: var(--theme-text-secondary);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-button-wrapper {
+  width: 50%;
+}
+
+.contact-label {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: #002F4B;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--theme-card-radius);
+  border: none;
+  transition: var(--theme-transition);
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  min-height: 60px;
+  justify-content: center;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-phone {
+  background: #FFC107;
+  color: #002F4B;
+}
+
+.contact-button-phone:hover {
+  background: #E6AC00;
+  color: #002F4B;
+}
+
+.contact-button-email {
+  background: #002F4B;
+  color: white;
+}
+
+.contact-button-email:hover {
+  background: #001f36;
+  color: white;
+}
+
+.contact-button-email .contact-info {
+  color: #FFC107;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.contact-details .contact-info {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  display: block;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(4) {
+    grid-column: 1;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2,
+  .intro-content h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid,
+  .process-grid,
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1;
+    max-width: none;
+  }
+  
+  .process-card {
+    padding: 2rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2,
+  .intro-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .large-text {
+    font-size: 1.125rem;
+  }
+  
+  .feature-card,
+  .process-card {
+    padding: 1.5rem;
+  }
+}
+</style>

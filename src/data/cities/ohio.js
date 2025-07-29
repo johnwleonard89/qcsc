@@ -19,34 +19,34 @@ export const ohioCities = {
     },
     services: [
       {
-        name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
-        description: "Professional-grade epoxy flooring systems for Cincinnati businesses, warehouses, and industrial facilities."
+        name: "Residential",
+        href: "/services/residential/",
+        description: "Professional residential concrete coatings for garages, basements, kitchens and home spaces throughout Cincinnati."
       },
       {
-        name: "Garage Floor Coating",
-        href: "/services/garage-floor-epoxy/",
-        description: "Transform your Cincinnati garage with durable, slip-resistant epoxy coatings that withstand Ohio's harsh winters."
+        name: "Commercial",
+        href: "/services/commercial/",
+        description: "Durable commercial flooring solutions for retail spaces, offices, and warehouses in Cincinnati."
       },
       {
-        name: "Polyaspartic Coating",
-        href: "/services/polyaspartic-coating/",
-        description: "Fast-curing, UV-stable polyaspartic coatings perfect for Cincinnati's variable climate and quick project turnarounds."
+        name: "Industrial",
+        href: "/services/industrial-flooring/",
+        description: "Heavy-duty industrial coatings for Cincinnati manufacturing facilities and high-traffic industrial spaces."
       },
       {
-        name: "Metallic Epoxy Flooring",
-        href: "/services/metallic-epoxy-flooring/",
-        description: "Stunning metallic epoxy floors that create unique, artistic surfaces for Cincinnati homes and businesses."
+        name: "Decorative Options",
+        href: "/services/decorative-options/",
+        description: "Beautiful decorative concrete finishes including flake, metallic, and textured options for Cincinnati properties."
       },
       {
-        name: "Basement Floor Coating",
-        href: "/services/basement-floor-coating/",
-        description: "Moisture-resistant basement floor coatings that transform Cincinnati basements into functional living spaces."
+        name: "Maintenance & Repair",
+        href: "/services/concrete-repair/",
+        description: "Expert concrete repair and maintenance services to restore and protect your Cincinnati concrete surfaces."
       },
       {
-        name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
-        description: "Heavy-duty industrial coatings for Cincinnati manufacturing facilities and high-traffic commercial spaces."
+        name: "Pressure Washing & Protection",
+        href: "/services/pressure-washing-protection/",
+        description: "Professional pressure washing and protective coating services for Cincinnati concrete surfaces."
       }
     ],
     landmarks: [
@@ -139,7 +139,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade commercial flooring solutions for Mason businesses and office facilities."
       },
       {
@@ -246,7 +246,7 @@ export const ohioCities = {
     services: [
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade commercial flooring solutions for West Chester's thriving business district and office complexes."
       },
       {
@@ -261,7 +261,7 @@ export const ohioCities = {
       },
       {
         name: "Retail Facility Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Specialized flooring solutions for West Chester's busy retail centers and shopping districts."
       },
       {
@@ -368,7 +368,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional commercial flooring solutions for Loveland businesses and retail establishments."
       },
       {
@@ -470,12 +470,12 @@ export const ohioCities = {
     services: [
       {
         name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Dayton's manufacturing facilities and aerospace industry."
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade commercial flooring solutions for Dayton businesses and office complexes."
       },
       {
@@ -490,7 +490,7 @@ export const ohioCities = {
       },
       {
         name: "Aerospace Facility Coatings",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Precision coatings for Dayton's aerospace and defense industry facilities."
       },
       {
@@ -584,12 +584,12 @@ export const ohioCities = {
     services: [
       {
         name: "Manufacturing Floor Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Hamilton's manufacturing and production facilities."
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional commercial flooring solutions for Hamilton's businesses and retail establishments."
       },
       {
@@ -701,12 +701,12 @@ export const ohioCities = {
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional commercial flooring solutions for Springdale businesses and retail establishments."
       },
       {
         name: "Retail Facility Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Specialized flooring for Springdale's shopping centers and retail locations."
       },
       {
@@ -808,12 +808,12 @@ export const ohioCities = {
     services: [
       {
         name: "Industrial Park Coatings",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Fairfield's manufacturing and distribution facilities."
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional commercial flooring solutions for Fairfield's businesses and retail centers."
       },
       {
@@ -828,12 +828,12 @@ export const ohioCities = {
       },
       {
         name: "Office Complex Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional office building flooring for Fairfield's growing business community."
       },
       {
         name: "Retail Center Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Durable, attractive flooring solutions for Fairfield's shopping centers and retail facilities."
       }
     ],
@@ -925,7 +925,7 @@ export const ohioCities = {
       },
       {
         name: "Corporate Facility Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade commercial flooring for Blue Ash's business district and corporate facilities."
       },
       {
@@ -1050,7 +1050,7 @@ export const ohioCities = {
       },
       {
         name: "Recreation Facility Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Heavy-duty systems designed for Loveland's active community facilities, providing durability for high-traffic recreation and sporting applications."
       },
       {
@@ -1160,7 +1160,7 @@ export const ohioCities = {
       },
       {
         name: "Recreation & Tourism Industry",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for Milford's recreation facilities and tourism-related businesses serving Little Miami River visitors with heavy-duty systems for high-traffic areas."
       },
       {
@@ -1175,7 +1175,7 @@ export const ohioCities = {
       },
       {
         name: "Recreation Facility Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Heavy-duty systems designed for high-traffic recreation facilities and tourism-related businesses with extreme abrasion resistance and easy maintenance."
       }
     ],
@@ -1290,7 +1290,7 @@ export const ohioCities = {
       },
       {
         name: "Compact Home Solutions",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Norwood's urban residential properties, including garages, basements, and small outdoor spaces."
       },
       {
@@ -1415,7 +1415,7 @@ export const ohioCities = {
       },
       {
         name: "Neighborhood Solutions",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions designed for Deer Park's residential community and family-oriented lifestyle."
       }
     ],
@@ -1521,7 +1521,7 @@ export const ohioCities = {
       },
       {
         name: "Small Business Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial floor coating for Reading's local businesses, supporting the community's economic vitality and business district charm."
       },
       {
@@ -1621,7 +1621,7 @@ export const ohioCities = {
     services: [
       {
         name: "Aviation Industry Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Precision-engineered industrial coatings for aerospace facilities and aviation industry applications."
       },
       {
@@ -1636,7 +1636,7 @@ export const ohioCities = {
       },
       {
         name: "Industrial Floor Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings that meet aerospace industry standards for durability and performance."
       },
       {
@@ -1758,7 +1758,7 @@ export const ohioCities = {
       },
       {
         name: "Custom Solutions",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Tailored concrete coating solutions designed specifically for each Golf Manor family's lifestyle and preferences."
       },
       {
@@ -1851,22 +1851,22 @@ export const ohioCities = {
     services: [
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Sharonville businesses, corporate facilities, and Convention Center area properties."
       },
       {
         name: "Convention Center Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Specialized flooring solutions for Convention Center facilities and event spaces requiring high-performance surfaces."
       },
       {
         name: "Industrial Floor Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings designed for Sharonville's demanding manufacturing and distribution operations."
       },
       {
         name: "Corporate Facility Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional corporate flooring solutions that enhance business image and operational efficiency in Sharonville's business district."
       },
       {
@@ -1876,7 +1876,7 @@ export const ohioCities = {
       },
       {
         name: "Warehouse Epoxy Systems",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Industrial-grade epoxy systems for Sharonville warehouses and distribution centers handling heavy forklift traffic."
       }
     ],
@@ -1979,17 +1979,17 @@ export const ohioCities = {
       },
       {
         name: "Decorative Epoxy Systems",
-        href: "/services/decorative-concrete-coating/",
+        href: "/services/decorative-options/",
         description: "Premium decorative concrete coatings that enhance architectural beauty while providing superior performance."
       },
       {
         name: "Historic Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Sensitive coatings for Montgomery's historic homes that preserve character while adding modern luxury."
       },
       {
         name: "Luxury Driveway Coating",
-        href: "/services/driveway-coating/",  
+        href: "/services/residential/",  
         description: "High-end driveway coating systems that complement Montgomery's prestigious properties and landscapes."
       }
     ],
@@ -2095,7 +2095,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Epoxy Flooring",
-        href: "/services/residential-epoxy-flooring/",
+        href: "/services/residential/",
         description: "Professional-grade residential epoxy systems perfect for Huber Heights family homes and recreational spaces."
       },
       {
@@ -2178,17 +2178,17 @@ export const ohioCities = {
     services: [
       {
         name: "Industrial Manufacturing Coatings",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty floor coating systems for Sharonville's manufacturing facilities, providing exceptional durability for demanding industrial operations."
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional floor coatings for Sharonville's expanding business parks and corporate facilities throughout Hamilton County."
       },
       {
         name: "Warehouse & Distribution Center Coatings",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Specialized coatings for Sharonville's strategic logistics facilities, serving the distribution networks that connect regional commerce."
       },
       {
@@ -2288,7 +2288,7 @@ export const ohioCities = {
     services: [
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Blue Ash businesses, corporate facilities, and commercial spaces."
       },
       {
@@ -2313,7 +2313,7 @@ export const ohioCities = {
       },
       {
         name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Blue Ash manufacturing and commercial facilities."
       }
     ],
@@ -2422,12 +2422,12 @@ export const ohioCities = {
       },
       {
         name: "Property Value Enhancement Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Premium concrete coatings designed to enhance property values and complement Montgomery's exclusive real estate market."
       },
       {
         name: "Climate-Controlled Installation Services",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Professional installation methods with climate control and moisture management for Montgomery's luxury basements and specialty areas."
       }
     ],
@@ -2540,12 +2540,12 @@ export const ohioCities = {
       },
       {
         name: "Driveway Coating",
-        href: "/services/concrete-coating/",
+        href: "/services/",
         description: "Enhance your West Chester home's curb appeal with professional driveway coating solutions that withstand Ohio weather."
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential concrete coating services tailored to West Chester homeowners' needs and preferences."
       }
     ],
@@ -2641,7 +2641,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "High-end commercial flooring solutions for Centerville businesses and premium facilities."
       },
       {
@@ -2734,7 +2734,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial concrete coatings for Kettering business districts, providing durable flooring solutions that support local commerce."
       },
       {
@@ -2827,7 +2827,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial and industrial facility coatings for Miamisburg's diverse business community, from historic downtown to modern developments."
       },
       {
@@ -2920,7 +2920,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial flooring solutions for Clayton's expanding business districts, supporting local commerce with durable, professional coatings."
       },
       {
@@ -3013,7 +3013,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial flooring solutions for Englewood's local business districts, supporting neighborhood commerce with durable, professional coatings."
       },
       {
@@ -3106,7 +3106,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Heritage-sensitive commercial flooring for Germantown's historic downtown business district and local establishments."
       },
       {
@@ -3199,7 +3199,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Heavy-duty commercial and industrial flooring for Moraine's automotive facilities and manufacturing operations."
       },
       {
@@ -3292,7 +3292,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "High-end commercial coatings for Oakwood's exclusive community facilities and club buildings, maintaining luxury standards."
       },
       {
@@ -3385,7 +3385,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial flooring solutions for Vandalia's expanding business districts, supporting local commerce with professional, durable coatings."
       },
       {
@@ -3478,7 +3478,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Commercial flooring solutions for Riverside's local business areas, supporting neighborhood commerce with durable, professional coatings."
       },
       {
@@ -3571,7 +3571,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Community-focused commercial flooring solutions for Trotwood's local businesses and neighborhood commerce."
       },
       {
@@ -3664,7 +3664,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Heritage-sensitive commercial flooring for West Carrollton's historic downtown business district and local establishments."
       },
       {
@@ -3757,7 +3757,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Small-town business flooring solutions for Farmersville's village commercial district and local establishments."
       },
       {
@@ -3850,7 +3850,7 @@ export const ohioCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Community facility coatings for Drexel's local buildings and neighborhood properties requiring professional solutions."
       },
       {
@@ -3953,7 +3953,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Coating",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential coating services for Hillsboro's diverse neighborhoods."
       }
     ],
@@ -4035,7 +4035,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Greenfield's village properties."
       }
     ],
@@ -4106,7 +4106,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services", 
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating services tailored to Leesburg's village property needs."
       }
     ],
@@ -4177,7 +4177,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential concrete services designed for Lynchburg's village properties."
       }
     ],
@@ -4248,7 +4248,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Personalized concrete coating services tailored to Mowrystown's community needs."
       }
     ],
@@ -4319,7 +4319,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential coating services designed for Belfast's rural properties."
       }
     ],
@@ -4390,7 +4390,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential coating services tailored to Carmel's rural property needs."
       }
     ],
@@ -4461,7 +4461,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Personalized residential coating services designed for Pricetown's rural properties."
       }
     ],
@@ -4532,7 +4532,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential coating services tailored to Rocky Fork Point's rural property needs."
       }
     ],
@@ -4603,7 +4603,7 @@ export const ohioCities = {
       },
       {
         name: "Residential Concrete Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive residential coating services designed for Rainsboro's rural property needs."
       }
     ],

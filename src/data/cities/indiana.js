@@ -19,24 +19,34 @@ export const indianaCities = {
     },
     services: [
       {
-        name: "Garage Floor Coating",
-        href: "/services/garage-floor-epoxy/",
-        description: "Transform your Vevay garage with durable, moisture-resistant epoxy coatings perfect for Ohio River valley conditions."
+        name: "Residential",
+        href: "/services/residential/",
+        description: "Professional residential concrete coatings for garages, basements, kitchens and home spaces throughout Vevay."
       },
       {
-        name: "Basement Floor Coating",
-        href: "/services/basement-floor-coating/",
-        description: "Moisture-resistant basement floor coatings designed for Vevay's riverside environment and historic homes."
+        name: "Commercial",
+        href: "/services/commercial/",
+        description: "Durable commercial flooring solutions for retail spaces, offices, and warehouses in Vevay."
       },
       {
-        name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
-        description: "Professional-grade epoxy flooring systems for Vevay businesses, wineries, and commercial facilities."
+        name: "Industrial",
+        href: "/services/industrial-flooring/",
+        description: "Heavy-duty industrial coatings for Vevay manufacturing facilities and high-traffic industrial spaces."
       },
       {
-        name: "Polyaspartic Coating",
-        href: "/services/polyaspartic-coating/",
-        description: "Fast-curing, moisture-resistant polyaspartic coatings ideal for Vevay's Ohio River climate."
+        name: "Decorative Options",
+        href: "/services/decorative-options/",
+        description: "Beautiful decorative concrete finishes including flake, metallic, and textured options for Vevay properties."
+      },
+      {
+        name: "Maintenance & Repair",
+        href: "/services/concrete-repair/",
+        description: "Expert concrete repair and maintenance services to restore and protect your Vevay concrete surfaces."
+      },
+      {
+        name: "Pressure Washing & Protection",
+        href: "/services/pressure-washing-protection/",
+        description: "Professional pressure washing and protective coating services for Vevay concrete surfaces."
       }
     ],
     landmarks: [
@@ -123,7 +133,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Patriot businesses and commercial facilities."
       },
       {
@@ -219,7 +229,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Bennington businesses and facilities."
       }
     ],
@@ -309,7 +319,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Florence businesses and agricultural facilities."
       }
     ],
@@ -399,7 +409,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Mount Sterling businesses and facilities."
       }
     ],
@@ -484,12 +494,12 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Dillsboro businesses, agricultural facilities, and commercial spaces."
       },
       {
         name: "Agricultural Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty coatings for barns, equipment storage, and agricultural facilities in Dillsboro's farming community."
       }
     ],
@@ -567,7 +577,7 @@ export const indianaCities = {
     services: [
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Lawrenceburg businesses, casino facilities, and government buildings."
       },
       {
@@ -577,7 +587,7 @@ export const indianaCities = {
       },
       {
         name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Lawrenceburg manufacturing facilities and high-traffic commercial spaces."
       },
       {
@@ -670,7 +680,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Liberty businesses, county facilities, and commercial spaces."
       },
       {
@@ -766,7 +776,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for West College Corner businesses and facilities."
       },
       {
@@ -861,7 +871,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Brownsville businesses and agricultural facilities."
       }
     ],
@@ -946,12 +956,12 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Dover agricultural facilities and rural commercial spaces."
       },
       {
         name: "Agricultural Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty coatings for barns, equipment storage, and agricultural facilities in Dover's farming community."
       }
     ],
@@ -1029,7 +1039,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Elrod's small rural community properties and intimate neighborhood scale."
       },
       {
@@ -1039,12 +1049,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Elrod's country properties and rural residential settings."
       },
       {
         name: "Agricultural Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for small agricultural buildings and farm facilities in the Elrod area."
       },
       {
@@ -1142,7 +1152,7 @@ export const indianaCities = {
     services: [
       {
         name: "Agricultural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Farmers Retreat's agricultural community properties and farming lifestyle needs."
       },
       {
@@ -1152,17 +1162,17 @@ export const indianaCities = {
       },
       {
         name: "Agricultural Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for barns, equipment storage, and agricultural facilities throughout the Farmers Retreat farming area."
       },
       {
         name: "Farm Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Farmers Retreat's farmsteads and rural agricultural properties."
       },
       {
         name: "Heavy-Duty Farm Flooring",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Industrial-strength coatings for heavy farm equipment, machinery storage, and agricultural work areas."
       },
       {
@@ -1255,7 +1265,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Agricultural Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Guilford's small rural agricultural community properties and farming lifestyle needs."
       },
       {
@@ -1265,12 +1275,12 @@ export const indianaCities = {
       },
       {
         name: "Agricultural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Guilford's farmsteads and rural agricultural properties."
       },
       {
         name: "Farm Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for agricultural buildings, barns, and farm facilities throughout the Guilford area."
       },
       {
@@ -1368,7 +1378,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Hardinsburg's small rural community properties and countryside lifestyle needs."
       },
       {
@@ -1378,12 +1388,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Hardinsburg's country properties and rural residential settings."
       },
       {
         name: "Country Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for rural buildings, workshops, and small facilities throughout the Hardinsburg area."
       },
       {
@@ -1481,7 +1491,7 @@ export const indianaCities = {
     services: [
       {
         name: "Residential CDP Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Hidden Valley's residential Census-Designated Place properties and community lifestyle."
       },
       {
@@ -1496,7 +1506,7 @@ export const indianaCities = {
       },
       {
         name: "Residential Community Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Hidden Valley's established residential community properties."
       },
       {
@@ -1609,7 +1619,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Dunlapsville businesses and facilities."
       }
     ],
@@ -1699,7 +1709,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Philomath businesses and community facilities."
       }
     ],
@@ -1779,7 +1789,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Rising Sun businesses, county facilities, and commercial spaces."
       },
       {
@@ -1789,7 +1799,7 @@ export const indianaCities = {
       },
       {
         name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Rising Sun facilities and high-traffic commercial applications."
       },
       {
@@ -1894,7 +1904,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Aberdeen businesses and agricultural facilities."
       }
     ],
@@ -1984,7 +1994,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Bear Branch businesses and facilities."
       }
     ],
@@ -2074,7 +2084,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Buffalo businesses and agricultural facilities."
       }
     ],
@@ -2164,7 +2174,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Camp Shore recreational facilities and businesses."
       }
     ],
@@ -2254,7 +2264,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Cofield Corner businesses and facilities."
       }
     ],
@@ -2344,7 +2354,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Hartford businesses and community facilities."
       }
     ],
@@ -2434,7 +2444,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Milton businesses and facilities."
       }
     ],
@@ -2524,7 +2534,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for local Moores Hill businesses and community facilities."
       }
     ],
@@ -2603,7 +2613,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Manchester's small rural community properties and countryside lifestyle needs."
       },
       {
@@ -2613,12 +2623,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Manchester's country properties and rural residential settings."
       },
       {
         name: "Country Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for rural buildings, workshops, and small facilities throughout the Manchester area."
       },
       {
@@ -2716,7 +2726,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for New Alsace's small rural community properties and countryside lifestyle needs."
       },
       {
@@ -2726,12 +2736,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for New Alsace's country properties and rural residential settings."
       },
       {
         name: "Country Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for rural buildings, workshops, and small facilities throughout the New Alsace area."
       },
       {
@@ -2829,7 +2839,7 @@ export const indianaCities = {
     services: [
       {
         name: "Residential CDP Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for St. Leon's residential Census-Designated Place properties and community lifestyle."
       },
       {
@@ -2844,7 +2854,7 @@ export const indianaCities = {
       },
       {
         name: "Residential Community Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for St. Leon's established residential community properties."
       },
       {
@@ -2942,7 +2952,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Weisburg's small rural community properties and countryside lifestyle needs."
       },
       {
@@ -2952,12 +2962,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Weisburg's country properties and rural residential settings."
       },
       {
         name: "Country Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for rural buildings, workshops, and small facilities throughout the Weisburg area."
       },
       {
@@ -3070,7 +3080,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for North Landing recreational facilities and businesses."
       }
     ],
@@ -3145,7 +3155,7 @@ export const indianaCities = {
     services: [
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Brookville businesses, county facilities, and commercial spaces."
       },
       {
@@ -3160,7 +3170,7 @@ export const indianaCities = {
       },
       {
         name: "Industrial Concrete Coating",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty industrial coatings for Brookville facilities and high-traffic commercial applications."
       },
       {
@@ -3260,7 +3270,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Cedar Grove businesses and commercial facilities."
       },
       {
@@ -3350,7 +3360,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Laurel businesses and commercial facilities."
       },
       {
@@ -3435,7 +3445,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Metamora businesses, shops, and tourist facilities."
       },
       {
@@ -3528,7 +3538,7 @@ export const indianaCities = {
       },
       {
         name: "Commercial Epoxy Flooring",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional-grade epoxy flooring systems for Oldenburg businesses and community facilities."
       },
       {
@@ -3615,7 +3625,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Residential Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Mount Carmel's rural properties and agricultural settings."
       },
       {
@@ -3625,7 +3635,7 @@ export const indianaCities = {
       },
       {
         name: "Farm Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional concrete coatings for agricultural buildings and farm facilities throughout the Mount Carmel area."
       },
       {
@@ -3728,12 +3738,12 @@ export const indianaCities = {
     services: [
       {
         name: "Industrial Manufacturing Coatings",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Heavy-duty concrete coatings for Batesville's renowned manufacturing facilities and industrial operations."
       },
       {
         name: "Commercial Floor Coating",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional commercial coatings for Batesville businesses, supporting the city's growing commercial sector."
       },
       {
@@ -3743,7 +3753,7 @@ export const indianaCities = {
       },
       {
         name: "Manufacturing Facility Flooring",
-        href: "/services/industrial-concrete-coating/",
+        href: "/services/industrial-flooring/",
         description: "Specialized industrial flooring solutions designed for Batesville's demanding manufacturing environments."
       },
       {
@@ -3753,7 +3763,7 @@ export const indianaCities = {
       },
       {
         name: "Business Facility Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings that enhance Batesville business facilities and support operational efficiency."
       }
     ],
@@ -3841,7 +3851,7 @@ export const indianaCities = {
     services: [
       {
         name: "Riverside Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coatings designed for West Harrison's Ohio River valley properties and unique environmental conditions."
       },
       {
@@ -3856,7 +3866,7 @@ export const indianaCities = {
       },
       {
         name: "Scenic Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom concrete coating solutions that complement West Harrison's natural river valley setting."
       },
       {
@@ -3954,7 +3964,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for New Trenton's rural community properties and lifestyle needs."
       },
       {
@@ -3969,7 +3979,7 @@ export const indianaCities = {
       },
       {
         name: "Country Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for New Trenton's country properties and rural settings."
       },
       {
@@ -4067,7 +4077,7 @@ export const indianaCities = {
     services: [
       {
         name: "Lakeside Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coatings designed for Lake Santee's unique lakeside environment and moisture conditions."
       },
       {
@@ -4077,7 +4087,7 @@ export const indianaCities = {
       },
       {
         name: "Recreational Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions for Lake Santee's recreational properties, vacation homes, and seasonal residences."
       },
       {
@@ -4180,7 +4190,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Historic Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Andersonville's historic rural properties and traditional homesteads."
       },
       {
@@ -4190,12 +4200,12 @@ export const indianaCities = {
       },
       {
         name: "Farm Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional concrete coatings for agricultural buildings and farm facilities throughout the Andersonville area."
       },
       {
         name: "Historic Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that respect Andersonville's historic character while providing modern performance."
       },
       {
@@ -4293,7 +4303,7 @@ export const indianaCities = {
     services: [
       {
         name: "Historic Riverfront Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coatings designed for Aurora's historic Ohio River properties and unique riverside conditions."
       },
       {
@@ -4308,12 +4318,12 @@ export const indianaCities = {
       },
       {
         name: "Historic Downtown Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom concrete coating solutions that respect Aurora's historic downtown character while providing modern performance."
       },
       {
         name: "Riverfront Access Area Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized coatings for river access areas, boat storage, and waterfront property facilities."
       },
       {
@@ -4406,7 +4416,7 @@ export const indianaCities = {
     services: [
       {
         name: "Ohio River Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coatings designed for Bright's Ohio River CDP properties and unique riverside conditions."
       },
       {
@@ -4421,12 +4431,12 @@ export const indianaCities = {
       },
       {
         name: "Residential CDP Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom concrete coating solutions tailored for Bright's residential Census-Designated Place properties."
       },
       {
         name: "Riverfront Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized coatings for river valley properties and areas with unique environmental considerations."
       },
       {
@@ -4519,7 +4529,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Bath's quiet rural community properties and lifestyle needs."
       },
       {
@@ -4529,12 +4539,12 @@ export const indianaCities = {
       },
       {
         name: "Country Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive concrete coating solutions for Bath's country properties and rural settings."
       },
       {
         name: "Agricultural Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional coatings for agricultural buildings and farm facilities throughout the Bath area."
       },
       {
@@ -4632,7 +4642,7 @@ export const indianaCities = {
     services: [
       {
         name: "Scenic Rural Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services that complement Blooming Grove's natural beauty and scenic rural properties."
       },
       {
@@ -4642,12 +4652,12 @@ export const indianaCities = {
       },
       {
         name: "Natural Setting Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions designed to work harmoniously with Blooming Grove's beautiful natural environment."
       },
       {
         name: "Country Home Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional residential coatings for Blooming Grove's country homes and rural property applications."
       },
       {
@@ -4745,7 +4755,7 @@ export const indianaCities = {
     services: [
       {
         name: "Scenic Vista Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Buena Vista's scenic properties with beautiful countryside views."
       },
       {
@@ -4755,12 +4765,12 @@ export const indianaCities = {
       },
       {
         name: "Beautiful View Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that complement Buena Vista's scenic beauty and rural property advantages."
       },
       {
         name: "Rural Homestead Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional residential coatings for Buena Vista's rural homesteads and country properties."
       },
       {
@@ -4858,7 +4868,7 @@ export const indianaCities = {
     services: [
       {
         name: "Agricultural Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Fairfield's agricultural properties and farming operations."
       },
       {
@@ -4868,12 +4878,12 @@ export const indianaCities = {
       },
       {
         name: "Farm Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional concrete coatings for barns, agricultural buildings, and farm facilities throughout Fairfield."
       },
       {
         name: "Rural Agricultural Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive coating solutions designed for Fairfield's working farms and agricultural properties."
       },
       {
@@ -4971,7 +4981,7 @@ export const indianaCities = {
     services: [
       {
         name: "Historic Rural Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Fraziersburg's historic rural properties and traditional homesteads."
       },
       {
@@ -4981,12 +4991,12 @@ export const indianaCities = {
       },
       {
         name: "Traditional Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that honor Fraziersburg's traditional character while delivering contemporary performance."
       },
       {
         name: "Rural Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive coating services designed for Fraziersburg's rural community properties and lifestyle needs."
       },
       {
@@ -5084,7 +5094,7 @@ export const indianaCities = {
     services: [
       {
         name: "Small Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services designed for Hamburg's small community properties and close-knit atmosphere."
       },
       {
@@ -5094,12 +5104,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Residential Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive coating solutions for Hamburg's rural residential properties and country homes."
       },
       {
         name: "Community Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional residential coatings that respect Hamburg's community values and neighborhood character."
       },
       {
@@ -5197,7 +5207,7 @@ export const indianaCities = {
     services: [
       {
         name: "Rural Country Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Logan's rural country properties and peaceful countryside settings."
       },
       {
@@ -5207,12 +5217,12 @@ export const indianaCities = {
       },
       {
         name: "Countryside Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions designed for Logan's countryside properties and rural residential needs."
       },
       {
         name: "Rural Lifestyle Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings that support Logan's rural lifestyle and country living requirements."
       },
       {
@@ -5310,7 +5320,7 @@ export const indianaCities = {
     services: [
       {
         name: "Wooded Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Longwood's wooded properties and natural rural settings."
       },
       {
@@ -5320,12 +5330,12 @@ export const indianaCities = {
       },
       {
         name: "Forest Area Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions designed to work harmoniously with Longwood's wooded and natural settings."
       },
       {
         name: "Nature-Conscious Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings that respect Longwood's natural environment and wooded property characteristics."
       },
       {
@@ -5423,7 +5433,7 @@ export const indianaCities = {
     services: [
       {
         name: "Unique Community Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Mixerville's unique community properties and distinctive rural character."
       },
       {
@@ -5433,12 +5443,12 @@ export const indianaCities = {
       },
       {
         name: "Individual Character Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that respect Mixerville's individual community character and unique property needs."
       },
       {
         name: "Varied Rural Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings for Mixerville's varied rural properties and diverse community requirements."
       },
       {
@@ -5536,7 +5546,7 @@ export const indianaCities = {
     services: [
       {
         name: "Heritage Community Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for New Alsace's heritage properties and culturally significant rural homes."
       },
       {
@@ -5546,12 +5556,12 @@ export const indianaCities = {
       },
       {
         name: "Traditional Character Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that honor New Alsace's traditional character and European heritage influences."
       },
       {
         name: "Historic Rural Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings for New Alsace's historic rural properties and heritage homesteads."
       },
       {
@@ -5649,7 +5659,7 @@ export const indianaCities = {
     services: [
       {
         name: "Peaceful Community Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for New Bath's peaceful community properties and tranquil rural settings."
       },
       {
@@ -5659,12 +5669,12 @@ export const indianaCities = {
       },
       {
         name: "Tranquil Rural Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions designed for New Bath's tranquil rural properties and peaceful settings."
       },
       {
         name: "Rural Residential Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional residential coatings that respect New Bath's quiet community values and rural character."
       },
       {
@@ -5762,7 +5772,7 @@ export const indianaCities = {
     services: [
       {
         name: "Agricultural Heritage Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for New Fairfield's agricultural properties and farming heritage sites."
       },
       {
@@ -5772,12 +5782,12 @@ export const indianaCities = {
       },
       {
         name: "Agricultural Building Coatings",
-        href: "/services/commercial-epoxy-flooring/",
+        href: "/services/commercial/",
         description: "Professional concrete coatings for barns, agricultural buildings, and farm facilities throughout New Fairfield."
       },
       {
         name: "Farming Community Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Comprehensive coating solutions designed for New Fairfield's farming community and agricultural properties."
       },
       {
@@ -5875,7 +5885,7 @@ export const indianaCities = {
     services: [
       {
         name: "Strategic Location Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for New Point's strategically located rural properties and country settings."
       },
       {
@@ -5885,12 +5895,12 @@ export const indianaCities = {
       },
       {
         name: "Rural Position Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions designed for New Point's well-positioned rural properties and countryside locations."
       },
       {
         name: "Community Connection Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings that support New Point's community connections and rural residential needs."
       },
       {
@@ -5988,7 +5998,7 @@ export const indianaCities = {
     services: [
       {
         name: "Distinctive Community Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Peppertown's uniquely characterized properties and distinctive rural community."
       },
       {
@@ -5998,12 +6008,12 @@ export const indianaCities = {
       },
       {
         name: "Individual Personality Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that respect Peppertown's individual community personality and distinctive rural character."
       },
       {
         name: "Colorful Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings for Peppertown's colorful community properties and uniquely characterized rural homes."
       },
       {
@@ -6101,7 +6111,7 @@ export const indianaCities = {
     services: [
       {
         name: "Family Heritage Property Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Specialized concrete coating services for Pierceville's family heritage properties and generational homesteads."
       },
       {
@@ -6111,12 +6121,12 @@ export const indianaCities = {
       },
       {
         name: "Generational Property Services",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Custom coating solutions that honor Pierceville's generational properties and family heritage values."
       },
       {
         name: "Established Community Coatings",
-        href: "/services/residential-concrete-coating/",
+        href: "/services/residential/",
         description: "Professional coatings for Pierceville's established community properties and traditional rural homes."
       },
       {

@@ -19,34 +19,34 @@ export const kentuckyCities = {
       },
       services: [
         {
-          name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
-          description: "Professional-grade epoxy flooring systems for Covington businesses and commercial facilities."
+          name: "Residential",
+          href: "/services/residential/",
+          description: "Professional residential concrete coatings for garages, basements, kitchens and home spaces throughout Covington."
         },
         {
-          name: "Garage Floor Coating", 
-          href: "/services/garage-floor-epoxy/",
-          description: "Transform your Covington garage with durable, slip-resistant epoxy coatings that withstand Kentucky winters."
+          name: "Commercial",
+          href: "/services/commercial/",
+          description: "Durable commercial flooring solutions for retail spaces, offices, and warehouses in Covington."
         },
         {
-          name: "Polyaspartic Coating",
-          href: "/services/polyaspartic-coating/", 
-          description: "Fast-curing polyaspartic coatings perfect for Covington's climate and quick project completion."
+          name: "Industrial",
+          href: "/services/industrial-flooring/",
+          description: "Heavy-duty industrial coatings for Covington manufacturing facilities and high-traffic industrial spaces."
         },
         {
-          name: "Metallic Epoxy Flooring",
-          href: "/services/metallic-epoxy-flooring/",
-          description: "Stunning metallic epoxy floors that create unique, artistic surfaces for Covington homes and businesses."
+          name: "Decorative Options",
+          href: "/services/decorative-options/",
+          description: "Beautiful decorative concrete finishes including flake, metallic, and textured options for Covington properties."
         },
         {
-          name: "Basement Floor Coating",
-          href: "/services/basement-floor-coating/",
-          description: "Moisture-resistant basement floor coatings for Covington homes, especially important in river-adjacent areas."
+          name: "Maintenance & Repair",
+          href: "/services/concrete-repair/",
+          description: "Expert concrete repair and maintenance services to restore and protect your Covington concrete surfaces."
         },
         {
-          name: "Industrial Concrete Coating", 
-          href: "/services/industrial-concrete-coating/",
-          description: "Heavy-duty industrial coatings for Covington manufacturing and high-traffic commercial spaces."
+          name: "Pressure Washing & Protection",
+          href: "/services/pressure-washing-protection/",
+          description: "Professional pressure washing and protective coating services for Covington concrete surfaces."
         }
       ],
       landmarks: [
@@ -132,7 +132,7 @@ export const kentuckyCities = {
       services: [
         {
           name: "Retail Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Florence retail spaces, shopping centers, and commercial facilities."
         },
         {
@@ -152,7 +152,7 @@ export const kentuckyCities = {
         },
         {
           name: "Shopping Center Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized flooring solutions for Florence's busy retail and shopping environments."
         },
         {
@@ -249,7 +249,7 @@ export const kentuckyCities = {
         },
         {
           name: "Riverfront Commercial Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade commercial flooring for Newport's entertainment and business districts."
         },
         {
@@ -259,7 +259,7 @@ export const kentuckyCities = {
         },
         {
           name: "Entertainment Venue Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Durable, attractive flooring solutions for Newport's restaurants, bars, and entertainment facilities."
         },
         {
@@ -492,7 +492,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for Butler area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -502,7 +502,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Butler's small businesses and community facilities."
         }
       ],
@@ -583,7 +583,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for DeMossville area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -593,7 +593,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for DeMossville's rural businesses and community facilities."
         }
       ],
@@ -772,7 +772,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Bromley businesses and commercial facilities."
         },
         {
@@ -948,7 +948,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Crestview Hills businesses and educational facilities."
         },
         {
@@ -1039,7 +1039,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Edgewood businesses, retail spaces, and commercial facilities."
         },
         {
@@ -1135,7 +1135,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Elsmere businesses and commercial facilities."
         },
         {
@@ -1216,7 +1216,7 @@ export const kentuckyCities = {
       services: [
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Erlanger businesses, warehouses, and commercial facilities."
         },
         {
@@ -1226,7 +1226,7 @@ export const kentuckyCities = {
         },
         {
           name: "Industrial Concrete Coating",
-          href: "/services/industrial-concrete-coating/",
+          href: "/services/industrial-flooring/",
           description: "Heavy-duty industrial coatings for Erlanger manufacturing facilities and high-traffic commercial spaces."
         },
         {
@@ -1319,7 +1319,7 @@ export const kentuckyCities = {
       services: [
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Falmouth government buildings, businesses, and commercial facilities."
         },
         {
@@ -1334,7 +1334,7 @@ export const kentuckyCities = {
         },
         {
           name: "Industrial Concrete Coating",
-          href: "/services/industrial-concrete-coating/",
+          href: "/services/industrial-flooring/",
           description: "Heavy-duty industrial coatings for Falmouth facilities and high-traffic government buildings."
         },
         {
@@ -1428,7 +1428,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for Goforth area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -1519,7 +1519,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for Lenoxburg area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -1529,7 +1529,7 @@ export const kentuckyCities = {
         },
         {
           name: "Rural Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for Lenoxburg's rural properties, outbuildings, and farm facilities."
         }
       ],
@@ -1610,7 +1610,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for McKinneysburg area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -1620,7 +1620,7 @@ export const kentuckyCities = {
         },
         {
           name: "Farm Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for McKinneysburg's agricultural buildings and rural facilities."
         }
       ],
@@ -1701,7 +1701,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy systems for Maysville's government buildings, tourism facilities, and downtown businesses."
         },
         {
@@ -1711,7 +1711,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions that preserve the integrity of Maysville's historic downtown buildings and riverfront structures."
         }
       ],
@@ -1794,7 +1794,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional commercial flooring solutions for Union businesses and facilities."
         },
         {
@@ -1882,7 +1882,7 @@ export const kentuckyCities = {
       services: [
         {
           name: "Government Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Government facility concrete coating and restoration"
         },
         {
@@ -1892,17 +1892,17 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for Burlington business district"
         },
         {
           name: "County Building Maintenance",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "County building maintenance and facility coatings"
         },
         {
           name: "Courthouse Floor Services",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Courthouse and administrative building floor services"
         },
         {
@@ -1990,17 +1990,17 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Agricultural building and barn floor coatings"
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for Verona businesses"
         },
         {
           name: "Farm Equipment Area Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Farm equipment and machinery area coatings"
         },
         {
@@ -2010,7 +2010,7 @@ export const kentuckyCities = {
         },
         {
           name: "Industrial Agricultural Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Industrial-grade coatings for agricultural facilities"
         }
       ],
@@ -2093,7 +2093,7 @@ export const kentuckyCities = {
         },
         {
           name: "Riverfront Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Riverfront facility and marina floor coatings"
         },
         {
@@ -2103,7 +2103,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for local businesses and facilities"
         },
         {
@@ -2191,12 +2191,12 @@ export const kentuckyCities = {
       services: [
         {
           name: "Airport Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Airport facility and aviation-related concrete coatings"
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for Hebron business corridors"
         },
         {
@@ -2206,17 +2206,17 @@ export const kentuckyCities = {
         },
         {
           name: "Industrial Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Industrial facility coatings for airport area businesses"
         },
         {
           name: "Transportation Facility Restoration",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Transportation facility concrete restoration and protection"
         },
         {
           name: "Heavy-Duty Commercial Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for high-traffic commercial areas"
         }
       ],
@@ -2304,7 +2304,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for local Belleview businesses"
         },
         {
@@ -2319,7 +2319,7 @@ export const kentuckyCities = {
         },
         {
           name: "Facility Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Property maintenance facility coatings"
         }
       ],
@@ -2407,7 +2407,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for local Richwood businesses and community facilities."
         },
         {
@@ -2495,7 +2495,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Historic area visitor facility and agricultural building coatings."
         },
         {
@@ -2588,7 +2588,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Country property outbuilding and barn coatings for agricultural facilities."
         },
         {
@@ -2681,7 +2681,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Agricultural facility and barn floor concrete coatings for farm operations."
         },
         {
@@ -2773,7 +2773,7 @@ export const kentuckyCities = {
         },
         {
           name: "Outbuilding Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Country property outbuilding and storage facility coatings"
         },
         {
@@ -2793,7 +2793,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Small agricultural building and equipment storage coatings"
         },
         {
@@ -2886,7 +2886,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Community facility and neighborhood building coatings."
         },
         {
@@ -2972,7 +2972,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Country property outbuilding and agricultural facility coatings."
         },
         {
@@ -3063,7 +3063,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3154,7 +3154,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring for local Alexandria businesses"
         },
         {
@@ -3164,7 +3164,7 @@ export const kentuckyCities = {
         },
         {
           name: "Municipal Building Coatings",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Community facility and municipal building coatings"
         },
         {
@@ -3262,7 +3262,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3353,7 +3353,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3444,7 +3444,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3535,7 +3535,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3626,7 +3626,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3717,7 +3717,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3808,7 +3808,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring", 
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Commercial flooring solutions for businesses and facilities."
         },
         {
@@ -3899,7 +3899,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for Morgan area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -3990,7 +3990,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty epoxy coatings for Peach Grove area barns, workshops, and agricultural buildings that stand up to farm equipment and livestock."
         },
         {
@@ -4000,7 +4000,7 @@ export const kentuckyCities = {
         },
         {
           name: "Rural Facility Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for Peach Grove's rural facilities and agricultural buildings."
         }
       ],
@@ -4091,7 +4091,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for local Fairview businesses."
         }
       ],
@@ -4176,7 +4176,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Fort Mitchell businesses and commercial facilities."
         },
         {
@@ -4272,7 +4272,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Fort Wright businesses and commercial facilities."
         }
       ],
@@ -4353,7 +4353,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Independence businesses, government facilities, and commercial spaces."
         },
         {
@@ -4363,7 +4363,7 @@ export const kentuckyCities = {
         },
         {
           name: "Industrial Concrete Coating",
-          href: "/services/industrial-concrete-coating/",
+          href: "/services/industrial-flooring/",
           description: "Heavy-duty industrial coatings for Independence facilities and high-traffic commercial applications."
         }
       ],
@@ -4449,7 +4449,7 @@ export const kentuckyCities = {
         },
         {
           name: "Residential Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade residential epoxy flooring systems for Johnsons Fork homes and rural properties."
         },
         {
@@ -4545,7 +4545,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for local Kenton Vale businesses."
         }
       ],
@@ -4630,7 +4630,7 @@ export const kentuckyCities = {
         },
         {
           name: "Residential Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade residential epoxy flooring systems for Kentontown homes and rural properties."
         },
         {
@@ -4812,7 +4812,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Ludlow businesses and commercial facilities."
         },
         {
@@ -4898,7 +4898,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Mount Olivet government buildings, businesses, and public facilities."
         },
         {
@@ -4994,7 +4994,7 @@ export const kentuckyCities = {
         },
         {
           name: "Residential Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade residential epoxy flooring systems for Piqua homes and rural properties."
         },
         {
@@ -5090,7 +5090,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Park Hills businesses and commercial facilities."
         }
       ],
@@ -5181,7 +5181,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for local Ryland Heights businesses."
         }
       ],
@@ -5266,7 +5266,7 @@ export const kentuckyCities = {
         },
         {
           name: "Residential Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade residential epoxy flooring systems for Sardis homes and rural properties."
         },
         {
@@ -5450,7 +5450,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Taylor Mill businesses and commercial facilities."
         },
         {
@@ -5546,7 +5546,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Villa Hills businesses and upscale commercial facilities."
         }
       ],
@@ -5627,7 +5627,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Epoxy Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy flooring systems for Walton businesses and commercial facilities."
         },
         {
@@ -5718,7 +5718,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Washington's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -5809,7 +5809,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Mayslick's historic buildings and traditional structures."
         },
         {
@@ -5819,7 +5819,7 @@ export const kentuckyCities = {
         },
         {
           name: "Community Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Mayslick's community buildings and local facilities."
         }
       ],
@@ -5900,7 +5900,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Orangeburg's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -5991,7 +5991,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Minerva's historic buildings and traditional rural structures."
         },
         {
@@ -6082,7 +6082,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Rectorville's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -6173,7 +6173,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Helena's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -6264,7 +6264,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Shannon's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -6355,7 +6355,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Plumville's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -6446,7 +6446,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Murphysville's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -6537,7 +6537,7 @@ export const kentuckyCities = {
         },
         {
           name: "Heritage Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Germantown's historic buildings and traditional German heritage structures."
         },
         {
@@ -6628,7 +6628,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy systems for Williamstown's government buildings, businesses, and county facilities."
         },
         {
@@ -6638,7 +6638,7 @@ export const kentuckyCities = {
         },
         {
           name: "Government Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for Williamstown's courthouse, municipal buildings, and county facilities."
         }
       ],
@@ -6721,7 +6721,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy systems for Dry Ridge businesses, retail spaces, and commercial facilities."
         },
         {
@@ -6814,7 +6814,7 @@ export const kentuckyCities = {
         },
         {
           name: "Community Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Crittenden's community buildings and local facilities."
         },
         {
@@ -6824,7 +6824,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Crittenden's historic buildings and traditional structures."
         }
       ],
@@ -6907,7 +6907,7 @@ export const kentuckyCities = {
         },
         {
           name: "Community Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Corinth's community buildings and local facilities."
         },
         {
@@ -7000,7 +7000,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Jonesville's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -7093,7 +7093,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Sherman's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -7186,7 +7186,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Mason's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -7279,7 +7279,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Elliston's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -7372,7 +7372,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy systems for Warsaw's government buildings, businesses, and county facilities."
         },
         {
@@ -7382,7 +7382,7 @@ export const kentuckyCities = {
         },
         {
           name: "Government Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for Warsaw's courthouse, municipal buildings, and county facilities."
         }
       ],
@@ -7465,7 +7465,7 @@ export const kentuckyCities = {
         },
         {
           name: "Community Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Glencoe's community buildings and local facilities."
         },
         {
@@ -7475,7 +7475,7 @@ export const kentuckyCities = {
         },
         {
           name: "Small Business Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Glencoe's small businesses and local commercial properties."
         }
       ],
@@ -7558,7 +7558,7 @@ export const kentuckyCities = {
         },
         {
           name: "Community Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Sparta's community buildings and local facilities."
         },
         {
@@ -7651,7 +7651,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Napoleon's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -7744,7 +7744,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Sugar Creek's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -7837,7 +7837,7 @@ export const kentuckyCities = {
         },
         {
           name: "Riverfront Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Port William's riverfront properties and buildings near the Ohio River."
         },
         {
@@ -7847,7 +7847,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Port William's historic buildings and traditional river structures."
         }
       ],
@@ -7930,7 +7930,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for McDaniels' agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -8023,7 +8023,7 @@ export const kentuckyCities = {
         },
         {
           name: "Commercial Flooring",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional-grade epoxy systems for Brooksville's government buildings, businesses, and county facilities."
         },
         {
@@ -8033,7 +8033,7 @@ export const kentuckyCities = {
         },
         {
           name: "Government Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized concrete coating solutions for Brooksville's courthouse, municipal buildings, and county facilities."
         }
       ],
@@ -8116,7 +8116,7 @@ export const kentuckyCities = {
         },
         {
           name: "Riverfront Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Augusta's riverfront properties and buildings near the Ohio River."
         },
         {
@@ -8126,7 +8126,7 @@ export const kentuckyCities = {
         },
         {
           name: "Historic Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Professional concrete coating solutions for Augusta's historic buildings and traditional river structures."
         }
       ],
@@ -8209,7 +8209,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Foster's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -8302,7 +8302,7 @@ export const kentuckyCities = {
         },
         {
           name: "Heritage Property Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Specialized coatings for Germantown's historic buildings and traditional German heritage structures."
         },
         {
@@ -8395,7 +8395,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Milford's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -8488,7 +8488,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Powersville's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -8581,7 +8581,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Sharon's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -8674,7 +8674,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Bladeston's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -8767,7 +8767,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Willow's farm buildings, equipment storage, and agricultural structures."
         },
         {
@@ -8860,7 +8860,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Berlin's agricultural buildings, equipment storage, and farm structures."
         },
         {
@@ -8953,7 +8953,7 @@ export const kentuckyCities = {
         },
         {
           name: "Agricultural Building Coating",
-          href: "/services/commercial-epoxy-flooring/",
+          href: "/services/commercial/",
           description: "Heavy-duty coatings for Johnsville's farm buildings, equipment storage, and agricultural structures."
         },
         {

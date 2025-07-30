@@ -748,7 +748,7 @@ export const residentialServices = {
       headline: 'Professional Basement Floor Coatings',
       subheadline: 'Turn your dark, damp basement into a bright, welcoming space where your family will love spending time. Create the perfect entertainment area, home office, or workshop with moisture-resistant floor coatings.',
       image: {
-        src: '/assets/images/services/basement-flooring.webp',
+        src: '/assets/images/services/basement-coating-hero.webp',
         alt: 'Beautiful transformed basement with professional floor coating'
       },
       ctas: [

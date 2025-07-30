@@ -1,8 +1,8 @@
 ---
 import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
-import { specialtyServices } from '../../data/premiumServiceData.js';
+import { commercialServices } from '../../data/premiumServiceData.js';
 
-const pageData = specialtyServices.pressureWashingProtection;
+const pageData = commercialServices.officeFlooring;
 ---
 
 <PremiumServiceTemplate 
@@ -12,5 +12,6 @@ const pageData = specialtyServices.pressureWashingProtection;
   differentiators={pageData.differentiators}
   process={pageData.process}
   collections={pageData.collections}
+  portfolio={pageData.portfolio}
   contact={pageData.contact}
 />

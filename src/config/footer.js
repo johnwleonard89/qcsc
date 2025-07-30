@@ -11,7 +11,7 @@ export const footerSocials = [
   },
   {
     name: 'Google Business',
-    url: 'https://www.google.com/maps/place/Queen+City+Surface+Coatings',
+    url: 'https://maps.app.goo.gl/jBKcDz74uX1qJrhK8',
     icon: "mdi:google",
   },
 ]
@@ -21,24 +21,28 @@ export const footerLists = [
 		title: 'Services',
 		items: [
 			{
-				title: 'Epoxy Flooring',
-				slug: '/services/metallic-epoxy-flooring',
+				title: 'Residential',
+				slug: '/services/residential',
 			},
 			{
-				title: 'Concrete Polishing',
-				slug: '/services/polyaspartic-coating',
+				title: 'Commercial',
+				slug: '/services/commercial',
 			},
 			{
-				title: 'Surface Restoration',
-				slug: '/services/basement-floor-coating',
+				title: 'Industrial',
+				slug: '/services/industrial-flooring',
 			},
 			{
-				title: 'Garage Floor Epoxy',
-				slug: '/services/garage-floor-epoxy',
+				title: 'Decorative Options',
+				slug: '/services/decorative-options',
 			},
 			{
-				title: 'Commercial Concrete',
-				slug: '/services/commercial-concrete-coating',
+				title: 'Maintenance & Repair',
+				slug: '/services/concrete-repair',
+			},
+			{
+				title: 'Pressure Washing',
+				slug: '/services/pressure-washing-protection',
 			},
 		],
 	},
@@ -85,10 +89,6 @@ export const footerLists = [
 			{
 				title: 'Request Quote',
 				slug: '/company/contact',
-			},
-			{
-				title: 'Resources',
-				slug: '/resources',
 			},
 		],
 	},

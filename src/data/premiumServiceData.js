@@ -1,5 +1,193 @@
 // Comprehensive service data for PremiumServiceTemplate
 
+export const specialtyServices = {
+  pressureWashingProtection: {
+    seo: {
+      title: 'Pressure Washing & Protection | Concrete Cleaning Services | Queen City Surface Coatings',
+      description: 'Professional pressure washing and protective coating services for concrete surfaces in Cincinnati and Northern Kentucky. Deep cleaning and long-term protection solutions.',
+      keywords: 'pressure washing, concrete cleaning, protective coatings, surface protection, concrete maintenance, power washing Cincinnati'
+    },
+    hero: {
+      tagline: 'Clean & Protect',
+      headline: 'Pressure Washing & Protection',
+      subheadline: 'Professional pressure washing and protective coating services that restore and maintain concrete surfaces. From deep cleaning to long-term protection, we keep your concrete looking its best while extending its lifespan.',
+      image: {
+        src: '/assets/images/services/pressure-washing.webp',
+        alt: 'Professional pressure washing and concrete protection services - Queen City Surface Coatings'
+      },
+      ctas: [
+        { text: 'Get Cleaning Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Before & After', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Complete Concrete Care Solutions',
+      content: [
+        'Our pressure washing and protection services provide comprehensive care for concrete surfaces, combining powerful cleaning techniques with advanced protective coatings. We remove years of accumulated dirt, stains, and contaminants while applying protective systems that prevent future damage.',
+        'From routine maintenance cleaning to deep restoration and protection, our services help extend concrete life, improve appearance, and reduce long-term maintenance costs for both residential and commercial properties.'
+      ]
+    },
+    differentiators: {
+      title: 'Professional Cleaning & Protection Advantages',
+      subtitle: 'Our comprehensive approach delivers superior cleaning results and long-term protection:',
+      features: [
+        {
+          title: 'Advanced Pressure Washing Systems',
+          description: 'Commercial-grade equipment and techniques that remove deep-set stains, oil, grease, and biological growth without damaging surfaces'
+        },
+        {
+          title: 'Surface-Specific Cleaning Methods',
+          description: 'Customized pressure and temperature settings based on concrete type, condition, and contamination for optimal results'
+        },
+        {
+          title: 'Protective Coating Application',
+          description: 'Professional-grade sealers and protective coatings that prevent staining, weathering, and deterioration'
+        },
+        {
+          title: 'Environmentally Responsible Practices',
+          description: 'Eco-friendly cleaning solutions and proper wastewater management that protect the environment while delivering results'
+        },
+        {
+          title: 'Preventive Maintenance Programs',
+          description: 'Scheduled cleaning and resealing services that maintain concrete appearance and extend surface life'
+        }
+      ]
+    },
+    process: {
+      title: 'Professional Cleaning & Protection Process',
+      subtitle: 'Systematic approach ensuring thorough cleaning and effective protection:',
+      steps: [
+        {
+          number: 1,
+          title: 'Surface Assessment',
+          items: [
+            'Comprehensive condition evaluation and documentation',
+            'Stain and contamination type identification',
+            'Surface porosity and absorption testing',
+            'Treatment specification development'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Pre-Treatment',
+          items: [
+            'Specialized stain removal and degreasing',
+            'Biological growth treatment and removal',
+            'Surface preparation and masking',
+            'Environmental protection setup'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Pressure Washing',
+          items: [
+            'Professional-grade pressure washing equipment',
+            'Surface-appropriate pressure and temperature settings',
+            'Systematic cleaning pattern application',
+            'Quality control and spot treatment'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Surface Preparation',
+          items: [
+            'Complete drying and surface inspection',
+            'Final contamination removal and cleaning',
+            'Surface profile verification',
+            'Environmental condition monitoring'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Protection Application',
+          items: [
+            'Professional sealer and coating application',
+            'Uniform coverage and penetration verification',
+            'Proper curing and drying management',
+            'Final inspection and maintenance guidance'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Cleaning & Protection Services',
+      subtitle: 'Comprehensive concrete care solutions for all applications:',
+      items: [
+        {
+          title: 'Residential Cleaning',
+          description: 'Homeowner-focused cleaning for driveways, patios, and walkways',
+          features: [
+            'Driveway oil stain removal',
+            'Patio and walkway restoration',
+            'Deck and pool area cleaning',
+            'Exterior surface maintenance'
+          ],
+          href: '/services/residential'
+        },
+        {
+          title: 'Commercial Property Cleaning',
+          description: 'Professional cleaning for business and commercial facilities',
+          features: [
+            'Parking lot and sidewalk cleaning',
+            'Building exterior restoration',
+            'High-traffic area maintenance',
+            'Scheduled maintenance programs'
+          ],
+          href: '/services/commercial'
+        },
+        {
+          title: 'Industrial Facility Cleaning',
+          description: 'Heavy-duty cleaning for manufacturing and industrial sites',
+          features: [
+            'Oil and chemical contamination removal',
+            'Heavy equipment area cleaning',
+            'Loading dock and warehouse floors',
+            'Environmental compliance cleaning'
+          ],
+          href: '/services/commercial'
+        },
+        {
+          title: 'Protective Sealing',
+          description: 'Professional sealing systems for long-term protection',
+          features: [
+            'Penetrating sealers for deep protection',
+            'Surface sealers for stain resistance',
+            'Anti-slip additives for safety',
+            'UV-resistant formulations'
+          ],
+          href: '/services/commercial'
+        },
+        {
+          title: 'Stain Removal',
+          description: 'Specialized stain removal for challenging contamination',
+          features: [
+            'Oil and grease stain removal',
+            'Rust and oxidation treatment',
+            'Paint and coating removal',
+            'Biological growth elimination'
+          ],
+          href: '/services/commercial'
+        },
+        {
+          title: 'Maintenance Programs',
+          description: 'Ongoing maintenance to preserve concrete appearance and performance',
+          features: [
+            'Scheduled cleaning and inspection',
+            'Preventive stain treatment',
+            'Sealer renewal and reapplication',
+            'Performance monitoring and documentation'
+          ],
+          href: '/services/commercial'
+        }
+      ]
+    },
+    contact: {
+      title: 'Ready to Clean & Protect?',
+      description: 'Schedule your pressure washing and protection consultation today and discover how professional cleaning and protective coatings can restore and preserve your concrete surfaces.'
+    }
+  }
+};
+
 export const decorativeConcreteServices = {
   decorativeConcreteCoatings: {
     seo: {
@@ -369,108 +557,108 @@ export const decorativeConcreteServices = {
 export const residentialServices = {
   garageFloorEpoxy: {
     seo: {
-      title: 'Garage Floor Epoxy Coating | Durable Garage Flooring | Queen City Surface Coatings',
-      description: 'Transform your garage with professional epoxy floor coating. Durable, easy-to-clean garage flooring that resists stains, chemicals, and wear.',
-      keywords: 'garage floor epoxy, garage flooring, epoxy coating, garage floor coating, residential epoxy, durable garage floors Cincinnati'
+      title: 'Garage Floor Coating | Transform Your Garage | Queen City Surface Coatings',
+      description: 'Transform your garage into a showroom-quality space with professional floor coatings. Durable, beautiful garage flooring solutions that enhance your home\'s value.',
+      keywords: 'garage floor coating, garage transformation, garage flooring, professional garage floors, garage renovation, garage makeover Cincinnati'
     },
     hero: {
-      tagline: 'Professional Garage Floor Solutions',
-      headline: 'Garage Floor Epoxy Coating',
-      subheadline: 'Transform your garage into a clean, professional space with durable epoxy flooring that resists stains, chemicals, and everyday wear while adding value to your home.',
+      tagline: 'Transform Your Garage Into Your Dream Space',
+      headline: 'Professional Garage Floor Coatings',
+      subheadline: 'Turn your garage from an eyesore into the envy of the neighborhood. Create a showroom-quality space where you\'ll love spending time working on projects, displaying your vehicles, or entertaining friends.',
       image: {
         src: '/assets/images/new-projects/garage_poly.webp',
-        alt: 'Professional garage floor epoxy coating installation'
+        alt: 'Beautiful transformed garage with professional floor coating'
       },
       ctas: [
-        { text: 'Get Free Estimate', href: '/company/contact', type: 'primary' },
-        { text: 'View Garage Gallery', href: '/portfolio', type: 'outline' }
+        { text: 'Start My Transformation', href: '/company/contact', type: 'primary' },
+        { text: 'See Amazing Results', href: '/portfolio', type: 'outline' }
       ]
     },
     intro: {
-      title: 'Professional Garage Floor Transformation',
+      title: 'From Embarrassing Eyesore to Neighborhood Envy',
       content: [
-        'Your garage floor takes a beating from hot tires, oil spills, road salt, and heavy equipment. Standard concrete simply cannot handle these challenges without showing wear, stains, and deterioration over time.',
-        'Our professional garage floor epoxy systems create a durable, attractive surface that not only protects your concrete investment but transforms your garage into a clean, functional space you\'ll be proud to show off. From basic solid colors to decorative flake systems, we have the perfect solution for your garage.'
+        'Imagine walking into your garage and feeling proud instead of embarrassed. Picture a space so clean and beautiful that your neighbors stop to ask about it. Envision working on projects in a bright, professional environment that rivals any showroom.',
+        'Your garage has incredible potential - it just needs the right transformation. Whether you dream of a sleek workshop, a stunning car showcase, or a versatile family space, our professional floor coating systems turn that vision into reality while protecting your investment for decades to come.'
       ]
     },
     differentiators: {
-      title: 'Why Choose Professional Garage Floor Epoxy',
-      subtitle: 'DIY garage floor kits cannot match the performance and appearance of professional systems:',
+      title: 'Why Your Garage Deserves Professional Treatment',
+      subtitle: 'Your garage transformation is too important to leave to chance - here\'s why professional installation makes all the difference:',
       features: [
         {
-          title: 'Superior Adhesion',
-          description: 'Professional surface preparation and 100% solids epoxy ensure permanent bond to concrete'
+          title: 'Showroom-Quality Results',
+          description: 'Professional techniques and premium materials create the stunning, flawless finish you envision'
         },
         {
-          title: 'Chemical Resistance',
-          description: 'Resists oil, gasoline, brake fluid, road salt, and household chemicals without staining'
+          title: 'Built to Last Decades',
+          description: 'Superior preparation and application methods ensure your beautiful new floor stands the test of time'
         },
         {
-          title: 'Impact Durability',
-          description: 'Withstands dropped tools, heavy equipment, and vehicle traffic without chipping or cracking'
+          title: 'Effortless Maintenance',
+          description: 'Spend your time enjoying your space, not maintaining it - simple cleaning keeps it looking perfect'
         },
         {
-          title: 'Easy Maintenance',
-          description: 'Non-porous surface cleans easily with simple soap and water, no sealing required'
+          title: 'Multiple Coating Options',
+          description: 'Choose from epoxy, polyaspartic, or hybrid systems to match your specific needs and aesthetic vision'
         },
         {
-          title: 'Long-Term Value',
-          description: 'Professional installation with warranty protection and performance that lasts decades'
+          title: 'Investment Protection',
+          description: 'Professional warranty and proven performance protect both your garage transformation and property value'
         }
       ]
     },
     process: {
-      title: 'Professional Installation Process',
-      subtitle: 'Our systematic approach ensures your garage floor coating performs for years to come:',
+      title: 'Your Garage Transformation Journey',
+      subtitle: 'From initial vision to stunning reality - here\'s how we bring your dream garage to life:',
       steps: [
         {
           number: 1,
-          title: 'Surface Assessment',
+          title: 'Dream Discovery',
           items: [
-            'Concrete condition evaluation',
-            'Moisture testing and analysis',
-            'Contamination identification',
-            'Repair needs assessment'
+            'Vision consultation and goal setting',
+            'Design options and inspiration review',
+            'Coating system recommendations',
+            'Detailed transformation plan creation'
           ]
         },
         {
           number: 2,
-          title: 'Preparation Work',
+          title: 'Foundation Excellence',
           items: [
-            'Professional diamond grinding',
-            'Oil stain removal treatment',
-            'Crack repair and patching',
-            'Thorough cleaning and degreasing'
+            'Professional surface preparation',
+            'Problem identification and repair',
+            'Optimal adhesion preparation',
+            'Quality foundation establishment'
           ]
         },
         {
           number: 3,
-          title: 'Primer Application',
+          title: 'System Selection',
           items: [
-            '100% solids epoxy primer',
-            'Enhanced penetration and adhesion',
-            'Moisture vapor barrier properties',
-            'Proper cure time management'
+            'Custom coating system application',
+            'Decorative elements integration',
+            'Color and finish perfection',
+            'Real-time quality assurance'
           ]
         },
         {
           number: 4,
-          title: 'Coating Installation',
+          title: 'Protection Layer',
           items: [
-            'Premium epoxy base coat',
-            'Decorative flake broadcast (optional)',
-            'Even coverage and thickness',
-            'Quality control throughout process'
+            'Durable topcoat application',
+            'Enhanced protection integration',
+            'Long-term performance optimization',
+            'Beauty and durability balance'
           ]
         },
         {
           number: 5,
-          title: 'Protective Topcoat',
+          title: 'Dream Realized',
           items: [
-            'Clear protective topcoat application',
-            'UV protection and gloss enhancement',
-            'Anti-slip additives as needed',
-            'Final inspection and cleanup'
+            'Final transformation reveal',
+            'Care and maintenance guidance',
+            'Warranty protection activation',
+            'Your new favorite space delivery'
           ]
         }
       ]
@@ -549,185 +737,1643 @@ export const residentialServices = {
     }
   },
 
-  polyasparticCoating: {
+  basementFloorCoating: {
     seo: {
-      title: 'Polyaspartic Coating | Fast-Curing Floor Coating | Queen City Surface Coatings',
-      description: 'Professional polyaspartic floor coating with same-day installation. UV-stable, fast-curing coating system for residential and commercial applications.',
-      keywords: 'polyaspartic coating, fast-curing floor coating, UV stable coating, same day flooring, polyaspartic floor system Cincinnati'
+      title: 'Basement Floor Coating | Transform Your Basement | Queen City Surface Coatings',
+      description: 'Transform your basement into a beautiful, moisture-resistant living space with professional floor coatings. Durable basement flooring solutions that enhance your home\'s value.',
+      keywords: 'basement floor coating, basement transformation, basement flooring, moisture resistant flooring, basement renovation, basement makeover Cincinnati'
     },
     hero: {
-      tagline: 'Fast-Curing Floor Coating Technology',
-      headline: 'Polyaspartic Coating Systems',
-      subheadline: 'Get back to business fast with our rapid-cure polyaspartic coatings that provide superior durability, UV stability, and same-day installation.',
+      tagline: 'Transform Your Basement Into Your Dream Space',
+      headline: 'Professional Basement Floor Coatings',
+      subheadline: 'Turn your dark, damp basement into a bright, welcoming space where your family will love spending time. Create the perfect entertainment area, home office, or workshop with moisture-resistant floor coatings.',
       image: {
-        src: '/assets/images/new-projects/garage_poly.webp',
-        alt: 'Professional polyaspartic coating application'
+        src: '/assets/images/services/basement-flooring.webp',
+        alt: 'Beautiful transformed basement with professional floor coating'
       },
       ctas: [
-        { text: 'Schedule Installation', href: '/company/contact', type: 'primary' },
-        { text: 'Learn About Benefits', href: '/resources', type: 'outline' }
+        { text: 'Start My Transformation', href: '/company/contact', type: 'primary' },
+        { text: 'See Amazing Results', href: '/portfolio', type: 'outline' }
       ]
     },
     intro: {
-      title: 'The Future of Floor Coating Technology',
+      title: 'From Forgotten Storage to Family Favorite',
       content: [
-        'Polyaspartic coatings represent the latest advancement in floor coating technology, offering the durability of traditional epoxy with the added benefits of rapid cure times and superior UV stability.',
-        'Developed for demanding industrial applications, polyaspartic technology has revolutionized floor coating installation by allowing same-day completion and immediate return to service. This makes polyaspartic systems ideal for businesses that cannot afford extended downtime or homeowners who want immediate results.'
+        'Your basement holds incredible potential - imagine a space so inviting that it becomes the heart of your home. Picture family game nights, movie marathons, or peaceful work sessions in a bright, comfortable environment that rivals any upstairs room.',
+        'Most basements remain underutilized because of moisture concerns, cold concrete floors, and uninviting appearances. Our professional basement floor coating systems solve these problems while creating a beautiful foundation for your family\'s new favorite space.'
       ]
     },
     differentiators: {
-      title: 'Polyaspartic Coating Advantages',
-      subtitle: 'Polyaspartic technology offers unique benefits that traditional coatings cannot match:',
+      title: 'Why Your Basement Deserves Professional Treatment',
+      subtitle: 'Your basement transformation is too important to leave to chance - here\'s why professional installation makes all the difference:',
       features: [
         {
-          title: 'Rapid Cure Technology',
-          description: 'Complete installation and return to service in a single day, minimizing disruption'
+          title: 'Moisture Management',
+          description: 'Advanced moisture-resistant systems that prevent humidity and water issues from compromising your investment'
         },
         {
-          title: 'UV Color Stability',
-          description: 'Superior resistance to yellowing and fading from sunlight exposure'
+          title: 'Temperature Comfort',
+          description: 'Insulating properties that make concrete floors warmer and more comfortable for bare feet'
         },
         {
-          title: 'Temperature Flexibility',
-          description: 'Can be applied in a wider range of temperatures than traditional epoxy systems'
+          title: 'Bright, Welcoming Appearance',
+          description: 'Light-reflecting finishes that brighten dark spaces and create an inviting atmosphere'
         },
         {
-          title: 'Superior Flexibility',
-          description: 'Enhanced flexibility helps prevent cracking and delamination over time'
+          title: 'Multiple Coating Options',
+          description: 'Choose from epoxy, polyaspartic, or hybrid systems designed specifically for basement environments'
         },
         {
-          title: 'Chemical Resistance',
-          description: 'Excellent resistance to oils, chemicals, and abrasion with easy cleanup'
+          title: 'Long-Term Value',
+          description: 'Professional installation with warranty protection that increases your home\'s usable living space'
         }
       ]
     },
     process: {
-      title: 'Same-Day Installation Process',
-      subtitle: 'Our efficient polyaspartic installation process gets you back in service quickly:',
+      title: 'Your Basement Transformation Journey',
+      subtitle: 'From initial vision to stunning reality - here\'s how we bring your dream basement to life:',
       steps: [
         {
           number: 1,
-          title: 'Morning Preparation',
+          title: 'Vision & Assessment',
           items: [
-            'Surface grinding and profiling',
-            'Crack repair and patching',
-            'Thorough cleaning and prep',
-            'Final surface inspection'
+            'Basement potential evaluation and planning',
+            'Moisture testing and mitigation planning',
+            'Design options and inspiration review',
+            'Custom transformation plan creation'
           ]
         },
         {
           number: 2,
-          title: 'Base Coat Application',
+          title: 'Moisture Management',
           items: [
-            'Polyaspartic primer application',
-            'Enhanced adhesion properties',
-            'Rapid cure initiation',
-            'Quality control verification'
+            'Professional moisture remediation if needed',
+            'Surface preparation and crack repair',
+            'Optimal adhesion preparation',
+            'Foundation enhancement for coating success'
           ]
         },
         {
           number: 3,
-          title: 'Color Coat Installation',
+          title: 'System Application',
           items: [
-            'Pigmented polyaspartic application',
-            'Decorative elements as specified',
-            'Uniform coverage and thickness',
-            'Proper working time management'
+            'Custom basement coating system installation',
+            'Moisture-resistant primer application',
+            'Color and finish perfection',
+            'Real-time quality assurance'
           ]
         },
         {
           number: 4,
-          title: 'Topcoat Protection',
+          title: 'Protection & Enhancement',
           items: [
-            'Clear polyaspartic topcoat',
-            'UV protection integration',
-            'Slip resistance additives',
-            'Surface texture optimization'
+            'Durable topcoat application',
+            'Enhanced moisture protection',
+            'Long-term performance optimization',
+            'Beauty and functionality balance'
           ]
         },
         {
           number: 5,
-          title: 'Same-Day Completion',
+          title: 'Dream Realized',
           items: [
-            'Rapid cure monitoring',
-            'Final quality inspection',
-            'Immediate return to service',
-            'Maintenance guidelines delivery'
+            'Final transformation reveal',
+            'Care and maintenance guidance',
+            'Warranty protection activation',
+            'Your family\'s new favorite space delivery'
           ]
         }
       ]
     },
     collections: {
-      title: 'Polyaspartic System Options',
-      subtitle: 'Our polyaspartic systems are available in multiple configurations for different applications:',
+      title: 'Basement Floor Coating Options',
+      subtitle: 'Choose from our specialized basement coating systems designed for moisture management and comfort:',
       items: [
         {
-          title: 'Residential Systems',
-          description: 'Perfect for garages, basements, and home workshops',
+          title: 'Moisture-Resistant Systems',
+          description: 'Advanced coatings designed specifically for basement moisture challenges',
           features: [
-            'Same-day garage transformation',
-            'No overnight curing required',
-            'Family-friendly low odor',
-            'Wide color selection available'
+            'Vapor barrier properties to prevent moisture issues',
+            'Humidity-resistant formulations',
+            'Prevents mold and mildew growth',
+            'Long-term moisture protection'
           ]
         },
         {
-          title: 'Commercial Applications',
-          description: 'Ideal for businesses requiring minimal downtime',
+          title: 'Comfort Enhancement Systems',
+          description: 'Coatings that make concrete floors warmer and more comfortable',
           features: [
-            'Rapid return to operations',
-            'Heavy-duty traffic resistance',
+            'Insulating properties for temperature comfort',
+            'Non-slip texture for safety',
+            'Easier on feet and joints',
+            'Reduces floor cold transfer'
+          ]
+        },
+        {
+          title: 'Bright & Welcoming Finishes',
+          description: 'Light-enhancing coatings that brighten dark basement spaces',
+          features: [
+            'High-gloss finishes that reflect light',
+            'Wide selection of brightening colors',
+            'Makes spaces feel larger and more open',
+            'Creates inviting, upstairs-quality appearance'
+          ]
+        },
+        {
+          title: 'Entertainment Space Systems',
+          description: 'Durable, attractive coatings perfect for family gathering areas',
+          features: [
+            'Decorative flakes and patterns available',
+            'Easy cleanup for food and drink spills',
+            'Sound-dampening properties',
+            'Perfect for game rooms and media areas'
+          ]
+        },
+        {
+          title: 'Workshop & Utility Systems',
+          description: 'Heavy-duty coatings for basement workshops and utility areas',
+          features: [
             'Chemical and stain resistance',
-            'Professional appearance maintenance'
-          ]
-        },
-        {
-          title: 'Industrial Systems',
-          description: 'High-performance coatings for demanding environments',
-          features: [
-            'Maximum durability and performance',
-            'Chemical processing compatibility',
-            'Temperature cycle resistance',
-            'Long-term cost effectiveness'
-          ]
-        },
-        {
-          title: 'Decorative Options',
-          description: 'Enhanced aesthetics with functional performance',
-          features: [
-            'Decorative flake integration',
-            'Custom color combinations',
-            'Metallic enhancement options',
-            'Texture and pattern variations'
-          ]
-        },
-        {
-          title: 'Specialty Applications',
-          description: 'Custom formulations for unique requirements',
-          features: [
-            'Food-grade formulations',
-            'Anti-static properties',
-            'Slip-resistant surfaces',
-            'Custom performance specifications'
+            'Impact-resistant for dropped tools',
+            'Easy maintenance for messy projects',
+            'Durable enough for equipment storage'
           ]
         }
       ]
     },
     portfolio: {
-      title: 'Polyaspartic Installation Showcase',
-      subtitle: 'Our polyaspartic installations demonstrate the speed and quality possible with advanced coating technology:',
+      title: 'Basement Floor Transformations',
+      subtitle: 'See how professional basement floor coating transforms dark, unused spaces into beautiful, functional rooms:',
       items: [
-        { title: 'Auto Dealership Same-Day Installation', location: 'Cincinnati Automotive District' },
-        { title: 'Residential Garage Fast-Track Project', location: 'West Chester Development' },
-        { title: 'Restaurant Kitchen Emergency Coating', location: 'Northern Kentucky Establishment' },
-        { title: 'Retail Store Renovation Project', location: 'Mason Shopping Center' },
-        { title: 'Manufacturing Facility Weekend Install', location: 'Hamilton County Industrial Park' },
-        { title: 'Medical Facility Quick Turnaround', location: 'Anderson Township Clinic' }
+        { title: 'Family Entertainment Center', location: 'West Chester Basement' },
+        { title: 'Home Office & Workshop Combo', location: 'Mason Residence' },
+        { title: 'Kids Play Area Transformation', location: 'Anderson Township Home' },
+        { title: 'Luxury Basement Abstract Metallic', location: 'Anderson Township Residence' },
+        { title: 'Home Gym & Storage Space', location: 'Northern Kentucky Home' },
+        { title: 'Custom Residential Basement Transformation', location: 'Hamilton County Development' }
       ]
     },
     contact: {
-      title: 'Need Fast Floor Coating Installation?',
-      description: 'Contact us about polyaspartic coating systems and discover how we can complete your floor transformation in just one day.'
+      title: 'Ready to Transform Your Basement?',
+      description: 'Get a free estimate for professional basement floor coating and discover how we can transform your basement into your family\'s new favorite space.'
+    }
+  },
+
+  polyasparticCoating: {
+    seo: {
+      title: 'Kitchen Floor Coating | Transform Your Kitchen | Queen City Surface Coatings',
+      description: 'Transform your kitchen with professional floor coatings. Durable, hygienic, and beautiful kitchen flooring solutions that handle spills, stains, and daily use.',
+      keywords: 'kitchen floor coating, kitchen flooring, residential kitchen floors, hygienic flooring, kitchen renovation, kitchen makeover Cincinnati'
+    },
+    hero: {
+      tagline: 'Transform Your Kitchen Into Your Dream Space',
+      headline: 'Professional Kitchen Floor Coatings',
+      subheadline: 'Create the heart of your home you\'ve always dreamed of. Beautiful, hygienic, and maintenance-free kitchen floors that handle everything from daily cooking to holiday entertaining.',
+      image: {
+        src: '/assets/images/new-projects/black_res_kitchen.webp',
+        alt: 'Beautiful transformed kitchen with professional floor coating'
+      },
+      ctas: [
+        { text: 'Start My Kitchen Transformation', href: '/company/contact', type: 'primary' },
+        { text: 'See Kitchen Transformations', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'From Functional Space to Culinary Sanctuary',
+      content: [
+        'Your kitchen deserves to be as beautiful as it is functional. Imagine cooking and entertaining in a space where spills wipe up effortlessly, stains are never a concern, and the floor looks pristine years after installation.',
+        'Our professional kitchen floor coating systems transform ordinary concrete into stunning, hygienic surfaces that handle everything from daily meal prep to holiday entertaining. Create a kitchen that\'s not just the heart of your home, but the envy of everyone who enters it.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Your Kitchen Deserves Professional Floor Coatings',
+      subtitle: 'Your kitchen transformation is too important to leave to chance - here\'s why professional installation makes all the difference:',
+      features: [
+        {
+          title: 'Food-Safe & Hygienic',
+          description: 'FDA-compliant coatings that resist bacteria growth and provide easy sanitization for food preparation areas'
+        },
+        {
+          title: 'Spill & Stain Resistant',
+          description: 'Non-porous surface that prevents wine, grease, and food stains from penetrating and becoming permanent'
+        },
+        {
+          title: 'Easy Maintenance',
+          description: 'Simple cleaning with regular household cleaners keeps your kitchen floor looking pristine with minimal effort'
+        },
+        {
+          title: 'Multiple Coating Options',
+          description: 'Choose from polyaspartic, epoxy, or hybrid systems designed specifically for kitchen environments'
+        },
+        {
+          title: 'Heat & Impact Resistance',
+          description: 'Withstands dropped pots, hot spills, and daily kitchen activities without damage or wear'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Kitchen Transformation Journey',
+      subtitle: 'From initial vision to stunning reality - here\'s how we bring your dream kitchen floor to life:',
+      steps: [
+        {
+          number: 1,
+          title: 'Kitchen Vision Planning',
+          items: [
+            'Kitchen usage pattern assessment',
+            'Design preferences and color consultation',
+            'Coating system recommendations',
+            'Custom kitchen transformation plan'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Hygienic Preparation',
+          items: [
+            'Food-safe surface preparation methods',
+            'Deep cleaning and sanitization',
+            'Surface repair and optimization',
+            'FDA-compliant prep procedures'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Coating Application',
+          items: [
+            'Food-grade primer system application',
+            'Custom color and finish installation',
+            'Anti-microbial properties integration',
+            'Real-time quality assurance'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Protection & Enhancement',
+          items: [
+            'Hygienic topcoat application',
+            'Stain and spill resistance optimization',
+            'Easy-clean surface enhancement',
+            'Food safety compliance verification'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Culinary Dream Realized',
+          items: [
+            'Final kitchen transformation reveal',
+            'Kitchen-specific care guidelines',
+            'Warranty protection activation',
+            'Your new culinary sanctuary delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Kitchen Floor Coating Options',
+      subtitle: 'Choose from our specialized kitchen coating systems designed for culinary environments:',
+      items: [
+        {
+          title: 'Hygienic Kitchen Systems',
+          description: 'Food-safe coatings designed for serious home cooks',
+          features: [
+            'FDA-compliant materials and application',
+            'Anti-microbial properties prevent bacteria growth',
+            'Easy sanitization with standard cleaners',
+            'Non-porous surface prevents contamination'
+          ]
+        },
+        {
+          title: 'Entertainment Kitchen Systems',
+          description: 'Beautiful finishes perfect for hosting and entertaining',
+          features: [
+            'Decorative options including metallic and flakes',
+            'Wine and food stain resistance',
+            'Easy cleanup after parties and gatherings',
+            'Impressive appearance that wows guests'
+          ]
+        },
+        {
+          title: 'Family Kitchen Systems',
+          description: 'Durable coatings that handle busy family life',
+          features: [
+            'Kid and pet-friendly non-toxic formulations',
+            'Spill-resistant for everyday accidents',
+            'Easy maintenance for busy schedules',
+            'Slip-resistant options for safety'
+          ]
+        },
+        {
+          title: 'Gourmet Kitchen Systems',
+          description: 'Premium finishes for culinary enthusiasts',
+          features: [
+            'Heat-resistant for dropped pots and pans',
+            'Oil and grease resistant surfaces',
+            'Custom colors to match kitchen design',
+            'Professional-grade durability'
+          ]
+        },
+        {
+          title: 'Custom Kitchen Designs',
+          description: 'Personalized kitchen floors that reflect your style',
+          features: [
+            'Custom colors to match cabinetry and décor',
+            'Decorative patterns and artistic elements',
+            'Logo or monogram integration options',
+            'Unique, one-of-a-kind kitchen floors'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Kitchen Floor Transformations',
+      subtitle: 'See how professional kitchen floor coatings transform ordinary spaces into culinary sanctuaries:',
+      items: [
+        { title: 'Gourmet Kitchen Makeover', location: 'West Chester Custom Home' },
+        { title: 'Family Kitchen Transformation', location: 'Mason Subdivision' },
+        { title: 'Chef\'s Kitchen Professional Coating', location: 'Anderson Township Residence' },
+        { title: 'Open Concept Kitchen Floor', location: 'Northern Kentucky Home' },
+        { title: 'Entertainment Kitchen Upgrade', location: 'Hamilton County Estate' },
+        { title: 'Modern Kitchen Renovation', location: 'Cincinnati Urban Loft' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Transform Your Kitchen?',
+      description: 'Get a free estimate for professional kitchen floor coating and discover how we can transform your kitchen into the culinary sanctuary you\'ve always dreamed of.'
+    }
+  }
+};
+
+export const commercialServices = {
+  retailFlooring: {
+    seo: {
+      title: 'Retail Flooring Solutions | Commercial Concrete Coatings | Queen City Surface Coatings',
+      description: 'Professional retail flooring solutions that enhance customer experience and withstand high traffic. Durable, attractive concrete coatings for retail environments.',
+      keywords: 'retail flooring, commercial concrete coating, retail store floors, high traffic flooring, retail concrete solutions, commercial flooring Cincinnati'
+    },
+    hero: {
+      tagline: 'Enhance Your Customer Experience',
+      headline: 'Professional Retail Flooring Solutions',
+      subheadline: 'Create an inviting shopping environment that impresses customers while handling the demands of high-traffic retail operations. Professional concrete coatings that combine beauty with performance.',
+      image: {
+        src: '/assets/images/services/retail-flooring.webp',
+        alt: 'Professional retail flooring with attractive concrete coating'
+      },
+      ctas: [
+        { text: 'Get Commercial Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Retail Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'First Impressions Matter in Retail',
+      content: [
+        'Your retail space is where first impressions are made and purchasing decisions happen. The right flooring solution creates an inviting atmosphere that encourages customers to explore, shop, and return while handling the demands of constant foot traffic.',
+        'Our professional retail flooring systems combine attractive aesthetics with the durability needed for commercial operations. From boutique stores to large retail spaces, we create floors that enhance your brand while providing long-term performance and easy maintenance.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Retail Spaces Choose Professional Concrete Coatings',
+      subtitle: 'Your retail environment demands flooring that works as hard as you do - here\'s why professional installation makes the difference:',
+      features: [
+        {
+          title: 'High-Traffic Durability',
+          description: 'Engineered to handle thousands of daily footsteps without showing wear, maintaining professional appearance'
+        },
+        {
+          title: 'Customer-Safe Surfaces',
+          description: 'Slip-resistant options and smooth transitions that prioritize customer safety and ADA compliance'
+        },
+        {
+          title: 'Brand-Enhancing Aesthetics',
+          description: 'Custom colors and finishes that complement your brand identity and create the desired shopping atmosphere'
+        },
+        {
+          title: 'Easy Maintenance',
+          description: 'Simple cleaning protocols that keep your space looking professional with minimal downtime'
+        },
+        {
+          title: 'Cost-Effective Investment',
+          description: 'Long-term durability reduces replacement costs while enhancing property value and customer experience'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Retail Flooring Installation Journey',
+      subtitle: 'From consultation to completion - here\'s how we deliver professional retail flooring with minimal business disruption:',
+      steps: [
+        {
+          number: 1,
+          title: 'Business Needs Assessment',
+          items: [
+            'Store layout and traffic pattern analysis',
+            'Brand identity and aesthetic consultation',
+            'Operational schedule coordination',
+            'Custom retail flooring plan development'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Strategic Planning',
+          items: [
+            'Minimize business disruption scheduling',
+            'Phased installation for ongoing operations',
+            'Safety protocols for active retail environments',
+            'Professional surface preparation'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Professional Installation',
+          items: [
+            'Commercial-grade coating systems',
+            'Brand-specific colors and finishes',
+            'High-traffic performance optimization',
+            'Quality control throughout process'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Performance Protection',
+          items: [
+            'Commercial-grade protective topcoats',
+            'Slip-resistance and safety compliance',
+            'Long-term durability optimization',
+            'Professional finish quality assurance'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Business Ready',
+          items: [
+            'Final inspection and approval',
+            'Minimal curing time for quick reopening',
+            'Maintenance guidelines and support',
+            'Your enhanced retail space delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Retail Flooring System Options',
+      subtitle: 'Choose from our specialized retail flooring systems designed for commercial success:',
+      items: [
+        {
+          title: 'High-Traffic Systems',
+          description: 'Engineered for busy retail environments with constant foot traffic',
+          features: [
+            'Superior wear resistance for heavy use',
+            'Maintains appearance under constant traffic',
+            'Excellent impact resistance',
+            'Long-term performance reliability'
+          ]
+        },
+        {
+          title: 'Brand Enhancement Systems',
+          description: 'Custom finishes that reinforce your brand identity',
+          features: [
+            'Custom color matching to brand guidelines',
+            'Decorative options including logos and patterns',
+            'Professional, upscale appearance',
+            'Creates memorable customer experiences'
+          ]
+        },
+        {
+          title: 'Safety-First Systems',
+          description: 'Prioritize customer and employee safety in your retail space',
+          features: [
+            'Slip-resistant surface options',
+            'ADA-compliant smooth transitions',
+            'Easy-to-clean hygienic surfaces',
+            'Clearly defined walkways and zones'
+          ]
+        },
+        {
+          title: 'Quick-Install Systems',
+          description: 'Minimal downtime solutions for busy retail operations',
+          features: [
+            'Rapid-cure technology for faster reopening',
+            'Phased installation to maintain operations',
+            'Low-odor formulations for occupied spaces',
+            'Efficient installation processes'
+          ]
+        },
+        {
+          title: 'Maintenance-Free Systems',
+          description: 'Low-maintenance solutions that keep your focus on customers',
+          features: [
+            'Simple cleaning with standard equipment',
+            'Stain and scuff resistant surfaces',
+            'Long intervals between maintenance',
+            'Professional appearance retention'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Retail Flooring Transformations',
+      subtitle: 'See how professional retail flooring enhances customer experience and business success:',
+      items: [
+        { title: 'Boutique Fashion Store Makeover', location: 'Mason Shopping District' },
+        { title: 'Electronics Retailer High-Traffic Floor', location: 'West Chester Commercial Center' },
+        { title: 'Home Goods Store Brand Enhancement', location: 'Cincinnati Retail Complex' },
+        { title: 'Sporting Goods Store Durable Coating', location: 'Northern Kentucky Mall' },
+        { title: 'Jewelry Store Luxury Finish', location: 'Anderson Township Shopping Center' },
+        { title: 'Grocery Store Entrance Renovation', location: 'Hamilton County Retail Plaza' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Enhance Your Retail Space?',
+      description: 'Get a free commercial consultation and discover how professional retail flooring can improve your customer experience and business success.'
+    }
+  },
+
+  warehouseFlooring: {
+    seo: {
+      title: 'Warehouse Flooring Solutions | Industrial Concrete Coatings | Queen City Surface Coatings',
+      description: 'Heavy-duty warehouse flooring solutions that handle forklifts, pallets, and industrial operations. Durable concrete coatings for warehouse and distribution centers.',
+      keywords: 'warehouse flooring, industrial concrete coating, heavy duty flooring, forklift resistant floors, warehouse concrete solutions, distribution center flooring Cincinnati'
+    },
+    hero: {
+      tagline: 'Built for Heavy-Duty Operations',
+      headline: 'Professional Warehouse Flooring Solutions',
+      subheadline: 'Engineered for the demanding world of warehouse operations. Handle forklifts, heavy equipment, and constant traffic with flooring systems built to perform under pressure.',
+      image: {
+        src: '/assets/images/services/warehouse-flooring.webp',
+        alt: 'Heavy-duty warehouse flooring with industrial concrete coating'
+      },
+      ctas: [
+        { text: 'Get Industrial Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Warehouse Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Where Performance Meets Productivity',
+      content: [
+        'Your warehouse is the backbone of your operation, where efficiency and reliability are non-negotiable. The right flooring system supports your productivity by providing a durable, safe surface that withstands the punishment of daily industrial operations without failing when you need it most.',
+        'Our heavy-duty warehouse flooring systems are engineered for the real world of logistics, distribution, and storage. From forklift traffic to pallet drops, chemical spills to temperature variations, we deliver flooring that keeps your operation running smoothly.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Warehouses Choose Professional Industrial Coatings',
+      subtitle: 'Your warehouse operation demands flooring that never fails - here\'s why professional installation is critical:',
+      features: [
+        {
+          title: 'Forklift & Heavy Equipment Resistant',
+          description: 'Engineered to handle constant forklift traffic, pallet drops, and heavy machinery without cracking or wearing'
+        },
+        {
+          title: 'Chemical & Spill Resistant',
+          description: 'Protects against hydraulic fluids, oils, and chemical spills that are common in warehouse environments'
+        },
+        {
+          title: 'High-Impact Durability',
+          description: 'Withstands dropped pallets, heavy impacts, and the daily punishment of industrial operations'
+        },
+        {
+          title: 'Easy Decontamination',
+          description: 'Quick cleaning protocols keep operations running while maintaining safety and compliance standards'
+        },
+        {
+          title: 'Operational Efficiency',
+          description: 'Smooth, level surfaces improve material handling efficiency and reduce equipment wear'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Warehouse Flooring Installation Journey',
+      subtitle: 'From assessment to completion - here\'s how we deliver industrial-grade warehouse flooring:',
+      steps: [
+        {
+          number: 1,
+          title: 'Operational Assessment',
+          items: [
+            'Traffic pattern and load analysis',
+            'Equipment compatibility evaluation',
+            'Safety and compliance requirements review',
+            'Custom warehouse flooring specification'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Industrial Planning',
+          items: [
+            'Minimize operational disruption scheduling',
+            'Phased installation for ongoing operations',
+            'Heavy-duty surface preparation protocols',
+            'Safety systems for active warehouse environments'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Heavy-Duty Installation',
+          items: [
+            'Industrial-grade coating systems',
+            'High-performance primers and topcoats',
+            'Load-bearing capacity optimization',
+            'Rigorous quality control processes'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Performance Validation',
+          items: [
+            'Heavy-duty protective systems',
+            'Chemical resistance verification',
+            'Load testing and performance validation',
+            'Industrial durability assurance'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Operations Ready',
+          items: [
+            'Final inspection and load certification',
+            'Rapid return to full operations',
+            'Industrial maintenance guidelines',
+            'Your enhanced warehouse facility delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Warehouse Flooring System Options',
+      subtitle: 'Choose from our heavy-duty warehouse flooring systems designed for industrial performance:',
+      items: [
+        {
+          title: 'Heavy-Duty Traffic Systems',
+          description: 'Engineered for constant forklift and heavy equipment traffic',
+          features: [
+            'Superior abrasion resistance',
+            'Forklift tire mark resistance',
+            'High load-bearing capacity',
+            'Long-term performance under heavy use'
+          ]
+        },
+        {
+          title: 'Chemical Resistant Systems',
+          description: 'Protection against industrial chemicals and fluids',
+          features: [
+            'Hydraulic fluid resistance',
+            'Oil and grease protection',
+            'Chemical spill containment',
+            'Easy decontamination procedures'
+          ]
+        },
+        {
+          title: 'High-Impact Systems',
+          description: 'Designed to handle dropped pallets and equipment impacts',
+          features: [
+            'Impact-resistant formulations',
+            'Crack and chip resistance',
+            'Heavy load distribution',
+            'Structural integrity maintenance'
+          ]
+        },
+        {
+          title: 'Temperature Resistant Systems',
+          description: 'Stable performance across temperature variations',
+          features: [
+            'Thermal cycling resistance',
+            'Expansion joint compatibility',
+            'Temperature shock resistance',
+            'Climate-controlled environment optimization'
+          ]
+        },
+        {
+          title: 'Quick-Cure Systems',
+          description: 'Minimal downtime solutions for critical operations',
+          features: [
+            'Rapid-cure technology for faster return to service',
+            'Operational scheduling flexibility',
+            'Phased installation capabilities',
+            'Business continuity focus'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Warehouse Flooring Transformations',
+      subtitle: 'See how professional warehouse flooring enhances operational efficiency and durability:',
+      items: [
+        { title: 'Distribution Center Heavy-Duty Installation', location: 'Florence Industrial Park' },
+        { title: 'Logistics Warehouse Floor Upgrade', location: 'West Chester Commerce Center' },
+        { title: 'Cold Storage Facility Coating', location: 'Cincinnati Industrial District' },
+        { title: 'Manufacturing Warehouse Renovation', location: 'Northern Kentucky Industrial Zone' },
+        { title: 'Food Distribution Center Floor', location: 'Hamilton County Logistics Hub' },
+        { title: 'E-commerce Fulfillment Center', location: 'Anderson Township Industrial Park' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Upgrade Your Warehouse Operations?',
+      description: 'Get a free industrial consultation and discover how professional warehouse flooring can improve your operational efficiency and equipment longevity.'
+    }
+  },
+
+  officeFlooring: {
+    seo: {
+      title: 'Office Flooring Solutions | Professional Concrete Coatings | Queen City Surface Coatings',
+      description: 'Professional office flooring solutions that create productive work environments. Attractive, durable concrete coatings for modern office spaces.',
+      keywords: 'office flooring, commercial concrete coating, professional office floors, modern office flooring, office concrete solutions, commercial office flooring Cincinnati'
+    },
+    hero: {
+      tagline: 'Create Inspiring Work Environments',
+      headline: 'Professional Office Flooring Solutions',
+      subheadline: 'Design productive, attractive office spaces that inspire your team and impress clients. Professional concrete coatings that combine modern aesthetics with practical performance.',
+      image: {
+        src: '/assets/images/new-projects/Office_building.webp',
+        alt: 'Modern professional office with attractive concrete flooring'
+      },
+      ctas: [
+        { text: 'Get Office Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Office Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Where Productivity Meets Professional Design',
+      content: [
+        'Your office environment directly impacts employee productivity, client impressions, and company culture. The right flooring creates a professional atmosphere that motivates your team while providing the durability needed for daily business operations.',
+        'Our professional office flooring systems combine modern aesthetics with practical performance. From open-concept workspaces to executive suites, we create floors that enhance your professional image while supporting your business success.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Offices Choose Professional Concrete Coatings',
+      subtitle: 'Your office environment shapes success - here\'s why professional flooring makes the difference:',
+      features: [
+        {
+          title: 'Professional Aesthetics',
+          description: 'Modern, sophisticated finishes that create impressive work environments and enhance company image'
+        },
+        {
+          title: 'Productivity-Enhancing Design',
+          description: 'Clean, bright surfaces that improve lighting and create energizing work environments'
+        },
+        {
+          title: 'Low-Maintenance Operations',
+          description: 'Simple cleaning protocols that maintain professional appearance with minimal disruption'
+        },
+        {
+          title: 'Employee Health & Safety',
+          description: 'Non-toxic, low-VOC formulations that support healthy indoor air quality'
+        },
+        {
+          title: 'Sound Management',
+          description: 'Options for acoustic properties that help manage noise in open office environments'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Office Flooring Installation Journey',
+      subtitle: 'From planning to completion - here\'s how we deliver professional office flooring with minimal business disruption:',
+      steps: [
+        {
+          number: 1,
+          title: 'Workplace Assessment',
+          items: [
+            'Office layout and workflow analysis',
+            'Professional design consultation',
+            'Brand identity integration planning',
+            'Custom office flooring specification'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Business-Friendly Planning',
+          items: [
+            'After-hours and weekend scheduling options',
+            'Phased installation for occupied spaces',
+            'Minimal disruption protocols',
+            'Professional surface preparation'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Professional Installation',
+          items: [
+            'Commercial-grade coating systems',
+            'Brand-appropriate colors and finishes',
+            'Professional appearance optimization',
+            'Quality control throughout process'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Professional Enhancement',
+          items: [
+            'Protective topcoat systems',
+            'Professional appearance maintenance',
+            'Indoor air quality compliance',
+            'Long-term performance assurance'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Business Ready',
+          items: [
+            'Final inspection and approval',
+            'Quick return to normal operations',
+            'Professional maintenance guidelines',
+            'Your enhanced office environment delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Office Flooring System Options',
+      subtitle: 'Choose from our professional office flooring systems designed for modern workplaces:',
+      items: [
+        {
+          title: 'Executive Professional Systems',
+          description: 'Sophisticated finishes for executive offices and client areas',
+          features: [
+            'Premium aesthetic appearance',
+            'Custom color and design options',
+            'Impressive professional presentation',
+            'Long-term beauty retention'
+          ]
+        },
+        {
+          title: 'Open Office Systems',
+          description: 'Designed for modern open-concept work environments',
+          features: [
+            'Light-reflecting properties for brightness',
+            'Sound management considerations',
+            'Easy cleaning for high-traffic areas',
+            'Collaborative space optimization'
+          ]
+        },
+        {
+          title: 'Health-Conscious Systems',
+          description: 'Employee wellness and indoor air quality focused',
+          features: [
+            'Low-VOC and non-toxic formulations',
+            'Anti-microbial properties available',
+            'Easy sanitization protocols',
+            'Healthy work environment support'
+          ]
+        },
+        {
+          title: 'Brand Identity Systems',
+          description: 'Custom finishes that reinforce your company brand',
+          features: [
+            'Corporate color matching',
+            'Logo and graphics integration options',
+            'Brand-consistent professional appearance',
+            'Memorable client impression creation'
+          ]
+        },
+        {
+          title: 'Low-Maintenance Systems',
+          description: 'Minimal upkeep solutions for busy office environments',
+          features: [
+            'Stain and scuff resistant surfaces',
+            'Simple cleaning with standard equipment',
+            'Professional appearance retention',
+            'Cost-effective long-term maintenance'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Office Flooring Transformations',
+      subtitle: 'See how professional office flooring enhances workplace productivity and professional image:',
+      items: [
+        { title: 'Corporate Headquarters Modern Design', location: 'Mason Business District' },
+        { title: 'Tech Startup Open Office Floor', location: 'Cincinnati Innovation Hub' },
+        { title: 'Law Firm Executive Suite Renovation', location: 'West Chester Professional Center' },
+        { title: 'Marketing Agency Creative Space', location: 'Northern Kentucky Business Park' },
+        { title: 'Medical Office Professional Coating', location: 'Anderson Township Medical Plaza' },
+        { title: 'Financial Services Office Upgrade', location: 'Hamilton County Business Center' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Enhance Your Office Environment?',
+      description: 'Get a free professional consultation and discover how office flooring can improve your workplace productivity and professional image.'
+    }
+  },
+
+  industrialFlooring: {
+    seo: {
+      title: 'Industrial Flooring Solutions | Heavy-Duty Concrete Coatings | Queen City Surface Coatings',
+      description: 'Industrial-grade flooring solutions for manufacturing, production, and heavy industry. Chemical-resistant, high-performance concrete coatings built for demanding environments.',
+      keywords: 'industrial flooring, manufacturing floors, heavy duty industrial coating, chemical resistant flooring, industrial concrete solutions, production facility flooring Cincinnati'
+    },
+    hero: {
+      tagline: 'Engineered for Industrial Excellence',
+      headline: 'Industrial Flooring Solutions',
+      subheadline: 'Built for the most demanding industrial environments. From chemical processing to heavy manufacturing, our industrial-grade flooring systems deliver uncompromising performance where failure is not an option.',
+      image: {
+        src: '/assets/images/services/industrial-flooring.webp',
+        alt: 'Heavy-duty industrial flooring in manufacturing facility'
+      },
+      ctas: [
+        { text: 'Get Industrial Assessment', href: '/company/contact', type: 'primary' },
+        { text: 'View Industrial Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Where Performance is Mission-Critical',
+      content: [
+        'Industrial environments demand flooring that never compromises. Your production schedules, safety requirements, and operational efficiency depend on surfaces that withstand extreme conditions while maintaining peak performance day after day, year after year.',
+        'Our industrial flooring systems are engineered for the harshest conditions - from chemical spills to thermal shock, heavy machinery to continuous operations. We deliver flooring solutions that support your industrial success with unmatched durability and reliability.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Industrial Operations Choose Professional Coatings',
+      subtitle: 'Industrial success demands flooring that never fails - here\'s why professional installation is essential:',
+      features: [
+        {
+          title: 'Extreme Durability',
+          description: 'Engineered to withstand the harshest industrial conditions including heavy machinery, thermal cycling, and constant abuse'
+        },
+        {
+          title: 'Chemical Resistance',
+          description: 'Superior protection against acids, solvents, oils, and aggressive chemicals common in industrial processes'
+        },
+        {
+          title: 'Safety Compliance',
+          description: 'Meets OSHA and industry safety standards with slip-resistant and clearly marked safety zones'
+        },
+        {
+          title: 'Minimal Downtime',
+          description: 'Rapid installation and cure times minimize production interruption and get you back online quickly'
+        },
+        {
+          title: 'Long-Term Performance',
+          description: 'Proven track record in demanding industrial applications with minimal maintenance requirements'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Industrial Flooring Installation Journey',
+      subtitle: 'From assessment to completion - here\'s how we deliver mission-critical industrial flooring:',
+      steps: [
+        {
+          number: 1,
+          title: 'Industrial Assessment',
+          items: [
+            'Comprehensive facility and process analysis',
+            'Chemical exposure and load requirements review',
+            'Safety and compliance standards evaluation',
+            'Custom industrial flooring specification'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Production Planning',
+          items: [
+            'Minimal downtime scheduling coordination',
+            'Phased installation for continuous operations',
+            'Industrial-grade surface preparation',
+            'Safety protocols for active production environments'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Industrial-Grade Installation',
+          items: [
+            'Heavy-duty coating systems application',
+            'Chemical-resistant primer and topcoat systems',
+            'Load-bearing and performance optimization',
+            'Rigorous quality control and testing'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Performance Validation',
+          items: [
+            'Chemical resistance and load testing',
+            'Safety compliance verification',
+            'Performance standards validation',
+            'Industrial warranty activation'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Production Ready',
+          items: [
+            'Final inspection and certification',
+            'Rapid return to full production capacity',
+            'Industrial maintenance protocols',
+            'Your enhanced industrial facility delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Industrial Flooring System Options',
+      subtitle: 'Choose from our industrial-grade flooring systems designed for specific manufacturing environments:',
+      items: [
+        {
+          title: 'Manufacturing Facilities',
+          description: 'Heavy-duty systems for production and assembly operations',
+          features: [
+            'Extreme load-bearing capacity',
+            'Impact and abrasion resistance',
+            'Chemical spill protection',
+            'Easy decontamination procedures'
+          ]
+        },
+        {
+          title: 'Food & Beverage Processing',
+          description: 'FDA-compliant systems for food production environments',
+          features: [
+            'USDA and FDA compliance',
+            'Anti-microbial properties',
+            'Thermal shock resistance',
+            'Easy sanitization protocols'
+          ]
+        },
+        {
+          title: 'Automotive Production',
+          description: 'Specialized systems for automotive manufacturing',
+          features: [
+            'Oil and solvent resistance',
+            'Conductive and anti-static options',
+            'Heavy equipment compatibility',
+            'Paint booth approved formulations'
+          ]
+        },
+        {
+          title: 'Chemical Processing',
+          description: 'Ultimate chemical resistance for processing facilities',
+          features: [
+            'Aggressive chemical resistance',
+            'Secondary containment capability',
+            'Temperature cycling resistance',
+            'Emergency decontamination ready'
+          ]
+        },
+        {
+          title: 'Heavy Manufacturing',
+          description: 'Maximum durability for the most demanding operations',
+          features: [
+            'Extreme impact resistance',
+            'Forklift and crane traffic rated',
+            'Thermal expansion compatible',
+            'Long-term performance guarantee'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Industrial Flooring Transformations',
+      subtitle: 'See how industrial-grade flooring enhances production efficiency and operational reliability:',
+      items: [
+        { title: 'Manufacturing Plant Floor Upgrade', location: 'Cincinnati Industrial District' },
+        { title: 'Food Processing Facility Installation', location: 'Northern Kentucky Food Hub' },
+        { title: 'Automotive Assembly Line Coating', location: 'Hamilton County Auto Plant' },
+        { title: 'Chemical Processing Facility Floor', location: 'West Chester Industrial Park' },
+        { title: 'Heavy Manufacturing Warehouse', location: 'Florence Industrial Zone' },
+        { title: 'Distribution Center Industrial Floor', location: 'Anderson Township Logistics Hub' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Upgrade Your Industrial Operations?',
+      description: 'Get a free industrial assessment and discover how professional industrial flooring can improve your production efficiency and operational reliability.'
+    }
+  },
+
+  manufacturingFlooring: {
+    seo: {
+      title: 'Manufacturing Facility Flooring | Industrial Production Floors | Queen City Surface Coatings',
+      description: 'Heavy-duty flooring solutions for manufacturing facilities. Chemical-resistant, high-performance concrete coatings designed for production environments.',
+      keywords: 'manufacturing facility flooring, production floor coating, industrial manufacturing floors, heavy duty manufacturing flooring, chemical resistant manufacturing floors Cincinnati'
+    },
+    hero: {
+      tagline: 'Built for Production Excellence',
+      headline: 'Manufacturing Facility Flooring',
+      subheadline: 'Power your production with flooring engineered for manufacturing excellence. Handle heavy machinery, chemical processes, and continuous operations with surfaces built to perform under the most demanding conditions.',
+      image: {
+        src: '/assets/images/services/manufacturing-floor.webp',
+        alt: 'Heavy-duty manufacturing facility flooring with industrial coating'
+      },
+      ctas: [
+        { text: 'Get Manufacturing Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Manufacturing Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'The Foundation of Manufacturing Success',
+      content: [
+        'Your manufacturing floor is the foundation of your entire operation. Every piece of equipment, every production line, every safety protocol depends on surfaces that can handle extreme loads, chemical exposure, and continuous use without failure.',
+        'Our manufacturing facility flooring systems are engineered specifically for production environments. From precision assembly to heavy manufacturing, we deliver floors that support your operational excellence while meeting the strictest industrial standards.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Manufacturing Facilities Choose Professional Flooring',
+      subtitle: 'Manufacturing success demands flooring that supports peak performance - here\'s why professional installation is critical:',
+      features: [
+        {
+          title: 'Heavy Machinery Compatible',
+          description: 'Engineered to support heavy manufacturing equipment, assembly lines, and production machinery without failure'
+        },
+        {
+          title: 'Chemical Process Resistant',
+          description: 'Superior protection against manufacturing chemicals, coolants, oils, and industrial fluids'
+        },
+        {
+          title: 'Production Safety Standards',
+          description: 'Meets manufacturing safety requirements with slip-resistant surfaces and clearly marked safety zones'
+        },
+        {
+          title: 'Minimal Production Downtime',
+          description: 'Rapid installation processes designed to minimize interruption to critical manufacturing schedules'
+        },
+        {
+          title: 'Long-Term Reliability',
+          description: 'Proven performance in manufacturing environments with minimal maintenance and maximum uptime'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Manufacturing Flooring Installation Journey',
+      subtitle: 'From assessment to production-ready - here\'s how we deliver manufacturing-grade flooring:',
+      steps: [
+        {
+          number: 1,
+          title: 'Manufacturing Assessment',
+          items: [
+            'Production line and equipment analysis',
+            'Chemical exposure and load requirements',
+            'Safety and compliance standards review',
+            'Manufacturing-specific flooring specification'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Production Scheduling',
+          items: [
+            'Coordinate with production schedules',
+            'Minimize manufacturing downtime',
+            'Phased installation planning',
+            'Safety protocols for active facilities'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Industrial Installation',
+          items: [
+            'Manufacturing-grade coating systems',
+            'Heavy-duty surface preparation',
+            'Chemical-resistant applications',
+            'Production-ready quality control'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Performance Testing',
+          items: [
+            'Load-bearing capacity verification',
+            'Chemical resistance testing',
+            'Safety compliance validation',
+            'Manufacturing standards certification'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Production Ready',
+          items: [
+            'Final manufacturing inspection',
+            'Rapid return to full production',
+            'Manufacturing maintenance protocols',
+            'Your enhanced production facility'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Manufacturing Flooring System Options',
+      subtitle: 'Choose from our manufacturing-specific flooring systems designed for production excellence:',
+      items: [
+        {
+          title: 'Heavy Production Systems',
+          description: 'Maximum durability for heavy manufacturing operations',
+          features: [
+            'Extreme load-bearing capacity',
+            'Heavy machinery vibration resistance',
+            'Impact and abrasion protection',
+            'Long-term structural integrity'
+          ]
+        },
+        {
+          title: 'Chemical Processing Systems',
+          description: 'Superior protection for chemical manufacturing processes',
+          features: [
+            'Aggressive chemical resistance',
+            'Spill containment capabilities',
+            'Easy decontamination procedures',
+            'Emergency response compatibility'
+          ]
+        },
+        {
+          title: 'Precision Manufacturing Systems',
+          description: 'Clean, level surfaces for precision assembly operations',
+          features: [
+            'Ultra-smooth finish quality',
+            'Dust-free surface properties',
+            'Static control options',
+            'Precision equipment compatibility'
+          ]
+        },
+        {
+          title: 'High-Temperature Systems',
+          description: 'Thermal resistance for high-heat manufacturing processes',
+          features: [
+            'Thermal cycling resistance',
+            'High-temperature stability',
+            'Expansion joint compatibility',
+            'Heat-resistant formulations'
+          ]
+        },
+        {
+          title: 'Clean Room Systems',
+          description: 'Controlled environment flooring for sensitive manufacturing',
+          features: [
+            'Ultra-low particle generation',
+            'Easy sanitization protocols',
+            'Anti-microbial properties',
+            'Clean room classification compliance'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Manufacturing Facility Transformations',
+      subtitle: 'See how manufacturing-grade flooring enhances production efficiency and quality:',
+      items: [
+        { title: 'Automotive Parts Manufacturing Floor', location: 'Cincinnati Manufacturing District' },
+        { title: 'Electronics Assembly Facility', location: 'West Chester Technology Park' },
+        { title: 'Metal Fabrication Shop Upgrade', location: 'Northern Kentucky Industrial Zone' },
+        { title: 'Precision Manufacturing Clean Room', location: 'Mason Technology Center' },
+        { title: 'Heavy Equipment Production Floor', location: 'Hamilton County Manufacturing Hub' },
+        { title: 'Chemical Processing Plant Installation', location: 'Anderson Township Industrial Park' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Enhance Your Manufacturing Operations?',
+      description: 'Get a free manufacturing assessment and discover how professional facility flooring can improve your production efficiency and quality standards.'
+    }
+  },
+
+  foodBeverageFlooring: {
+    seo: {
+      title: 'Food & Beverage Facility Flooring | FDA Compliant Industrial Floors | Queen City Surface Coatings',
+      description: 'FDA-compliant flooring solutions for food and beverage facilities. Hygienic, chemical-resistant concrete coatings designed for food processing environments.',
+      keywords: 'food facility flooring, beverage plant floors, FDA compliant flooring, food processing floors, hygienic industrial flooring, food grade floor coating Cincinnati'
+    },
+    hero: {
+      tagline: 'FDA-Compliant Excellence',
+      headline: 'Food & Beverage Facility Flooring',
+      subheadline: 'Meet the highest standards of food safety and hygiene with flooring systems designed for food and beverage production. FDA-compliant, hygienic, and built to handle the demanding requirements of food processing.',
+      image: {
+        src: '/assets/images/services/IMG_2680.webp',
+        alt: 'FDA-compliant food processing facility flooring'
+      },
+      ctas: [
+        { text: 'Get Food Grade Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Food Facility Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Where Food Safety Meets Performance',
+      content: [
+        'Food and beverage production demands the highest standards of hygiene, safety, and performance. Your flooring must meet strict FDA regulations while withstanding the harsh conditions of food processing - from thermal shock to aggressive cleaning chemicals.',
+        'Our food-grade flooring systems are specifically engineered for food and beverage facilities. From processing plants to packaging operations, we deliver hygienic, durable surfaces that support your commitment to food safety and operational excellence.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Food Facilities Choose Professional FDA-Compliant Flooring',
+      subtitle: 'Food safety is non-negotiable - here\'s why professional installation ensures compliance and performance:',
+      features: [
+        {
+          title: 'FDA & USDA Compliance',
+          description: 'Meets all federal food safety regulations and guidelines for food processing environments'
+        },
+        {
+          title: 'Hygienic Surface Properties',
+          description: 'Non-porous, seamless surfaces that prevent bacteria growth and support thorough sanitization'
+        },
+        {
+          title: 'Thermal Shock Resistance',
+          description: 'Withstands extreme temperature changes from hot processing to cold storage operations'
+        },
+        {
+          title: 'Chemical Cleaning Compatible',
+          description: 'Resists aggressive sanitization chemicals and frequent high-pressure washing'
+        },
+        {
+          title: 'Anti-Microbial Protection',
+          description: 'Built-in antimicrobial properties that actively inhibit bacterial and fungal growth'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Food Facility Flooring Installation Journey',
+      subtitle: 'From compliance assessment to FDA-ready facility - here\'s how we deliver food-grade flooring:',
+      steps: [
+        {
+          number: 1,
+          title: 'Food Safety Assessment',
+          items: [
+            'FDA compliance requirements review',
+            'Food processing operation analysis',
+            'Hygiene and sanitization protocol evaluation',
+            'Food-grade flooring specification development'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Production Coordination',
+          items: [
+            'Food safety production scheduling',
+            'Minimize processing downtime',
+            'Contamination prevention protocols',
+            'Clean room installation procedures'
+          ]
+        },
+        {
+          number: 3,
+          title: 'FDA-Compliant Installation',
+          items: [
+            'Food-grade coating systems application',
+            'Seamless hygienic surface creation',
+            'Anti-microbial integration',
+            'Food safety quality control'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Compliance Validation',
+          items: [
+            'FDA regulation compliance verification',
+            'Hygiene standard testing',
+            'Food safety certification',
+            'Regulatory documentation delivery'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Production Ready',
+          items: [
+            'Final food safety inspection',
+            'Rapid return to food production',
+            'Hygienic maintenance protocols',
+            'Your FDA-compliant facility delivery'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Food & Beverage Flooring System Options',
+      subtitle: 'Choose from our FDA-compliant flooring systems designed for food processing excellence:',
+      items: [
+        {
+          title: 'Food Processing Systems',
+          description: 'FDA-compliant systems for food production and processing',
+          features: [
+            'FDA and USDA regulation compliance',
+            'Seamless hygienic surfaces',
+            'Anti-microbial properties',
+            'Easy sanitization protocols'
+          ]
+        },
+        {
+          title: 'Beverage Production Systems',
+          description: 'Specialized systems for beverage manufacturing',
+          features: [
+            'Chemical resistance to cleaning agents',
+            'Thermal shock resistance',
+            'Non-slip safety surfaces',
+            'High-pressure wash compatibility'
+          ]
+        },
+        {
+          title: 'Cold Storage Systems',
+          description: 'Temperature-resistant systems for cold storage areas',
+          features: [
+            'Extreme temperature cycling resistance',
+            'Moisture and condensation resistance',
+            'Thermal expansion compatibility',
+            'Insulation value enhancement'
+          ]
+        },
+        {
+          title: 'Packaging Area Systems',
+          description: 'Clean, dust-free systems for packaging operations',
+          features: [
+            'Ultra-smooth finish quality',
+            'Dust-free surface properties',
+            'Easy cleaning and maintenance',
+            'Contamination prevention design'
+          ]
+        },
+        {
+          title: 'Clean Room Systems',
+          description: 'Controlled environment systems for sensitive food processing',
+          features: [
+            'Clean room classification compliance',
+            'Ultra-low particle generation',
+            'Anti-static properties available',
+            'Pharmaceutical-grade cleanliness'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Food & Beverage Facility Transformations',
+      subtitle: 'See how FDA-compliant flooring enhances food safety and production efficiency:',
+      items: [
+        { title: 'Dairy Processing Plant Installation', location: 'Cincinnati Food Processing District' },
+        { title: 'Beverage Bottling Facility Floor', location: 'Northern Kentucky Bottling Plant' },
+        { title: 'Meat Processing Facility Upgrade', location: 'West Chester Food Hub' },
+        { title: 'Bakery Production Floor Coating', location: 'Mason Food Processing Center' },
+        { title: 'Cold Storage Warehouse Floor', location: 'Hamilton County Cold Storage' },
+        { title: 'Food Packaging Facility Installation', location: 'Anderson Township Food Park' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Enhance Your Food Safety Standards?',
+      description: 'Get a free FDA compliance assessment and discover how professional food-grade flooring can improve your facility safety and regulatory compliance.'
+    }
+  },
+
+  automotiveFlooring: {
+    seo: {
+      title: 'Automotive Facility Flooring | Auto Industry Floor Coatings | Queen City Surface Coatings',
+      description: 'Specialized flooring solutions for automotive facilities. Chemical-resistant, conductive concrete coatings designed for automotive manufacturing and service environments.',
+      keywords: 'automotive facility flooring, auto manufacturing floors, automotive service flooring, paint booth flooring, automotive industry coating, car dealership floors cincinnati'
+    },
+    hero: {
+      tagline: 'Engineered for Automotive Excellence',
+      headline: 'Automotive Facility Flooring',
+      subheadline: 'Drive performance with flooring designed for the automotive industry. From manufacturing plants to service centers, our specialized systems handle oils, solvents, and automotive processes with precision-engineered reliability.',
+      image: {
+        src: '/assets/images/services/automotive-flooring.webp',
+        alt: 'Professional automotive facility flooring with specialized coating'
+      },
+      ctas: [
+        { text: 'Get Automotive Quote', href: '/company/contact', type: 'primary' },
+        { text: 'View Automotive Projects', href: '/portfolio', type: 'outline' }
+      ]
+    },
+    intro: {
+      title: 'Where Precision Meets Performance',
+      content: [
+        'Automotive facilities demand flooring that performs as precisely as the vehicles they produce or service. From assembly lines to paint booths, service bays to showrooms, every surface must meet exacting standards for safety, performance, and appearance.',
+        'Our automotive facility flooring systems are engineered specifically for the automotive industry. We understand the unique challenges of automotive chemicals, precision requirements, and safety standards that define successful automotive operations.'
+      ]
+    },
+    differentiators: {
+      title: 'Why Automotive Facilities Choose Professional Flooring',
+      subtitle: 'Automotive excellence demands flooring that meets industry standards - here\'s why professional installation is essential:',
+      features: [
+        {
+          title: 'Automotive Chemical Resistance',
+          description: 'Superior protection against oils, solvents, hydraulic fluids, and automotive chemicals'
+        },
+        {
+          title: 'Conductive & Anti-Static Options',
+          description: 'Static control systems for paint booths and electronics assembly areas'
+        },
+        {
+          title: 'Paint Booth Approved',
+          description: 'Specialized formulations approved for automotive paint and finishing operations'
+        },
+        {
+          title: 'Heavy Equipment Compatible',
+          description: 'Designed for automotive lifts, assembly equipment, and heavy automotive machinery'
+        },
+        {
+          title: 'Professional Appearance',
+          description: 'Clean, professional aesthetics that enhance automotive facility image and safety'
+        }
+      ]
+    },
+    process: {
+      title: 'Your Automotive Flooring Installation Journey',
+      subtitle: 'From assessment to production-ready - here\'s how we deliver automotive-grade flooring:',
+      steps: [
+        {
+          number: 1,
+          title: 'Automotive Assessment',
+          items: [
+            'Automotive facility and process analysis',
+            'Chemical exposure and equipment evaluation',
+            'Safety and industry standards review',
+            'Automotive-specific flooring specification'
+          ]
+        },
+        {
+          number: 2,
+          title: 'Production Planning',
+          items: [
+            'Coordinate with automotive production schedules',
+            'Minimize manufacturing downtime',
+            'Safety protocols for active automotive facilities',
+            'Phased installation for continuous operations'
+          ]
+        },
+        {
+          number: 3,
+          title: 'Automotive Installation',
+          items: [
+            'Automotive-grade coating systems',
+            'Conductive and anti-static applications',
+            'Paint booth compatible formulations',
+            'Automotive quality control standards'
+          ]
+        },
+        {
+          number: 4,
+          title: 'Performance Validation',
+          items: [
+            'Automotive chemical resistance testing',
+            'Conductivity and static control verification',
+            'Industry compliance validation',
+            'Automotive warranty activation'
+          ]
+        },
+        {
+          number: 5,
+          title: 'Production Ready',
+          items: [
+            'Final automotive facility inspection',
+            'Rapid return to automotive production',
+            'Automotive maintenance protocols',
+            'Your enhanced automotive facility'
+          ]
+        }
+      ]
+    },
+    collections: {
+      title: 'Automotive Flooring System Options',
+      subtitle: 'Choose from our automotive-specific flooring systems designed for industry excellence:',
+      items: [
+        {
+          title: 'Manufacturing Assembly Systems',
+          description: 'Heavy-duty systems for automotive assembly operations',
+          features: [
+            'Assembly line equipment compatibility',
+            'Heavy automotive machinery support',
+            'Oil and solvent resistance',
+            'Production line marking integration'
+          ]
+        },
+        {
+          title: 'Paint Booth Systems',
+          description: 'Specialized systems for automotive paint and finishing',
+          features: [
+            'Paint booth approved formulations',
+            'Conductive and anti-static properties',
+            'Solvent and paint chemical resistance',
+            'Easy cleaning for paint environments'
+          ]
+        },
+        {
+          title: 'Service Bay Systems',
+          description: 'Durable systems for automotive service operations',
+          features: [
+            'Oil stain and hydraulic fluid resistance',
+            'Impact resistance for dropped tools',
+            'Easy cleanup of automotive fluids',
+            'Professional service center appearance'
+          ]
+        },
+        {
+          title: 'Showroom Systems',
+          description: 'Attractive systems for automotive showrooms and sales',
+          features: [
+            'High-gloss professional appearance',
+            'Easy maintenance for high-traffic areas',
+            'Custom colors for brand consistency',
+            'Impressive customer presentation'
+          ]
+        },
+        {
+          title: 'Parts Storage Systems',
+          description: 'Organized systems for automotive parts and inventory',
+          features: [
+            'Easy marking and organization',
+            'Forklift and equipment traffic resistance',
+            'Dust-free parts storage environment',
+            'Inventory management line integration'
+          ]
+        }
+      ]
+    },
+    portfolio: {
+      title: 'Automotive Facility Transformations',
+      subtitle: 'See how automotive-grade flooring enhances production quality and operational efficiency:',
+      items: [
+        { title: 'Auto Assembly Plant Floor Upgrade', location: 'Cincinnati Automotive District' },
+        { title: 'Car Dealership Showroom Installation', location: 'West Chester Auto Mall' },
+        { title: 'Paint Booth Facility Coating', location: 'Northern Kentucky Auto Plant' },
+        { title: 'Service Center Floor Renovation', location: 'Mason Automotive Complex' },
+        { title: 'Parts Distribution Center Floor', location: 'Hamilton County Auto Parts Hub' },
+        { title: 'Collision Repair Shop Upgrade', location: 'Anderson Township Auto Center' }
+      ]
+    },
+    contact: {
+      title: 'Ready to Enhance Your Automotive Operations?',
+      description: 'Get a free automotive facility assessment and discover how specialized automotive flooring can improve your production quality and operational efficiency.'
     }
   }
 };
@@ -2377,161 +4023,161 @@ export const texturedConcreteServices = {
 
   flakeSystems: {
     seo: {
-      title: 'Flake Systems | Decorative Flake Flooring | Queen City Surface Coatings',
-      description: 'Your current offering - decorative flake systems with custom color combinations and artistic distribution patterns for enhanced texture and slip resistance.',
+      title: 'Flake Systems | Premium Decorative Flake Flooring | Queen City Surface Coatings',
+      description: 'Transform your space with our most popular flake flooring systems. Custom color combinations, professional application, and superior durability for stunning, slip-resistant surfaces.',
       keywords: 'flake systems, decorative flake flooring, color flake concrete, garage flake coating, textured flake finish Cincinnati'
     },
     hero: {
-      tagline: 'Your Current Offering',
-      headline: 'Flake Systems',
-      subheadline: 'Transform surfaces with decorative flake systems offering custom color combinations, controlled distribution patterns, and enhanced slip resistance with artistic flair.',
+      tagline: 'Our Most Popular Choice',
+      headline: 'Premium Flake Systems',
+      subheadline: 'Discover why flake systems are our most requested flooring solution. Beautiful, durable, and practical - the perfect combination of style and performance that transforms any space.',
       image: {
-        src: '/assets/images/new-projects/blue_metalic.webp',
-        alt: 'Decorative flake system with custom color combination'
+        src: '/assets/images/services/concrete_flake.webp',
+        alt: 'Premium flake system flooring with beautiful color combinations'
       },
       ctas: [
-        { text: 'Schedule Flake Consultation', href: '/company/contact', type: 'primary' },
-        { text: 'View Flake Gallery', href: '/portfolio', type: 'outline' }
+        { text: 'Get Your Flake Quote', href: '/company/contact', type: 'primary' },
+        { text: 'See Flake Transformations', href: '/portfolio', type: 'outline' }
       ]
     },
     intro: {
-      title: 'Artistic Flake Distribution and Color Mastery',
+      title: 'The Most Popular Choice for Good Reason',
       content: [
-        'Flake Systems represent one of our established specialties, offering decorative enhancement through controlled flake distribution and custom color combinations. Our artistic approach to flake application creates surfaces with enhanced texture, improved slip resistance, and distinctive visual appeal.',
-        'Beyond basic flake broadcasting, we employ artistic techniques for flake density control, color blending, and pattern development that transforms ordinary surfaces into visually striking installations with functional performance benefits.'
+        'Flake systems have earned their reputation as our most popular flooring solution because they deliver the perfect balance of beauty, durability, and practicality. These versatile systems transform ordinary concrete into stunning surfaces that combine visual appeal with exceptional performance.',
+        'With endless color combinations, superior slip resistance, and proven long-term durability, flake systems provide the ideal solution for homeowners and businesses who want floors that look amazing and perform flawlessly for years to come.'
       ]
     },
     differentiators: {
-      title: 'Our Flake System Expertise',
-      subtitle: 'Years of flake system experience deliver superior results:',
+      title: 'Why Flake Systems Are #1',
+      subtitle: 'Discover what makes flake systems our most popular and requested flooring solution:',
       features: [
         {
-          title: 'Custom Flake Color Combinations',
-          description: 'Expert color selection and blending to create unique flake combinations tailored to your design'
+          title: 'Unmatched Beauty & Versatility',
+          description: 'Hundreds of color combinations create stunning floors that complement any design style or space'
         },
         {
-          title: 'Controlled Density and Distribution',
-          description: 'Precise control over flake density and distribution patterns for consistent, professional results'
+          title: 'Superior Durability',
+          description: 'Proven long-term performance that outlasts traditional flooring while maintaining its beautiful appearance'
         },
         {
-          title: 'Artistic Pattern Development',
-          description: 'Creative flake arrangement and patterning techniques for enhanced visual appeal'
+          title: 'Enhanced Safety',
+          description: 'Built-in slip resistance provides secure footing without compromising the beautiful finish'
         },
         {
-          title: 'Enhanced Surface Texture',
-          description: 'Improved tactile quality and surface interest through strategic flake integration'
+          title: 'Easy Maintenance',
+          description: 'Simple cleaning routine keeps your floors looking new with minimal effort and no special products'
         },
         {
-          title: 'Slip Resistance Enhancement',
-          description: 'Functional slip resistance improvement through controlled flake texture'
+          title: 'Exceptional Value',
+          description: 'Premium appearance and performance at a fraction of the cost of high-end flooring alternatives'
         }
       ]
     },
     process: {
-      title: 'Flake System Installation Process',
-      subtitle: 'Our systematic approach ensures optimal flake distribution and appearance:',
+      title: 'Professional Flake System Installation',
+      subtitle: 'Our proven process ensures beautiful, long-lasting results every time:',
       steps: [
         {
           number: 1,
-          title: 'Flake Design Planning',
+          title: 'Design Consultation',
           items: [
-            'Color combination selection and planning',
-            'Density and distribution pattern design',
-            'Texture level specification',
-            'Visual impact planning'
+            'Color combination selection with samples',
+            'Coverage density recommendations',
+            'Performance requirements assessment',
+            'Custom design visualization'
           ]
         },
         {
           number: 2,
-          title: 'Surface Preparation',
+          title: 'Expert Surface Preparation',
           items: [
-            'Professional substrate preparation',
-            'Surface optimization for flake adhesion',
-            'Base coat preparation',
-            'Quality control checkpoint'
+            'Professional concrete preparation',
+            'Surface profile optimization',
+            'Crack repair and leveling',
+            'Clean, dust-free environment'
           ]
         },
         {
           number: 3,
-          title: 'Base Coat Application',
+          title: 'Premium Base Coat',
           items: [
-            'Premium base coat installation',
-            'Optimal wet film thickness',
-            'Uniform coverage verification',
-            'Timing optimization for flake broadcast'
+            'High-performance epoxy application',
+            'Perfect wet film thickness',
+            'Complete coverage verification',
+            'Optimal timing for flake application'
           ]
         },
         {
           number: 4,
-          title: 'Artistic Flake Broadcasting',
+          title: 'Professional Flake Application',
           items: [
-            'Strategic flake distribution',
-            'Color blending and pattern creation',
-            'Density control and consistency',
-            'Artistic enhancement techniques'
+            'Even flake distribution technique',
+            'Perfect color blend achievement',
+            'Consistent coverage density',
+            'Quality control throughout'
           ]
         },
         {
           number: 5,
-          title: 'Protective Finishing',
+          title: 'Protective Top Coat',
           items: [
-            'Excess flake removal and preparation',
-            'Protective topcoat application',
-            'Final surface refinement',
-            'Quality inspection and approval'
+            'Excess flake removal',
+            'Premium protective coating',
+            'Smooth, durable finish',
+            'Final quality inspection'
           ]
         }
       ]
     },
     collections: {
-      title: 'Flake System Variations',
-      subtitle: 'Choose from our flake system specialties:',
+      title: 'Popular Flake System Options',
+      subtitle: 'Choose the perfect flake system for your space:',
       items: [
         {
-          title: 'Multi-Color Blend Systems',
-          description: 'Artistic multi-color flake combinations',
+          title: 'Full Broadcast Systems',
+          description: 'Maximum coverage for stunning visual impact',
           features: [
-            'Custom color blend development',
-            'Harmonious color coordination',
-            'Artistic color distribution',
-            'Unique visual character'
+            'Complete flake coverage',
+            'Bold, dramatic appearance',
+            'Maximum slip resistance',
+            'Hide surface imperfections perfectly'
           ]
         },
         {
-          title: 'High-Density Coverage',
-          description: 'Maximum flake coverage for bold visual impact',
+          title: 'Partial Broadcast Systems',
+          description: 'Balanced coverage for elegant sophistication',
           features: [
-            'Full coverage flake distribution',
-            'Bold visual statement',
-            'Maximum texture enhancement',
-            'Superior slip resistance'
+            'Professional, refined appearance',
+            'Shows base color beautifully',
+            'Excellent slip resistance',
+            'Popular choice for most spaces'
           ]
         },
         {
-          title: 'Controlled Sparse Patterns',
-          description: 'Artistic sparse flake distribution',
+          title: 'Custom Color Combinations',
+          description: 'Personalized colors to match your vision',
           features: [
-            'Controlled minimal flake density',
-            'Sophisticated subtle texture',
-            'Clean contemporary appearance',
-            'Artistic restraint and elegance'
+            'Unlimited color possibilities',
+            'Match existing décor perfectly',
+            'Create unique, signature looks',
+            'Professional color consultation included'
           ]
         },
         {
-          title: 'Custom Artistic Patterns',
-          description: 'Completely custom flake arrangements',
+          title: 'Premium Blend Collections',
+          description: 'Curated color combinations that work beautifully',
           features: [
-            'Unique artistic flake patterns',
-            'Creative distribution techniques',
-            'Personalized design elements',
-            'Signature flake artistry'
+            'Professionally designed combinations',
+            'Proven popular color schemes',
+            'Takes guesswork out of selection',
+            'Guaranteed beautiful results'
           ]
         }
       ]
     },
     contact: {
-      title: 'Ready for Artistic Flake Enhancement?',
-      description: 'Discover how our flake systems can enhance your space with custom colors, artistic distribution, and functional texture. Schedule your consultation today.'
+      title: 'Ready for Your Dream Floor?',
+      description: 'Join thousands of satisfied customers who chose our most popular flake systems. Beautiful, durable, and practical - see why flake systems are the #1 choice. Schedule your consultation today!'
     }
   },
 
@@ -3033,7 +4679,7 @@ export const concreteServices = {
       },
       ctas: [
         { text: 'Get System Recommendation', href: '/company/contact', type: 'primary' },
-        { text: 'Compare Coating Types', href: '/resources', type: 'outline' }
+        { text: 'View Portfolio', href: '/portfolio', type: 'outline' }
       ]
     },
     intro: {

@@ -676,12 +676,12 @@ export const companyPages = {
           type: 'features',
           title: 'Why Call Us Today?',
           items: [
-            '📞 Immediate response and scheduling',
-            '📋 Detailed, comprehensive estimates',
-            '🇺🇸 Veteran-owned and operated',
-            '🛡️ Licensed, bonded, and insured',
-            '⭐ 100% satisfaction guarantee',
-            '🚀 Fast, professional installation'
+            'Immediate response and scheduling',
+            'Detailed, comprehensive estimates',
+            'Veteran-owned and operated',
+            'Licensed, bonded, and insured',
+            '100% satisfaction guarantee',
+            'Fast, professional installation'
           ]
         },
         {
@@ -717,12 +717,12 @@ export const companyPages = {
         {
           type: 'text',
           title: 'Military Precision Meets Technical Expertise',
-          content: '<p>Queen City Surface Coatings represents the perfect fusion of military discipline and concrete coating mastery. Founded in 2025 by Marine Corps veteran John Leonard, our company brings the same precision and attention to detail that was essential in combat zones to every concrete coating project throughout the Cincinnati tri-state area.</p>   <p>After serving his country with honor through two combat tours in Iraq and Afghanistan, John returned to Cincinnati with a mission: to build something meaningful for his community and family. With over 10 years in the construction industry and the discipline learned through military service, Queen City Surface Coatings represents more than just another contractor—we\'re your neighbors, committed to transforming spaces with military-grade standards and craftsmanship excellence.</p>'
+          content: '<p style="margin-bottom: 6rem; text-indent: 2rem; line-height: 2.0;">Queen City Surface Coatings represents the perfect fusion of military discipline and concrete coating mastery. Founded in 2025 by Marine Corps veteran John Leonard, our company brings the same precision and attention to detail that was essential in combat zones to every concrete coating project throughout the Cincinnati tri-state area.</p><p style="margin-bottom: 6rem; text-indent: 2rem; line-height: 2.0;">After serving his country with honor through two combat tours in Iraq and Afghanistan, John returned to Cincinnati with a mission: to build something meaningful for his community and family. With over 10 years in the construction industry and the discipline learned through military service, Queen City Surface Coatings represents more than just another contractor—we\'re your neighbors, committed to transforming spaces with military-grade standards and craftsmanship excellence.</p>'
         },
         {
           type: 'text',
           title: 'From Marine Infantry to Master Craftsman',
-          content: '<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;"><div><p>As a Marine Corps Infantry Machine Gunner, John Leonard learned that attention to detail isn\'t just important—it\'s a matter of life and death. That same unwavering commitment to precision drives every aspect of Queen City Surface Coatings today.</p><p>Whether maintaining weapons systems in combat zones or leading fellow Marines through challenging missions, there was never room for "good enough." This military-forged discipline now ensures that every surface preparation, every coating application, and every finishing detail meets the highest possible standards.</p><p>The transition from military service to concrete coating specialist wasn\'t just a career change—it was a continuation of the same commitment to excellence, reliability, and precision that defines military service.</p></div><div style="text-align: center;"><img src="/assets/images/new-projects/John.Leonard.jpg" alt="John Leonard, Marine Corps Veteran and Founder of Queen City Surface Coatings" style="width: 100%; max-width: 300px; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" /></div></div>'
+          content: '<div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem;"><div><p style="margin-bottom: 6rem; text-indent: 2rem; line-height: 2.0;">As a Marine Corps Infantry Machine Gunner, John Leonard learned that attention to detail isn\'t just important—it\'s a matter of life and death. That same unwavering commitment to precision drives every aspect of Queen City Surface Coatings today.</p><p style="margin-bottom: 6rem; text-indent: 2rem; line-height: 2.0;">Whether maintaining weapons systems in combat zones or leading fellow Marines through challenging missions, there was never room for "good enough." This military-forged discipline now ensures that every surface preparation, every coating application, and every finishing detail meets the highest possible standards.</p><p style="margin-bottom: 6rem; text-indent: 2rem; line-height: 2.0;">The transition from military service to concrete coating specialist wasn\'t just a career change—it was a continuation of the same commitment to excellence, reliability, and precision that defines military service.</p></div><div style="text-align: center;"><img src="/assets/images/new-projects/John.Leonard.jpg" alt="John Leonard, Marine Corps Veteran and Founder of Queen City Surface Coatings" style="width: 100%; max-width: 300px; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" /></div></div>'
         },
         {
           type: 'text',
@@ -771,100 +771,3 @@ export const companyPages = {
   }
 };
 
-export const resourcePages = {
-  warranty: {
-    seo: {
-      title: 'Concrete Coating Warranty | Queen City Surface Coatings',
-      description: 'Learn about our comprehensive warranty coverage for concrete coating services. We stand behind our work with industry-leading guarantees.',
-      keywords: 'concrete coating warranty, epoxy floor guarantee, coating warranty Cincinnati'
-    },
-    hero: {
-      title: 'Our Warranty Promise',
-      subtitle: 'Guaranteed Quality You Can Trust',
-      description: 'We stand behind our work with comprehensive warranty protection for all concrete coating services.',
-      showBreadcrumbs: true,
-      breadcrumbs: [
-        {label: 'Home', href: '/'},
-        {label: 'Resources', href: '/resources'},
-        {label: 'Warranty', href: '/resources/warranty'}
-      ]
-    },
-    content: {
-      sections: [
-        {
-          type: 'text',
-          title: 'Comprehensive Coverage',
-          content: '<p>Our warranty covers materials and workmanship, ensuring your investment is protected. We use only premium materials and proven installation methods to deliver lasting results.</p>'
-        },
-        {
-          type: 'features',
-          title: 'Warranty Includes',
-          items: [
-            '🛡️ Material defect protection',
-            '🔧 Workmanship guarantee',
-            '📞 Responsive service support',
-            '💯 Satisfaction assurance',
-            '📋 Clear terms and conditions',
-            '⚡ Quick resolution process'
-          ]
-        },
-        {
-          type: 'cta',
-          title: 'Questions About Our Warranty?',
-          content: 'Contact us for detailed warranty information and coverage details.',
-          ctaText: 'Contact for Warranty Details',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        }
-      ]
-    }
-  },
-
-  colorGallery: {
-    seo: {
-      title: 'Concrete Coating Color Gallery | Queen City Surface Coatings',
-      description: 'Browse our extensive color gallery for concrete coatings. See metallic epoxy patterns, solid colors, and custom finishes for your project.',
-      keywords: 'concrete coating colors, epoxy color gallery, metallic epoxy patterns, coating color options, custom finishes Cincinnati'
-    },
-    hero: {
-      title: 'Color Gallery',
-      subtitle: 'Explore Our Stunning Finishes',
-      description: 'Browse our extensive collection of concrete coating colors and finishes to find the perfect look for your space.',
-      showBreadcrumbs: true,
-      breadcrumbs: [
-        {label: 'Home', href: '/'},
-        {label: 'Resources', href: '/resources'},
-        {label: 'Color Gallery', href: '/resources/color-gallery'}
-      ]
-    },
-    content: {
-      sections: [
-        {
-          type: 'text',
-          title: 'Find Your Perfect Color',
-          content: '<p>Our concrete coatings are available in hundreds of color combinations and finishes. From subtle earth tones to bold metallic effects, we have options to match any style.</p><p>Schedule a consultation to see physical samples and discuss custom color matching for your project.</p>'
-        },
-        {
-          type: 'features',
-          title: 'Color Options Available',
-          items: [
-            '🎨 Solid color epoxy systems',
-            '✨ Metallic epoxy with artistic patterns',
-            '🌈 Custom color matching available',
-            '🪨 Decorative chip and flake systems',
-            '💎 Pearl and mica finishes',
-            '🎯 Logo and design integration'
-          ]
-        },
-        {
-          type: 'cta',
-          title: 'See Colors in Person',
-          content: 'Request physical samples to see exactly how your chosen colors will look in your space.',
-          ctaText: 'Request Color Samples',
-          ctaHref: '/company/contact',
-          ctaSecondary: {text: 'Call (513) 296-5525', href: 'tel:+15132965525'}
-        }
-      ]
-    }
-  }
-};

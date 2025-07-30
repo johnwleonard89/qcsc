@@ -13,7 +13,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
   <Container>
     <div class="footer-grid__container">
       <div class="footer-brand__container">
-        <div>
+        <div class="logo-container">
           <slot name="logo" />
         </div>
         <ul class="footer-socials__list">
@@ -72,14 +72,24 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
   }
+  .footer-brand__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-container {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
   .footer-socials__list {
-    margin: 1rem 0;
+    margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
+    justify-content: flex-start;
+    gap: 1rem;
   }
   .footer-socials__item {
-    margin-right: 0.5rem;
+    margin: 0;
   }
   .footer-link__list {
     margin: 0;

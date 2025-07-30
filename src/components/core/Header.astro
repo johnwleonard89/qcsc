@@ -90,7 +90,16 @@ const { navData, rightMenu } = Astro.props;
               {navItem.dropdown && (
                 <ul class="dropdown-menu">
                   {navItem.dropdown.map(dropdownItem => (
-                    <li><a href={dropdownItem.slug}>{dropdownItem.title}</a></li>
+                    <li class={dropdownItem.submenu ? 'dropdown-submenu' : ''}>
+                      <a href={dropdownItem.slug}>{dropdownItem.title}</a>
+                      {dropdownItem.submenu && (
+                        <ul class="submenu">
+                          {dropdownItem.submenu.map(submenuItem => (
+                            <li><a href={submenuItem.slug}>{submenuItem.title}</a></li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
                   ))}
                 </ul>
               )}
@@ -258,6 +267,69 @@ const { navData, rightMenu } = Astro.props;
     color: #1f2937;
     opacity: 1;
   }
+  
+  /* Submenu Styles */
+  .dropdown-submenu {
+    position: relative;
+  }
+  
+  .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  
+  .submenu li {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .submenu li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    color: #374151;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .submenu li a:hover {
+    background-color: #f9fafb;
+    color: #1f2937;
+    opacity: 1;
+  }
+  
+  /* Ensure dropdown-submenu items have proper indicator */
+  .dropdown-submenu > a::after {
+    content: '▶';
+    float: right;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    margin-left: 0.5rem;
+  }
   @media(max-width: 768px) {
     header {
       padding: 1rem;
@@ -344,6 +416,40 @@ const { navData, rightMenu } = Astro.props;
       width: 100%;
       box-sizing: border-box;
       text-align: center;
+    }
+    
+    /* Mobile submenu styles */
+    .submenu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .submenu li {
+      width: 100%;
+    }
+    
+    .submenu li a {
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 0.5rem 1rem;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      color: #6b7280;
+    }
+    
+    .dropdown-submenu > a::after {
+      display: none;
     }
   }
   

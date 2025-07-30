@@ -1,12 +1,17 @@
 ---
-import StandardPageTemplate from '../../templates/StandardPageTemplate.astro';
-import { servicePages } from '../../data/pageTemplates.js';
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
 
-const pageData = servicePages.basementFloorCoating;
+const pageData = residentialServices.basementFloorCoating;
 ---
 
-<StandardPageTemplate 
+<PremiumServiceTemplate 
   seo={pageData.seo}
   hero={pageData.hero}
-  content={pageData.content}
+  intro={pageData.intro}
+  differentiators={pageData.differentiators}
+  process={pageData.process}
+  collections={pageData.collections}
+  portfolio={pageData.portfolio}
+  contact={pageData.contact}
 />

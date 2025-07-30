@@ -8,221 +8,435 @@ const pageData = companyPages.about;
 ---
 
 <Layout seo={pageData.seo}>
-  <!-- Simple Hero Section - Clean Background -->
-  <section class="bg-white py-16 md:py-20 border-b border-gray-200">
+  <!-- Hero Section with consistent styling -->
+  <section class="hero-section">
     <Container>
-      <div class="max-w-4xl mx-auto text-center">
-        <nav class="mb-8" aria-label="Breadcrumb">
-          <ul class="flex justify-center items-center space-x-2 text-sm">
-            <li class="flex items-center">
-              <a href="/" class="text-primary-600 hover:text-primary-700 transition-colors">
-                Home
-              </a>
-              <span class="mx-2 text-gray-400">→</span>
-            </li>
-            <li class="flex items-center">
-              <span class="text-gray-600 font-medium" aria-current="page">About</span>
-            </li>
-          </ul>
-        </nav>
-        
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          About Queen City Surface Coatings
-        </h1>
-        <p class="text-xl md:text-2xl font-semibold text-primary-600 mb-4">
-          Veteran-Owned Excellence in Concrete Coatings
-        </p>
-        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-          Serving the Cincinnati tri-state area with professional concrete coating solutions built on military precision and family values.
-        </p>
+      <div class="hero-content-about">
+        <div class="hero-text-about">
+          <p class="hero-tagline">Veteran-Owned Excellence</p>
+          <h1 class="hero-headline">About Queen City Surface Coatings</h1>
+          <p class="hero-subheadline">
+            Serving the Cincinnati tri-state area with professional concrete coating solutions built on military precision and family values.
+          </p>
+          <div class="hero-ctas">
+            <a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+            <a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+          </div>
+        </div>
       </div>
     </Container>
   </section>
 
-  <!-- Dynamic Content Sections -->
+  <!-- Content Sections with consistent styling -->
   {pageData.content.sections.map((section, index) => (
-    <section class={index % 2 === 0 ? 'py-16 md:py-20 bg-white' : 'py-16 md:py-20 bg-gray-50'}>
+    <section class={index % 2 === 0 ? 'content-section' : 'content-section alt-section'}>
       <Container>
-        <div class="max-w-4xl mx-auto">
-          {section.type === 'text' && (
-            <div>
-              {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-                  {section.title}
-                </h2>
-              )}
-              {section.content && (
-                <div class="prose prose-lg md:prose-xl mx-auto text-gray-600 leading-relaxed" set:html={section.content} />
-              )}
-            </div>
-          )}
-
-          {section.type === 'features' && (
-            <div class="text-center">
-              {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-                  {section.title}
-                </h2>
-              )}
-              {section.items && (
-                <div class="grid grid-template-columns-4 gap-8 max-w-6xl mx-auto">
-                  {section.items.map((item) => (
-                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-                      <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                        {item}
-                      </h3>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {section.type === 'cta' && (
-            <div class="text-center">
-              {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  {section.title}
-                </h2>
-              )}
-              {section.content && (
-                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                  {section.content}
-                </p>
-              )}
-              <div class="hero-ctas">
-                <a href="/company/contact" class="btn btn-primary btn-large">Get Your Free Estimate</a>
-                <a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+        {section.type === 'text' && (
+          <div class="text-section">
+            {section.title && (
+              <div class="section-header">
+                <h2>{section.title}</h2>
               </div>
-            </div>
-          )}
+            )}
+            {section.content && (
+              <div class="text-content" set:html={section.content} />
+            )}
+          </div>
+        )}
 
-          {section.type === 'contact' && (
-            <div class="text-center">
-              {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                  {section.title}
-                </h2>
-              )}
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <div class="bg-gradient-to-br from-blue-900 to-blue-800 p-8 rounded-xl border border-blue-700">
-                  <div class="text-center">
-                    <div class="text-4xl mb-4">📞</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Call Now</h3>
-                    <a 
-                      href="tel:+15132965525" 
-                      class="btn btn-primary btn-large"
-                    >
-                      (513) 296-5525
-                    </a>
+        {section.type === 'features' && (
+          <div class="features-section">
+            {section.title && (
+              <div class="section-header">
+                <h2>{section.title}</h2>
+              </div>
+            )}
+            {section.items && (
+              <div class="features-grid">
+                {section.items.map((item) => (
+                  <div class="feature-card">
+                    <h3>{item}</h3>
                   </div>
-                </div>
-                
-                <div class="bg-gradient-to-br from-blue-900 to-blue-800 p-8 rounded-xl border border-blue-700">
-                  <div class="text-center">
-                    <div class="text-4xl mb-4">📧</div>
-                    <h3 class="text-xl font-bold text-white mb-4">Email Us</h3>
-                    <a 
-                      href="mailto:john@queencitysurfacecoatings.com" 
-                      class="btn btn-outline btn-large"
-                    >
-                      Send Email
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
-            </div>
-          )}
+            )}
+          </div>
+        )}
 
-          {section.type === 'form' && (
-            <div class="text-center">
-              {section.title && (
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                  {section.title}
-                </h2>
-              )}
-              {section.content && (
-                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                  {section.content}
-                </p>
-              )}
-              <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                <QuoteRequestForm />
+        {section.type === 'cta' && (
+          <div class="cta-section">
+            {section.title && (
+              <div class="section-header">
+                <h2>{section.title}</h2>
+              </div>
+            )}
+            {section.content && (
+              <p class="large-text">{section.content}</p>
+            )}
+            <div class="hero-ctas">
+              <a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+              <a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+            </div>
+          </div>
+        )}
+
+        {section.type === 'contact' && (
+          <div class="contact-methods-section">
+            {section.title && (
+              <div class="section-header">
+                <h2>{section.title}</h2>
+              </div>
+            )}
+            <div class="contact-methods">
+              <div class="contact-button-wrapper">
+                <p class="contact-label">Call</p>
+                <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                  <div class="contact-details">
+                    <span class="contact-info">(513) 296-5525</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="contact-button-wrapper">
+                <p class="contact-label">Email</p>
+                <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                  <div class="contact-details">
+                    <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                  </div>
+                </a>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
+
+        {section.type === 'form' && (
+          <div class="form-section">
+            {section.title && (
+              <div class="section-header">
+                <h2>{section.title}</h2>
+              </div>
+            )}
+            {section.content && (
+              <p class="large-text">{section.content}</p>
+            )}
+            <div class="form-container">
+              <QuoteRequestForm />
+            </div>
+          </div>
+        )}
       </Container>
     </section>
   ))}
 </Layout>
 
 <style>
-/* Simple grid for features */
-.grid-template-columns-4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+/* Hero Section Styling - consistent with PremiumServiceTemplate */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-  .grid-template-columns-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .grid-template-columns-4 {
-    grid-template-columns: 1fr;
-  }
+.hero-content-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Center headings and add spacing */
-.prose h2,
-.prose h4 {
+.hero-text-about {
   text-align: center;
+  max-width: 800px;
 }
 
-/* Add more spacing to prose content - double-spaced paper style */
-.prose {
-  line-height: 2.2;
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: #FFC107;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
 }
 
-.prose p {
+.hero-headline {
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: #FFC107;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
   margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Content Sections */
+.content-section {
+  padding: 4rem 0;
+}
+
+.alt-section {
+  background: var(--theme-surface-1);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Text Content */
+.text-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-content {
+  font-size: 1.125rem;
+  line-height: 2.0;
+  color: var(--theme-text-secondary);
   text-align: left;
 }
 
-.prose h2 {
-  margin-top: 4rem;
-  margin-bottom: 2.5rem;
+.text-content h2 {
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin: 3rem 0 2rem 0;
+  text-align: center;
 }
 
-.prose h4 {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  font-weight: 600;
+.text-content h4 {
   font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin: 2rem 0 1rem 0;
+  text-align: left;
 }
 
-.prose ul {
-  margin-bottom: 2.5rem;
-  margin-top: 1.5rem;
+.text-content p,
+.text-content div p,
+.text-section p,
+.text-section div p {
+  margin-bottom: 6rem !important;
+  margin-top: 0 !important;
+  text-align: left !important;
+  line-height: 2.0 !important;
+  text-indent: 2rem !important;
 }
 
-.prose li {
-  margin-bottom: 1rem;
-  line-height: 2.2;
+/* Global override for all paragraphs in text sections */
+.content-section p {
+  margin-bottom: 6rem !important;
+  text-align: left !important;
+  line-height: 2.0 !important;
+  text-indent: 2rem !important;
 }
 
-.prose strong {
-  display: block;
+.text-content ul {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.text-content li {
+  margin-bottom: 0.75rem;
+  line-height: var(--line-height-relaxed);
+}
+
+.text-content strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+}
+
+/* Features Grid */
+.features-section {
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-card-radius);
+  text-align: center;
+  box-shadow: var(--theme-shadow-light);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition);
+  width: 100%;
+  max-width: 300px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.feature-card h3 {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.25rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Methods */
+.contact-methods-section {
+  text-align: center;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Homepage CTA Buttons */
+.contact-button-wrapper {
+  width: 100%;
+}
+
+.contact-label {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+}
+
+.contact-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  padding: 1rem;
+  border-radius: var(--theme-card-radius);
+  border: none;
+  transition: var(--theme-transition);
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  min-height: 60px;
+  justify-content: center;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-phone {
+  background: #FFC107;
+  color: #002F4B;
+}
+
+.contact-button-phone:hover {
+  background: #E6AC00;
+  color: #002F4B;
+}
+
+.contact-button-email {
+  background: #002F4B;
+  color: white;
+}
+
+.contact-button-email:hover {
+  background: #001f36;
+  color: white;
+}
+
+.contact-button-email .contact-info {
+  color: #FFC107;
+  font-size: 0.9rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-details .contact-info {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+}
+
+/* Form Section */
+.form-section {
+  text-align: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  border: 1px solid var(--theme-border-light);
+}
+
+/* Buttons */
 .hero-ctas {
   display: flex;
   gap: 1.5rem;
@@ -284,8 +498,76 @@ const pageData = companyPages.about;
   text-decoration: none;
 }
 
-/* Mobile Responsive */
+/* Hero section button overrides */
+.hero-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #002F4B !important;
+}
+
+.hero-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #002F4B !important;
+}
+
+.hero-section .btn-outline {
+  background: transparent !important;
+  border-color: #FFC107 !important;
+  color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #002F4B !important;
+}
+
+/* Force paragraph spacing with highest specificity */
+.content-section .text-content p {
+  margin-bottom: 6rem !important;
+  text-indent: 2rem !important;
+  line-height: 2.0 !important;
+}
+
+/* Force for any nested divs */
+.content-section .text-content div p {
+  margin-bottom: 6rem !important;
+  text-indent: 2rem !important;
+  line-height: 2.0 !important;
+}
+
+/* Ultra-specific targeting */
+section.content-section div.text-content p {
+  margin-bottom: 6rem !important;
+  text-indent: 2rem !important;
+  line-height: 2.0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .hero-ctas {
     flex-direction: column;
     align-items: center;
@@ -294,6 +576,28 @@ const pageData = companyPages.about;
   .btn {
     width: 100%;
     max-width: 300px;
+  }
+  
+  .contact-methods {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .large-text {
+    font-size: 1.125rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
   }
 }
 </style>

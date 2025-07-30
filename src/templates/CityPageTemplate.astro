@@ -45,18 +45,24 @@ const { seo, city, intro, services, landmarks, whyChooseUs, testimonials, faqs }
 
 <Layout seo={seo}>
   <!-- Hero Section -->
-  <section class="bg-white py-16 md:py-20 border-b border-gray-200">
+  <section class="custom-hero">
     <Container>
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          {city.fullName}
-        </h1>
-        <p class="text-xl md:text-2xl font-semibold text-primary-600 mb-4">
-          Professional Concrete Coating Services
+      <div class="custom-hero-content">
+        <h1>{city.fullName}</h1>
+        <p class="custom-hero-subtitle">
+          Expert concrete coating services in {city.name}, {city.stateAbbr}. 
+          Serving {city.county} County with military precision and lifetime quality.
         </p>
-        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
-          Expert concrete coating services in {city.name}, {city.stateAbbr}. Serving {city.county} County with military precision and lifetime quality.
-        </p>
+        <div class="custom-hero-features">
+          <span class="feature-badge">✓ Veteran-Owned</span>
+          <span class="feature-badge">✓ Licensed & Insured</span>
+          <span class="feature-badge">✓ Free Estimates</span>
+          <span class="feature-badge">✓ Quality Guaranteed</span>
+        </div>
+        <div class="custom-hero-cta">
+          <a href="/company/contact#quote-form" class="cta-primary">Get Free Estimate</a>
+          <a href="tel:+15132965525" class="cta-secondary">(513) 296-5525</a>
+        </div>
       </div>
     </Container>
   </section>
@@ -198,51 +204,337 @@ const { seo, city, intro, services, landmarks, whyChooseUs, testimonials, faqs }
     </Container>
   </section>
 
-  <!-- CTA Section with Triple Buttons -->
-  <section class="py-20 md:py-24 bg-gradient-to-r from-primary-50 to-blue-50">
+  <!-- Contact Section -->
+  <section class="contact-section">
     <Container>
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your {city.name} Property?
-        </h2>
-        <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Get your free estimate today and discover why {city.name} chooses Queen City Surface Coatings for their concrete coating needs.
-        </p>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Ready to Transform Your {city.name} Property?</h2>
+          <p>Experience the Queen City Surface Coatings difference with military precision installation and premium materials backed by our satisfaction guarantee. Get your free {city.name} consultation today.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Call</p>
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <div class="contact-details">
+                  <span class="contact-info">(513) 296-5525</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Email</p>
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <div class="contact-details">
+                  <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
         
-        <!-- Triple Button Layout -->
-        <div class="flex flex-col lg:flex-row gap-4 justify-center items-center max-w-4xl mx-auto">
-          <!-- Main Quote Button -->
-          <a 
-            href="/company/contact" 
-            class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-blue-600 text-white font-bold text-xl rounded-xl hover:from-primary-700 hover:to-blue-700 transform hover:-translate-y-1 hover:shadow-cta-hover transition-all duration-300 uppercase tracking-wide min-w-[280px] text-center"
-          >
-            Get Free Quote for {city.name}
-            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-          </a>
-
-          <!-- Call Button -->
-          <a 
-            href="tel:5132965525" 
-            class="inline-flex items-center justify-center px-6 py-4 bg-green-600 text-white font-bold text-lg rounded-xl hover:bg-green-700 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 min-w-[200px] text-center"
-          >
-            📞 Call Now
-            <span class="ml-2 font-mono text-sm">(513) 296-5525</span>
-          </a>
-
-          <!-- Email Button -->
-          <a 
-            href={`mailto:john@queencitysurfacecoatings.com?subject=Free%20Estimate%20Request%20for%20${encodeURIComponent(city.name)}&body=Hi!%20I'm%20interested%20in%20getting%20a%20free%20estimate%20for%20concrete%20coating%20services%20in%20${encodeURIComponent(city.name)}.%20Please%20contact%20me%20to%20discuss%20my%20project.`}
-            class="inline-flex items-center justify-center px-6 py-4 border-2 border-primary-600 text-primary-600 font-semibold text-lg rounded-xl hover:bg-primary-600 hover:text-white transition-all duration-300 min-w-[200px] text-center"
-          >
-            📧 Email Us
-          </a>
+        <div class="contact-form">
+          <div class="form-container">
+            <h3>Get Your Free {city.name} Consultation</h3>
+            <p>Fill out our contact form and we'll get back to you within 24 hours with a detailed estimate for your {city.name} project.</p>
+            <a href="/company/contact#quote-form" class="btn btn-primary btn-large">Request Free Consultation</a>
+          </div>
         </div>
       </div>
     </Container>
   </section>
 </Layout>
+
+<style>
+  /* Hero Section Styling */
+  .custom-hero {
+    background: linear-gradient(135deg, #002F4B 0%, #001A2E 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .custom-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .custom-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .custom-hero h1 {
+    color: #FFC107;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .custom-hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .custom-hero-features {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+  .feature-badge {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .feature-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  }
+  .custom-hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-primary {
+    background: linear-gradient(45deg, #FFC107, #FFD700);
+    color: #002F4B;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 4px solid #FFC107;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 250px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 15px 35px rgba(255, 193, 7, 0.7), 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 193, 7, 0.6);
+    }
+  }
+  .cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+  }
+  .cta-primary:hover::before {
+    left: 100%;
+  }
+  .cta-primary:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(255, 193, 7, 0.6), 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  .cta-secondary {
+    background: transparent;
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 3px solid white;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+  }
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    border-color: #FFC107;
+    color: #FFC107;
+  }
+
+  /* Contact Section Styling */
+  .contact-section {
+    background: var(--theme-surface-1);
+    padding: 4rem 0;
+  }
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contact-info h2 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1rem;
+  }
+  .contact-info > p {
+    font-size: 1.125rem;
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 2rem;
+    color: var(--theme-text-secondary);
+  }
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contact-button-wrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+  .contact-label {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: #002F4B;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+  }
+  .contact-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    padding: 1rem;
+    border-radius: var(--theme-card-radius);
+    border: none;
+    transition: var(--theme-transition);
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    min-height: 60px;
+    justify-content: center;
+  }
+  .contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  .contact-button-phone {
+    background: #FFC107;
+    color: #002F4B;
+  }
+  .contact-button-phone:hover {
+    background: #E6AC00;
+    color: #002F4B;
+  }
+  .contact-button-email {
+    background: #002F4B;
+    color: white;
+  }
+  .contact-button-email:hover {
+    background: #001f36;
+    color: white;
+  }
+  .contact-button-email .contact-info {
+    color: #FFC107;
+    font-size: 0.9rem;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-details .contact-info {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+  }
+  .form-container {
+    background: var(--theme-bg);
+    padding: 2rem;
+    border-radius: var(--theme-card-radius);
+    box-shadow: var(--theme-shadow-light);
+    border: 1px solid var(--theme-border-light);
+    text-align: center;
+  }
+  .form-container h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1rem;
+  }
+  .form-container p {
+    color: var(--theme-text-secondary);
+    margin-bottom: 2rem;
+    line-height: var(--line-height-relaxed);
+  }
+  @media (max-width: 768px) {
+    .custom-hero {
+      padding: 2rem 0;
+    }
+    
+    .custom-hero-features {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      justify-content: center;
+    }
+    
+    .feature-badge {
+      font-size: 0.8rem;
+      padding: 0.6rem 1rem;
+      text-align: center;
+    }
+    
+    .custom-hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
 
 <script>
   // FAQ functionality

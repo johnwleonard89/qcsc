@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.garageFloorEpoxy,
+  cityName: 'Middletown',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'Middletown OH Garage Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Middletown, Ohio garage with professional floor coating. Serving Manchester Road, Central Avenue, and all Middletown neighborhoods with guaranteed results.',
+    keywords: 'Middletown OH garage floor coating, Middletown garage floor epoxy, Manchester Road garage flooring, Central Avenue garage coating, Middletown Ohio garage transformation, professional garage floors Middletown OH'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Middletown, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Middletown garages and properties.',
+    neighborhoods: [
+      'Downtown Middletown',
+      'Manchester Road',
+      'Central Avenue',
+      'Dixie Highway',
+      'University Boulevard',
+      'Roosevelt Boulevard',
+      'Verity Parkway',
+      'Germantown Road',
+      'Franklin Street',
+      'Main Street',
+      'First Avenue',
+      'Second Avenue',
+      'Third Avenue',
+      'Fourth Avenue',
+      'Woodside Drive',
+      'Crawford Street',
+      'Marshall Road',
+      'Cincinnati-Dayton Road',
+      'Breiel Boulevard',
+      'Towne Boulevard'
+    ],
+    landmarks: [
+      'Middletown City Hall',
+      'Miami University Middletown',
+      'Sorg Opera House',
+      'Middletown High School',
+      'Smith Park',
+      'Bicentennial Commons',
+      'Middletown Sports Complex',
+      'Armco Park',
+      'Miami Valley Hospital',
+      'Atrium Medical Center',
+      'Middletown Regional Hospital',
+      'Great Miami River',
+      'Butler County',
+      'Middletown Regional Airport',
+      'Central Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

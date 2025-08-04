@@ -1,0 +1,66 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Hamilton',
+  state: 'Ohio',
+  seo: {
+    title: 'Hamilton County Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Hamilton County, Ohio. Serving Cincinnati, Loveland, Mason, Blue Ash, and all Hamilton County communities with military precision installation.',
+    keywords: 'Hamilton County concrete coating, Cincinnati concrete services, Mason OH epoxy flooring, Loveland concrete coating, Blue Ash garage floors, Hamilton County residential coating, commercial concrete Hamilton County Ohio'
+  },
+  hero: {
+    tagline: 'Hamilton County Excellence',
+    headline: 'Professional Concrete Coating Services in Hamilton County, Ohio',
+    subheadline: 'Transform your Hamilton County property with expert concrete coating services. From Cincinnati to Mason, Loveland to Blue Ash, we deliver military precision installation throughout Hamilton County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Hamilton County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Hamilton County properties, from historic Cincinnati neighborhoods to modern suburban developments.',
+    cities: [
+      'Cincinnati',
+      'Loveland',
+      'Mason',
+      'Blue Ash',
+      'Springdale',
+      'Forest Park',
+      'Sharonville',
+      'Evendale',
+      'Madeira',
+      'Milford',
+      'Wyoming',
+      'Reading',
+      'Lockland',
+      'Elmwood Place',
+      'Lincoln Heights',
+      'Glendale',
+      'Woodlawn',
+      'Golf Manor',
+      'Deer Park',
+      'Silverton',
+      'Mariemont',
+      'Terrace Park',
+      'Fairfax',
+      'Indian Hill',
+      'Montgomery',
+      'Symmes Township',
+      'Sycamore Township',
+      'Delhi Township',
+      'Green Township',
+      'Harrison Township',
+      'Miami Township',
+      'Springfield Township',
+      'Colerain Township',
+      'Whitewater Township',
+      'Crosby Township'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

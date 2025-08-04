@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const pressureWashingService = servicesConfig.residential.services.find(s => s.title === "Pressure Washing & Protection");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: pressureWashingService,
+  seo: {
+    title: 'Cincinnati Pressure Washing & Protection | Professional Concrete Cleaning | Queen City Surface Coatings',
+    description: 'Professional pressure washing and concrete protection in Cincinnati, Ohio. High-pressure cleaning for Hyde Park, Clifton, Oakley, and all Cincinnati properties.',
+    keywords: 'Cincinnati pressure washing, Cincinnati concrete cleaning, Hyde Park pressure washing, Clifton concrete protection, Oakley surface cleaning, Cincinnati property maintenance'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional pressure washing and concrete protection services throughout Cincinnati, Ohio. Our high-pressure cleaning systems restore and protect Cincinnati concrete surfaces.',
+    neighborhoods: [
+      'Hyde Park', 'Clifton', 'Mount Adams', 'Oakley', 'East Walnut Hills',
+      'Walnut Hills', 'Mount Lookout', 'Columbia-Tusculum', 'Pleasant Ridge',
+      'Madisonville', 'Kennedy Heights', 'Bond Hill', 'Avondale', 'Corryville',
+      'Over-the-Rhine', 'Downtown', 'West End', 'Price Hill', 'Westwood', 'Northside'
+    ],
+    landmarks: [
+      'Great American Ball Park', 'Paul Brown Stadium', 'Cincinnati Museum Center',
+      'Fountain Square', 'The Banks', 'Newport on the Levee', 'Findlay Market',
+      'Over-the-Rhine Historic District', 'Cincinnati Zoo', 'Eden Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

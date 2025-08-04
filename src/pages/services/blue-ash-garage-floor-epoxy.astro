@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.garageFloorEpoxy,
+  cityName: 'Blue Ash',
+  state: 'Ohio',
+  county: 'Hamilton',
+  seo: {
+    title: 'Blue Ash OH Garage Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Blue Ash, Ohio garage with professional floor coating. Serving Kenwood Road, Reed Hartman Highway, and all Blue Ash neighborhoods with guaranteed results.',
+    keywords: 'Blue Ash OH garage floor coating, Blue Ash garage floor epoxy, Kenwood Road garage flooring, Reed Hartman Highway garage coating, Blue Ash Ohio garage transformation, professional garage floors Blue Ash OH'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Blue Ash, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Blue Ash garages and properties.',
+    neighborhoods: [
+      'Kenwood Road',
+      'Reed Hartman Highway',
+      'Blue Ash Road',
+      'Pfeiffer Road',
+      'Glendale-Milford Road',  
+      'Cornell Road',
+      'Lester Road',
+      'Hunt Road',
+      'Carver Road',
+      'Deerfield Road',
+      'Plainfield Road',
+      'Sharon Road',
+      'Towne Square',
+      'Blue Ash Square',
+      'Kenwood Towne Centre Area',
+      'Sycamore Township',
+      'Montgomery Road',
+      'Cooper Road',
+      'Aldine Avenue',
+      'Dillonvale Avenue'
+    ],
+    landmarks: [
+      'Blue Ash City Hall',
+      'Blue Ash Recreation Center',
+      'Summit Park',
+      'Blue Ash Golf Course',
+      'Kenwood Towne Centre',
+      'Blue Ash Elementary School',
+      'Sycamore High School',
+      'Blue Ash YMCA',
+      'Towne Square Shopping',
+      'Blue Ash Airport',
+      'Reed Hartman Highway Business District',
+      'Kenwood Country Club',
+      'Blue Ash Nature Park',
+      'Miami Meadows Park',
+      'Cooper Creek Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

@@ -1,0 +1,45 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.basementFloorCoating;
+
+// County-specific data
+const countyData = {
+  countyName: 'Campbell',
+  state: 'Kentucky',
+  seo: {
+    title: 'Campbell County Kentucky Basement Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Campbell County basement with professional floor coating. Serving Newport, Fort Thomas, Bellevue, and all Campbell County communities with durable, moisture-resistant basement flooring.',
+    keywords: 'Campbell County basement floor coating, Newport KY basement flooring, Fort Thomas basement coating, Bellevue basement floors, Campbell County basement transformation, professional basement floors Kentucky'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Campbell County with professional basement floor coating services. Our local expertise ensures we understand the unique basement challenges in Campbell County, from moisture control to creating beautiful living spaces.',
+    cities: [
+      'Newport',
+      'Fort Thomas',
+      'Bellevue',
+      'Dayton',
+      'Highland Heights',
+      'Cold Spring',
+      'Wilder',
+      'Southgate',
+      'Silver Grove',
+      'Woodlawn',
+      'Melbourne',
+      'California',
+      'Alexandria',
+      'Claryville'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

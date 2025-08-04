@@ -1,6 +1,8 @@
 ---
 import { Container, CtaCardSection } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+import { servicesConfig } from '../../data/servicesData.js';
 
 const seo = {
 	title: 'Professional Concrete Coating Services | Queen City Surface Coatings',
@@ -9,408 +11,59 @@ const seo = {
 ---
 
 <Layout {seo}>
-	<!-- Page Header -->
-	<Container>
-		<section class="page-header">
-			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<ol>
-					<li><a href="/">Home</a></li>
-					<li aria-current="page">Services</li>
-				</ol>
-			</nav>
-			<h1>Professional Concrete Coating Services</h1>
-			<p class="page-subtitle">
-				Expert installation with military precision across the Cincinnati tri-state area
-			</p>
-		</section>
-	</Container>
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<Container>
+			<div class="hero-content-about">
+				<div class="hero-text-about">
+					<p class="hero-tagline">Military Precision Installation</p>
+					<h1 class="hero-headline">Professional Concrete Coating Services</h1>
+					<p class="hero-subheadline">
+						Expert installation with military precision across the Cincinnati tri-state area. Transform your space with durable, beautiful concrete coatings that last.
+					</p>
+					<div class="hero-ctas">
+						<a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+						<a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
 
 	<!-- Service Categories Overview -->
 	<Container>
 		<section class="services-overview">
-			<!-- Concrete Services -->
-			<div class="service-category">
-				<div class="category-header">
-					<h2>Concrete Services</h2>
-					<p>Professional concrete services for residential and commercial applications with military precision and proven techniques.</p>
-				</div>
-				
-				<div class="services-grid">
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/residential-coating.webp" alt="Professional residential concrete coating - Queen City Surface Coatings garage floor service" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Residential</h3>
-							<p>Complete concrete coating solutions for homes including garages, basements, driveways, and patios with durable, attractive finishes.</p>
-							<ul class="service-benefits">
-								<li>Garage floor coatings</li>
-								<li>Basement waterproofing systems</li>
-								<li>Driveway and walkway protection</li>
-								<li>Patio and deck resurfacing</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Homeowners looking to enhance and protect concrete surfaces
-							</div>
-							<div class="service-actions">
-								<a href="/services/residential" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
+			{Object.entries(servicesConfig).map(([categoryKey, category]) => (
+				<div class="service-category">
+					<div class="category-header">
+						<h2>{category.title}</h2>
+						<p>{category.description}</p>
 					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/commercial-coating.webp" alt="Commercial concrete coating with decorative flakes - Queen City Surface Coatings professional installation" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Commercial</h3>
-							<p>Heavy-duty commercial concrete coating systems designed for high-traffic environments including warehouses, retail spaces, and manufacturing facilities.</p>
-							<ul class="service-benefits">
-								<li>Industrial-strength durability</li>
-								<li>Chemical and abrasion resistance</li>
-								<li>Quick installation minimizes downtime</li>
-								<li>Food-safe options available</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Warehouses, retail spaces, restaurants, manufacturing facilities
-							</div>
-							<div class="service-actions">
-								<a href="/services/commercial" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/cove-install.webp" alt="New professional cove installation - Queen City Surface Coatings seamless floor-to-wall transition" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Cove Install</h3>
-							<p>Professional cove base installation creating seamless transitions between floors and walls for enhanced cleanability and professional appearance.</p>
-							<ul class="service-benefits">
-								<li>Seamless floor-to-wall transition</li>
-								<li>Enhanced cleanability</li>
-								<li>Professional appearance</li>
-								<li>Prevents moisture infiltration</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Commercial kitchens, laboratories, clean rooms, healthcare facilities
-							</div>
-							<div class="service-actions">
-								<a href="/services/cove-install" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image before-after-container">
-							<div class="before-after-grid">
-								<div class="before-image">
-									<img src="/assets/images/services/concrete-repair-before.webp" alt="Concrete damage before repair - Queen City Surface Coatings restoration work" loading="lazy" />
-									<span class="image-label before-label">Before</span>
+					
+					<div class="services-grid">
+						{category.services.map((service) => (
+							<div class="service-card">
+								<div class="service-image">
+									<img src={service.image} alt={service.imageAlt} loading="lazy" />
 								</div>
-								<div class="after-image">
-									<img src="/assets/images/services/concrete-repair-after.webp" alt="Concrete after professional repair - Queen City Surface Coatings restoration results" loading="lazy" />
-									<span class="image-label after-label">After</span>
+								<div class="service-content">
+									<h3>{service.title}</h3>
+									<p>{service.description}</p>
+									<ul class="service-benefits">
+										{service.features.map((feature) => (
+											<li>{feature}</li>
+										))}
+									</ul>
+									<div class="service-actions">
+										<a href={service.link} class="service-link">Learn More →</a>
+										<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="service-content">
-							<h3>Repair & Preparation</h3>
-							<p>Expert concrete repair and surface preparation services including crack repair, spall restoration, and substrate preparation for optimal coating adhesion.</p>
-							<ul class="service-benefits">
-								<li>Crack injection and repair</li>
-								<li>Spall and hole restoration</li>
-								<li>Surface profile preparation</li>
-								<li>Moisture mitigation solutions</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Damaged concrete requiring restoration before coating application
-							</div>
-							<div class="service-actions">
-								<a href="/services/concrete-repair" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/concrete-staining.webp" alt="Polished concrete walkout basement - Queen City Surface Coatings professional staining and polishing" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Staining & Polishing</h3>
-							<p>Decorative concrete staining and polishing services that enhance natural concrete beauty with acid stains, dyes, and mechanical polishing techniques.</p>
-							<ul class="service-benefits">
-								<li>Acid stain applications</li>
-								<li>Concrete dye systems</li>
-								<li>Mechanical polishing</li>
-								<li>Protective sealer application</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Retail spaces, restaurants, showrooms, decorative residential floors
-							</div>
-							<div class="service-actions">
-								<a href="/services/concrete-staining" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/joint-repair.webp" alt="Joint filler and repair work - Queen City Surface Coatings professional joint restoration" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Joint Removal & Repair</h3>
-							<p>Professional concrete joint removal and repair services including expansion joint replacement, control joint sealing, and structural joint restoration.</p>
-							<ul class="service-benefits">
-								<li>Expansion joint replacement</li>
-								<li>Control joint sealing</li>
-								<li>Structural joint restoration</li>
-								<li>Waterproof joint systems</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Commercial floors, parking structures, industrial facilities
-							</div>
-							<div class="service-actions">
-								<a href="/services/joint-removal-repair" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/pressure-washing.webp" alt="Concrete pressure washing service - Queen City Surface Coatings professional cleaning" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Cleaning & Protection</h3>
-							<p>Professional concrete cleaning and protective services including pressure washing, chemical cleaning, and protective sealer application for long-term maintenance.</p>
-							<ul class="service-benefits">
-								<li>High-pressure cleaning systems</li>
-								<li>Chemical stain removal</li>
-								<li>Protective sealer application</li>
-								<li>Preventive maintenance programs</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Driveways, sidewalks, parking areas, commercial surfaces
-							</div>
-							<div class="service-actions">
-								<a href="/services/pressure-washing-protection" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
+						))}
 					</div>
 				</div>
-			</div>
-
-			<!-- Commercial Services -->
-			<div class="service-category">
-				<div class="category-header">
-					<h2>Commercial Services</h2>
-					<p>Heavy-duty coating systems engineered for high-traffic commercial and industrial environments.</p>
-				</div>
-				
-				<div class="services-grid">
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/warehouse-flooring.webp" alt="Warehouse flooring with decorative flakes - Queen City Surface Coatings industrial coating" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Warehouse Flooring</h3>
-							<p>Industrial-strength systems designed to withstand heavy equipment, forklift traffic, and demanding warehouse operations.</p>
-							<ul class="service-benefits">
-								<li>Heavy equipment rated</li>
-								<li>Chemical and abrasion resistant</li>
-								<li>Easy maintenance and cleaning</li>
-								<li>Improves lighting efficiency</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Distribution centers, storage facilities, loading docks
-							</div>
-							<div class="service-actions">
-								<a href="/services/commercial-concrete-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/retail-flooring.webp" alt="Retail space concrete coating - Queen City Surface Coatings commercial flooring" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Retail Space Coatings</h3>
-							<p>Attractive, durable flooring solutions that create welcoming environments while withstanding constant foot traffic.</p>
-							<ul class="service-benefits">
-								<li>High foot traffic durability</li>
-								<li>Aesthetic appeal for customers</li>
-								<li>Stain and scuff resistant</li>
-								<li>Quick installation minimizes downtime</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Retail stores, showrooms, auto dealerships, offices
-							</div>
-							<div class="service-actions">
-								<a href="/services/commercial-concrete-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/restaurant-kitchen.webp" alt="Restaurant kitchen floor with flakes - Queen City Surface Coatings food-safe coating" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Restaurant Kitchen Floors</h3>
-							<p>Food-safe, anti-microbial coatings that meet health department requirements while providing superior durability.</p>
-							<ul class="service-benefits">
-								<li>Food-safe and anti-microbial</li>
-								<li>Grease and chemical resistant</li>
-								<li>Non-slip safety textures</li>
-								<li>Easy sanitization</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Commercial kitchens, food processing, cafeterias
-							</div>
-							<div class="service-actions">
-								<a href="/services/commercial-concrete-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/manufacturing-floor.webp" alt="Manufacturing facility epoxy floor - Queen City Surface Coatings industrial coating" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Manufacturing Facility Coatings</h3>
-							<p>Extreme-duty systems that withstand chemical exposure, thermal cycling, and heavy industrial operations.</p>
-							<ul class="service-benefits">
-								<li>Chemical processing safe</li>
-								<li>Thermal shock resistant</li>
-								<li>Static dissipative options</li>
-								<li>Minimal production downtime</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Manufacturing plants, automotive facilities, chemical processing
-							</div>
-							<div class="service-actions">
-								<a href="/services/commercial-concrete-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- Coating Types -->
-			<div class="service-category">
-				<div class="category-header">
-					<h2>Coating Systems</h2>
-					<p>Advanced coating technologies tailored to your specific performance and aesthetic requirements.</p>
-				</div>
-				
-				<div class="services-grid">
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/epoxy-flooring.webp" alt="Professional epoxy flooring with decorative flakes - Queen City Surface Coatings" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Epoxy Flooring Systems</h3>
-							<p>Time-tested coating technology offering excellent durability, chemical resistance, and design flexibility for most applications.</p>
-							<ul class="service-benefits">
-								<li>15-20 year lifespan</li>
-								<li>Chemical and stain resistant</li>
-								<li>Multiple color and finish options</li>
-								<li>Cost-effective solution</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Garages, basements, light commercial applications
-							</div>
-							<div class="service-actions">
-								<a href="/services/garage-floor-epoxy" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/polyaspartic-coating.webp" alt="Fast-curing polyaspartic coating with flakes - Queen City Surface Coatings" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Polyaspartic Coatings</h3>
-							<p>Fast-curing, UV-stable systems that offer superior durability and can be installed in a single day for most projects.</p>
-							<ul class="service-benefits">
-								<li>Same-day installation possible</li>
-								<li>UV stable - won't yellow</li>
-								<li>Superior abrasion resistance</li>
-								<li>Temperature tolerant</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> High-traffic areas, outdoor applications, quick turnaround projects
-							</div>
-							<div class="service-actions">
-								<a href="/services/polyaspartic-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/polyurea-application.webp" alt="Polyurea coating application - Queen City Surface Coatings flexible coating" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Polyurea Applications</h3>
-							<p>Extremely flexible and impact-resistant coatings ideal for areas subject to thermal movement and mechanical stress.</p>
-							<ul class="service-benefits">
-								<li>Exceptional flexibility</li>
-								<li>Impact and abrasion resistant</li>
-								<li>Rapid cure time</li>
-								<li>Seamless waterproof membrane</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Bridge decks, containment areas, waterproofing applications
-							</div>
-							<div class="service-actions">
-								<a href="/services/polyaspartic-coating" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="service-card">
-						<div class="service-image">
-							<img src="/assets/images/services/metallic-epoxy.webp" alt="Stunning metallic epoxy flooring - Queen City Surface Coatings artistic patterns" loading="lazy" />
-						</div>
-						<div class="service-content">
-							<h3>Metallic Epoxy Floors</h3>
-							<p>Stunning decorative systems that create unique, flowing patterns resembling natural stone, water, or custom artistic designs.</p>
-							<ul class="service-benefits">
-								<li>Unique artistic patterns</li>
-								<li>Premium aesthetic appeal</li>
-								<li>Seamless installation</li>
-								<li>Commercial-grade durability</li>
-							</ul>
-							<div class="service-applications">
-								<strong>Perfect for:</strong> Showrooms, restaurants, residential basements, retail spaces
-							</div>
-							<div class="service-actions">
-								<a href="/services/metallic-epoxy-flooring" class="service-link">Learn More →</a>
-								<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			))}
 		</section>
 	</Container>
 
@@ -493,36 +146,44 @@ const seo = {
 		<Container>
 			<div class="contact-content">
 				<div class="contact-info">
-					<h2>Ready to Transform Your Concrete Surfaces?</h2>
-					<p>Experience the Queen City Surface Coatings difference with military precision installation and premium materials backed by our satisfaction guarantee. Every project starts with a free consultation.</p>
+					<h2>Ready to Transform Your Basement?</h2>
+					<p>Get a free estimate for professional basement floor coating and discover how we can transform your basement into your family's new favorite space.</p>
 					
 					<div class="contact-methods">
 						<div class="contact-button-wrapper">
-							<p class="contact-label">Call</p>
 							<a href="tel:+15132965525" class="contact-button contact-button-phone">
-								<div class="contact-details">
-									<span class="contact-info">(513) 296-5525</span>
-								</div>
+								<span class="contact-info">(513) 296-5525</span>
 							</a>
 						</div>
 						
 						<div class="contact-button-wrapper">
-							<p class="contact-label">Email</p>
 							<a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
-								<div class="contact-details">
-									<span class="contact-info">john@queencitysurfacecoatings.com</span>
-								</div>
+								<span class="contact-info">john@queencitysurfacecoatings.com</span>
 							</a>
+						</div>
+					</div>
+					
+					<div class="business-hours">
+						<h4>Business Hours</h4>
+						<div class="hours-list">
+							<div class="hours-item">
+								<span>Monday - Friday:</span>
+								<span class="hours-time">7:00 AM - 6:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span>Saturday:</span>
+								<span class="hours-time">8:00 AM - 4:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span>Sunday:</span>
+								<span class="hours-time">By Appointment</span>
+							</div>
 						</div>
 					</div>
 				</div>
 				
 				<div class="contact-form">
-					<div class="form-container">
-						<h3>Get Your Free Consultation</h3>
-						<p>Fill out our contact form and we'll get back to you within 24 hours with a detailed estimate.</p>
-						<a href="/company/contact#quote-form" class="btn btn-primary btn-large">Request Free Consultation</a>
-					</div>
+					<QuoteRequestForm />
 				</div>
 			</div>
 		</Container>
@@ -530,56 +191,100 @@ const seo = {
 </Layout>
 
 <style>
-	/* Page Header */
-	.page-header {
-		text-align: center;
-		padding: 2rem 0 3rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 4rem;
+	/* Hero Section - matching about page */
+	.hero-section {
+		background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+		color: var(--theme-on-surface-2);
+		padding: 4rem 0;
+		margin-bottom: 3rem;
+		position: relative;
+		overflow: hidden;
 	}
 
-	.breadcrumb {
-		margin-bottom: 1.5rem;
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+				  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+		pointer-events: none;
 	}
 
-	.breadcrumb ol {
+	.hero-content-about {
 		display: flex;
 		justify-content: center;
-		gap: 0.5rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		font-size: 0.9rem;
+		align-items: center;
+		min-height: 400px;
+		position: relative;
+		z-index: 1;
 	}
 
-	.breadcrumb li:not(:last-child)::after {
-		content: ">";
-		margin-left: 0.5rem;
-		opacity: 0.6;
+	.hero-text-about {
+		text-align: center;
+		max-width: 800px;
 	}
 
-	.breadcrumb a {
-		color: var(--theme-primary);
-		text-decoration: none;
+	.hero-tagline {
+		font-family: var(--theme-font-family-headings);
+		font-size: 1.375rem;
+		font-weight: var(--font-weight-medium);
+		color: #FFC107;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		opacity: 0.95;
 	}
 
-	.breadcrumb a:hover {
-		text-decoration: underline;
-	}
-
-	.page-header h1 {
-		font-size: 3rem;
-		color: var(--theme-on-bg);
+	.hero-headline {
+		font-family: var(--theme-font-family-headings);
+		font-size: var(--font-size-h1);
+		font-weight: var(--font-weight-bold);
 		margin-bottom: 1rem;
+		line-height: var(--line-height-tight);
+		color: #FFC107;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 
-	.page-subtitle {
+	.hero-subheadline {
 		font-size: 1.25rem;
-		color: var(--theme-on-bg);
-		opacity: 0.8;
-		max-width: 700px;
-		margin: 0 auto;
-		line-height: 1.5;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		line-height: var(--line-height-relaxed);
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.hero-ctas {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.hero-section .btn-primary {
+		background: #FFC107 !important;
+		border-color: #FFC107 !important;
+		color: #002F4B !important;
+	}
+
+	.hero-section .btn-primary:hover {
+		background: #E6AC00 !important;
+		border-color: #E6AC00 !important;
+		color: #002F4B !important;
+	}
+
+	.hero-section .btn-outline {
+		background: transparent !important;
+		border-color: #FFC107 !important;
+		color: #FFC107 !important;
+	}
+
+	.hero-section .btn-outline:hover {
+		background: #FFC107 !important;
+		border-color: #FFC107 !important;
+		color: #002F4B !important;
 	}
 
 	/* Services Overview */
@@ -593,7 +298,7 @@ const seo = {
 
 	.category-header {
 		text-align: center;
-		margin-bottom: 3rem;
+		margin-bottom: 1.5rem !important;
 	}
 
 	.category-header h2 {
@@ -604,10 +309,11 @@ const seo = {
 
 	.category-header p {
 		font-size: 1.1rem;
-		opacity: 0.8;
-		max-width: 600px;
-		margin: 0 auto;
+		color: #333333;
+		margin-bottom: 0.5rem !important;
 		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto 0.5rem auto !important;
 	}
 
 	.services-grid {
@@ -650,7 +356,9 @@ const seo = {
 	}
 
 	.service-content > p {
-		margin-bottom: 1.5rem;
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
 		line-height: 1.6;
 	}
 
@@ -709,8 +417,8 @@ const seo = {
 	/* Process Section */
 	.process-section {
 		background: var(--theme-surface-1);
-		padding: 4rem 0;
-		margin: 4rem 0;
+		padding: 3rem 0;
+		margin: 3rem 0;
 	}
 
 	.process-section h2 {
@@ -723,10 +431,11 @@ const seo = {
 	.process-intro {
 		text-align: center;
 		font-size: 1.1rem;
-		opacity: 0.8;
-		max-width: 600px;
-		margin: 0 auto 3rem auto;
+		color: #333333;
+		margin-bottom: 0.5rem !important;
 		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto 0.5rem auto !important;
 	}
 
 	.process-steps {
@@ -764,8 +473,10 @@ const seo = {
 	}
 
 	.step-content p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
 		line-height: 1.6;
-		margin: 0;
 	}
 
 	/* Why Choose Section */
@@ -806,8 +517,10 @@ const seo = {
 	}
 
 	.advantage-card p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
 		line-height: 1.6;
-		margin: 0;
 	}
 
 	/* CTA Buttons */
@@ -840,10 +553,10 @@ const seo = {
 	}
 
 	.contact-info > p {
-		font-size: 1.125rem;
-		line-height: var(--line-height-relaxed);
+		font-size: 1.1rem;
+		color: #333333;
 		margin-bottom: 2rem;
-		color: var(--theme-text-secondary);
+		line-height: 1.6;
 	}
 
 	.contact-methods {
@@ -1083,5 +796,226 @@ const seo = {
 		.contact-info h2 {
 			font-size: 1.75rem;
 		}
+	}
+
+	/* Hero Section Responsive Design - matching about page */
+	@media (max-width: 1024px) {
+		.hero-content-about {
+			min-height: 300px;
+		}
+		
+		.hero-tagline {
+			font-size: 1.25rem;
+		}
+		
+		.hero-headline {
+			font-size: 2.5rem;
+		}
+		
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-section {
+			padding: 2rem 0;
+		}
+		
+		.hero-content-about {
+			min-height: 250px;
+		}
+		
+		.hero-tagline {
+			font-size: 1.125rem;
+			margin-bottom: 1rem;
+		}
+		
+		.hero-headline {
+			font-size: 2rem;
+		}
+		
+		.hero-subheadline {
+			font-size: 1.125rem;
+			margin-bottom: 2rem;
+		}
+		
+		.hero-ctas {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+		
+		.btn {
+			width: 100%;
+			max-width: 300px;
+		}
+		
+		.contact-methods {
+			flex-direction: column;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-headline {
+			font-size: 1.75rem;
+		}
+		
+		.hero-subheadline {
+			font-size: 1rem;
+		}
+		
+		.btn-large {
+			padding: 1rem 2rem;
+			font-size: 1rem;
+		}
+	}
+
+	/* Updated Contact Section Styles to match template */
+	.contact-methods {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		align-items: stretch;
+	}
+
+	.contact-button-wrapper {
+		flex: 1;
+		display: flex;
+	}
+
+	.contact-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 1.5rem;
+		border-radius: var(--theme-card-radius);
+		border: 2px solid transparent;
+		transition: var(--theme-transition);
+		text-decoration: none;
+		width: 100%;
+		cursor: pointer;
+		height: 100px;
+		min-height: 100px;
+		max-height: 100px;
+		box-sizing: border-box;
+	}
+
+	.contact-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	}
+
+	.contact-button-phone {
+		background: #FFC107;
+		color: #002F4B;
+	}
+
+	.contact-button-phone:hover {
+		background: #E6AC00;
+		color: #002F4B;
+	}
+
+	.contact-button-email {
+		background: #002F4B;
+		color: white;
+	}
+
+	.contact-button-email:hover {
+		background: #001f36;
+		color: white;
+	}
+
+	.contact-button-email .contact-info {
+		color: #FFC107;
+	}
+
+	.contact-button .contact-info {
+		font-size: 1rem;
+		font-weight: var(--font-weight-semibold);
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 1.3;
+	}
+
+	.business-hours {
+		background: var(--theme-bg);
+		padding: 1.5rem;
+		border-radius: var(--theme-card-radius);
+	}
+
+	.business-hours h4 {
+		font-weight: var(--font-weight-semibold);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.hours-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.hours-item {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid var(--theme-border-light);
+	}
+
+	.hours-item:last-child {
+		border-bottom: none;
+	}
+
+	.hours-time {
+		font-weight: var(--font-weight-medium);
+	}
+
+	/* Force exact button sizing */
+	.contact-section .contact-button {
+		min-height: 100px !important;
+		width: 100% !important;
+		flex: 1 !important;
+		padding: 1rem !important;
+		font-size: 1rem !important;
+		line-height: 1.2 !important;
+		white-space: normal !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.contact-section .contact-button .contact-info {
+		font-size: 0.9rem !important;
+		line-height: 1.3 !important;
+		white-space: normal !important;
+		overflow: visible !important;
+		width: 100% !important;
+		text-align: center !important;
+		display: block !important;
+		word-break: break-all !important;
+	}
+
+	/* Global paragraph spacing - at least 2 spaces between paragraphs */
+	p {
+		margin-bottom: 3rem !important;
+	}
+
+	.category-header {
+		margin-bottom: 2rem !important;
+	}
+
+	.process-section {
+		margin: 2rem 0 !important;
+		padding: 2rem 0 !important;
+	}
+
+	.service-category {
+		margin-bottom: 2rem !important;
 	}
 </style>

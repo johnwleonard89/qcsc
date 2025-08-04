@@ -432,7 +432,9 @@ const seo = {
   color: var(--theme-primary);
   text-decoration: none;
   display: block;
-  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   line-height: 1.2;
 }
 
@@ -516,11 +518,16 @@ const seo = {
   color: var(--theme-primary);
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .service-areas, .expectations-list {
   list-style: none;
   padding: 0;
+}
+
+.service-areas {
+  text-align: center;
 }
 
 .service-areas li, .expectations-list li {

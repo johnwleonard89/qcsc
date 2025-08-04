@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Loveland',
+  state: 'Ohio',
+  county: 'Hamilton',
+  seo: {
+    title: 'Loveland Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Loveland, Ohio. Serving Historic Downtown, Symmes Township, and all Loveland neighborhoods with military precision installation.',
+    keywords: 'Loveland concrete coating, Loveland concrete services, Historic Downtown OH epoxy flooring, Symmes Township concrete coating, Loveland garage floors, Loveland residential coating, commercial concrete Loveland Ohio'
+  },
+  hero: {
+    tagline: 'Loveland Excellence',
+    headline: 'Professional Concrete Coating Services in Loveland, Ohio',
+    subheadline: 'Transform your Loveland property with expert concrete coating services. From Historic Downtown to Symmes Township, we deliver military precision installation throughout Loveland with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Loveland, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Loveland properties, from historic downtown to suburban neighborhoods.',
+    neighborhoods: [
+      'Historic Downtown Loveland',
+      'Symmes Township',
+      'Loveland-Madeira Road',
+      'Fields Ertel Road',
+      'Kemper Road',
+      'Loveland-Branch Hill-Guinea Pike',
+      'State Route 48',
+      'Riverside Drive',
+      'West Loveland Avenue',
+      'East Loveland Avenue',
+      'Karl Brown Way',
+      'Railroad Avenue',
+      'Paxton Avenue',
+      'Church Street',
+      'Second Street',
+      'Third Street',
+      'Elm Street',
+      'Mulberry Street',
+      'Loveland Bike Trail',
+      'Little Miami River'
+    ],
+    landmarks: [
+      'Historic Downtown Loveland',
+      'Loveland Castle',
+      'Little Miami River',
+      'Loveland Bike Trail',
+      'Nisbet Park',
+      'Loveland Canoe & Kayak',
+      'Loveland High School',
+      'Loveland Elementary Schools',
+      'Loveland City Hall',
+      'Loveland Historical Society',
+      'Loveland Farmers Market',
+      'Paxton Ramsey Park',
+      'Symmes Township Park',
+      'Hamilton County Parks',
+      'Great Miami River Recreational Trail'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

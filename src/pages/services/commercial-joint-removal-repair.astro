@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Commercial Joint Removal & Repair | Business Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional commercial concrete joint removal and repair services for businesses in Cincinnati and Northern Kentucky. Expansion joint replacement, control joint sealing, and structural joint restoration.',
+    keywords: 'commercial joint removal, business joint repair, commercial concrete joints, expansion joint replacement, control joint sealing, structural joint restoration, Cincinnati commercial concrete'
+  },
+  hero: {
+    tagline: 'Commercial Concrete Solutions',
+    headline: 'Commercial Joint Removal & Repair',
+    subheadline: 'Maintain your business facility\'s structural integrity with professional concrete joint services. From expansion joint replacement to control joint sealing, we provide comprehensive solutions that prevent water damage, improve safety, and extend facility life.',
+    image: {
+      src: '/assets/images/services/joint-repair.webp',
+      alt: 'Professional commercial joint removal and repair - Queen City Surface Coatings business services'
+    },
+    ctas: [
+      { text: 'Get Commercial Assessment', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Commercial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Protect Your Business Investment',
+    content: [
+      'Commercial concrete joints are critical components that manage structural movement, prevent water infiltration, and maintain facility integrity. Failed or damaged joints can lead to costly water damage, safety hazards, and expensive structural repairs that disrupt business operations.',
+      'Our commercial joint removal and repair services provide comprehensive solutions for expansion joints, control joints, and construction joints. We use commercial-grade materials and proven techniques to ensure your facility remains safe, dry, and operational for years to come.'
+    ]
+  },
+  differentiators: {
+    title: 'Commercial Joint Service Advantages',
+    subtitle: 'Professional joint services protect your business facility:',
+    features: [
+      {
+        title: 'Prevents Water Damage',
+        description: 'Properly sealed joints prevent water infiltration that can cause expensive structural damage, mold growth, and facility downtime'
+      },
+      {
+        title: 'Maintains Structural Integrity',
+        description: 'Professional joint systems accommodate building movement while maintaining structural stability and preventing costly damage'
+      },
+      {
+        title: 'Reduces Liability Risks',
+        description: 'Eliminates trip hazards and safety concerns associated with damaged or deteriorated concrete joints in commercial spaces'
+      },
+      {
+        title: 'Minimizes Business Disruption',
+        description: 'Efficient repair processes and flexible scheduling minimize impact on daily business operations and customer access'
+      },
+      {
+        title: 'Long-Term Cost Savings',
+        description: 'Preventive joint maintenance costs significantly less than emergency repairs and facility damage from joint failure'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Commercial Joint Service Process',
+    subtitle: 'Systematic approach designed for minimal business disruption:',
+    steps: [
+      {
+        number: 1,
+        title: 'Facility Joint Assessment',
+        items: [
+          'Comprehensive joint condition evaluation',
+          'Structural movement analysis and documentation',
+          'Water infiltration risk assessment',
+          'Business impact minimization planning'
+        ]
+      },
+      {
+        number: 2,
+        title: 'Commercial Project Planning',
+        items: [
+          'After-hours and weekend scheduling options',
+          'Phased repair approach for operational continuity',
+          'Safety protocols and work zone establishment',
+          'Material selection for commercial durability'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Professional Joint Removal',
+        items: [
+          'Commercial-grade removal equipment and techniques',
+          'Complete removal of failed joint materials',
+          'Surface preparation for optimal adhesion',
+          'Debris containment and professional cleanup'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Expert Joint Installation',
+        items: [
+          'Commercial-grade joint materials and sealants',
+          'Precise installation for optimal performance',
+          'Quality control and movement accommodation',
+          'Professional finishing and surface restoration'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Quality Assurance & Maintenance',
+        items: [
+          'Comprehensive inspection and performance testing',
+          'Facility management walkthrough and documentation',
+          'Maintenance schedule recommendations',
+          'Warranty coverage and ongoing support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Commercial Joint Applications',
+    subtitle: 'Professional joint services for diverse business facilities:',
+    items: [
+      {
+        title: 'Office Buildings',
+        description: 'Professional joint maintenance for corporate facilities',
+        features: [
+          'Lobby and common area joint repair',
+          'Parking garage expansion joint replacement',
+          'Structural joint sealing and maintenance',
+          'Professional appearance enhancement'
+        ]
+      },
+      {
+        title: 'Retail Centers',
+        description: 'Shopping center and retail facility joint services',
+        features: [
+          'High-traffic joint systems for customer areas',
+          'Loading dock and service area joints',
+          'Weather-resistant exterior joint sealing',
+          'Minimal customer disruption scheduling'
+        ]
+      },
+      {
+        title: 'Healthcare Facilities',
+        description: 'Medical facility joint repair and maintenance',
+        features: [
+          'Hospital-grade joint materials and sealants',
+          'Infection control compliant procedures',
+          'Critical area joint repair scheduling',
+          'Regulatory compliance documentation'
+        ]
+      },
+      {
+        title: 'Educational Facilities',
+        description: 'School and university joint maintenance',
+        features: [
+          'Student safety focused joint repair',
+          'Summer break scheduling for minimal disruption',
+          'Durable systems for high-traffic areas',
+          'Budget-conscious maintenance solutions'
+        ]
+      },
+      {
+        title: 'Industrial Facilities',
+        description: 'Manufacturing and warehouse joint services',
+        features: [
+          'Heavy equipment compatible joint systems',
+          'Chemical-resistant industrial sealants',
+          'Production schedule coordinated repairs',
+          'Long-term durability for demanding environments'
+        ]
+      },
+      {
+        title: 'Hospitality Venues',
+        description: 'Hotel and restaurant facility joint repair',
+        features: [
+          'Guest experience focused scheduling',
+          'Aesthetic joint solutions for public areas',
+          'Moisture-resistant systems for food service',
+          'Professional hospitality image maintenance'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Protect Your Facility?',
+    description: 'Schedule your commercial joint assessment today and discover how professional joint services can prevent costly damage and protect your business investment.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

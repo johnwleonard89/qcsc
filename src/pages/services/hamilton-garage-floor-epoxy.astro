@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// City-specific data
+const cityData = {
+  cityName: 'Hamilton',
+  state: 'Ohio',
+  county: 'Butler', 
+  seo: {
+    title: 'Hamilton Ohio Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Hamilton garage with professional epoxy floor coating. Serving Lindenwald, Millville, and all Hamilton neighborhoods with durable, beautiful garage flooring.',
+    keywords: 'Hamilton garage floor epoxy, Hamilton garage coating, Lindenwald garage floors, Millville epoxy flooring, Hamilton garage transformation, professional garage floors Hamilton Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Hamilton neighborhoods with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Hamilton properties, from historic homes to new developments.',
+    neighborhoods: [
+      'Downtown Hamilton',
+      'Lindenwald',
+      'Millville',
+      'German Village',
+      'Buckeye',
+      'Symmes Corner',
+      'Rossville',
+      'Darrtown',
+      'New London',
+      'Seven Mile',
+      'Jacksonburg',
+      'Shandon',
+      'Campbell',
+      'Fairfield Avenue',
+      'High Street',
+      'Main Street',
+      'Monument Avenue',
+      'Greenwood Avenue',
+      'Third Street',
+      'Second Street'
+    ],
+    landmarks: [
+      'Hamilton City Hall',
+      'Fitton Center for Creative Arts',
+      'Butler County Courthouse',
+      'Rentschler Forest MetroPark',
+      'Hamilton Pool',
+      'Marcum Park',
+      'Joyce Park',
+      'Veterans Park',
+      'Spooky Nook Sports Complex',
+      'Miami University Hamilton'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

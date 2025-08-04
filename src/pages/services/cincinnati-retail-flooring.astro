@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the retail service from commercial services
+const retailService = servicesConfig.commercial.services.find(s => s.title === "Retail");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: retailService,
+  seo: {
+    title: 'Cincinnati Commercial Retail Flooring | Durable Store Flooring | Queen City Surface Coatings',
+    description: 'Professional retail flooring solutions in Cincinnati, Ohio. High-traffic durable coatings for Downtown, Over-the-Rhine, and all Cincinnati retail spaces.',
+    keywords: 'Cincinnati retail flooring, Cincinnati commercial flooring, Downtown Cincinnati retail coating, Over-the-Rhine retail floors, Cincinnati store flooring, commercial concrete Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional retail flooring solutions throughout Cincinnati, Ohio. Our high-traffic coatings are perfect for retail stores, shops, and commercial spaces in Cincinnati\'s vibrant business districts.',
+    neighborhoods: [
+      'Downtown',
+      'Over-the-Rhine',
+      'Clifton',
+      'Hyde Park',
+      'Oakley',
+      'Northside',
+      'Price Hill',
+      'Westwood',
+      'East Walnut Hills',
+      'Madisonville',
+      'Walnut Hills',
+      'Columbia-Tusculum',
+      'Pleasant Ridge',
+      'Bond Hill',
+      'Avondale',
+      'Corryville',
+      'West End',
+      'Riverside',
+      'South Cumminsville',
+      'Mount Adams'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'Fountain Square',
+      'Findlay Market',
+      'Cincinnati Museum Center',
+      'Over-the-Rhine District',
+      'Banks Development',
+      'Newport on the Levee',
+      'Clifton Gaslight District',
+      'Hyde Park Square',
+      'Oakley Station'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

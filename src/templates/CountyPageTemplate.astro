@@ -75,30 +75,105 @@ const testimonials = getRandomTestimonials(3);
     </Container>
   </section>
 
-  <!-- Services Offered Section -->
-  <section class="py-16 md:py-20 bg-white">
-    <Container>
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-          Concrete Coating Services in {county.name}
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 text-center">
-              <h3 class="text-xl font-bold text-gray-900 mb-4">{service.name}</h3>
-              <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-              <a 
-                href={service.href}
-                class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors"
-              >
-                Learn More →
-              </a>
-            </div>
-          ))}
+  <!-- Professional Services Section -->
+  <Container>
+    <section class="services-section">
+      <div class="services-header">
+        <h2>Our Professional Services in {county.name}</h2>
+        <p>Premium surface coating solutions designed to exceed your expectations and stand the test of time</p>
+      </div>
+      
+      <div class="services-grid">
+        <!-- Residential Services -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/new-projects/garage_poly_corvette.webp" alt="Residential concrete coating services in {county.name} by Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Residential Services</h3>
+            <p>Professional concrete coating solutions designed specifically for {county.name} homes. From garages to basements and kitchens, we transform residential spaces with durable, attractive finishes.</p>
+            <ul class="service-features">
+              <li><a href={`/services/garage-floor-epoxy/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Garage Floors</a></li>
+              <li><a href={`/services/basement-floor-coating/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Basement</a></li>
+              <li><a href={`/services/polyaspartic-coating/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Kitchen</a></li>
+            </ul>
+            <a href={`/services/residential/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
+        </div>
+        <!-- Commercial Services -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/services/commercial_auto_floor.webp" alt="Commercial concrete coating services in {county.name} - Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Commercial Services</h3>
+            <p>Heavy-duty coating systems engineered for {county.name} business environments. Professional solutions that minimize downtime while maximizing durability and performance.</p>
+            <ul class="service-features">
+              <li><a href={`/services/retail-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Retail</a></li>
+              <li><a href={`/services/warehouse-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Warehouses</a></li>
+              <li><a href={`/services/office-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Office</a></li>
+            </ul>
+            <a href={`/services/commercial/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
+        </div>
+        <!-- Industrial Services -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/services/industrial-flooring.webp" alt="Industrial concrete coating services in {county.name} - Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Industrial Services</h3>
+            <p>Specialized coating systems for demanding {county.name} industrial environments. Chemical-resistant, high-performance solutions built to withstand the toughest conditions.</p>
+            <ul class="service-features">
+              <li><a href={`/services/manufacturing-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Manufacturing Facilities</a></li>
+              <li><a href={`/services/food-beverage-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Food & Beverage</a></li>
+              <li><a href={`/services/automotive-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Automotive</a></li>
+            </ul>
+            <a href={`/services/industrial-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
+        </div>
+        <!-- Decorative Options -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/new-projects/natural_stone_hero.webp" alt="Decorative concrete coating options in {county.name} - Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Decorative Options</h3>
+            <p>Premium aesthetic finishes that combine beauty with performance. Transform any {county.name} space with stunning decorative systems that make a lasting impression.</p>
+            <ul class="service-features">
+              <li><a href={`/services/flake-systems/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Flake</a></li>
+              <li><a href={`/services/metallic-epoxy-flooring/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Metallic</a></li>
+              <li><a href={`/services/natural-stone-reproductions/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Natural Stone</a></li>
+              <li><a href={`/services/textured-concrete-finishes/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`}>Textured Concrete</a></li>
+            </ul>
+            <a href={`/services/decorative-options/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
+        </div>
+        <!-- Maintenance & Repair -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/services/concrete-repair-before.webp" alt="Concrete maintenance and repair services in {county.name} - Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Maintenance & Repair</h3>
+            <p>Complete concrete restoration and maintenance services to extend the life of your {county.name} surfaces. Professional repairs and preventive care to keep your floors looking and performing their best.</p>
+            <a href={`/services/concrete-repair/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
+        </div>
+        <!-- Pressure Washing & Protection -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="/assets/images/services/pressure-washing.webp" alt="Pressure washing and protection services in {county.name} - Queen City Surface Coatings" loading="lazy" />
+          </div>
+          <div class="service-content">
+            <h3>Pressure Washing & Protection</h3>
+            <p>Professional cleaning and protective treatments to maintain and enhance your {county.name} concrete surfaces. Comprehensive care that maximizes longevity and appearance.</p>
+            <a href={`/services/pressure-washing-protection/${county.name.toLowerCase().replace(' ', '-')}-county-${county.state.toLowerCase().slice(0,2)}`} class="service-link">Learn More →</a>
+          </div>
         </div>
       </div>
-    </Container>
-  </section>
+    </section>
+  </Container>
 
   <!-- Cities in County Section -->
   <section class="py-16 md:py-20 bg-gray-50">
@@ -533,6 +608,116 @@ const testimonials = getRandomTestimonials(3);
     .contact-content {
       grid-template-columns: 1fr;
       gap: 2rem;
+    }
+  }
+
+  /* Services Section Styles */
+  .services-section {
+    padding: 4rem 0;
+  }
+  .services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .services-header h2 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1.5rem;
+  }
+  .services-header p {
+    font-size: 1.125rem;
+    color: var(--theme-text-secondary);
+    line-height: var(--line-height-relaxed);
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: var(--theme-bg);
+    border-radius: var(--theme-card-radius);
+    box-shadow: var(--theme-shadow-light);
+    overflow: hidden;
+    transition: transform var(--theme-transition);
+    display: flex;
+    flex-direction: column;
+  }
+  .service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--theme-shadow-medium);
+  }
+  .service-image {
+    height: 14rem;
+    overflow: hidden;
+  }
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .service-content {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .service-content h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .service-content p {
+    color: var(--theme-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  .service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+  }
+  .service-features li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  .service-features li a {
+    color: var(--theme-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color var(--theme-transition);
+  }
+  .service-features li a:hover {
+    color: var(--theme-primary-dark);
+    text-decoration: underline;
+  }
+  .service-link {
+    color: var(--theme-primary);
+    text-decoration: none;
+    font-weight: var(--font-weight-semibold);
+    font-size: 1.125rem;
+    text-align: center;
+    transition: color var(--theme-transition);
+    margin-top: auto;
+  }
+  .service-link:hover {
+    color: var(--theme-primary-dark);
+    text-decoration: underline;
+  }
+
+  /* Services responsive */
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

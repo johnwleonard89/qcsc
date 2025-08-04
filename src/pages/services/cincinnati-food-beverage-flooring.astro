@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const foodBeverageService = servicesConfig.industrial.services.find(s => s.title === "Food & Beverage");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: foodBeverageService,
+  seo: {
+    title: 'Cincinnati Food & Beverage Flooring | USDA Compliant Kitchen Floors | Queen City Surface Coatings',
+    description: 'Professional food & beverage facility flooring in Cincinnati, Ohio. USDA compliant, antimicrobial coatings for restaurants, kitchens, and food processing facilities.',
+    keywords: 'Cincinnati food service flooring, Cincinnati restaurant floors, USDA compliant flooring Cincinnati, food processing floors Cincinnati, antimicrobial flooring Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings delivers USDA-compliant food & beverage facility flooring throughout Cincinnati, Ohio. Our antimicrobial coatings meet strict food safety requirements for Cincinnati restaurants and food processing facilities.',
+    neighborhoods: [
+      'Downtown', 'Over-the-Rhine', 'Findlay Market District', 'Banks District',
+      'Clifton', 'Hyde Park', 'Oakley', 'Mount Adams', 'West End', 'Camp Washington',
+      'Queensgate', 'Riverside', 'Price Hill', 'Westwood', 'Northside', 'Corryville',
+      'Avondale', 'Bond Hill', 'Reading', 'Norwood'
+    ],
+    landmarks: [
+      'Findlay Market', 'Over-the-Rhine Restaurant District', 'Banks Entertainment District',
+      'Downtown Cincinnati', 'Clifton Gaslight District', 'Hyde Park Square',
+      'Oakley Station', 'Newport on the Levee', 'The Banks', 'Fountain Square'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

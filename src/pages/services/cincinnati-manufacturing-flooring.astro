@@ -1,0 +1,43 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const manufacturingService = servicesConfig.industrial.services.find(s => s.title === "Manufacturing Facilities");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: manufacturingService,
+  seo: {
+    title: 'Cincinnati Manufacturing Flooring | Industrial Heavy-Duty Coatings | Queen City Surface Coatings',
+    description: 'Professional manufacturing facility flooring in Cincinnati, Ohio. Chemical-resistant, heavy-duty coatings for Queensgate, Camp Washington, and all Cincinnati industrial areas.',
+    keywords: 'Cincinnati manufacturing flooring, Cincinnati industrial flooring, Queensgate manufacturing coating, Camp Washington industrial floors, Cincinnati heavy-duty flooring, manufacturing epoxy Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings delivers professional manufacturing facility flooring throughout Cincinnati, Ohio. Our extreme-duty coatings withstand chemical exposure and heavy industrial operations for Cincinnati manufacturers.',
+    neighborhoods: [
+      'Queensgate', 'Camp Washington', 'West End', 'Lower Price Hill', 'East Price Hill',
+      'South Cumminsville', 'Riverside', 'Sedamsville', 'East Westwood', 'Millvale',
+      'Carthage', 'Hartwell', 'Bond Hill', 'Roselawn', 'Avondale', 'Corryville',
+      'Mount Auburn', 'Pendleton', 'Over-the-Rhine', 'Downtown'
+    ],
+    landmarks: [
+      'Cincinnati/Northern Kentucky International Airport', 'Port of Cincinnati',
+      'Cincinnati Union Terminal', 'Queensgate Industrial District', 
+      'Camp Washington Business District', 'Cincinnati Logistics Hub',
+      'Interstate 75 Corridor', 'Interstate 71 Corridor', 'Mill Creek Industrial Park',
+      'Cincinnati Rail Terminal'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// City-specific data
+const cityData = {
+  cityName: 'West Chester',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'West Chester Ohio Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your West Chester garage with professional epoxy floor coating. Serving West Chester Township, Union Centre, and all West Chester neighborhoods with durable, beautiful garage flooring.',
+    keywords: 'West Chester garage floor epoxy, West Chester garage coating, West Chester Township garage floors, Union Centre epoxy flooring, West Chester garage transformation, professional garage floors West Chester Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all West Chester neighborhoods with professional garage floor coating services. Our local expertise ensures we understand the unique needs of West Chester properties, from luxury homes to new construction.',
+    neighborhoods: [
+      'West Chester Township',
+      'Union Centre',
+      'Beckett Ridge',
+      'Wetherington',
+      'Liberty Township',
+      'Lakota',
+      'Four Bridges',
+      'Tylersville',
+      'West Chester Commons',
+      'Deerfield Township',
+      'Butler County',
+      'Cox Road',
+      'Cincinnati-Dayton Road',
+      'Tylersville Road',
+      'Union Centre Boulevard',
+      'Beckett Ridge Drive',
+      'West Chester Road',
+      'Princeton Road',
+      'Schultz Road',
+      'Weller Road'
+    ],
+    landmarks: [
+      'West Chester Township Hall',
+      'Union Centre',
+      'Beckett Ridge Country Club',
+      'Wetherington Golf & Country Club',
+      'Liberty Center',
+      'Streets of West Chester',
+      'West Chester Hospital',
+      'Lakota Local School District',
+      'Voice of America MetroParks',
+      'Princeton High School'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

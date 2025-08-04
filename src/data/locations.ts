@@ -93,26 +93,6 @@ export const services: Record<string, Service> = {
     ],
     applications: ['Recreation Rooms', 'Home Gyms', 'Storage Areas']
   },
-  'polyaspartic-coating': {
-    name: 'Polyaspartic Coating',
-    slug: 'polyaspartic-coating',
-    description: 'Fast-curing, UV-stable coating systems for urgent projects and commercial applications.',
-    benefits: [
-      'Same-Day Installation',
-      'UV Stable Finish',
-      'Superior Abrasion Resistance',
-      'Temperature Tolerant',
-      'Commercial Grade Performance'
-    ],
-    process: [
-      'Surface Preparation',
-      'Fast-Cure Primer',
-      'Polyaspartic Base Coat',
-      'Optional Decoratives',
-      'UV-Resistant Topcoat'
-    ],
-    applications: ['Commercial Facilities', 'High-Traffic Areas', 'Quick Turnaround Projects']
-  },
   'commercial-concrete-coating': {
     name: 'Commercial Concrete Coating',
     slug: 'commercial-concrete-coating',
@@ -132,6 +112,306 @@ export const services: Record<string, Service> = {
       'Performance Topcoat'
     ],
     applications: ['Warehouses', 'Manufacturing Facilities', 'Retail Spaces']
+  },
+  'flake-systems': {
+    name: 'Flake Systems',
+    slug: 'flake-systems',
+    description: 'Decorative concrete coating systems with colored flakes for texture and visual appeal.',
+    benefits: [
+      'Slip-Resistant Texture',
+      'Hide Surface Imperfections',
+      'Customizable Color Options',
+      'Durable Protection',
+      'Easy Maintenance'
+    ],
+    process: [
+      'Surface Preparation',
+      'Base Coat Application',
+      'Flake Broadcasting',
+      'Excess Flake Removal',
+      'Protective Topcoat'
+    ],
+    applications: ['Garage Floors', 'Basement Floors', 'Commercial Spaces']
+  },
+  'natural-stone-reproductions': {
+    name: 'Natural Stone Reproductions',
+    slug: 'natural-stone-reproductions',
+    description: 'Advanced coating systems that replicate the look and texture of natural stone surfaces.',
+    benefits: [
+      'Authentic Stone Appearance',
+      'Cost-Effective Alternative',
+      'Seamless Installation',
+      'Weather Resistant',
+      'Low Maintenance'
+    ],
+    process: [
+      'Surface Preparation',
+      'Base Texture Application',
+      'Color Pattern Creation',
+      'Texture Enhancement',
+      'Protective Sealing'
+    ],
+    applications: ['Patios', 'Pool Decks', 'Interior Floors']
+  },
+  'textured-concrete-finishes': {
+    name: 'Textured Concrete Finishes',
+    slug: 'textured-concrete-finishes',
+    description: 'Specialized textured coatings that add depth, character, and functionality to concrete surfaces.',
+    benefits: [
+      'Enhanced Slip Resistance',
+      'Unique Visual Appeal',
+      'Surface Protection',
+      'Weather Durability',
+      'Custom Texture Options'
+    ],
+    process: [
+      'Surface Preparation',
+      'Primer Application',
+      'Texture Base Coat',
+      'Pattern Development',
+      'Protective Finish'
+    ],
+    applications: ['Walkways', 'Driveways', 'Commercial Floors']
+  },
+  'concrete-repair': {
+    name: 'Concrete Repair',
+    slug: 'concrete-repair',
+    description: 'Professional concrete restoration and repair services to extend surface life and performance.',
+    benefits: [
+      'Structural Restoration',
+      'Cost-Effective Solution',
+      'Long-Term Protection',
+      'Safety Improvement',
+      'Property Value Preservation'
+    ],
+    process: [
+      'Damage Assessment',
+      'Surface Preparation',
+      'Repair Material Application',
+      'Surface Leveling',
+      'Protective Coating'
+    ],
+    applications: ['Cracked Concrete', 'Spalled Surfaces', 'Structural Repairs']
+  },
+  'pressure-washing-protection': {
+    name: 'Pressure Washing & Protection',
+    slug: 'pressure-washing-protection',
+    description: 'Professional cleaning and protective treatments to maintain and enhance concrete surfaces.',
+    benefits: [
+      'Deep Surface Cleaning',
+      'Stain Removal',
+      'Mold & Mildew Prevention',
+      'Extended Surface Life',
+      'Enhanced Appearance'
+    ],
+    process: [
+      'Surface Assessment',
+      'Pre-Treatment Application',
+      'High-Pressure Cleaning',
+      'Surface Preparation',
+      'Protective Coating'
+    ],
+    applications: ['Driveways', 'Sidewalks', 'Commercial Properties']
+  },
+  'retail-flooring': {
+    name: 'Retail Flooring',
+    slug: 'retail-flooring',
+    description: 'Commercial-grade flooring solutions designed for high-traffic retail environments.',
+    benefits: [
+      'High-Traffic Durability',
+      'Professional Appearance',
+      'Easy Maintenance',
+      'Slip Resistance',
+      'Brand Enhancement'
+    ],
+    process: [
+      'Store Assessment',
+      'Surface Preparation',
+      'Commercial-Grade Primer',
+      'Base System Application',
+      'Performance Topcoat'
+    ],
+    applications: ['Retail Stores', 'Shopping Centers', 'Showrooms']
+  },
+  'warehouse-flooring': {
+    name: 'Warehouse Flooring',
+    slug: 'warehouse-flooring',
+    description: 'Heavy-duty industrial flooring systems for warehouse and distribution facilities.',
+    benefits: [
+      'Forklift Traffic Resistance',
+      'Chemical Resistance',
+      'Dust-Free Surface',
+      'Easy Cleaning',
+      'Safety Compliance'
+    ],
+    process: [
+      'Facility Assessment',
+      'Industrial Preparation',
+      'Heavy-Duty Base System',
+      'Traffic Zone Coating',
+      'Line Marking Application'
+    ],
+    applications: ['Warehouses', 'Distribution Centers', 'Storage Facilities']
+  },
+  'office-flooring': {
+    name: 'Office Flooring',
+    slug: 'office-flooring',
+    description: 'Professional office flooring solutions that combine durability with aesthetic appeal.',
+    benefits: [
+      'Professional Appearance',
+      'Low Maintenance',
+      'Sound Dampening',
+      'Chemical Resistance',
+      'Long-Term Durability'
+    ],
+    process: [
+      'Office Space Assessment',
+      'Surface Preparation',
+      'Sound-Dampening Primer',
+      'Base Coat Application',
+      'Finish Coat Installation'
+    ],
+    applications: ['Corporate Offices', 'Medical Facilities', 'Professional Buildings']
+  },
+  'manufacturing-flooring': {
+    name: 'Manufacturing Flooring',
+    slug: 'manufacturing-flooring',
+    description: 'Industrial-strength flooring systems designed for manufacturing and production environments.',
+    benefits: [
+      'Chemical Resistance',
+      'Heavy Machinery Support',
+      'Anti-Static Properties',
+      'Easy Decontamination',
+      'Safety Compliance'
+    ],
+    process: [
+      'Facility Analysis',
+      'Industrial Surface Prep',
+      'Chemical-Resistant Primer',
+      'Heavy-Duty Base System',
+      'Specialized Topcoat'
+    ],
+    applications: ['Manufacturing Plants', 'Production Facilities', 'Assembly Lines']
+  },
+  'food-beverage-flooring': {
+    name: 'Food & Beverage Flooring',
+    slug: 'food-beverage-flooring',
+    description: 'FDA-compliant flooring systems for food processing and beverage production facilities.',
+    benefits: [
+      'FDA Compliance',
+      'Antimicrobial Properties',
+      'Chemical Resistance',
+      'Easy Sanitization',
+      'Thermal Shock Resistance'
+    ],
+    process: [
+      'Regulatory Assessment',
+      'Sanitization Preparation',
+      'FDA-Compliant Primer',
+      'Antimicrobial Base System',
+      'Food-Safe Topcoat'
+    ],
+    applications: ['Food Processing', 'Commercial Kitchens', 'Beverage Production']
+  },
+  'automotive-flooring': {
+    name: 'Automotive Flooring',
+    slug: 'automotive-flooring',
+    description: 'Specialized flooring solutions for automotive service facilities and showrooms.',
+    benefits: [
+      'Oil & Chemical Resistance',
+      'Heavy Vehicle Support',
+      'Easy Cleanup',
+      'Professional Appearance',
+      'Safety Compliance'
+    ],
+    process: [
+      'Facility Assessment',
+      'Oil Stain Treatment',
+      'Chemical-Resistant Primer',
+      'Heavy-Duty Base System',
+      'Automotive-Grade Topcoat'
+    ],
+    applications: ['Auto Repair Shops', 'Car Dealerships', 'Service Centers']
+  },
+  'industrial-flooring': {
+    name: 'Industrial Flooring',
+    slug: 'industrial-flooring',
+    description: 'Comprehensive industrial flooring solutions for demanding industrial environments.',
+    benefits: [
+      'Extreme Durability',
+      'Chemical Resistance',
+      'Heavy Load Capacity',
+      'Safety Features',
+      'Long Service Life'
+    ],
+    process: [
+      'Industrial Assessment',
+      'Mechanical Preparation',
+      'Industrial-Grade Primer',
+      'Heavy-Duty Base System',
+      'Performance Topcoat'
+    ],
+    applications: ['Industrial Plants', 'Heavy Manufacturing', 'Chemical Facilities']
+  },
+  'residential': {
+    name: 'Residential Services',
+    slug: 'residential',
+    description: 'Comprehensive residential concrete coating solutions for homes and personal spaces.',
+    benefits: [
+      'Enhanced Home Value',
+      'Personalized Design',
+      'Family-Safe Materials',
+      'Long-Term Durability',
+      'Easy Maintenance'
+    ],
+    process: [
+      'Home Assessment',
+      'Surface Preparation',
+      'Residential-Grade Primer',
+      'Custom Base System',
+      'Protective Finish'
+    ],
+    applications: ['Garages', 'Basements', 'Patios']
+  },
+  'commercial': {
+    name: 'Commercial Services',
+    slug: 'commercial',
+    description: 'Professional commercial concrete coating solutions for business environments.',
+    benefits: [
+      'Business Continuity',
+      'Professional Image',
+      'Safety Compliance',
+      'Minimal Downtime',
+      'Cost-Effective Solution'
+    ],
+    process: [
+      'Business Assessment',
+      'Scheduled Installation',
+      'Commercial-Grade Systems',
+      'Quality Assurance',
+      'Final Inspection'
+    ],
+    applications: ['Offices', 'Retail', 'Restaurants']
+  },
+  'decorative-options': {
+    name: 'Decorative Options',
+    slug: 'decorative-options',
+    description: 'Artistic and decorative concrete coating systems for enhanced aesthetic appeal.',
+    benefits: [
+      'Custom Design Options',
+      'Artistic Appeal',
+      'Unique Patterns',
+      'Enhanced Property Value',
+      'Professional Installation'
+    ],
+    process: [
+      'Design Consultation',
+      'Pattern Selection',
+      'Artistic Application',
+      'Detail Enhancement',
+      'Protective Finishing'
+    ],
+    applications: ['Showrooms', 'Luxury Homes', 'Commercial Spaces']
   }
 };
 

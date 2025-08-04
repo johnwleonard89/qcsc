@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.garageFloorEpoxy,
+  cityName: 'Springboro',
+  state: 'Ohio',
+  county: 'Warren',
+  seo: {
+    title: 'Springboro OH Garage Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Springboro, Ohio garage with professional floor coating. Serving Clearcreek Township, Main Street, and all Springboro neighborhoods with guaranteed results.',
+    keywords: 'Springboro OH garage floor coating, Springboro garage floor epoxy, Clearcreek Township garage flooring, Main Street garage coating, Springboro Ohio garage transformation, professional garage floors Springboro OH'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Springboro, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Springboro garages and properties.',
+    neighborhoods: [
+      'Clearcreek Township',
+      'Main Street',
+      'Gardner Road',
+      'Tamarack Trail',
+      'Crosswinds Drive',
+      'Clearcreek-Franklin Road',
+      'State Route 741',
+      'Lytle-Five Points Road',
+      'Pennyroyal Drive',
+      'Red Lion-Five Points Road',
+      'South Main Street',
+      'North Main Street',
+      'Mill Lane',
+      'Spring Valley Road',
+      'Springboro Pike',
+      'Clarksville Road',
+      'Central Avenue',
+      'Wright Station Road',
+      'Alex Bell Road',
+      'Miamisburg-Centerville Road'
+    ],
+    landmarks: [
+      'Springboro City Hall',
+      'Clearcreek Township Community Center',
+      'Springboro High School',
+      'Springboro Intermediate School',
+      'La Comedia Dinner Theatre',
+      'Wright Station Park',
+      'Clearcreek Metro Park',
+      'Heritage Golf Club',
+      'Springboro Community Park',
+      'Springboro Historical Society',
+      'Springboro Schools',
+      'Five Rivers MetroParks',
+      'Little Miami River',
+      'Warren County',
+      'Springboro Shopping Centers'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

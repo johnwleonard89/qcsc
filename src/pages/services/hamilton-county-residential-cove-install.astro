@@ -1,0 +1,178 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+
+// Create base service data for residential cove install
+const baseServiceData = {
+  seo: {
+    title: 'Residential Cove Install Services | Seamless Floor-to-Wall Transitions | Queen City Surface Coatings',
+    description: 'Professional residential cove base installation creating seamless floor-to-wall transitions for homes. Perfect for basements, garages, kitchens, and utility rooms.',
+    keywords: 'residential cove install, home cove base, seamless floor transitions, basement cove install, garage cove base, kitchen floor-to-wall'
+  },
+  hero: {
+    tagline: 'Transform Your Home with Professional Cove Installation',
+    headline: 'Residential Cove Install Services',
+    subheadline: 'Create seamless, hygienic floor-to-wall transitions that eliminate hard-to-clean corners. Perfect for basements, garages, kitchens, and utility rooms where cleanliness and modern aesthetics matter.',
+    image: {
+      src: '/assets/images/services/cove-install.webp',
+      alt: 'Professional residential cove base installation with seamless floor-to-wall transition'
+    },
+    ctas: [
+      { text: 'Get Free Home Quote', href: '/company/contact', type: 'primary' },
+      { text: 'View Home Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Seamless Home Floor Transitions',
+    content: [
+      'Our residential cove installation services eliminate the traditional 90-degree corner between floors and walls, creating smooth, curved transitions that are easier to clean and maintain.',
+      'From basement renovations to garage makeovers and kitchen upgrades, our professional cove systems provide superior cleanliness, prevent moisture infiltration, and create a polished, contemporary look that increases your property value.'
+    ]
+  },
+  differentiators: {
+    title: 'Home Cove Installation Benefits',
+    subtitle: 'Professional cove systems transform your home\'s functionality and appearance',
+    features: [
+      {
+        title: 'Easier Home Maintenance',
+        description: 'Eliminates hard-to-clean corners in basements, garages, and utility rooms, making floor cleaning quick and efficient'
+      },
+      {
+        title: 'Modern Home Aesthetics',
+        description: 'Creates clean, contemporary lines that enhance your home\'s interior design and provide a premium appearance'
+      },
+      {
+        title: 'Moisture Protection',
+        description: 'Prevents water infiltration behind walls, protecting against mold, mildew, and structural damage'
+      },
+      {
+        title: 'Increased Property Value',
+        description: 'Professional installations represent quality upgrades that enhance your home\'s appeal to buyers'
+      },
+      {
+        title: 'Durable Family Solution',
+        description: 'Creates surfaces that withstand family life and daily activities while maintaining their appearance'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Home Installation Process',
+    subtitle: 'Careful, professional installation with minimal disruption to your daily routine',
+    steps: [
+      {
+        number: 1,
+        title: 'Home Assessment',
+        items: ['Free in-home consultation', 'Room evaluation', 'Design recommendations', 'Transparent pricing']
+      },
+      {
+        number: 2,
+        title: 'Project Planning',
+        items: ['Family schedule coordination', 'Room preparation planning', 'Material delivery', 'Clear communication']
+      },
+      {
+        number: 3,
+        title: 'Surface Preparation',
+        items: ['Furniture protection', 'Wall cleaning', 'Minor repairs', 'Safety measures']
+      },
+      {
+        number: 4,
+        title: 'Professional Installation',
+        items: ['Precision cove formation', 'Quality workmanship', 'Clean work environment', 'Progress updates']
+      },
+      {
+        number: 5,
+        title: 'Final Walkthrough',
+        items: ['Complete inspection', 'Thorough cleanup', 'Care instructions', 'Warranty documentation']
+      }
+    ]
+  },
+  collections: {
+    title: 'Perfect Home Applications',
+    subtitle: 'Transform multiple areas of your home with professional cove installations',
+    items: [
+      {
+        title: 'Finished Basements',
+        description: 'Create premium finished spaces with seamless transitions',
+        features: ['Recreation room upgrades', 'Home office spaces', 'Guest suites', 'Entertainment areas']
+      },
+      {
+        title: 'Garage Makeovers',
+        description: 'Professional garage upgrades with seamless finishing',
+        features: ['Workshop organization', 'Multi-car garages', 'Storage improvements', 'Vehicle showrooms']
+      },
+      {
+        title: 'Kitchen & Dining Areas',
+        description: 'Modern kitchen upgrades with seamless floor transitions',
+        features: ['Easy-clean floors', 'Pantry upgrades', 'Dining enhancements', 'High-traffic durability']
+      },
+      {
+        title: 'Laundry & Utility Rooms',
+        description: 'Practical upgrades for hardworking home spaces',
+        features: ['Moisture resistance', 'Easy maintenance', 'Modern aesthetics', 'Spill protection']
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Upgrade Your Home?',
+    description: 'Schedule your free in-home consultation and discover how residential cove installations can enhance your home\'s functionality and value.'
+  }
+};
+
+// County-specific data
+const countyData = {
+  countyName: 'Hamilton',
+  state: 'Ohio',
+  seo: {
+    title: 'Hamilton County Ohio Residential Cove Install | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Hamilton County home with professional residential cove installation. Serving Cincinnati, Mason, Blue Ash, and all Hamilton County communities with seamless floor-to-wall transitions.',
+    keywords: 'Hamilton County residential cove install, Cincinnati home cove base, Mason OH floor transitions, Blue Ash cove installation, Hamilton County home upgrades, professional residential cove Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Hamilton County with professional residential cove installation services. Our local expertise ensures we understand the unique needs of Hamilton County homes, creating seamless, hygienic transitions for modern living.',
+    cities: [
+      'Cincinnati',
+      'Loveland',
+      'Mason',
+      'Blue Ash',
+      'Springdale',
+      'Forest Park',
+      'Sharonville',
+      'Evendale',
+      'Madeira',
+      'Milford',
+      'Wyoming',
+      'Reading',
+      'Lockland',
+      'Elmwood Place',
+      'Lincoln Heights',
+      'Glendale',
+      'Woodlawn',
+      'Golf Manor',
+      'Deer Park',
+      'Silverton',
+      'Mariemont',
+      'Terrace Park',
+      'Fairfax',
+      'Indian Hill',
+      'Montgomery',
+      'Symmes Township',
+      'Sycamore Township',
+      'Delhi Township',
+      'Green Township',
+      'Harrison Township',
+      'Miami Township',
+      'Springfield Township',
+      'Colerain Township',
+      'Whitewater Township',
+      'Crosby Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

@@ -1,0 +1,36 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const automotiveService = servicesConfig.industrial.services.find(s => s.title === "Automotive");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: automotiveService,
+  seo: {
+    title: 'Cincinnati Automotive Flooring | Oil-Resistant Auto Shop Floors | Queen City Surface Coatings',
+    description: 'Professional automotive facility flooring in Cincinnati, Ohio. Oil and fluid resistant coatings for auto shops, service centers, and garages throughout Cincinnati.',
+    keywords: 'Cincinnati automotive flooring, Cincinnati auto shop floors, Cincinnati service center flooring, automotive epoxy Cincinnati, oil resistant flooring Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides specialized automotive facility flooring throughout Cincinnati, Ohio. Our oil and fluid-resistant coatings are perfect for auto shops, service centers, and automotive facilities.',
+    neighborhoods: [
+      'Queensgate', 'Camp Washington', 'West End', 'Riverside', 'Bond Hill',
+      'Carthage', 'Hartwell', 'Roselawn', 'Mount Auburn', 'Corryville',
+      'Avondale', 'Millvale', 'Reading', 'Norwood', 'Elmwood Place',
+      'Golf Manor', 'Springfield Township', 'Forest Park', 'Lockland', 'Wyoming'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

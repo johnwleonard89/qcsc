@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the metallic epoxy service from decorative services
+const metallicEpoxyService = servicesConfig.decorative.services.find(s => s.title === "Metallic Epoxy");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: metallicEpoxyService,
+  seo: {
+    title: 'Cincinnati Metallic Epoxy Flooring | Stunning 3D Floor Effects | Queen City Surface Coatings',
+    description: 'Stunning metallic epoxy flooring in Cincinnati, Ohio. Unique 3D effects for Hyde Park, Clifton, Oakley, and all Cincinnati residential and commercial spaces.',
+    keywords: 'Cincinnati metallic epoxy, Cincinnati metallic flooring, Hyde Park metallic epoxy, Clifton metallic floors, Oakley metallic coating, Cincinnati decorative flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates stunning metallic epoxy flooring throughout Cincinnati, Ohio. Our artistic metallic systems transform Cincinnati properties with unique, flowing patterns and dimensional beauty.',
+    neighborhoods: [
+      'Hyde Park',
+      'Mount Lookout',
+      'Mount Adams',
+      'Clifton',
+      'Gaslight District',
+      'Oakley',
+      'Madisonville',
+      'Indian Hill',
+      'Madeira',
+      'Mariemont',
+      'Terrace Park',
+      'Montgomery',
+      'Blue Ash',
+      'Mason',
+      'West Chester',
+      'Loveland',
+      'Evendale',
+      'Sharonville',
+      'Springdale',
+      'Sycamore Township'
+    ],
+    landmarks: [
+      'Eden Park',
+      'Mount Adams Incline',
+      'Cincinnati Art Museum',
+      'Krohn Conservatory',
+      'Ault Park',
+      'Hyde Park Square',
+      'Oakley Station',
+      'Gaslight District',
+      'Clifton Cultural Arts Center',
+      'Mariemont Square'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

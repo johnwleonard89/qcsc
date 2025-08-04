@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Fairfield',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'Fairfield Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Fairfield, Ohio. Serving Nilles Road, Pleasant Avenue, and all Fairfield neighborhoods with military precision installation.',
+    keywords: 'Fairfield concrete coating, Fairfield concrete services, Nilles Road OH epoxy flooring, Pleasant Avenue concrete coating, Fairfield garage floors, Fairfield residential coating, commercial concrete Fairfield Ohio'
+  },
+  hero: {
+    tagline: 'Fairfield Excellence',
+    headline: 'Professional Concrete Coating Services in Fairfield, Ohio',
+    subheadline: 'Transform your Fairfield property with expert concrete coating services. From Nilles Road to Pleasant Avenue, we deliver military precision installation throughout Fairfield with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Fairfield, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Fairfield properties, from residential neighborhoods to commercial districts.',
+    neighborhoods: [
+      'Nilles Road',
+      'Pleasant Avenue',
+      'Symmes Road',
+      'Crescentville Road',
+      'Dixie Highway',
+      'Winton Road',
+      'Central Avenue',
+      'Fairfield Avenue',
+      'Commerce Drive',
+      'Village Green Drive',
+      'Highland Avenue',
+      'Timber Trail',
+      'Forest Run Drive',
+      'Fairfield Shopping Center',
+      'Fairfield Commons',
+      'Jungle Jims Area',
+      'Fairfield High School',
+      'Fairfield City Schools',
+      'Fairfield Recreation Center',
+      'Fairfield Community Arts Center'
+    ],
+    landmarks: [
+      'Fairfield City Hall',
+      'Jungle Jims International Market',
+      'Fairfield Community Arts Center',
+      'Fairfield High School',
+      'Fairfield Recreational Complex',
+      'Fairfield Shopping Center',
+      'Fairfield Commons',
+      'Village Green Park',
+      'Harbin Park',
+      'Creekside Meadows Park',
+      'Fairfield City Schools',
+      'Great Miami River',
+      'Fairfield Beach',
+      'Butler County',
+      'Cincinnati Premium Outlets'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

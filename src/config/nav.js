@@ -25,7 +25,7 @@ export const nav = [
 					},
 					{
 						title: 'Kitchen',
-						slug: '/services/polyaspartic-coating/',
+						slug: '/services/kitchen-floor-coatings/',
 					},
 				],
 			},

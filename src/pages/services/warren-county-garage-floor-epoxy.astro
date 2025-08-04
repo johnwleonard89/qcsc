@@ -1,0 +1,51 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// County-specific data
+const countyData = {
+  countyName: 'Warren',
+  state: 'Ohio',
+  seo: {
+    title: 'Warren County Ohio Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Warren County garage with professional epoxy floor coating. Serving Mason, Springboro, Franklin, Lebanon, and all Warren County communities with durable, beautiful garage flooring.',
+    keywords: 'Warren County garage floor epoxy, Mason OH garage coating, Springboro garage floors, Franklin epoxy flooring, Warren County garage transformation, professional garage floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Warren County with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Warren County garages, from suburban communities to rural areas.',
+    cities: [
+      'Mason',
+      'Springboro',
+      'Franklin',
+      'Lebanon', 
+      'Loveland',
+      'Waynesville',
+      'Carlisle',
+      'Miamisburg',
+      'Centerville',
+      'Clearcreek Township',
+      'Deerfield Township',
+      'Franklin Township',
+      'Hamilton Township',
+      'Harlan Township',
+      'Massie Township',
+      'Salem Township',
+      'Turtlecreek Township',
+      'Union Township',
+      'Washington Township',
+      'Wayne Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

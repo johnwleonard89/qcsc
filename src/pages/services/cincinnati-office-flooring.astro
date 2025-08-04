@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the office service from commercial services
+const officeService = servicesConfig.commercial.services.find(s => s.title === "Office");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: officeService,
+  seo: {
+    title: 'Cincinnati Office Flooring | Professional Workspace Coatings | Queen City Surface Coatings',
+    description: 'Professional office flooring solutions in Cincinnati, Ohio. Low-maintenance, durable coatings for Downtown, Over-the-Rhine, and all Cincinnati office spaces.',
+    keywords: 'Cincinnati office flooring, Cincinnati office coating, Downtown Cincinnati office floors, Over-the-Rhine office flooring, Cincinnati workspace coating, commercial office Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional office flooring solutions throughout Cincinnati, Ohio. Our low-maintenance coatings create productive work environments for businesses across Cincinnati\'s commercial districts.',
+    neighborhoods: [
+      'Downtown',
+      'Over-the-Rhine',
+      'Clifton',
+      'Hyde Park',
+      'Oakley',
+      'Blue Ash',
+      'Mason',
+      'West Chester',
+      'Springdale',
+      'Sharonville',
+      'Montgomery',
+      'Sycamore Township',
+      'Evendale',
+      'Norwood',
+      'Reading',
+      'Golf Manor',
+      'Silverton',
+      'Deer Park',
+      'Madeira',
+      'Indian Hill'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'Fountain Square',
+      'Cincinnati Center City',
+      'Carew Tower',
+      'Great American Tower',
+      'Atrium Two',
+      'Scripps Center',
+      'Queen City Square',
+      'The Banks',
+      'Cincinnati Business District'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

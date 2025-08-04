@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Industrial Cove Install Services | Heavy-Duty Floor-to-Wall Transitions | Queen City Surface Coatings',
+    description: 'Professional industrial cove base installation for manufacturing and industrial facilities in Cincinnati and Northern Kentucky. Chemical-resistant, heavy-duty seamless floor-to-wall transitions.',
+    keywords: 'industrial cove install, manufacturing cove base, industrial floor transitions, factory cove install, chemical resistant cove, Cincinnati industrial flooring'
+  },
+  hero: {
+    tagline: 'Industrial Strength',
+    headline: 'Industrial Cove Install Services',
+    subheadline: 'Engineered for the most demanding industrial environments with heavy-duty cove installations that withstand chemical exposure, thermal cycling, and extreme operational conditions. Built for manufacturing, processing, and industrial facilities.',
+    image: {
+      src: '/assets/images/services/cove-install.webp',
+      alt: 'Professional industrial cove base installation - Queen City Surface Coatings industrial services'
+    },
+    ctas: [
+      { text: 'Get Industrial Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Industrial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Heavy-Duty Industrial Floor Transitions',
+    content: [
+      'Our industrial cove installation services provide extreme-duty seamless transitions engineered for the most demanding manufacturing and processing environments. These specialized systems eliminate maintenance-intensive corners while providing superior chemical resistance, thermal stability, and mechanical durability.',
+      'From pharmaceutical manufacturing requiring cleanroom compatibility to chemical processing facilities needing superior corrosion resistance, our industrial cove systems deliver the performance, compliance, and longevity that critical industrial operations demand.'
+    ]
+  },
+  differentiators: {
+    title: 'Industrial Cove Installation Advantages',
+    subtitle: 'Extreme-duty cove systems engineered for industrial performance:',
+    features: [
+      {
+        title: 'Chemical & Corrosion Resistance',
+        description: 'Superior resistance to acids, bases, solvents, and aggressive chemicals commonly found in industrial processing environments'
+      },
+      {
+        title: 'Thermal Stability',
+        description: 'Engineered to withstand thermal cycling, high-temperature operations, and extreme temperature variations without degradation'
+      },
+      {
+        title: 'Heavy Equipment Compatible',
+        description: 'Built to withstand forklift traffic, heavy machinery, impact loads, and the mechanical stresses of industrial operations'
+      },
+      {
+        title: 'Cleanroom & Pharmaceutical Grade',
+        description: 'Available in cleanroom-compatible formulations meeting USP standards for pharmaceutical and biotechnology manufacturing'
+      },
+      {
+        title: 'Minimal Production Downtime',
+        description: 'Fast-cure systems and phased installation approaches minimize disruption to critical manufacturing and processing operations'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Industrial Installation Process',
+    subtitle: 'Precision installation engineered for industrial environments:',
+    steps: [
+      {
+        number: 1,
+        title: 'Industrial Assessment',
+        items: [
+          'Comprehensive facility engineering evaluation',
+          'Chemical exposure and environmental analysis',
+          'Production schedule coordination and planning',
+          'Regulatory and safety compliance review'
+        ]
+      },
+      {
+        number: 2,
+        title: 'System Engineering',
+        items: [
+          'Custom formulation selection for specific exposures',
+          'Thermal expansion and mechanical stress analysis',
+          'Installation sequencing to minimize downtime',
+          'Safety and containment protocol development'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Industrial Preparation',
+        items: [
+          'Heavy-duty surface preparation and profiling',
+          'Contamination removal and decontamination',
+          'Industrial safety protocols and containment',
+          'Coordinated work area isolation'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Precision Installation',
+        items: [
+          'Industrial-grade precision application techniques',
+          'Environmental monitoring and quality control',
+          'Real-time progress reporting to operations',
+          'Professional industrial cleanup procedures'
+        ]
+      },
+      {
+        number: 5,
+        title: 'System Validation',
+        items: [
+          'Comprehensive performance testing and validation',
+          'Chemical resistance and durability verification',
+          'Operations team training and documentation',
+          'Long-term maintenance protocols and support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Industrial Applications',
+    subtitle: 'Specialized cove systems for demanding industrial environments:',
+    items: [
+      {
+        title: 'Manufacturing Facilities',
+        description: 'Heavy-duty systems for production environments',
+        features: [
+          'Heavy equipment and traffic resistance',
+          'Chemical and solvent compatibility',
+          'Thermal shock and cycling resistance',
+          'Minimal production downtime installation'
+        ]
+      },
+      {
+        title: 'Chemical Processing',
+        description: 'Corrosion-resistant systems for chemical facilities',
+        features: [
+          'Superior acid and base resistance',
+          'Solvent and chemical compatibility',
+          'Secondary containment compliance',
+          'Long-term chemical exposure durability'
+        ]
+      },
+      {
+        title: 'Pharmaceutical Manufacturing',
+        description: 'Cleanroom-compatible cove systems',
+        features: [
+          'USP and cGMP compliant materials',
+          'Cleanroom classification compatibility',
+          'Easy validation and documentation',
+          'Particle-free surface finishes'
+        ]
+      },
+      {
+        title: 'Food Processing Plants',
+        description: 'USDA-compliant systems for food manufacturing',
+        features: [
+          'USDA and FDA compliant formulations',
+          'Thermal processing compatibility',
+          'Easy washdown and sanitization',
+          'Chemical cleaning resistance'
+        ]
+      },
+      {
+        title: 'Automotive Manufacturing',
+        description: 'Industrial systems for automotive production',
+        features: [
+          'Oil and hydraulic fluid resistance',
+          'Heavy equipment compatibility',
+          'Paint booth and finishing area suitable',
+          'Easy maintenance and cleaning'
+        ]
+      },
+      {
+        title: 'Aerospace Facilities',
+        description: 'Specialized systems for aerospace manufacturing',
+        features: [
+          'Solvent and chemical resistance',
+          'Static dissipative options available',
+          'Cleanroom manufacturing compatibility',
+          'High-performance durability requirements'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready for Industrial-Grade Performance?',
+    description: 'Schedule your industrial facility assessment today and discover how heavy-duty cove installations can improve operations, reduce maintenance, and enhance your industrial environment.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

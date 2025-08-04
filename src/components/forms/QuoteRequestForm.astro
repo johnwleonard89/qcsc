@@ -1,88 +1,74 @@
 ---
-import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
+// Embedded Google Form with your branding
 ---
 
-<form class="quote-form" action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-	<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {document.getElementById('form-success').style.display='block'; document.querySelector('.quote-form').style.display='none';}"></iframe>
-	
+<div class="quote-form-container">
 	<div class="form-header">
 		<h3>Request a Free Quote</h3>
 		<p>Get a personalized estimate for your surface coating project</p>
 	</div>
-
-	<div class="form-row">
-		<FormInput
-			type="text"
-			label="First Name *"
-			id="firstName"
-			name="entry.FIRST_NAME_ENTRY_ID"
-			required
-		/>
-		<FormInput
-			type="text"
-			label="Last Name *"
-			id="lastName"
-			name="entry.LAST_NAME_ENTRY_ID"
-			required
-		/>
+	
+	<div class="form-button-wrapper">
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSc1WyoJJmD5-CXbuLNvJdbyeyEJ1CCmbGQQmq1kQueTCsAUyzw/viewform" 
+		   target="_blank" 
+		   class="quote-form-button">
+			Get My Free Quote →
+		</a>
+		<p class="button-note">Opens in a new tab • Takes just 2 minutes to complete</p>
 	</div>
-
-	<FormInput
-		type="email"
-		label="Email Address *"
-		id="email"
-		name="entry.EMAIL_ENTRY_ID"
-		required
-	/>
-
-	<FormInput
-		type="tel"
-		label="Phone Number *"
-		id="phone"
-		name="entry.PHONE_ENTRY_ID"
-		required
-		autocomplete="tel"
-		inputmode="tel"
-	/>
-
-	<FormTextarea
-		label="Project Details *"
-		id="projectDetails"
-		name="entry.PROJECT_DETAILS_ENTRY_ID"
-		placeholder="Tell us about your project: location (garage, basement, commercial space), current floor condition, timeline, specific requirements, etc."
-		required
-	/>
-
-	<Button type="submit" class="quote-submit-button">
-		Get My Free Quote
-	</Button>
-
+	
 	<p class="form-note">
 		By submitting this form, you agree to be contacted by Queen City Surface Coatings regarding your quote request.
 	</p>
-</form>
-
-<div id="form-success" style="display:none;" class="form-success">
-	<div class="success-content">
-		<h3>Thank You!</h3>
-		<p>Your quote request has been submitted successfully. We'll get back to you within 24 hours.</p>
-		<div class="success-contact">
-			<p>For immediate assistance, call us at <a href="tel:+15132965525">(513) 296-5525</a></p>
-		</div>
-	</div>
 </div>
 
 <style>
-/* Quote Request Form - Navy & Yellow Theme */
-.quote-form {
+/* Quote Request Form Container - Navy & Yellow Theme */
+.quote-form-container {
 	background: #002F4B;
 	padding: 2rem;
 	border-radius: var(--theme-shape-radius);
 	box-shadow: 0 4px 16px var(--theme-shadow-light);
 	max-width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
+}
+
+.form-button-wrapper {
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.quote-form-button {
+	display: inline-block;
+	background: #FFC107;
+	color: #002F4B;
+	padding: 1rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-decoration: none;
+	font-size: 1.125rem;
+	font-weight: 600;
+	font-family: var(--theme-font-family-sans);
+	transition: var(--theme-transition);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+	border: none;
+	cursor: pointer;
+	min-height: 48px;
+	line-height: 1.4;
+}
+
+.quote-form-button:hover {
+	background: #E6AC00;
+	color: #002F4B;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+	text-decoration: none;
+}
+
+.button-note {
+	color: white;
+	opacity: 0.8;
+	font-size: 0.875rem;
+	margin-top: 1rem;
+	line-height: 1.4;
 }
 
 .form-header {
@@ -225,6 +211,7 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 	text-decoration: underline;
 }
 
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
 	.form-row {
@@ -245,18 +232,4 @@ import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey
 }
 </style>
 
-<script>
-	// Initialize form submission state
-	let submitted = false;
-	
-	// Handle form submission success
-	document.addEventListener('DOMContentLoaded', function() {
-		const form = document.querySelector('.quote-form');
-		const successDiv = document.getElementById('form-success');
-		
-		// Add form submit event listener
-		form.addEventListener('submit', function() {
-			submitted = true;
-		});
-	});
-</script>
+

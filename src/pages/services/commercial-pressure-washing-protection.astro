@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Commercial Pressure Washing & Protection | Business Concrete Cleaning | Queen City Surface Coatings',
+    description: 'Professional commercial pressure washing and concrete protection services for businesses in Cincinnati and Northern Kentucky. Building exterior cleaning, parking lot maintenance, and protective sealing.',
+    keywords: 'commercial pressure washing, business concrete cleaning, commercial building cleaning, parking lot cleaning, concrete protection, commercial maintenance, Cincinnati business cleaning'
+  },
+  hero: {
+    tagline: 'Commercial Cleaning Excellence',
+    headline: 'Commercial Pressure Washing & Protection',
+    subheadline: 'Maintain your business facility\'s professional image with comprehensive concrete cleaning and protection services. From building exteriors to parking lots, we provide commercial-grade cleaning that enhances curb appeal and protects your investment.',
+    image: {
+      src: '/assets/images/services/pressure-washing.webp',
+      alt: 'Professional commercial pressure washing service - Queen City Surface Coatings business maintenance'
+    },
+    ctas: [
+      { text: 'Get Commercial Cleaning Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Commercial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Professional Image Starts with Clean Facilities',
+    content: [
+      'Your business facility\'s appearance directly impacts customer perception, employee morale, and property value. Dirty, stained concrete surfaces send the wrong message about your business standards and attention to detail, potentially costing you customers and opportunities.',
+      'Our commercial pressure washing and protection services restore and maintain your facility\'s professional appearance while extending the life of your concrete surfaces. From parking lots to building exteriors, we provide comprehensive cleaning solutions that enhance your business image and protect your investment.'
+    ]
+  },
+  differentiators: {
+    title: 'Commercial Cleaning Service Advantages',
+    subtitle: 'Professional cleaning services enhance your business facility:',
+    features: [
+      {
+        title: 'Enhanced Business Image',
+        description: 'Clean, well-maintained facilities create positive first impressions for customers, clients, and business partners'
+      },
+      {
+        title: 'Property Value Protection',
+        description: 'Regular cleaning and protection prevents deterioration, maintaining and increasing your commercial property value over time'
+      },
+      {
+        title: 'Safety & Liability Reduction',
+        description: 'Removes slippery substances, mold, and debris that can create slip hazards and liability concerns for your business'
+      },
+      {
+        title: 'Cost-Effective Maintenance',
+        description: 'Preventive cleaning and protection costs significantly less than concrete replacement or major restoration projects'
+      },
+      {
+        title: 'Flexible Commercial Scheduling',
+        description: 'After-hours, weekend, and seasonal scheduling options minimize disruption to business operations and customer access'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Commercial Cleaning Process',
+    subtitle: 'Systematic approach designed for optimal results and minimal disruption:',
+    steps: [
+      {
+        number: 1,
+        title: 'Facility Assessment',
+        items: [
+          'Comprehensive surface condition evaluation',
+          'Stain and contamination analysis',
+          'Safety hazard identification and planning',
+          'Custom cleaning protocol development'
+        ]
+      },
+      {
+        number: 2,
+        title: 'Commercial Project Planning',
+        items: [
+          'Business schedule coordination and planning',
+          'Safety protocols and area isolation procedures',
+          'Environmental compliance and protection measures',
+          'Equipment and material logistics coordination'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Professional Cleaning',
+        items: [
+          'Commercial-grade high-pressure cleaning systems',
+          'Specialized detergents for commercial applications',
+          'Stain removal and surface restoration techniques',
+          'Professional debris removal and site cleanup'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Protective Treatment',
+        items: [
+          'Commercial-grade protective sealer application',
+          'Surface-specific treatment selection',
+          'Professional application techniques',
+          'Quality control and coverage verification'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Maintenance Program Setup',
+        items: [
+          'Facility walkthrough and results documentation',
+          'Ongoing maintenance schedule recommendations',
+          'Staff training on surface care procedures',
+          'Preventive maintenance program enrollment'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Commercial Cleaning Applications',
+    subtitle: 'Professional cleaning services for diverse business facilities:',
+    items: [
+      {
+        title: 'Office Buildings',
+        description: 'Corporate facility cleaning and maintenance',
+        features: [
+          'Building exterior and entrance cleaning',
+          'Parking garage and lot maintenance',
+          'Sidewalk and common area cleaning',
+          'Professional corporate image enhancement'
+        ]
+      },
+      {
+        title: 'Retail Centers',
+        description: 'Shopping center and retail facility cleaning',
+        features: [
+          'High-traffic customer area cleaning',
+          'Storefront and entrance maintenance',
+          'Parking lot and loading dock cleaning',
+          'Customer experience enhancement focus'
+        ]
+      },
+      {
+        title: 'Healthcare Facilities',
+        description: 'Medical facility exterior cleaning and maintenance',
+        features: [
+          'Hospital-grade cleaning protocols',
+          'Patient and visitor area maintenance',
+          'Emergency entrance and access cleaning',
+          'Professional healthcare image support'
+        ]
+      },
+      {
+        title: 'Educational Facilities',
+        description: 'School and university facility cleaning',
+        features: [
+          'Student and staff safety focused cleaning',
+          'Campus walkway and courtyard maintenance',
+          'Athletic facility and playground cleaning',
+          'Summer cleaning and maintenance programs'
+        ]
+      },
+      {
+        title: 'Industrial Facilities',
+        description: 'Manufacturing and warehouse cleaning services',
+        features: [
+          'Heavy contamination and oil stain removal',
+          'Loading dock and equipment area cleaning',
+          'Safety compliance focused maintenance',
+          'Production schedule coordinated cleaning'
+        ]
+      },
+      {
+        title: 'Hospitality Venues',
+        description: 'Hotel and restaurant facility cleaning',
+        features: [
+          'Guest experience focused cleaning',
+          'Patio and outdoor dining area maintenance',
+          'Entrance and valet area cleaning',
+          'Professional hospitality image maintenance'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Enhance Your Business Image?',
+    description: 'Schedule your commercial cleaning consultation today and discover how professional pressure washing and protection services can enhance your facility\'s appearance and protect your investment.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

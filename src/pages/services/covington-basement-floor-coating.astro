@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.basementFloorCoating;
+
+// City-specific data
+const cityData = {
+  cityName: 'Covington',
+  state: 'Kentucky',
+  county: 'Kenton',
+  seo: {
+    title: 'Covington Kentucky Basement Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Covington basement with professional floor coating. Serving MainStrasse Village, Westside, and all Covington neighborhoods with durable, moisture-resistant basement flooring.',
+    keywords: 'Covington basement floor coating, Covington basement flooring, MainStrasse Village basement coating, Westside Covington basement floors, Covington basement transformation, professional basement floors Covington Kentucky'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Covington neighborhoods with professional basement floor coating services. Our local expertise ensures we understand the unique basement challenges in Northern Kentucky, from moisture control to creating beautiful living spaces.',
+    neighborhoods: [
+      'MainStrasse Village',
+      'Westside',
+      'Eastside',
+      'Southside',
+      'Lewisburg',
+      'Peaselburg',
+      'Monte Casino',
+      'Botany Hills',
+      'Austinburg',
+      'Licking Riverside',
+      'Central Covington',
+      'Historic District',
+      'Riverside Drive',
+      'Madison Avenue',
+      'Pike Street',
+      'Scott Boulevard',
+      'Dixie Avenue',
+      'Greenup Street',
+      'Philadelphia Street',
+      'Forest Avenue'
+    ],
+    landmarks: [
+      'Roebling Suspension Bridge',
+      'MainStrasse Village',
+      'Devou Park',
+      'Covington City Building',
+      'Cathedral Basilica of the Assumption',
+      'Northern Kentucky Convention Center',
+      'IRS Building',
+      'Covington Landing',
+      'John A. Roebling Suspension Bridge',
+      'Goebel Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

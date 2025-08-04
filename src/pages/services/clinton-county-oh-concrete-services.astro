@@ -1,0 +1,40 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Clinton',
+  state: 'Ohio',
+  seo: {
+    title: 'Clinton County Ohio Concrete Coating Services | Wilmington, Blanchester, Sabina | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Clinton County, Ohio. Serving Wilmington, Blanchester, Sabina, New Vienna, and all Clinton County communities with military precision installation.',
+    keywords: 'Clinton County concrete coating, Wilmington OH epoxy flooring, Blanchester concrete services, Sabina Ohio concrete coating, Clinton County residential coating, commercial concrete Clinton County Ohio'
+  },
+  hero: {
+    tagline: 'Clinton County Excellence',
+    headline: 'Professional Concrete Coating Services in Clinton County, Ohio',
+    subheadline: 'Transform your Clinton County property with expert concrete coating services. From Wilmington to Blanchester, Sabina to New Vienna, we deliver military precision installation throughout Clinton County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Clinton County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Clinton County properties, from college town vibrancy to agricultural communities.',
+    cities: [
+      'Wilmington',
+      'Blanchester',
+      'Sabina',
+      'New Vienna',
+      'Midland',
+      'Clarksville',
+      'Port William',
+      'Martinsville',
+      'Reesville'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

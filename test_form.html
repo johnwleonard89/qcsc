@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-container { background: #002F4B; padding: 20px; border-radius: 8px; color: white; max-width: 600px; }
+        .form-container h2 { color: #FFC107; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 4px; border: 1px solid #ccc; }
+        button { background: #FFC107; color: #002F4B; padding: 15px 30px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Test - Your Quote Request Form</h1>
+    
+    <div class="form-container">
+        <h2>Request a Free Quote</h2>
+        <p>This is what your form should look like on the website:</p>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfUUy7dwRdvjlwaRNJl0WF1oJrbSzk75rYV0gXFlFGFIzmO6g/formResponse" method="POST" target="hidden_iframe">
+            <iframe name="hidden_iframe" style="display:none;"></iframe>
+            
+            <label>First Name *</label>
+            <input type="text" name="entry.FIRST_NAME_ENTRY_ID" required>
+            
+            <label>Last Name *</label>
+            <input type="text" name="entry.LAST_NAME_ENTRY_ID" required>
+            
+            <label>Email Address *</label>
+            <input type="email" name="entry.EMAIL_ENTRY_ID" required>
+            
+            <label>Phone Number *</label>
+            <input type="tel" name="entry.PHONE_ENTRY_ID" required>
+            
+            <label>Project Details *</label>
+            <textarea name="entry.PROJECT_DETAILS_ENTRY_ID" rows="4" placeholder="Tell us about your project..."></textarea>
+            
+            <button type="submit">Get My Free Quote</button>
+        </form>
+    </div>
+    
+    <p><strong>Note:</strong> This form won't work until we get the entry IDs from your Google Form.</p>
+    <p><strong>Next step:</strong> Open the get_form_entries.html file to get the entry IDs.</p>
+</body>
+</html>

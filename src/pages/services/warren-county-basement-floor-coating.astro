@@ -1,0 +1,51 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.basementFloorCoating;
+
+// County-specific data
+const countyData = {
+  countyName: 'Warren',
+  state: 'Ohio',
+  seo: {
+    title: 'Warren County Ohio Basement Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Warren County basement with professional floor coating. Serving Mason, Springboro, Franklin, Lebanon, and all Warren County communities with durable, moisture-resistant basement flooring.',
+    keywords: 'Warren County basement floor coating, Mason OH basement flooring, Springboro basement coating, Franklin basement floors, Warren County basement transformation, professional basement floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Warren County with professional basement floor coating services. Our local expertise ensures we understand the unique basement challenges in Warren County, from moisture control to creating beautiful living spaces.',
+    cities: [
+      'Mason',
+      'Springboro',
+      'Franklin',
+      'Lebanon', 
+      'Loveland',
+      'Waynesville',
+      'Carlisle',
+      'Miamisburg',
+      'Centerville',
+      'Clearcreek Township',
+      'Deerfield Township',
+      'Franklin Township',
+      'Hamilton Township',
+      'Harlan Township',
+      'Massie Township',
+      'Salem Township',
+      'Turtlecreek Township',
+      'Union Township',
+      'Washington Township',
+      'Wayne Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

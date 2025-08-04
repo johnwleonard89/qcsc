@@ -599,7 +599,7 @@ export const residentialServices = {
         },
         {
           title: 'Multiple Coating Options',
-          description: 'Choose from epoxy, polyaspartic, or hybrid systems to match your specific needs and aesthetic vision'
+          description: 'Choose from epoxy or hybrid systems to match your specific needs and aesthetic vision'
         },
         {
           title: 'Investment Protection',
@@ -781,7 +781,7 @@ export const residentialServices = {
         },
         {
           title: 'Multiple Coating Options',
-          description: 'Choose from epoxy, polyaspartic, or hybrid systems designed specifically for basement environments'
+          description: 'Choose from epoxy or hybrid systems designed specifically for basement environments'
         },
         {
           title: 'Long-Term Value',
@@ -916,188 +916,6 @@ export const residentialServices = {
     contact: {
       title: 'Ready to Transform Your Basement?',
       description: 'Get a free estimate for professional basement floor coating and discover how we can transform your basement into your family\'s new favorite space.'
-    }
-  },
-
-  polyasparticCoating: {
-    seo: {
-      title: 'Kitchen Floor Coating | Transform Your Kitchen | Queen City Surface Coatings',
-      description: 'Transform your kitchen with professional floor coatings. Durable, hygienic, and beautiful kitchen flooring solutions that handle spills, stains, and daily use.',
-      keywords: 'kitchen floor coating, kitchen flooring, residential kitchen floors, hygienic flooring, kitchen renovation, kitchen makeover Cincinnati'
-    },
-    hero: {
-      tagline: 'Transform Your Kitchen Into Your Dream Space',
-      headline: 'Professional Kitchen Floor Coatings',
-      subheadline: 'Create the heart of your home you\'ve always dreamed of. Beautiful, hygienic, and maintenance-free kitchen floors that handle everything from daily cooking to holiday entertaining.',
-      image: {
-        src: '/assets/images/new-projects/black_res_kitchen.webp',
-        alt: 'Beautiful transformed kitchen with professional floor coating'
-      },
-      ctas: [
-        { text: 'Start My Kitchen Transformation', href: '/company/contact', type: 'primary' },
-        { text: 'See Kitchen Transformations', href: '/portfolio', type: 'outline' }
-      ]
-    },
-    intro: {
-      title: 'From Functional Space to Culinary Sanctuary',
-      content: [
-        'Your kitchen deserves to be as beautiful as it is functional. Imagine cooking and entertaining in a space where spills wipe up effortlessly, stains are never a concern, and the floor looks pristine years after installation.',
-        'Our professional kitchen floor coating systems transform ordinary concrete into stunning, hygienic surfaces that handle everything from daily meal prep to holiday entertaining. Create a kitchen that\'s not just the heart of your home, but the envy of everyone who enters it.'
-      ]
-    },
-    differentiators: {
-      title: 'Why Your Kitchen Deserves Professional Floor Coatings',
-      subtitle: 'Your kitchen transformation is too important to leave to chance - here\'s why professional installation makes all the difference:',
-      features: [
-        {
-          title: 'Food-Safe & Hygienic',
-          description: 'FDA-compliant coatings that resist bacteria growth and provide easy sanitization for food preparation areas'
-        },
-        {
-          title: 'Spill & Stain Resistant',
-          description: 'Non-porous surface that prevents wine, grease, and food stains from penetrating and becoming permanent'
-        },
-        {
-          title: 'Easy Maintenance',
-          description: 'Simple cleaning with regular household cleaners keeps your kitchen floor looking pristine with minimal effort'
-        },
-        {
-          title: 'Multiple Coating Options',
-          description: 'Choose from polyaspartic, epoxy, or hybrid systems designed specifically for kitchen environments'
-        },
-        {
-          title: 'Heat & Impact Resistance',
-          description: 'Withstands dropped pots, hot spills, and daily kitchen activities without damage or wear'
-        }
-      ]
-    },
-    process: {
-      title: 'Your Kitchen Transformation Journey',
-      subtitle: 'From initial vision to stunning reality - here\'s how we bring your dream kitchen floor to life:',
-      steps: [
-        {
-          number: 1,
-          title: 'Kitchen Vision Planning',
-          items: [
-            'Kitchen usage pattern assessment',
-            'Design preferences and color consultation',
-            'Coating system recommendations',
-            'Custom kitchen transformation plan'
-          ]
-        },
-        {
-          number: 2,
-          title: 'Hygienic Preparation',
-          items: [
-            'Food-safe surface preparation methods',
-            'Deep cleaning and sanitization',
-            'Surface repair and optimization',
-            'FDA-compliant prep procedures'
-          ]
-        },
-        {
-          number: 3,
-          title: 'Coating Application',
-          items: [
-            'Food-grade primer system application',
-            'Custom color and finish installation',
-            'Anti-microbial properties integration',
-            'Real-time quality assurance'
-          ]
-        },
-        {
-          number: 4,
-          title: 'Protection & Enhancement',
-          items: [
-            'Hygienic topcoat application',
-            'Stain and spill resistance optimization',
-            'Easy-clean surface enhancement',
-            'Food safety compliance verification'
-          ]
-        },
-        {
-          number: 5,
-          title: 'Culinary Dream Realized',
-          items: [
-            'Final kitchen transformation reveal',
-            'Kitchen-specific care guidelines',
-            'Warranty protection activation',
-            'Your new culinary sanctuary delivery'
-          ]
-        }
-      ]
-    },
-    collections: {
-      title: 'Kitchen Floor Coating Options',
-      subtitle: 'Choose from our specialized kitchen coating systems designed for culinary environments:',
-      items: [
-        {
-          title: 'Hygienic Kitchen Systems',
-          description: 'Food-safe coatings designed for serious home cooks',
-          features: [
-            'FDA-compliant materials and application',
-            'Anti-microbial properties prevent bacteria growth',
-            'Easy sanitization with standard cleaners',
-            'Non-porous surface prevents contamination'
-          ]
-        },
-        {
-          title: 'Entertainment Kitchen Systems',
-          description: 'Beautiful finishes perfect for hosting and entertaining',
-          features: [
-            'Decorative options including metallic and flakes',
-            'Wine and food stain resistance',
-            'Easy cleanup after parties and gatherings',
-            'Impressive appearance that wows guests'
-          ]
-        },
-        {
-          title: 'Family Kitchen Systems',
-          description: 'Durable coatings that handle busy family life',
-          features: [
-            'Kid and pet-friendly non-toxic formulations',
-            'Spill-resistant for everyday accidents',
-            'Easy maintenance for busy schedules',
-            'Slip-resistant options for safety'
-          ]
-        },
-        {
-          title: 'Gourmet Kitchen Systems',
-          description: 'Premium finishes for culinary enthusiasts',
-          features: [
-            'Heat-resistant for dropped pots and pans',
-            'Oil and grease resistant surfaces',
-            'Custom colors to match kitchen design',
-            'Professional-grade durability'
-          ]
-        },
-        {
-          title: 'Custom Kitchen Designs',
-          description: 'Personalized kitchen floors that reflect your style',
-          features: [
-            'Custom colors to match cabinetry and décor',
-            'Decorative patterns and artistic elements',
-            'Logo or monogram integration options',
-            'Unique, one-of-a-kind kitchen floors'
-          ]
-        }
-      ]
-    },
-    portfolio: {
-      title: 'Kitchen Floor Transformations',
-      subtitle: 'See how professional kitchen floor coatings transform ordinary spaces into culinary sanctuaries:',
-      items: [
-        { title: 'Gourmet Kitchen Makeover', location: 'West Chester Custom Home' },
-        { title: 'Family Kitchen Transformation', location: 'Mason Subdivision' },
-        { title: 'Chef\'s Kitchen Professional Coating', location: 'Anderson Township Residence' },
-        { title: 'Open Concept Kitchen Floor', location: 'Northern Kentucky Home' },
-        { title: 'Entertainment Kitchen Upgrade', location: 'Hamilton County Estate' },
-        { title: 'Modern Kitchen Renovation', location: 'Cincinnati Urban Loft' }
-      ]
-    },
-    contact: {
-      title: 'Ready to Transform Your Kitchen?',
-      description: 'Get a free estimate for professional kitchen floor coating and discover how we can transform your kitchen into the culinary sanctuary you\'ve always dreamed of.'
     }
   }
 };
@@ -1763,53 +1581,69 @@ export const commercialServices = {
       items: [
         {
           title: 'Manufacturing Facilities',
-          description: 'Heavy-duty systems for production and assembly operations',
+          description: 'Extreme-duty systems that withstand chemical exposure, thermal cycling, and heavy industrial operations with minimal production downtime',
           features: [
-            'Extreme load-bearing capacity',
-            'Impact and abrasion resistance',
-            'Chemical spill protection',
-            'Easy decontamination procedures'
-          ]
+            'Chemical processing safe',
+            'Thermal shock resistant',
+            'Static dissipative options',
+            'Minimal production downtime'
+          ],
+          href: '/services/manufacturing-flooring'
         },
         {
-          title: 'Food & Beverage Processing',
-          description: 'FDA-compliant systems for food production environments',
+          title: 'Food & Beverage',
+          description: 'USDA-compliant food-safe coatings designed for food processing facilities with antimicrobial properties and easy sanitization',
           features: [
-            'USDA and FDA compliance',
-            'Anti-microbial properties',
-            'Thermal shock resistance',
-            'Easy sanitization protocols'
-          ]
+            'USDA compliant systems',
+            'Antimicrobial properties',
+            'Easy sanitization',
+            'Chemical and thermal resistant'
+          ],
+          href: '/services/food-beverage-flooring'
         },
         {
-          title: 'Automotive Production',
-          description: 'Specialized systems for automotive manufacturing',
+          title: 'Automotive',
+          description: 'Specialized automotive facility coatings resistant to oils, hydraulic fluids, and automotive chemicals with superior durability and safety features',
           features: [
-            'Oil and solvent resistance',
-            'Conductive and anti-static options',
-            'Heavy equipment compatibility',
-            'Paint booth approved formulations'
-          ]
+            'Oil and fluid resistant',
+            'Non-slip safety features',
+            'Chemical resistant formulation',
+            'Easy maintenance'
+          ],
+          href: '/services/automotive-flooring'
         },
         {
-          title: 'Chemical Processing',
-          description: 'Ultimate chemical resistance for processing facilities',
+          title: 'Cove Install',
+          description: 'Professional cove base installation creating seamless transitions between floors and walls for enhanced cleanability and professional appearance',
           features: [
-            'Aggressive chemical resistance',
-            'Secondary containment capability',
-            'Temperature cycling resistance',
-            'Emergency decontamination ready'
-          ]
+            'Seamless floor-to-wall transition',
+            'Enhanced cleanability',
+            'Professional appearance',
+            'Prevents moisture infiltration'
+          ],
+          href: '/services/industrial-cove-install'
         },
         {
-          title: 'Heavy Manufacturing',
-          description: 'Maximum durability for the most demanding operations',
+          title: 'Joint Removal & Repair',
+          description: 'Professional concrete joint removal and repair services including expansion joint replacement, control joint sealing, and structural joint restoration',
           features: [
-            'Extreme impact resistance',
-            'Forklift and crane traffic rated',
-            'Thermal expansion compatible',
-            'Long-term performance guarantee'
-          ]
+            'Expansion joint replacement',
+            'Control joint sealing',
+            'Structural joint restoration',
+            'Waterproof joint systems'
+          ],
+          href: '/services/industrial-joint-removal-repair'
+        },
+        {
+          title: 'Pressure Washing & Protection',
+          description: 'Professional concrete cleaning and protective services including pressure washing, chemical cleaning, and protective sealer application for industrial properties',
+          features: [
+            'High-pressure cleaning systems',
+            'Chemical stain removal',
+            'Protective sealer application',
+            'Preventive maintenance programs'
+          ],
+          href: '/services/industrial-pressure-washing-protection'
         }
       ]
     },
@@ -2390,7 +2224,7 @@ export const naturalStoneServices = {
       headline: 'Natural Stone Reproductions',
       subheadline: 'Experience the timeless beauty of natural stone with our premium reproduction systems. Authentic textures and patterns at a fraction of natural stone cost, with no grout lines to maintain.',
       image: {
-        src: '/assets/images/new-projects/blue_metalic.webp',
+        src: '/assets/images/new-projects/natural_stone_hero.webp',
         alt: 'Natural stone reproduction coating with realistic texture and appearance'
       },
       ctas: [
@@ -3532,7 +3366,7 @@ export const texturedConcreteServices = {
       headline: 'Textured Concrete Finishes',
       subheadline: 'Transform ordinary concrete into extraordinary artistic surfaces with our unique textured finishes. Custom hand-finishing and artistic consultation create textures competitors cannot replicate.',
       image: {
-        src: '/assets/images/new-projects/blue_metalic.webp',
+        src: '/assets/images/new-projects/textured_concrete_hero.webp',
         alt: 'Artistic textured concrete finish with custom hand-finishing'
       },
       ctas: [
@@ -4665,9 +4499,9 @@ export const texturedConcreteServices = {
 export const concreteServices = {
   coatingSystems: {
     seo: {
-      title: 'Professional Concrete Coating Systems | Epoxy & Polyaspartic | Queen City Surface Coatings',
-      description: 'Comprehensive concrete coating systems for all applications. Epoxy, polyaspartic, and polyurea coatings for residential, commercial, and industrial spaces.',
-      keywords: 'concrete coating systems, epoxy coatings, polyaspartic coatings, polyurea systems, industrial coatings, commercial floor coatings Cincinnati'
+      title: 'Professional Concrete Coating Systems | Epoxy & Polyurea | Queen City Surface Coatings',
+      description: 'Comprehensive concrete coating systems for all applications. Epoxy and polyurea coatings for residential, commercial, and industrial spaces.',
+      keywords: 'concrete coating systems, epoxy coatings, polyurea systems, industrial coatings, commercial floor coatings Cincinnati'
     },
     hero: {
       tagline: 'Professional Concrete Coating Systems',
@@ -4686,7 +4520,7 @@ export const concreteServices = {
       title: 'Engineered Coating Systems for Every Application',
       content: [
         'Professional concrete coatings require more than just applying paint to concrete. Our coating systems are engineered solutions that address specific performance requirements, environmental conditions, and aesthetic goals.',
-        'We specialize in three primary coating technologies: epoxy systems for maximum adhesion and chemical resistance, polyaspartic coatings for rapid installation and UV stability, and polyurea systems for extreme durability and flexibility. Each system is selected and customized based on your specific application requirements.'
+        'We specialize in advanced coating technologies: epoxy systems for maximum adhesion and chemical resistance, and polyurea systems for extreme durability and flexibility. Each system is selected and customized based on your specific application requirements.'
       ]
     },
     differentiators: {

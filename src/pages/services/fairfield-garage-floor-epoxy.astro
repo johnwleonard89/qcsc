@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.garageFloorEpoxy,
+  cityName: 'Fairfield',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'Fairfield OH Garage Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Fairfield, Ohio garage with professional floor coating. Serving Pleasant Avenue, Symmes Road, and all Fairfield neighborhoods with guaranteed results.',
+    keywords: 'Fairfield OH garage floor coating, Fairfield garage floor epoxy, Pleasant Avenue garage flooring, Symmes Road garage coating, Fairfield Ohio garage transformation, professional garage floors Fairfield OH'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Fairfield, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Fairfield garages and properties.',
+    neighborhoods: [
+      'Pleasant Avenue',
+      'Symmes Road',
+      'Vine Street',
+      'Dixie Highway',
+      'Nilles Road',
+      'Winton Road',
+      'Mack Road',
+      'Seward Road',
+      'Boys Club Road',
+      'Central Avenue',
+      'Fairfield Avenue',
+      'Memorial Boulevard',
+      'Wessel Drive',
+      'Forest Fair Drive',
+      'Bypass 4',
+      'Crescentville Road',
+      'Village Green Drive',
+      'Fairfield Business District',
+      'Forest Fair Mall Area',
+      'Jungle Jim\'s Area'
+    ],
+    landmarks: [
+      'Fairfield City Hall',
+      'Fairfield High School',
+      'Fairfield Middle School',
+      'Fairfield Elementary Schools',
+      'Village Green Park',
+      'Harbin Park',
+      'Creekside Meadows Park',
+      'Fairfield Community Arts Center',
+      'Fairfield Lane Library',
+      'Jungle Jim\'s International Market',
+      'Forest Fair Village',
+      'Fairfield Commons',
+      'Central Park',
+      'Fairfield Recreation Center',
+      'Miami University Hamilton'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Commercial Cove Install Services | Professional Floor-to-Wall Transitions | Queen City Surface Coatings',
+    description: 'Professional commercial cove base installation for businesses in Cincinnati and Northern Kentucky. Healthcare, retail, office, and commercial facilities with seamless floor-to-wall transitions.',
+    keywords: 'commercial cove install, business cove base, commercial floor transitions, office cove install, retail cove base, healthcare floor-to-wall, Cincinnati commercial flooring'
+  },
+  hero: {
+    tagline: 'Commercial Excellence',
+    headline: 'Commercial Cove Install Services',
+    subheadline: 'Enhance your business facility with professional cove installations that meet commercial hygiene standards, improve maintenance efficiency, and create a professional appearance. Perfect for offices, retail spaces, healthcare facilities, and commercial buildings.',
+    image: {
+      src: '/assets/images/services/cove-install.webp',
+      alt: 'Professional commercial cove base installation - Queen City Surface Coatings business services'
+    },
+    ctas: [
+      { text: 'Get Commercial Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Commercial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Professional Commercial Floor Transitions',
+    content: [
+      'Our commercial cove installation services provide seamless floor-to-wall transitions that meet strict business hygiene standards while reducing maintenance costs. These professional-grade installations eliminate the 90-degree corners where dirt, bacteria, and moisture accumulate, creating cleaner, more efficient commercial spaces.',
+      'From healthcare facilities requiring sterile environments to retail spaces needing easy maintenance, our commercial cove systems deliver superior performance, regulatory compliance, and professional aesthetics that enhance your business operations.'
+    ]
+  },
+  differentiators: {
+    title: 'Commercial Cove Installation Advantages',
+    subtitle: 'Professional cove systems enhance your business facility\'s performance:',
+    features: [
+      {
+        title: 'Hygiene & Sanitation Compliance',
+        description: 'Meets healthcare, food service, and commercial facility requirements for seamless surfaces that prevent bacterial growth and contamination'
+      },
+      {
+        title: 'Reduced Maintenance Costs',
+        description: 'Eliminates hard-to-clean corners, reducing cleaning time and labor costs while improving overall facility cleanliness and appearance'
+      },
+      {
+        title: 'Professional Business Image',
+        description: 'Creates modern, seamless transitions that enhance your facility\'s professional appearance and demonstrate attention to quality and detail'
+      },
+      {
+        title: 'Regulatory Compliance',
+        description: 'Meets FDA, USDA, OSHA, and industry-specific requirements for seamless floor-to-wall transitions in commercial and healthcare facilities'
+      },
+      {
+        title: 'Long-Term Durability',
+        description: 'Built to withstand commercial traffic, cleaning chemicals, and demanding business operations while maintaining professional appearance over time'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Commercial Installation Process',
+    subtitle: 'Professional installation designed to minimize business disruption:',
+    steps: [
+      {
+        number: 1,
+        title: 'Facility Assessment',
+        items: [
+          'Comprehensive facility evaluation and planning',
+          'Regulatory compliance review and documentation',
+          'Operational impact assessment and scheduling',
+          'Custom specifications and material selection'
+        ]
+      },
+      {
+        number: 2,
+        title: 'Project Coordination',
+        items: [
+          'After-hours and weekend scheduling options',
+          'Phased installation to maintain operations',
+          'Coordination with facility management teams',
+          'Safety protocols and containment procedures'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Professional Preparation',
+        items: [
+          'Commercial-grade surface preparation',
+          'Work area isolation and protection',
+          'Compliance with safety and environmental standards',
+          'Minimal disruption installation techniques'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Expert Installation',
+        items: [
+          'Precision commercial-grade application',
+          'Quality control throughout installation',
+          'Real-time progress reporting to management',
+          'Professional cleanup and restoration'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Final Certification',
+        items: [
+          'Comprehensive quality inspection and testing',
+          'Regulatory compliance documentation',
+          'Facility management walkthrough and training',
+          'Maintenance protocols and warranty activation'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Commercial Applications',
+    subtitle: 'Professional cove installations for diverse business facilities:',
+    items: [
+      {
+        title: 'Healthcare Facilities',
+        description: 'Sterile, seamless transitions for medical environments',
+        features: [
+          'Hospital-grade sanitation compliance',
+          'Antimicrobial surface options available',
+          'Easy disinfection and sterilization',
+          'Meets strict healthcare regulations'
+        ]
+      },
+      {
+        title: 'Office Buildings',
+        description: 'Professional office space enhancements',
+        features: [
+          'Modern corporate aesthetics',
+          'Easy maintenance for facility teams',
+          'Professional image enhancement',
+          'Durable high-traffic performance'
+        ]
+      },
+      {
+        title: 'Retail Spaces',
+        description: 'Customer-focused retail environment upgrades',
+        features: [
+          'Enhanced customer experience',
+          'Easy cleaning between business hours',
+          'Professional brand image support',
+          'High foot traffic durability'
+        ]
+      },
+      {
+        title: 'Food Service Facilities',
+        description: 'FDA-compliant seamless systems for food businesses',
+        features: [
+          'USDA and FDA compliant materials',
+          'Seamless surfaces for food safety',
+          'Chemical-resistant formulations',
+          'Easy cleaning and sanitization'
+        ]
+      },
+      {
+        title: 'Educational Facilities',
+        description: 'School and university facility improvements',
+        features: [
+          'Student and staff safety focus',
+          'Easy maintenance for custodial teams',
+          'Durable high-traffic performance',
+          'Professional learning environment enhancement'
+        ]
+      },
+      {
+        title: 'Hospitality Venues',
+        description: 'Hotel and restaurant facility upgrades',
+        features: [
+          'Guest experience enhancement',
+          'Easy maintenance between services',
+          'Professional hospitality image',
+          'Moisture and spill resistance'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Enhance Your Business?',
+    description: 'Schedule your commercial facility consultation today and discover how professional cove installations can improve hygiene, reduce maintenance costs, and enhance your business environment.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

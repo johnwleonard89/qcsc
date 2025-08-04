@@ -1,0 +1,993 @@
+---
+import { Container } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
+
+export interface Props {
+  // City-specific information
+  cityName: string;
+  state: string;
+  county: string;
+  
+  // Service information from servicesData.js
+  service: {
+    title: string;
+    description: string;
+    features: string[];
+    image: string;
+    imageAlt: string;
+  };
+  
+  // City-specific overrides
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
+  
+  // Local area information
+  serviceArea: {
+    neighborhoods?: string[];
+    landmarks?: string[];
+    description: string;
+  };
+}
+
+const { service, cityName, state, county, seo, serviceArea } = Astro.props;
+
+// Basic validation - provide defaults if service is missing
+const safeService = service || {
+  title: 'Professional Service',
+  description: 'Expert concrete coating services',
+  features: ['Professional Installation', 'Quality Materials', 'Expert Service'],
+  image: '/assets/images/services/default-service.webp',
+  imageAlt: 'Professional concrete coating service'
+};
+
+// Create state abbreviation
+const stateAbbr = state === 'Ohio' ? 'OH' : state === 'Kentucky' ? 'KY' : 'IN';
+
+// Create localized versions of the service data
+const localizedHero = {
+  tagline: `${cityName} Excellence`,
+  headline: `${safeService.title} in ${cityName}, ${stateAbbr}`,
+  subheadline: `${safeService.description} Proudly serving ${cityName}, ${state} with military precision installation and guaranteed results.`
+};
+
+const localizedIntro = {
+  title: `Professional ${safeService.title} Services in ${cityName}`,
+  content: [
+    `Queen City Surface Coatings brings military precision and local expertise to every ${safeService.title.toLowerCase()} project in ${cityName}, ${state}. Our team understands the unique needs of ${cityName} properties and delivers personalized service throughout the community.`,
+    `We serve all areas of ${cityName}, providing the same high-quality installation and customer service that has made us the trusted choice for concrete coating services throughout ${county} County.`
+  ]
+};
+
+const localizedContact = {
+  title: `Ready to Transform Your ${cityName} Property?`,
+  description: `Get a free estimate for professional ${safeService.title.toLowerCase()} in ${cityName}, ${state}. We're here to help transform your space with military precision and superior results.`
+};
+---
+
+<Layout seo={seo}>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <Container>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-tagline">{localizedHero.tagline}</p>
+          <h1 class="hero-headline">{localizedHero.headline}</h1>
+          <p class="hero-subheadline">{localizedHero.subheadline}</p>
+          <div class="hero-ctas">
+            <a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+            <a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img 
+            src={safeService.image} 
+            alt={`${safeService.imageAlt} in ${cityName}, ${state}`}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Introduction Section -->
+  <Container>
+    <section class="intro-section">
+      <div class="intro-content">
+        <h2>{localizedIntro.title}</h2>
+        {localizedIntro.content?.map((paragraph) => (
+          <p class="large-text">{paragraph}</p>
+        ))}
+      </div>
+    </section>
+  </Container>
+
+  <!-- Local Service Area Section -->
+  <section class="local-service-section">
+    <Container>
+      <h2>Professional Service Throughout {cityName}, {state}</h2>
+      <p class="area-description">{serviceArea.description}</p>
+      
+      <div class="service-coverage">
+        <div class="neighborhoods-served">
+          <h3>Neighborhoods We Serve in {cityName}:</h3>
+          <div class="neighborhoods-grid">
+            {serviceArea.neighborhoods?.map((neighborhood) => (
+              <div class="neighborhood-item">{neighborhood}</div>
+            ))}
+          </div>
+        </div>
+
+        {serviceArea.landmarks && serviceArea.landmarks.length > 0 && (
+          <div class="landmarks-section">
+            <h3>Serving Areas Near:</h3>
+            <div class="landmarks-grid">
+              {serviceArea.landmarks.map((landmark) => (
+                <div class="landmark-item">{landmark}</div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Service Features Section -->
+  <Container>
+    <section class="features-section">
+      <div class="section-header">
+        <h2>Why Choose Our {safeService.title} in {cityName}?</h2>
+        <p>Professional installation with military precision for {cityName} properties</p>
+      </div>
+      
+      <div class="features-grid">
+        {safeService.features.map((feature) => (
+          <div class="feature-card">
+            <div class="feature-icon">✓</div>
+            <h3>{feature}</h3>
+            <p>Expert {safeService.title.toLowerCase()} installation with guaranteed results for {cityName} residents.</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  </Container>
+
+
+  <!-- Local Advantages Section -->
+  <section class="local-advantages-section">
+    <Container>
+      <h2>Why Choose Queen City Surface Coatings in {cityName}</h2>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <h3>Local {cityName} Expertise</h3>
+          <p>We understand the unique needs of {cityName} properties and local building requirements. Our team knows the area and provides personalized service to your community.</p>
+        </div>
+
+        <div class="advantage-card">
+          <h3>Fast Response Times</h3>
+          <p>Located in the {county} County area, we provide quick response times throughout {cityName} with same-day consultations and flexible scheduling.</p>
+        </div>
+
+        <div class="advantage-card">
+          <h3>Military Precision Installation</h3>
+          <p>Every project executed with Marine Corps discipline and attention to detail. No shortcuts, no compromises - just superior results for {cityName} residents.</p>
+        </div>
+
+        <div class="advantage-card">
+          <h3>Licensed & Insured</h3>
+          <p>Fully licensed contractor serving {cityName} with comprehensive liability insurance and workers' compensation coverage protecting you and your property.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <Container>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>{localizedContact.title}</h2>
+          <p>{localizedContact.description}</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <span class="contact-info">(513) 296-5525</span>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <span class="contact-info">john@queencitysurfacecoatings.com</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="business-hours">
+            <h4>Business Hours</h4>
+            <div class="hours-list">
+              <div class="hours-item">
+                <span>Monday - Friday:</span>
+                <span class="hours-time">7:00 AM - 6:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <span>Saturday:</span>
+                <span class="hours-time">8:00 AM - 4:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <span>Sunday:</span>
+                <span class="hours-time">By Appointment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <QuoteRequestForm />
+        </div>
+      </div>
+    </Container>
+  </section>
+
+</Layout>
+
+<style>
+/* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-tagline {
+  font-family: var(--theme-font-family-headings);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-medium);
+  color: #FFC107;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.hero-headline {
+  font-family: var(--theme-font-family-headings);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  line-height: var(--line-height-tight);
+  color: #FFC107;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subheadline {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Hero section button overrides */
+.hero-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #000 !important;
+}
+
+.hero-section .btn-outline {
+  background: transparent !important;
+  border-color: #FFC107 !important;
+  color: #FFC107 !important;
+}
+
+.hero-section .btn-outline:hover {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, var(--theme-overlay) 0%, transparent 70%);
+  z-index: 1;
+  border-radius: var(--theme-card-radius);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-dark);
+  filter: contrast(1.1) saturate(1.05);
+  position: relative;
+}
+
+/* Introduction Section */
+.intro-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.large-text {
+  font-size: 1.25rem;
+  line-height: var(--line-height-relaxed);
+  color: var(--theme-text-secondary);
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Local Service Section */
+.local-service-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+.local-service-section h2 {
+  color: var(--theme-primary);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.area-description {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.service-coverage {
+  display: grid;
+  gap: 3rem;
+}
+
+.neighborhoods-served h3,
+.landmarks-section h3 {
+  color: var(--theme-primary);
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.neighborhoods-grid,
+.landmarks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.neighborhood-item,
+.landmark-item {
+  background: var(--theme-bg);
+  padding: 1rem;
+  border-radius: var(--theme-card-radius);
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform var(--theme-transition);
+}
+
+.neighborhood-item:hover,
+.landmark-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.features-section {
+  padding: 4rem 0;
+}
+
+.feature-icon {
+  background: var(--theme-primary);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem auto;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.feature-card {
+  background: var(--theme-bg);
+  padding: 2.5rem;
+  border-radius: var(--theme-card-radius);
+  text-align: center;
+  box-shadow: var(--theme-shadow-light);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.feature-card p {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Process Grid */
+.process-section {
+  padding: 4rem 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+}
+
+.process-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.process-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.process-number {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  margin: 0 auto 1rem;
+  font-size: 1.125rem;
+}
+
+.process-card h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.process-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  flex: 1;
+}
+
+.process-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.process-card li::before {
+  content: '•';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Collections Grid */
+.collections-section {
+  padding: 4rem 0;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.collection-card {
+  background: var(--theme-bg);
+  border-radius: var(--theme-card-radius);
+  box-shadow: var(--theme-shadow-light);
+  overflow: hidden;
+  transition: transform var(--theme-transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.collection-card h3 {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+  padding: 2rem 2rem 0;
+  text-align: center;
+}
+
+.collection-desc {
+  font-style: italic;
+  color: var(--theme-text-secondary);
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+
+.collection-card ul {
+  list-style: none;
+  padding: 0 2rem 2rem;
+  margin: 0;
+  flex: 1;
+}
+
+.collection-card li {
+  padding: 0.5rem 0;
+  color: var(--theme-text-secondary);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.collection-card li::before {
+  content: '✓';
+  color: var(--theme-primary);
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Local Advantages Section */
+.local-advantages-section {
+  margin: 4rem 0;
+}
+
+.local-advantages-section h2 {
+  color: var(--theme-primary);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.advantage-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-shape-radius);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.advantage-card h3 {
+  color: var(--theme-primary);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.advantage-card p {
+  font-size: 1.1rem;
+  color: #333333;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Portfolio Grid */
+.portfolio-section {
+  padding: 4rem 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item {
+  position: relative;
+  border-radius: var(--theme-card-radius);
+  overflow: hidden;
+  box-shadow: var(--theme-shadow-light);
+  transition: transform var(--theme-transition);
+  aspect-ratio: 16/9;
+  background: var(--theme-surface-1);
+  border: 2px dashed var(--theme-border-light);
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--theme-shadow-medium);
+  border-color: var(--theme-primary);
+}
+
+.portfolio-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--theme-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.portfolio-placeholder span {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-placeholder em {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-info > p {
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 2rem;
+  color: var(--theme-text-secondary);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.contact-button-wrapper {
+  flex: 1;
+  display: flex;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--theme-card-radius);
+  border: 2px solid transparent;
+  transition: var(--theme-transition);
+  text-decoration: none;
+  width: 100%;
+  cursor: pointer;
+  height: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  box-sizing: border-box;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button-phone {
+  background: #FFC107;
+  color: #002F4B;
+}
+
+.contact-button-phone:hover {
+  background: #E6AC00;
+  color: #002F4B;
+}
+
+.contact-button-email {
+  background: #002F4B;
+  color: white;
+}
+
+.contact-button-email:hover {
+  background: #001f36;
+  color: white;
+}
+
+.contact-button-email .contact-info {
+  color: #FFC107;
+}
+
+.contact-button .contact-info {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.business-hours {
+  background: var(--theme-bg);
+  padding: 1.5rem;
+  border-radius: var(--theme-card-radius);
+}
+
+.business-hours h4 {
+  font-weight: var(--font-weight-semibold);
+  color: var(--theme-text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--theme-border-light);
+  font-size: 1rem;
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.hours-time {
+  font-weight: var(--font-weight-medium);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(4) {
+    grid-column: 1;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-headline {
+    font-size: 2rem;
+  }
+  
+  .section-header h2,
+  .intro-content h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid,
+  .process-grid,
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-grid .process-card:nth-child(5) {
+    grid-column: 1;
+    max-width: none;
+  }
+  
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .neighborhoods-grid,
+  .landmarks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .contact-methods {
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+  
+  .feature-card,
+  .process-card {
+    padding: 1.5rem;
+  }
+  
+  .neighborhoods-grid,
+  .landmarks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

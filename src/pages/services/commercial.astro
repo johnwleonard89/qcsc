@@ -2,12 +2,15 @@
 import { Container } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+import { servicesConfig } from '../../data/servicesData.js';
 
 const seo = {
   title: 'Commercial Concrete Services | Industrial Concrete Solutions | Queen City Surface Coatings',
   description: 'Professional commercial and industrial concrete services including warehouse floors, retail spaces, manufacturing facilities, and high-traffic concrete solutions in Cincinnati and Northern Kentucky.',
   keywords: 'commercial concrete, industrial flooring, warehouse floors, retail concrete, manufacturing facility floors, commercial epoxy flooring Cincinnati'
 };
+
+const commercialServices = servicesConfig.commercial;
 ---
 
 <Layout seo={seo}>
@@ -153,84 +156,20 @@ const seo = {
       </div>
       
       <div class="collections-grid">
-        <div class="collection-card">
-          <a href="/services/warehouse-flooring" class="collection-link">
-            <h3>Warehouse & Distribution</h3>
-            <p class="collection-desc">Heavy-duty flooring systems for logistics and storage facilities</p>
-            <ul>
-              <li>Forklift and heavy equipment resistance</li>
-              <li>Chemical and oil spill protection</li>
-              <li>High-visibility safety markings</li>
-              <li>Seamless, easy-to-clean surfaces</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
-        <div class="collection-card">
-          <a href="/services/retail-flooring" class="collection-link">
-            <h3>Retail & Showroom</h3>
-            <p class="collection-desc">Attractive, durable floors that enhance customer experience</p>
-            <ul>
-              <li>High-gloss, professional appearance</li>
-              <li>Slip-resistant safety features</li>
-              <li>Easy maintenance and cleaning</li>
-              <li>Custom colors and decorative options</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
-        <div class="collection-card">
-          <a href="/services/manufacturing-flooring" class="collection-link">
-            <h3>Manufacturing Facilities</h3>
-            <p class="collection-desc">Chemical-resistant systems for production environments</p>
-            <ul>
-              <li>Superior chemical and thermal resistance</li>
-              <li>Anti-static and conductive options available</li>
-              <li>Seamless surfaces for hygiene compliance</li>
-              <li>Minimal production downtime installation</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
-        <div class="collection-card">
-          <a href="/services/office-flooring" class="collection-link">
-            <h3>Office & Healthcare</h3>
-            <p class="collection-desc">Professional polished concrete for commercial spaces</p>
-            <ul>
-              <li>Low-maintenance, hygienic surfaces</li>
-              <li>Enhanced natural lighting reflection</li>
-              <li>LEED certification contribution</li>
-              <li>Professional, modern appearance</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
-        <div class="collection-card">
-          <a href="/services/concrete-staining" class="collection-link">
-            <h3>Restaurant & Hospitality</h3>
-            <p class="collection-desc">Food-safe, attractive concrete solutions</p>
-            <ul>
-              <li>Food-grade safety compliance</li>
-              <li>Slip-resistant texture options</li>
-              <li>Easy sanitation and cleaning</li>
-              <li>Custom colors and patterns</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
-        <div class="collection-card">
-          <a href="/services/automotive-flooring" class="collection-link">
-            <h3>Automotive & Service</h3>
-            <p class="collection-desc">Chemical-resistant floors for automotive facilities</p>
-            <ul>
-              <li>Oil and solvent resistance</li>
-              <li>Hot tire pickup resistance</li>
-              <li>Easy cleanup of spills and debris</li>
-              <li>Professional automotive appearance</li>
-            </ul>
-            <div class="learn-more">Learn More →</div>
-          </a>
-        </div>
+        {commercialServices.services.map((service) => (
+          <div class="collection-card">
+            <a href={service.link} class="collection-link">
+              <h3>{service.title}</h3>
+              <p class="collection-desc">{service.description}</p>
+              <ul>
+                {service.features.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+              <div class="learn-more">Learn More →</div>
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   </Container>

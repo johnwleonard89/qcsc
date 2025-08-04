@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Hamilton',
+  state: 'Ohio', 
+  county: 'Butler',
+  seo: {
+    title: 'Hamilton Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Hamilton, Ohio. Serving Lindenwald, Millville, and all Hamilton neighborhoods with military precision installation.',
+    keywords: 'Hamilton concrete coating, Hamilton concrete services, Lindenwald OH epoxy flooring, Millville concrete coating, Hamilton garage floors, Hamilton residential coating, commercial concrete Hamilton Ohio'
+  },
+  hero: {
+    tagline: 'Hamilton Excellence',
+    headline: 'Professional Concrete Coating Services in Hamilton, Ohio',
+    subheadline: 'Transform your Hamilton property with expert concrete coating services. From downtown Hamilton to Lindenwald, we deliver military precision installation throughout Hamilton with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Hamilton, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Hamilton properties, from historic downtown to suburban neighborhoods.',
+    neighborhoods: [
+      'Downtown Hamilton',
+      'Lindenwald',
+      'Millville',
+      'German Village',
+      'Buckeye',
+      'Symmes Corner',
+      'Rossville',
+      'Darrtown',
+      'New London',
+      'Seven Mile',
+      'Jacksonburg',
+      'Shandon',
+      'Campbell',
+      'Fairfield Avenue',
+      'High Street',
+      'Main Street',
+      'Monument Avenue',
+      'Greenwood Avenue',
+      'Third Street',
+      'Second Street'
+    ],
+    landmarks: [
+      'Hamilton City Hall',
+      'Fitton Center for Creative Arts',
+      'Butler County Courthouse',
+      'Rentschler Forest MetroPark',
+      'Hamilton Pool',
+      'Marcum Park',
+      'Joyce Park',
+      'Veterans Park',
+      'Spooky Nook Sports Complex',
+      'Miami University Hamilton',
+      'Hamilton High School',
+      'Butler County Fairgrounds',
+      'Great Miami River',
+      'Historic Downtown Hamilton',
+      'Hamilton Lane Library'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the textured concrete finishes service from decorative services
+const texturedConcreteService = servicesConfig.decorative.services.find(s => s.title === "Textured Concrete Finishes");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: texturedConcreteService,
+  seo: {
+    title: 'Dayton Textured Concrete Finishes | Non-Slip Decorative Surfaces | Queen City Surface Coatings',
+    description: 'Professional textured concrete finishes in Dayton, Ohio. Enhanced slip resistance and visual appeal for residential and commercial properties throughout Dayton area.',
+    keywords: 'Dayton textured concrete, Dayton decorative texture, textured concrete finish Dayton, non-slip concrete Dayton, decorative concrete texture Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides textured concrete finishes throughout Dayton, Ohio. Our textured systems add visual interest and tactile appeal while providing excellent slip resistance and durability.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Fifth Third Field',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'Boonshoft Museum of Discovery'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

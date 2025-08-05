@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the natural stone reproductions service from decorative services
+const naturalStoneService = servicesConfig.decorative.services.find(s => s.title === "Natural Stone Reproductions");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: naturalStoneService,
+  seo: {
+    title: 'Dayton Natural Stone Reproductions | Stone-Look Concrete Coatings | Queen City Surface Coatings',
+    description: 'Beautiful natural stone reproduction coatings in Dayton, Ohio. Authentic stone appearance with superior durability for Oakwood, Kettering, Centerville, and all Dayton properties.',
+    keywords: 'Dayton natural stone reproductions, Dayton stone look flooring, stone reproduction coating Dayton, decorative stone finish Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates beautiful natural stone reproduction systems throughout Dayton, Ohio. Our coatings deliver the beauty of natural stone with the durability and consistency of modern coating technology.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Washington Township',
+      'Sugarcreek Township',
+      'Miami Township',
+      'Springboro',
+      'Bellbrook',
+      'Yellow Springs',
+      'Xenia',
+      'Fairborn',
+      'Huber Heights',
+      'Vandalia',
+      'Clayton',
+      'Englewood',
+      'Union',
+      'Trotwood',
+      'Miamisburg',
+      'West Carrollton'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'Cox Arboretum MetroPark',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'The Greene Town Center',
+      'Town & Country Shopping Center'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

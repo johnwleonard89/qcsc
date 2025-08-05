@@ -1,0 +1,69 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the basement floor coatings service from residential services
+const basementFloorService = servicesConfig.residential.services.find(s => s.title === "Basement Floor Coatings");
+
+if (!basementFloorService) {
+  throw new Error('Basement Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: basementFloorService,
+  seo: {
+    title: 'Louisville Area Basement Floor Coating | Waterproof Basement Floors | Queen City Surface Coatings',
+    description: 'Transform your Louisville basement with professional floor coatings. Serving Highlands, St. Matthews, Jeffersontown, and all Louisville area neighborhoods with moisture-resistant installation.',
+    keywords: 'Louisville basement floor coating, Louisville basement epoxy, Highlands basement floors, St. Matthews basement coating, Jeffersontown basement flooring, Louisville waterproof basement'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional basement floor coating services throughout the Louisville area, Kentucky. Our moisture-resistant systems are perfect for Louisville basements, providing protection against humidity and creating bright, welcoming spaces.',
+    neighborhoods: [
+      'Highlands',
+      'Cherokee Triangle',
+      'Germantown',
+      'Old Louisville',
+      'Clifton',
+      'Crescent Hill',
+      'St. Matthews',
+      'Middletown',
+      'Anchorage',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Graymoor-Devondale',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown',
+      'Nulu'
+    ],
+    landmarks: [
+      'Churchill Downs',
+      'Louisville Slugger Museum',
+      'Kentucky Derby Museum',
+      'Muhammad Ali Center',
+      'Louisville Waterfront Park',
+      'Kentucky Kingdom',
+      'Louisville Zoo',
+      'Speed Art Museum',
+      'University of Louisville',
+      'Bellarmine University'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

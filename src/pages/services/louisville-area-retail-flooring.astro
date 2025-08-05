@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const retailService = servicesConfig.commercial.services.find(s => s.title === "Retail");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: retailService,
+  seo: {
+    title: 'Louisville Area Retail Flooring | Commercial Store Floors | Queen City Surface Coatings',
+    description: 'Attractive retail flooring solutions in Louisville, Kentucky. Durable, customer-friendly surfaces for stores and retail spaces throughout Louisville area.',
+    keywords: 'Louisville retail flooring, Louisville store floors, retail epoxy Louisville, commercial retail floors Louisville, store flooring Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides attractive, durable retail flooring solutions throughout the Louisville area, Kentucky. Our systems create welcoming retail environments while withstanding constant foot traffic and daily operations.',
+    neighborhoods: [
+      'Downtown Louisville',
+      'Highlands',
+      'Bardstown Road',
+      'Frankfort Avenue',
+      'St. Matthews',
+      'Middletown',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown',
+      'Nulu',
+      'Cherokee Triangle',
+      'Crescent Hill',
+      'Clifton',
+      'Germantown'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

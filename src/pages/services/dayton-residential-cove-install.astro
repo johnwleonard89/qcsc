@@ -1,0 +1,53 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the cove install service from residential services
+const coveInstallService = servicesConfig.residential.services.find(s => s.title === "Cove Install");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: coveInstallService,
+  seo: {
+    title: 'Dayton Residential Cove Install | Professional Floor-to-Wall Transition | Queen City Surface Coatings',
+    description: 'Professional residential cove installation in Dayton, Ohio. Seamless floor-to-wall transitions for enhanced cleanability in homes throughout Dayton area.',
+    keywords: 'Dayton residential cove install, Dayton cove base installation, floor wall transition Dayton, residential cove Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional residential cove installation throughout Dayton, Ohio. Our seamless floor-to-wall transitions enhance cleanability and create a professional appearance in residential spaces.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const manufacturingService = servicesConfig.industrial.services.find(s => s.title === "Manufacturing Facilities");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: manufacturingService,
+  seo: {
+    title: 'Dayton Manufacturing Flooring | Industrial Facility Floors | Queen City Surface Coatings',
+    description: 'Heavy-duty manufacturing facility flooring in Dayton, Ohio. Chemical resistant, thermal shock resistant surfaces for manufacturing and industrial operations.',
+    keywords: 'Dayton manufacturing flooring, Dayton industrial floors, manufacturing facility floors Dayton, chemical resistant flooring Dayton, industrial coating Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides extreme-duty manufacturing facility flooring throughout Dayton, Ohio. Our systems withstand chemical exposure, thermal cycling, and heavy industrial operations with minimal production downtime.',
+    neighborhoods: [
+      'Riverside',
+      'Dayton View',
+      'Five Oaks',
+      'East Dayton',
+      'Belmont',
+      'McCook Field',
+      'South Park',
+      'Wright View',
+      'Fairview',
+      'Old Dayton View',
+      'East End',
+      'Inner East',
+      'Triangle',
+      'Edgemont',
+      'Residence Park',
+      'Huffman',
+      'Northridge',
+      'MacFarlane',
+      'Burkhardt',
+      'Linden Heights'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

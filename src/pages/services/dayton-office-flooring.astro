@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const officeService = servicesConfig.commercial.services.find(s => s.title === "Office");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: officeService,
+  seo: {
+    title: 'Dayton Office Flooring | Professional Workspace Floors | Queen City Surface Coatings',
+    description: 'Professional office flooring solutions in Dayton, Ohio. Durable, low-maintenance surfaces for businesses in Oakwood, Kettering, Centerville, and throughout Dayton.',
+    keywords: 'Dayton office flooring, Dayton commercial floors, Oakwood office coating, Kettering business flooring, Centerville office floors, Dayton workspace flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional office flooring solutions throughout Dayton, Ohio. Our durable, low-maintenance surfaces create productive work environments perfect for business settings.',
+    neighborhoods: [
+      'Downtown Dayton',
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'West Carrollton',
+      'Vandalia',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Moraine',
+      'Riverside',
+      'Belmont',
+      'Five Oaks',
+      'Wright View',
+      'Dayton View',
+      'South Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

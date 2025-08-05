@@ -1,0 +1,33 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const pressureWashingService = servicesConfig.commercial.services.find(s => s.title === "Pressure Washing & Protection");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: pressureWashingService,
+  seo: {
+    title: 'Louisville Area Commercial Pressure Washing & Protection | Professional Concrete Cleaning | Queen City Surface Coatings',
+    description: 'Professional commercial pressure washing and concrete protection services in Louisville, Kentucky. High-pressure cleaning and protective sealer application for businesses.',
+    keywords: 'Louisville commercial pressure washing, Louisville commercial concrete cleaning, commercial concrete sealer Louisville, business pressure washing Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional commercial pressure washing and protective services throughout the Louisville area, Kentucky. Our high-pressure cleaning systems and protective sealers maintain and protect commercial concrete surfaces.',
+    neighborhoods: [
+      'Downtown Louisville', 'Highlands', 'Cherokee Triangle', 'Germantown', 'Old Louisville', 'Clifton', 'Crescent Hill', 'St. Matthews', 'Middletown', 'Anchorage', 'Jeffersontown', 'Hurstbourne', 'Lyndon', 'Douglass Hills', 'Graymoor-Devondale', 'Prospect', 'Northfield', 'Springhurst', 'East End', 'Butchertown'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

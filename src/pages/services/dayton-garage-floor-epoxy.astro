@@ -1,0 +1,109 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the garage floor coatings service from residential services
+const garageFloorService = servicesConfig.residential.services.find(s => s.title === "Garage Floor Coatings");
+
+if (!garageFloorService) {
+  throw new Error('Garage Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: garageFloorService,
+  seo: {
+    title: 'Dayton Garage Floor Coatings | Professional Epoxy Installation | Queen City Surface Coatings',
+    description: 'Transform your Dayton garage with professional floor coatings. Serving Oakwood, Kettering, Centerville, and all Dayton neighborhoods with military precision installation.',
+    keywords: 'Dayton garage floor coating, Dayton garage epoxy, Oakwood garage floors, Kettering garage coating, Centerville garage epoxy, Dayton residential garage flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Dayton, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Dayton garages, from historic neighborhoods to modern developments.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Oakwood Village',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Fifth Third Field',
+      'Dayton Aviation Heritage National Historical Park',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName="Dayton"
+  state="Ohio"
+  county="Montgomery"
+  service={garageFloorService}
+  seo={{
+    title: 'Dayton Garage Floor Coatings | Professional Epoxy Installation | Queen City Surface Coatings',
+    description: 'Transform your Dayton garage with professional floor coatings. Serving Oakwood, Kettering, Centerville, and all Dayton neighborhoods with military precision installation.',
+    keywords: 'Dayton garage floor coating, Dayton garage epoxy, Oakwood garage floors, Kettering garage coating, Centerville garage epoxy, Dayton residential garage flooring'
+  }}
+  serviceArea={{
+    description: 'Queen City Surface Coatings proudly serves all of Dayton, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Dayton garages, from historic neighborhoods to modern developments.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Oakwood Village',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Fifth Third Field',
+      'Dayton Aviation Heritage National Historical Park',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark'
+    ]
+  }}
+/>

@@ -1,0 +1,53 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the pressure washing service from residential services
+const pressureWashingService = servicesConfig.residential.services.find(s => s.title === "Pressure Washing & Protection");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: pressureWashingService,
+  seo: {
+    title: 'Dayton Pressure Washing & Protection | Professional Concrete Cleaning | Queen City Surface Coatings',
+    description: 'Professional pressure washing and concrete protection services in Dayton, Ohio. High-pressure cleaning and protective sealer application throughout Dayton area.',
+    keywords: 'Dayton pressure washing, Dayton concrete cleaning, concrete sealer Dayton, pressure washing services Dayton, concrete protection Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional pressure washing and protective services throughout Dayton, Ohio. Our high-pressure cleaning systems and protective sealers maintain and protect concrete surfaces.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

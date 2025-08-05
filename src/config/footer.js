@@ -51,19 +51,19 @@ export const footerLists = [
 		items: [
 			{
 				title: 'Cincinnati, OH',
-				slug: '/service-areas/ohio/cincinnati-concrete-coating',
+				slug: '/services/cincinnati-oh-concrete-services',
 			},
 			{
 				title: 'Dayton, OH',
-				slug: '/service-areas/ohio/dayton-epoxy-flooring',
+				slug: '/services/dayton-oh-concrete-services',
 			},
 			{
 				title: 'Covington, KY',
-				slug: '/service-areas/kentucky/covington-concrete-coating',
+				slug: '/services/covington-ky-concrete-services',
 			},
 			{
 				title: 'Louisville Area',
-				slug: '/service-areas',
+				slug: '/services/louisville-area-concrete-services',
 			},
 			{
 				title: 'View All Areas',

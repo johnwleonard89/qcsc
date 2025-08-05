@@ -1,0 +1,33 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const jointRepairService = servicesConfig.industrial.services.find(s => s.title === "Joint Removal & Repair");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: jointRepairService,
+  seo: {
+    title: 'Louisville Area Industrial Joint Removal & Repair | Professional Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional industrial joint removal and repair in Louisville, Kentucky. Heavy-duty expansion joint replacement and control joint sealing for industrial facilities.',
+    keywords: 'Louisville industrial joint repair, Louisville industrial concrete joint removal, industrial expansion joint replacement Louisville, facility joint sealing Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional industrial joint removal and repair services throughout the Louisville area, Kentucky. Our heavy-duty waterproof joint systems ensure long-lasting protection for industrial concrete surfaces.',
+    neighborhoods: [
+      'Butchertown', 'Phoenix Hill', 'Shelby Park', 'Smoketown', 'Russell', 'Portland', 'Shively', 'Pleasure Ridge Park', 'Valley Station', 'Newburg', 'Fern Creek', 'Buechel', 'Okolona', 'Highview', 'Fairdale', 'Iroquois', 'Jacobs', 'Schnitzelburg', 'Germantown', 'Phoenix Hill'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

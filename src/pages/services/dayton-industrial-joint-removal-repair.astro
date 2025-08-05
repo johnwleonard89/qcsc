@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const jointRepairService = servicesConfig.industrial.services.find(s => s.title === "Joint Removal & Repair");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: jointRepairService,
+  seo: {
+    title: 'Dayton Industrial Joint Removal & Repair | Professional Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional industrial joint removal and repair in Dayton, Ohio. Heavy-duty expansion joint replacement and control joint sealing for industrial facilities.',
+    keywords: 'Dayton industrial joint repair, Dayton industrial concrete joint removal, industrial expansion joint replacement Dayton, facility joint sealing Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional industrial joint removal and repair services throughout Dayton, Ohio. Our heavy-duty waterproof joint systems ensure long-lasting protection for industrial concrete surfaces.',
+    neighborhoods: [
+      'Riverside',
+      'Dayton View',
+      'Five Oaks',
+      'East Dayton',
+      'Belmont',
+      'McCook Field',
+      'South Park',
+      'Wright View',
+      'Fairview',
+      'Old Dayton View',
+      'East End',
+      'Inner East',
+      'Triangle',
+      'Edgemont',
+      'Residence Park',
+      'Huffman',
+      'Northridge',
+      'MacFarlane',
+      'Burkhardt',
+      'Linden Heights'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

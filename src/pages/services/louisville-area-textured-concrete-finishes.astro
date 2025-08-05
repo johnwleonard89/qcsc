@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the textured concrete finishes service from decorative services
+const texturedConcreteService = servicesConfig.decorative.services.find(s => s.title === "Textured Concrete Finishes");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: texturedConcreteService,
+  seo: {
+    title: 'Louisville Area Textured Concrete Finishes | Non-Slip Decorative Surfaces | Queen City Surface Coatings',
+    description: 'Professional textured concrete finishes in Louisville, Kentucky. Enhanced slip resistance and visual appeal for residential and commercial properties throughout Louisville area.',
+    keywords: 'Louisville textured concrete, Louisville decorative texture, textured concrete finish Louisville, non-slip concrete Louisville, decorative concrete texture Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides textured concrete finishes throughout the Louisville area, Kentucky. Our textured systems add visual interest and tactile appeal while providing excellent slip resistance and durability.',
+    neighborhoods: [
+      'Highlands',
+      'Cherokee Triangle',
+      'Germantown',
+      'Old Louisville',
+      'Clifton',
+      'Crescent Hill',
+      'St. Matthews',
+      'Middletown',
+      'Anchorage',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Graymoor-Devondale',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown',
+      'Nulu'
+    ],
+    landmarks: [
+      'Churchill Downs',
+      'Louisville Slugger Museum',
+      'Kentucky Derby Museum',
+      'Muhammad Ali Center',
+      'Louisville Waterfront Park',
+      'Kentucky Kingdom',
+      'Louisville Zoo',
+      'Speed Art Museum',
+      'University of Louisville',
+      'Bellarmine University'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -2,6 +2,7 @@
 import { Container } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
 import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
+import { servicesConfig } from '../data/servicesData.js';
 
 export interface Props {
   // City-specific information
@@ -66,9 +67,121 @@ const localizedContact = {
   title: `Ready to Transform Your ${cityName} Property?`,
   description: `Get a free estimate for professional ${safeService.title.toLowerCase()} in ${cityName}, ${state}. We're here to help transform your space with military precision and superior results.`
 };
+
+// Generate service categorization and cross-linking data
+function generateServiceLinks(currentServiceTitle, cityName, state) {
+  const citySlug = cityName === 'Louisville Area' ? 'louisville-area' : cityName.toLowerCase();
+  const stateSlug = state.toLowerCase() === 'ohio' ? 'oh' : state.toLowerCase() === 'kentucky' ? 'ky' : 'in';
+  
+  // Service URL mapping - maps service titles to their URL segments
+  const serviceUrlMap = {
+    'Garage Floor Coatings': 'garage-floor-epoxy',
+    'Basement Floor Coatings': 'basement-floor-coating', 
+    'Kitchen Floor Coatings': 'kitchen-floor-coatings',
+    'Retail': 'retail-flooring',
+    'Warehouses': 'warehouse-flooring',
+    'Office': 'office-flooring',
+    'Manufacturing Facilities': 'manufacturing-flooring',
+    'Food & Beverage': 'food-beverage-flooring',
+    'Automotive': 'automotive-flooring',
+    'Flake Systems': 'flake-systems',
+    'Metallic Epoxy': 'metallic-epoxy-flooring',
+    'Natural Stone Reproductions': 'natural-stone-reproductions',
+    'Textured Concrete Finishes': 'textured-concrete-finishes',
+    'Cove Install': 'cove-install',
+    'Joint Removal & Repair': 'joint-removal-repair',
+    'Pressure Washing & Protection': 'pressure-washing-protection'
+  };
+
+  // Handle category-specific URL prefixes for non-residential services
+  function getServiceUrlSlug(service, category) {
+    const baseSlug = serviceUrlMap[service.title] || service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    
+    // For commercial and industrial services, add category prefix to certain services
+    if (category === 'commercial' && ['Cove Install', 'Joint Removal & Repair', 'Pressure Washing & Protection'].includes(service.title)) {
+      return `commercial-${baseSlug}`;
+    } else if (category === 'industrial' && ['Cove Install', 'Joint Removal & Repair', 'Pressure Washing & Protection'].includes(service.title)) {
+      return `industrial-${baseSlug}`;
+    } else if (category === 'residential' && ['Cove Install', 'Joint Removal & Repair', 'Pressure Washing & Protection'].includes(service.title)) {
+      return `residential-${baseSlug}`;
+    }
+    
+    return baseSlug;
+  }
+
+  // Find current service category
+  let currentCategory = null;
+  let currentService = null;
+  
+  for (const [categoryKey, category] of Object.entries(servicesConfig)) {
+    const service = category.services.find(s => s.title === currentServiceTitle);
+    if (service) {
+      currentCategory = categoryKey;
+      currentService = service;
+      break;
+    }
+  }
+
+  // Generate related services within same category
+  const relatedServices = currentCategory ? 
+    servicesConfig[currentCategory].services
+      .filter(s => s.title !== currentServiceTitle)
+      .slice(0, 3)
+      .map(s => ({
+        title: s.title,
+        description: s.description,
+        url: `/services/${citySlug}-${getServiceUrlSlug(s, currentCategory)}`
+      })) : [];
+
+  // Generate popular services from other categories
+  const popularServices = [];
+  const otherCategories = Object.keys(servicesConfig).filter(cat => cat !== currentCategory);
+  
+  // Prioritize certain popular services across categories
+  const priorityServices = ['Garage Floor Coatings', 'Metallic Epoxy', 'Retail', 'Manufacturing Facilities'];
+  
+  for (const category of otherCategories.slice(0, 2)) {
+    let service = servicesConfig[category].services.find(s => priorityServices.includes(s.title));
+    if (!service) {
+      service = servicesConfig[category].services[0]; // Fallback to first service
+    }
+    
+    if (service) {
+      popularServices.push({
+        title: service.title,
+        description: service.description,
+        category: servicesConfig[category].title,
+        url: `/services/${citySlug}-${getServiceUrlSlug(service, category)}`
+      });
+    }
+  }
+
+  return {
+    relatedServices,
+    popularServices,
+    mainCityUrl: `/services/${citySlug}-${stateSlug}-concrete-services`,
+    categoryTitle: currentCategory ? servicesConfig[currentCategory].title : 'Services'
+  };
+}
+
+const linkingData = generateServiceLinks(safeService.title, cityName, state);
 ---
 
 <Layout seo={seo}>
+  <!-- Breadcrumb Navigation -->
+  <section class="breadcrumb-section">
+    <Container>
+      <nav class="breadcrumb-nav">
+        <ol class="breadcrumb-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href={linkingData.mainCityUrl}>{cityName} Services</a></li>
+          <li><span>{safeService.title}</span></li>
+        </ol>
+      </nav>
+    </Container>
+  </section>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <Container>
@@ -184,6 +297,61 @@ const localizedContact = {
     </Container>
   </section>
 
+  <!-- Related Services Section -->
+  {linkingData.relatedServices.length > 0 && (
+    <section class="related-services-section">
+      <Container>
+        <div class="section-header">
+          <h2>More {linkingData.categoryTitle} Services in {cityName}</h2>
+          <p>Explore our complete range of {linkingData.categoryTitle.toLowerCase()} concrete coating solutions in {cityName}, {state}</p>
+        </div>
+        
+        <div class="related-services-grid">
+          {linkingData.relatedServices.map((service) => (
+            <div class="related-service-card">
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <a href={service.url} class="service-link">Learn More →</a>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+
+  <!-- Popular Services Section -->
+  {linkingData.popularServices.length > 0 && (
+    <section class="popular-services-section">
+      <Container>
+        <div class="section-header">
+          <h2>Popular {cityName} Concrete Services</h2>
+          <p>Discover other professional concrete coating services we offer in {cityName}</p>
+        </div>
+        
+        <div class="popular-services-grid">
+          {linkingData.popularServices.map((service) => (
+            <div class="popular-service-card">
+              <div class="service-category">{service.category}</div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
+              <a href={service.url} class="service-link">Explore Service →</a>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+
+  <!-- All City Services Link -->
+  <section class="city-services-link-section">
+    <Container>
+      <div class="city-services-cta">
+        <h2>Complete {cityName} Concrete Services</h2>
+        <p>View our full range of residential, commercial, industrial, and decorative concrete coating services in {cityName}, {state}</p>
+        <a href={linkingData.mainCityUrl} class="btn btn-primary btn-large">View All {cityName} Services</a>
+      </div>
+    </Container>
+  </section>
 
   <!-- Contact Section -->
   <section class="contact-section">
@@ -988,6 +1156,241 @@ const localizedContact = {
   .neighborhoods-grid,
   .landmarks-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb-section {
+  background: var(--theme-surface-1);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--theme-border-light);
+}
+
+.breadcrumb-nav {
+  font-size: 0.875rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-list li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-list li:not(:last-child)::after {
+  content: '›';
+  margin-left: 0.5rem;
+  color: var(--theme-text-secondary);
+  font-weight: bold;
+}
+
+.breadcrumb-list a {
+  color: var(--theme-primary);
+  text-decoration: none;
+  transition: color var(--theme-transition);
+}
+
+.breadcrumb-list a:hover {
+  color: var(--theme-primary-hover);
+  text-decoration: underline;
+}
+
+.breadcrumb-list span {
+  color: var(--theme-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Related Services Section */
+.related-services-section {
+  padding: 4rem 0;
+  background: var(--theme-bg);
+}
+
+.related-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-service-card {
+  background: var(--theme-surface-1);
+  padding: 2rem;
+  border-radius: var(--theme-card-radius);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition), box-shadow var(--theme-transition);
+}
+
+.related-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.related-service-card h3 {
+  color: var(--theme-text-primary);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.related-service-card p {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+.service-link {
+  color: var(--theme-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--theme-transition);
+}
+
+.service-link:hover {
+  color: var(--theme-primary-hover);
+  text-decoration: underline;
+}
+
+/* Popular Services Section */
+.popular-services-section {
+  padding: 4rem 0;
+  background: var(--theme-surface-1);
+}
+
+.popular-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.popular-service-card {
+  background: var(--theme-bg);
+  padding: 2.5rem;
+  border-radius: var(--theme-card-radius);
+  border: 1px solid var(--theme-border-light);
+  transition: transform var(--theme-transition), box-shadow var(--theme-transition);
+  position: relative;
+}
+
+.popular-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--theme-shadow-medium);
+}
+
+.service-category {
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.popular-service-card h3 {
+  color: var(--theme-text-primary);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 1rem;
+}
+
+.popular-service-card p {
+  color: var(--theme-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 1.5rem;
+}
+
+/* City Services Link Section */
+.city-services-link-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-dark) 100%);
+  color: var(--theme-on-primary);
+  text-align: center;
+}
+
+.city-services-cta h2 {
+  color: var(--theme-on-primary);
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+.city-services-cta p {
+  font-size: 1.125rem;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.city-services-link-section .btn-primary {
+  background: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #000 !important;
+  font-weight: var(--font-weight-semibold);
+}
+
+.city-services-link-section .btn-primary:hover {
+  background: #E6AC00 !important;
+  border-color: #E6AC00 !important;
+  color: #000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+  .breadcrumb-list {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .related-services-grid,
+  .popular-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .related-service-card,
+  .popular-service-card {
+    padding: 1.5rem;
+  }
+  
+  .city-services-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-section {
+    padding: 0.75rem 0;
+  }
+  
+  .breadcrumb-nav {
+    font-size: 0.8rem;
+  }
+  
+  .city-services-cta h2 {
+    font-size: 1.75rem;
+  }
+  
+  .city-services-cta p {
+    font-size: 1rem;
   }
 }
 </style>

@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  seo: {
+    title: 'Dayton Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Dayton, Ohio. Serving Kettering, Beavercreek, Centerville, and all Dayton neighborhoods with military precision installation.',
+    keywords: 'Dayton concrete coating, Dayton concrete services, Kettering OH epoxy flooring, Beavercreek concrete coating, Centerville garage floors, Dayton residential coating, commercial concrete Dayton Ohio'
+  },
+  hero: {
+    tagline: 'Dayton Excellence',
+    headline: 'Professional Concrete Coating Services in Dayton, Ohio',
+    subheadline: 'Transform your Dayton property with expert concrete coating services. From Kettering to Beavercreek, Centerville to Downtown, we deliver military precision installation throughout the Dayton area with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Dayton, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Dayton area properties, from established neighborhoods to growing developments.',
+    neighborhoods: [
+      'Kettering',
+      'Beavercreek',
+      'Centerville',
+      'Miamisburg',
+      'Springboro',
+      'Fairborn',
+      'Oakwood',
+      'Moraine',
+      'West Carrollton',
+      'Riverside',
+      'Huber Heights',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Brookville',
+      'Germantown',
+      'Farmersville',
+      'New Lebanon'
+    ],
+    landmarks: [
+      'Downtown Dayton',
+      'Wright-Patterson Air Force Base',
+      'University of Dayton',
+      'Wright State University',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the US Air Force',
+      'Dayton Dragons Stadium',
+      'Oregon District',
+      'RiverScape MetroPark',
+      'Sinclair Community College',
+      'Dayton Mall',
+      'The Greene Town Center',
+      'Cox Arboretum MetroPark',
+      'SunWatch Indian Village'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

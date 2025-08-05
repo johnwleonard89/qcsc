@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const warehouseService = servicesConfig.commercial.services.find(s => s.title === "Warehouses");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: warehouseService,
+  seo: {
+    title: 'Dayton Warehouse Flooring | Heavy-Duty Industrial Floors | Queen City Surface Coatings',
+    description: 'Heavy-duty warehouse flooring in Dayton, Ohio. Forklift-rated, chemical resistant surfaces for warehouses and distribution centers throughout Dayton area.',
+    keywords: 'Dayton warehouse flooring, Dayton industrial floors, warehouse epoxy Dayton, forklift rated floors Dayton, distribution center flooring Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides industrial-strength warehouse flooring throughout Dayton, Ohio. Our systems are designed to withstand heavy equipment, forklift traffic, and demanding warehouse operations with maximum durability.',
+    neighborhoods: [
+      'Riverside',
+      'Dayton View',
+      'Five Oaks',
+      'East Dayton',
+      'Belmont',
+      'McCook Field',
+      'South Park',
+      'Wright View',
+      'Fairview',
+      'Old Dayton View',
+      'East End',
+      'Inner East',
+      'Triangle',
+      'Edgemont',
+      'Residence Park',
+      'Huffman',
+      'Northridge',
+      'MacFarlane',
+      'Burkhardt',
+      'Linden Heights'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

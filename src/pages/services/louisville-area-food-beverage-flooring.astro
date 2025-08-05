@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const foodBeverageService = servicesConfig.industrial.services.find(s => s.title === "Food & Beverage");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: foodBeverageService,
+  seo: {
+    title: 'Louisville Area Food & Beverage Flooring | USDA Compliant Facility Floors | Queen City Surface Coatings',
+    description: 'USDA compliant food and beverage facility flooring in Louisville, Kentucky. Antimicrobial, easy-to-sanitize surfaces for food processing and beverage facilities.',
+    keywords: 'Louisville food facility flooring, Louisville beverage plant floors, USDA compliant flooring Louisville, food processing floors Louisville, antimicrobial flooring Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides USDA-compliant food and beverage facility flooring throughout the Louisville area, Kentucky. Our antimicrobial systems meet the strict requirements of food processing and beverage production facilities.',
+    neighborhoods: [
+      'Butchertown',
+      'Phoenix Hill',
+      'Shelby Park',
+      'Smoketown',
+      'Russell',
+      'Portland',
+      'Shively',
+      'Pleasure Ridge Park',
+      'Valley Station',
+      'Newburg',
+      'Fern Creek',
+      'Buechel',
+      'Okolona',
+      'Highview',
+      'Fairdale',
+      'Iroquois',
+      'Jacobs',
+      'Schnitzelburg',
+      'Germantown',
+      'Phoenix Hill'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

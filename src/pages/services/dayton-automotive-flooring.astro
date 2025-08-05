@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const automotiveService = servicesConfig.industrial.services.find(s => s.title === "Automotive");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: automotiveService,
+  seo: {
+    title: 'Dayton Automotive Flooring | Oil-Resistant Auto Shop Floors | Queen City Surface Coatings',
+    description: 'Professional automotive facility flooring in Dayton, Ohio. Oil and fluid resistant coatings for auto shops, service centers, and garages throughout Dayton.',
+    keywords: 'Dayton automotive flooring, Dayton auto shop floors, Dayton service center flooring, automotive epoxy Dayton, oil resistant flooring Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides specialized automotive facility flooring throughout Dayton, Ohio. Our oil and fluid-resistant coatings are perfect for auto shops, service centers, and automotive facilities.',
+    neighborhoods: [
+      'Riverside',
+      'Dayton View',
+      'Five Oaks',
+      'East Dayton',
+      'Belmont',
+      'McCook Field',
+      'South Park',
+      'Wright View',
+      'Fairview',
+      'Old Dayton View',
+      'East End',
+      'Inner East',
+      'Triangle',
+      'Edgemont',
+      'Residence Park',
+      'Huffman',
+      'Northridge',
+      'MacFarlane',
+      'Burkhardt',
+      'Linden Heights'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const automotiveService = servicesConfig.industrial.services.find(s => s.title === "Automotive");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: automotiveService,
+  seo: {
+    title: 'Louisville Area Automotive Flooring | Oil-Resistant Auto Shop Floors | Queen City Surface Coatings',
+    description: 'Professional automotive facility flooring in Louisville, Kentucky. Oil and fluid resistant coatings for auto shops, service centers, and garages throughout Louisville area.',
+    keywords: 'Louisville automotive flooring, Louisville auto shop floors, Louisville service center flooring, automotive epoxy Louisville, oil resistant flooring Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides specialized automotive facility flooring throughout the Louisville area, Kentucky. Our oil and fluid-resistant coatings are perfect for auto shops, service centers, and automotive facilities.',
+    neighborhoods: [
+      'Butchertown',
+      'Phoenix Hill',
+      'Shelby Park',
+      'Smoketown',
+      'Russell',
+      'Portland',
+      'Shively',
+      'Pleasure Ridge Park',
+      'Valley Station',
+      'Newburg',
+      'Fern Creek',
+      'Buechel',
+      'Okolona',
+      'Highview',
+      'Fairdale',
+      'Iroquois',
+      'Jacobs',
+      'Schnitzelburg',
+      'Germantown',
+      'Phoenix Hill'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

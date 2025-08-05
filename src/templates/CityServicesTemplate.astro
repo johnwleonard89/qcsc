@@ -26,6 +26,9 @@ export interface Props {
 }
 
 const { cityName, state, county, seo, hero, serviceArea } = Astro.props;
+
+// Create URL-friendly city slug for linking to sub-service pages
+const citySlug = cityName.toLowerCase().replace(/\s+/g, '-');
 ---
 
 <Layout {seo}>
@@ -76,7 +79,7 @@ const { cityName, state, county, seo, hero, serviceArea } = Astro.props;
 										<strong>Popular in {cityName} for:</strong> {serviceArea.neighborhoods.slice(0, 3).join(', ')} and surrounding neighborhoods
 									</div>
 									<div class="service-actions">
-										<a href={`/services/${cityName.toLowerCase()}-${service.link.split('/').pop()}`} class="service-link">Learn More →</a>
+										<a href={`/services/${citySlug}-${service.link.split('/').pop()}`} class="service-link">Learn More →</a>
 										<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
 									</div>
 								</div>

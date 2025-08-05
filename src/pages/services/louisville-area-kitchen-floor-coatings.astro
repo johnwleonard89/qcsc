@@ -1,0 +1,69 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the kitchen floor coatings service from residential services
+const kitchenFloorService = servicesConfig.residential.services.find(s => s.title === "Kitchen Floor Coatings");
+
+if (!kitchenFloorService) {
+  throw new Error('Kitchen Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: kitchenFloorService,
+  seo: {
+    title: 'Louisville Area Kitchen Floor Coatings | Food-Safe Flooring | Queen City Surface Coatings',
+    description: 'Professional kitchen floor coatings in Louisville, Kentucky. Food-safe, hygienic surfaces for Highlands, St. Matthews, Jeffersontown, and all Louisville area residential kitchens.',
+    keywords: 'Louisville kitchen floor coating, Louisville kitchen epoxy, Highlands kitchen floors, St. Matthews kitchen coating, Jeffersontown kitchen flooring, Louisville residential kitchen flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides food-safe kitchen floor coating services throughout the Louisville area, Kentucky. Our hygienic systems are perfect for Louisville residential kitchens, providing easy maintenance and superior cleanliness.',
+    neighborhoods: [
+      'Highlands',
+      'Cherokee Triangle',
+      'Germantown',
+      'Old Louisville',
+      'Clifton',
+      'Crescent Hill',
+      'St. Matthews',
+      'Middletown',
+      'Anchorage',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Graymoor-Devondale',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown',
+      'Nulu'
+    ],
+    landmarks: [
+      'Churchill Downs',
+      'Louisville Slugger Museum',
+      'Kentucky Derby Museum',
+      'Muhammad Ali Center',
+      'Louisville Waterfront Park',
+      'Kentucky Kingdom',
+      'Louisville Zoo',
+      'Speed Art Museum',
+      'University of Louisville',
+      'Bellarmine University'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

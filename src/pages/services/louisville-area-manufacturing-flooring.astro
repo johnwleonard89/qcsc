@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const manufacturingService = servicesConfig.industrial.services.find(s => s.title === "Manufacturing Facilities");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: manufacturingService,
+  seo: {
+    title: 'Louisville Area Manufacturing Flooring | Industrial Facility Floors | Queen City Surface Coatings',
+    description: 'Heavy-duty manufacturing facility flooring in Louisville, Kentucky. Chemical resistant, thermal shock resistant surfaces for manufacturing and industrial operations.',
+    keywords: 'Louisville manufacturing flooring, Louisville industrial floors, manufacturing facility floors Louisville, chemical resistant flooring Louisville, industrial coating Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides extreme-duty manufacturing facility flooring throughout the Louisville area, Kentucky. Our systems withstand chemical exposure, thermal cycling, and heavy industrial operations with minimal production downtime.',
+    neighborhoods: [
+      'Butchertown',
+      'Phoenix Hill',
+      'Shelby Park',
+      'Smoketown',
+      'Russell',
+      'Portland',
+      'Shively',
+      'Pleasure Ridge Park',
+      'Valley Station',
+      'Newburg',
+      'Fern Creek',
+      'Buechel',
+      'Okolona',
+      'Highview',
+      'Fairdale',
+      'Iroquois',
+      'Jacobs',
+      'Schnitzelburg',
+      'Germantown',
+      'Phoenix Hill'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

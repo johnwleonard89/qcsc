@@ -1,0 +1,69 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the basement floor coatings service from residential services
+const basementFloorService = servicesConfig.residential.services.find(s => s.title === "Basement Floor Coatings");
+
+if (!basementFloorService) {
+  throw new Error('Basement Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: basementFloorService,
+  seo: {
+    title: 'Dayton Basement Floor Coating | Waterproof Basement Floors | Queen City Surface Coatings',
+    description: 'Transform your Dayton basement with professional floor coatings. Serving Oakwood, Kettering, Centerville, and all Dayton neighborhoods with moisture-resistant installation.',
+    keywords: 'Dayton basement floor coating, Dayton basement epoxy, Oakwood basement floors, Kettering basement coating, Centerville basement flooring, Dayton waterproof basement'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional basement floor coating services throughout Dayton, Ohio. Our moisture-resistant systems are perfect for Dayton basements, providing protection against humidity and creating bright, welcoming spaces.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro', 
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Dayton Dragons Fifth Third Field',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'Boonshoft Museum of Discovery'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

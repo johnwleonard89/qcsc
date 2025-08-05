@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const coveInstallService = servicesConfig.industrial.services.find(s => s.title === "Cove Install");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: coveInstallService,
+  seo: {
+    title: 'Louisville Area Industrial Cove Install | Professional Floor-to-Wall Transition | Queen City Surface Coatings',
+    description: 'Professional industrial cove installation in Louisville, Kentucky. Seamless floor-to-wall transitions for enhanced cleanability in industrial facilities throughout Louisville area.',
+    keywords: 'Louisville industrial cove install, Louisville industrial cove base, industrial floor wall transition Louisville, facility cove install Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional industrial cove installation throughout the Louisville area, Kentucky. Our seamless floor-to-wall transitions enhance cleanability and create a professional appearance in industrial facilities.',
+    neighborhoods: [
+      'Butchertown',
+      'Phoenix Hill',
+      'Shelby Park',
+      'Smoketown',
+      'Russell',
+      'Portland',
+      'Shively',
+      'Pleasure Ridge Park',
+      'Valley Station',
+      'Newburg',
+      'Fern Creek',
+      'Buechel',
+      'Okolona',
+      'Highview',
+      'Fairdale',
+      'Iroquois',
+      'Jacobs',
+      'Schnitzelburg',
+      'Germantown',
+      'Phoenix Hill'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

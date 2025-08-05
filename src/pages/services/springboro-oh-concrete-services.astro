@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Springboro',
+  state: 'Ohio',
+  county: 'Warren',
+  seo: {
+    title: 'Springboro Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Springboro, Ohio. Serving Clearcreek Township, Main Street, and all Springboro neighborhoods with military precision installation.',
+    keywords: 'Springboro concrete coating, Springboro concrete services, Clearcreek Township OH epoxy flooring, Main Street concrete coating, Springboro garage floors, Springboro residential coating, commercial concrete Springboro Ohio'
+  },
+  hero: {
+    tagline: 'Springboro Excellence',
+    headline: 'Professional Concrete Coating Services in Springboro, Ohio',
+    subheadline: 'Transform your Springboro property with expert concrete coating services. From Clearcreek Township to Main Street, we deliver military precision installation throughout Springboro with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Springboro, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Springboro properties, from established neighborhoods to new residential developments.',
+    neighborhoods: [
+      'Clearcreek Township',
+      'Main Street',
+      'Gardner Road',
+      'Tamarack Trail',
+      'Crosswinds Drive',
+      'Clearcreek-Franklin Road',
+      'State Route 741',
+      'Lytle-Five Points Road',
+      'Pennyroyal Drive',
+      'Red Lion-Five Points Road',
+      'South Main Street',
+      'North Main Street',
+      'Mill Lane',
+      'Spring Valley Road',
+      'Springboro Pike',
+      'Clarksville Road',
+      'Central Avenue',
+      'Wright Station Road',
+      'Alex Bell Road',
+      'Miamisburg-Centerville Road'
+    ],
+    landmarks: [
+      'Springboro City Hall',
+      'Clearcreek Township Community Center',
+      'Springboro High School',
+      'Springboro Intermediate School',
+      'La Comedia Dinner Theatre',
+      'Wright Station Park',
+      'Clearcreek Metro Park',
+      'Heritage Golf Club',
+      'Springboro Community Park',
+      'Springboro Historical Society',
+      'Springboro Schools',
+      'Five Rivers MetroParks',
+      'Little Miami River',
+      'Warren County',
+      'Springboro Shopping Centers'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

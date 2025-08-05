@@ -1,0 +1,8 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { concreteServices } from '../../data/premiumServiceData.js';
+
+const serviceData = concreteServices.customColorMetallicSystems;
+---
+
+<PremiumServiceTemplate {...serviceData} />

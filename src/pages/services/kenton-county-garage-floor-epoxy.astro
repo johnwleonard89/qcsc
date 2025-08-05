@@ -1,0 +1,49 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// County-specific data
+const countyData = {
+  countyName: 'Kenton',
+  state: 'Kentucky',
+  seo: {
+    title: 'Kenton County Kentucky Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Kenton County garage with professional epoxy floor coating. Serving Covington, Independence, Fort Wright, Florence, and all Kenton County communities with durable, beautiful garage flooring.',
+    keywords: 'Kenton County garage floor epoxy, Covington KY garage coating, Independence garage floors, Florence epoxy flooring, Kenton County garage transformation, professional garage floors Kentucky'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Kenton County with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Northern Kentucky garages, from historic areas to modern suburban communities.',
+    cities: [
+      'Covington',
+      'Independence',
+      'Fort Wright',
+      'Erlanger',
+      'Fort Mitchell',
+      'Villa Hills',
+      'Edgewood',
+      'Florence',
+      'Crescent Springs',
+      'Lakeside Park',
+      'Park Hills',
+      'Ludlow',
+      'Bromley',
+      'Ryland Heights',
+      'Taylor Mill',
+      'Kenton Vale',
+      'Elsmere',
+      'Crestview Hills'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

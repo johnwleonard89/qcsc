@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.basementFloorCoating,
+  cityName: 'Florence',
+  state: 'Kentucky',
+  county: 'Boone',
+  seo: {
+    title: 'Florence KY Basement Floor Coating | Waterproof Solutions | Queen City Surface Coatings',
+    description: 'Professional basement floor coating in Florence, Kentucky. Moisture protection for Mall Road, Turfway Road, and all Florence basements with guaranteed results.',
+    keywords: 'Florence KY basement floor coating, Florence basement waterproofing, Mall Road basement flooring, Turfway Road basement coating, Florence Kentucky basement renovation, waterproof basement floors Florence KY'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional basement floor coating services throughout Florence, Kentucky. Our moisture-resistant systems are perfect for Florence\'s climate and soil conditions.',
+    neighborhoods: [
+      'Mall Road',
+      'Turfway Road',
+      'US Highway 42',
+      'Dixie Highway',
+      'Mount Zion Road',
+      'Richardson Road',
+      'Ewing Boulevard',
+      'Burlington Pike',
+      'Industrial Road',
+      'Florence Mall Area',
+      'Boone Square',
+      'Turfway Ridge',
+      'Burlington-Florence',
+      'Patriot Commons',
+      'Hopeful Church Road',
+      'Graves Road',
+      'Woodland Hills',
+      'Brentwood',
+      'Gunpowder Creek',
+      'St. Paul Road'
+    ],
+    landmarks: [
+      'Florence Mall',
+      'Turfway Park Racing',
+      'Florence Antique Mall',
+      'Boone County Courthouse',
+      'Florence Government Center',
+      'Florence Family Aquatic Center',
+      'Boone Woods Park',
+      'Florence Elementary School',
+      'Conner High School',
+      'R.A. Jones Middle School',
+      'Florence Baptist Church',
+      'St. Paul Catholic Church',
+      'Florence Fire Department',
+      'Florence Police Department',
+      'Hopeful Lutheran Church'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

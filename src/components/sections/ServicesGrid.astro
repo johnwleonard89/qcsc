@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import ServiceCard from '../ui/ServiceCard.astro';
+
+const services = await getCollection('services');
+const sortedServices = services.sort((a, b) => a.data.order - b.data.order);
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Professional Services</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        From residential garages to commercial warehouses, we deliver premium surface coating solutions 
+        that stand the test of time. Every project backed by our veteran-owned commitment to excellence.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedServices.map((service) => (
+        <ServiceCard
+          title={service.data.title}
+          description={service.data.short_description}
+          image={service.data.featured_image}
+          href={`/services/${service.slug}`}
+          features={service.data.features}
+          featured={service.data.featured}
+        />
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a 
+        href="/contact" 
+        class="inline-block bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700 transition-colors font-semibold text-lg"
+      >
+        Get Your Free Estimate Today
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Dearborn',
+  state: 'Indiana',
+  seo: {
+    title: 'Dearborn County Indiana Concrete Coating Services | Lawrenceburg, Aurora, Greendale | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Dearborn County, Indiana. Serving Lawrenceburg, Aurora, Greendale, Hidden Valley, and all Dearborn County communities with military precision installation.',
+    keywords: 'Dearborn County concrete coating, Lawrenceburg IN epoxy flooring, Aurora concrete services, Greendale Indiana concrete coating, Dearborn County residential coating, commercial concrete Dearborn County Indiana'
+  },
+  hero: {
+    tagline: 'Dearborn County Excellence',
+    headline: 'Professional Concrete Coating Services in Dearborn County, Indiana',
+    subheadline: 'Transform your Dearborn County property with expert concrete coating services. From Lawrenceburg to Aurora, Greendale to Hidden Valley, we deliver military precision installation throughout Dearborn County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Dearborn County, Indiana, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Dearborn County properties, from riverfront communities to rural areas.',
+    cities: [
+      'Lawrenceburg',
+      'Aurora',
+      'Greendale',
+      'Hidden Valley',
+      'Bright',
+      'Dillsboro',
+      'Moores Hill',
+      'West Harrison',
+      'Manchester',
+      'Guilford',
+      'Logan',
+      'Saint Leon',
+      'Weisburg'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

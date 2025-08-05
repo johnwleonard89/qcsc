@@ -1,0 +1,69 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the kitchen floor coatings service from residential services
+const kitchenFloorService = servicesConfig.residential.services.find(s => s.title === "Kitchen Floor Coatings");
+
+if (!kitchenFloorService) {
+  throw new Error('Kitchen Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: kitchenFloorService,
+  seo: {
+    title: 'Dayton Kitchen Floor Coatings | Food-Safe Flooring | Queen City Surface Coatings',
+    description: 'Professional kitchen floor coatings in Dayton, Ohio. Food-safe, hygienic surfaces for Oakwood, Kettering, Centerville, and all Dayton residential kitchens.',
+    keywords: 'Dayton kitchen floor coating, Dayton kitchen epoxy, Oakwood kitchen floors, Kettering kitchen coating, Centerville kitchen flooring, Dayton residential kitchen flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides food-safe kitchen floor coating services throughout Dayton, Ohio. Our hygienic systems are perfect for Dayton residential kitchens, providing easy maintenance and superior cleanliness.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Fifth Third Field',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'Boonshoft Museum of Discovery'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

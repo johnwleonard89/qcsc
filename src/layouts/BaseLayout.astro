@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  image?: string;
+}
+
+const { 
+  title, 
+  description, 
+  seoTitle = title,
+  seoDescription = description,
+  image = '/images/logo.png'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(image, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={seoDescription} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{seoTitle}</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={seoDescription} />
+    <meta property="og:image" content={socialImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={seoTitle} />
+    <meta property="twitter:description" content={seoDescription} />
+    <meta property="twitter:image" content={socialImage} />
+    
+    <!-- Business Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Queen City Surface Coatings LLC",
+        "description": "Professional epoxy flooring, concrete polishing, and surface restoration solutions serving the Cincinnati tri-state area.",
+        "url": "https://queencitysurfacecoatings.com",
+        "telephone": "+1-513-296-5525",
+        "email": "john@queencitysurfacecoatings.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Milford",
+          "addressRegion": "OH",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 39.1031,
+            "longitude": -84.5120
+          },
+          "geoRadius": "50000"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "John Leonard",
+          "description": "U.S. Marine Corps veteran with over a decade of corporate sales and marketing experience"
+        },
+        "serviceType": [
+          "Epoxy Flooring",
+          "Concrete Polishing", 
+          "Surface Restoration",
+          "Floor Coatings"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

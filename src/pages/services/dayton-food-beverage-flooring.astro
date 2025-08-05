@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const foodBeverageService = servicesConfig.industrial.services.find(s => s.title === "Food & Beverage");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: foodBeverageService,
+  seo: {
+    title: 'Dayton Food & Beverage Flooring | USDA Compliant Facility Floors | Queen City Surface Coatings',
+    description: 'USDA compliant food and beverage facility flooring in Dayton, Ohio. Antimicrobial, easy-to-sanitize surfaces for food processing and beverage facilities.',
+    keywords: 'Dayton food facility flooring, Dayton beverage plant floors, USDA compliant flooring Dayton, food processing floors Dayton, antimicrobial flooring Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides USDA-compliant food and beverage facility flooring throughout Dayton, Ohio. Our antimicrobial systems meet the strict requirements of food processing and beverage production facilities.',
+    neighborhoods: [
+      'Riverside',
+      'Dayton View',
+      'Five Oaks',
+      'East Dayton',
+      'Belmont',
+      'McCook Field',
+      'South Park',
+      'Wright View',
+      'Fairview',
+      'Old Dayton View',
+      'East End',
+      'Inner East',
+      'Triangle',
+      'Edgemont',
+      'Residence Park',
+      'Huffman',
+      'Northridge',
+      'MacFarlane',
+      'Burkhardt',
+      'Linden Heights'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

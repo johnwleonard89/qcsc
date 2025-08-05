@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const officeService = servicesConfig.commercial.services.find(s => s.title === "Office");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: officeService,
+  seo: {
+    title: 'Louisville Area Office Flooring | Professional Workspace Floors | Queen City Surface Coatings',
+    description: 'Professional office flooring solutions in Louisville, Kentucky. Durable, low-maintenance surfaces for businesses in Highlands, St. Matthews, Jeffersontown, and throughout Louisville area.',
+    keywords: 'Louisville office flooring, Louisville commercial floors, Highlands office coating, St. Matthews business flooring, Jeffersontown office floors, Louisville workspace flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional office flooring solutions throughout the Louisville area, Kentucky. Our durable, low-maintenance surfaces create productive work environments perfect for business settings.',
+    neighborhoods: [
+      'Downtown Louisville',
+      'Highlands',
+      'Cherokee Triangle',
+      'Germantown',
+      'Old Louisville',
+      'Clifton',
+      'Crescent Hill',
+      'St. Matthews',
+      'Middletown',
+      'Anchorage',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Graymoor-Devondale',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

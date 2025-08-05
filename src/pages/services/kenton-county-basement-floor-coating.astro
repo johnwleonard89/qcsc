@@ -1,0 +1,49 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.basementFloorCoating;
+
+// County-specific data
+const countyData = {
+  countyName: 'Kenton',
+  state: 'Kentucky',
+  seo: {
+    title: 'Kenton County Kentucky Basement Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Kenton County basement with professional floor coating. Serving Covington, Independence, Fort Wright, Florence, and all Kenton County communities with durable, moisture-resistant basement flooring.',
+    keywords: 'Kenton County basement floor coating, Covington KY basement flooring, Independence basement coating, Florence basement floors, Kenton County basement transformation, professional basement floors Kentucky'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Kenton County with professional basement floor coating services. Our local expertise ensures we understand the unique basement challenges in Northern Kentucky, from moisture control to creating beautiful living spaces.',
+    cities: [
+      'Covington',
+      'Independence',
+      'Fort Wright',
+      'Erlanger',
+      'Fort Mitchell',
+      'Villa Hills',
+      'Edgewood',
+      'Florence',
+      'Crescent Springs',
+      'Lakeside Park',
+      'Park Hills',
+      'Ludlow',
+      'Bromley',
+      'Ryland Heights',
+      'Taylor Mill',
+      'Kenton Vale',
+      'Elsmere',
+      'Crestview Hills'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

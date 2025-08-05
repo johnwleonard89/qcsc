@@ -1,0 +1,17 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { commercialServices } from '../../data/premiumServiceData.js';
+
+const pageData = commercialServices.manufacturingFlooring;
+---
+
+<PremiumServiceTemplate 
+  seo={pageData.seo}
+  hero={pageData.hero}
+  intro={pageData.intro}
+  differentiators={pageData.differentiators}
+  process={pageData.process}
+  collections={pageData.collections}
+  portfolio={pageData.portfolio}
+  contact={pageData.contact}
+/>

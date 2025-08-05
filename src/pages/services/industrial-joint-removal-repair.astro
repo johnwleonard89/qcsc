@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Industrial Joint Removal & Repair | Manufacturing Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional industrial concrete joint removal and repair services for manufacturing and industrial facilities in Cincinnati and Northern Kentucky. Chemical-resistant, heavy-duty joint systems.',
+    keywords: 'industrial joint removal, manufacturing joint repair, industrial concrete joints, heavy duty joint systems, chemical resistant joints, factory joint repair, Cincinnati industrial concrete'
+  },
+  hero: {
+    tagline: 'Industrial Strength Solutions',
+    headline: 'Industrial Joint Removal & Repair',
+    subheadline: 'Engineered for the most demanding industrial environments with extreme-duty joint systems that withstand chemical exposure, thermal cycling, and heavy operational loads. Critical infrastructure protection for manufacturing and processing facilities.',
+    image: {
+      src: '/assets/images/services/joint-repair.webp',
+      alt: 'Professional industrial joint removal and repair - Queen City Surface Coatings industrial services'
+    },
+    ctas: [
+      { text: 'Get Industrial Assessment', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Industrial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Mission-Critical Infrastructure Protection',
+    content: [
+      'Industrial concrete joints are critical infrastructure components that must perform flawlessly under extreme conditions. Failed joints in manufacturing facilities can lead to catastrophic damage, production shutdowns, regulatory violations, and millions in lost revenue.',
+      'Our industrial joint removal and repair services provide extreme-duty solutions engineered for chemical processing, thermal cycling, heavy machinery loads, and continuous operations. We deliver joint systems that maintain structural integrity and operational continuity in the most demanding industrial environments.'
+    ]
+  },
+  differentiators: {
+    title: 'Industrial Joint Service Advantages',
+    subtitle: 'Extreme-duty joint systems engineered for industrial performance:',
+    features: [
+      {
+        title: 'Chemical & Corrosion Resistance',
+        description: 'Superior resistance to acids, bases, solvents, and aggressive chemicals that would destroy standard joint materials'
+      },
+      {
+        title: 'Thermal Shock Protection',
+        description: 'Engineered to withstand extreme temperature variations, thermal cycling, and high-temperature operations without failure'
+      },
+      {
+        title: 'Heavy Load Compatibility',
+        description: 'Designed for forklift traffic, crane loads, heavy machinery, and the extreme mechanical stresses of industrial operations'
+      },
+      {
+        title: 'Minimal Production Downtime',
+        description: 'Fast-cure systems and efficient installation methods designed to minimize operational disruption and production losses'
+      },
+      {
+        title: 'Regulatory Compliance',
+        description: 'Meets FDA, USDA, OSHA, and industry-specific requirements for specialized manufacturing and processing environments'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Industrial Joint Service Process',
+    subtitle: 'Precision-engineered approach for demanding industrial environments:',
+    steps: [
+      {
+        number: 1,
+        title: 'Industrial Assessment',
+        items: [
+          'Comprehensive facility engineering evaluation',
+          'Chemical exposure and thermal analysis',
+          'Load requirements and traffic pattern assessment',
+          'Production schedule coordination and planning'
+        ]
+      },
+      {
+        number: 2,
+        title: 'System Engineering',
+        items: [
+          'Custom material selection for specific exposures',
+          'Thermal expansion and mechanical stress analysis',
+          'Installation sequencing to minimize downtime',
+          'Safety and containment protocol development'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Industrial Preparation',
+        items: [
+          'Heavy-duty removal of failed joint materials',
+          'Industrial-grade surface preparation and profiling',
+          'Contamination removal and decontamination',
+          'Work area isolation and safety protocols'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Precision Installation',
+        items: [
+          'Industrial-grade joint material installation',
+          'Precision application for optimal performance',
+          'Environmental monitoring and quality control',
+          'Real-time progress reporting to operations'
+        ]
+      },
+      {
+        number: 5,
+        title: 'System Validation',
+        items: [
+          'Comprehensive performance testing and validation',
+          'Chemical resistance and durability verification',
+          'Operations team training and documentation',
+          'Long-term maintenance protocols and support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Industrial Joint Applications',
+    subtitle: 'Extreme-duty joint systems for demanding industrial environments:',
+    items: [
+      {
+        title: 'Manufacturing Facilities',
+        description: 'Heavy-duty joint systems for production environments',
+        features: [
+          'Chemical processing compatible materials',
+          'Thermal shock resistant formulations',
+          'Heavy equipment traffic rated systems',
+          'Minimal production downtime installation'
+        ]
+      },
+      {
+        title: 'Food & Beverage Processing',
+        description: 'FDA-compliant joint systems for food production',
+        features: [
+          'USDA and FDA compliant materials',
+          'Antimicrobial joint formulations available',
+          'Easy sanitization and cleaning protocols',
+          'Chemical and thermal resistant systems'
+        ]
+      },
+      {
+        title: 'Chemical Processing',
+        description: 'Ultimate chemical resistance for processing facilities',
+        features: [
+          'Aggressive chemical exposure resistance',
+          'Secondary containment compatible systems',
+          'Temperature cycling resistant materials',
+          'Emergency decontamination procedures ready'
+        ]
+      },
+      {
+        title: 'Automotive Manufacturing',
+        description: 'Specialized systems for automotive production',
+        features: [
+          'Oil and hydraulic fluid resistant materials',
+          'Conductive and anti-static options available',
+          'Paint booth approved formulations',
+          'Assembly line compatible installation'
+        ]
+      },
+      {
+        title: 'Pharmaceutical & Biotech',
+        description: 'Cleanroom compatible joint systems',
+        features: [
+          'USP compliance for pharmaceutical manufacturing',
+          'Cleanroom installation procedures',
+          'Sterile processing environment compatible',
+          'cGMP documentation and validation'
+        ]
+      },
+      {
+        title: 'Power Generation',
+        description: 'Critical infrastructure joint systems',
+        features: [
+          'Extreme temperature resistant materials',
+          'Nuclear and power plant grade systems',
+          'Critical infrastructure reliability',
+          '24/7 operations compatible installation'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready for Industrial-Grade Performance?',
+    description: 'Schedule your industrial joint assessment today and discover how extreme-duty joint systems can protect your critical infrastructure and maintain operational continuity.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

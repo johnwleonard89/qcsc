@@ -1,0 +1,1086 @@
+---
+import { Container, TextSection, FeatureCard } from '@components/odyssey-theme';
+import Layout from '../layouts/Page.astro';
+
+const seo = {
+	title: 'Service Areas | Cincinnati Tri-State Concrete Coating | Queen City Surface Coatings',
+	description: 'Professional concrete coating services throughout Cincinnati tri-state area. Serving Ohio, Kentucky & Indiana within 50-mile radius. Free estimates in all service areas.',
+	keywords: 'Cincinnati service areas, concrete coating Ohio Kentucky Indiana, tri-state flooring contractor, Hamilton County epoxy, Northern Kentucky concrete coating',
+	type: 'website',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Service Areas', url: 'https://queencitysurfacecoatings.com/service-areas/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "Service Areas - Queen City Surface Coatings",
+		"description": "Professional concrete coating services throughout the Cincinnati tri-state area",
+		"url": "https://queencitysurfacecoatings.com/service-areas/"
+	}
+};
+
+const serviceAreas = [
+	{
+		city: "Cincinnati",
+		counties: ["Hamilton County"],
+		neighborhoods: ["Downtown", "Over-the-Rhine", "Hyde Park", "Clifton", "Mount Lookout", "Oakley"],
+		description: "Serving all Cincinnati neighborhoods with professional surface coating services."
+	},
+	{
+		city: "Northern Kentucky",
+		counties: ["Campbell County", "Kenton County", "Boone County"],
+		neighborhoods: ["Newport", "Covington", "Florence", "Burlington", "Erlanger"],
+		description: "Professional flooring services across Northern Kentucky communities."
+	},
+	{
+		city: "West Side Communities", 
+		counties: ["Hamilton County"],
+		neighborhoods: ["Westside", "Price Hill", "Cheviot", "Delhi", "Bridgetown"],
+		description: "Quality surface coatings for Cincinnati's west side neighborhoods."
+	},
+	{
+		city: "East Side Communities",
+		counties: ["Hamilton County", "Clermont County"],
+		neighborhoods: ["Anderson", "Forest Park", "Springdale", "Sharonville", "Blue Ash"],
+		description: "Expert epoxy and polishing services for east side Cincinnati."
+	},
+	{
+		city: "Butler County",
+		counties: ["Butler County"], 
+		neighborhoods: ["Hamilton", "Fairfield", "Middletown", "West Chester", "Mason"],
+		description: "Comprehensive surface restoration throughout Butler County."
+	},
+	{
+		city: "Warren County",
+		counties: ["Warren County"],
+		neighborhoods: ["Mason", "Lebanon", "Springboro", "Franklin", "Carlisle"],
+		description: "Professional concrete and epoxy services in Warren County."
+	}
+];
+---
+
+<Layout seo={seo}>
+	<!-- Hero Section with Introduction -->
+	<section class="custom-hero">
+		<Container>
+			<div class="custom-hero-content">
+				<h1>Service Areas</h1>
+				<p class="custom-hero-subtitle">
+					Professional concrete coating services throughout the Cincinnati tri-state area. 
+					Your trusted partner for exceptional floor transformations.
+				</p>
+				<div class="custom-hero-features">
+					<span class="feature-badge">✓ Veteran-Owned</span>
+					<span class="feature-badge">✓ Licensed & Insured</span>
+					<span class="feature-badge">✓ Free Estimates</span>
+					<span class="feature-badge">✓ Quality Guaranteed</span>
+				</div>
+				<div class="custom-hero-cta">
+					<a href="/company/contact/" class="cta-primary">Get Free Estimate</a>
+					<a href="tel:+15132965525" class="cta-secondary">(513) 296-5525</a>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Introduction Section -->
+	<Container>
+		<section class="introduction-section">
+			<div class="section-content">
+				<h2>Trusted Concrete Coating Experts Across the Tri-State</h2>
+				<p class="section-intro">
+					Queen City Surface Coatings is your premier destination for professional concrete coating services 
+					throughout the Cincinnati tri-state area. As a veteran-owned company, we bring military precision, 
+					reliability, and unmatched quality to every project, whether you're in downtown Cincinnati or the 
+					surrounding communities of Ohio, Kentucky, and Indiana.
+				</p>
+				<p class="section-intro">
+					Our commitment extends beyond just coating your floors – we're dedicated to transforming spaces 
+					and enhancing property values across our entire service area. From residential garages to commercial 
+					facilities, we deliver consistent excellence that stands the test of time.
+				</p>
+			</div>
+		</section>
+	</Container>
+
+	<!-- County Landing Pages -->
+	<section class="county-section">
+		<Container>
+			<div class="county-content">
+				<h2>County Service Areas</h2>
+				<p style="text-align: center; margin-bottom: 2rem;">
+					Comprehensive concrete coating services throughout our primary county service areas:
+				</p>
+				
+				<!-- Ohio Counties -->
+				<div class="state-section">
+					<h3 class="state-heading">Ohio</h3>
+					<div class="county-grid">
+						<!-- Hamilton County -->
+						<div class="county-card">
+							<h4><a href="/services/hamilton-county-oh-concrete-services">Hamilton County</a></h4>
+							<p>Serving Cincinnati and all Hamilton County communities with comprehensive concrete coating services.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Cincinnati, Springdale, Forest Park, Blue Ash, Montgomery</span>
+							</div>
+							<a href="/services/hamilton-county-oh-concrete-services" class="county-link">View Hamilton County Services →</a>
+						</div>
+
+						<!-- Butler County -->
+						<div class="county-card">
+							<h4><a href="/services/butler-county-oh-concrete-services">Butler County</a></h4>
+							<p>Professional concrete coating services throughout Butler County including West Chester, Mason, and Hamilton.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Hamilton, Fairfield, Middletown, West Chester, Mason</span>
+							</div>
+							<a href="/services/butler-county-oh-concrete-services" class="county-link">View Butler County Services →</a>
+						</div>
+
+						<!-- Warren County -->
+						<div class="county-card">
+							<h4><a href="/services/warren-county-oh-concrete-services">Warren County</a></h4>
+							<p>Expert concrete coating services in Warren County including Mason, Lebanon, and Springboro.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Mason, Springboro, Franklin, Lebanon, Loveland</span>
+							</div>
+							<a href="/services/warren-county-oh-concrete-services" class="county-link">View Warren County Services →</a>
+						</div>
+
+						<!-- Clinton County -->
+						<div class="county-card">
+							<h4><a href="/services/clinton-county-oh-concrete-services">Clinton County</a></h4>
+							<p>Comprehensive concrete coating services throughout Clinton County including Wilmington and Blanchester.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Wilmington, Blanchester, Sabina, New Vienna</span>
+							</div>
+							<a href="/services/clinton-county-oh-concrete-services" class="county-link">View Clinton County Services →</a>
+						</div>
+
+						<!-- Brown County -->
+						<div class="county-card">
+							<h4><a href="/services/brown-county-oh-concrete-services">Brown County</a></h4>
+							<p>Expert concrete coating services in Brown County including Georgetown and Mount Orab.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Georgetown, Mount Orab, Ripley, Sardinia</span>
+							</div>
+							<a href="/services/brown-county-oh-concrete-services" class="county-link">View Brown County Services →</a>
+						</div>
+
+						<!-- Clermont County -->
+						<div class="county-card">
+							<h4><a href="/services/clermont-county-oh-concrete-services">Clermont County</a></h4>
+							<p>Professional concrete coating services throughout Clermont County including Milford and Loveland.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Milford, Loveland, Batavia, Amelia, Bethel</span>
+							</div>
+							<a href="/services/clermont-county-oh-concrete-services" class="county-link">View Clermont County Services →</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Kentucky Counties -->
+				<div class="state-section">
+					<h3 class="state-heading">Kentucky</h3>
+					<div class="county-grid">
+						<!-- Kenton County -->
+						<div class="county-card">
+							<h4><a href="/services/kenton-county-ky-concrete-services">Kenton County</a></h4>
+							<p>Comprehensive concrete coating services in Northern Kentucky including Covington, Independence, and Florence.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Covington, Independence, Fort Wright, Erlanger, Florence</span>
+							</div>
+							<a href="/services/kenton-county-ky-concrete-services" class="county-link">View Kenton County Services →</a>
+						</div>
+
+						<!-- Campbell County -->
+						<div class="county-card">
+							<h4><a href="/services/campbell-county-ky-concrete-services">Campbell County</a></h4>
+							<p>Professional concrete coating throughout Campbell County including Newport, Fort Thomas, and Bellevue.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Newport, Fort Thomas, Bellevue, Dayton, Highland Heights</span>
+							</div>
+							<a href="/services/campbell-county-ky-concrete-services" class="county-link">View Campbell County Services →</a>
+						</div>
+
+						<!-- Boone County -->
+						<div class="county-card">
+							<h4><a href="/services/boone-county-ky-concrete-services">Boone County</a></h4>
+							<p>Expert concrete coating services throughout Boone County including Florence, Union, and Burlington.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Florence, Union, Burlington, Walton, Hebron</span>
+							</div>
+							<a href="/services/boone-county-ky-concrete-services" class="county-link">View Boone County Services →</a>
+						</div>
+
+						<!-- Grant County -->
+						<div class="county-card">
+							<h4>Grant County</h4>
+							<p>Professional surface coating services in Grant County including Williamstown and Dry Ridge.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Williamstown, Dry Ridge, Crittenden, Corinth</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Indiana Counties -->
+				<div class="state-section">
+					<h3 class="state-heading">Indiana</h3>
+					<div class="county-grid">
+						<!-- Dearborn County -->
+						<div class="county-card">
+							<h4><a href="/services/dearborn-county-in-concrete-services">Dearborn County</a></h4>
+							<p>Quality concrete coating services across Dearborn County including Lawrenceburg and Aurora.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Lawrenceburg, Aurora, Greendale, Hidden Valley</span>
+							</div>
+							<a href="/services/dearborn-county-in-concrete-services" class="county-link">View Dearborn County Services →</a>
+						</div>
+
+						<!-- Franklin County -->
+						<div class="county-card">
+							<h4>Franklin County</h4>
+							<p>Professional surface coating services in Franklin County including Brookville and Oldenburg.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Brookville, Oldenburg, Cedar Grove, Metamora</span>
+							</div>
+						</div>
+
+						<!-- Ohio County -->
+						<div class="county-card">
+							<h4>Ohio County</h4>
+							<p>Expert concrete coating services in Ohio County including Rising Sun.</p>
+							<div class="county-highlights">
+								<strong>Major Cities:</strong>
+								<span>Rising Sun, Patriot, Florence</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Major Cities Landing Pages -->
+	<section class="cities-section">
+		<Container>
+			<div class="cities-content">
+				<h3>Major City Service Areas</h3>
+				<p>Dedicated service information for our major metropolitan areas:</p>
+				
+				<!-- Ohio Major Cities -->
+				<div class="state-cities-section">
+					<h4 class="state-cities-heading">Ohio Cities</h4>
+					<div class="cities-grid">
+						<div class="city-card">
+							<h5>Cincinnati</h5>
+							<p>Complete concrete coating services throughout Cincinnati and all neighborhoods.</p>
+						</div>
+						<div class="city-card">
+							<h5>Mason</h5>
+							<p>Professional epoxy and concrete coating services in Mason and surrounding areas.</p>
+						</div>
+						<div class="city-card">
+							<h5>West Chester</h5>
+							<p>Expert concrete coating solutions for West Chester residential and commercial properties.</p>
+						</div>
+						<div class="city-card">
+							<h5>Hamilton</h5>
+							<p>Quality concrete coating services for Hamilton homes and businesses.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Kentucky Major Cities -->
+				<div class="state-cities-section">
+					<h4 class="state-cities-heading">Kentucky Cities</h4>
+					<div class="cities-grid">
+						<div class="city-card">
+							<h5>Covington</h5>
+							<p>Professional concrete coating services throughout Covington and Northern Kentucky.</p>
+						</div>
+						<div class="city-card">
+							<h5>Florence</h5>
+							<p>Expert epoxy flooring and concrete coating solutions in Florence.</p>
+						</div>
+						<div class="city-card">
+							<h5>Newport</h5>
+							<p>Quality concrete coating services for Newport residential and commercial properties.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Indiana Major Cities -->
+				<div class="state-cities-section">
+					<h4 class="state-cities-heading">Indiana Cities</h4>
+					<div class="cities-grid">
+						<div class="city-card">
+							<h5>Lawrenceburg</h5>
+							<p>Professional concrete coating services for Lawrenceburg and surrounding areas.</p>
+						</div>
+						<div class="city-card">
+							<h5>Aurora</h5>
+							<p>Expert concrete coating solutions for Aurora residential and commercial properties.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</Container>
+	</section>
+
+	<!-- Extended Service -->
+	<section class="extended-service-section">
+		<Container>
+			<div class="extended-service-content">
+				<h2>Extended Service Areas</h2>
+				<p>
+					For larger commercial projects or special circumstances, we may travel beyond our standard 
+					service area. Contact us to discuss your specific location and project requirements.
+				</p>
+				
+				<div class="hero-ctas">
+					<a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+					<a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Response Time -->
+	<section class="response-time-section">
+		<Container>
+			<div class="response-time-content">
+				<h2>Response Times by Area</h2>
+				<div class="response-grid">
+					<div class="response-item">
+						<h4>Core Cincinnati Area</h4>
+						<p>Same-day consultation available</p>
+						<span class="response-time">24-48 hour response</span>
+					</div>
+					<div class="response-item">
+						<h4>Tri-State Suburbs</h4>
+						<p>Next business day consultation</p>
+						<span class="response-time">48-72 hour response</span>
+					</div>
+					<div class="response-item">
+						<h4>Extended Areas</h4>
+						<p>Scheduled consultation</p>
+						<span class="response-time">3-5 business day response</span>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+</Layout>
+
+<style>
+	/* Import service areas styles and center all content */
+	@import '/src/styles/service-areas.css';
+
+	/* Center all text by default */
+	section {
+		text-align: center;
+	}
+
+	/* Consistent Typography Hierarchy */
+	h1 {
+		font-size: clamp(2.5rem, 5vw, 4rem);
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	h2 {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	h3 {
+		font-size: clamp(1.5rem, 3vw, 2rem);
+		font-weight: 700;
+		line-height: 1.3;
+		margin-bottom: 1rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	h4 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		line-height: 1.3;
+		margin-bottom: 0.75rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	h5 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		line-height: 1.3;
+		margin-bottom: 0.5rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	h6 {
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1.3;
+		margin-bottom: 0.5rem;
+		font-family: var(--theme-font-family-serif);
+	}
+
+	/* Custom Hero Section - Fixed visibility and prominent CTAs */
+	.custom-hero {
+		background: linear-gradient(135deg, #002F4B 0%, #001A2E 100%);
+		color: white;
+		padding: 4rem 0;
+		margin-bottom: 2rem;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.custom-hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+						  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.custom-hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	.custom-hero h1 {
+		color: #FFC107;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.custom-hero-subtitle {
+		color: rgba(255, 255, 255, 0.95);
+		font-size: 1.25rem;
+		margin-bottom: 2.5rem;
+		line-height: 1.6;
+		font-weight: 400;
+	}
+
+	.custom-hero-features {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		gap: 1.5rem;
+		margin-bottom: 4rem;
+		overflow-x: auto;
+		padding: 0 1rem;
+	}
+
+	.feature-badge {
+		background: transparent;
+		color: white;
+		padding: 0.75rem 1.25rem;
+		border-radius: 8px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		border: 2px solid white;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+		flex: 0 0 auto;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	}
+
+	.feature-badge:hover {
+		background: rgba(255, 255, 255, 0.1);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+	}
+
+	.custom-hero-cta {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.cta-primary {
+		background: linear-gradient(45deg, #FFC107, #FFD700);
+		color: #002F4B;
+		padding: 1.5rem 3rem;
+		border-radius: 50px;
+		font-weight: 800;
+		font-size: 1.2rem;
+		text-decoration: none;
+		border: 4px solid #FFC107;
+		transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		min-width: 250px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+		animation: pulse-glow 2s ease-in-out infinite alternate;
+	}
+
+	@keyframes pulse-glow {
+		0% {
+			box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+		}
+		100% {
+			box-shadow: 0 15px 35px rgba(255, 193, 7, 0.7), 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 193, 7, 0.6);
+		}
+	}
+
+	.cta-primary::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+		transition: left 0.6s;
+	}
+
+	.cta-primary:hover::before {
+		left: 100%;
+	}
+
+	.cta-primary:hover {
+		background: linear-gradient(45deg, #E6AC00, #FFC107);
+		border-color: #E6AC00;
+		transform: translateY(-5px) scale(1.05);
+		box-shadow: 0 20px 50px rgba(255, 193, 7, 0.8), 0 10px 30px rgba(0, 0, 0, 0.3);
+		text-decoration: none;
+		color: #002F4B;
+	}
+
+	.cta-secondary {
+		background: transparent;
+		color: #FFC107;
+		padding: 1.5rem 3rem;
+		border-radius: 50px;
+		font-weight: 700;
+		font-size: 1.1rem;
+		text-decoration: none;
+		border: 3px solid #FFC107;
+		transition: all 0.3s ease;
+		min-width: 220px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+	}
+
+	.cta-secondary:hover {
+		background: rgba(255, 193, 7, 0.1);
+		color: #FFC107;
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+		text-decoration: none;
+		border-color: #FFD700;
+	}
+
+	/* Mobile responsive for hero */
+	@media (max-width: 768px) {
+		.custom-hero {
+			padding: 2rem 0;
+		}
+		
+		/* Mobile hero h1 inherits from global h1 styles */
+		
+		.custom-hero-features {
+			flex-wrap: wrap;
+			gap: 0.75rem;
+			margin-bottom: 3rem;
+			justify-content: center;
+		}
+		
+		.feature-badge {
+			font-size: 0.8rem;
+			padding: 0.6rem 1rem;
+			text-align: center;
+		}
+		
+		.custom-hero-cta {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.cta-primary,
+		.cta-secondary {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+
+	/* Introduction Section */
+	.introduction-section {
+		padding: 3rem 0;
+		background: var(--theme-bg);
+	}
+
+	.section-content {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.section-content h2 {
+		color: #002F4B;
+	}
+
+	.section-intro {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.centered-text {
+		text-align: center !important;
+	}
+
+	/* County Section */
+	.county-section {
+		padding: 4rem 0;
+		background: var(--theme-surface-1);
+	}
+
+	.county-content h2 {
+		color: #002F4B;
+	}
+
+	/* State Section */
+	.state-section {
+		margin-bottom: 3rem;
+	}
+
+	.state-heading {
+		color: #002F4B;
+		font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 2rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 3px solid #FFC107;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.county-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.county-card {
+		background: white;
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		border: 2px solid #E9ECEF;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: var(--theme-transition);
+		width: 300px;
+		flex: 0 0 300px;
+	}
+
+	.county-card:hover {
+		border-color: #002F4B;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+	}
+
+	.county-card h4 {
+		color: #002F4B;
+	}
+
+	.county-card h4 a {
+		color: #002F4B;
+		text-decoration: none;
+		transition: var(--theme-transition);
+	}
+
+	.county-card h4 a:hover {
+		color: #003B5C;
+		text-decoration: underline;
+	}
+
+	.county-card p {
+		color: #333333;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+
+	.county-highlights {
+		background: #F8F9FA;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.county-highlights strong {
+		color: #002F4B;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.county-highlights span {
+		color: #333333;
+		font-size: 0.9rem;
+	}
+
+	.county-link {
+		color: #002F4B;
+		font-weight: 600;
+		text-decoration: none;
+		transition: var(--theme-transition);
+	}
+
+	.county-link:hover {
+		color: #003B5C;
+		text-decoration: underline;
+	}
+
+	/* Cities Section */
+	.cities-section {
+		padding: 4rem 0;
+		background: white;
+	}
+
+	.cities-content h3 {
+		color: #002F4B;
+	}
+
+	.cities-content h4 {
+		color: #002F4B;
+	}
+
+	.cities-content p {
+		color: #333333;
+		margin-bottom: 2rem;
+	}
+
+	.cities-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.city-card {
+		background: #F5F5F5;
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		transition: var(--theme-transition);
+		width: 300px;
+		flex: 0 0 300px;
+	}
+
+	.city-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	}
+
+	.city-card h4 a,
+	.city-card h5 a {
+		color: #002F4B;
+		text-decoration: none;
+		transition: var(--theme-transition);
+	}
+
+	.city-card h4 a:hover,
+	.city-card h5 a:hover {
+		color: #003B5C;
+		text-decoration: underline;
+	}
+
+	/* State Cities Section */
+	.state-cities-section {
+		margin-bottom: 3rem;
+	}
+
+	.state-cities-heading {
+		color: #002F4B;
+		font-size: 1.3rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid #FFC107;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.city-card p {
+		color: #333333;
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+
+	.city-link {
+		color: #002F4B;
+		font-weight: 600;
+		text-decoration: none;
+		transition: var(--theme-transition);
+	}
+
+	.city-link:hover {
+		color: #003B5C;
+		text-decoration: underline;
+	}
+
+	/* Service City Grid */
+	.service-specific-section {
+		margin-top: 3rem;
+	}
+
+	.service-city-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		margin: 2rem 0;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.service-city-group {
+		background: #F5F5F5;
+		padding: 1.5rem;
+		border-radius: var(--theme-shape-radius);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		width: 250px;
+		flex: 0 0 250px;
+	}
+
+	.service-city-group h4,
+	.service-city-group h6 {
+		text-align: center;
+		color: #002F4B;
+	}
+
+	/* Service State Section */
+	.service-state-section {
+		margin-bottom: 3rem;
+	}
+
+	.service-state-heading {
+		color: #002F4B;
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.3rem;
+		border-bottom: 2px solid #FFC107;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.service-city-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		text-align: left;
+	}
+
+	.service-city-link {
+		color: #002F4B;
+		text-decoration: none;
+		font-size: 0.9rem;
+		transition: var(--theme-transition);
+		padding: 0.25rem 0;
+	}
+
+	.service-city-link:hover {
+		color: #003B5C;
+		text-decoration: underline;
+	}
+
+	/* Extended Service Section */
+	.extended-service-section {
+		padding: 4rem 0;
+		background: #F5F5F5;
+	}
+
+	.extended-service-content h2 {
+		color: #002F4B;
+	}
+
+	.extended-service-content p {
+		color: #333333;
+		font-size: 1.1rem;
+		line-height: 1.6;
+		margin-bottom: 2rem;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Homepage CTA Buttons */
+	.hero-ctas {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem 2rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		min-width: 200px;
+	}
+
+	.btn-large {
+		padding: 1.25rem 2.5rem;
+		font-size: 1.1rem;
+		min-width: 220px;
+	}
+
+	.btn-primary {
+		background: #FFC107;
+		border-color: #FFC107;
+		color: #002F4B;
+		box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+	}
+
+	.btn-primary:hover {
+		background: #E6AC00;
+		border-color: #E6AC00;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+		text-decoration: none;
+		color: #002F4B;
+	}
+
+	.btn-outline {
+		background: transparent;
+		border-color: #002F4B;
+		color: #002F4B;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.btn-outline:hover {
+		background: #002F4B;
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 15px rgba(0, 47, 75, 0.2);
+		text-decoration: none;
+	}
+
+	/* Response Time Section */
+	.response-time-section {
+		padding: 4rem 0;
+		background: white;
+	}
+
+	.response-time-content h2 {
+		color: #002F4B;
+	}
+
+	.response-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.response-item {
+		background: #F8F9FA;
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		width: 250px;
+		flex: 0 0 250px;
+		text-align: center;
+	}
+
+	.response-item h4 {
+		color: #002F4B;
+		margin-bottom: 1rem;
+	}
+
+	.response-item p {
+		color: #333333;
+		margin-bottom: 1rem;
+	}
+
+	.response-time {
+		color: #FFC107;
+		font-weight: 700;
+		font-size: 1.1rem;
+	}
+
+	/* Mobile responsive */
+	@media (max-width: 768px) {
+		.county-grid,
+		.cities-grid,
+		.service-city-grid,
+		.response-grid {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.county-card,
+		.city-card,
+		.service-city-group,
+		.response-item {
+			width: 100%;
+			max-width: 400px;
+		}
+
+		.hero-ctas {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+</style>

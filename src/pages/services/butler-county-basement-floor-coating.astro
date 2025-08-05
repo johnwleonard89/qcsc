@@ -1,0 +1,55 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.basementFloorCoating;
+
+// County-specific data
+const countyData = {
+  countyName: 'Butler',
+  state: 'Ohio',
+  seo: {
+    title: 'Butler County Ohio Basement Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Butler County basement with professional floor coating. Serving Hamilton, Fairfield, West Chester, Mason, and all Butler County communities with durable, moisture-resistant basement flooring.',
+    keywords: 'Butler County basement floor coating, Hamilton OH basement flooring, Fairfield basement coating, West Chester basement floors, Butler County basement transformation, professional basement floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Butler County with professional basement floor coating services. Our local expertise ensures we understand the unique basement challenges in Butler County, from moisture control to creating beautiful living spaces.',
+    cities: [
+      'Hamilton',
+      'Fairfield', 
+      'Middletown',
+      'West Chester',
+      'Mason',
+      'Springboro',
+      'Monroe',
+      'Trenton',
+      'Oxford',
+      'Ross',
+      'New Miami',
+      'Carlisle',
+      'Lemon Township',
+      'Fairfield Township',
+      'Liberty Township',
+      'Madison Township',
+      'Milford Township',
+      'Morgan Township',
+      'Oxford Township',
+      'Reily Township',
+      'Ross Township',
+      'St. Clair Township',
+      'Union Township',
+      'Wayne Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

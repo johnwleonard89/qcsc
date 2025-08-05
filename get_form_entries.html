@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Google Form Entry IDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #002F4B;
+            margin-bottom: 20px;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #FFC107;
+            border-radius: 4px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #002F4B;
+        }
+        code {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .url-box {
+            background: #e7f3ff;
+            border: 1px solid #b3d7ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            word-break: break-all;
+        }
+        .results {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        button {
+            background: #FFC107;
+            color: #002F4B;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #e6ac00;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get Google Form Entry IDs</h1>
+        
+        <div class="step">
+            <h3>Step 1: Open Your Google Form</h3>
+            <p>Click the link below to open your Google Form in a new tab:</p>
+            <div class="url-box">
+                <a href="https://docs.google.com/forms/d/1FAIpQLSfUUy7dwRdvjlwaRNJl0WF1oJrbSzk75rYV0gXFlFGFIzmO6g/viewform" target="_blank">
+                    Open Your Quote Request Form
+                </a>
+            </div>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: View Page Source</h3>
+            <p>On the form page:</p>
+            <ol>
+                <li>Right-click anywhere on the page</li>
+                <li>Select "View Page Source" (or press Ctrl+U / Cmd+U)</li>
+                <li>Copy ALL the source code</li>
+                <li>Paste it in the text area below</li>
+            </ol>
+            <textarea id="sourceCode" placeholder="Paste the entire page source code here..."></textarea>
+            <button onclick="extractEntryIds()">Extract Entry IDs</button>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Results</h3>
+            <div id="results" class="results" style="display: none;">
+                <h4>Found Entry IDs:</h4>
+                <div id="entryList"></div>
+                <div class="warning">
+                    <strong>Important:</strong> Copy these entry IDs and send them to Claude to update your form.
+                </div>
+            </div>
+            <div id="noResults" style="display: none;" class="warning">
+                <strong>No entry IDs found.</strong> Make sure you pasted the complete page source.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function extractEntryIds() {
+            const sourceCode = document.getElementById('sourceCode').value;
+            const results = document.getElementById('results');
+            const noResults = document.getElementById('noResults');
+            const entryList = document.getElementById('entryList');
+            
+            if (!sourceCode.trim()) {
+                alert('Please paste the page source code first.');
+                return;
+            }
+            
+            // Extract entry IDs using regex
+            const entryRegex = /name="entry\.(\d+)"/g;
+            const entries = [];
+            let match;
+            
+            while ((match = entryRegex.exec(sourceCode)) !== null) {
+                entries.push(match[1]);
+            }
+            
+            if (entries.length > 0) {
+                let html = '<ul>';
+                entries.forEach((entry, index) => {
+                    const fieldNames = ['First Name', 'Last Name', 'Email Address', 'Phone Number', 'Project Details'];
+                    const fieldName = fieldNames[index] || `Field ${index + 1}`;
+                    html += `<li><strong>${fieldName}:</strong> <code>entry.${entry}</code></li>`;
+                });
+                html += '</ul>';
+                
+                html += '<h4>Copy these values:</h4>';
+                html += '<div style="background: #f8f9fa; padding: 10px; border-radius: 4px; font-family: monospace;">';
+                entries.forEach((entry, index) => {
+                    const fieldNames = ['FIRST_NAME_ENTRY_ID', 'LAST_NAME_ENTRY_ID', 'EMAIL_ENTRY_ID', 'PHONE_ENTRY_ID', 'PROJECT_DETAILS_ENTRY_ID'];
+                    const fieldName = fieldNames[index] || `FIELD_${index + 1}_ENTRY_ID`;
+                    html += `${fieldName} = ${entry}<br>`;
+                });
+                html += '</div>';
+                
+                entryList.innerHTML = html;
+                results.style.display = 'block';
+                noResults.style.display = 'none';
+            } else {
+                results.style.display = 'none';
+                noResults.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

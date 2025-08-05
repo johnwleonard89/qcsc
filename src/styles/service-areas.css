@@ -1,0 +1,716 @@
+/* Service Area Pages Styles - Queen City Surface Coatings */
+
+/* Main content styling */
+.main-content {
+  color: var(--theme-on-bg);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--theme-surface-2) 0%, #1a2438 100%);
+  color: var(--theme-on-surface-2);
+  padding: 4rem 0;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  color: var(--theme-on-surface-2);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: var(--theme-font-family-serif);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-features span {
+  background: var(--theme-primary);
+  color: var(--theme-surface-2);
+  padding: 0.5rem 1rem;
+  border-radius: var(--theme-button-border-radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-features span::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/service-icons/checkmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: var(--theme-button-border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--theme-transition);
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--theme-primary);
+  color: var(--theme-surface-2);
+}
+
+.btn-primary:hover {
+  background: var(--theme-primary-hover);
+  color: var(--theme-surface-2);
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--theme-on-surface-2);
+  border: 2px solid var(--theme-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--theme-primary);
+  color: var(--theme-surface-2);
+  text-decoration: none;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: var(--section-margin);
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-surface-2);
+  font-family: var(--theme-font-family-serif);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: var(--theme-on-surface-1);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
+/* County Stats */
+.county-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--theme-surface-1);
+  border-radius: var(--theme-shape-radius);
+  border: 3px solid var(--theme-primary);
+}
+
+.stat-item h3 {
+  color: var(--theme-primary);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+.stat-item p {
+  color: var(--theme-surface-2);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Service Grid */
+.services-grid, .market-grid, .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.service-card, .market-segment, .tech-item {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  border: 2px solid var(--theme-surface-1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: var(--theme-transition);
+}
+
+.service-card:hover, .market-segment:hover, .tech-item:hover {
+  border-color: var(--theme-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon, .market-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.service-icon img, .market-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.service-card h3, .market-segment h3, .tech-item h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.service-card p, .market-segment p, .tech-item p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.service-card ul, .market-segment ul, .tech-item ul, .characteristic ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-card li, .market-segment li, .tech-item li, .characteristic li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--theme-on-surface-1);
+}
+
+.service-card li::before, .market-segment li::before, .tech-item li::before, .characteristic li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/service-icons/checkmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Cities Grid */
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.city-category {
+  background: var(--theme-surface-1);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+}
+
+.city-category h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.city-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.city-links a, .city-links span {
+  background: var(--theme-bg);
+  color: var(--theme-surface-2);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--theme-surface-1);
+  font-size: 0.9rem;
+  transition: var(--theme-transition);
+}
+
+.city-links a:hover {
+  background: var(--theme-primary);
+  color: var(--theme-surface-2);
+  text-decoration: none;
+}
+
+/* Content Columns */
+.content-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.content-column h3 {
+  color: var(--theme-surface-2);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-column h3:first-child {
+  margin-top: 0;
+}
+
+.content-column p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1.5rem;
+}
+
+/* Project Highlights */
+.project-highlight {
+  background: var(--theme-surface-1);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--theme-primary);
+}
+
+.project-highlight h4 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.project-highlight p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1rem;
+}
+
+.project-highlight strong {
+  color: var(--theme-surface-2);
+}
+
+/* Characteristics Grid */
+.characteristics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.characteristic {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  border: 2px solid var(--theme-surface-1);
+}
+
+.characteristic h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.characteristic p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1rem;
+}
+
+/* Community Sections */
+.community-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.community-section {
+  background: var(--theme-surface-1);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+}
+
+.community-section h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.community-section p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1rem;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.process-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.step-number {
+  background: var(--theme-primary);
+  color: var(--theme-surface-2);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  color: var(--theme-on-surface-1);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.testimonial {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  border: 2px solid var(--theme-primary);
+  position: relative;
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 4rem;
+  color: var(--theme-primary);
+  font-family: var(--theme-font-family-serif);
+}
+
+.testimonial-content p {
+  color: var(--theme-on-surface-1);
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.testimonial-author {
+  color: var(--theme-surface-2);
+  font-weight: 600;
+  border-top: 1px solid var(--theme-surface-1);
+  padding-top: 1rem;
+}
+
+.testimonial-author strong {
+  color: var(--theme-primary);
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--theme-surface-1);
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.contact-info h2 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  margin-bottom: 0.75rem;
+  color: var(--theme-on-surface-1);
+}
+
+.contact-item strong {
+  color: var(--theme-surface-2);
+}
+
+.service-promise {
+  background: var(--theme-bg);
+  padding: 1.5rem;
+  border-radius: var(--theme-shape-radius);
+  border: 2px solid var(--theme-primary);
+}
+
+.service-promise h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.service-promise ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-promise li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--theme-on-surface-1);
+}
+
+.service-promise li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/service-icons/checkmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .content-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .county-stats {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  
+  .stat-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  .services-grid, .market-grid, .tech-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .characteristics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .community-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Additional background sections */
+.county-overview {
+  background: var(--theme-surface-1);
+}
+
+.market-specializations {
+  background: var(--theme-bg);
+}
+
+.featured-projects {
+  background: var(--theme-surface-1);
+}
+
+.county-characteristics, .local-expertise {
+  background: var(--theme-bg);
+}
+
+.service-advantages, .community-focus {
+  background: var(--theme-surface-1);
+}
+
+.technical-section, .process-section {
+  background: var(--theme-bg);
+}
+
+.testimonials {
+  background: var(--theme-surface-1);
+}
+
+.services-overview, .cities-served {
+  background: var(--theme-bg);
+}
+
+/* Projects showcase */
+.projects-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Advantages content */
+.advantages-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.advantage-column h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.advantage-column h3:first-child {
+  margin-top: 0;
+}
+
+.advantage-column p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1.5rem;
+}
+
+/* Areas content */
+.areas-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.areas-column h3 {
+  color: var(--theme-surface-2);
+  margin-bottom: 1rem;
+}
+
+.areas-column p {
+  color: var(--theme-on-surface-1);
+  margin-bottom: 1rem;
+}
+
+.areas-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.areas-column li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--theme-on-surface-1);
+}
+
+.areas-column li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/service-icons/checkmark.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.areas-column strong {
+  color: var(--theme-surface-2);
+}

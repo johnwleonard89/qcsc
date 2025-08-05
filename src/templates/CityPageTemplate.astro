@@ -1,0 +1,567 @@
+---
+import Layout from '../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
+
+export interface Props {
+  seo?: {
+    title: string;
+    description: string;
+    keywords?: string;
+    structuredData?: any;
+  };
+  city: {
+    name: string;
+    state: string;
+    stateAbbr: string;
+    county: string;
+    fullName: string; // e.g., "Cincinnati, Ohio"
+  };
+  intro: {
+    content: string; // HTML content with local area descriptions
+  };
+  services: Array<{
+    name: string;
+    href: string;
+    description: string;
+  }>;
+  landmarks: Array<string>;
+  whyChooseUs: Array<string>;
+  testimonials: Array<{
+    name: string;
+    location: string;
+    text: string;
+    service: string;
+    rating: number;
+  }>;
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
+
+const { seo, city, intro, services, landmarks, whyChooseUs, testimonials, faqs } = Astro.props;
+---
+
+<Layout seo={seo}>
+  <!-- Hero Section -->
+  <section class="custom-hero">
+    <Container>
+      <div class="custom-hero-content">
+        <h1>{city.fullName}</h1>
+        <p class="custom-hero-subtitle">
+          Expert concrete coating services in {city.name}, {city.stateAbbr}. 
+          Serving {city.county} County with military precision and lifetime quality.
+        </p>
+        <div class="custom-hero-features">
+          <span class="feature-badge">✓ Veteran-Owned</span>
+          <span class="feature-badge">✓ Licensed & Insured</span>
+          <span class="feature-badge">✓ Free Estimates</span>
+          <span class="feature-badge">✓ Quality Guaranteed</span>
+        </div>
+        <div class="custom-hero-cta">
+          <a href="/company/contact#quote-form" class="cta-primary">Get Free Estimate</a>
+          <a href="tel:+15132965525" class="cta-secondary">(513) 296-5525</a>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Local Introduction -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <Container>
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+          Professional Concrete Coating Services in {city.name}
+        </h2>
+        <div class="prose prose-lg md:prose-xl mx-auto text-gray-600 leading-relaxed" set:html={intro.content} />
+      </div>
+    </Container>
+  </section>
+
+  <!-- Services Offered Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <Container>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Our Services in {city.name}
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div class="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-xl border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300 text-center">
+              <h3 class="text-xl font-bold text-gray-900 mb-4">{service.name}</h3>
+              <p class="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <a 
+                href={service.href}
+                class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+              >
+                Learn More →
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Local Landmarks Section -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <Container>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Proudly Serving Areas Near
+        </h2>
+        <div class="flex flex-wrap gap-6 max-w-5xl mx-auto justify-center">
+          {landmarks.map((landmark) => (
+            <div class="bg-white px-6 py-8 rounded-xl border border-gray-200 shadow-lg text-center hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
+              <h3 class="text-lg font-semibold text-gray-900 leading-relaxed">
+                {landmark}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Why Choose QCSC Section -->
+  <section class="py-16 md:py-20 bg-white">
+    <Container>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Why Choose Queen City Surface Coatings for {city.name}?
+        </h2>
+        <div class="flex flex-wrap gap-8 max-w-5xl mx-auto justify-center">
+          {whyChooseUs.map((reason) => (
+            <div class="bg-gradient-to-br from-gray-50 to-blue-50 px-8 py-10 rounded-xl border border-gray-200 shadow-lg text-center hover:transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300 w-full sm:w-[calc(50%-16px)] lg:w-[calc(50%-16px)]">
+              <h3 class="text-xl font-semibold text-gray-900 leading-relaxed">{reason}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <Container>
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          What Our Customers Say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
+            <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+              <div class="flex items-center mb-4">
+                {Array.from({ length: testimonial.rating }).map((_, i) => (
+                  <svg key={i} class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-gray-600 mb-6 leading-relaxed italic">
+                "{testimonial.text}"
+              </blockquote>
+              <div class="border-t border-gray-200 pt-4">
+                <div class="font-semibold text-gray-900">{testimonial.name}</div>
+                <div class="text-sm text-gray-500">{testimonial.location}</div>
+                <div class="text-sm text-primary-600">{testimonial.service}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-20 bg-gray-50">
+    <Container>
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          Frequently Asked Questions - {city.name}
+        </h2>
+        
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <button 
+                class="w-full px-6 py-4 text-left font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors faq-question" 
+                data-faq={index}
+              >
+                <div class="flex justify-between items-center">
+                  <span>{faq.question}</span>
+                  <span class="text-2xl faq-icon">+</span>
+                </div>
+              </button>
+              <div class="faq-answer hidden px-6 pb-4">
+                <p class="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <Container>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Ready to Transform Your {city.name} Property?</h2>
+          <p>Experience the Queen City Surface Coatings difference with military precision installation and premium materials backed by our satisfaction guarantee. Get your free {city.name} consultation today.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Call</p>
+              <a href="tel:+15132965525" class="contact-button contact-button-phone">
+                <div class="contact-details">
+                  <span class="contact-info">(513) 296-5525</span>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-button-wrapper">
+              <p class="contact-label">Email</p>
+              <a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+                <div class="contact-details">
+                  <span class="contact-info">john@queencitysurfacecoatings.com</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <div class="form-container">
+            <h3>Get Your Free {city.name} Consultation</h3>
+            <p>Fill out our contact form and we'll get back to you within 24 hours with a detailed estimate for your {city.name} project.</p>
+            <a href="/company/contact#quote-form" class="btn btn-primary btn-large">Request Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </section>
+</Layout>
+
+<style>
+  /* Hero Section Styling */
+  .custom-hero {
+    background: linear-gradient(135deg, #002F4B 0%, #001A2E 100%);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .custom-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .custom-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .custom-hero h1 {
+    color: #FFC107;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .custom-hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .custom-hero-features {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    overflow-x: auto;
+    padding: 0 1rem;
+  }
+  .feature-badge {
+    background: transparent;
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .feature-badge:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  }
+  .custom-hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cta-primary {
+    background: linear-gradient(45deg, #FFC107, #FFD700);
+    color: #002F4B;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border: 4px solid #FFC107;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    min-width: 250px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+  @keyframes pulse-glow {
+    0% {
+      box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      box-shadow: 0 15px 35px rgba(255, 193, 7, 0.7), 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 30px rgba(255, 193, 7, 0.6);
+    }
+  }
+  .cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+  }
+  .cta-primary:hover::before {
+    left: 100%;
+  }
+  .cta-primary:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 25px 45px rgba(255, 193, 7, 0.6), 0 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  .cta-secondary {
+    background: transparent;
+    color: white;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 3px solid white;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+  }
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    border-color: #FFC107;
+    color: #FFC107;
+  }
+
+  /* Contact Section Styling */
+  .contact-section {
+    background: var(--theme-surface-1);
+    padding: 4rem 0;
+  }
+  .contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contact-info h2 {
+    font-size: 2.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1rem;
+  }
+  .contact-info > p {
+    font-size: 1.125rem;
+    line-height: var(--line-height-relaxed);
+    margin-bottom: 2rem;
+    color: var(--theme-text-secondary);
+  }
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contact-button-wrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+  .contact-label {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: #002F4B;
+    text-align: center;
+    margin: 0 0 0.5rem 0;
+  }
+  .contact-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+    padding: 1rem;
+    border-radius: var(--theme-card-radius);
+    border: none;
+    transition: var(--theme-transition);
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    min-height: 60px;
+    justify-content: center;
+  }
+  .contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  .contact-button-phone {
+    background: #FFC107;
+    color: #002F4B;
+  }
+  .contact-button-phone:hover {
+    background: #E6AC00;
+    color: #002F4B;
+  }
+  .contact-button-email {
+    background: #002F4B;
+    color: white;
+  }
+  .contact-button-email:hover {
+    background: #001f36;
+    color: white;
+  }
+  .contact-button-email .contact-info {
+    color: #FFC107;
+    font-size: 0.9rem;
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .contact-details .contact-info {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+  }
+  .form-container {
+    background: var(--theme-bg);
+    padding: 2rem;
+    border-radius: var(--theme-card-radius);
+    box-shadow: var(--theme-shadow-light);
+    border: 1px solid var(--theme-border-light);
+    text-align: center;
+  }
+  .form-container h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--theme-text-primary);
+    margin-bottom: 1rem;
+  }
+  .form-container p {
+    color: var(--theme-text-secondary);
+    margin-bottom: 2rem;
+    line-height: var(--line-height-relaxed);
+  }
+  @media (max-width: 768px) {
+    .custom-hero {
+      padding: 2rem 0;
+    }
+    
+    .custom-hero-features {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+      justify-content: center;
+    }
+    
+    .feature-badge {
+      font-size: 0.8rem;
+      padding: 0.6rem 1rem;
+      text-align: center;
+    }
+    
+    .custom-hero-cta {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-primary,
+    .cta-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>
+
+<script>
+  // FAQ functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const faqIndex = question.dataset.faq;
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('.faq-icon');
+        const isHidden = answer.classList.contains('hidden');
+        
+        // Close all other FAQs
+        faqQuestions.forEach(q => {
+          const a = q.nextElementSibling;
+          const i = q.querySelector('.faq-icon');
+          a.classList.add('hidden');
+          i.textContent = '+';
+        });
+        
+        // Toggle current FAQ
+        if (isHidden) {
+          answer.classList.remove('hidden');
+          icon.textContent = '-';
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.garageFloorEpoxy,
+  cityName: 'Newport',
+  state: 'Kentucky',
+  county: 'Campbell',
+  seo: {
+    title: 'Newport KY Garage Floor Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Newport, Kentucky garage with professional floor coating. Serving Newport on the Levee, Monmouth Street, and all Newport neighborhoods with guaranteed results.',
+    keywords: 'Newport KY garage floor coating, Newport garage floor epoxy, Newport Levee garage flooring, Monmouth Street garage coating, Newport Kentucky garage transformation, professional garage floors Newport KY'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Newport, Kentucky, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Newport garages and properties.',
+    neighborhoods: [
+      'Newport on the Levee',
+      'Monmouth Street',
+      'York Street',
+      'Alexandria Pike',
+      'Dave Cowens Drive',
+      'Third Street',
+      'Fourth Street',
+      'Fifth Street',
+      'Sixth Street',
+      'Seventh Street',
+      'Washington Avenue',
+      'Columbia Street',
+      'Saratoga Street',
+      'Central Avenue',
+      'Park Avenue',
+      'Highland Avenue',
+      'Ovation',
+      'East Row Historic District',
+      'Mansion Hill',
+      'Newport Historic District'
+    ],
+    landmarks: [
+      'Newport Aquarium',
+      'Newport on the Levee',
+      'Purple People Bridge',
+      'World Peace Bell',
+      'Newport City Hall',
+      'Newport Historic District',
+      'East Row Historic District',
+      'Campbell County Courthouse',
+      'General James Taylor Park',
+      'Newport Central Catholic High School',
+      'Newport Intermediate School',
+      'Licking River',
+      'Ohio River',
+      'Riverboat Row',
+      'Mansion Hill Cemetery'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

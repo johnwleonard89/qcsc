@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the flake systems service from decorative services
+const flakeSystemsService = servicesConfig.decorative.services.find(s => s.title === "Flake Systems");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: flakeSystemsService,
+  seo: {
+    title: 'Dayton Flake Systems | Decorative Concrete Flakes | Queen City Surface Coatings',
+    description: 'Beautiful decorative flake systems in Dayton, Ohio. Unlimited color combinations for garages, basements, and commercial spaces throughout Dayton area.',
+    keywords: 'Dayton flake systems, Dayton decorative flakes, Dayton concrete flakes, decorative epoxy flakes Dayton, garage flakes Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides beautiful decorative flake systems throughout Dayton, Ohio. Our flake systems combine beauty with performance, offering endless color combinations and superior durability for any space.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Fifth Third Field',
+      'Cox Arboretum MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'Boonshoft Museum of Discovery'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

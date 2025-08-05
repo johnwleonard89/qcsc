@@ -1,0 +1,288 @@
+---
+import settings from '../../config/settings.js';
+import ThemeProvider from '../theme-switcher/ThemeProvider.astro';
+
+import '../../styles/critical.css';
+import '../../styles/mobile-responsive.css';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	canonicalURL?: URL | string;
+	image?: string;
+	keywords?: string;
+	type?: 'website' | 'article' | 'service' | 'organization';
+	structuredData?: object;
+	breadcrumbs?: Array<{name: string, url: string}>;
+}
+
+const title = Astro.props.title || settings.title;
+const description = Astro.props.description || settings.description;
+const canonicalURL = Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
+const image = new URL(Astro.props.image || './social.png', Astro.site);
+const keywords = Astro.props.keywords || 'concrete coating, epoxy flooring, polyaspartic coating, Cincinnati, Northern Kentucky, garage floors, basement floors, commercial flooring';
+const type = Astro.props.type || 'website';
+
+// Default Organization Schema
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	"name": "Queen City Surface Coatings LLC",
+	"description": "Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision",
+	"url": "https://queencitysurfacecoatings.com",
+	"telephone": "+1-513-296-5525",
+	"email": "john@queencitysurfacecoatings.com",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Cincinnati",
+		"addressRegion": "OH",
+		"addressCountry": "US"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "39.1031",
+		"longitude": "-84.5120"
+	},
+	"openingHours": [
+		"Mo-Fr 07:00-18:00",
+		"Sa 08:00-16:00",
+		"Su 00:00-00:00"
+	],
+	"serviceArea": {
+		"@type": "GeoCircle",
+		"geoMidpoint": {
+			"@type": "GeoCoordinates",
+			"latitude": "39.1031",
+			"longitude": "-84.5120"
+		},
+		"geoRadius": "50000"
+	},
+	"founder": {
+		"@type": "Person",
+		"name": "John Leonard",
+		"description": "Marine Corps Veteran and Founder"
+	},
+	"hasOfferCatalog": {
+		"@type": "OfferCatalog",
+		"name": "Surface Coating Services",
+		"itemListElement": [
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Epoxy Flooring",
+					"description": "Durable epoxy floor coatings for garages and commercial spaces"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Polyaspartic Coating",
+					"description": "Fast-curing, UV-resistant floor coatings"
+				}
+			},
+			{
+				"@type": "Offer",
+				"itemOffered": {
+					"@type": "Service",
+					"name": "Metallic Epoxy Flooring",
+					"description": "Decorative metallic floor systems"
+				}
+			}
+		]
+	},
+	"sameAs": [
+		"https://www.facebook.com/queencitysurfacecoatings",
+		"https://www.instagram.com/queencitysurfacecoatings"
+	],
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5.0",
+		"ratingCount": "3"
+	}
+};
+
+// Breadcrumb Schema
+const breadcrumbSchema = Astro.props.breadcrumbs ? {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": Astro.props.breadcrumbs.map((crumb, index) => ({
+		"@type": "ListItem",
+		"position": index + 1,
+		"name": crumb.name,
+		"item": crumb.url
+	}))
+} : null;
+
+// Combined structured data
+const allStructuredData = [
+	organizationSchema,
+	...(breadcrumbSchema ? [breadcrumbSchema] : []),
+	...(Astro.props.structuredData ? [Astro.props.structuredData] : [])
+];
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+<!-- PWA Icons and Manifest -->
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.png" />
+<link rel="manifest" href="/manifest.json" />
+
+<!-- PWA Theme and Apple-specific -->
+<meta name="theme-color" content="#1E3A8A" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Queen City Surface Coatings" />
+
+<!-- Microsoft Tiles -->
+<meta name="msapplication-TileColor" content="#1E3A8A" />
+<meta name="msapplication-TileImage" content="/favicon.png" />
+
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="YOUR_GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE" />
+
+<!-- Google Fonts for Queen City Surface Coatings branding -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Main CSS - Load synchronously to prevent FOUC -->
+<link rel="stylesheet" href="/styles/index.css">
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content="Queen City Surface Coatings LLC" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Additional SEO Meta Tags -->
+<meta name="language" content="en-US" />
+<meta name="distribution" content="global" />
+<meta name="rating" content="general" />
+<meta name="revisit-after" content="7 days" />
+<meta name="coverage" content="worldwide" />
+<meta name="target" content="all" />
+<meta name="audience" content="all" />
+<meta name="subject" content="Concrete coating, epoxy flooring, polyaspartic coating services" />
+<meta name="classification" content="Business" />
+<meta name="category" content="Construction Services" />
+<meta name="copyright" content="Queen City Surface Coatings LLC" />
+
+<!-- Generator -->
+<meta name="generator" content={Astro.generator} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="Queen City Surface Coatings LLC" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:image:alt" content="Queen City Surface Coatings - Professional concrete coating services" />
+<meta name="twitter:creator" content="@queencitysurface" />
+<meta name="twitter:site" content="@queencitysurface" />
+
+<!-- Business Information -->
+<meta name="geo.region" content="US-OH" />
+<meta name="geo.placename" content="Cincinnati" />
+<meta name="geo.position" content="39.1031;-84.5120" />
+<meta name="ICBM" content="39.1031, -84.5120" />
+
+<!-- Preload Critical Resources for Core Web Vitals -->
+<link rel="preload" href="/assets/images/gallery/IMG_2678.webp" as="image" type="image/webp" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" as="style" />
+
+<!-- DNS Prefetch for External Resources -->
+<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<!-- Resource Hints for Performance -->
+<link rel="prefetch" href="/company/contact/" />
+<link rel="prefetch" href="/services/" />
+<link rel="prefetch" href="/portfolio/" />
+
+<!-- Structured Data -->
+{allStructuredData.map(schema => (
+	<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}
+
+<!-- For Demonstration of the themes -->
+{settings.enableThemeSwitcher && <ThemeProvider />}
+
+<!-- Service Worker Registration for PWA -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        console.log('SW registered: ', registration);
+        
+        // Check for service worker updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              // New content is available, show update notification
+              showUpdateNotification();
+            }
+          });
+        });
+      } catch (error) {
+        console.log('SW registration failed: ', error);
+      }
+    });
+  }
+  
+  function showUpdateNotification() {
+    if (confirm('A new version of the site is available. Reload to update?')) {
+      window.location.reload();
+    }
+  }
+</script>
+
+<!-- Core Web Vitals Monitoring -->
+<script type="module">
+  import '/src/scripts/core-web-vitals.js';
+</script>
+
+<!-- Google Analytics -->
+<script>
+  var host = window.location.hostname;
+  if(host != 'localhost') {
+    // Google Analytics 4 (GA4) - Replace with your actual Measurement ID
+    (function() {
+      var ga4Script = document.createElement('script');
+      ga4Script.async = true;
+      ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_MEASUREMENT_ID';
+      document.head.appendChild(ga4Script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'YOUR_GA4_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+        send_page_view: true
+      });
+    })();
+  }
+</script>

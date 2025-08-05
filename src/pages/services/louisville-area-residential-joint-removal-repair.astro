@@ -1,0 +1,33 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const jointRepairService = servicesConfig.residential.services.find(s => s.title === "Joint Removal & Repair");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: jointRepairService,
+  seo: {
+    title: 'Louisville Area Residential Joint Removal & Repair | Professional Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional residential joint removal and repair in Louisville, Kentucky. Expansion joint replacement and control joint sealing for homes throughout Louisville area.',
+    keywords: 'Louisville residential joint repair, Louisville concrete joint removal, expansion joint replacement Louisville, residential joint sealing Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional residential joint removal and repair services throughout the Louisville area, Kentucky. Our waterproof joint systems ensure long-lasting protection for residential concrete surfaces.',
+    neighborhoods: [
+      'Highlands', 'Cherokee Triangle', 'Germantown', 'Old Louisville', 'Clifton', 'Crescent Hill', 'St. Matthews', 'Middletown', 'Anchorage', 'Jeffersontown', 'Hurstbourne', 'Lyndon', 'Douglass Hills', 'Graymoor-Devondale', 'Prospect', 'Northfield', 'Springhurst', 'East End', 'Butchertown', 'Nulu'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const coveInstallService = servicesConfig.residential.services.find(s => s.title === "Cove Install");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: coveInstallService,
+  seo: {
+    title: 'Cincinnati Residential Cove Install | Seamless Floor Transitions | Queen City Surface Coatings',
+    description: 'Professional residential cove installation in Cincinnati, Ohio. Seamless floor-to-wall transitions for Hyde Park, Clifton, Oakley, and all Cincinnati homes.',
+    keywords: 'Cincinnati cove install, Cincinnati residential cove, Hyde Park cove installation, Clifton floor transitions, Oakley seamless floors, Cincinnati home flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional residential cove installation throughout Cincinnati, Ohio. Our seamless floor-to-wall transitions enhance both appearance and cleanability for Cincinnati homes.',
+    neighborhoods: [
+      'Hyde Park', 'Clifton', 'Mount Adams', 'Oakley', 'East Walnut Hills',
+      'Walnut Hills', 'Mount Lookout', 'Columbia-Tusculum', 'Pleasant Ridge',
+      'Madisonville', 'Kennedy Heights', 'Bond Hill', 'Avondale', 'Corryville',
+      'Over-the-Rhine', 'Downtown', 'West End', 'Price Hill', 'Westwood', 'Northside'
+    ],
+    landmarks: [
+      'Eden Park', 'Hyde Park Square', 'Clifton Gaslight District', 'Mount Adams',
+      'University of Cincinnati', 'Cincinnati Zoo', 'Krohn Conservatory',
+      'Cincinnati Art Museum', 'Findlay Market', 'Over-the-Rhine Historic District'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,50 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Clermont',
+  state: 'Ohio',
+  seo: {
+    title: 'Clermont County Ohio Concrete Coating Services | Milford, Loveland, Batavia | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Clermont County, Ohio. Serving Milford, Loveland, Batavia, Amelia, and all Clermont County communities with military precision installation.',
+    keywords: 'Clermont County concrete coating, Milford OH epoxy flooring, Loveland concrete services, Batavia Ohio concrete coating, Clermont County residential coating, commercial concrete Clermont County Ohio'
+  },
+  hero: {
+    tagline: 'Clermont County Excellence',
+    headline: 'Professional Concrete Coating Services in Clermont County, Ohio',
+    subheadline: 'Transform your Clermont County property with expert concrete coating services. From Milford to Batavia, Loveland to Amelia, we deliver military precision installation throughout Clermont County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Clermont County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Clermont County properties, from lakefront homes to rural estates.',
+    cities: [
+      'Milford',
+      'Loveland',
+      'Batavia',
+      'Amelia',
+      'Bethel',
+      'New Richmond',
+      'Owensville',
+      'Williamsburg',
+      'Blanchester',
+      'Georgetown',
+      'Moscow',
+      'Felicity',
+      'Neville',
+      'Point Pleasant',
+      'Chilo',
+      'Higginsport',
+      'Fayetteville',
+      'Goshen',
+      'Mount Carmel'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

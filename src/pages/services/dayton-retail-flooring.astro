@@ -1,0 +1,52 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const retailService = servicesConfig.commercial.services.find(s => s.title === "Retail");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: retailService,
+  seo: {
+    title: 'Dayton Retail Flooring | Commercial Store Floors | Queen City Surface Coatings',
+    description: 'Attractive retail flooring solutions in Dayton, Ohio. Durable, customer-friendly surfaces for stores and retail spaces throughout Dayton area.',
+    keywords: 'Dayton retail flooring, Dayton store floors, retail epoxy Dayton, commercial retail floors Dayton, store flooring Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides attractive, durable retail flooring solutions throughout Dayton, Ohio. Our systems create welcoming retail environments while withstanding constant foot traffic and daily operations.',
+    neighborhoods: [
+      'Downtown Dayton',
+      'The Greene',
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'West Carrollton',
+      'Vandalia',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Moraine',
+      'Riverside',
+      'Belmont',
+      'Five Oaks',
+      'Wright View',
+      'Dayton View'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

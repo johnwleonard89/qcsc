@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const texturedConcreteService = servicesConfig.decorative.services.find(s => s.title === "Textured Concrete Finishes");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: texturedConcreteService,
+  seo: {
+    title: 'Cincinnati Textured Concrete Finishes | Non-Slip Decorative Surfaces | Queen City Surface Coatings',
+    description: 'Professional textured concrete finishes in Cincinnati, Ohio. Enhanced slip resistance and visual appeal for Hyde Park, Clifton, Oakley, and all Cincinnati properties.',
+    keywords: 'Cincinnati textured concrete, Cincinnati decorative concrete, non-slip flooring Cincinnati, textured surfaces Cincinnati, decorative texture Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates professional textured concrete finishes throughout Cincinnati, Ohio. Our textured systems add visual interest and enhanced slip resistance for both indoor and outdoor Cincinnati applications.',
+    neighborhoods: [
+      'Hyde Park', 'Clifton', 'Mount Adams', 'Oakley', 'East Walnut Hills',
+      'Walnut Hills', 'Mount Lookout', 'Columbia-Tusculum', 'Pleasant Ridge',
+      'Madisonville', 'Kennedy Heights', 'Bond Hill', 'Avondale', 'Corryville',
+      'Over-the-Rhine', 'Downtown', 'West End', 'Price Hill', 'Westwood', 'Northside'
+    ],
+    landmarks: [
+      'Cincinnati Zoo', 'Eden Park', 'Fountain Square', 'The Banks', 'Smale Riverfront Park',
+      'Great American Ball Park', 'Paul Brown Stadium', 'Cincinnati Museum Center',
+      'Over-the-Rhine Historic District', 'Findlay Market'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

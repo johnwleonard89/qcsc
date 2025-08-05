@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  seo: {
+    title: 'Louisville Area Kentucky Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Louisville area, Kentucky. Serving Jeffersontown, St. Matthews, Middletown, and all Louisville metro neighborhoods with military precision installation.',
+    keywords: 'Louisville concrete coating, Louisville concrete services, Jeffersontown KY epoxy flooring, St Matthews concrete coating, Middletown garage floors, Louisville residential coating, commercial concrete Louisville Kentucky'
+  },
+  hero: {
+    tagline: 'Louisville Area Excellence',
+    headline: 'Professional Concrete Coating Services in Louisville Area, Kentucky',
+    subheadline: 'Transform your Louisville area property with expert concrete coating services. From Jeffersontown to St. Matthews, Middletown to Downtown Louisville, we deliver military precision installation throughout the Louisville metro with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves the greater Louisville area, Kentucky, with professional concrete coating services. Our expertise extends to all Louisville metro communities, understanding the unique needs of Kentucky properties from historic districts to modern developments.',
+    neighborhoods: [
+      'Jeffersontown',
+      'St. Matthews',
+      'Middletown',
+      'Lyndon',
+      'Hurstbourne',
+      'Douglass Hills',
+      'Anchorage',
+      'Prospect',
+      'Pewee Valley',
+      'Crestwood',
+      'La Grange',
+      'Oldham County',
+      'Shepherdsville',
+      'Mount Washington',
+      'Bardstown Junction',
+      'Okolona',
+      'Valley Station',
+      'Pleasure Ridge Park',
+      'Shively',
+      'Highland Park'
+    ],
+    landmarks: [
+      'Downtown Louisville',
+      'Churchill Downs',
+      'University of Louisville',
+      'Louisville Slugger Museum',
+      'Kentucky Derby Museum',
+      'Muhammad Ali Center',
+      'Louisville Waterfront Park',
+      'Fourth Street Live!',
+      'Louisville Palace',
+      'Brown Hotel',
+      'Kentucky Kingdom',
+      'Louisville Zoo',
+      'Cave Hill Cemetery',
+      'Big Four Bridge',
+      'Louisville Mega Cavern'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

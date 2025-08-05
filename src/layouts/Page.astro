@@ -1,0 +1,98 @@
+---
+import { Header, Button, Footer } from '@components/odyssey-theme';
+import Layout from './Base.astro';
+import type { Props as BaseHeadProps } from '../components/head/BaseHead.astro';
+import Logo from '../components/Logo.astro';
+import settings from '../config/settings';
+import { footerLists, footerSocials } from '../config/footer';
+
+
+export interface Props {
+	seo?: BaseHeadProps;
+}
+
+import { nav } from '../config/nav.js';
+
+const { seo } = Astro.props as Props;
+---
+
+<Layout seo={seo}>
+	<Header rightMenu navData={nav} slot="header">
+		<span slot="logo">
+			<Logo />
+		</span>
+		<div slot="action-item" class="header-actions">
+			<a href="tel:+15132965525" class="header-phone">
+				(513) 296-5525
+			</a>
+		</div>
+	</Header>
+	<div id="page">
+		<slot />
+	</div>
+	<Footer
+		slot="footer"
+		background="var(--theme-surface-1)"
+		color="var(--theme-on-surface-1)"
+		footerLists={footerLists}
+    footerSocials={footerSocials}
+		copyrightName={settings.name}
+    showPlug={settings.showPlug}
+	>
+		<Logo slot="logo" />
+	</Footer>
+</Layout>
+
+<style>
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.header-phone {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: #002F4B;
+		color: #FFC107;
+		border: 2px solid #002F4B;
+		text-decoration: none;
+		font-weight: 600;
+		padding: 0.75rem 1.5rem;
+		border-radius: var(--theme-button-border-radius);
+		transition: all var(--theme-transition);
+		white-space: nowrap;
+		min-height: 44px;
+	}
+
+	.header-phone:hover {
+		background: #001f36;
+		color: #FFC107;
+		text-decoration: none;
+		transform: translateY(-1px);
+	}
+
+	@media (max-width: 768px) {
+		.header-actions {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+		
+		.header-phone {
+			font-size: 0.9rem;
+			padding: 0.25rem 0.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.header-phone span:not(.phone-icon) {
+			display: none;
+		}
+		
+		.header-phone::after {
+			content: "Call";
+			margin-left: 0.25rem;
+		}
+	}
+</style>

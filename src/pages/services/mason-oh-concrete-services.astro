@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Mason',
+  state: 'Ohio',
+  county: 'Warren',
+  seo: {
+    title: 'Mason Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Mason, Ohio. Serving Deerfield Township, Kings Mills, and all Mason neighborhoods with military precision installation.',
+    keywords: 'Mason concrete coating, Mason concrete services, Deerfield Township OH epoxy flooring, Kings Mills concrete coating, Mason garage floors, Mason residential coating, commercial concrete Mason Ohio'
+  },
+  hero: {
+    tagline: 'Mason Excellence',
+    headline: 'Professional Concrete Coating Services in Mason, Ohio',
+    subheadline: 'Transform your Mason property with expert concrete coating services. From Deerfield Township to Kings Mills, we deliver military precision installation throughout Mason with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Mason, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Mason properties, from established neighborhoods to new developments.',
+    neighborhoods: [
+      'Deerfield Township',
+      'Kings Mills',
+      'Mason City Center',
+      'Snider Road Corridor',
+      'Western Row Road',
+      'Mason-Montgomery Road',
+      'Columbia Road',
+      'Fields Ertel Road',
+      'Cox Road',
+      'Socialville-Foster Road',
+      'Reading Road',
+      'South Lebanon Pike',
+      'Bethany Road',
+      'Hunters Ridge',
+      'Hickory Woods',
+      'Wyndham Hills',
+      'Plantation Pointe',
+      'Heritage Club',
+      'Landen',
+      'Four Bridges'
+    ],
+    landmarks: [
+      'Kings Island',
+      'Mason City Hall',
+      'Mason Community Center',
+      'Heritage Oak Golf Course',
+      'The Golf Center at Kings Island',
+      'Deerfield Township Community Center',
+      'Mason Municipal Complex',
+      'Atrium Medical Center',
+      'Voice of America MetroParks',
+      'Kings Local School District',
+      'Deerfield Towne Center',
+      'Mason Plaza',
+      'Streets of West Chester',
+      'Pine Hill Lakes Park',
+      'Cottell Park'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

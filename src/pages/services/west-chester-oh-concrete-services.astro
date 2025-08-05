@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'West Chester',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'West Chester Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout West Chester, Ohio. Serving West Chester Township, Union Centre, and all West Chester neighborhoods with military precision installation.',
+    keywords: 'West Chester concrete coating, West Chester concrete services, West Chester Township OH epoxy flooring, Union Centre concrete coating, West Chester garage floors, West Chester residential coating, commercial concrete West Chester Ohio'
+  },
+  hero: {
+    tagline: 'West Chester Excellence',
+    headline: 'Professional Concrete Coating Services in West Chester, Ohio',
+    subheadline: 'Transform your West Chester property with expert concrete coating services. From West Chester Township to Union Centre, we deliver military precision installation throughout West Chester with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of West Chester, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of West Chester properties, from established neighborhoods to luxury developments.',
+    neighborhoods: [
+      'West Chester Township',
+      'Union Centre',
+      'Beckett Ridge',
+      'Wetherington',
+      'Liberty Township',
+      'Lakota',
+      'Four Bridges',
+      'Tylersville',
+      'West Chester Commons',
+      'Deerfield Township',
+      'Butler County',
+      'Cox Road',
+      'Cincinnati-Dayton Road',
+      'Tylersville Road',
+      'Union Centre Boulevard',
+      'Beckett Ridge Drive',
+      'West Chester Road',
+      'Princeton Road',
+      'Schultz Road',
+      'Weller Road'
+    ],
+    landmarks: [
+      'West Chester Township Hall',
+      'Union Centre',
+      'Beckett Ridge Country Club',
+      'Wetherington Golf & Country Club',
+      'Liberty Center',
+      'Streets of West Chester',
+      'West Chester Hospital',
+      'Lakota Local School District',
+      'Voice of America MetroParks',
+      'Princeton High School',
+      'Lakota West High School',
+      'West Chester Golf Course',
+      'Keehner Park',
+      'VOA Park',
+      'Butler County Regional Airport'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

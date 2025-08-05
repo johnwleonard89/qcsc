@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Blue Ash',
+  state: 'Ohio',
+  county: 'Hamilton',
+  seo: {
+    title: 'Blue Ash Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Blue Ash, Ohio. Serving Kenwood Road, Reed Hartman Highway, and all Blue Ash neighborhoods with military precision installation.',
+    keywords: 'Blue Ash concrete coating, Blue Ash concrete services, Kenwood Road OH epoxy flooring, Reed Hartman Highway concrete coating, Blue Ash garage floors, Blue Ash residential coating, commercial concrete Blue Ash Ohio'
+  },
+  hero: {
+    tagline: 'Blue Ash Excellence',
+    headline: 'Professional Concrete Coating Services in Blue Ash, Ohio',
+    subheadline: 'Transform your Blue Ash property with expert concrete coating services. From Kenwood Road to Reed Hartman Highway, we deliver military precision installation throughout Blue Ash with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Blue Ash, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Blue Ash properties, from residential neighborhoods to commercial districts.',
+    neighborhoods: [
+      'Kenwood Road',
+      'Reed Hartman Highway',
+      'Blue Ash Road',
+      'Pfeiffer Road',
+      'Glendale-Milford Road',  
+      'Cornell Road',
+      'Lester Road',
+      'Hunt Road',
+      'Carver Road',
+      'Deerfield Road',
+      'Plainfield Road',
+      'Sharon Road',
+      'Towne Square',
+      'Blue Ash Square',
+      'Kenwood Towne Centre Area',
+      'Sycamore Township',
+      'Montgomery Road',
+      'Cooper Road',
+      'Aldine Avenue',
+      'Dillonvale Avenue'
+    ],
+    landmarks: [
+      'Blue Ash City Hall',
+      'Blue Ash Recreation Center',
+      'Summit Park',
+      'Blue Ash Golf Course',
+      'Kenwood Towne Centre',
+      'Blue Ash Elementary School',
+      'Sycamore High School',
+      'Blue Ash YMCA',
+      'Towne Square Shopping',
+      'Blue Ash Airport',
+      'Reed Hartman Highway Business District',
+      'Kenwood Country Club',
+      'Blue Ash Nature Park',
+      'Miami Meadows Park',
+      'Cooper Creek Park'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

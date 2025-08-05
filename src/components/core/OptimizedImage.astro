@@ -1,0 +1,142 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  class?: string;
+  sizes?: string;
+  priority?: boolean;
+}
+
+const { 
+  src, 
+  alt, 
+  width, 
+  height, 
+  loading = 'lazy', 
+  class: className = '',
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  priority = false
+} = Astro.props;
+
+// Generate WebP and fallback sources
+const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+const fallbackSrc = src;
+
+// Set loading strategy based on priority
+const imageLoading = priority ? 'eager' : loading;
+const fetchPriority = priority ? 'high' : 'auto';
+---
+
+<picture class={`optimized-image ${className}`}>
+  <!-- WebP format for supported browsers -->
+  <source 
+    srcset={webpSrc} 
+    type="image/webp"
+    sizes={sizes}
+  />
+  
+  <!-- Fallback for browsers that don't support WebP -->
+  <img 
+    src={fallbackSrc}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={imageLoading}
+    decoding="async"
+    fetchpriority={fetchPriority}
+    sizes={sizes}
+    class="responsive-image"
+  />
+</picture>
+
+<style>
+  .optimized-image {
+    display: block;
+    overflow: hidden;
+  }
+  
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Aspect ratio preservation */
+  .optimized-image.aspect-16-9 .responsive-image {
+    aspect-ratio: 16/9;
+  }
+  
+  .optimized-image.aspect-4-3 .responsive-image {
+    aspect-ratio: 4/3;
+  }
+  
+  .optimized-image.aspect-square .responsive-image {
+    aspect-ratio: 1/1;
+  }
+  
+  /* Loading placeholder */
+  .responsive-image[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+  
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* Remove loading animation once image loads */
+  .responsive-image.loaded {
+    animation: none;
+    background: transparent;
+  }
+  
+  /* Hover effects */
+  .optimized-image:hover .responsive-image {
+    transform: scale(1.05);
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .responsive-image,
+    .responsive-image[loading="lazy"] {
+      animation: none !important;
+      transition: none !important;
+    }
+    
+    .optimized-image:hover .responsive-image {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  // Add load event listener to remove loading animation
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.responsive-image');
+    
+    images.forEach(img => {
+      // If image is already loaded
+      if (img.complete && img.naturalHeight !== 0) {
+        img.classList.add('loaded');
+      } else {
+        // Add load event listener
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+        });
+        
+        // Handle load errors
+        img.addEventListener('error', () => {
+          img.classList.add('loaded');
+          console.warn('Failed to load image:', img.src);
+        });
+      }
+    });
+  });
+</script>

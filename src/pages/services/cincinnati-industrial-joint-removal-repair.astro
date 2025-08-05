@@ -1,0 +1,35 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const service = servicesConfig.industrial.services.find(s => s.title === "Joint Removal & Repair");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio', 
+  county: 'Hamilton',
+  service: service,
+  seo: {
+    title: 'Cincinnati Industrial Joint Removal & Repair | Professional Industrial Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional industrial concrete joint removal and repair services in Cincinnati, Ohio. Expansion joint replacement, control joint sealing, and structural joint restoration for industrial facilities.',
+    keywords: 'Cincinnati industrial joint removal, industrial concrete joint repair, expansion joint replacement, control joint sealing, industrial concrete services'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional industrial joint removal and repair services throughout Cincinnati, Ohio.',
+    neighborhoods: [
+      'Hyde Park', 'Clifton', 'Mount Adams', 'Oakley', 'East Walnut Hills',
+      'Walnut Hills', 'Columbia-Tusculum', 'Pleasant Ridge', 'Madisonville',
+      'Over-the-Rhine', 'Downtown', 'West End', 'Price Hill', 'Westwood', 'Northside'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

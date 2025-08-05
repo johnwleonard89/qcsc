@@ -1,0 +1,66 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { commercialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = commercialServices.retailFlooring;
+
+// County-specific data
+const countyData = {
+  countyName: 'Hamilton',
+  state: 'Ohio',
+  seo: {
+    title: 'Hamilton County Ohio Commercial Concrete Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Hamilton County commercial space with professional concrete coating. Serving Cincinnati, Mason, Blue Ash, and all Hamilton County businesses with durable, high-performance commercial flooring.',
+    keywords: 'Hamilton County commercial concrete coating, Cincinnati commercial flooring, Mason OH business floors, Blue Ash commercial coating, Hamilton County commercial floor transformation, professional commercial floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Hamilton County businesses with professional commercial concrete coating services. Our local expertise ensures we understand the unique needs of Hamilton County commercial properties, from retail spaces to industrial facilities.',
+    cities: [
+      'Cincinnati',
+      'Loveland',
+      'Mason',
+      'Blue Ash',
+      'Springdale',
+      'Forest Park',
+      'Sharonville',
+      'Evendale',
+      'Madeira',
+      'Milford',
+      'Wyoming',
+      'Reading',
+      'Lockland',
+      'Elmwood Place',
+      'Lincoln Heights',
+      'Glendale',
+      'Woodlawn',
+      'Golf Manor',
+      'Deer Park',
+      'Silverton',
+      'Mariemont',
+      'Terrace Park',
+      'Fairfax',
+      'Indian Hill',
+      'Montgomery',
+      'Symmes Township',
+      'Sycamore Township',
+      'Delhi Township',
+      'Green Township',
+      'Harrison Township',
+      'Miami Township',
+      'Springfield Township',
+      'Colerain Township',
+      'Whitewater Township',
+      'Crosby Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

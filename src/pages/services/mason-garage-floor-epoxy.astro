@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// City-specific data
+const cityData = {
+  cityName: 'Mason',
+  state: 'Ohio',
+  county: 'Warren',
+  seo: {
+    title: 'Mason Ohio Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Mason garage with professional epoxy floor coating. Serving Deerfield Township, Kings Mills, and all Mason neighborhoods with durable, beautiful garage flooring.',
+    keywords: 'Mason garage floor epoxy, Mason garage coating, Deerfield Township garage floors, Kings Mills epoxy flooring, Mason garage transformation, professional garage floors Mason Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Mason neighborhoods with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Mason properties, from established homes to new construction.',
+    neighborhoods: [
+      'Deerfield Township',
+      'Kings Mills',
+      'Mason City Center',
+      'Snider Road Corridor',
+      'Western Row Road',
+      'Mason-Montgomery Road',
+      'Columbia Road',
+      'Fields Ertel Road',
+      'Cox Road',
+      'Socialville-Foster Road',
+      'Reading Road',
+      'South Lebanon Pike',
+      'Bethany Road',
+      'Hunters Ridge',
+      'Hickory Woods',
+      'Wyndham Hills',
+      'Plantation Pointe',
+      'Heritage Club',
+      'Landen',
+      'Four Bridges'
+    ],
+    landmarks: [
+      'Kings Island',
+      'Mason City Hall',
+      'Mason Community Center',
+      'Heritage Oak Golf Course',
+      'The Golf Center at Kings Island',
+      'Deerfield Township Community Center',
+      'Mason Municipal Complex',
+      'Atrium Medical Center',
+      'Voice of America MetroParks',
+      'Kings Local School District'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

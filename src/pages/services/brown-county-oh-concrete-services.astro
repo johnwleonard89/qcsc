@@ -1,0 +1,42 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Brown',
+  state: 'Ohio',
+  seo: {
+    title: 'Brown County Ohio Concrete Coating Services | Georgetown, Mount Orab, Ripley | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Brown County, Ohio. Serving Georgetown, Mount Orab, Ripley, Sardinia, and all Brown County communities with military precision installation.',
+    keywords: 'Brown County concrete coating, Georgetown OH epoxy flooring, Mount Orab concrete services, Ripley Ohio concrete coating, Brown County residential coating, commercial concrete Brown County Ohio'
+  },
+  hero: {
+    tagline: 'Brown County Excellence',
+    headline: 'Professional Concrete Coating Services in Brown County, Ohio',
+    subheadline: 'Transform your Brown County property with expert concrete coating services. From Georgetown to Mount Orab, Ripley to Sardinia, we deliver military precision installation throughout Brown County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Brown County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Brown County properties, from small town charm to rural settings.',
+    cities: [
+      'Georgetown',
+      'Mount Orab',
+      'Ripley',
+      'Sardinia',
+      'Fayetteville',
+      'Aberdeen',
+      'Manchester',
+      'Maysville',
+      'Russellville',
+      'Higginsport',
+      'Decatur'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

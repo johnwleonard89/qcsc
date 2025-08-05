@@ -1,0 +1,48 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Warren',
+  state: 'Ohio',
+  seo: {
+    title: 'Warren County Ohio Concrete Coating Services | Mason, Springboro, Lebanon | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Warren County, Ohio. Serving Mason, Springboro, Lebanon, Franklin, and all Warren County communities with military precision installation.',
+    keywords: 'Warren County concrete coating, Mason OH epoxy flooring, Springboro concrete services, Lebanon Ohio concrete coating, Warren County residential coating, commercial concrete Warren County Ohio'
+  },
+  hero: {
+    tagline: 'Warren County Excellence',
+    headline: 'Professional Concrete Coating Services in Warren County, Ohio',
+    subheadline: 'Transform your Warren County property with expert concrete coating services. From Mason to Lebanon, Springboro to Franklin, we deliver military precision installation throughout Warren County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Warren County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Warren County properties, from modern suburban communities to charming small towns.',
+    cities: [
+      'Mason',
+      'Springboro',
+      'Lebanon',
+      'Franklin',
+      'Carlisle',
+      'Middletown',
+      'Miamisburg',
+      'Loveland',
+      'Kings Mills',
+      'South Lebanon',
+      'Waynesville',
+      'Corwin',
+      'Harveysburg',
+      'Morrow',
+      'Butlerville',
+      'Pekin',
+      'Pleasant Plain'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

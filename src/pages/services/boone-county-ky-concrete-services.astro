@@ -1,0 +1,43 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Boone',
+  state: 'Kentucky',
+  seo: {
+    title: 'Boone County Kentucky Concrete Coating Services | Florence, Union, Burlington | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Boone County, Kentucky. Serving Florence, Union, Burlington, Walton, and all Boone County communities with military precision installation.',
+    keywords: 'Boone County concrete coating, Florence KY epoxy flooring, Union concrete services, Burlington Kentucky concrete coating, Boone County residential coating, commercial concrete Boone County Kentucky'
+  },
+  hero: {
+    tagline: 'Boone County Excellence',
+    headline: 'Professional Concrete Coating Services in Boone County, Kentucky',
+    subheadline: 'Transform your Boone County property with expert concrete coating services. From Florence to Burlington, Union to Walton, we deliver military precision installation throughout Boone County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Boone County, Kentucky, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Boone County properties, from growing suburban areas to established communities.',
+    cities: [
+      'Florence',
+      'Union',
+      'Burlington',
+      'Walton',
+      'Hebron',
+      'Belleview',
+      'Verona',
+      'Petersburg',
+      'Big Bone',
+      'Rabbit Hash',
+      'Constance',
+      'Richwood'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

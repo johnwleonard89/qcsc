@@ -1,0 +1,1021 @@
+---
+import { Container, CtaCardSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import QuoteRequestForm from '../../components/forms/QuoteRequestForm.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const seo = {
+	title: 'Professional Concrete Coating Services | Queen City Surface Coatings',
+	description: 'Expert concrete coating services in Cincinnati tri-state area. Garage floors, commercial applications, epoxy, polyaspartic & metallic systems. Military precision installation.',
+};
+---
+
+<Layout {seo}>
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<Container>
+			<div class="hero-content-about">
+				<div class="hero-text-about">
+					<p class="hero-tagline">Military Precision Installation</p>
+					<h1 class="hero-headline">Professional Concrete Coating Services</h1>
+					<p class="hero-subheadline">
+						Expert installation with military precision across the Cincinnati tri-state area. Transform your space with durable, beautiful concrete coatings that last.
+					</p>
+					<div class="hero-ctas">
+						<a href="/company/contact#quote-form" class="btn btn-primary btn-large">Get Your Free Estimate</a>
+						<a href="tel:+15132965525" class="btn btn-outline btn-large">(513) 296-5525</a>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Service Categories Overview -->
+	<Container>
+		<section class="services-overview">
+			{Object.entries(servicesConfig).map(([categoryKey, category]) => (
+				<div class="service-category">
+					<div class="category-header">
+						<h2>{category.title}</h2>
+						<p>{category.description}</p>
+					</div>
+					
+					<div class="services-grid">
+						{category.services.map((service) => (
+							<div class="service-card">
+								<div class="service-image">
+									<img src={service.image} alt={service.imageAlt} loading="lazy" />
+								</div>
+								<div class="service-content">
+									<h3>{service.title}</h3>
+									<p>{service.description}</p>
+									<ul class="service-benefits">
+										{service.features.map((feature) => (
+											<li>{feature}</li>
+										))}
+									</ul>
+									<div class="service-actions">
+										<a href={service.link} class="service-link">Learn More →</a>
+										<a href="/company/contact#quote-form" class="btn btn-outline">Get Quote</a>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			))}
+		</section>
+	</Container>
+
+	<!-- Process Overview -->
+	<section class="process-section">
+		<Container>
+			<h2>Our Military Precision Process</h2>
+			<p class="process-intro">Every project follows our proven methodology developed from Marine Corps discipline and attention to detail.</p>
+			
+			<div class="process-steps">
+				<div class="process-step">
+					<div class="step-number">1</div>
+					<div class="step-content">
+						<h3>Free Consultation</h3>
+						<p>Comprehensive site assessment with detailed recommendations and transparent pricing. We evaluate substrate conditions, identify potential challenges, and provide solutions tailored to your specific needs.</p>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">2</div>
+					<div class="step-content">
+						<h3>Surface Preparation</h3>
+						<p>Meticulous surface preparation using diamond grinding, shot blasting, or chemical etching as required. Proper preparation is critical for long-term performance and warranty compliance.</p>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">3</div>
+					<div class="step-content">
+						<h3>Professional Installation</h3>
+						<p>Expert application using premium materials and proven techniques. Environmental controls ensure optimal curing conditions, and quality checks verify proper thickness and coverage.</p>
+					</div>
+				</div>
+
+				<div class="process-step">
+					<div class="step-number">4</div>
+					<div class="step-content">
+						<h3>Quality Guarantee</h3>
+						<p>Final inspection and walk-through with comprehensive warranty coverage. We provide maintenance guidelines and ongoing support to ensure your investment delivers lasting value.</p>
+					</div>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Why Choose Our Services -->
+	<section class="why-choose-section">
+		<Container>
+			<h2>Why Choose Queen City Surface Coatings</h2>
+			<div class="advantages-grid">
+				<div class="advantage-card">
+					<div class="advantage-icon"></div>
+					<h3>Military Precision Installation</h3>
+					<p>Every project executed with the discipline, attention to detail, and commitment to excellence learned through Marine Corps service. No shortcuts, no compromises.</p>
+				</div>
+
+				<div class="advantage-card">
+					<div class="advantage-icon"></div>
+					<h3>Premium Materials Only</h3>
+					<p>We exclusively use industry-leading coating systems from trusted manufacturers, ensuring superior performance and backed by comprehensive warranties.</p>
+				</div>
+
+				<div class="advantage-card">
+					<div class="advantage-icon"></div>
+					<h3>Licensed and Insured</h3>
+					<p>Fully licensed contractor with comprehensive liability insurance, bonding, and workers' compensation coverage protecting you and your property.</p>
+				</div>
+
+				<div class="advantage-card">
+					<div class="advantage-icon"></div>
+					<h3>Customer Satisfaction Guarantee</h3>
+					<p>Your complete satisfaction is our mission objective. We stand behind our work with industry-leading warranties and ongoing customer support.</p>
+				</div>
+			</div>
+		</Container>
+	</section>
+
+	<!-- Contact Section -->
+	<section class="contact-section">
+		<Container>
+			<div class="contact-content">
+				<div class="contact-info">
+					<h2>Ready to Transform Your Basement?</h2>
+					<p>Get a free estimate for professional basement floor coating and discover how we can transform your basement into your family's new favorite space.</p>
+					
+					<div class="contact-methods">
+						<div class="contact-button-wrapper">
+							<a href="tel:+15132965525" class="contact-button contact-button-phone">
+								<span class="contact-info">(513) 296-5525</span>
+							</a>
+						</div>
+						
+						<div class="contact-button-wrapper">
+							<a href="mailto:john@queencitysurfacecoatings.com" class="contact-button contact-button-email">
+								<span class="contact-info">john@queencitysurfacecoatings.com</span>
+							</a>
+						</div>
+					</div>
+					
+					<div class="business-hours">
+						<h4>Business Hours</h4>
+						<div class="hours-list">
+							<div class="hours-item">
+								<span>Monday - Friday:</span>
+								<span class="hours-time">7:00 AM - 6:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span>Saturday:</span>
+								<span class="hours-time">8:00 AM - 4:00 PM</span>
+							</div>
+							<div class="hours-item">
+								<span>Sunday:</span>
+								<span class="hours-time">By Appointment</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="contact-form">
+					<QuoteRequestForm />
+				</div>
+			</div>
+		</Container>
+	</section>
+</Layout>
+
+<style>
+	/* Hero Section - matching about page */
+	.hero-section {
+		background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-navy-dark) 100%);
+		color: var(--theme-on-surface-2);
+		padding: 4rem 0;
+		margin-bottom: 3rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: radial-gradient(circle at 20% 80%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+				  radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 50%);
+		pointer-events: none;
+	}
+
+	.hero-content-about {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 400px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-text-about {
+		text-align: center;
+		max-width: 800px;
+	}
+
+	.hero-tagline {
+		font-family: var(--theme-font-family-headings);
+		font-size: 1.375rem;
+		font-weight: var(--font-weight-medium);
+		color: #FFC107;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		opacity: 0.95;
+	}
+
+	.hero-headline {
+		font-family: var(--theme-font-family-headings);
+		font-size: var(--font-size-h1);
+		font-weight: var(--font-weight-bold);
+		margin-bottom: 1rem;
+		line-height: var(--line-height-tight);
+		color: #FFC107;
+		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.hero-subheadline {
+		font-size: 1.25rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.95;
+		line-height: var(--line-height-relaxed);
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.hero-ctas {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.hero-section .btn-primary {
+		background: #FFC107 !important;
+		border-color: #FFC107 !important;
+		color: #002F4B !important;
+	}
+
+	.hero-section .btn-primary:hover {
+		background: #E6AC00 !important;
+		border-color: #E6AC00 !important;
+		color: #002F4B !important;
+	}
+
+	.hero-section .btn-outline {
+		background: transparent !important;
+		border-color: #FFC107 !important;
+		color: #FFC107 !important;
+	}
+
+	.hero-section .btn-outline:hover {
+		background: #FFC107 !important;
+		border-color: #FFC107 !important;
+		color: #002F4B !important;
+	}
+
+	/* Services Overview */
+	.services-overview {
+		margin-bottom: 4rem;
+	}
+
+	.service-category {
+		margin-bottom: 4rem;
+	}
+
+	.category-header {
+		text-align: center;
+		margin-bottom: 1.5rem !important;
+	}
+
+	.category-header h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.category-header p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 0.5rem !important;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto 0.5rem auto !important;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card {
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		overflow: hidden;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		transition: transform var(--theme-transition);
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.service-image {
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.service-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.service-content {
+		padding: 2rem;
+	}
+
+	.service-content h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.service-content > p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.service-benefits {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1.5rem;
+	}
+
+	.service-benefits li {
+		padding: 0.25rem 0;
+		position: relative;
+		padding-left: 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	.service-benefits li::before {
+		content: "✓";
+		position: absolute;
+		left: 0;
+		color: var(--theme-primary);
+		font-weight: bold;
+	}
+
+	.service-applications {
+		background: rgba(255, 192, 61, 0.1);
+		padding: 1rem;
+		border-radius: 4px;
+		margin-bottom: 1.5rem;
+		border-left: 3px solid var(--theme-primary);
+		font-size: 0.9rem;
+	}
+
+	.service-applications strong {
+		color: var(--theme-primary);
+	}
+
+	.service-actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.service-link {
+		color: var(--theme-primary);
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+	}
+
+	.service-link:hover {
+		text-decoration: underline;
+	}
+
+	/* Process Section */
+	.process-section {
+		background: var(--theme-surface-1);
+		padding: 3rem 0;
+		margin: 3rem 0;
+	}
+
+	.process-section h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.process-intro {
+		text-align: center;
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 0.5rem !important;
+		line-height: 1.6;
+		max-width: 600px;
+		margin: 0 auto 0.5rem auto !important;
+	}
+
+	.process-steps {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.process-step {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-shape-radius);
+		text-align: center;
+		position: relative;
+	}
+
+	.step-number {
+		background: var(--theme-primary);
+		color: var(--theme-on-primary);
+		width: 3rem;
+		height: 3rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin: 0 auto 1.5rem auto;
+	}
+
+	.step-content h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.step-content p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	/* Why Choose Section */
+	.why-choose-section {
+		margin: 4rem 0;
+	}
+
+	.why-choose-section h2 {
+		color: var(--theme-primary);
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.advantages-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+
+	.advantage-card {
+		text-align: center;
+		padding: 2rem;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		border: 1px solid rgba(0, 0, 0, 0.05);
+	}
+
+	.advantage-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.advantage-card h3 {
+		color: var(--theme-primary);
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+	}
+
+	.advantage-card p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	/* CTA Buttons */
+	.cta-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-top: 2rem;
+		flex-wrap: wrap;
+	}
+
+	/* Contact Section - matching PremiumServiceTemplate */
+	.contact-section {
+		background: var(--theme-surface-1);
+		padding: 4rem 0;
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.contact-info h2 {
+		font-size: 2.5rem;
+		font-weight: var(--font-weight-bold);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.contact-info > p {
+		font-size: 1.1rem;
+		color: #333333;
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.contact-methods {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	.contact-button-wrapper {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.contact-label {
+		font-size: 1rem;
+		font-weight: var(--font-weight-semibold);
+		color: #002F4B;
+		text-align: center;
+		margin: 0 0 0.5rem 0;
+	}
+
+	.contact-button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.25rem;
+		padding: 1rem;
+		border-radius: var(--theme-card-radius);
+		border: none;
+		transition: var(--theme-transition);
+		text-decoration: none;
+		width: 100%;
+		cursor: pointer;
+		min-height: 60px;
+		justify-content: center;
+	}
+
+	.contact-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	}
+
+	.contact-button-phone {
+		background: #FFC107;
+		color: #002F4B;
+	}
+
+	.contact-button-phone:hover {
+		background: #E6AC00;
+		color: #002F4B;
+	}
+
+	.contact-button-email {
+		background: #002F4B;
+		color: white;
+	}
+
+	.contact-button-email:hover {
+		background: #001f36;
+		color: white;
+	}
+
+	.contact-button-email .contact-info {
+		color: #FFC107;
+		font-size: 0.9rem;
+	}
+
+	.contact-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.contact-details .contact-info {
+		font-size: 1rem;
+		font-weight: var(--font-weight-semibold);
+		margin: 0;
+	}
+
+	.form-container {
+		background: var(--theme-bg);
+		padding: 2rem;
+		border-radius: var(--theme-card-radius);
+		box-shadow: var(--theme-shadow-light);
+		border: 1px solid var(--theme-border-light);
+		text-align: center;
+	}
+
+	.form-container h3 {
+		font-size: 1.5rem;
+		font-weight: var(--font-weight-bold);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.form-container p {
+		color: var(--theme-text-secondary);
+		margin-bottom: 2rem;
+		line-height: var(--line-height-relaxed);
+	}
+
+	/* Button styles are handled by global theme.css for consistent theming */
+
+	/* Before/After Image Layout */
+	.before-after-container {
+		height: 14rem;
+	}
+
+	.before-after-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem;
+		height: 100%;
+	}
+
+	.before-image, .after-image {
+		position: relative;
+		overflow: hidden;
+		border-radius: 0.5rem;
+	}
+
+	.before-image img, .after-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.image-label {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		background: rgba(0, 0, 0, 0.8);
+		color: white;
+		padding: 0.25rem 0.75rem;
+		border-radius: 0.25rem;
+		font-size: 0.875rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+	}
+
+	.before-label {
+		background: rgba(239, 68, 68, 0.9);
+	}
+
+	.after-label {
+		background: rgba(34, 197, 94, 0.9);
+	}
+
+	/* Mobile Responsive */
+	@media (max-width: 1024px) {
+		.services-grid {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+		
+		.process-steps {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+		
+		.advantages-grid {
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		}
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+		
+		.category-header h2 {
+			font-size: 2rem;
+		}
+		
+		.process-section h2,
+		.why-choose-section h2 {
+			font-size: 2rem;
+		}
+		
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.process-steps {
+			grid-template-columns: 1fr;
+		}
+		
+		.advantages-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.service-actions {
+			flex-direction: column;
+			align-items: stretch;
+		}
+		
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.contact-info h2 {
+			font-size: 2rem;
+		}
+
+		.contact-methods {
+			max-width: 250px;
+			margin: 0 auto 2rem auto;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.service-content {
+			padding: 1.5rem;
+		}
+		
+		.process-step {
+			padding: 1.5rem;
+		}
+		
+		.advantage-card {
+			padding: 1.5rem;
+		}
+
+		.form-container {
+			padding: 1.5rem;
+		}
+
+		.contact-info h2 {
+			font-size: 1.75rem;
+		}
+	}
+
+	/* Hero Section Responsive Design - matching about page */
+	@media (max-width: 1024px) {
+		.hero-content-about {
+			min-height: 300px;
+		}
+		
+		.hero-tagline {
+			font-size: 1.25rem;
+		}
+		
+		.hero-headline {
+			font-size: 2.5rem;
+		}
+		
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero-section {
+			padding: 2rem 0;
+		}
+		
+		.hero-content-about {
+			min-height: 250px;
+		}
+		
+		.hero-tagline {
+			font-size: 1.125rem;
+			margin-bottom: 1rem;
+		}
+		
+		.hero-headline {
+			font-size: 2rem;
+		}
+		
+		.hero-subheadline {
+			font-size: 1.125rem;
+			margin-bottom: 2rem;
+		}
+		
+		.hero-ctas {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+		
+		.btn {
+			width: 100%;
+			max-width: 300px;
+		}
+		
+		.contact-methods {
+			flex-direction: column;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero-headline {
+			font-size: 1.75rem;
+		}
+		
+		.hero-subheadline {
+			font-size: 1rem;
+		}
+		
+		.btn-large {
+			padding: 1rem 2rem;
+			font-size: 1rem;
+		}
+	}
+
+	/* Updated Contact Section Styles to match template */
+	.contact-methods {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		align-items: stretch;
+	}
+
+	.contact-button-wrapper {
+		flex: 1;
+		display: flex;
+	}
+
+	.contact-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 1.5rem;
+		border-radius: var(--theme-card-radius);
+		border: 2px solid transparent;
+		transition: var(--theme-transition);
+		text-decoration: none;
+		width: 100%;
+		cursor: pointer;
+		height: 100px;
+		min-height: 100px;
+		max-height: 100px;
+		box-sizing: border-box;
+	}
+
+	.contact-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	}
+
+	.contact-button-phone {
+		background: #FFC107;
+		color: #002F4B;
+	}
+
+	.contact-button-phone:hover {
+		background: #E6AC00;
+		color: #002F4B;
+	}
+
+	.contact-button-email {
+		background: #002F4B;
+		color: white;
+	}
+
+	.contact-button-email:hover {
+		background: #001f36;
+		color: white;
+	}
+
+	.contact-button-email .contact-info {
+		color: #FFC107;
+	}
+
+	.contact-button .contact-info {
+		font-size: 1rem;
+		font-weight: var(--font-weight-semibold);
+		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 1.3;
+	}
+
+	.business-hours {
+		background: var(--theme-bg);
+		padding: 1.5rem;
+		border-radius: var(--theme-card-radius);
+	}
+
+	.business-hours h4 {
+		font-weight: var(--font-weight-semibold);
+		color: var(--theme-text-primary);
+		margin-bottom: 1rem;
+	}
+
+	.hours-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.hours-item {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid var(--theme-border-light);
+	}
+
+	.hours-item:last-child {
+		border-bottom: none;
+	}
+
+	.hours-time {
+		font-weight: var(--font-weight-medium);
+	}
+
+	/* Force exact button sizing */
+	.contact-section .contact-button {
+		min-height: 100px !important;
+		width: 100% !important;
+		flex: 1 !important;
+		padding: 1rem !important;
+		font-size: 1rem !important;
+		line-height: 1.2 !important;
+		white-space: normal !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	.contact-section .contact-button .contact-info {
+		font-size: 0.9rem !important;
+		line-height: 1.3 !important;
+		white-space: normal !important;
+		overflow: visible !important;
+		width: 100% !important;
+		text-align: center !important;
+		display: block !important;
+		word-break: break-all !important;
+	}
+
+	/* Global paragraph spacing - at least 2 spaces between paragraphs */
+	p {
+		margin-bottom: 3rem !important;
+	}
+
+	.category-header {
+		margin-bottom: 2rem !important;
+	}
+
+	.process-section {
+		margin: 2rem 0 !important;
+		padding: 2rem 0 !important;
+	}
+
+	.service-category {
+		margin-bottom: 2rem !important;
+	}
+</style>

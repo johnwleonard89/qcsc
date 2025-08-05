@@ -1,0 +1,109 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the garage floor coatings service from residential services
+const garageFloorService = servicesConfig.residential.services.find(s => s.title === "Garage Floor Coatings");
+
+if (!garageFloorService) {
+  throw new Error('Garage Floor Coatings service not found in servicesConfig');
+}
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: garageFloorService,
+  seo: {
+    title: 'Cincinnati Garage Floor Coatings | Professional Epoxy Installation | Queen City Surface Coatings',
+    description: 'Transform your Cincinnati garage with professional floor coatings. Serving Hyde Park, Over-the-Rhine, Clifton, and all Cincinnati neighborhoods with military precision installation.',
+    keywords: 'Cincinnati garage floor coating, Cincinnati garage epoxy, Hyde Park garage floors, Over-the-Rhine garage coating, Clifton garage epoxy, Cincinnati residential garage flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Cincinnati, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Cincinnati garages, from historic neighborhoods to modern developments.',
+    neighborhoods: [
+      'Hyde Park',
+      'Over-the-Rhine',
+      'Clifton',
+      'Mount Adams',
+      'Oakley',
+      'Northside',
+      'Price Hill',
+      'Westwood',
+      'East Walnut Hills',
+      'Madisonville',
+      'Walnut Hills',
+      'Columbia-Tusculum',
+      'Pleasant Ridge',
+      'Bond Hill',
+      'Avondale',
+      'Corryville',
+      'Downtown',
+      'West End',
+      'Riverside',
+      'South Cumminsville'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'University of Cincinnati',
+      'Cincinnati Zoo',
+      'Fountain Square',
+      'Great American Ball Park',
+      'Paul Brown Stadium',
+      'Cincinnati Museum Center',
+      'Eden Park',
+      'Findlay Market',
+      'Cincinnati Art Museum'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName="Cincinnati"
+  state="Ohio"
+  county="Hamilton"
+  service={garageFloorService}
+  seo={{
+    title: 'Cincinnati Garage Floor Coatings | Professional Epoxy Installation | Queen City Surface Coatings',
+    description: 'Transform your Cincinnati garage with professional floor coatings. Serving Hyde Park, Over-the-Rhine, Clifton, and all Cincinnati neighborhoods with military precision installation.',
+    keywords: 'Cincinnati garage floor coating, Cincinnati garage epoxy, Hyde Park garage floors, Over-the-Rhine garage coating, Clifton garage epoxy, Cincinnati residential garage flooring'
+  }}
+  serviceArea={{
+    description: 'Queen City Surface Coatings proudly serves all of Cincinnati, Ohio, with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Cincinnati garages, from historic neighborhoods to modern developments.',
+    neighborhoods: [
+      'Hyde Park',
+      'Over-the-Rhine',
+      'Clifton',
+      'Mount Adams',
+      'Oakley',
+      'Northside',
+      'Price Hill',
+      'Westwood',
+      'East Walnut Hills',
+      'Madisonville',
+      'Walnut Hills',
+      'Columbia-Tusculum',
+      'Pleasant Ridge',
+      'Bond Hill',
+      'Avondale',
+      'Corryville',
+      'Downtown',
+      'West End',
+      'Riverside',
+      'South Cumminsville'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'University of Cincinnati',
+      'Cincinnati Zoo',
+      'Fountain Square',
+      'Great American Ball Park',
+      'Paul Brown Stadium',
+      'Cincinnati Museum Center',
+      'Eden Park',
+      'Findlay Market',
+      'Cincinnati Art Museum'
+    ]
+  }}
+/>

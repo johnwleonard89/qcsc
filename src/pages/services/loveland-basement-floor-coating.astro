@@ -1,0 +1,67 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+const serviceData = {
+  baseServiceData: residentialServices.basementFloorCoating,
+  cityName: 'Loveland',
+  state: 'Ohio',
+  county: 'Hamilton',
+  seo: {
+    title: 'Loveland OH Basement Floor Coating | Waterproof Solutions | Queen City Surface Coatings',
+    description: 'Professional basement floor coating in Loveland, Ohio. Moisture protection for Historic Downtown, Symmes Township, and all Loveland basements with guaranteed results.',
+    keywords: 'Loveland OH basement floor coating, Loveland basement waterproofing, Historic Downtown basement flooring, Symmes Township basement coating, Loveland Ohio basement renovation, waterproof basement floors Loveland OH'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional basement floor coating services throughout Loveland, Ohio. Our moisture-resistant systems are perfect for Loveland\'s climate and riverfront conditions.',
+    neighborhoods: [
+      'Historic Downtown Loveland',
+      'Symmes Township',
+      'Loveland-Madeira Road',
+      'Fields Ertel Road',
+      'Kemper Road',
+      'Loveland-Branch Hill-Guinea Pike',
+      'State Route 48',
+      'Riverside Drive',
+      'West Loveland Avenue',
+      'East Loveland Avenue',
+      'Karl Brown Way',
+      'Railroad Avenue',
+      'Paxton Avenue',
+      'Church Street',
+      'Second Street',
+      'Third Street',
+      'Elm Street',
+      'Mulberry Street',
+      'Loveland Bike Trail',
+      'Little Miami River'
+    ],
+    landmarks: [
+      'Historic Downtown Loveland',
+      'Loveland Castle',
+      'Little Miami River',
+      'Loveland Bike Trail',
+      'Nisbet Park',
+      'Loveland Canoe & Kayak',
+      'Loveland High School',
+      'Loveland Elementary Schools',
+      'Loveland City Hall',
+      'Loveland Historical Society',
+      'Loveland Farmers Market',
+      'Paxton Ramsey Park',
+      'Symmes Township Park',
+      'Hamilton County Parks',
+      'Great Miami River Recreational Trail'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={serviceData.baseServiceData}
+  cityName={serviceData.cityName}
+  state={serviceData.state}
+  county={serviceData.county}
+  seo={serviceData.seo}
+  serviceArea={serviceData.serviceArea}
+/>

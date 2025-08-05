@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Kitchen Floor Coatings | Food-Safe Residential Kitchen Flooring | Queen City Surface Coatings',
+    description: 'Professional kitchen floor coatings for homes in Cincinnati and Northern Kentucky. Food-safe, spill-resistant, and easy-to-clean kitchen flooring solutions with beautiful finishes.',
+    keywords: 'kitchen floor coatings, residential kitchen flooring, food-safe floor coatings, kitchen epoxy flooring, Cincinnati kitchen floors, spill-resistant kitchen floors'
+  },
+  hero: {
+    tagline: 'Culinary Excellence',
+    headline: 'Kitchen Floor Coatings',
+    subheadline: 'Transform your kitchen with professional floor coatings designed specifically for culinary spaces. Food-safe, spill-resistant, and beautiful finishes that make cooking and entertaining a joy while simplifying cleanup and maintenance.',
+    image: {
+      src: '/assets/images/new-projects/black_res_kitchen.webp',
+      alt: 'Professional kitchen floor coating installation - Queen City Surface Coatings residential kitchen services'
+    },
+    ctas: [
+      { text: 'Get Kitchen Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Kitchen Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Food-Safe Kitchen Floor Solutions',
+    content: [
+      'Our kitchen floor coatings are specifically formulated for residential culinary spaces, providing food-safe surfaces that resist spills, stains, and daily kitchen activities. These specialized coatings create hygienic, easy-to-clean surfaces that enhance both the functionality and beauty of your kitchen.',
+      'From busy family kitchens to gourmet cooking spaces, our kitchen floor systems deliver the durability needed for daily cooking while providing the aesthetic appeal that makes your kitchen the heart of your home.'
+    ]
+  },
+  differentiators: {
+    title: 'Kitchen Floor Coating Benefits',
+    subtitle: 'Professional kitchen floors designed for culinary excellence:',
+    features: [
+      {
+        title: 'Food-Safe & Hygienic',
+        description: 'Non-porous surfaces that meet food safety standards, preventing bacterial growth and making sanitization simple and effective'
+      },
+      {
+        title: 'Spill & Stain Resistant',
+        description: 'Superior resistance to cooking oils, wine, sauces, and acidic foods that commonly cause permanent staining on traditional floors'
+      },
+      {
+        title: 'Easy Daily Maintenance',
+        description: 'Simple cleaning with standard household products, making post-cooking cleanup quick and effortless for busy families'
+      },
+      {
+        title: 'Heat & Impact Resistant',
+        description: 'Withstands dropped cookware, hot pans, and daily kitchen activities while maintaining its beautiful appearance over time'
+      },
+      {
+        title: 'Beautiful Kitchen Aesthetics',
+        description: 'Available in multiple colors and finishes to complement your kitchen design, from modern minimalist to traditional family kitchens'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Kitchen Installation Process',
+    subtitle: 'Professional installation designed around your family\'s cooking needs:',
+    steps: [
+      {
+        number: 1,
+        title: 'Kitchen Assessment',
+        items: [
+          'Evaluation of existing kitchen floor condition',
+          'Discussion of cooking habits and usage patterns',
+          'Color and finish selection to match kitchen design',
+          'Timeline planning around family meal schedules'
+        ]
+      },
+      {
+        number: 2,
+        title: 'Pre-Installation Planning',
+        items: [
+          'Temporary kitchen setup recommendations',
+          'Appliance and cabinet protection planning',
+          'Ventilation and safety considerations',
+          'Material delivery and staging coordination'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Surface Preparation',
+        items: [
+          'Careful appliance and cabinet base protection',
+          'Floor cleaning and degreasing for food residues',
+          'Surface profiling for optimal coating adhesion',
+          'Moisture testing and vapor barrier installation'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Professional Application',
+        items: [
+          'Food-safe coating system application',
+          'Edge work around cabinets and appliances',
+          'Multiple coat application for durability',
+          'Quality control throughout installation'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Final Walkthrough',
+        items: [
+          'Complete kitchen restoration and cleanup',
+          'Homeowner education on care and maintenance',
+          'Food safety and usage guidelines',
+          'Warranty documentation and support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Kitchen Coating Applications',
+    subtitle: 'Perfect flooring solutions for every type of kitchen:',
+    items: [
+      {
+        title: 'Family Kitchens',
+        description: 'Durable floors for active family cooking and dining',
+        features: [
+          'Kid and pet-friendly surfaces',
+          'Easy cleanup after family meals',
+          'Slip-resistant safety features',
+          'Stain protection from spills and accidents'
+        ]
+      },
+      {
+        title: 'Gourmet Cooking Spaces',
+        description: 'Professional-grade floors for serious home chefs',
+        features: [
+          'Heat resistance for professional cookware',
+          'Oil and grease resistant formulations',
+          'Easy sanitization between cooking sessions',
+          'Elegant finishes for sophisticated kitchens'
+        ]
+      },
+      {
+        title: 'Open Concept Kitchens',
+        description: 'Seamless floors that flow with living spaces',
+        features: [
+          'Coordinated colors with adjoining rooms',
+          'Sound dampening for open floor plans',
+          'Easy maintenance visible from living areas',
+          'Beautiful finishes for entertaining'
+        ]
+      },
+      {
+        title: 'Breakfast Nooks & Dining Areas',
+        description: 'Comfortable floors for casual dining spaces',
+        features: [
+          'Comfortable underfoot for extended standing',
+          'Easy chair movement and furniture rearrangement',
+          'Spill protection for daily dining',
+          'Coordinated with main kitchen flooring'
+        ]
+      },
+      {
+        title: 'Pantries & Butler\'s Pantries',
+        description: 'Organized storage spaces with durable flooring',
+        features: [
+          'Easy cleaning for food storage areas',
+          'Moisture resistance for humidity control',
+          'Durable surfaces for heavy storage items',
+          'Bright finishes to enhance lighting'
+        ]
+      },
+      {
+        title: 'Kitchen Islands & Work Areas',
+        description: 'Focused flooring for high-activity cooking zones',
+        features: [
+          'Heavy-duty protection for food prep areas',
+          'Easy sanitization for food safety',
+          'Comfortable surfaces for extended cooking',
+          'Coordinated design with main kitchen floor'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Transform Your Kitchen?',
+    description: 'Schedule your kitchen floor consultation today and discover how professional kitchen coatings can enhance your culinary space with beauty, safety, and easy maintenance.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

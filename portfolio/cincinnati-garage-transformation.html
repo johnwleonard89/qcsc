@@ -1,0 +1,2220 @@
+---
+import Layout from '../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Cincinnati Garage Transformation | West Chester Epoxy Flooring Project',
+	description: 'See how we transformed an oil-stained garage in West Chester, OH with decorative epoxy flooring. Complete project details, before/after photos, and client testimonial.',
+	keywords: 'West Chester garage transformation, Cincinnati epoxy flooring, garage floor makeover, oil stain removal, decorative epoxy flakes, residential flooring project',
+	type: 'project',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Portfolio', url: 'https://queencitysurfacecoatings.com/portfolio/' },
+		{ name: 'Cincinnati Garage Transformation', url: 'https://queencitysurfacecoatings.com/portfolio/cincinnati-garage-transformation/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "CreativeWork",
+		"name": "Cincinnati Garage Transformation - West Chester Epoxy Flooring Project",
+		"description": "Complete residential garage transformation using decorative epoxy flooring system",
+		"image": [
+			"https://queencitysurfacecoatings.com/assets/images/portfolio/cincinnati-garage/before-main.webp",
+			"https://queencitysurfacecoatings.com/assets/images/portfolio/cincinnati-garage/after-main.webp"
+		],
+		"creator": {
+			"@type": "LocalBusiness",
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cincinnati",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525",
+			"url": "https://queencitysurfacecoatings.com"
+		},
+		"dateCreated": "2024-03-15",
+		"locationCreated": {
+			"@type": "Place",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "West Chester",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			}
+		},
+		"about": {
+			"@type": "Service",
+			"name": "Residential Epoxy Flooring Installation",
+			"provider": {
+				"@type": "LocalBusiness",
+				"name": "Queen City Surface Coatings LLC"
+			}
+		},
+		"reviewBody": "The transformation exceeded our expectations. Our garage went from embarrassing to showcase quality!",
+		"reviewRating": {
+			"@type": "Rating",
+			"ratingValue": "5",
+			"bestRating": "5"
+		}
+	}
+};
+
+const projectData = {
+	id: 'cincinnati-garage-transformation',
+	title: 'Cincinnati Garage Transformation',
+	subtitle: 'From Oil-Stained Concrete to Stunning Showcase',
+	location: 'West Chester, OH',
+	client: 'The Johnson Family',
+	projectType: 'Residential',
+	coatingSystem: 'Decorative Epoxy with Color Flakes',
+	projectSize: '600 square feet',
+	duration: '2 days',
+	completedDate: '2024-03-15',
+	projectValue: '$3,600',
+	
+	challenge: 'The Johnson family's two-car garage had years of oil stains, tire marks, and general wear that made it an eyesore. They wanted to transform it into a clean, attractive space that would complement their home and be easy to maintain.',
+	
+	solution: 'We implemented a comprehensive multi-layer epoxy flooring system with decorative color flakes. The process included aggressive surface preparation to remove oil stains, diamond grinding for proper adhesion, and application of our premium epoxy system.',
+	
+	materials: [
+		'High-performance epoxy primer',
+		'Commercial-grade base coat epoxy',
+		'Decorative color flakes (gray and charcoal blend)',
+		'Clear polyurethane topcoat with UV protection',
+		'Anti-slip additives'
+	],
+	
+	processSteps: [
+		{
+			step: 1,
+			title: 'Surface Assessment & Preparation',
+			description: 'Comprehensive evaluation of concrete condition, oil stain treatment, and crack repair',
+			duration: '4 hours',
+			details: 'We began with a thorough assessment of the garage floor, identifying multiple oil stains, surface imperfections, and areas requiring special attention. Oil stains were treated with specialized degreasers and mechanical removal techniques.'
+		},
+		{
+			step: 2,
+			title: 'Diamond Grinding & Profile Creation',
+			description: 'Mechanical surface preparation to achieve optimal adhesion profile',
+			duration: '3 hours',
+			details: 'Using professional diamond grinding equipment, we created the proper surface profile (CSP-2 to CSP-3) necessary for maximum epoxy adhesion. This step also removed any remaining surface contaminants and opened the concrete pores.'
+		},
+		{
+			step: 3,
+			title: 'Crack Repair & Surface Cleaning',
+			description: 'Professional repair of surface cracks and comprehensive cleaning',
+			duration: '2 hours',
+			details: 'Minor cracks were filled with flexible polyurea crack filler, and the entire surface was thoroughly cleaned using industrial vacuums and tack cloths to ensure a contamination-free substrate.'
+		},
+		{
+			step: 4,
+			title: 'Primer Application',
+			description: 'High-penetration primer for enhanced adhesion',
+			duration: '1 hour application + 4 hours cure',
+			details: 'Applied our high-performance epoxy primer using professional rollers and brushes, ensuring complete coverage and penetration into the concrete substrate. The primer creates a strong foundation for the decorative system.'
+		},
+		{
+			step: 5,
+			title: 'Base Coat & Flake Application',
+			description: 'Decorative epoxy base coat with color flake broadcast',
+			duration: '2 hours application + overnight cure',
+			details: 'Applied the pigmented epoxy base coat and immediately broadcast the decorative color flakes to refusal, creating a beautiful, slip-resistant surface with visual depth and texture.'
+		},
+		{
+			step: 6,
+			title: 'Topcoat Application & Final Details',
+			description: 'Clear protective topcoat and final inspection',
+			duration: '2 hours application + 24 hours cure',
+			details: 'Applied two coats of clear polyurethane topcoat for durability and UV protection. Final inspection and cleanup completed the transformation.'
+		}
+	],
+	
+	beforeImages: [
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/before-main.webp',
+			alt: 'Oil-stained garage floor before transformation',
+			caption: 'Heavily oil-stained concrete with years of automotive fluids and tire marks'
+		},
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/before-corner.webp',
+			alt: 'Corner showing worst staining',
+			caption: 'Corner area showing the extent of oil penetration and surface damage'
+		},
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/before-close.webp',
+			alt: 'Close-up of surface damage',
+			caption: 'Close-up view of surface imperfections and embedded contaminants'
+		}
+	],
+	
+	afterImages: [
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/after-main.webp',
+			alt: 'Completed garage transformation with decorative epoxy',
+			caption: 'Stunning transformation with decorative flake epoxy system'
+		},
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/after-angle.webp',
+			alt: 'Side angle view of finished floor',
+			caption: 'Side angle showing the uniform finish and professional installation quality'
+		},
+		{
+			url: '/assets/images/portfolio/cincinnati-garage/after-detail.webp',
+			alt: 'Close-up of decorative flake pattern',
+			caption: 'Close-up detail of the decorative flake pattern and glossy finish'
+		}
+	],
+	
+	testimonial: {
+		quote: "The transformation exceeded our expectations. Our garage went from embarrassing to showcase quality! John and his team were professional, on-time, and the quality is outstanding. We get compliments from neighbors constantly now. Worth every penny!",
+		author: "Mike Johnson",
+		location: "West Chester, OH",
+		rating: 5,
+		date: "March 2024"
+	},
+	
+	technicalSpecs: {
+		'Surface Preparation': 'Diamond grinding to CSP-2/CSP-3 profile',
+		'Primer System': 'High-performance epoxy primer, 4-6 mils DFT',
+		'Base Coat': 'Pigmented epoxy, 8-10 mils DFT',
+		'Decorative Element': 'Color flake broadcast to refusal',
+		'Topcoat': 'Clear polyurethane, 2-3 mils DFT per coat (2 coats)',
+		'Total System Thickness': '16-22 mils DFT',
+		'Cure Schedule': '24 hours to foot traffic, 7 days to full vehicle traffic',
+		'Expected Lifespan': '15-20+ years with proper maintenance',
+		'Warranty': '5 years material and workmanship'
+	},
+	
+	benefits: [
+		'Complete oil stain elimination',
+		'Easy-to-clean surface',
+		'Chemical and stain resistance',
+		'Enhanced property value',
+		'Professional appearance',
+		'Long-term durability',
+		'Slip-resistant texture',
+		'UV-stable finish'
+	]
+};
+
+const relatedProjects = [
+	{
+		id: 'mason-metallic-epoxy-showcase',
+		title: 'Mason Metallic Epoxy Showcase',
+		location: 'Mason, OH',
+		type: 'Residential',
+		image: '/assets/images/portfolio/mason-metallic/thumbnail.webp'
+	},
+	{
+		id: 'loveland-basement-makeover',
+		title: 'Loveland Basement Makeover',
+		location: 'Loveland, OH',
+		type: 'Residential',
+		image: '/assets/images/portfolio/loveland-basement/thumbnail.webp'
+	}
+];
+---
+
+<Layout {seo}>
+	<Container>
+		<div class="project-showcase">
+			<!-- Project Header -->
+			<header class="project-header">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/portfolio/">Portfolio</a></li>
+						<li aria-current="page">Cincinnati Garage Transformation</li>
+					</ol>
+				</nav>
+
+				<div class="header-content">
+					<div class="project-badges">
+						<span class="project-type-badge residential">Residential</span>
+						<span class="coating-badge">Decorative Epoxy</span>
+						<span class="featured-badge">Featured Project</span>
+					</div>
+					
+					<h1>{projectData.title}</h1>
+					<p class="project-subtitle">{projectData.subtitle}</p>
+					
+					<div class="project-meta-grid">
+						<div class="meta-item">
+							<span class="meta-icon">📍</span>
+							<div class="meta-content">
+								<span class="meta-label">Location</span>
+								<span class="meta-value">{projectData.location}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">👥</span>
+							<div class="meta-content">
+								<span class="meta-label">Client</span>
+								<span class="meta-value">{projectData.client}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">📏</span>
+							<div class="meta-content">
+								<span class="meta-label">Size</span>
+								<span class="meta-value">{projectData.projectSize}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">⏱️</span>
+							<div class="meta-content">
+								<span class="meta-label">Duration</span>
+								<span class="meta-value">{projectData.duration}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">📅</span>
+							<div class="meta-content">
+								<span class="meta-label">Completed</span>
+								<span class="meta-value">
+									{new Date(projectData.completedDate).toLocaleDateString('en-US', { 
+										year: 'numeric', 
+										month: 'long', 
+										day: 'numeric' 
+									})}
+								</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">💰</span>
+							<div class="meta-content">
+								<span class="meta-label">Investment</span>
+								<span class="meta-value">{projectData.projectValue}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Hero Before/After Comparison -->
+			<section class="hero-comparison">
+				<div class="comparison-container">
+					<div class="before-after-slider">
+						<div class="image-wrapper before-image">
+							<img 
+								src={projectData.beforeImages[0].url} 
+								alt={projectData.beforeImages[0].alt}
+								width="800"
+								height="600"
+								loading="eager"
+							>
+							<span class="image-label">Before</span>
+						</div>
+						<div class="image-wrapper after-image">
+							<img 
+								src={projectData.afterImages[0].url} 
+								alt={projectData.afterImages[0].alt}
+								width="800"
+								height="600"
+								loading="eager"
+							>
+							<span class="image-label">After</span>
+						</div>
+						<div class="slider-control">
+							<input 
+								type="range" 
+								min="0" 
+								max="100" 
+								value="50" 
+								class="comparison-slider"
+								aria-label="Before and after comparison slider"
+							>
+							<div class="slider-handle">
+								<div class="handle-line"></div>
+								<div class="handle-circle">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+										<path d="M12 4L8 8L12 12" stroke="currentColor" stroke-width="2"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="comparison-caption">
+						<div class="caption-before">
+							<h3>Before</h3>
+							<p>{projectData.beforeImages[0].caption}</p>
+						</div>
+						<div class="caption-after">
+							<h3>After</h3>
+							<p>{projectData.afterImages[0].caption}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Project Overview -->
+			<section class="project-overview">
+				<div class="overview-grid">
+					<div class="challenge-solution">
+						<div class="challenge">
+							<h2>The Challenge</h2>
+							<p>{projectData.challenge}</p>
+							
+							<div class="challenge-list">
+								<h3>Specific Issues Addressed:</h3>
+								<ul>
+									<li>Heavy oil stains from years of automotive fluids</li>
+									<li>Surface imperfections and minor cracking</li>
+									<li>Tire marks and embedded dirt</li>
+									<li>Poor concrete surface profile</li>
+									<li>Desire for an attractive, easy-to-maintain finish</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="solution">
+							<h2>Our Solution</h2>
+							<p>{projectData.solution}</p>
+							
+							<div class="solution-benefits">
+								<h3>Key Benefits Delivered:</h3>
+								<div class="benefits-grid">
+									{projectData.benefits.map(benefit => (
+										<div class="benefit-item">
+											<span class="benefit-icon">✅</span>
+											<span class="benefit-text">{benefit}</span>
+										</div>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="project-highlights">
+						<h2>Project Highlights</h2>
+						<div class="highlights-cards">
+							<div class="highlight-card">
+								<div class="highlight-icon">🏆</div>
+								<h3>Premium Materials</h3>
+								<p>Commercial-grade epoxy system with decorative flakes and UV-stable topcoat</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-icon">⚡</div>
+								<h3>Fast Turnaround</h3>
+								<p>Complete transformation in just 2 days with minimal disruption to family routine</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-icon">🔬</div>
+								<h3>Professional Process</h3>
+								<p>Diamond grinding surface preparation ensures maximum adhesion and longevity</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-icon">🛡️</div>
+								<h3>Comprehensive Warranty</h3>
+								<p>5-year material and workmanship warranty backed by 15+ years experience</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Installation Process -->
+			<section class="installation-process">
+				<h2>Installation Process</h2>
+				<p class="process-intro">
+					Our systematic approach ensures exceptional results and long-lasting performance. 
+					Here's how we transformed this garage floor step by step.
+				</p>
+
+				<div class="process-timeline">
+					{projectData.processSteps.map(step => (
+						<article class="process-step">
+							<div class="step-number">{step.step}</div>
+							<div class="step-content">
+								<div class="step-header">
+									<h3>{step.title}</h3>
+									<span class="step-duration">{step.duration}</span>
+								</div>
+								<p class="step-description">{step.description}</p>
+								<div class="step-details">
+									<p>{step.details}</p>
+								</div>
+							</div>
+						</article>
+					))}
+				</div>
+
+				<div class="process-summary">
+					<h3>Process Summary</h3>
+					<div class="summary-stats">
+						<div class="summary-stat">
+							<span class="stat-number">16</span>
+							<span class="stat-label">Total Hours</span>
+						</div>
+						<div class="summary-stat">
+							<span class="stat-number">6</span>
+							<span class="stat-label">Process Steps</span>
+						</div>
+						<div class="summary-stat">
+							<span class="stat-number">2</span>
+							<span class="stat-label">Days Duration</span>
+						</div>
+						<div class="summary-stat">
+							<span class="stat-number">100%</span>
+							<span class="stat-label">Client Satisfaction</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Materials & Technical Specifications -->
+			<section class="technical-specs">
+				<h2>Materials & Technical Specifications</h2>
+				
+				<div class="specs-grid">
+					<div class="materials-used">
+						<h3>Materials Used</h3>
+						<div class="materials-list">
+							{projectData.materials.map(material => (
+								<div class="material-item">
+									<span class="material-icon">🧪</span>
+									<span class="material-name">{material}</span>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<div class="technical-details">
+						<h3>Technical Specifications</h3>
+						<div class="specs-table">
+							{Object.entries(projectData.technicalSpecs).map(([key, value]) => (
+								<div class="spec-row">
+									<span class="spec-label">{key}:</span>
+									<span class="spec-value">{value}</span>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+
+				<div class="performance-guarantees">
+					<h3>Performance Guarantees</h3>
+					<div class="guarantee-cards">
+						<div class="guarantee-card">
+							<div class="guarantee-icon">⏰</div>
+							<h4>Durability</h4>
+							<p>15-20+ year lifespan with proper maintenance</p>
+						</div>
+						<div class="guarantee-card">
+							<div class="guarantee-icon">🧽</div>
+							<h4>Easy Maintenance</h4>
+							<p>Simple cleaning with standard household products</p>
+						</div>
+						<div class="guarantee-card">
+							<div class="guarantee-icon">🌡️</div>
+							<h4>Temperature Resistance</h4>
+							<p>Stable performance from -40°F to 140°F</p>
+						</div>
+						<div class="guarantee-card">
+							<div class="guarantee-icon">💧</div>
+							<h4>Chemical Resistance</h4>
+							<p>Resists automotive fluids, salt, and common chemicals</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Photo Gallery -->
+			<section class="photo-gallery">
+				<h2>Project Photo Gallery</h2>
+				
+				<div class="gallery-tabs">
+					<button class="gallery-tab active" data-gallery="before">Before Photos</button>
+					<button class="gallery-tab" data-gallery="after">After Photos</button>
+					<button class="gallery-tab" data-gallery="process">Process Photos</button>
+				</div>
+
+				<div class="gallery-content">
+					<!-- Before Photos -->
+					<div class="gallery-section active" id="before-gallery">
+						<div class="gallery-grid">
+							{projectData.beforeImages.map((image, index) => (
+								<div class="gallery-item" data-index={index}>
+									<img 
+										src={image.url} 
+										alt={image.alt}
+										width="400"
+										height="300"
+										loading="lazy"
+									>
+									<div class="image-overlay">
+										<p class="image-caption">{image.caption}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<!-- After Photos -->
+					<div class="gallery-section" id="after-gallery">
+						<div class="gallery-grid">
+							{projectData.afterImages.map((image, index) => (
+								<div class="gallery-item" data-index={index}>
+									<img 
+										src={image.url} 
+										alt={image.alt}
+										width="400"
+										height="300"
+										loading="lazy"
+									>
+									<div class="image-overlay">
+										<p class="image-caption">{image.caption}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<!-- Process Photos -->
+					<div class="gallery-section" id="process-gallery">
+						<div class="gallery-grid">
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/cincinnati-garage/process-grinding.webp" 
+									alt="Diamond grinding surface preparation"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Diamond grinding creates proper surface profile</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/cincinnati-garage/process-primer.webp" 
+									alt="Applying epoxy primer"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">High-penetration primer application</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/cincinnati-garage/process-flakes.webp" 
+									alt="Broadcasting decorative flakes"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Decorative flakes broadcasted to refusal</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Lightbox Modal -->
+				<div class="lightbox-modal" id="lightbox-modal">
+					<div class="lightbox-content">
+						<button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+						<button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+						<img class="lightbox-image" src="" alt="">
+						<button class="lightbox-next" aria-label="Next image">&#8250;</button>
+						<div class="lightbox-caption"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Client Testimonial -->
+			<section class="client-testimonial">
+				<div class="testimonial-content">
+					<div class="testimonial-header">
+						<h2>Client Testimonial</h2>
+						<div class="testimonial-rating">
+							{Array.from({length: projectData.testimonial.rating}).map(() => (
+								<span class="star">⭐</span>
+							))}
+						</div>
+					</div>
+
+					<blockquote class="testimonial-quote">
+						"{projectData.testimonial.quote}"
+					</blockquote>
+
+					<div class="testimonial-author">
+						<div class="author-info">
+							<cite class="author-name">{projectData.testimonial.author}</cite>
+							<span class="author-location">{projectData.testimonial.location}</span>
+							<span class="testimonial-date">{projectData.testimonial.date}</span>
+						</div>
+						<div class="client-photo">
+							<img 
+								src="/assets/images/testimonials/mike-johnson.jpg" 
+								alt="Mike Johnson - Satisfied Client"
+								width="80"
+								height="80"
+								loading="lazy"
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="testimonial-video">
+					<h3>Video Testimonial</h3>
+					<div class="video-container">
+						<video 
+							controls 
+							poster="/assets/images/portfolio/cincinnati-garage/video-poster.webp"
+							width="640"
+							height="360"
+						>
+							<source src="/assets/videos/cincinnati-garage-testimonial.mp4" type="video/mp4">
+							<track kind="captions" src="/assets/videos/cincinnati-garage-captions.vtt" srclang="en" label="English">
+							Your browser does not support the video element.
+						</video>
+					</div>
+				</div>
+			</section>
+
+			<!-- Related Projects -->
+			<section class="related-projects">
+				<h2>Related Projects</h2>
+				<p>Explore similar transformations we've completed for Cincinnati homeowners</p>
+				
+				<div class="related-grid">
+					{relatedProjects.map(project => (
+						<article class="related-project">
+							<div class="project-image">
+								<img 
+									src={project.image} 
+									alt={project.title}
+									width="300"
+									height="200"
+									loading="lazy"
+								>
+								<div class="project-overlay">
+									<span class="project-type">{project.type}</span>
+								</div>
+							</div>
+							<div class="project-info">
+								<h3>
+									<a href={`/portfolio/${project.id}/`}>{project.title}</a>
+								</h3>
+								<p class="project-location">{project.location}</p>
+								<a href={`/portfolio/${project.id}/`} class="view-project">
+									View Project →
+								</a>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<!-- Project CTA -->
+			<section class="project-cta">
+				<div class="cta-content">
+					<h2>Ready for Your Own Transformation?</h2>
+					<p>
+						See how we can transform your garage or workspace with our proven process and premium materials. 
+						Get your free consultation and detailed estimate today.
+					</p>
+					
+					<div class="cta-features">
+						<div class="cta-feature">
+							<span class="feature-icon">📋</span>
+							<span class="feature-text">Free On-Site Consultation</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">💰</span>
+							<span class="feature-text">Detailed Written Estimate</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">🛡️</span>
+							<span class="feature-text">5-Year Warranty Included</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">🎖️</span>
+							<span class="feature-text">Veteran-Owned & Operated</span>
+						</div>
+					</div>
+
+					<div class="cta-buttons">
+						<a href="/contact/" class="cta-button primary">Get Free Consultation</a>
+						<a href="tel:513-296-5525" class="cta-button secondary">Call (513) 296-5525</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Project Navigation -->
+			<nav class="project-navigation">
+				<div class="nav-links">
+					<a href="/portfolio/" class="nav-link back-to-portfolio">
+						← Back to Portfolio
+					</a>
+					<div class="project-nav">
+						<a href="/portfolio/loveland-basement-makeover/" class="nav-link next-project">
+							Next Project: Loveland Basement →
+						</a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</Container>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(seo.structuredData)}></script>
+
+	<!-- Social Sharing Meta Tags -->
+	<meta property="og:title" content="Cincinnati Garage Transformation | West Chester Epoxy Flooring Project">
+	<meta property="og:description" content="See how we transformed an oil-stained garage in West Chester, OH with decorative epoxy flooring. Complete project details, before/after photos, and client testimonial.">
+	<meta property="og:image" content="https://queencitysurfacecoatings.com/assets/images/portfolio/cincinnati-garage/after-main.webp">
+	<meta property="og:url" content="https://queencitysurfacecoatings.com/portfolio/cincinnati-garage-transformation/">
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Cincinnati Garage Transformation | West Chester Epoxy Flooring Project">
+	<meta name="twitter:description" content="See how we transformed an oil-stained garage in West Chester, OH with decorative epoxy flooring.">
+	<meta name="twitter:image" content="https://queencitysurfacecoatings.com/assets/images/portfolio/cincinnati-garage/after-main.webp">
+</Layout>
+
+<style>
+/* Project Showcase Styling */
+.project-showcase {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Project Header */
+.project-header {
+	background: linear-gradient(135deg, var(--theme-surface-2) 0%, var(--theme-surface-3) 100%);
+	color: white;
+	padding: 3rem 2rem 4rem 2rem;
+	margin: -2rem -2rem 3rem -2rem;
+	border-radius: 0 0 2rem 2rem;
+}
+
+.breadcrumb {
+	margin-bottom: 2rem;
+}
+
+.breadcrumb ol {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	gap: 0.5rem;
+}
+
+.breadcrumb li::after {
+	content: '›';
+	margin-left: 0.5rem;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb a {
+	color: var(--theme-primary);
+	text-decoration: none;
+}
+
+.project-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.project-type-badge,
+.coating-badge,
+.featured-badge {
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.project-type-badge.residential {
+	background: rgba(76, 175, 80, 0.9);
+	color: white;
+}
+
+.coating-badge {
+	background: rgba(33, 150, 243, 0.9);
+	color: white;
+}
+
+.featured-badge {
+	background: var(--theme-primary);
+	color: white;
+}
+
+.header-content h1 {
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: white;
+}
+
+.project-subtitle {
+	font-size: 1.3rem;
+	margin-bottom: 3rem;
+	opacity: 0.9;
+}
+
+.project-meta-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+}
+
+.meta-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1rem;
+	border-radius: 0.75rem;
+	backdrop-filter: blur(10px);
+}
+
+.meta-icon {
+	font-size: 1.5rem;
+	flex-shrink: 0;
+}
+
+.meta-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.meta-label {
+	font-size: 0.9rem;
+	opacity: 0.8;
+	font-weight: 500;
+}
+
+.meta-value {
+	font-size: 1rem;
+	font-weight: 600;
+	color: white;
+}
+
+/* Hero Comparison */
+.hero-comparison {
+	margin: 4rem 0;
+}
+
+.comparison-container {
+	background: var(--theme-surface-1);
+	padding: 3rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.before-after-slider {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+	border-radius: var(--theme-shape-radius);
+	box-shadow: 0 8px 32px var(--theme-shadow-heavy);
+}
+
+.image-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.image-wrapper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.before-image {
+	z-index: 1;
+}
+
+.after-image {
+	z-index: 2;
+	clip-path: inset(0 50% 0 0);
+	transition: clip-path 0.1s ease;
+}
+
+.image-label {
+	position: absolute;
+	top: 1rem;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-weight: 600;
+	z-index: 10;
+}
+
+.before-image .image-label {
+	left: 1rem;
+}
+
+.after-image .image-label {
+	right: 1rem;
+}
+
+.slider-control {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+}
+
+.comparison-slider {
+	width: 400px;
+	height: 4px;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 2px;
+	outline: none;
+	appearance: none;
+	cursor: pointer;
+}
+
+.comparison-slider::-webkit-slider-thumb {
+	appearance: none;
+	width: 20px;
+	height: 20px;
+	background: var(--theme-primary);
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-slider::-moz-range-thumb {
+	width: 20px;
+	height: 20px;
+	background: var(--theme-primary);
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-handle {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+.handle-line {
+	width: 2px;
+	height: 40px;
+	background: white;
+	margin: 0 auto;
+}
+
+.handle-circle {
+	width: 40px;
+	height: 40px;
+	background: var(--theme-primary);
+	border: 3px solid white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	transform: translateY(-20px);
+}
+
+.comparison-caption {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.caption-before h3,
+.caption-after h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.caption-before p,
+.caption-after p {
+	color: var(--theme-on-surface-1);
+}
+
+/* Project Overview */
+.project-overview {
+	margin: 4rem 0;
+}
+
+.overview-grid {
+	display: grid;
+	gap: 4rem;
+}
+
+.challenge-solution {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+.challenge,
+.solution {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.challenge {
+	border-left-color: #F44336;
+}
+
+.solution {
+	border-left-color: #4CAF50;
+}
+
+.challenge h2,
+.solution h2 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.challenge p,
+.solution p {
+	color: var(--theme-on-surface-1);
+	line-height: 1.6;
+	margin-bottom: 2rem;
+}
+
+.challenge-list h3,
+.solution-benefits h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+	font-size: 1.1rem;
+}
+
+.challenge-list ul {
+	list-style: none;
+	padding: 0;
+}
+
+.challenge-list li {
+	padding: 0.5rem 0;
+	color: var(--theme-on-surface-1);
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.challenge-list li::before {
+	content: '⚠️';
+	position: absolute;
+	left: 0;
+}
+
+.benefits-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.benefit-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem;
+}
+
+.benefit-icon {
+	color: #4CAF50;
+	flex-shrink: 0;
+}
+
+.benefit-text {
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+}
+
+.project-highlights {
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.project-highlights h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.highlights-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+}
+
+.highlight-card {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.highlight-card:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.highlight-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.highlight-card p {
+	color: var(--theme-on-surface-1);
+	line-height: 1.5;
+}
+
+/* Installation Process */
+.installation-process {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.installation-process h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.process-intro {
+	text-align: center;
+	color: var(--theme-on-surface-1);
+	max-width: 800px;
+	margin: 0 auto 3rem auto;
+}
+
+.process-timeline {
+	max-width: 800px;
+	margin: 0 auto 3rem auto;
+}
+
+.process-step {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 2rem;
+	margin-bottom: 3rem;
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.step-number {
+	width: 4rem;
+	height: 4rem;
+	background: var(--theme-primary);
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.step-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-bottom: 1rem;
+}
+
+.step-header h3 {
+	color: var(--theme-surface-2);
+	margin: 0;
+}
+
+.step-duration {
+	background: var(--theme-surface-1);
+	color: var(--theme-on-surface-1);
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.step-description {
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.step-details p {
+	color: var(--theme-on-surface-1);
+	line-height: 1.6;
+}
+
+.process-summary {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+}
+
+.process-summary h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 2rem;
+}
+
+.summary-stats {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.summary-stat {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.stat-number {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--theme-primary);
+	margin-bottom: 0.5rem;
+}
+
+.stat-label {
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+}
+
+/* Technical Specs */
+.technical-specs {
+	margin: 4rem 0;
+}
+
+.technical-specs h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.specs-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+	margin-bottom: 3rem;
+}
+
+.materials-used,
+.technical-details {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.materials-used h3,
+.technical-details h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1.5rem;
+}
+
+.materials-list {
+	display: grid;
+	gap: 1rem;
+}
+
+.material-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+}
+
+.material-icon {
+	font-size: 1.2rem;
+	flex-shrink: 0;
+}
+
+.material-name {
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+}
+
+.specs-table {
+	display: grid;
+	gap: 1rem;
+}
+
+.spec-row {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+	align-items: center;
+}
+
+.spec-label {
+	font-weight: 600;
+	color: var(--theme-surface-2);
+}
+
+.spec-value {
+	color: var(--theme-on-surface-1);
+}
+
+.performance-guarantees {
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.performance-guarantees h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.guarantee-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+}
+
+.guarantee-card {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+	border: 2px solid var(--theme-border-light);
+}
+
+.guarantee-icon {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+	color: var(--theme-primary);
+}
+
+.guarantee-card h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.guarantee-card p {
+	color: var(--theme-on-surface-1);
+}
+
+/* Photo Gallery */
+.photo-gallery {
+	margin: 4rem 0;
+}
+
+.photo-gallery h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.gallery-tabs {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.gallery-tab {
+	background: var(--theme-surface-1);
+	color: var(--theme-on-surface-1);
+	border: 2px solid var(--theme-border-light);
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.gallery-tab:hover,
+.gallery-tab.active {
+	background: var(--theme-primary);
+	border-color: var(--theme-primary);
+	color: white;
+}
+
+.gallery-content {
+	position: relative;
+	min-height: 400px;
+}
+
+.gallery-section {
+	display: none;
+	animation: fadeIn 0.3s ease;
+}
+
+.gallery-section.active {
+	display: block;
+}
+
+.gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.gallery-item {
+	position: relative;
+	border-radius: var(--theme-shape-radius);
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+	transform: scale(1.02);
+}
+
+.gallery-item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+	transform: scale(1.05);
+}
+
+.image-overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+	color: white;
+	padding: 2rem 1rem 1rem 1rem;
+	transform: translateY(100%);
+	transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+	transform: translateY(0);
+}
+
+.image-caption {
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+/* Lightbox */
+.lightbox-modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-modal.active {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lightbox-content {
+	position: relative;
+	max-width: 90%;
+	max-height: 90%;
+}
+
+.lightbox-image {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: var(--theme-shape-radius);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 2rem;
+	border-radius: 0.5rem;
+	transition: background-color 0.3s ease;
+}
+
+.lightbox-close {
+	top: -60px;
+	right: 0;
+}
+
+.lightbox-prev {
+	left: -80px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.lightbox-next {
+	right: -80px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-caption {
+	position: absolute;
+	bottom: -60px;
+	left: 0;
+	right: 0;
+	color: white;
+	text-align: center;
+	font-size: 1rem;
+}
+
+/* Client Testimonial */
+.client-testimonial {
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin: 4rem 0;
+}
+
+.testimonial-content {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.testimonial-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.testimonial-header h2 {
+	color: var(--theme-surface-2);
+	margin: 0;
+}
+
+.testimonial-rating .star {
+	color: #FFD700;
+	font-size: 1.5rem;
+}
+
+.testimonial-quote {
+	font-size: 1.3rem;
+	font-style: italic;
+	line-height: 1.7;
+	color: var(--theme-on-surface-1);
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.testimonial-author {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.author-info cite {
+	display: block;
+	font-weight: 700;
+	color: var(--theme-surface-2);
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+	font-style: normal;
+}
+
+.author-location,
+.testimonial-date {
+	display: block;
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+}
+
+.client-photo img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid var(--theme-primary);
+}
+
+.testimonial-video {
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.testimonial-video h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+}
+
+.video-container {
+	max-width: 640px;
+	margin: 0 auto;
+}
+
+.video-container video {
+	width: 100%;
+	height: auto;
+	border-radius: var(--theme-shape-radius);
+}
+
+/* Related Projects */
+.related-projects {
+	margin: 4rem 0;
+}
+
+.related-projects h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.related-projects p {
+	text-align: center;
+	color: var(--theme-on-surface-1);
+	margin-bottom: 3rem;
+}
+
+.related-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.related-project {
+	background: var(--theme-bg);
+	border-radius: var(--theme-shape-radius);
+	overflow: hidden;
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.related-project:hover {
+	border-color: var(--theme-primary);
+	transform: translateY(-2px);
+}
+
+.project-image {
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+}
+
+.project-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.related-project:hover .project-image img {
+	transform: scale(1.05);
+}
+
+.project-overlay {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	background: var(--theme-primary);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.project-info {
+	padding: 2rem;
+}
+
+.project-info h3 {
+	margin-bottom: 0.5rem;
+}
+
+.project-info h3 a {
+	color: var(--theme-surface-2);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.project-info h3 a:hover {
+	color: var(--theme-primary);
+}
+
+.project-location {
+	color: var(--theme-on-surface-1);
+	margin-bottom: 1rem;
+}
+
+.view-project {
+	color: var(--theme-primary);
+	text-decoration: none;
+	font-weight: 600;
+	transition: color 0.3s ease;
+}
+
+.view-project:hover {
+	color: var(--theme-primary-hover);
+}
+
+/* Project CTA */
+.project-cta {
+	background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-hover) 100%);
+	color: white;
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	text-align: center;
+	margin: 4rem 0;
+}
+
+.project-cta h2 {
+	color: white;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.cta-content p {
+	font-size: 1.1rem;
+	margin-bottom: 3rem;
+	opacity: 0.9;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cta-features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2rem;
+	margin-bottom: 3rem;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cta-feature {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1rem;
+	border-radius: 0.5rem;
+	backdrop-filter: blur(10px);
+}
+
+.feature-icon {
+	font-size: 1.5rem;
+}
+
+.feature-text {
+	font-weight: 600;
+}
+
+.cta-buttons {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cta-button {
+	display: inline-block;
+	padding: 1.25rem 2.5rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 1.1rem;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.cta-button.primary {
+	background: white;
+	color: var(--theme-primary);
+	border-color: white;
+}
+
+.cta-button.secondary {
+	background: transparent;
+	color: white;
+	border-color: white;
+}
+
+.cta-button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Navigation */
+.project-navigation {
+	margin: 3rem 0;
+	padding-top: 2rem;
+	border-top: 1px solid var(--theme-border-light);
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-link {
+	color: var(--theme-primary);
+	text-decoration: none;
+	font-weight: 600;
+	padding: 1rem 2rem;
+	border: 2px solid var(--theme-primary);
+	border-radius: 2rem;
+	transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+	background: var(--theme-primary);
+	color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+	.project-meta-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.challenge-solution {
+		grid-template-columns: 1fr;
+	}
+	
+	.specs-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.summary-stats {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.guarantee-cards {
+		grid-template-columns: 1fr;
+	}
+	
+	.gallery-tabs {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.gallery-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.testimonial-author {
+		flex-direction: column;
+		gap: 1rem;
+		text-align: center;
+	}
+	
+	.related-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.cta-features {
+		grid-template-columns: 1fr;
+	}
+	
+	.cta-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.cta-button {
+		width: 100%;
+		max-width: 300px;
+	}
+	
+	.nav-links {
+		flex-direction: column;
+		gap: 1rem;
+	}
+	
+	.comparison-slider {
+		width: 250px;
+	}
+	
+	.process-step {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	
+	.spec-row {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+}
+
+/* Focus styles for accessibility */
+.comparison-slider:focus,
+.gallery-tab:focus,
+.gallery-item:focus,
+.cta-button:focus,
+.nav-link:focus {
+	outline: 2px solid var(--theme-primary);
+	outline-offset: 2px;
+}
+</style>
+
+<script>
+// Project Showcase Functionality
+document.addEventListener('DOMContentLoaded', function() {
+	// Before/After Comparison Slider
+	const comparisonSlider = document.querySelector('.comparison-slider');
+	const afterImage = document.querySelector('.after-image');
+	
+	if (comparisonSlider && afterImage) {
+		comparisonSlider.addEventListener('input', function() {
+			const value = this.value;
+			afterImage.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+		});
+	}
+	
+	// Gallery Tabs
+	const galleryTabs = document.querySelectorAll('.gallery-tab');
+	const gallerySections = document.querySelectorAll('.gallery-section');
+	
+	galleryTabs.forEach(tab => {
+		tab.addEventListener('click', function() {
+			const targetGallery = this.getAttribute('data-gallery');
+			
+			// Remove active class from all tabs and sections
+			galleryTabs.forEach(t => t.classList.remove('active'));
+			gallerySections.forEach(s => s.classList.remove('active'));
+			
+			// Add active class to clicked tab and corresponding section
+			this.classList.add('active');
+			document.getElementById(`${targetGallery}-gallery`).classList.add('active');
+		});
+	});
+	
+	// Lightbox Functionality
+	const galleryItems = document.querySelectorAll('.gallery-item');
+	const lightboxModal = document.getElementById('lightbox-modal');
+	const lightboxImage = document.querySelector('.lightbox-image');
+	const lightboxCaption = document.querySelector('.lightbox-caption');
+	const lightboxClose = document.querySelector('.lightbox-close');
+	const lightboxPrev = document.querySelector('.lightbox-prev');
+	const lightboxNext = document.querySelector('.lightbox-next');
+	
+	let currentImageIndex = 0;
+	let currentGalleryImages = [];
+	
+	// Open lightbox
+	galleryItems.forEach((item, index) => {
+		item.addEventListener('click', function() {
+			const img = this.querySelector('img');
+			const caption = this.querySelector('.image-caption').textContent;
+			
+			// Get current gallery images
+			const activeGallery = document.querySelector('.gallery-section.active');
+			currentGalleryImages = Array.from(activeGallery.querySelectorAll('.gallery-item'));
+			currentImageIndex = currentGalleryImages.indexOf(this);
+			
+			openLightbox(img.src, img.alt, caption);
+		});
+	});
+	
+	function openLightbox(src, alt, caption) {
+		lightboxImage.src = src;
+		lightboxImage.alt = alt;
+		lightboxCaption.textContent = caption;
+		lightboxModal.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+	
+	function closeLightbox() {
+		lightboxModal.classList.remove('active');
+		document.body.style.overflow = '';
+	}
+	
+	// Navigation functions
+	function showPrevImage() {
+		currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : currentGalleryImages.length - 1;
+		const img = currentGalleryImages[currentImageIndex].querySelector('img');
+		const caption = currentGalleryImages[currentImageIndex].querySelector('.image-caption').textContent;
+		
+		lightboxImage.src = img.src;
+		lightboxImage.alt = img.alt;
+		lightboxCaption.textContent = caption;
+	}
+	
+	function showNextImage() {
+		currentImageIndex = currentImageIndex < currentGalleryImages.length - 1 ? currentImageIndex + 1 : 0;
+		const img = currentGalleryImages[currentImageIndex].querySelector('img');
+		const caption = currentGalleryImages[currentImageIndex].querySelector('.image-caption').textContent;
+		
+		lightboxImage.src = img.src;
+		lightboxImage.alt = img.alt;
+		lightboxCaption.textContent = caption;
+	}
+	
+	// Event listeners
+	lightboxClose.addEventListener('click', closeLightbox);
+	lightboxPrev.addEventListener('click', showPrevImage);
+	lightboxNext.addEventListener('click', showNextImage);
+	
+	// Keyboard navigation
+	document.addEventListener('keydown', function(e) {
+		if (lightboxModal.classList.contains('active')) {
+			switch(e.key) {
+				case 'Escape':
+					closeLightbox();
+					break;
+				case 'ArrowLeft':
+					showPrevImage();
+					break;
+				case 'ArrowRight':
+					showNextImage();
+					break;
+			}
+		}
+	});
+	
+	// Close lightbox when clicking outside image
+	lightboxModal.addEventListener('click', function(e) {
+		if (e.target === this) {
+			closeLightbox();
+		}
+	});
+	
+	// Social Sharing
+	function initializeSocialSharing() {
+		const shareButtons = document.querySelectorAll('.share-button');
+		shareButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				const url = window.location.href;
+				const title = document.title;
+				
+				if (navigator.share) {
+					navigator.share({
+						title: title,
+						url: url
+					});
+				} else {
+					// Fallback - copy to clipboard
+					navigator.clipboard.writeText(url).then(() => {
+						alert('Project URL copied to clipboard!');
+					});
+				}
+			});
+		});
+	}
+	
+	initializeSocialSharing();
+	
+	// Scroll animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+	
+	const scrollObserver = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.style.opacity = '1';
+				entry.target.style.transform = 'translateY(0)';
+			}
+		});
+	}, observerOptions);
+	
+	// Animate elements on scroll
+	const animatedElements = document.querySelectorAll('.process-step, .highlight-card, .guarantee-card, .related-project');
+	animatedElements.forEach(element => {
+		element.style.opacity = '0';
+		element.style.transform = 'translateY(30px)';
+		element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+		scrollObserver.observe(element);
+	});
+	
+	// Analytics tracking
+	if (typeof gtag !== 'undefined') {
+		// Track gallery interactions
+		galleryTabs.forEach(tab => {
+			tab.addEventListener('click', function() {
+				gtag('event', 'gallery_tab_click', {
+					'event_category': 'engagement',
+					'event_label': this.getAttribute('data-gallery')
+				});
+			});
+		});
+		
+		// Track lightbox usage
+		galleryItems.forEach(item => {
+			item.addEventListener('click', function() {
+				gtag('event', 'lightbox_open', {
+					'event_category': 'engagement',
+					'event_label': 'project_gallery'
+				});
+			});
+		});
+		
+		// Track CTA clicks
+		document.querySelectorAll('.cta-button').forEach(button => {
+			button.addEventListener('click', function() {
+				gtag('event', 'project_cta_click', {
+					'event_category': 'conversion',
+					'event_label': this.textContent.trim()
+				});
+			});
+		});
+	}
+});
+</script>

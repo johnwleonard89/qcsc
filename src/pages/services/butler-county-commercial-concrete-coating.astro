@@ -1,0 +1,55 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+import { commercialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = commercialServices.retailFlooring;
+
+// County-specific data
+const countyData = {
+  countyName: 'Butler',
+  state: 'Ohio',
+  seo: {
+    title: 'Butler County Ohio Commercial Concrete Coating | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Butler County commercial space with professional concrete coating. Serving Hamilton, Fairfield, West Chester, Mason, and all Butler County businesses with durable, high-performance commercial flooring.',
+    keywords: 'Butler County commercial concrete coating, Hamilton OH commercial flooring, Fairfield business floors, West Chester commercial coating, Butler County commercial floor transformation, professional commercial floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Butler County businesses with professional commercial concrete coating services. Our local expertise ensures we understand the unique needs of Butler County commercial properties, from retail spaces to industrial facilities.',
+    cities: [
+      'Hamilton',
+      'Fairfield', 
+      'Middletown',
+      'West Chester',
+      'Mason',
+      'Springboro',
+      'Monroe',
+      'Trenton',
+      'Oxford',
+      'Ross',
+      'New Miami',
+      'Carlisle',
+      'Lemon Township',
+      'Fairfield Township',
+      'Liberty Township',
+      'Madison Township',
+      'Milford Township',
+      'Morgan Township',
+      'Oxford Township',
+      'Reily Township',
+      'Ross Township',
+      'St. Clair Township',
+      'Union Township',
+      'Wayne Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

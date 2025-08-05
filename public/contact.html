@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Queen City Surface Coatings</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .form-container { 
+            background: #002F4B; 
+            padding: 30px; 
+            border-radius: 10px; 
+            color: white; 
+            margin: 20px 0;
+        }
+        .form-container h2 { 
+            color: #FFC107; 
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #FFC107;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 6px; 
+            border: 2px solid #ddd; 
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .submit-btn { 
+            background: #FFC107; 
+            color: #002F4B; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background: #E6AC00;
+        }
+        .required {
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Queen City Surface Coatings</h1>
+    <p>Get your free estimate today! Fill out the form below and we'll get back to you within 24 hours.</p>
+    
+    <!-- Quote Request Form -->
+    <div class="form-container">
+        <h2>Request Your Free Quote</h2>
+        <form name="quote-request" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <input type="hidden" name="form-name" value="quote-request" />
+            
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="text" id="zipcode" name="zipcode" />
+            </div>
+            
+            <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                    <option value="">Select a service...</option>
+                    <option value="garage-flooring">Garage Flooring</option>
+                    <option value="basement-flooring">Basement Flooring</option>
+                    <option value="commercial-flooring">Commercial Flooring</option>
+                    <option value="metallic-epoxy">Metallic Epoxy</option>
+                    <option value="polyaspartic-coating">Polyaspartic Coating</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project - square footage, timeline, specific requirements, etc."></textarea>
+            </div>
+            
+            <div data-netlify-recaptcha="true"></div>
+            
+            <button type="submit" class="submit-btn">Get My Free Quote</button>
+        </form>
+    </div>
+
+    <!-- Simple Contact Form -->    
+    <div class="form-container">
+        <h2>General Contact</h2>
+        <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <div class="form-group">
+                <label for="contact-name">Name <span class="required">*</span></label>
+                <input type="text" id="contact-name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="contact-email">Email <span class="required">*</span></label>
+                <input type="email" id="contact-email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" />
+            </div>
+            
+            <div class="form-group">
+                <label for="contact-message">Message <span class="required">*</span></label>
+                <textarea id="contact-message" name="message" required placeholder="How can we help you?"></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 8px; margin-top: 20px;">
+        <h3>Other Ways to Reach Us</h3>
+        <p><strong>Phone:</strong> <a href="tel:+15132965525">(513) 296-5525</a></p>
+        <p><strong>Email:</strong> <a href="mailto:john@queencitysurfacecoatings.com">john@queencitysurfacecoatings.com</a></p>
+        <p><strong>Service Areas:</strong> Cincinnati, Northern Kentucky, and surrounding areas</p>
+    </div>
+</body>
+</html>

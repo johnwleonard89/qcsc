@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Industrial Pressure Washing & Protection | Manufacturing Concrete Cleaning | Queen City Surface Coatings',
+    description: 'Professional industrial pressure washing and concrete protection services for manufacturing and industrial facilities in Cincinnati and Northern Kentucky. Heavy-duty cleaning and chemical-resistant protection.',
+    keywords: 'industrial pressure washing, manufacturing concrete cleaning, industrial facility cleaning, chemical resistant protection, heavy duty cleaning, factory maintenance, Cincinnati industrial cleaning'
+  },
+  hero: {
+    tagline: 'Industrial Strength Cleaning',
+    headline: 'Industrial Pressure Washing & Protection',
+    subheadline: 'Engineered for the most demanding industrial environments with extreme-duty cleaning and protection systems that handle chemical contamination, heavy oils, and industrial debris. Maintain operational efficiency and regulatory compliance.',
+    image: {
+      src: '/assets/images/services/pressure-washing.webp',
+      alt: 'Professional industrial pressure washing service - Queen City Surface Coatings industrial maintenance'
+    },
+    ctas: [
+      { text: 'Get Industrial Cleaning Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Industrial Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Mission-Critical Facility Maintenance',
+    content: [
+      'Industrial facilities face extreme contamination challenges that standard cleaning methods cannot handle. Chemical spills, heavy oils, metal particles, and industrial debris create safety hazards, regulatory violations, and operational inefficiencies that can shut down production and cost millions.',
+      'Our industrial pressure washing and protection services provide extreme-duty cleaning solutions engineered for manufacturing, chemical processing, and heavy industrial environments. We restore operational surfaces while applying specialized protective systems that maintain performance under the harshest conditions.'
+    ]
+  },
+  differentiators: {
+    title: 'Industrial Cleaning Service Advantages',
+    subtitle: 'Extreme-duty cleaning systems engineered for industrial performance:',
+    features: [
+      {
+        title: 'Chemical Contamination Removal',
+        description: 'Specialized techniques for removing acids, solvents, oils, and hazardous materials that standard cleaning cannot handle'
+      },
+      {
+        title: 'Regulatory Compliance Focused',
+        description: 'EPA, OSHA, and industry-specific cleaning protocols ensuring compliance with environmental and safety regulations'
+      },
+      {
+        title: 'Heavy Equipment Compatible',
+        description: 'Cleaning around and under heavy machinery, process equipment, and industrial infrastructure without operational disruption'
+      },
+      {
+        title: 'Minimal Production Downtime',
+        description: 'Efficient cleaning processes and flexible scheduling designed to minimize production interruption and maximize uptime'
+      },
+      {
+        title: 'Long-Term Protection Systems',
+        description: 'Chemical-resistant protective coatings that prevent future contamination and extend surface life in harsh environments'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Industrial Cleaning Process',
+    subtitle: 'Precision-engineered approach for demanding industrial environments:',
+    steps: [
+      {
+        number: 1,
+        title: 'Industrial Assessment',
+        items: [
+          'Comprehensive facility contamination evaluation',
+          'Chemical exposure and hazard analysis',
+          'Regulatory compliance requirements review',
+          'Production schedule coordination and planning'
+        ]
+      },
+      {
+        number: 2,
+        title: 'System Engineering',
+        items: [
+          'Custom cleaning protocol development',
+          'Safety and containment system design',
+          'Environmental protection planning',
+          'Specialized equipment and material selection'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Industrial Preparation',
+        items: [
+          'Work area isolation and safety protocols',
+          'Environmental containment systems deployment',
+          'Industrial-grade equipment positioning',
+          'Regulatory compliance documentation'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Precision Cleaning',
+        items: [
+          'High-pressure industrial cleaning systems',
+          'Chemical decontamination procedures',
+          'Specialized removal of industrial contaminants',
+          'Environmental monitoring and quality control'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Protection & Validation',
+        items: [
+          'Industrial-grade protective coating application',
+          'Performance testing and validation',
+          'Operations team training and documentation',
+          'Long-term maintenance protocols and support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Industrial Cleaning Applications',
+    subtitle: 'Extreme-duty cleaning services for demanding industrial environments:',
+    items: [
+      {
+        title: 'Manufacturing Facilities',
+        description: 'Heavy-duty cleaning for production environments',
+        features: [
+          'Chemical processing area decontamination',
+          'Heavy oil and grease removal',
+          'Metal particle and debris cleaning',
+          'Production equipment area maintenance'
+        ]
+      },
+      {
+        title: 'Food & Beverage Processing',
+        description: 'FDA-compliant cleaning for food production',
+        features: [
+          'USDA and FDA compliant cleaning protocols',
+          'Antimicrobial treatment applications',
+          'Deep sanitization procedures',
+          'Food safety compliance documentation'
+        ]
+      },
+      {
+        title: 'Chemical Processing',
+        description: 'Hazardous material cleaning and decontamination',
+        features: [
+          'Aggressive chemical contamination removal',
+          'Secondary containment area cleaning',
+          'Emergency spill response cleaning',
+          'Environmental compliance procedures'
+        ]
+      },
+      {
+        title: 'Automotive Manufacturing',
+        description: 'Specialized cleaning for automotive production',
+        features: [
+          'Paint booth and spray area cleaning',
+          'Oil and hydraulic fluid removal',
+          'Assembly line maintenance cleaning',
+          'Parts washing and degreasing'
+        ]
+      },
+      {
+        title: 'Pharmaceutical & Biotech',
+        description: 'Cleanroom compatible cleaning systems',
+        features: [
+          'USP compliance for pharmaceutical facilities',
+          'Sterile processing environment cleaning',
+          'Validation and documentation protocols',
+          'cGMP cleaning procedures'
+        ]
+      },
+      {
+        title: 'Power Generation',
+        description: 'Critical infrastructure cleaning and maintenance',
+        features: [
+          'Turbine and generator area cleaning',
+          'Coal ash and debris removal',
+          'Cooling system maintenance cleaning',
+          '24/7 operations compatible scheduling'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready for Industrial-Grade Cleaning?',
+    description: 'Schedule your industrial cleaning assessment today and discover how extreme-duty cleaning and protection systems can maintain your facility\'s operational efficiency and regulatory compliance.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

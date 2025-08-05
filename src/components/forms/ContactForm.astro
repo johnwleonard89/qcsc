@@ -1,0 +1,27 @@
+---
+import { Button, FormInput, FormSelect, FormTextarea } from '@components/odyssey-theme';
+
+const selectOptions = [
+  "Google Search",
+  "Social Media",
+  "Email",
+]
+
+---
+
+<form name="Contact Form" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="Contact Form" />
+  <FormInput type="text" label="Name" name="Name" placeholder="John Doe" />
+  <FormInput type="email" label="Email" name="Email" placeholder="hello@example.com" />
+  <FormSelect label="How Did You Hear About Us?" options={selectOptions} />
+  <FormTextarea label="Message" name="Message" placeholder="Your message here..." />
+  <Button>Submit</Button>
+</form>
+
+<style>
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  seo: {
+    title: 'Cincinnati Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Cincinnati, Ohio. Serving Hyde Park, Over-the-Rhine, Clifton, and all Cincinnati neighborhoods with military precision installation.',
+    keywords: 'Cincinnati concrete coating, Cincinnati concrete services, Hyde Park OH epoxy flooring, Over-the-Rhine concrete coating, Clifton garage floors, Cincinnati residential coating, commercial concrete Cincinnati Ohio'
+  },
+  hero: {
+    tagline: 'Cincinnati Excellence',
+    headline: 'Professional Concrete Coating Services in Cincinnati, Ohio',
+    subheadline: 'Transform your Cincinnati property with expert concrete coating services. From Hyde Park to Over-the-Rhine, Clifton to Downtown, we deliver military precision installation throughout Cincinnati with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Cincinnati, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Cincinnati properties, from historic neighborhoods to modern developments.',
+    neighborhoods: [
+      'Hyde Park',
+      'Over-the-Rhine',
+      'Clifton',
+      'Mount Adams',
+      'Oakley',
+      'Northside',
+      'Price Hill',
+      'Westwood',
+      'East Walnut Hills',
+      'Madisonville',
+      'Walnut Hills',
+      'Columbia-Tusculum',
+      'Pleasant Ridge',
+      'Bond Hill',
+      'Avondale',
+      'Corryville',
+      'Downtown',
+      'West End',
+      'Riverside',
+      'South Cumminsville',
+      'Mount Auburn',
+      'Camp Washington',
+      'Carthage',
+      'Hartwell',
+      'Mount Healthy',
+      'College Hill',
+      'Winton Hills',
+      'English Woods',
+      'Roselawn',
+      'Kennedy Heights'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'University of Cincinnati',
+      'Cincinnati Zoo',
+      'Fountain Square',
+      'Great American Ball Park',
+      'Paul Brown Stadium',
+      'Cincinnati Museum Center',
+      'Eden Park',
+      'Findlay Market',
+      'Cincinnati Art Museum',
+      'Music Hall',
+      'Taft Museum of Art',
+      'National Underground Railroad Freedom Center',
+      'Cincinnati Observatory',
+      'Krohn Conservatory'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

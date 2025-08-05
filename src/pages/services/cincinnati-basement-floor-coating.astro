@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the basement floor coatings service from residential services
+const basementFloorService = servicesConfig.residential.services.find(s => s.title === "Basement Floor Coatings");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: basementFloorService,
+  seo: {
+    title: 'Cincinnati Basement Floor Coatings | Waterproof Basement Flooring | Queen City Surface Coatings',
+    description: 'Professional basement floor coatings in Cincinnati, Ohio. Moisture protection and beautiful finishes for Hyde Park, Clifton, Oakley, and all Cincinnati basements.',
+    keywords: 'Cincinnati basement floor coating, Cincinnati basement flooring, Hyde Park basement coating, Clifton basement floors, Oakley basement epoxy, Cincinnati waterproof basement'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional basement floor coating services throughout Cincinnati, Ohio. We specialize in moisture-resistant solutions perfect for Cincinnati\'s climate and soil conditions.',
+    neighborhoods: [
+      'Hyde Park',
+      'Over-the-Rhine',
+      'Clifton',
+      'Mount Adams',
+      'Oakley',
+      'Northside',
+      'Price Hill',
+      'Westwood',
+      'East Walnut Hills',
+      'Madisonville',
+      'Walnut Hills',
+      'Columbia-Tusculum',
+      'Pleasant Ridge',
+      'Bond Hill',
+      'Avondale',
+      'Corryville',
+      'Downtown',
+      'West End',
+      'Riverside',
+      'South Cumminsville'
+    ],
+    landmarks: [
+      'Downtown Cincinnati',
+      'University of Cincinnati',
+      'Cincinnati Zoo',
+      'Fountain Square',
+      'Great American Ball Park',
+      'Paul Brown Stadium',
+      'Cincinnati Museum Center',
+      'Eden Park',
+      'Findlay Market',
+      'Cincinnati Art Museum'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

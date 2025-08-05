@@ -1,0 +1,170 @@
+---
+---
+
+<form class="quote-form" method="POST" data-netlify="true" name="quote-request" data-netlify-recaptcha="true">
+	<input type="hidden" name="form-name" value="quote-request" />
+	<div class="form-header">
+		<h3>Request a Free Quote</h3>
+		<p>Get your personalized quote in minutes</p>
+	</div>
+
+	<div class="form-row">
+		<div class="form-group">
+			<label for="name">Full Name *</label>
+			<input type="text" id="name" name="name" required />
+		</div>
+		<div class="form-group">
+			<label for="phone">Phone *</label>
+			<input type="tel" id="phone" name="phone" required />
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="form-group">
+			<label for="email">Email *</label>
+			<input type="email" id="email" name="email" required />
+		</div>
+		<div class="form-group">
+			<label for="zipcode">Zip Code</label>
+			<input type="text" id="zipcode" name="zipcode" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="service">Service Needed</label>
+		<select id="service" name="service">
+			<option value="">Select a service...</option>
+			<option value="garage-flooring">Garage Flooring</option>
+			<option value="basement-flooring">Basement Flooring</option>
+			<option value="commercial-flooring">Commercial Flooring</option>
+			<option value="industrial-flooring">Industrial Flooring</option>
+			<option value="other">Other</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label for="message">Project Details</label>
+		<textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+	</div>
+
+	<div data-netlify-recaptcha="true"></div>
+
+	<button type="submit">Get My Free Quote</button>
+</form>
+
+<style>
+.quote-form {
+	background: #002F4B;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.form-header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.form-header h3 {
+	color: #FFC107;
+	margin-bottom: 0.5rem;
+	font-size: 1.75rem;
+	font-weight: 700;
+}
+
+.form-header p {
+	color: rgba(255, 255, 255, 0.9);
+	margin: 0;
+	font-size: 1rem;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: white;
+	font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+	width: 100%;
+	padding: 0.75rem;
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 6px;
+	font-size: 1rem;
+	font-family: inherit;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+	background: rgba(255, 255, 255, 0.95);
+	color: #002F4B;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+	color: rgba(0, 47, 75, 0.6);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+	outline: none;
+	border-color: #FFC107;
+	background: white;
+	box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.form-group textarea {
+	resize: vertical;
+	min-height: 100px;
+	font-family: inherit;
+}
+
+button {
+	width: 100%;
+	background: #FFC107;
+	color: #002F4B;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 6px;
+	font-size: 1.1rem;
+	font-weight: 700;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-top: 1rem;
+	box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+button:hover {
+	background: #E6AC00;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 16px rgba(255, 193, 7, 0.4);
+}
+
+@media (max-width: 768px) {
+	.form-row {
+		grid-template-columns: 1fr;
+	}
+	
+	.quote-form {
+		padding: 1.5rem;
+		margin: 0 1rem;
+	}
+}
+</style>
+
+

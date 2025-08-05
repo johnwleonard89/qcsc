@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Florence',
+  state: 'Kentucky',
+  county: 'Boone',
+  seo: {
+    title: 'Florence Kentucky Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Florence, Kentucky. Serving Burlington Pike, Mall Road, and all Florence neighborhoods with military precision installation.',
+    keywords: 'Florence concrete coating, Florence concrete services, Burlington Pike KY epoxy flooring, Mall Road concrete coating, Florence garage floors, Florence residential coating, commercial concrete Florence Kentucky'
+  },
+  hero: {
+    tagline: 'Florence Excellence',
+    headline: 'Professional Concrete Coating Services in Florence, Kentucky',
+    subheadline: 'Transform your Florence property with expert concrete coating services. From Burlington Pike to Mall Road, we deliver military precision installation throughout Florence with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Florence, Kentucky, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Florence properties, from established neighborhoods to growing commercial districts.',
+    neighborhoods: [
+      'Burlington Pike',
+      'Mall Road',
+      'Turfway Road',
+      'Mt. Zion Road',
+      'Houston Road',
+      'Ewing Boulevard',
+      'Dixie Highway',
+      'Commonwealth Avenue',
+      'Ridge Road',
+      'Industrial Road',
+      'Donaldson Highway',
+      'US-42',
+      'KY-18',
+      'Florence Station',
+      'Boone County',
+      'Northern Kentucky',
+      'Turfway Park Area',
+      'Florence Freedom Stadium',
+      'Florence Government Center',
+      'Boone Woods'
+    ],
+    landmarks: [
+      'Florence Government Center',
+      'Turfway Park',
+      'Florence Freedom Stadium',
+      'Florence Mall',
+      'Boone County Library',
+      'Boone County High School',
+      'St. Elizabeth Florence',
+      'Northern Kentucky University',
+      'Florence Antique Mall',
+      'Boone County Arboretum',
+      'Cincinnati/Northern Kentucky Airport',
+      'Florence YMCA',
+      'Boone County Parks',
+      'Gunpowder Creek Park',
+      'Central Park Florence'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

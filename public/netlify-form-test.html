@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netlify Form Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>Netlify Form Detection Test</h1>
+    
+    <!-- Test Form 1: Quote Request -->
+    <form name="quote-request" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+        <input type="hidden" name="form-name" value="quote-request" />
+        <h2>Quote Request Form</h2>
+        
+        <label>Name: <input type="text" name="name" required /></label><br><br>
+        <label>Email: <input type="email" name="email" required /></label><br><br>
+        <label>Phone: <input type="tel" name="phone" required /></label><br><br>
+        <label>Service: 
+            <select name="service">
+                <option value="garage-flooring">Garage Flooring</option>
+                <option value="basement-flooring">Basement Flooring</option>
+                <option value="commercial-flooring">Commercial Flooring</option>
+            </select>
+        </label><br><br>
+        <label>Message: <textarea name="message" rows="4"></textarea></label><br><br>
+        
+        <div data-netlify-recaptcha="true"></div>
+        
+        <button type="submit">Submit Quote Request</button>
+    </form>
+
+    <hr>
+
+    <!-- Test Form 2: Contact -->
+    <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <h2>Contact Form</h2>
+        
+        <label>Name: <input type="text" name="name" required /></label><br><br>
+        <label>Email: <input type="email" name="email" required /></label><br><br>
+        <label>Subject: <input type="text" name="subject" /></label><br><br>
+        <label>Message: <textarea name="message" rows="4" required></textarea></label><br><br>
+        
+        <button type="submit">Send Message</button>
+    </form>
+
+    <hr>
+
+    <!-- Test Form 3: Newsletter -->
+    <form name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <h2>Newsletter Signup</h2>
+        
+        <label>Email: <input type="email" name="email" required /></label><br><br>
+        
+        <button type="submit">Subscribe</button>
+    </form>
+    
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Deploy this file to Netlify</li>
+        <li>Check your Netlify dashboard under "Forms"</li>
+        <li>These forms should appear automatically after deployment</li>
+        <li>Test by submitting each form</li>
+    </ol>
+</body>
+</html>

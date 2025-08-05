@@ -1,0 +1,185 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+
+const serviceData = {
+  seo: {
+    title: 'Residential Cove Install Services | Seamless Floor-to-Wall Transitions | Queen City Surface Coatings',
+    description: 'Professional residential cove base installation creating seamless floor-to-wall transitions for homes in Cincinnati and Northern Kentucky. Basements, garages, kitchens, and utility rooms.',
+    keywords: 'residential cove install, home cove base, seamless floor transitions, basement cove install, garage cove base, kitchen floor-to-wall, Cincinnati residential flooring'
+  },
+  hero: {
+    tagline: 'Residential Excellence',
+    headline: 'Residential Cove Install Services',
+    subheadline: 'Transform your home with professional cove installations that create seamless, hygienic floor-to-wall transitions. Perfect for basements, garages, kitchens, and utility rooms where cleanliness and modern aesthetics matter.',
+    image: {
+      src: '/assets/images/services/cove-install.webp',
+      alt: 'Professional residential cove base installation - Queen City Surface Coatings home services'
+    },
+    ctas: [
+      { text: 'Get Free Home Quote', href: '/company/contact#quote-form', type: 'primary' },
+      { text: 'View Home Projects', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Seamless Home Floor Transitions',
+    content: [
+      'Our residential cove installation services eliminate the traditional 90-degree corner between floors and walls, creating smooth, curved transitions that are easier to clean and maintain. This modern upgrade enhances both the functionality and appearance of your home\'s interior spaces.',
+      'From basement renovations to garage makeovers and kitchen upgrades, our professional cove systems provide superior cleanliness, prevent moisture infiltration, and create a polished, contemporary look that increases your property value.'
+    ]
+  },
+  differentiators: {
+    title: 'Home Cove Installation Benefits',
+    subtitle: 'Professional cove systems transform your home\'s functionality and appearance:',
+    features: [
+      {
+        title: 'Easier Home Maintenance',
+        description: 'Eliminates hard-to-clean corners in basements, garages, and utility rooms, making floor cleaning quick and efficient with standard household equipment'
+      },
+      {
+        title: 'Modern Home Aesthetics',
+        description: 'Creates clean, contemporary lines that enhance your home\'s interior design and provide a premium, finished appearance throughout your living spaces'
+      },
+      {
+        title: 'Moisture Protection',
+        description: 'Prevents water infiltration behind walls in basements, bathrooms, and laundry rooms, protecting against mold, mildew, and structural damage'
+      },
+      {
+        title: 'Increased Property Value',
+        description: 'Professional cove installations represent quality upgrades that enhance your home\'s appeal to future buyers and increase overall property value'
+      },
+      {
+        title: 'Durable Family-Friendly Solution',
+        description: 'Creates surfaces that withstand family life, pet traffic, and daily household activities while maintaining their appearance over time'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Home Installation Process',
+    subtitle: 'Careful, professional installation with minimal disruption to your daily routine:',
+    steps: [
+      {
+        number: 1,
+        title: 'Home Assessment',
+        items: [
+          'Free in-home consultation and measurements',
+          'Room evaluation and condition assessment',
+          'Design recommendations and material options',
+          'Transparent pricing and timeline discussion'
+        ]
+      },
+      {
+        number: 2,
+        title: 'Project Planning',
+        items: [
+          'Scheduling around your family\'s routine',
+          'Room preparation and protection planning',
+          'Material delivery coordination',
+          'Clear communication throughout process'
+        ]
+      },
+      {
+        number: 3,
+        title: 'Surface Preparation',
+        items: [
+          'Careful furniture and belongings protection',
+          'Wall cleaning and surface preparation',
+          'Minor repair work as needed',
+          'Proper ventilation and safety measures'
+        ]
+      },
+      {
+        number: 4,
+        title: 'Professional Installation',
+        items: [
+          'Precision cove formation and application',
+          'Quality workmanship with attention to detail',
+          'Clean, organized work environment',
+          'Real-time progress updates'
+        ]
+      },
+      {
+        number: 5,
+        title: 'Final Walkthrough',
+        items: [
+          'Complete quality inspection with homeowner',
+          'Thorough cleanup and restoration',
+          'Care and maintenance instructions',
+          'Warranty documentation and support'
+        ]
+      }
+    ]
+  },
+  collections: {
+    title: 'Perfect Home Applications',
+    subtitle: 'Transform multiple areas of your home with professional cove installations:',
+    items: [
+      {
+        title: 'Finished Basements',
+        description: 'Create premium finished spaces with seamless transitions',
+        features: [
+          'Recreation room upgrades',
+          'Home office and workout spaces',
+          'Guest suite enhancements',
+          'Entertainment area finishing'
+        ]
+      },
+      {
+        title: 'Garage Makeovers',
+        description: 'Professional garage upgrades with seamless finishing',
+        features: [
+          'Workshop and hobby space organization',
+          'Multi-car garage enhancements',
+          'Storage area improvements',
+          'Vehicle showroom aesthetics'
+        ]
+      },
+      {
+        title: 'Kitchen & Dining Areas',
+        description: 'Modern kitchen upgrades with seamless floor transitions',
+        features: [
+          'Easy-clean kitchen floors',
+          'Pantry and storage area upgrades',
+          'Dining room enhancements',
+          'High-traffic area durability'
+        ]
+      },
+      {
+        title: 'Laundry & Utility Rooms',
+        description: 'Practical upgrades for hardworking home spaces',
+        features: [
+          'Moisture-resistant installations',
+          'Easy maintenance solutions',
+          'Modern utility room aesthetics',
+          'Spill and splash protection'
+        ]
+      },
+      {
+        title: 'Home Gyms & Studios',
+        description: 'Professional fitness space enhancements',
+        features: [
+          'Exercise equipment protection',
+          'Easy cleaning after workouts',
+          'Professional studio appearance',
+          'Sweat and moisture resistance'
+        ]
+      },
+      {
+        title: 'Mudrooms & Entryways',
+        description: 'Welcome guests with seamless, easy-clean transitions',
+        features: [
+          'High-traffic durability',
+          'Weather and mud resistance',
+          'Pet-friendly installations',
+          'Welcoming home appearance'
+        ]
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Upgrade Your Home?',
+    description: 'Schedule your free in-home consultation today and discover how residential cove installations can enhance your home\'s functionality, cleanliness, and value.'
+  }
+};
+---
+
+<PremiumServiceTemplate {...serviceData} />

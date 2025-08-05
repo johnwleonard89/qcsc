@@ -1,0 +1,53 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the joint removal & repair service from residential services
+const jointRepairService = servicesConfig.residential.services.find(s => s.title === "Joint Removal & Repair");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: jointRepairService,
+  seo: {
+    title: 'Dayton Residential Joint Removal & Repair | Professional Concrete Joint Services | Queen City Surface Coatings',
+    description: 'Professional residential joint removal and repair in Dayton, Ohio. Expansion joint replacement and control joint sealing for homes throughout Dayton area.',
+    keywords: 'Dayton residential joint repair, Dayton concrete joint removal, expansion joint replacement Dayton, residential joint sealing Dayton'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional residential joint removal and repair services throughout Dayton, Ohio. Our waterproof joint systems ensure long-lasting protection for residential concrete surfaces.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Fairborn',
+      'Huber Heights',
+      'Miamisburg',
+      'Springboro',
+      'West Carrollton',
+      'Vandalia',
+      'Trotwood',
+      'Englewood',
+      'Clayton',
+      'Union',
+      'Riverside',
+      'Moraine',
+      'Belmont',
+      'Five Oaks',
+      'Dayton View',
+      'Wright View'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

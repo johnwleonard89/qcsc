@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the metallic epoxy service from decorative services
+const metallicEpoxyService = servicesConfig.decorative.services.find(s => s.title === "Metallic Epoxy");
+
+const cityData = {
+  cityName: 'Dayton',
+  state: 'Ohio',
+  county: 'Montgomery',
+  service: metallicEpoxyService,
+  seo: {
+    title: 'Dayton Metallic Epoxy Flooring | Stunning 3D Floor Effects | Queen City Surface Coatings',
+    description: 'Stunning metallic epoxy flooring in Dayton, Ohio. Unique 3D effects for Oakwood, Kettering, Centerville, and all Dayton residential and commercial spaces.',
+    keywords: 'Dayton metallic epoxy, Dayton metallic flooring, Oakwood metallic epoxy, Kettering metallic floors, Centerville metallic coating, Dayton decorative flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates stunning metallic epoxy flooring throughout Dayton, Ohio. Our artistic metallic systems transform Dayton properties with unique, flowing patterns and dimensional beauty.',
+    neighborhoods: [
+      'Oakwood',
+      'Kettering',
+      'Centerville',
+      'Beavercreek',
+      'Washington Township',
+      'Sugarcreek Township',
+      'Miami Township',
+      'Springboro',
+      'Bellbrook',
+      'Yellow Springs',
+      'Xenia',
+      'Fairborn',
+      'Huber Heights',
+      'Vandalia',
+      'Clayton',
+      'Englewood',
+      'Union',
+      'Trotwood',
+      'Miamisburg',
+      'West Carrollton'
+    ],
+    landmarks: [
+      'University of Dayton',
+      'Wright-Patterson Air Force Base',
+      'Dayton Art Institute',
+      'Carillon Historical Park',
+      'Cox Arboretum MetroPark',
+      'National Museum of the U.S. Air Force',
+      'RiverScape MetroPark',
+      'Wegerzyn Gardens MetroPark',
+      'The Greene Town Center',
+      'Town & Country Shopping Center'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

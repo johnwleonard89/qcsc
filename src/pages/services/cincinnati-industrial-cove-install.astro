@@ -1,0 +1,35 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const service = servicesConfig.industrial.services.find(s => s.title === "Cove Install");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio', 
+  county: 'Hamilton',
+  service: service,
+  seo: {
+    title: 'Cincinnati Industrial Cove Install | Professional Industrial Floor-to-Wall Transitions | Queen City Surface Coatings',
+    description: 'Professional industrial cove base installation in Cincinnati, Ohio. Seamless floor-to-wall transitions for enhanced cleanability in industrial facilities.',
+    keywords: 'Cincinnati industrial cove install, industrial floor-to-wall transition, industrial flooring, seamless cove base, industrial concrete services'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides professional industrial cove installation services throughout Cincinnati, Ohio.',
+    neighborhoods: [
+      'Hyde Park', 'Clifton', 'Mount Adams', 'Oakley', 'East Walnut Hills',
+      'Walnut Hills', 'Columbia-Tusculum', 'Pleasant Ridge', 'Madisonville',
+      'Over-the-Rhine', 'Downtown', 'West End', 'Price Hill', 'Westwood', 'Northside'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,169 @@
+---
+import CountySpecificServiceTemplate from '../../templates/CountySpecificServiceTemplate.astro';
+
+// Use kitchen floor coating service data - create a basic structure since it's not in premiumServiceData.js
+const baseServiceData = {
+  seo: {
+    title: 'Kitchen Floor Coatings | Create Your Culinary Sanctuary | Queen City Surface Coatings',
+    description: 'Transform your kitchen with professional floor coatings. Food-safe, hygienic surfaces that resist spills and stains while creating the culinary sanctuary you\'ve always dreamed of.',
+    keywords: 'kitchen floor coating, culinary flooring, food-safe coating, kitchen renovation, residential kitchen floors, hygienic kitchen surfaces'
+  },
+  hero: {
+    tagline: 'Create Your Culinary Sanctuary',
+    headline: 'Professional Kitchen Floor Coatings',
+    subheadline: 'Transform your kitchen into the heart of your home with food-safe, hygienic floor coatings that resist spills and stains while creating a beautiful space where memories are made.',
+    image: {
+      src: '/assets/images/new-projects/black_res_kitchen.webp',
+      alt: 'Beautiful transformed kitchen with professional floor coating'
+    },
+    ctas: [
+      { text: 'Start My Kitchen Transformation', href: '/company/contact', type: 'primary' },
+      { text: 'See Kitchen Results', href: '/portfolio', type: 'outline' }
+    ]
+  },
+  intro: {
+    title: 'Why Choose Professional Kitchen Floor Coatings?',
+    content: [
+      'Your kitchen is the heart of your home, where families gather and memories are made. Our professional kitchen floor coatings create food-safe, hygienic surfaces that are as beautiful as they are functional.',
+      'Designed specifically for culinary environments, our coatings resist spills, stains, and heat while providing easy maintenance for busy families.'
+    ]
+  },
+  differentiators: {
+    title: 'Kitchen Floor Coating Benefits',
+    subtitle: 'Professional installation delivers superior results',
+    features: [
+      {
+        title: 'Food-Safe & Hygienic',
+        description: 'Our coatings create non-porous surfaces that prevent bacteria growth and are easy to sanitize.'
+      },
+      {
+        title: 'Spill & Stain Resistant',
+        description: 'Advanced formulations resist common kitchen spills, oils, and stains for lasting beauty.'
+      },
+      {
+        title: 'Heat & Impact Resistant',
+        description: 'Engineered to withstand dropped pots, hot spills, and daily kitchen activities.'
+      },
+      {
+        title: 'Easy Maintenance',
+        description: 'Simple cleaning keeps your kitchen floors looking perfect for busy families.'
+      }
+    ]
+  },
+  process: {
+    title: 'Our Kitchen Floor Coating Process',
+    subtitle: 'Military precision installation for lasting results',
+    steps: [
+      {
+        number: 1,
+        title: 'Kitchen Assessment',
+        items: ['Evaluate existing flooring', 'Test for moisture and adhesion', 'Plan around appliances and cabinets']
+      },
+      {
+        number: 2,
+        title: 'Surface Preparation',
+        items: ['Professional cleaning', 'Surface profiling', 'Crack and hole repair']
+      },
+      {
+        number: 3,
+        title: 'Primer Application',
+        items: ['Food-safe primer system', 'Enhanced adhesion', 'Moisture barrier']
+      },
+      {
+        number: 4,
+        title: 'Base Coating',
+        items: ['High-performance base coat', 'Even coverage', 'Proper curing time']
+      },
+      {
+        number: 5,
+        title: 'Protective Topcoat',
+        items: ['Clear protective finish', 'Enhanced durability', 'Final inspection']
+      }
+    ]
+  },
+  collections: {
+    title: 'Kitchen Floor Coating Options',
+    subtitle: 'Choose the perfect system for your culinary space',
+    items: [
+      {
+        title: 'Essential Kitchen Coating',
+        description: 'Food-safe, durable coating perfect for family kitchens',
+        features: ['Spill resistant surface', 'Easy cleaning', 'Non-slip texture', 'Heat resistant']
+      },
+      {
+        title: 'Premium Culinary System',
+        description: 'Advanced coating system for serious home chefs',
+        features: ['Superior chemical resistance', 'Enhanced durability', 'Stain-proof surface', 'Commercial-grade performance']
+      },
+      {
+        title: 'Luxury Kitchen Collection',
+        description: 'High-end decorative systems for gourmet kitchens',
+        features: ['Custom color options', 'Decorative effects', 'Ultra-smooth finish', 'Showroom appearance']
+      }
+    ]
+  },
+  contact: {
+    title: 'Ready to Transform Your Kitchen?',
+    description: 'Get your free estimate for professional kitchen floor coating. Create the culinary sanctuary you\'ve always wanted.'
+  }
+};
+
+// County-specific data
+const countyData = {
+  countyName: 'Hamilton',
+  state: 'Ohio',
+  seo: {
+    title: 'Hamilton County Ohio Kitchen Floor Coatings | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Hamilton County kitchen with professional floor coatings. Serving Cincinnati, Mason, Blue Ash, and all Hamilton County communities with food-safe, hygienic kitchen flooring.',
+    keywords: 'Hamilton County kitchen floor coatings, Cincinnati kitchen flooring, Mason OH kitchen coating, Blue Ash culinary floors, Hamilton County kitchen transformation, professional kitchen floors Ohio'
+  },
+  serviceArea: {
+    description: 'Proudly serving all of Hamilton County with professional kitchen floor coating services. Our local expertise ensures we understand the unique needs of Hamilton County kitchens, creating beautiful, functional spaces for families.',
+    cities: [
+      'Cincinnati',
+      'Loveland',
+      'Mason',
+      'Blue Ash',
+      'Springdale',
+      'Forest Park',
+      'Sharonville',
+      'Evendale',
+      'Madeira',
+      'Milford',
+      'Wyoming',
+      'Reading',
+      'Lockland',
+      'Elmwood Place',
+      'Lincoln Heights',
+      'Glendale',
+      'Woodlawn',
+      'Golf Manor',
+      'Deer Park',
+      'Silverton',
+      'Mariemont',
+      'Terrace Park',
+      'Fairfax',
+      'Indian Hill',
+      'Montgomery',
+      'Symmes Township',
+      'Sycamore Township',
+      'Delhi Township',
+      'Green Township',
+      'Harrison Township',
+      'Miami Township',
+      'Springfield Township',
+      'Colerain Township',
+      'Whitewater Township',
+      'Crosby Township'
+    ]
+  }
+};
+---
+
+<CountySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  serviceArea={countyData.serviceArea}
+/>

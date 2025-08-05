@@ -1,0 +1,70 @@
+---
+import CityServicesTemplate from '../../templates/CityServicesTemplate.astro';
+
+const cityData = {
+  cityName: 'Middletown',
+  state: 'Ohio',
+  county: 'Butler',
+  seo: {
+    title: 'Middletown Ohio Concrete Coating Services | Professional Installation | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Middletown, Ohio. Serving Manchester Road, Central Avenue, and all Middletown neighborhoods with military precision installation.',
+    keywords: 'Middletown concrete coating, Middletown concrete services, Manchester Road OH epoxy flooring, Central Avenue concrete coating, Middletown garage floors, Middletown residential coating, commercial concrete Middletown Ohio'
+  },
+  hero: {
+    tagline: 'Middletown Excellence',
+    headline: 'Professional Concrete Coating Services in Middletown, Ohio',
+    subheadline: 'Transform your Middletown property with expert concrete coating services. From Manchester Road to Central Avenue, we deliver military precision installation throughout Middletown with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Middletown, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Middletown properties, from historic downtown to suburban developments.',
+    neighborhoods: [
+      'Downtown Middletown',
+      'Manchester Road',
+      'Central Avenue',
+      'Dixie Highway',
+      'University Boulevard',
+      'Roosevelt Boulevard',
+      'Verity Parkway',
+      'Germantown Road',
+      'Franklin Street',
+      'Main Street',
+      'First Avenue',
+      'Second Avenue',
+      'Third Avenue',
+      'Fourth Avenue',
+      'Woodside Drive',
+      'Crawford Street',
+      'Marshall Road',
+      'Cincinnati-Dayton Road',
+      'Breiel Boulevard',
+      'Towne Boulevard'
+    ],
+    landmarks: [
+      'Middletown City Hall',
+      'Miami University Middletown',
+      'Sorg Opera House',
+      'Middletown High School',
+      'Smith Park',
+      'Bicentennial Commons',
+      'Middletown Sports Complex',
+      'Armco Park',
+      'Miami Valley Hospital',
+      'Atrium Medical Center',
+      'Middletown Regional Hospital',
+      'Great Miami River',
+      'Butler County',
+      'Middletown Regional Airport',
+      'Central Park'
+    ]
+  }
+};
+---
+
+<CityServicesTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  hero={cityData.hero}
+  serviceArea={cityData.serviceArea}
+/>

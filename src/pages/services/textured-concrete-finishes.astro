@@ -1,0 +1,67 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { texturedConcreteServices } from '../../data/premiumServiceData.js';
+
+const serviceData = texturedConcreteServices.texturedConcreteFinishes;
+
+// Add navigation links to the collections items
+const collectionsWithLinks = {
+  ...serviceData.collections,
+  items: serviceData.collections.items.map(item => ({
+    ...item,
+    link: `/services/${item.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}`
+  }))
+};
+
+const serviceDataWithLinks = {
+  ...serviceData,
+  collections: collectionsWithLinks
+};
+---
+
+<PremiumServiceTemplate {...serviceDataWithLinks} />
+
+<style>
+/* Add hover effects and links to collection items */
+:global(.collection-card) {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+:global(.collection-card:hover) {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+:global(.collection-card h3) {
+  color: var(--theme-primary);
+  text-decoration: none;
+}
+
+:global(.collection-card h3:hover) {
+  text-decoration: underline;
+}
+</style>
+
+<script>
+// Add click handlers to make collection cards clickable
+document.addEventListener('DOMContentLoaded', function() {
+  const collectionCards = document.querySelectorAll('.collection-card');
+  const links = [
+    '/services/rustic-concrete-wood',
+    '/services/epoxy-tile-patterns', 
+    '/services/flake-systems',
+    '/services/decorative-aggregate-finishes',
+    '/services/stamped-overlay-systems',
+    '/services/hand-troweled-artistic-textures'
+  ];
+  
+  collectionCards.forEach((card, index) => {
+    if (links[index]) {
+      card.addEventListener('click', function() {
+        window.location.href = links[index];
+      });
+    }
+  });
+});
+</script>

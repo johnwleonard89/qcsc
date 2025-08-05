@@ -1,0 +1,103 @@
+{
+  "name": "Queen City Surface Coatings",
+  "short_name": "QCSC",
+  "description": "Premier concrete coating specialists serving Cincinnati tri-state area with veteran-owned precision",
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "lang": "en-US",
+  "categories": ["business", "construction", "services"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "360x640",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Queen City Surface Coatings - Mobile"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Queen City Surface Coatings - Desktop"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Get Free Quote",
+      "short_name": "Quote",
+      "description": "Request a free estimate for your concrete coating project",
+      "url": "/company/contact/",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "View Portfolio",
+      "short_name": "Portfolio",
+      "description": "See our completed concrete coating projects",
+      "url": "/portfolio/",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "short_name": "Services",
+      "description": "Explore our concrete coating services",
+      "url": "/services/",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Call Now",
+      "short_name": "Call",
+      "description": "Call (513) 296-5525 for immediate service",
+      "url": "tel:+15132965525",
+      "icons": [
+        {
+          "src": "/favicon.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ]
+}

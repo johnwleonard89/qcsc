@@ -1,0 +1,12 @@
+---
+import StandardPageTemplate from '../../templates/StandardPageTemplate.astro';
+import { servicePages } from '../../data/pageTemplates.js';
+
+const pageData = servicePages.commercialConcreteCoating;
+---
+
+<StandardPageTemplate 
+  seo={pageData.seo}
+  hero={pageData.hero}
+  content={pageData.content}
+/>

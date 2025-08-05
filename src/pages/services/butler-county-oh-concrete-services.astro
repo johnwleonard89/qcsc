@@ -1,0 +1,51 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Butler',
+  state: 'Ohio',
+  seo: {
+    title: 'Butler County Ohio Concrete Coating Services | West Chester, Mason, Hamilton | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Butler County, Ohio. Serving West Chester, Mason, Hamilton, Fairfield, and all Butler County communities with military precision installation.',
+    keywords: 'Butler County concrete coating, West Chester OH epoxy flooring, Mason concrete services, Hamilton Ohio concrete coating, Butler County residential coating, commercial concrete Butler County Ohio'
+  },
+  hero: {
+    tagline: 'Butler County Excellence',
+    headline: 'Professional Concrete Coating Services in Butler County, Ohio',
+    subheadline: 'Transform your Butler County property with expert concrete coating services. From West Chester to Hamilton, Mason to Fairfield, we deliver military precision installation throughout Butler County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Butler County, Ohio, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Butler County properties, from growing suburban developments to established neighborhoods.',
+    cities: [
+      'West Chester',
+      'Mason',
+      'Hamilton',
+      'Fairfield',
+      'Middletown',
+      'Monroe',
+      'Trenton',
+      'Lebanon',
+      'Springboro',
+      'Franklin',
+      'Carlisle',
+      'Seven Mile',
+      'Somerville',
+      'Oxford',
+      'Millville',
+      'New Miami',
+      'Ross',
+      'Shandon',
+      'Jacksonburg',
+      'Collinsville'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

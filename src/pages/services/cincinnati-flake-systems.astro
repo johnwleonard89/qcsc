@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const flakeSystemsService = servicesConfig.decorative.services.find(s => s.title === "Flake Systems");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: flakeSystemsService,
+  seo: {
+    title: 'Cincinnati Flake Systems | Decorative Concrete Flooring | Queen City Surface Coatings',
+    description: 'Beautiful decorative flake systems in Cincinnati, Ohio. Unlimited color combinations for Hyde Park, Clifton, Oakley, and all Cincinnati residential and commercial spaces.',
+    keywords: 'Cincinnati flake systems, Cincinnati decorative flooring, Hyde Park decorative floors, Clifton flake epoxy, Oakley decorative coating, Cincinnati colorful flooring'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates stunning decorative flake systems throughout Cincinnati, Ohio. Our flake systems combine beauty with performance, offering endless design possibilities for Cincinnati properties.',
+    neighborhoods: [
+      'Hyde Park', 'Mount Lookout', 'Mount Adams', 'Clifton', 'Gaslight District',
+      'Oakley', 'Madisonville', 'Indian Hill', 'Madeira', 'Mariemont', 'Terrace Park',
+      'Montgomery', 'Blue Ash', 'Mason', 'West Chester', 'Loveland', 'Evendale',
+      'Sharonville', 'Springdale', 'Sycamore Township'
+    ],
+    landmarks: [
+      'Eden Park', 'Hyde Park Square', 'Oakley Station', 'Gaslight District',
+      'Clifton Cultural Arts Center', 'Mariemont Square', 'Montgomery Inn',
+      'Kenwood Towne Centre', 'Tri-County Mall', 'Cincinnati Nature Center'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

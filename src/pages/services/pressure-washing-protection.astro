@@ -1,0 +1,16 @@
+---
+import PremiumServiceTemplate from '../../templates/PremiumServiceTemplate.astro';
+import { specialtyServices } from '../../data/premiumServiceData.js';
+
+const pageData = specialtyServices.pressureWashingProtection;
+---
+
+<PremiumServiceTemplate 
+  seo={pageData.seo}
+  hero={pageData.hero}
+  intro={pageData.intro}
+  differentiators={pageData.differentiators}
+  process={pageData.process}
+  collections={pageData.collections}
+  contact={pageData.contact}
+/>

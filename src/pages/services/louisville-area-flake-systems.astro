@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+// Get the flake systems service from decorative services
+const flakeSystemsService = servicesConfig.decorative.services.find(s => s.title === "Flake Systems");
+
+const cityData = {
+  cityName: 'Louisville Area',
+  state: 'Kentucky',
+  county: 'Jefferson',
+  service: flakeSystemsService,
+  seo: {
+    title: 'Louisville Area Flake Systems | Decorative Concrete Flakes | Queen City Surface Coatings',
+    description: 'Beautiful decorative flake systems in Louisville, Kentucky. Unlimited color combinations for garages, basements, and commercial spaces throughout Louisville area.',
+    keywords: 'Louisville flake systems, Louisville decorative flakes, Louisville concrete flakes, decorative epoxy flakes Louisville, garage flakes Louisville'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings provides beautiful decorative flake systems throughout the Louisville area, Kentucky. Our flake systems combine beauty with performance, offering endless color combinations and superior durability for any space.',
+    neighborhoods: [
+      'Highlands',
+      'Cherokee Triangle',
+      'Germantown',
+      'Old Louisville',
+      'Clifton',
+      'Crescent Hill',
+      'St. Matthews',
+      'Middletown',
+      'Anchorage',
+      'Jeffersontown',
+      'Hurstbourne',
+      'Lyndon',
+      'Douglass Hills',
+      'Graymoor-Devondale',
+      'Prospect',
+      'Northfield',
+      'Springhurst',
+      'East End',
+      'Butchertown',
+      'Nulu'
+    ],
+    landmarks: [
+      'Churchill Downs',
+      'Louisville Slugger Museum',
+      'Kentucky Derby Museum',
+      'Muhammad Ali Center',
+      'Louisville Waterfront Park',
+      'Kentucky Kingdom',
+      'Louisville Zoo',
+      'Speed Art Museum',
+      'University of Louisville',
+      'Bellarmine University'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,41 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { servicesConfig } from '../../data/servicesData.js';
+
+const naturalStoneService = servicesConfig.decorative.services.find(s => s.title === "Natural Stone Reproductions");
+
+const cityData = {
+  cityName: 'Cincinnati',
+  state: 'Ohio',
+  county: 'Hamilton',
+  service: naturalStoneService,
+  seo: {
+    title: 'Cincinnati Natural Stone Reproductions | Realistic Stone Floor Effects | Queen City Surface Coatings',
+    description: 'Beautiful natural stone reproduction flooring in Cincinnati, Ohio. Authentic stone effects for Hyde Park, Clifton, Oakley, and all Cincinnati luxury properties.',
+    keywords: 'Cincinnati stone reproduction, Cincinnati natural stone flooring, Hyde Park stone effects, Clifton stone reproductions, luxury flooring Cincinnati, decorative stone Cincinnati'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings creates stunning natural stone reproduction flooring throughout Cincinnati, Ohio. Our authentic stone effects deliver the beauty of natural stone with superior durability and consistency.',
+    neighborhoods: [
+      'Hyde Park', 'Mount Lookout', 'Indian Hill', 'Mariemont', 'Terrace Park',
+      'Montgomery', 'Madeira', 'Mount Adams', 'Clifton', 'Gaslight District',
+      'East Walnut Hills', 'Walnut Hills', 'Columbia-Tusculum', 'Pleasant Ridge',
+      'Oakley', 'Madisonville', 'Blue Ash', 'Mason', 'West Chester', 'Loveland'
+    ],
+    landmarks: [
+      'Indian Hill Country Club', 'Hyde Park Square', 'Mariemont Square',
+      'Montgomery Inn', 'Eden Park', 'Mount Adams Incline', 'Clifton Cultural Arts Center',
+      'Cincinnati Art Museum', 'Krohn Conservatory', 'Ault Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  service={cityData.service}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

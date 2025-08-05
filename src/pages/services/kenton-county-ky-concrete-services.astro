@@ -1,0 +1,50 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Kenton',
+  state: 'Kentucky',
+  seo: {
+    title: 'Kenton County Kentucky Concrete Coating Services | Covington, Independence, Florence | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Kenton County, Kentucky. Serving Covington, Independence, Florence, Fort Wright, and all Kenton County communities with military precision installation.',
+    keywords: 'Kenton County concrete coating, Covington KY epoxy flooring, Independence concrete services, Florence Kentucky concrete coating, Kenton County residential coating, commercial concrete Kenton County Kentucky'
+  },
+  hero: {
+    tagline: 'Northern Kentucky Excellence',
+    headline: 'Professional Concrete Coating Services in Kenton County, Kentucky',
+    subheadline: 'Transform your Kenton County property with expert concrete coating services. From Covington to Florence, Independence to Fort Wright, we deliver military precision installation throughout Northern Kentucky with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Kenton County, Kentucky, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Northern Kentucky properties, from historic neighborhoods to modern developments.',
+    cities: [
+      'Covington',
+      'Independence',
+      'Florence',
+      'Fort Wright',
+      'Erlanger',
+      'Taylor Mill',
+      'Villa Hills',
+      'Edgewood',
+      'Ludlow',
+      'Park Hills',
+      'Lakeside Park',
+      'Crestview Hills',
+      'Fort Mitchell',
+      'Kenton Vale',
+      'Elsmere',
+      'Bromley',
+      'Dayton',
+      'Bellevue',
+      'Newport'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

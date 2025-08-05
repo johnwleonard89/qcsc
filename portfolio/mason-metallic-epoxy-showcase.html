@@ -1,0 +1,1711 @@
+---
+import Layout from '../layouts/Page.astro';
+import { Container } from '@components/odyssey-theme';
+
+const seo = {
+	title: 'Mason Metallic Epoxy Showcase | Premium Decorative Flooring Project',
+	description: 'Stunning metallic epoxy transformation in Mason, OH. See our premium decorative flooring installation with custom color blends and artistic techniques.',
+	keywords: 'Mason metallic epoxy, decorative epoxy flooring, premium garage flooring, artistic concrete coating, Cincinnati metallic floors, custom epoxy design',
+	type: 'project',
+	breadcrumbs: [
+		{ name: 'Home', url: 'https://queencitysurfacecoatings.com/' },
+		{ name: 'Portfolio', url: 'https://queencitysurfacecoatings.com/portfolio/' },
+		{ name: 'Mason Metallic Epoxy Showcase', url: 'https://queencitysurfacecoatings.com/portfolio/mason-metallic-epoxy-showcase/' }
+	],
+	structuredData: {
+		"@context": "https://schema.org",
+		"@type": "CreativeWork",
+		"name": "Mason Metallic Epoxy Showcase - Premium Decorative Flooring Project",
+		"description": "Artistic metallic epoxy flooring transformation creating stunning visual effects",
+		"image": [
+			"https://queencitysurfacecoatings.com/assets/images/portfolio/mason-metallic/before-main.webp",
+			"https://queencitysurfacecoatings.com/assets/images/portfolio/mason-metallic/after-main.webp"
+		],
+		"creator": {
+			"@type": "LocalBusiness",
+			"name": "Queen City Surface Coatings LLC",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Cincinnati",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			},
+			"telephone": "+1-513-296-5525",
+			"url": "https://queencitysurfacecoatings.com"
+		},
+		"dateCreated": "2024-01-20",
+		"locationCreated": {
+			"@type": "Place",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Mason",
+				"addressRegion": "OH",
+				"addressCountry": "US"
+			}
+		},
+		"about": {
+			"@type": "Service",
+			"name": "Decorative Metallic Epoxy Flooring Installation",
+			"provider": {
+				"@type": "LocalBusiness",
+				"name": "Queen City Surface Coatings LLC"
+			}
+		},
+		"reviewBody": "The metallic finish looks like liquid metal. Absolutely stunning craftsmanship!",
+		"reviewRating": {
+			"@type": "Rating",
+			"ratingValue": "5",
+			"bestRating": "5"
+		}
+	}
+};
+
+const projectData = {
+	id: 'mason-metallic-epoxy-showcase',
+	title: 'Mason Metallic Epoxy Showcase',
+	subtitle: 'Premium Decorative Flooring with Stunning Visual Effects',
+	location: 'Mason, OH',
+	client: 'The Davis Family',
+	projectType: 'Residential',
+	coatingSystem: 'Premium Metallic Epoxy System',
+	projectSize: '450 square feet',
+	duration: '3 days',
+	completedDate: '2024-01-20',
+	projectValue: '$5,400',
+	
+	challenge: 'The Davis family wanted to transform their garage into an entertainment and showcase space. They desired a floor that would be a conversation piece - something truly unique and artistic that would complement their high-end home and serve as a backdrop for their classic car collection.',
+	
+	solution: 'We created a custom metallic epoxy system using our premium decorative techniques. The design features flowing metallic veins that create depth and movement, resembling molten metal or natural stone patterns. Multiple metallic pigments were skillfully blended to achieve a one-of-a-kind artistic finish.',
+	
+	artisticTechniques: [
+		'Custom color consultation and selection',
+		'Multi-layered metallic application',
+		'Hand-manipulated vein patterns',
+		'Gradient blending techniques',
+		'Specialty finishing tools for texture',
+		'Professional photography for documentation'
+	],
+	
+	colorPalette: {
+		primary: 'Charcoal Pearl Base',
+		secondary: 'Silver Highlights',
+		accent: 'Copper Veining',
+		description: 'A sophisticated blend of dark charcoal with silver highlights and copper accent veining that creates depth and visual interest'
+	},
+	
+	processSteps: [
+		{
+			step: 1,
+			title: 'Design Consultation & Color Selection',
+			description: 'Comprehensive design planning with color samples and mockups',
+			duration: '2 hours',
+			details: 'We worked closely with the Davis family to select the perfect color combination that would complement their space and personal style. Multiple metallic samples were created and tested under different lighting conditions to ensure the final result would meet their vision.'
+		},
+		{
+			step: 2,
+			title: 'Surface Preparation & Priming',
+			description: 'Meticulous concrete preparation for optimal adhesion',
+			duration: '6 hours',
+			details: 'The concrete was diamond ground to create the perfect surface profile. All imperfections were addressed, and the surface was thoroughly cleaned. A high-performance primer was applied to ensure maximum adhesion and to provide the perfect base for the metallic system.'
+		},
+		{
+			step: 3,
+			title: 'Base Coat Application',
+			description: 'Dark charcoal base coat for metallic foundation',
+			duration: '2 hours application + overnight cure',
+			details: 'Applied the charcoal pearl base coat using professional rollers to achieve uniform coverage. This dark base is crucial for the metallic effects to properly develop and provides the depth needed for the final artistic appearance.'
+		},
+		{
+			step: 4,
+			title: 'Metallic Layer Application',
+			description: 'Artistic application of metallic pigments and effects',
+			duration: '4 hours',
+			details: 'The heart of the artistic process - metallic pigments were carefully applied using specialized techniques. Silver highlights were strategically placed, followed by copper accent veining. Each section was hand-manipulated to create flowing, organic patterns that appear to move across the floor.'
+		},
+		{
+			step: 5,
+			title: 'Pattern Development & Refinement',
+			description: 'Fine-tuning the metallic patterns and effects',
+			duration: '2 hours',
+			details: 'Using specialty tools and techniques, the metallic patterns were refined and blended. This critical step determines the final artistic appearance and ensures seamless transitions between different metallic zones.'
+		},
+		{
+			step: 6,
+			title: 'Clear Coat Protection',
+			description: 'Multiple clear coats for durability and depth',
+			duration: '3 hours application + 48 hours cure',
+			details: 'Applied two coats of high-gloss clear protective finish. The first coat locks in the metallic effects, while the second coat provides the final depth and clarity that makes the metallics truly pop. The result is a deep, glass-like finish that showcases the artistry beneath.'
+		}
+	],
+	
+	beforeImages: [
+		{
+			url: '/assets/images/portfolio/mason-metallic/before-main.webp',
+			alt: 'Plain garage floor before metallic transformation',
+			caption: 'Standard garage floor waiting for artistic transformation'
+		},
+		{
+			url: '/assets/images/portfolio/mason-metallic/before-angle.webp',
+			alt: 'Wide angle view before installation',
+			caption: 'Full view of the space before the metallic epoxy installation'
+		},
+		{
+			url: '/assets/images/portfolio/mason-metallic/before-prep.webp',
+			alt: 'Surface after preparation',
+			caption: 'Properly prepared surface ready for metallic system application'
+		}
+	],
+	
+	afterImages: [
+		{
+			url: '/assets/images/portfolio/mason-metallic/after-main.webp',
+			alt: 'Stunning metallic epoxy finish',
+			caption: 'Breathtaking metallic epoxy with flowing patterns and deep reflective finish'
+		},
+		{
+			url: '/assets/images/portfolio/mason-metallic/after-detail.webp',
+			alt: 'Close-up of metallic vein patterns',
+			caption: 'Close-up detail showing the intricate metallic vein patterns and depth'
+		},
+		{
+			url: '/assets/images/portfolio/mason-metallic/after-angle.webp',
+			alt: 'Side angle showing reflective properties',
+			caption: 'Side angle highlighting the mirror-like reflective qualities of the finish'
+		}
+	],
+	
+	testimonial: {
+		quote: "The metallic finish looks like liquid metal. Absolutely stunning craftsmanship! Everyone who sees it is amazed - it's become the centerpiece of our home. John's artistic vision and technical skill created something we never imagined possible. Worth every penny for this level of artistry.",
+		author: "Michael Davis",
+		location: "Mason, OH",
+		rating: 5,
+		date: "January 2024"
+	},
+	
+	technicalSpecs: {
+		'Surface Preparation': 'Diamond grinding to CSP-2/CSP-3 profile',
+		'Primer System': 'High-performance epoxy primer, 6-8 mils DFT',
+		'Base Coat': 'Charcoal pearl pigmented epoxy, 8-10 mils DFT',
+		'Metallic System': 'Premium metallic pigments with specialty binders',
+		'Artistic Technique': 'Hand-manipulated patterns with gradient blending',
+		'Clear Coat': 'High-gloss polyurethane, 4-6 mils DFT (2 coats)',
+		'Total System Thickness': '20-28 mils DFT',
+		'Finish Type': 'High-gloss mirror-like surface',
+		'Expected Lifespan': '15-20+ years with proper maintenance',
+		'Warranty': '5 years material and workmanship'
+	},
+	
+	designElements: [
+		'Flowing organic patterns',
+		'Multi-dimensional depth effects',
+		'Color gradient transitions',
+		'Mirror-like reflective finish',
+		'Unique artistic veining',
+		'Professional color coordination'
+	]
+};
+
+const relatedProjects = [
+	{
+		id: 'cincinnati-garage-transformation',
+		title: 'Cincinnati Garage Transformation',
+		location: 'West Chester, OH',
+		type: 'Residential',
+		image: '/assets/images/portfolio/cincinnati-garage/thumbnail.webp'
+	},
+	{
+		id: 'auto-dealership-showroom',
+		title: 'Auto Dealership Showroom',
+		location: 'Blue Ash, OH',
+		type: 'Commercial',
+		image: '/assets/images/portfolio/auto-showroom/thumbnail.webp'
+	}
+];
+---
+
+<Layout {seo}>
+	<Container>
+		<div class="project-showcase">
+			<!-- Project Header -->
+			<header class="project-header">
+				<nav class="breadcrumb" aria-label="Breadcrumb">
+					<ol>
+						<li><a href="/">Home</a></li>
+						<li><a href="/portfolio/">Portfolio</a></li>
+						<li aria-current="page">Mason Metallic Epoxy Showcase</li>
+					</ol>
+				</nav>
+
+				<div class="header-content">
+					<div class="project-badges">
+						<span class="project-type-badge residential">Residential</span>
+						<span class="coating-badge metallic">Metallic Epoxy</span>
+						<span class="artistic-badge">Artistic Design</span>
+						<span class="featured-badge">Featured Project</span>
+					</div>
+					
+					<h1>{projectData.title}</h1>
+					<p class="project-subtitle">{projectData.subtitle}</p>
+					
+					<div class="project-meta-grid">
+						<div class="meta-item">
+							<span class="meta-icon">📍</span>
+							<div class="meta-content">
+								<span class="meta-label">Location</span>
+								<span class="meta-value">{projectData.location}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">👥</span>
+							<div class="meta-content">
+								<span class="meta-label">Client</span>
+								<span class="meta-value">{projectData.client}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">📏</span>
+							<div class="meta-content">
+								<span class="meta-label">Size</span>
+								<span class="meta-value">{projectData.projectSize}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">🎨</span>
+							<div class="meta-content">
+								<span class="meta-label">Duration</span>
+								<span class="meta-value">{projectData.duration}</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">📅</span>
+							<div class="meta-content">
+								<span class="meta-label">Completed</span>
+								<span class="meta-value">
+									{new Date(projectData.completedDate).toLocaleDateString('en-US', { 
+										year: 'numeric', 
+										month: 'long', 
+										day: 'numeric' 
+									})}
+								</span>
+							</div>
+						</div>
+						<div class="meta-item">
+							<span class="meta-icon">💎</span>
+							<div class="meta-content">
+								<span class="meta-label">Investment</span>
+								<span class="meta-value">{projectData.projectValue}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- Hero Before/After Comparison -->
+			<section class="hero-comparison">
+				<div class="comparison-container">
+					<div class="before-after-slider">
+						<div class="image-wrapper before-image">
+							<img 
+								src={projectData.beforeImages[0].url} 
+								alt={projectData.beforeImages[0].alt}
+								width="800"
+								height="600"
+								loading="eager"
+							>
+							<span class="image-label">Before</span>
+						</div>
+						<div class="image-wrapper after-image">
+							<img 
+								src={projectData.afterImages[0].url} 
+								alt={projectData.afterImages[0].alt}
+								width="800"
+								height="600"
+								loading="eager"
+							>
+							<span class="image-label">After</span>
+						</div>
+						<div class="slider-control">
+							<input 
+								type="range" 
+								min="0" 
+								max="100" 
+								value="50" 
+								class="comparison-slider"
+								aria-label="Before and after comparison slider"
+							>
+							<div class="slider-handle">
+								<div class="handle-line"></div>
+								<div class="handle-circle">
+									<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+										<path d="M8 4L12 8L8 12" stroke="currentColor" stroke-width="2"/>
+										<path d="M12 4L8 8L12 12" stroke="currentColor" stroke-width="2"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="comparison-caption">
+						<div class="caption-before">
+							<h3>Before</h3>
+							<p>{projectData.beforeImages[0].caption}</p>
+						</div>
+						<div class="caption-after">
+							<h3>After</h3>
+							<p>{projectData.afterImages[0].caption}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Artistic Vision Section -->
+			<section class="artistic-vision">
+				<div class="vision-content">
+					<h2>The Artistic Vision</h2>
+					<div class="vision-grid">
+						<div class="challenge-solution">
+							<div class="challenge">
+								<h3>The Challenge</h3>
+								<p>{projectData.challenge}</p>
+								
+								<div class="client-requirements">
+									<h4>Client Requirements:</h4>
+									<ul>
+										<li>Unique, conversation-starting floor</li>
+										<li>Sophisticated color scheme</li>
+										<li>Complement to classic car collection</li>
+										<li>High-end, luxury appearance</li>
+										<li>Durable for entertainment space</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="solution">
+								<h3>Our Artistic Solution</h3>
+								<p>{projectData.solution}</p>
+								
+								<div class="design-features">
+									<h4>Key Design Elements:</h4>
+									<div class="features-grid">
+										{projectData.designElements.map(element => (
+											<div class="design-element">
+												<span class="element-icon">✨</span>
+												<span class="element-text">{element}</span>
+											</div>
+										))}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="color-palette">
+							<h3>Custom Color Palette</h3>
+							<div class="palette-showcase">
+								<div class="color-sample primary">
+									<div class="color-swatch"></div>
+									<div class="color-info">
+										<h4>{projectData.colorPalette.primary}</h4>
+										<p>Deep, rich base providing dramatic foundation</p>
+									</div>
+								</div>
+								<div class="color-sample secondary">
+									<div class="color-swatch"></div>
+									<div class="color-info">
+										<h4>{projectData.colorPalette.secondary}</h4>
+										<p>Bright highlights creating luminous effects</p>
+									</div>
+								</div>
+								<div class="color-sample accent">
+									<div class="color-swatch"></div>
+									<div class="color-info">
+										<h4>{projectData.colorPalette.accent}</h4>
+										<p>Warm accents adding sophisticated depth</p>
+									</div>
+								</div>
+							</div>
+							<div class="palette-description">
+								<p>{projectData.colorPalette.description}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Artistic Process -->
+			<section class="artistic-process">
+				<h2>The Artistic Process</h2>
+				<p class="process-intro">
+					Creating metallic epoxy art requires both technical expertise and artistic vision. 
+					Each step builds upon the last to create the final masterpiece.
+				</p>
+
+				<div class="process-timeline">
+					{projectData.processSteps.map(step => (
+						<article class="process-step artistic">
+							<div class="step-number">{step.step}</div>
+							<div class="step-content">
+								<div class="step-header">
+									<h3>{step.title}</h3>
+									<span class="step-duration">{step.duration}</span>
+								</div>
+								<p class="step-description">{step.description}</p>
+								<div class="step-details">
+									<p>{step.details}</p>
+								</div>
+							</div>
+						</article>
+					))}
+				</div>
+
+				<div class="artistic-techniques">
+					<h3>Specialized Techniques Used</h3>
+					<div class="techniques-grid">
+						{projectData.artisticTechniques.map(technique => (
+							<div class="technique-card">
+								<div class="technique-icon">🎨</div>
+								<div class="technique-text">{technique}</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<!-- 360-Degree View Simulation -->
+			<section class="three-sixty-view">
+				<h2>360° Floor Experience</h2>
+				<p class="view-intro">
+					Experience how the metallic finish changes with different viewing angles and lighting conditions.
+				</p>
+
+				<div class="rotation-container">
+					<div class="rotation-viewer">
+						<div class="rotation-image active" data-angle="0">
+							<img src="/assets/images/portfolio/mason-metallic/360-0.webp" alt="Front view of metallic floor" width="600" height="400" loading="lazy">
+						</div>
+						<div class="rotation-image" data-angle="45">
+							<img src="/assets/images/portfolio/mason-metallic/360-45.webp" alt="45 degree angle view" width="600" height="400" loading="lazy">
+						</div>
+						<div class="rotation-image" data-angle="90">
+							<img src="/assets/images/portfolio/mason-metallic/360-90.webp" alt="Side view of metallic floor" width="600" height="400" loading="lazy">
+						</div>
+						<div class="rotation-image" data-angle="135">
+							<img src="/assets/images/portfolio/mason-metallic/360-135.webp" alt="135 degree angle view" width="600" height="400" loading="lazy">
+						</div>
+						<div class="rotation-image" data-angle="180">
+							<img src="/assets/images/portfolio/mason-metallic/360-180.webp" alt="Opposite view of metallic floor" width="600" height="400" loading="lazy">
+						</div>
+					</div>
+
+					<div class="rotation-controls">
+						<div class="angle-selector">
+							<button class="angle-button active" data-angle="0">0°</button>
+							<button class="angle-button" data-angle="45">45°</button>
+							<button class="angle-button" data-angle="90">90°</button>
+							<button class="angle-button" data-angle="135">135°</button>
+							<button class="angle-button" data-angle="180">180°</button>
+						</div>
+						<div class="auto-rotate-toggle">
+							<button class="auto-rotate-btn" id="auto-rotate">
+								▶️ Auto Rotate
+							</button>
+						</div>
+					</div>
+
+					<div class="lighting-effects">
+						<h3>Lighting Showcase</h3>
+						<div class="lighting-grid">
+							<div class="lighting-option" data-lighting="natural">
+								<img src="/assets/images/portfolio/mason-metallic/lighting-natural.webp" alt="Natural lighting effects" width="200" height="150">
+								<span>Natural Light</span>
+							</div>
+							<div class="lighting-option" data-lighting="led">
+								<img src="/assets/images/portfolio/mason-metallic/lighting-led.webp" alt="LED lighting effects" width="200" height="150">
+								<span>LED Lighting</span>
+							</div>
+							<div class="lighting-option" data-lighting="warm">
+								<img src="/assets/images/portfolio/mason-metallic/lighting-warm.webp" alt="Warm lighting effects" width="200" height="150">
+								<span>Warm Evening</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Technical Excellence -->
+			<section class="technical-specs">
+				<h2>Technical Specifications</h2>
+				
+				<div class="specs-container">
+					<div class="technical-details">
+						<h3>System Specifications</h3>
+						<div class="specs-table">
+							{Object.entries(projectData.technicalSpecs).map(([key, value]) => (
+								<div class="spec-row">
+									<span class="spec-label">{key}:</span>
+									<span class="spec-value">{value}</span>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<div class="quality-assurance">
+						<h3>Quality Assurance</h3>
+						<div class="qa-grid">
+							<div class="qa-item">
+								<div class="qa-icon">🔬</div>
+								<h4>Material Testing</h4>
+								<p>All metallic pigments tested for colorfastness and compatibility</p>
+							</div>
+							<div class="qa-item">
+								<div class="qa-icon">📐</div>
+								<h4>Thickness Monitoring</h4>
+								<p>Wet film thickness measured throughout application</p>
+							</div>
+							<div class="qa-item">
+								<div class="qa-icon">🌡️</div>
+								<h4>Environmental Control</h4>
+								<p>Temperature and humidity monitored for optimal curing</p>
+							</div>
+							<div class="qa-item">
+								<div class="qa-icon">📷</div>
+								<h4>Progress Documentation</h4>
+								<p>Each stage photographed for quality records</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Photo Gallery -->
+			<section class="photo-gallery">
+				<h2>Project Gallery</h2>
+				
+				<div class="gallery-tabs">
+					<button class="gallery-tab active" data-gallery="before">Before Photos</button>
+					<button class="gallery-tab" data-gallery="process">Process Photos</button>
+					<button class="gallery-tab" data-gallery="after">After Photos</button>
+					<button class="gallery-tab" data-gallery="details">Detail Shots</button>
+				</div>
+
+				<div class="gallery-content">
+					<!-- Before Photos -->
+					<div class="gallery-section active" id="before-gallery">
+						<div class="gallery-grid">
+							{projectData.beforeImages.map((image, index) => (
+								<div class="gallery-item" data-index={index}>
+									<img 
+										src={image.url} 
+										alt={image.alt}
+										width="400"
+										height="300"
+										loading="lazy"
+									>
+									<div class="image-overlay">
+										<p class="image-caption">{image.caption}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<!-- Process Photos -->
+					<div class="gallery-section" id="process-gallery">
+						<div class="gallery-grid">
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/process-prep.webp" 
+									alt="Surface preparation process"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Meticulous surface preparation for perfect adhesion</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/process-base.webp" 
+									alt="Base coat application"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Charcoal pearl base coat providing the foundation</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/process-metallic.webp" 
+									alt="Metallic application in progress"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Artistic application of metallic pigments</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- After Photos -->
+					<div class="gallery-section" id="after-gallery">
+						<div class="gallery-grid">
+							{projectData.afterImages.map((image, index) => (
+								<div class="gallery-item" data-index={index}>
+									<img 
+										src={image.url} 
+										alt={image.alt}
+										width="400"
+										height="300"
+										loading="lazy"
+									>
+									<div class="image-overlay">
+										<p class="image-caption">{image.caption}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+
+					<!-- Detail Shots -->
+					<div class="gallery-section" id="details-gallery">
+						<div class="gallery-grid">
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/detail-vein.webp" 
+									alt="Close-up of metallic vein detail"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Intricate metallic vein patterns showing artistic detail</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/detail-reflection.webp" 
+									alt="Reflective properties demonstration"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Mirror-like reflective qualities of the finish</p>
+								</div>
+							</div>
+							<div class="gallery-item">
+								<img 
+									src="/assets/images/portfolio/mason-metallic/detail-depth.webp" 
+									alt="Depth and dimension showcase"
+									width="400"
+									height="300"
+									loading="lazy"
+								>
+								<div class="image-overlay">
+									<p class="image-caption">Multi-dimensional depth created by layered metallics</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Lightbox Modal -->
+				<div class="lightbox-modal" id="lightbox-modal">
+					<div class="lightbox-content">
+						<button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+						<button class="lightbox-prev" aria-label="Previous image">&#8249;</button>
+						<img class="lightbox-image" src="" alt="">
+						<button class="lightbox-next" aria-label="Next image">&#8250;</button>
+						<div class="lightbox-caption"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Client Testimonial -->
+			<section class="client-testimonial">
+				<div class="testimonial-content">
+					<div class="testimonial-header">
+						<h2>Client Testimonial</h2>
+						<div class="testimonial-rating">
+							{Array.from({length: projectData.testimonial.rating}).map(() => (
+								<span class="star">⭐</span>
+							))}
+						</div>
+					</div>
+
+					<blockquote class="testimonial-quote">
+						"{projectData.testimonial.quote}"
+					</blockquote>
+
+					<div class="testimonial-author">
+						<div class="author-info">
+							<cite class="author-name">{projectData.testimonial.author}</cite>
+							<span class="author-location">{projectData.testimonial.location}</span>
+							<span class="testimonial-date">{projectData.testimonial.date}</span>
+						</div>
+						<div class="client-photo">
+							<img 
+								src="/assets/images/testimonials/michael-davis.jpg" 
+								alt="Michael Davis - Satisfied Client"
+								width="80"
+								height="80"
+								loading="lazy"
+							>
+						</div>
+					</div>
+
+					<div class="artistic-achievement">
+						<h3>Artistic Achievement</h3>
+						<div class="achievement-stats">
+							<div class="achievement-item">
+								<span class="achievement-icon">🎨</span>
+								<span class="achievement-text">One-of-a-Kind Design</span>
+							</div>
+							<div class="achievement-item">
+								<span class="achievement-icon">✨</span>
+								<span class="achievement-text">Premium Metallic Finish</span>
+							</div>
+							<div class="achievement-item">
+								<span class="achievement-icon">🏆</span>
+								<span class="achievement-text">Showcase Quality Results</span>
+							</div>
+							<div class="achievement-item">
+								<span class="achievement-icon">💎</span>
+								<span class="achievement-text">Luxury Entertainment Space</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Related Projects -->
+			<section class="related-projects">
+				<h2>Related Decorative Projects</h2>
+				<p>Explore other high-end decorative flooring transformations</p>
+				
+				<div class="related-grid">
+					{relatedProjects.map(project => (
+						<article class="related-project">
+							<div class="project-image">
+								<img 
+									src={project.image} 
+									alt={project.title}
+									width="300"
+									height="200"
+									loading="lazy"
+								>
+								<div class="project-overlay">
+									<span class="project-type">{project.type}</span>
+								</div>
+							</div>
+							<div class="project-info">
+								<h3>
+									<a href={`/portfolio/${project.id}/`}>{project.title}</a>
+								</h3>
+								<p class="project-location">{project.location}</p>
+								<a href={`/portfolio/${project.id}/`} class="view-project">
+									View Project →
+								</a>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+
+			<!-- Artistic CTA -->
+			<section class="project-cta artistic-cta">
+				<div class="cta-content">
+					<h2>Ready for Your Artistic Vision?</h2>
+					<p>
+						Transform your space into a work of art with our premium metallic epoxy systems. 
+						Every project is uniquely designed and expertly crafted to exceed your expectations.
+					</p>
+					
+					<div class="cta-features">
+						<div class="cta-feature">
+							<span class="feature-icon">🎨</span>
+							<span class="feature-text">Custom Design Consultation</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">✨</span>
+							<span class="feature-text">Premium Metallic Systems</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">🏆</span>
+							<span class="feature-text">Artistic Excellence Guaranteed</span>
+						</div>
+						<div class="cta-feature">
+							<span class="feature-icon">🎖️</span>
+							<span class="feature-text">Veteran-Owned Craftsmanship</span>
+						</div>
+					</div>
+
+					<div class="cta-buttons">
+						<a href="/contact/" class="cta-button primary">Design My Masterpiece</a>
+						<a href="tel:513-296-5525" class="cta-button secondary">Call (513) 296-5525</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Project Navigation -->
+			<nav class="project-navigation">
+				<div class="nav-links">
+					<a href="/portfolio/loveland-basement-makeover/" class="nav-link prev-project">
+						← Previous: Loveland Basement
+					</a>
+					<a href="/portfolio/" class="nav-link back-to-portfolio">
+						Back to Portfolio
+					</a>
+					<a href="/portfolio/restaurant-kitchen-renovation/" class="nav-link next-project">
+						Next: Restaurant Kitchen →
+					</a>
+				</div>
+			</nav>
+		</div>
+	</Container>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" set:html={JSON.stringify(seo.structuredData)}></script>
+
+	<!-- Social Sharing Meta Tags -->
+	<meta property="og:title" content="Mason Metallic Epoxy Showcase | Premium Decorative Flooring Project">
+	<meta property="og:description" content="Stunning metallic epoxy transformation in Mason, OH with custom color blends and artistic techniques.">
+	<meta property="og:image" content="https://queencitysurfacecoatings.com/assets/images/portfolio/mason-metallic/after-main.webp">
+	<meta property="og:url" content="https://queencitysurfacecoatings.com/portfolio/mason-metallic-epoxy-showcase/">
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Mason Metallic Epoxy Showcase | Artistic Flooring Design">
+	<meta name="twitter:description" content="Premium decorative metallic epoxy flooring with stunning visual effects.">
+	<meta name="twitter:image" content="https://queencitysurfacecoatings.com/assets/images/portfolio/mason-metallic/after-main.webp">
+</Layout>
+
+<style>
+/* Metallic-specific badge styling */
+.coating-badge.metallic {
+	background: linear-gradient(45deg, #C0C0C0, #FFD700, #CD7F32);
+	color: white;
+}
+
+.artistic-badge {
+	background: linear-gradient(45deg, #8E24AA, #E91E63);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 2rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+/* Artistic Vision Section */
+.artistic-vision {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.artistic-vision h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.vision-grid {
+	display: grid;
+	gap: 3rem;
+}
+
+.challenge-solution {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+.client-requirements h4,
+.design-features h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 1rem;
+	font-size: 1.1rem;
+}
+
+.client-requirements ul {
+	list-style: none;
+	padding: 0;
+}
+
+.client-requirements li {
+	padding: 0.5rem 0;
+	color: var(--theme-on-surface-1);
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.client-requirements li::before {
+	content: '⭐';
+	position: absolute;
+	left: 0;
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.design-element {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.75rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+}
+
+.element-icon {
+	color: #FFD700;
+	flex-shrink: 0;
+}
+
+.element-text {
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+/* Color Palette Section */
+.color-palette {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.color-palette h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.palette-showcase {
+	display: grid;
+	gap: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+.color-sample {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1.5rem;
+	align-items: center;
+	padding: 1.5rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.75rem;
+}
+
+.color-swatch {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 3px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.color-sample.primary .color-swatch {
+	background: linear-gradient(45deg, #2C2C2C, #4A4A4A, #6B6B6B);
+}
+
+.color-sample.secondary .color-swatch {
+	background: linear-gradient(45deg, #C0C0C0, #E8E8E8, #F5F5F5);
+}
+
+.color-sample.accent .color-swatch {
+	background: linear-gradient(45deg, #CD7F32, #DAA520, #B8860B);
+}
+
+.color-info h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+}
+
+.color-info p {
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+.palette-description {
+	background: rgba(var(--theme-primary-rgb), 0.1);
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	border-left: 4px solid var(--theme-primary);
+}
+
+.palette-description p {
+	color: var(--theme-on-surface-1);
+	font-style: italic;
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* Artistic Process */
+.artistic-process {
+	margin: 4rem 0;
+}
+
+.artistic-process h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.process-intro {
+	text-align: center;
+	color: var(--theme-on-surface-1);
+	max-width: 800px;
+	margin: 0 auto 3rem auto;
+}
+
+.process-step.artistic {
+	background: linear-gradient(135deg, var(--theme-bg) 0%, rgba(255, 215, 0, 0.05) 100%);
+	border-left: 4px solid #FFD700;
+}
+
+.process-step.artistic .step-number {
+	background: linear-gradient(45deg, #8E24AA, #E91E63);
+	box-shadow: 0 4px 12px rgba(142, 36, 170, 0.3);
+}
+
+.artistic-techniques {
+	background: var(--theme-surface-1);
+	padding: 3rem 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin-top: 3rem;
+}
+
+.artistic-techniques h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.techniques-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+.technique-card {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+	background: var(--theme-bg);
+	border-radius: 0.75rem;
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.technique-card:hover {
+	border-color: #FFD700;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 16px rgba(255, 215, 0, 0.2);
+}
+
+.technique-icon {
+	font-size: 1.5rem;
+	flex-shrink: 0;
+}
+
+.technique-text {
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+}
+
+/* 360-Degree View */
+.three-sixty-view {
+	margin: 4rem 0;
+	background: var(--theme-surface-1);
+	padding: 4rem 2rem;
+	border-radius: var(--theme-shape-radius);
+}
+
+.three-sixty-view h2 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1rem;
+	font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.view-intro {
+	text-align: center;
+	color: var(--theme-on-surface-1);
+	max-width: 800px;
+	margin: 0 auto 3rem auto;
+}
+
+.rotation-container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.rotation-viewer {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	border-radius: var(--theme-shape-radius);
+	overflow: hidden;
+	background: var(--theme-bg);
+	margin-bottom: 2rem;
+}
+
+.rotation-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.rotation-image.active {
+	opacity: 1;
+}
+
+.rotation-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.rotation-controls {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 2rem;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.angle-selector {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.angle-button {
+	background: var(--theme-bg);
+	color: var(--theme-on-surface-1);
+	border: 2px solid var(--theme-border-light);
+	padding: 1rem 1.5rem;
+	border-radius: 2rem;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.angle-button:hover,
+.angle-button.active {
+	background: linear-gradient(45deg, #8E24AA, #E91E63);
+	border-color: #8E24AA;
+	color: white;
+}
+
+.auto-rotate-btn {
+	background: var(--theme-primary);
+	color: white;
+	border: none;
+	padding: 1rem 2rem;
+	border-radius: 2rem;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.auto-rotate-btn:hover {
+	background: var(--theme-primary-hover);
+}
+
+.auto-rotate-btn.active {
+	background: #FF5722;
+}
+
+.lighting-effects {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.lighting-effects h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.lighting-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.lighting-option {
+	cursor: pointer;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	border: 2px solid var(--theme-border-light);
+	transition: all 0.3s ease;
+}
+
+.lighting-option:hover {
+	border-color: #FFD700;
+	transform: translateY(-2px);
+}
+
+.lighting-option img {
+	width: 100%;
+	height: 120px;
+	object-fit: cover;
+}
+
+.lighting-option span {
+	display: block;
+	padding: 1rem;
+	background: var(--theme-surface-1);
+	color: var(--theme-on-surface-1);
+	font-weight: 500;
+	text-align: center;
+}
+
+/* Quality Assurance */
+.quality-assurance {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	border: 2px solid var(--theme-border-light);
+}
+
+.quality-assurance h3 {
+	color: var(--theme-surface-2);
+	margin-bottom: 2rem;
+}
+
+.qa-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+}
+
+.qa-item {
+	background: var(--theme-surface-1);
+	padding: 1.5rem;
+	border-radius: 0.75rem;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.qa-item:hover {
+	background: rgba(var(--theme-primary-rgb), 0.05);
+	transform: translateY(-2px);
+}
+
+.qa-icon {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+	color: var(--theme-primary);
+}
+
+.qa-item h4 {
+	color: var(--theme-surface-2);
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+}
+
+.qa-item p {
+	color: var(--theme-on-surface-1);
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+/* Artistic Achievement */
+.artistic-achievement {
+	background: var(--theme-bg);
+	padding: 2rem;
+	border-radius: var(--theme-shape-radius);
+	margin-top: 2rem;
+}
+
+.artistic-achievement h3 {
+	color: var(--theme-surface-2);
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.achievement-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+.achievement-item {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--theme-surface-1);
+	border-radius: 0.5rem;
+}
+
+.achievement-icon {
+	font-size: 1.5rem;
+	flex-shrink: 0;
+}
+
+.achievement-text {
+	font-weight: 600;
+	color: var(--theme-on-surface-1);
+}
+
+/* Artistic CTA */
+.artistic-cta {
+	background: linear-gradient(135deg, #8E24AA 0%, #E91E63 50%, #FFD700 100%);
+}
+
+/* Mobile Responsiveness - Additional */
+@media (max-width: 768px) {
+	.vision-grid,
+	.challenge-solution {
+		grid-template-columns: 1fr;
+	}
+	
+	.features-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.techniques-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.rotation-controls {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	
+	.angle-selector {
+		justify-content: center;
+	}
+	
+	.lighting-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.qa-grid,
+	.achievement-stats {
+		grid-template-columns: 1fr;
+	}
+	
+	.palette-showcase .color-sample {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+}
+</style>
+
+<script>
+// Mason Metallic Project Functionality
+document.addEventListener('DOMContentLoaded', function() {
+	// All previous functionality plus...
+	
+	// Before/After Comparison Slider
+	const comparisonSlider = document.querySelector('.comparison-slider');
+	const afterImage = document.querySelector('.after-image');
+	
+	if (comparisonSlider && afterImage) {
+		comparisonSlider.addEventListener('input', function() {
+			const value = this.value;
+			afterImage.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+		});
+	}
+	
+	// 360-Degree Rotation Functionality
+	const rotationImages = document.querySelectorAll('.rotation-image');
+	const angleButtons = document.querySelectorAll('.angle-button');
+	const autoRotateBtn = document.getElementById('auto-rotate');
+	let autoRotateInterval;
+	let currentAngle = 0;
+	
+	// Angle button functionality
+	angleButtons.forEach(button => {
+		button.addEventListener('click', function() {
+			const angle = this.getAttribute('data-angle');
+			showAngle(angle);
+			
+			// Update active button
+			angleButtons.forEach(btn => btn.classList.remove('active'));
+			this.classList.add('active');
+			
+			// Stop auto-rotation
+			if (autoRotateInterval) {
+				clearInterval(autoRotateInterval);
+				autoRotateBtn.textContent = '▶️ Auto Rotate';
+				autoRotateBtn.classList.remove('active');
+			}
+		});
+	});
+	
+	// Show specific angle
+	function showAngle(angle) {
+		rotationImages.forEach(img => img.classList.remove('active'));
+		const targetImage = document.querySelector(`[data-angle="${angle}"]`);
+		if (targetImage) {
+			targetImage.classList.add('active');
+		}
+		currentAngle = parseInt(angle);
+	}
+	
+	// Auto-rotation functionality
+	autoRotateBtn.addEventListener('click', function() {
+		if (autoRotateInterval) {
+			// Stop auto-rotation
+			clearInterval(autoRotateInterval);
+			autoRotateInterval = null;
+			this.textContent = '▶️ Auto Rotate';
+			this.classList.remove('active');
+		} else {
+			// Start auto-rotation
+			this.textContent = '⏸️ Stop Rotation';
+			this.classList.add('active');
+			
+			const angles = [0, 45, 90, 135, 180];
+			let currentIndex = angles.indexOf(currentAngle);
+			
+			autoRotateInterval = setInterval(() => {
+				currentIndex = (currentIndex + 1) % angles.length;
+				const nextAngle = angles[currentIndex];
+				
+				showAngle(nextAngle);
+				
+				// Update active button
+				angleButtons.forEach(btn => btn.classList.remove('active'));
+				const activeButton = document.querySelector(`[data-angle="${nextAngle}"]`);
+				if (activeButton) {
+					activeButton.classList.add('active');
+				}
+			}, 2000);
+		}
+	});
+	
+	// Lighting effects
+	const lightingOptions = document.querySelectorAll('.lighting-option');
+	lightingOptions.forEach(option => {
+		option.addEventListener('click', function() {
+			const lighting = this.getAttribute('data-lighting');
+			
+			// Remove active class from all options
+			lightingOptions.forEach(opt => opt.classList.remove('active'));
+			this.classList.add('active');
+			
+			// Apply lighting effect to main image
+			const activeRotationImage = document.querySelector('.rotation-image.active img');
+			if (activeRotationImage) {
+				// Apply CSS filter based on lighting type
+				switch(lighting) {
+					case 'natural':
+						activeRotationImage.style.filter = 'brightness(1.1) contrast(1.05)';
+						break;
+					case 'led':
+						activeRotationImage.style.filter = 'brightness(1.2) contrast(1.1) saturate(1.1)';
+						break;
+					case 'warm':
+						activeRotationImage.style.filter = 'brightness(0.9) contrast(1.05) sepia(0.1)';
+						break;
+					default:
+						activeRotationImage.style.filter = 'none';
+				}
+			}
+		});
+	});
+	
+	// Gallery Tabs
+	const galleryTabs = document.querySelectorAll('.gallery-tab');
+	const gallerySections = document.querySelectorAll('.gallery-section');
+	
+	galleryTabs.forEach(tab => {
+		tab.addEventListener('click', function() {
+			const targetGallery = this.getAttribute('data-gallery');
+			
+			galleryTabs.forEach(t => t.classList.remove('active'));
+			gallerySections.forEach(s => s.classList.remove('active'));
+			
+			this.classList.add('active');
+			document.getElementById(`${targetGallery}-gallery`).classList.add('active');
+		});
+	});
+	
+	// Lightbox Functionality (same as previous projects)
+	const galleryItems = document.querySelectorAll('.gallery-item');
+	const lightboxModal = document.getElementById('lightbox-modal');
+	const lightboxImage = document.querySelector('.lightbox-image');
+	const lightboxCaption = document.querySelector('.lightbox-caption');
+	const lightboxClose = document.querySelector('.lightbox-close');
+	const lightboxPrev = document.querySelector('.lightbox-prev');
+	const lightboxNext = document.querySelector('.lightbox-next');
+	
+	let currentImageIndex = 0;
+	let currentGalleryImages = [];
+	
+	galleryItems.forEach((item, index) => {
+		item.addEventListener('click', function() {
+			const img = this.querySelector('img');
+			const caption = this.querySelector('.image-caption').textContent;
+			
+			const activeGallery = document.querySelector('.gallery-section.active');
+			currentGalleryImages = Array.from(activeGallery.querySelectorAll('.gallery-item'));
+			currentImageIndex = currentGalleryImages.indexOf(this);
+			
+			openLightbox(img.src, img.alt, caption);
+		});
+	});
+	
+	function openLightbox(src, alt, caption) {
+		lightboxImage.src = src;
+		lightboxImage.alt = alt;
+		lightboxCaption.textContent = caption;
+		lightboxModal.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+	
+	function closeLightbox() {
+		lightboxModal.classList.remove('active');
+		document.body.style.overflow = '';
+	}
+	
+	function showPrevImage() {
+		currentImageIndex = currentImageIndex > 0 ? currentImageIndex - 1 : currentGalleryImages.length - 1;
+		const img = currentGalleryImages[currentImageIndex].querySelector('img');
+		const caption = currentGalleryImages[currentImageIndex].querySelector('.image-caption').textContent;
+		
+		lightboxImage.src = img.src;
+		lightboxImage.alt = img.alt;
+		lightboxCaption.textContent = caption;
+	}
+	
+	function showNextImage() {
+		currentImageIndex = currentImageIndex < currentGalleryImages.length - 1 ? currentImageIndex + 1 : 0;
+		const img = currentGalleryImages[currentImageIndex].querySelector('img');
+		const caption = currentGalleryImages[currentImageIndex].querySelector('.image-caption').textContent;
+		
+		lightboxImage.src = img.src;
+		lightboxImage.alt = img.alt;
+		lightboxCaption.textContent = caption;
+	}
+	
+	lightboxClose.addEventListener('click', closeLightbox);
+	lightboxPrev.addEventListener('click', showPrevImage);
+	lightboxNext.addEventListener('click', showNextImage);
+	
+	document.addEventListener('keydown', function(e) {
+		if (lightboxModal.classList.contains('active')) {
+			switch(e.key) {
+				case 'Escape':
+					closeLightbox();
+					break;
+				case 'ArrowLeft':
+					showPrevImage();
+					break;
+				case 'ArrowRight':
+					showNextImage();
+					break;
+			}
+		}
+	});
+	
+	lightboxModal.addEventListener('click', function(e) {
+		if (e.target === this) {
+			closeLightbox();
+		}
+	});
+	
+	// Enhanced animations for metallic effects
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	};
+	
+	const scrollObserver = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.style.opacity = '1';
+				entry.target.style.transform = 'translateY(0)';
+				
+				// Special shimmer effect for metallic elements
+				if (entry.target.classList.contains('color-swatch')) {
+					entry.target.style.animation = 'shimmer 2s ease-in-out infinite';
+				}
+			}
+		});
+	}, observerOptions);
+	
+	// Animate elements specific to this page
+	const animatedElements = document.querySelectorAll(
+		'.process-step, .technique-card, .qa-item, .achievement-item, .color-sample'
+	);
+	animatedElements.forEach((element, index) => {
+		element.style.opacity = '0';
+		element.style.transform = 'translateY(30px)';
+		element.style.transition = `opacity 0.8s ease ${index * 0.1}s, transform 0.8s ease ${index * 0.1}s`;
+		scrollObserver.observe(element);
+	});
+	
+	// Metallic shimmer animation
+	const style = document.createElement('style');
+	style.textContent = `
+		@keyframes shimmer {
+			0%, 100% { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
+			50% { box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4); }
+		}
+	`;
+	document.head.appendChild(style);
+	
+	// Analytics tracking for metallic-specific interactions
+	if (typeof gtag !== 'undefined') {
+		// Track 360-degree viewer interactions
+		angleButtons.forEach(button => {
+			button.addEventListener('click', function() {
+				gtag('event', '360_viewer_interaction', {
+					'event_category': 'engagement',
+					'event_label': `angle_${this.getAttribute('data-angle')}`
+				});
+			});
+		});
+		
+		autoRotateBtn.addEventListener('click', function() {
+			gtag('event', 'auto_rotate_toggle', {
+				'event_category': 'engagement',
+				'event_label': this.classList.contains('active') ? 'stop' : 'start'
+			});
+		});
+		
+		// Track lighting effect interactions
+		lightingOptions.forEach(option => {
+			option.addEventListener('click', function() {
+				gtag('event', 'lighting_effect_select', {
+					'event_category': 'engagement',
+					'event_label': this.getAttribute('data-lighting')
+				});
+			});
+		});
+	}
+	
+	// Clean up auto-rotation on page unload
+	window.addEventListener('beforeunload', function() {
+		if (autoRotateInterval) {
+			clearInterval(autoRotateInterval);
+		}
+	});
+});
+</script>

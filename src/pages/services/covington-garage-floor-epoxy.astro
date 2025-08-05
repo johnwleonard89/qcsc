@@ -1,0 +1,65 @@
+---
+import CitySpecificServiceTemplate from '../../templates/CitySpecificServiceTemplate.astro';
+import { residentialServices } from '../../data/premiumServiceData.js';
+
+// Get the base service data
+const baseServiceData = residentialServices.garageFloorEpoxy;
+
+// City-specific data
+const cityData = {
+  cityName: 'Covington',
+  state: 'Kentucky',
+  county: 'Kenton',
+  seo: {
+    title: 'Covington Kentucky Garage Floor Epoxy | Professional Installation | Queen City Surface Coatings',
+    description: 'Transform your Covington garage with professional epoxy floor coating. Serving MainStrasse Village, Westside, and all Covington neighborhoods with durable, beautiful garage flooring.',
+    keywords: 'Covington garage floor epoxy, Covington garage coating, MainStrasse Village garage floors, Westside Covington epoxy flooring, Covington garage transformation, professional garage floors Covington Kentucky'
+  },
+  serviceArea: {
+    description: 'Proudly serving all Covington neighborhoods with professional garage floor coating services. Our local expertise ensures we understand the unique needs of Covington properties, from historic homes to modern developments.',
+    neighborhoods: [
+      'MainStrasse Village',
+      'Westside',
+      'Eastside',
+      'Southside',
+      'Lewisburg',
+      'Peaselburg',
+      'Monte Casino',
+      'Botany Hills',
+      'Austinburg',
+      'Licking Riverside',
+      'Central Covington',
+      'Historic District',
+      'Riverside Drive',
+      'Madison Avenue',
+      'Pike Street',
+      'Scott Boulevard',
+      'Dixie Avenue',
+      'Greenup Street',
+      'Philadelphia Street',
+      'Forest Avenue'
+    ],
+    landmarks: [
+      'Roebling Suspension Bridge',
+      'MainStrasse Village',
+      'Devou Park',
+      'Covington City Building',
+      'Cathedral Basilica of the Assumption',
+      'Northern Kentucky Convention Center',
+      'IRS Building',
+      'Covington Landing',
+      'John A. Roebling Suspension Bridge',
+      'Goebel Park'
+    ]
+  }
+};
+---
+
+<CitySpecificServiceTemplate 
+  baseServiceData={baseServiceData}
+  cityName={cityData.cityName}
+  state={cityData.state}
+  county={cityData.county}
+  seo={cityData.seo}
+  serviceArea={cityData.serviceArea}
+/>

@@ -1,0 +1,46 @@
+---
+import CountyServicesTemplate from '../../templates/CountyServicesTemplate.astro';
+
+const countyData = {
+  countyName: 'Campbell',
+  state: 'Kentucky',
+  seo: {
+    title: 'Campbell County Kentucky Concrete Coating Services | Newport, Fort Thomas, Bellevue | Queen City Surface Coatings',
+    description: 'Expert concrete coating services throughout Campbell County, Kentucky. Serving Newport, Fort Thomas, Bellevue, Highland Heights, and all Campbell County communities with military precision installation.',
+    keywords: 'Campbell County concrete coating, Newport KY epoxy flooring, Fort Thomas concrete services, Bellevue Kentucky concrete coating, Campbell County residential coating, commercial concrete Campbell County Kentucky'
+  },
+  hero: {
+    tagline: 'Campbell County Excellence',
+    headline: 'Professional Concrete Coating Services in Campbell County, Kentucky',
+    subheadline: 'Transform your Campbell County property with expert concrete coating services. From Newport to Fort Thomas, Highland Heights to Bellevue, we deliver military precision installation throughout Campbell County with guaranteed results.'
+  },
+  serviceArea: {
+    description: 'Queen City Surface Coatings proudly serves all of Campbell County, Kentucky, with professional concrete coating services. Our local expertise ensures we understand the unique needs of Campbell County properties, from riverfront communities to hillside neighborhoods.',
+    cities: [
+      'Newport',
+      'Fort Thomas',
+      'Bellevue',
+      'Highland Heights',
+      'Cold Spring',
+      'Dayton',
+      'Southgate',
+      'Wilder',
+      'Woodlawn',
+      'California',
+      'Melbourne',
+      'Silver Grove',
+      'Alexandria',
+      'Mentor',
+      'Persimmon Grove'
+    ]
+  }
+};
+---
+
+<CountyServicesTemplate 
+  countyName={countyData.countyName}
+  state={countyData.state}
+  seo={countyData.seo}
+  hero={countyData.hero}
+  serviceArea={countyData.serviceArea}
+/>

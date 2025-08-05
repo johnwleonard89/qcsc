@@ -1,0 +1,232 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+}
+
+const { 
+  title = "Get Your Free Estimate", 
+  subtitle = "Ready to transform your space? Contact us today for a free consultation and quote.",
+  buttonText = "GET FREE QUOTE"
+} = Astro.props;
+---
+
+<div class="contact-form-wrapper">
+  <div class="form-header">
+    <h2 class="form-title">{title}</h2>
+    <p class="form-subtitle">{subtitle}</p>
+  </div>
+
+  <form class="contact-form" method="POST" data-netlify="true" name="contact">
+    <input type="hidden" name="form-name" value="contact" />
+    
+    <div class="form-row">
+      <div class="form-field">
+        <label for="name" class="form-label">
+          Full Name *
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="form-input"
+          placeholder="Enter your name"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="phone" class="form-label">
+          Phone Number *
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          class="form-input"
+          placeholder="(513) 555-0123"
+        />
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="email" class="form-label">
+        Email Address *
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="form-input"
+        placeholder="your.email@example.com"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="subject" class="form-label">
+        Subject
+      </label>
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        class="form-input"
+        placeholder="Project type or inquiry"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="message" class="form-label">
+        Message *
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        required
+        class="form-textarea"
+        placeholder="Tell us about your project..."
+      ></textarea>
+    </div>
+
+    <button type="submit" class="form-button">
+      {buttonText}
+    </button>
+
+    <p class="form-note">
+      We respect your privacy. Your information will not be shared with third parties.
+    </p>
+  </form>
+</div>
+
+<style>
+/* Contact Form Styles - Consistent with QuoteRequestForm */
+.contact-form-wrapper {
+  background: var(--theme-bg);
+  padding: 2rem;
+  border-radius: var(--theme-shape-radius);
+  box-shadow: 0 4px 16px var(--theme-shadow-light);
+  max-width: 100%;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-title {
+  color: var(--theme-primary);
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  font-family: var(--theme-font-family-serif);
+}
+
+.form-subtitle {
+  color: var(--theme-on-bg);
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--theme-on-bg);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-input,
+.form-textarea {
+  min-height: 44px;
+  font-size: 16px;
+  border-radius: var(--theme-shape-radius);
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--theme-border-light);
+  background: var(--theme-bg);
+  color: var(--theme-on-bg);
+  transition: var(--theme-transition);
+  font-family: var(--theme-font-family-sans);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--theme-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--theme-primary) 20%, transparent);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: var(--theme-font-family-sans);
+}
+
+.form-button {
+  width: 100%;
+  min-height: 48px;
+  background: var(--theme-primary);
+  color: var(--theme-on-primary);
+  border: none;
+  border-radius: var(--theme-button-border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--theme-font-family-sans);
+  cursor: pointer;
+  transition: var(--theme-transition);
+  box-shadow: 0 4px 16px var(--theme-shadow-medium);
+}
+
+.form-button:hover {
+  background: var(--theme-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--theme-shadow-dark);
+}
+
+.form-note {
+  font-size: 0.875rem;
+  color: var(--theme-on-bg);
+  opacity: 0.7;
+  text-align: center;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-header {
+    margin-bottom: 1.5rem;
+  }
+}
+</style>

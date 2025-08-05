@@ -1,4 +1,10 @@
 ---
+export interface Props {
+  formId?: string;
+}
+
+const { formId = '' } = Astro.props;
+const idPrefix = formId ? `${formId}-` : '';
 ---
 
 <form class="quote-form" method="POST" data-netlify="true" name="quote-request" data-netlify-recaptcha="true">
@@ -10,29 +16,29 @@
 
 	<div class="form-row">
 		<div class="form-group">
-			<label for="name">Full Name *</label>
-			<input type="text" id="name" name="name" required />
+			<label for={`${idPrefix}name`}>Full Name *</label>
+			<input type="text" id={`${idPrefix}name`} name="name" required />
 		</div>
 		<div class="form-group">
-			<label for="phone">Phone *</label>
-			<input type="tel" id="phone" name="phone" required />
+			<label for={`${idPrefix}phone`}>Phone *</label>
+			<input type="tel" id={`${idPrefix}phone`} name="phone" required />
 		</div>
 	</div>
 
 	<div class="form-row">
 		<div class="form-group">
-			<label for="email">Email *</label>
-			<input type="email" id="email" name="email" required />
+			<label for={`${idPrefix}email`}>Email *</label>
+			<input type="email" id={`${idPrefix}email`} name="email" required />
 		</div>
 		<div class="form-group">
-			<label for="zipcode">Zip Code</label>
-			<input type="text" id="zipcode" name="zipcode" />
+			<label for={`${idPrefix}zipcode`}>Zip Code</label>
+			<input type="text" id={`${idPrefix}zipcode`} name="zipcode" />
 		</div>
 	</div>
 
 	<div class="form-group">
-		<label for="service">Service Needed</label>
-		<select id="service" name="service">
+		<label for={`${idPrefix}service`}>Service Needed</label>
+		<select id={`${idPrefix}service`} name="service">
 			<option value="">Select a service...</option>
 			<option value="garage-flooring">Garage Flooring</option>
 			<option value="basement-flooring">Basement Flooring</option>
@@ -43,8 +49,8 @@
 	</div>
 
 	<div class="form-group">
-		<label for="message">Project Details</label>
-		<textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+		<label for={`${idPrefix}message`}>Project Details</label>
+		<textarea id={`${idPrefix}message`} name="message" rows="4" placeholder="Tell us about your project..."></textarea>
 	</div>
 
 	<div data-netlify-recaptcha="true"></div>

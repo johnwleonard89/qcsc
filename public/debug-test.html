@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test - Queen City Surface Coatings</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 50px auto; 
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .status-box {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .error-box {
+            background: #ffeaea;
+            border: 2px solid #f44336;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .test-item {
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #2196f3;
+            background: white;
+            border-radius: 0 4px 4px 0;
+        }
+        button {
+            background: #FFC107;
+            color: #002F4B;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Site Debug Test</h1>
+    
+    <div class="status-box">
+        <h3>✅ Basic Page Load Test</h3>
+        <p><strong>Status:</strong> If you can see this page, basic HTML is working!</p>
+        <p><strong>URL:</strong> <span id="current-url"></span></p>
+        <p><strong>Timestamp:</strong> <span id="timestamp"></span></p>
+    </div>
+
+    <div class="test-item">
+        <h4>JavaScript Test</h4>
+        <button onclick="testJS()">Test JavaScript</button>
+        <div id="js-result"></div>
+    </div>
+
+    <div class="test-item">
+        <h4>Google Analytics Test</h4>
+        <p>GA4 ID: G-WW266NE4HC</p>
+        <button onclick="testGA()">Test GA4</button>
+        <div id="ga-result"></div>
+    </div>
+
+    <div class="test-item">
+        <h4>Meta Pixel Test</h4>
+        <p>Pixel ID: 1246444003920751</p>
+        <button onclick="testPixel()">Test Meta Pixel</button>
+        <div id="pixel-result"></div>
+    </div>
+
+    <div class="test-item">
+        <h4>Console Errors</h4>
+        <p>Check browser console (F12) for any errors</p>
+        <button onclick="checkConsole()">Log Test Message</button>
+    </div>
+
+    <script>
+        // Set basic info
+        document.getElementById('current-url').textContent = window.location.href;
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+
+        function testJS() {
+            document.getElementById('js-result').innerHTML = '<span style="color: green;">✅ JavaScript is working!</span>';
+        }
+
+        function testGA() {
+            if (typeof gtag !== 'undefined') {
+                document.getElementById('ga-result').innerHTML = '<span style="color: green;">✅ Google Analytics loaded</span>';
+                gtag('event', 'debug_test', {
+                    'event_category': 'debug',
+                    'event_label': 'manual_test'
+                });
+            } else {
+                document.getElementById('ga-result').innerHTML = '<span style="color: red;">❌ Google Analytics not loaded</span>';
+            }
+        }
+
+        function testPixel() {
+            if (typeof fbq !== 'undefined') {
+                document.getElementById('pixel-result').innerHTML = '<span style="color: green;">✅ Meta Pixel loaded</span>';
+                fbq('track', 'ViewContent', {
+                    content_name: 'Debug Test Page'
+                });
+            } else {
+                document.getElementById('pixel-result').innerHTML = '<span style="color: red;">❌ Meta Pixel not loaded</span>';
+            }
+        }
+
+        function checkConsole() {
+            console.log('🧪 Debug test message - if you see this, console logging works');
+            alert('Check browser console (F12) for test message');
+        }
+
+        // Auto-run some tests
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                testGA();
+                testPixel();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

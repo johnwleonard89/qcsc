@@ -7,7 +7,7 @@ class AnalyticsTracker {
     constructor() {
         this.config = {
             gtmId: 'GTM-XXXXXXX', // Replace with actual GTM ID
-            ga4Id: 'G-XXXXXXXXXX', // Replace with actual GA4 ID
+            ga4Id: 'G-WW266NE4HC', // Your GA4 Measurement ID
             hotjarId: 'XXXXXXX', // Replace with actual Hotjar ID
             crazyEggId: 'XXXXXXX', // Replace with actual Crazy Egg ID
             facebookPixelId: 'XXXXXXXXX', // Replace with actual Facebook Pixel ID

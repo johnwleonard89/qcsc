@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Debug Test - Queen City Surface Coatings</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .debug-info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-container { 
+            background: #002F4B; 
+            padding: 30px; 
+            border-radius: 10px; 
+            color: white; 
+            margin: 20px 0;
+        }
+        .form-container h2 { 
+            color: #FFC107; 
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #FFC107;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 6px; 
+            border: 2px solid #ddd; 
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .submit-btn { 
+            background: #FFC107; 
+            color: #002F4B; 
+            padding: 15px 30px; 
+            border: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            font-size: 18px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background: #E6AC00;
+        }
+        .required {
+            color: #ff6b6b;
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <h3>🔍 Homepage Form Debug Test</h3>
+        <p><strong>Purpose:</strong> Test if the form is visible and working on homepage</p>
+        <p><strong>Form ID:</strong> homepage-form (unique IDs to prevent conflicts)</p>
+        <p><strong>Expected behavior:</strong> All fields should be visible and functional</p>
+        <p><strong>Netlify detection:</strong> This form should appear in Netlify dashboard after deployment</p>
+    </div>
+    
+    <div class="form-container">
+        <h2>Homepage Form Test - Request Your Free Quote</h2>
+        <form name="homepage-form-debug" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <input type="hidden" name="form-name" value="homepage-form-debug" />
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="homepage-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="homepage-name" name="name" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="homepage-phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="homepage-phone" name="phone" required />
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="homepage-email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="homepage-email" name="email" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="homepage-zipcode">Zip Code</label>
+                    <input type="text" id="homepage-zipcode" name="zipcode" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="homepage-service">Service Needed</label>
+                <select id="homepage-service" name="service">
+                    <option value="">Select a service...</option>
+                    <option value="garage-flooring">Garage Flooring</option>
+                    <option value="basement-flooring">Basement Flooring</option>
+                    <option value="commercial-flooring">Commercial Flooring</option>
+                    <option value="metallic-epoxy">Metallic Epoxy</option>
+                    <option value="polyaspartic-coating">Polyaspartic Coating</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="homepage-message">Project Details</label>
+                <textarea id="homepage-message" name="message" placeholder="Tell us about your project - square footage, timeline, specific requirements, etc."></textarea>
+            </div>
+            
+            <div data-netlify-recaptcha="true"></div>
+            
+            <button type="submit" class="submit-btn">Get My Free Quote - Homepage Test</button>
+        </form>
+    </div>
+
+    <div class="debug-info">
+        <h4>🧪 Testing Instructions:</h4>
+        <ol>
+            <li>Fill out all required fields (marked with *)</li>
+            <li>Submit the form</li>
+            <li>Should redirect to Netlify success page</li>
+            <li>Check Netlify dashboard for form submission</li>
+            <li>Check Google Analytics for form conversion tracking</li>
+        </ol>
+        
+        <p><strong>If this form works but homepage doesn't:</strong><br>
+        Issue is likely with Astro component rendering or CSS visibility on the homepage.</p>
+        
+        <p><strong>Next step:</strong> Compare this working form with the homepage implementation.</p>
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@ class AnalyticsTracker {
             ga4Id: 'G-WW266NE4HC', // Your GA4 Measurement ID
             hotjarId: 'XXXXXXX', // Replace with actual Hotjar ID
             crazyEggId: 'XXXXXXX', // Replace with actual Crazy Egg ID
-            facebookPixelId: 'XXXXXXXXX', // Replace with actual Facebook Pixel ID
+            facebookPixelId: '1246444003920751', // Your Meta Pixel ID
             conversionIds: {
                 'form_submission': 'AW-XXXXXXXXX/XXXXXXXXX',
                 'phone_call': 'AW-XXXXXXXXX/XXXXXXXXX',

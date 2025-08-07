@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- ========== MAIN PAGES ========== -->
+    <!-- Homepage and primary navigation pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/about/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/contact/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/company/legal/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/portfolio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- ========== BLOG SECTION ========== -->
+    <!-- Main blog page and new content -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- New SEO Blog Posts -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/ultimate-guide-garage-floor-coatings-cincinnati/</loc>
+        <lastmod>2025-08-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/basement-floor-coating-solutions-cincinnati-homes/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/commercial-concrete-coating-cincinnati-businesses/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/metallic-epoxy-flooring-cincinnati/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/polyaspartic-vs-epoxy-cincinnati-weather/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ========== PRIMARY SERVICES ========== -->
+    <!-- Core service pages with high search volume -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/industrial-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/decorative-options/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/flake-systems/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/concrete-repair/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/concrete-polishing/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/coating-systems/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========== STATE-LEVEL SERVICE AREAS ========== -->
+    <!-- State hub pages for geographic organization -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ========== OHIO COUNTY HUBS ========== -->
+    <!-- County-level service pages for Ohio -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/hamilton-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/butler-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/warren-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/clermont-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/montgomery-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========== KENTUCKY COUNTY HUBS ========== -->
+    <!-- County-level service pages for Kentucky -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kenton-county-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/campbell-county-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/boone-county-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/mason-county-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== INDIANA COUNTY HUBS ========== -->
+    <!-- County-level service pages for Indiana -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/dearborn-county-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ohio-county-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== TIER 1 MAJOR CITIES - OHIO ========== -->
+    <!-- High-population, high-search-volume cities -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/cincinnati-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/dayton-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/hamilton-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/west-chester-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/mason-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/fairfield-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/springdale-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/loveland-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/blue-ash-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========== TIER 1 MAJOR CITIES - KENTUCKY ========== -->
+    <!-- High-population Northern Kentucky cities -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/covington-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/newport-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/florence-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/independence-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/fort-thomas-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========== TIER 1 MAJOR CITIES - INDIANA ========== -->
+    <!-- Primary Southeast Indiana markets -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/lawrenceburg-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/aurora-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== TIER 2 SECONDARY CITIES - OHIO ========== -->
+    <!-- Medium-population Ohio suburbs and communities -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/middletown-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/springboro-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/kettering-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/centerville-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/miamisburg-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/lebanon-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/milford-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== TIER 2 SECONDARY CITIES - KENTUCKY ========== -->
+    <!-- Secondary Northern Kentucky markets -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/erlanger-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/burlington-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/union-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/alexandria-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/bellevue-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== TIER 2 SECONDARY CITIES - INDIANA ========== -->
+    <!-- Secondary Southeast Indiana markets -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/rising-sun-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/bright-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/dillsboro-indiana/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- ========== TIER 3 COMMUNITY CITIES - OHIO ========== -->
+    <!-- Smaller Ohio communities and suburbs -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/reading-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/deer-park-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/evendale-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/golf-manor-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/sharonville-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/montgomery-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/huber-heights-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/englewood-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/clayton-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/germantown-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- ========== TIER 3 COMMUNITY CITIES - KENTUCKY ========== -->
+    <!-- Smaller Kentucky communities -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/elsmere-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/edgewood-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/ludlow-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/fort-wright-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/park-hills-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/lakeside-park-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/villa-hills-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/walton-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/dry-ridge-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/service-areas/williamstown-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- ========== SERVICE-SPECIFIC LOCATION PAGES ========== -->
+    <!-- High-value service/location combinations -->
+    
+    <!-- Cincinnati Service Combinations -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/cincinnati-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/cincinnati-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/cincinnati-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/metallic-epoxy-flooring/cincinnati-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Major City Service Combinations -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/dayton-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/hamilton-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/west-chester-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/covington-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/florence-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- County-Level Service Combinations -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/hamilton-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/butler-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/garage-floor-epoxy/kenton-county-kentucky/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/basement-floor-coating/hamilton-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/commercial-concrete-coating/hamilton-county-ohio/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- ========== SPECIALTY SERVICE PAGES ========== -->
+    <!-- Specialized and niche service offerings -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/natural-stone-reproductions/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/textured-concrete-finishes/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/custom-color-metallic-systems/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/pressure-washing-protection/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/joint-removal-repair/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/cove-install/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== INDUSTRY-SPECIFIC PAGES ========== -->
+    <!-- Targeted industry and application pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/food-beverage-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/warehouse-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/manufacturing-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/office-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/retail-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/services/automotive-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== BLOG TAG PAGES ========== -->
+    <!-- Blog category and tag organization -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/garage-floor-coating/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/epoxy-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/cincinnati/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/home-improvement/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/blog/tags/commercial-flooring/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- ========== ADDITIONAL RESOURCES ========== -->
+    <!-- Support and informational pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/faq/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/maintenance-guide/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/resources/cost-calculator/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- ========== SPECIAL LANDING PAGES ========== -->
+    <!-- Marketing and campaign-specific pages -->
+    <url>
+        <loc>https://queencitysurfacecoatings.com/free-estimate/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/military-discount/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://queencitysurfacecoatings.com/warranty/</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>

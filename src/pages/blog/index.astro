@@ -5,6 +5,11 @@ import {
 } from '@components/odyssey-theme';
 import Layout from '../../layouts/Page.astro';
 import NewsletterForm from '../../components/forms/NewsletterForm.astro';
+import BlogPostsList from '../../components/blog/BlogPostsList.astro';
+import { getCollection } from 'astro:content';
+
+const blogPosts = await getCollection('blog');
+const sortedPosts = blogPosts.sort((a, b) => new Date(b.data.publish_date).valueOf() - new Date(a.data.publish_date).valueOf());
 
 const seo = {
 	title: 'Blog | Queen City Surface Coatings',
@@ -24,28 +29,38 @@ const seo = {
 			</div>
 		</TextCardSection>
 		
-		<section class="coming-soon-section">
-			<div class="coming-soon-content">
-				<h2>Professional Content Coming Soon</h2>
-				<p>We're crafting detailed articles covering:</p>
-				<ul class="content-preview">
-					<li>Concrete coating selection and application techniques</li>
-					<li>Surface preparation best practices</li>
-					<li>Behind-the-scenes project walkthroughs</li>
-					<li>Maintenance tips for lasting results</li>
-					<li>Industry trends and innovations</li>
-				</ul>
-				<p class="subscribe-message">
-					Subscribe to our newsletter above to be notified when our first articles go live. In the meantime, explore our <a href="/portfolio">portfolio</a> to see our work in action, or <a href="/company/contact">contact us</a> for expert advice on your concrete coating project.
-				</p>
-			</div>
-		</section>
+		{sortedPosts.length > 0 ? (
+			<section class="blog-posts-section">
+				<BlogPostsList posts={sortedPosts} />
+			</section>
+		) : (
+			<section class="coming-soon-section">
+				<div class="coming-soon-content">
+					<h2>Professional Content Coming Soon</h2>
+					<p>We're crafting detailed articles covering:</p>
+					<ul class="content-preview">
+						<li>Concrete coating selection and application techniques</li>
+						<li>Surface preparation best practices</li>
+						<li>Behind-the-scenes project walkthroughs</li>
+						<li>Maintenance tips for lasting results</li>
+						<li>Industry trends and innovations</li>
+					</ul>
+					<p class="subscribe-message">
+						Subscribe to our newsletter above to be notified when our first articles go live. In the meantime, explore our <a href="/portfolio">portfolio</a> to see our work in action, or <a href="/company/contact">contact us</a> for expert advice on your concrete coating project.
+					</p>
+				</div>
+			</section>
+		)}
 	</Container>
 </Layout>
 
 <style>
 	.header-content {
 		text-align: center;
+	}
+
+	.blog-posts-section {
+		margin: var(--section-margin) auto;
 	}
 
 	.coming-soon-section {
